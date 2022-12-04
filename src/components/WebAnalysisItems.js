@@ -1,13 +1,24 @@
-
-//Write your code here, if needed, create more componnents
+import Button from "./Button/Button";
+import "./WebAnalysisItem.css";
 
 function WebAnalysisItems() {
-
-    return (
-        <div>
-            <h1 style={{color: "white"}}>Lorem Ipsum - Delete this line and write your code here</h1>
+  return (
+    <div className="webAnalysisRoot">
+      <div className="chartContainer">
+        <div className="chartHeader">
+          <div className="databasePart">
+            <div className="headerItemTitle">Database Items</div>
+            <div className="chartTools">
+              <Button />
+            </div>
+          </div>
+          <div className="casesPart">
+            <div className="headerItemTitle">Cases</div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default WebAnalysisItems;

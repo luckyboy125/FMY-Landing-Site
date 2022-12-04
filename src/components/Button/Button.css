@@ -1,0 +1,46 @@
+.buttonRoot {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 23px;
+  padding: 10.5px 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.buttonRoot .buttonName {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.2px;
+  color: #d4d7da;
+  margin-right: 8px;
+}
+
+.buttonRoot .buttonContent {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.2px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.buttonRoot .buttonContent i {
+  font-size: 12px;
+  line-height: 6px;
+  color: #fff;
+  margin-left: 8px;
+}
