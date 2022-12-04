@@ -55,3 +55,23 @@ body {
 .green {
   color: #0fdf63;
 }
+
+.bgTenderblue {
+  background-color: #75b3ff;
+}
+
+.bgDarkblue {
+  background-color: #12327c;
+}
+.bgGreen {
+  background-color: #93eca6;
+}
+.bgSmartblue {
+  background-color: #004afe;
+}
+.bgPink {
+  background-color: #c6a6ff;
+}
+.bgYellow {
+  background-color: #febd42;
+}

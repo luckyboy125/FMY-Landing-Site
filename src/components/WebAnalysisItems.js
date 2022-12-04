@@ -1,93 +1,9 @@
 import Button from "./Button/Button";
 import "./WebAnalysisItem.css";
 import ReactEcharts from "echarts-for-react";
-import { graphic } from "echarts";
+import { lineChart, pieChart } from "../config/const";
 
 function WebAnalysisItems() {
-  const option = {
-    xAxis: {
-      show: true,
-      boundaryGap: false,
-      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"],
-      axisLabel: {
-        color: "#fff",
-        fontStyle: "normal",
-        fontWeight: 300,
-        fontFamily: "Helvetica Neue",
-        fontSize: "20px",
-        lineHeight: 22,
-        padding: [20, 0, 0, 0],
-      },
-      type: "category",
-      axisLine: {
-        show: false,
-      },
-      axisTick: {
-        show: false,
-      },
-      splitLine: {
-        show: true,
-        lineStyle: {
-          color: "rgba(255, 255, 255, 0.2)",
-          type: "dotted",
-          width: 0.8,
-        },
-      },
-    },
-    grid: {
-      top: 0,
-      left: 25,
-      right: 25,
-      height: 220,
-    },
-    yAxis: {
-      type: "value",
-      boundaryGap: false,
-      axisLabel: {
-        show: false,
-      },
-      splitLine: { show: false },
-    },
-    series: [
-      {
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: "line",
-        lineStyle: {
-          width: 3,
-          color: new graphic.LinearGradient(0, 0, 0, 1, [
-            {
-              offset: 0,
-              color: "rgba(106, 180, 255, 1)",
-            },
-            {
-              offset: 1,
-              color: "rgba(194, 166, 255, 1)",
-            },
-          ]),
-        },
-        symbol: "circle",
-        symbolSize: 15,
-        itemStyle: {
-          color: "#fff",
-          borderColor: "rgba(119, 179, 255, 1)",
-          borderWidth: 3,
-        },
-        areaStyle: {
-          color: new graphic.LinearGradient(0, 0, 0, 1, [
-            {
-              offset: 0,
-              color: "rgba(160, 207, 255, 0.58)",
-            },
-            {
-              offset: 1,
-              color: "rgba(160, 207, 255, 0)",
-            },
-          ]),
-        },
-      },
-    ],
-  };
-
   return (
     <div className="webAnalysisRoot">
       <div className="chartContainer">
@@ -95,7 +11,8 @@ function WebAnalysisItems() {
           <div className="databasePart">
             <div className="headerItemTitle">Database Items</div>
             <div className="chartTools">
-              <Button />
+              <Button name="Show" content="This Week" className="chartPeriod" />
+              <Button content="Compare" type="common" />
             </div>
           </div>
           <div className="casesPart">
@@ -124,12 +41,62 @@ function WebAnalysisItems() {
             </div>
             <div className="lineChartRoot">
               <ReactEcharts
-                option={option}
+                option={lineChart}
                 style={{ width: "100%", marginTop: "80px" }}
               ></ReactEcharts>
             </div>
           </div>
-          <div className="casesPart"></div>
+          <div className="casesPart">
+            <div className="descriptionRoot">
+              <div className="descriptionItem">
+                <div className="descriptionItemTitle">Lorem ipsum</div>
+                <div className="descriptionItemCount white">53</div>
+              </div>
+              <div className="descriptionItem">
+                <div className="descriptionItemTitle">Lorem ipsum</div>
+                <div className="descriptionItemCount white">+2</div>
+              </div>
+              <div className="descriptionItem">
+                <div className="descriptionItemTitle">Lorem ipsum</div>
+                <div className="descriptionItemCount white">Lorem ipsum</div>
+              </div>
+            </div>
+            <div className="pieChartRoot">
+              <ReactEcharts
+                option={pieChart}
+                style={{
+                  width: "260px",
+                  marginRight: "50px",
+                }}
+              ></ReactEcharts>
+              <div className="pieChartDes">
+                <div className="pieChartDesItem">
+                  <div className="pieChartIcon bgTenderblue"></div>
+                  <div className="pieChartItemName">Lorem ipsum</div>
+                </div>
+                <div className="pieChartDesItem">
+                  <div className="pieChartIcon bgDarkblue"></div>
+                  <div className="pieChartItemName">Lorem ipsum</div>
+                </div>
+                <div className="pieChartDesItem">
+                  <div className="pieChartIcon bgGreen"></div>
+                  <div className="pieChartItemName">Lorem ipsum</div>
+                </div>
+                <div className="pieChartDesItem">
+                  <div className="pieChartIcon bgSmartblue"></div>
+                  <div className="pieChartItemName">Lorem ipsum</div>
+                </div>
+                <div className="pieChartDesItem">
+                  <div className="pieChartIcon bgPink"></div>
+                  <div className="pieChartItemName">Lorem ipsum</div>
+                </div>
+                <div className="pieChartDesItem">
+                  <div className="pieChartIcon bgYellow"></div>
+                  <div className="pieChartItemName">Opther</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

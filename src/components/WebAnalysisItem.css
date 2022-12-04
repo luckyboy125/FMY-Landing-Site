@@ -34,6 +34,14 @@
   justify-content: space-between;
 }
 
+.chartTools {
+  display: flex;
+}
+
+.chartPeriod {
+  margin-right: 30px;
+}
+
 .chartHeader .casesPart {
   padding: 0 11px 0 30px;
   width: 45%;
@@ -48,6 +56,10 @@
   color: #ffffff;
 }
 
+.chartContent {
+  display: flex;
+}
+
 .chartContent .databasePart {
   padding: 32px 26.5px 40px 41px;
   width: 55%;
@@ -56,21 +68,32 @@
 }
 
 .chartContent .casesPart {
-  padding: 0 11px 0 30px;
+  padding: 32px 26.5px 40px 41px;
   width: 45%;
+  display: flex;
+  align-items: center;
 }
 
 .descriptionRoot {
+  width: 250px;
   margin-right: 56.46px;
+}
+
+.descriptionRoot:first-child {
+  border-top: 1px solid transparent;
 }
 
 .lineChartRoot {
   flex-grow: 1;
 }
 
+.casesPart .descriptionRoot {
+  margin-right: 40px;
+}
+
 .descriptionItem {
   padding: 28px 0 32px 0;
-  border-bottom: 1px solid rgba(149, 166, 184, 0.1);
+  border-top: 1px solid rgba(149, 166, 184, 0.1);
 }
 
 .descriptionItemTitle {
@@ -89,4 +112,36 @@
   font-size: 40px;
   line-height: 24px;
   margin-top: 20px;
+}
+
+.pieChartRoot {
+  display: flex;
+}
+.pieChartDes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pieChartDesItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.pieChartIcon {
+  width: 12px;
+  min-height: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin-right: 12.64px;
+  border-radius: 50px;
+}
+
+.pieChartItemName {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
 }

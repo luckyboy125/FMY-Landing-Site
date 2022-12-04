@@ -1,11 +1,11 @@
 import "./Button.css";
 
-function Button() {
+function Button({ name, content, className, type }) {
   return (
-    <div className="buttonRoot">
-      <div className="buttonName">Show:</div>
+    <div className={`buttonRoot ${className}`}>
+      {type !== "common" ? <div className="buttonName">{name}:</div> : <></>}
       <div className="buttonContent">
-        This Week
+        {content}
         <i className="fas fa-caret-down"></i>
       </div>
     </div>
