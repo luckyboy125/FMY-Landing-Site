@@ -62,13 +62,16 @@ function WebAnalysisItems() {
               </div>
             </div>
             <div className="pieChartRoot">
-              <ReactEcharts
-                option={pieChart}
-                style={{
-                  width: "260px",
-                  marginRight: "50px",
-                }}
-              ></ReactEcharts>
+              <div className="pieChart">
+                <ReactEcharts
+                  option={pieChart}
+                  style={{
+                    width: "260px",
+                    marginRight: "50px",
+                  }}
+                ></ReactEcharts>
+                <div className="pieChartPercent">86%</div>
+              </div>
               <div className="pieChartDes">
                 <div className="pieChartDesItem">
                   <div className="pieChartIcon bgTenderblue"></div>

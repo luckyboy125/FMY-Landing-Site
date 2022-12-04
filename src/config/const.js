@@ -98,7 +98,7 @@ export const pieChart = {
     {
       name: "Access From",
       type: "pie",
-      radius: ["80%", "100%"],
+      radius: ["85%", "100%"],
       avoidLabelOverlap: false,
       label: {
         show: false,
