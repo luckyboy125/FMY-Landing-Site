@@ -22,19 +22,19 @@ function WebAnalysisItems() {
         <div className="chartContent">
           <div className="databasePart">
             <div className="descriptionRoot">
-              <div className="descriptionItem borderNone">
+              <div className="descriptionItem borderNone topPaddingNone pdBottom26">
                 <div className="descriptionItemTitle">
                   Total items this week
                 </div>
-                <div className="descriptionItemCount blue">10,324</div>
+                <div className="descriptionItemCount blue ">10,324</div>
               </div>
-              <div className="descriptionItem">
+              <div className="descriptionItem pdTop28 pdBottom32">
                 <div className="descriptionItemTitle">
                   Changes from last week
                 </div>
                 <div className="descriptionItemCount green">+12.5%</div>
               </div>
-              <div className="descriptionItem">
+              <div className="descriptionItem bottomPaddingNone pdTop23">
                 <div className="descriptionItemTitle">Total items in DB</div>
                 <div className="descriptionItemCount white">5,403</div>
               </div>
@@ -42,13 +42,13 @@ function WebAnalysisItems() {
             <div className="lineChartRoot">
               <ReactEcharts
                 option={lineChart}
-                style={{ width: "100%", marginTop: "80px" }}
+                style={{ width: "100%", height: "280px", marginTop: "50px" }}
               ></ReactEcharts>
             </div>
           </div>
           <div className="casesPart">
             <div className="descriptionRoot">
-              <div className="descriptionItem borderNone">
+              <div className="descriptionItem borderNone topPaddingNone">
                 <div className="descriptionItemTitle">Lorem ipsum</div>
                 <div className="descriptionItemCount white">53</div>
               </div>
@@ -56,7 +56,7 @@ function WebAnalysisItems() {
                 <div className="descriptionItemTitle">Lorem ipsum</div>
                 <div className="descriptionItemCount white">+2</div>
               </div>
-              <div className="descriptionItem">
+              <div className="descriptionItem bottomPaddingNone">
                 <div className="descriptionItemTitle">Lorem ipsum</div>
                 <div className="descriptionItemCount white">Lorem ipsum</div>
               </div>

@@ -75,6 +75,26 @@ body {
 .bgYellow {
   background-color: #febd42;
 }
+
 .borderNone {
   border: none !important;
+}
+
+.pdBottom26 {
+  padding-bottom: 26px;
+}
+.pdTop28 {
+  padding-top: 28px;
+}
+.pdBottom32 {
+  padding-bottom: 32px;
+}
+.pdTop23 {
+  padding-top: 23px;
+}
+.topPaddingNone {
+  padding-top: 0px !important;
+}
+.bottomPaddingNone {
+  padding-bottom: 0px !important;
 }

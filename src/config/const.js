@@ -12,7 +12,7 @@ export const lineChart = {
       fontFamily: "Helvetica Neue",
       fontSize: "20px",
       lineHeight: 22,
-      padding: [20, 0, 0, 0],
+      padding: [20, 0, 20, 0],
     },
     type: "category",
     axisLine: {
