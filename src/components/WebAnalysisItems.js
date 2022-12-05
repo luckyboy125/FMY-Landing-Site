@@ -22,7 +22,7 @@ function WebAnalysisItems() {
         <div className="chartContent">
           <div className="databasePart">
             <div className="descriptionRoot">
-              <div className="descriptionItem">
+              <div className="descriptionItem borderNone">
                 <div className="descriptionItemTitle">
                   Total items this week
                 </div>
@@ -48,7 +48,7 @@ function WebAnalysisItems() {
           </div>
           <div className="casesPart">
             <div className="descriptionRoot">
-              <div className="descriptionItem">
+              <div className="descriptionItem borderNone">
                 <div className="descriptionItemTitle">Lorem ipsum</div>
                 <div className="descriptionItemCount white">53</div>
               </div>

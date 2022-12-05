@@ -75,3 +75,6 @@ body {
 .bgYellow {
   background-color: #febd42;
 }
+.borderNone {
+  border: none !important;
+}
