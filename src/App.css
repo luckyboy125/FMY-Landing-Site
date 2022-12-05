@@ -98,3 +98,7 @@ body {
 .bottomPaddingNone {
   padding-bottom: 0px !important;
 }
+.fontSize40 {
+  font-size: 40px !important;
+  font-weight: 400 !important;
+}

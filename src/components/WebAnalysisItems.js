@@ -26,13 +26,15 @@ function WebAnalysisItems() {
                 <div className="descriptionItemTitle">
                   Total items this week
                 </div>
-                <div className="descriptionItemCount blue ">10,324</div>
+                <div className="descriptionItemCount blue fontSize40">
+                  10,324
+                </div>
               </div>
               <div className="descriptionItem pdTop28 pdBottom32">
                 <div className="descriptionItemTitle">
                   Changes from last week
                 </div>
-                <div className="descriptionItemCount green">+12.5%</div>
+                <div className="descriptionItemCount green">+12%</div>
               </div>
               <div className="descriptionItem bottomPaddingNone pdTop23">
                 <div className="descriptionItemTitle">Total items in DB</div>

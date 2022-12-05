@@ -109,10 +109,10 @@
   opacity: 0.7;
 }
 .descriptionItemCount {
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue";
   font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
+  font-weight: 300;
+  font-size: 34px;
   line-height: 24px;
   margin-top: 20px;
 }
