@@ -9,7 +9,7 @@ export const lineChart = {
       color: "#fff",
       fontStyle: "normal",
       fontWeight: 300,
-      fontFamily: "Helvetica Neue",
+      fontFamily: "Helvetica",
       fontSize: "20px",
       lineHeight: 22,
       padding: [20, 0, 20, 0],
@@ -32,8 +32,8 @@ export const lineChart = {
   },
   grid: {
     top: 0,
-    left: 25,
-    right: 25,
+    left: 30,
+    right: 30,
     height: 220,
   },
   yAxis: {
@@ -46,7 +46,7 @@ export const lineChart = {
   },
   series: [
     {
-      data: [820, 932, 901, 934, 1290, 1330, 1320],
+      data: [820, 1330, 1320, 932, 901, 934, 1000],
       type: "line",
       lineStyle: {
         width: 3,
