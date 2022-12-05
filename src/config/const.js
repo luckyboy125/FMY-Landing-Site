@@ -30,6 +30,10 @@ export const lineChart = {
       },
     },
   },
+  tooltip: {
+    show: true,
+    trigger: "axis",
+  },
   grid: {
     top: 0,
     left: 25,
