@@ -102,3 +102,37 @@ body {
   font-size: 40px !important;
   font-weight: 400 !important;
 }
+
+@font-face {
+  font-family: "helvetica_medium"; /*Can be any text*/
+  src: local("helvetica_medium"),
+    url("./asset/fonts/helvetica_medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-Bold"; /*Can be any text*/
+  src: local("Helvetica-Bold"),
+    url("./asset/fonts/Helvetica-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-BoldOblique"; /*Can be any text*/
+  src: local("Helvetica-BoldOblique"),
+    url("./asset/fonts/Helvetica-BoldOblique.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "helvetica-light"; /*Can be any text*/
+  src: local("helvetica-light-587ebe5a59211"),
+    url("./asset/fonts/helvetica-light-587ebe5a59211.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-Oblique"; /*Can be any text*/
+  src: local("Helvetica-Oblique"),
+    url("./asset/fonts/Helvetica-Oblique.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Helvetica"; /*Can be any text*/
+  src: local("Helvetica"), url("./asset/fonts/Helvetica.ttf") format("truetype");
+}

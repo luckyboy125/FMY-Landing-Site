@@ -31,8 +31,24 @@ export const lineChart = {
     },
   },
   tooltip: {
-    show: true,
-    trigger: "axis",
+    trigger: "item",
+    backgroundColor: "#627F9D",
+    borderColor: "#627F9D",
+    formatter: function (params) {
+      console.log("here", params);
+      return "Wednesday, June 8 </br> Item: 35";
+    },
+    padding: 15,
+    position: function (pt) {
+      return [pt[0] - 84, pt[1] - 129];
+    },
+    textStyle: {
+      fontSize: "20px",
+      fontFamily: "Helvetica",
+      lineHeight: "29px",
+      fontWeight: 400,
+      color: "#FFFFFF80",
+    },
   },
   grid: {
     top: 0,
@@ -87,6 +103,7 @@ export const lineChart = {
     },
   ],
 };
+
 export const pieChart = {
   tooltip: {
     trigger: "item",
