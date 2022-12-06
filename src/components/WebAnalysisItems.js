@@ -65,7 +65,7 @@ function WebAnalysisItems() {
               </div>
             </div>
             <div className="pieChartRoot">
-              <div className="pieChart">
+              <div className="chartRoot">
                 <ReactEcharts
                   option={pieChart}
                   style={{
@@ -143,23 +143,19 @@ function WebAnalysisItems() {
           className="topPlatforms"
         >
           {" "}
-          <ReactEcharts
-            option={scatterChart}
-            style={
-              {
-                // width: "260px",
-                // marginRight: "50px",
-              }
-            }
-          ></ReactEcharts>
+          <ReactEcharts option={scatterChart}></ReactEcharts>
         </ChartLayout>
         <ChartLayout
           name="Sentiment"
           button={<Button name="Show" content="This week" />}
           className="topPlatforms"
         >
-          {" "}
-          <ReactEcharts option={gaugeChart}></ReactEcharts>
+          <div className="chartRoot">
+            <ReactEcharts option={gaugeChart}></ReactEcharts>
+            <span className="gaugeMoreDetail">Positive sentiment</span>
+            <span className="gaugeDirection negative">Negative</span>
+            <span className="gaugeDirection positive">Positive</span>
+          </div>
         </ChartLayout>
       </div>
     </div>

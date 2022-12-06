@@ -121,7 +121,7 @@
 .pieChartRoot {
   display: flex;
 }
-.pieChart {
+.chartRoot {
   position: relative;
 }
 
@@ -221,4 +221,38 @@
 .topPlatforms {
   width: 50%;
   margin-left: 30px;
+}
+.gaugeMoreDetail {
+  position: absolute;
+  left: 37%;
+  bottom: 5%;
+  font-family: "helvetica_medium";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.gaugeDirection {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.negative {
+  position: absolute;
+  bottom: -2%;
+  left: 22%;
+}
+
+.positive {
+  position: absolute;
+  bottom: -2%;
+  right: 22%;
 }
