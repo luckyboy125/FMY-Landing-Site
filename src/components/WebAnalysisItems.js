@@ -1,7 +1,8 @@
 import Button from "./Button/Button";
 import "./WebAnalysisItem.css";
 import ReactEcharts from "echarts-for-react";
-import { lineChart, pieChart } from "../config/const";
+import { gaugeChart, lineChart, pieChart, scatterChart } from "../config/const";
+import ChartLayout from "./ChartLayout/ChartLayout";
 
 function WebAnalysisItems() {
   return (
@@ -103,6 +104,63 @@ function WebAnalysisItems() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="sencondPart">
+        <ChartLayout
+          name="Stats"
+          button={<Button name="Show" content="All" />}
+          className="stats"
+        >
+          <div className="statsItems borderBottom">
+            <div className="statsItem borderRight">
+              <div className="statsItemCount">1.7k</div>
+              <div className="statsItemDes">Flagged posts</div>
+              <div className="statsItemPercent">+12%</div>
+            </div>
+            <div className="statsItem">
+              <div className="statsItemCount">1.7k</div>
+              <div className="statsItemDes">Flagged posts</div>
+              <div className="statsItemPercent">+12%</div>
+            </div>
+          </div>
+          <div className="statsItems">
+            <div className="statsItem borderRight">
+              <div className="statsItemCount">1.7k</div>
+              <div className="statsItemDes">Flagged posts</div>
+              <div className="statsItemPercent">+12%</div>
+            </div>
+            <div className="statsItem">
+              <div className="statsItemCount">1.7k</div>
+              <div className="statsItemDes">Flagged posts</div>
+              <div className="statsItemPercent">+12%</div>
+            </div>
+          </div>
+        </ChartLayout>
+        <ChartLayout
+          name="Top platforms"
+          button={<Button name="Show" content="All" className="hidden" />}
+          className="topPlatforms"
+        >
+          {" "}
+          <ReactEcharts
+            option={scatterChart}
+            style={
+              {
+                // width: "260px",
+                // marginRight: "50px",
+              }
+            }
+          ></ReactEcharts>
+        </ChartLayout>
+        <ChartLayout
+          name="Sentiment"
+          button={<Button name="Show" content="This week" />}
+          className="topPlatforms"
+        >
+          {" "}
+          <ReactEcharts option={gaugeChart}></ReactEcharts>
+        </ChartLayout>
       </div>
     </div>
   );

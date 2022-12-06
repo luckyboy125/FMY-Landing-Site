@@ -1,4 +1,9 @@
 import { graphic } from "echarts";
+import icon1 from "../asset/images/facebook.png";
+import icon2 from "../asset/images/music.png";
+import icon3 from "../asset/images/instegram.png";
+import icon4 from "../asset/images/twitter.png";
+import icon5 from "../asset/images/reddit.png";
 
 export const lineChart = {
   xAxis: {
@@ -9,7 +14,7 @@ export const lineChart = {
       color: "#fff",
       fontStyle: "normal",
       fontWeight: 300,
-      fontFamily: "Helvetica Neue",
+      fontFamily: "Helvetica",
       fontSize: "20px",
       lineHeight: 22,
       padding: [20, 0, 0, 0],
@@ -34,13 +39,33 @@ export const lineChart = {
     trigger: "item",
     backgroundColor: "#627F9D",
     borderColor: "#627F9D",
-    formatter: function (params) {
-      console.log("here", params);
-      return "Wednesday, June 8 </br> Item: 35";
+    borderRadius: 10,
+    padding: 10,
+    formatter: function (param) {
+      var value = param.value;
+      var index = param.dataIndex;
+      // prettier-ignore
+      return '<div style="position:relative;">' +
+    '<div style="padding: 5px 5px 12px 5px;border-bottom: 1px solid #ffffff1a;font-family: "Helvetica";font-style: normal;font-weight: 400;font-size: 20px;line-height: 29px;display: flex;align-items: center;color: rgba(255, 255, 255, 0.5);">' +
+    "Monday, June 8" +
+    "</div>" +
+    '<div style="padding: 12px 5px 5px 5px;font-family: "Helvetica Medium";font-style: normal;font-weight: 500;font-size: 20px;line-height: 29px;display: flex; align-items: center; color: #ffffff;">' +
+    '<span style="color: #fff;">' +
+    "New Item : " +
+    "</span>" +
+    '<span style="color: #37ce4a;margin-left: 10px;">' +
+    value +
+    "</span>" +
+    "</div>" +
+    `<div style="position:absolute; ${index === 0 ? "left: 0; bottom:-30px;":"left: 42%; bottom:-30px;"} width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 20px solid #627F9D;">` +
+    "</div>" +
+    "</div>";
     },
-    padding: 15,
-    position: function (pt) {
-      return [pt[0] - 84, pt[1] - 129];
+    position: function (pt, params) {
+      console.log("test", pt, params);
+      return params.dataIndex === 0
+        ? [pt[0] - 20, pt[1] - 130]
+        : [pt[0] - 75, pt[1] - 130];
     },
     textStyle: {
       fontSize: "20px",
@@ -226,6 +251,99 @@ export const pieChart = {
           },
         },
       ],
+    },
+  ],
+};
+
+export const scatterChart = {
+  xAxis: {
+    show: false,
+  },
+  yAxis: {
+    show: false,
+  },
+  series: [
+    {
+      symbolSize: 107,
+      data: [[193.5, 162.5]],
+      type: "scatter",
+      symbol: "image://url/localhost:3000/facebook.png",
+    },
+    {
+      symbolSize: 97,
+      data: [[227.74, 370]],
+      type: "scatter",
+    },
+    {
+      symbolSize: 77,
+      data: [[370.93, 177.36]],
+      type: "scatter",
+    },
+    {
+      symbolSize: 61,
+      data: [[458.52, 260.57]],
+      type: "scatter",
+    },
+    {
+      symbolSize: 46,
+      data: [[482, 161.67]],
+      type: "scatter",
+    },
+  ],
+};
+
+export const gaugeChart = {
+  tooltip: {
+    formatter: "{a} <br/>{b} : {c}%",
+  },
+  series: [
+    {
+      name: "Pressure",
+      type: "gauge",
+      data: [
+        {
+          value: 50,
+        },
+      ],
+      axisLine: {
+        lineStyle: {
+          width: 30,
+          color: [
+            [
+              1,
+              new graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "rgba(106, 180, 255, 1)",
+                },
+                {
+                  offset: 1,
+                  color: "rgba(194, 166, 255, 1)",
+                },
+              ]),
+            ],
+          ],
+        },
+      },
+      pointer: {
+        itemStyle: {
+          color: "#FFFFFF",
+        },
+      },
+      axisTick: {
+        show: false,
+      },
+      splitLine: {
+        show: false,
+      },
+      axisLabel: {
+        show: false,
+      },
+      detail: {
+        valueAnimation: true,
+        formatter: "{value} %",
+        color: "#fff",
+      },
     },
   ],
 };

@@ -102,7 +102,9 @@ body {
   font-size: 40px !important;
   font-weight: 400 !important;
 }
-
+.hidden {
+  visibility: hidden;
+}
 @font-face {
   font-family: "helvetica_medium"; /*Can be any text*/
   src: local("helvetica_medium"),
