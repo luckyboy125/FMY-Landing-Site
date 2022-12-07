@@ -38,14 +38,15 @@ export const lineChart = (xprop, yprop) => {
       borderRadius: 10,
       padding: 10,
       formatter: function (param) {
+        console.log("data: ", param);
         var value = param.value;
         var index = param.dataIndex;
         // prettier-ignore
         return '<div style="position:relative;">' +
-      '<div style="padding: 5px 5px 12px 5px;border-bottom: 1px solid #ffffff1a;font-family: "Helvetica";font-style: normal;font-weight: 400;font-size: 20px;line-height: 29px;display: flex;align-items: center;color: rgba(255, 255, 255, 0.5);">' +
+      '<div style="padding: 5px 5px 12px 5px;border-bottom: 1px solid #ffffff1a;font-family:Helvetica;font-style: normal;font-weight: 400;font-size: 20px;line-height: 29px;display: flex;align-items: center;color: rgba(255, 255, 255, 0.5);">' +
       "Monday, June 8" +
       "</div>" +
-      '<div style="padding: 12px 5px 5px 5px;font-family:"helvetica_medium";font-style: normal;font-weight: 500;font-size: 20px;line-height: 29px;display: flex; align-items: center; color: #ffffff;">' +
+      '<div style="padding: 12px 5px 5px 5px;font-family: HelveticaMedium;font-style: normal;font-weight: 500;font-size: 20px;line-height: 29px;display: flex; align-items: center; color: #ffffff;">' +
       '<span style="color: #fff;">' +
       "New Item : " +
       "</span>" +
@@ -58,10 +59,10 @@ export const lineChart = (xprop, yprop) => {
       "</div>";
       },
       position: function (pt, params) {
-        console.log("test", pt, params);
+        // console.log("test", pt, params);
         return params.dataIndex === 0
           ? [pt[0] - 20, pt[1] - 130]
-          : [pt[0] - 150, pt[1] - 130];
+          : [pt[0] - 90, pt[1] - 130];
       },
       textStyle: {
         fontSize: "20px",

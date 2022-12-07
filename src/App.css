@@ -106,8 +106,8 @@ body {
   visibility: hidden;
 }
 @font-face {
-  font-family: "helvetica_medium"; /*Can be any text*/
-  src: local("helvetica_medium"),
+  font-family: "HelveticaMedium"; /*Can be any text*/
+  src: local("HelveticaMedium"),
     url("./asset/fonts/helvetica_medium.ttf") format("truetype");
 }
 

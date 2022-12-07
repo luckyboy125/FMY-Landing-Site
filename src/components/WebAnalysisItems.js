@@ -1,4 +1,5 @@
 import Button from "./Button/Button";
+import handImage from "../asset/images/hand.svg";
 import "./WebAnalysisItem.css";
 import ReactEcharts from "echarts-for-react";
 import {
@@ -12,6 +13,17 @@ import ChartLayout from "./ChartLayout/ChartLayout";
 function WebAnalysisItems() {
   return (
     <div className="webAnalysisRoot">
+      <div className="webAnalysisHeader">
+        <div>
+          <p className="analysisHello">
+            Hello, Nimrod <img src={handImage} alt="hand" />
+          </p>
+          <p className="analysisHeaderDes">
+            Here is an overview of the project.
+          </p>
+        </div>
+        <div className="webAnalysisHeaderBtn">Lorem ipsum</div>
+      </div>
       <div className="chartContainer">
         <div className="chartHeader">
           <div className="databasePart">
@@ -113,7 +125,6 @@ function WebAnalysisItems() {
           </div>
         </div>
       </div>
-
       <div className="sencondPart">
         <ChartLayout
           name="Stats"
