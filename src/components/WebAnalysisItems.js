@@ -106,7 +106,7 @@ function WebAnalysisItems() {
                 </div>
                 <div className="pieChartDesItem">
                   <div className="pieChartIcon bgYellow"></div>
-                  <div className="pieChartItemName">Opther</div>
+                  <div className="pieChartItemName">Other</div>
                 </div>
               </div>
             </div>

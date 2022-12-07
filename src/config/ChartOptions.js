@@ -61,7 +61,7 @@ export const lineChart = (xprop, yprop) => {
         console.log("test", pt, params);
         return params.dataIndex === 0
           ? [pt[0] - 20, pt[1] - 130]
-          : [pt[0] - 75, pt[1] - 130];
+          : [pt[0] - 150, pt[1] - 130];
       },
       textStyle: {
         fontSize: "20px",
@@ -262,6 +262,53 @@ export const scatterChart = {
   },
   yAxis: {
     show: false,
+  },
+
+  tooltip: {
+    trigger: "item",
+    backgroundColor: "#232832",
+    borderColor: "#232832",
+    borderRadius: 10,
+    padding: 1,
+    formatter: function (param) {
+      var value = param.value;
+      var index = param.dataIndex;
+      // prettier-ignore
+      return '<div style="position: relative; border-radius: 10px; background-color: #232832; padding: 20px; display: flex; align-items: flex-end;">'
+      +'<div style="width:50%; text-align: center;">'
+      +'<p style="margin:0;font-family:Helvetica; font-style: normal; font-weight: 400; font-size: 32px; line-height: 24px; text-align: center; color: #FFFFFF;">'
+      +'1.7K'
+      +'</p>'
+      +'<p style="margin:0;font-family:Helvetica; font-style: normal; font-weight: 400; font-size: 20px; line-height: 24px; text-align: center; color: #FFFFFF; opacity: 0.7;">'
+      +'Flagged posts'
+      +'</p>'
+      +'<p style="margin:0;font-family:Helvetica; font-style: normal; font-weight: 300; font-size: 20px; line-height: 24px; text-align: center; color: #0FDF63;">'
+      +'+12%'
+      +'</p>'
+      +'</div>'
+      +'<div style="width: 2px; height: 53px; background-color: #404040; margin:0 5px">'
+      +'</div>'
+      +'<div style="width:50%; text-align: center;">'
+      +'<p style="margin:0;font-family:Helvetica; font-style: normal; font-weight: 400; font-size: 32px; line-height: 24px; text-align: center; color: #FFFFFF;">'
+      +'1.7K'
+      +'</p>'
+      +'<p style="margin:0;font-family:Helvetica; font-style: normal; font-weight: 400; font-size: 20px; line-height: 24px; text-align: center; color: #FFFFFF; opacity: 0.7;">'
+      +'Flagged posts'
+      +'</p>'
+      +'<p style="margin:0;font-family:Helvetica; font-style: normal; font-weight: 300; font-size: 20px; line-height: 24px; text-align: center; color: #0FDF63;">'
+      +'+12%'
+      +'</p>'
+      +'</div>'
+      +'<div style="position:absolute; left: 45.3%; bottom:-15px; width: 0;height: 0;border-left: 15px solid transparent;border-right: 15px solid transparent;border-top: 15px solid #232832;">'
+      +'</div>'
+      +'</div>';
+    },
+    position: function (pt, params) {
+      console.log("test", pt, params);
+      return params.dataIndex === 0
+        ? [pt[0] - 20, pt[1] - 130]
+        : [pt[0] - 75, pt[1] - 130];
+    },
   },
   series: [
     {
