@@ -1,7 +1,12 @@
 import Button from "./Button/Button";
 import "./WebAnalysisItem.css";
 import ReactEcharts from "echarts-for-react";
-import { gaugeChart, lineChart, pieChart, scatterChart } from "../config/const";
+import {
+  gaugeChart,
+  lineChart,
+  pieChart,
+  scatterChart,
+} from "../config/ChartOptions";
 import ChartLayout from "./ChartLayout/ChartLayout";
 
 function WebAnalysisItems() {
@@ -44,7 +49,10 @@ function WebAnalysisItems() {
             </div>
             <div className="lineChartRoot">
               <ReactEcharts
-                option={lineChart}
+                option={lineChart(
+                  ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"],
+                  [820, 932, 901, 934, 1290, 1330, 1320]
+                )}
                 style={{ width: "100%", height: "280px", marginTop: "50px" }}
               ></ReactEcharts>
             </div>
@@ -67,7 +75,7 @@ function WebAnalysisItems() {
             <div className="pieChartRoot">
               <div className="chartRoot">
                 <ReactEcharts
-                  option={pieChart}
+                  option={pieChart([123, 225, 564, 224, 501, 1020])}
                   style={{
                     width: "260px",
                     marginRight: "50px",
@@ -142,7 +150,6 @@ function WebAnalysisItems() {
           button={<Button name="Show" content="All" className="hidden" />}
           className="topPlatforms"
         >
-          {" "}
           <ReactEcharts option={scatterChart}></ReactEcharts>
         </ChartLayout>
         <ChartLayout
@@ -151,7 +158,7 @@ function WebAnalysisItems() {
           className="topPlatforms"
         >
           <div className="chartRoot">
-            <ReactEcharts option={gaugeChart}></ReactEcharts>
+            <ReactEcharts option={gaugeChart(56)}></ReactEcharts>
             <span className="gaugeMoreDetail">Positive sentiment</span>
             <span className="gaugeDirection negative">Negative</span>
             <span className="gaugeDirection positive">Positive</span>

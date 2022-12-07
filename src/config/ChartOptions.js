@@ -1,253 +1,259 @@
 import { graphic } from "echarts";
 
-export const lineChart = {
-  xAxis: {
-    show: true,
-    boundaryGap: false,
-    data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"],
-    axisLabel: {
-      color: "#fff",
-      fontStyle: "normal",
-      fontWeight: 300,
-      fontFamily: "Helvetica",
-      fontSize: "20px",
-      lineHeight: 22,
-      padding: [20, 0, 0, 0],
-    },
-    type: "category",
-    axisLine: {
-      show: false,
-    },
-    axisTick: {
-      show: false,
-    },
-    splitLine: {
+export const lineChart = (xprop, yprop) => {
+  const option = {
+    xAxis: {
       show: true,
-      lineStyle: {
-        color: "rgba(255, 255, 255, 0.2)",
-        type: "dotted",
-        width: 0.8,
-      },
-    },
-  },
-  tooltip: {
-    trigger: "item",
-    backgroundColor: "#627F9D",
-    borderColor: "#627F9D",
-    borderRadius: 10,
-    padding: 10,
-    formatter: function (param) {
-      var value = param.value;
-      var index = param.dataIndex;
-      // prettier-ignore
-      return '<div style="position:relative;">' +
-    '<div style="padding: 5px 5px 12px 5px;border-bottom: 1px solid #ffffff1a;font-family: "Helvetica";font-style: normal;font-weight: 400;font-size: 20px;line-height: 29px;display: flex;align-items: center;color: rgba(255, 255, 255, 0.5);">' +
-    "Monday, June 8" +
-    "</div>" +
-    '<div style="padding: 12px 5px 5px 5px;font-family:"helvetica_medium";font-style: normal;font-weight: 500;font-size: 20px;line-height: 29px;display: flex; align-items: center; color: #ffffff;">' +
-    '<span style="color: #fff;">' +
-    "New Item : " +
-    "</span>" +
-    '<span style="color: #37ce4a;margin-left: 10px;">' +
-    value +
-    "</span>" +
-    "</div>" +
-    `<div style="position:absolute; ${index === 0 ? "left: 0; bottom:-30px;":"left: 42%; bottom:-30px;"} width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 20px solid #627F9D;">` +
-    "</div>" +
-    "</div>";
-    },
-    position: function (pt, params) {
-      console.log("test", pt, params);
-      return params.dataIndex === 0
-        ? [pt[0] - 20, pt[1] - 130]
-        : [pt[0] - 75, pt[1] - 130];
-    },
-    textStyle: {
-      fontSize: "20px",
-      fontFamily: "Helvetica",
-      lineHeight: "29px",
-      fontWeight: 400,
-      color: "#FFFFFF80",
-    },
-  },
-  grid: {
-    top: 0,
-    left: 25,
-    right: 25,
-    height: 220,
-  },
-  yAxis: {
-    type: "value",
-    boundaryGap: false,
-    axisLabel: {
-      show: false,
-    },
-    splitLine: { show: false },
-  },
-  series: [
-    {
-      data: [820, 932, 901, 934, 1290, 1330, 1320],
-      type: "line",
-      lineStyle: {
-        width: 3,
-        color: new graphic.LinearGradient(0, 0, 0, 1, [
-          {
-            offset: 0,
-            color: "rgba(106, 180, 255, 1)",
-          },
-          {
-            offset: 1,
-            color: "rgba(194, 166, 255, 1)",
-          },
-        ]),
-      },
-      symbol: "circle",
-      symbolSize: 15,
-      itemStyle: {
+      boundaryGap: false,
+      data: xprop,
+      axisLabel: {
         color: "#fff",
-        borderColor: "rgba(119, 179, 255, 1)",
-        borderWidth: 3,
+        fontStyle: "normal",
+        fontWeight: 300,
+        fontFamily: "Helvetica",
+        fontSize: "20px",
+        lineHeight: 22,
+        padding: [20, 0, 0, 0],
       },
-      areaStyle: {
-        color: new graphic.LinearGradient(0, 0, 0, 1, [
-          {
-            offset: 0,
-            color: "rgba(160, 207, 255, 0.58)",
-          },
-          {
-            offset: 1,
-            color: "rgba(160, 207, 255, 0)",
-          },
-        ]),
+      type: "category",
+      axisLine: {
+        show: false,
+      },
+      axisTick: {
+        show: false,
+      },
+      splitLine: {
+        show: true,
+        lineStyle: {
+          color: "rgba(255, 255, 255, 0.2)",
+          type: "dotted",
+          width: 0.8,
+        },
       },
     },
-  ],
+    tooltip: {
+      trigger: "item",
+      backgroundColor: "#627F9D",
+      borderColor: "#627F9D",
+      borderRadius: 10,
+      padding: 10,
+      formatter: function (param) {
+        var value = param.value;
+        var index = param.dataIndex;
+        // prettier-ignore
+        return '<div style="position:relative;">' +
+      '<div style="padding: 5px 5px 12px 5px;border-bottom: 1px solid #ffffff1a;font-family: "Helvetica";font-style: normal;font-weight: 400;font-size: 20px;line-height: 29px;display: flex;align-items: center;color: rgba(255, 255, 255, 0.5);">' +
+      "Monday, June 8" +
+      "</div>" +
+      '<div style="padding: 12px 5px 5px 5px;font-family:"helvetica_medium";font-style: normal;font-weight: 500;font-size: 20px;line-height: 29px;display: flex; align-items: center; color: #ffffff;">' +
+      '<span style="color: #fff;">' +
+      "New Item : " +
+      "</span>" +
+      '<span style="color: #37ce4a;margin-left: 10px;">' +
+      value +
+      "</span>" +
+      "</div>" +
+      `<div style="position:absolute; ${index === 0 ? "left: 0; bottom:-30px;":"left: 42%; bottom:-30px;"} width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 20px solid #627F9D;">` +
+      "</div>" +
+      "</div>";
+      },
+      position: function (pt, params) {
+        console.log("test", pt, params);
+        return params.dataIndex === 0
+          ? [pt[0] - 20, pt[1] - 130]
+          : [pt[0] - 75, pt[1] - 130];
+      },
+      textStyle: {
+        fontSize: "20px",
+        fontFamily: "Helvetica",
+        lineHeight: "29px",
+        fontWeight: 400,
+        color: "#FFFFFF80",
+      },
+    },
+    grid: {
+      top: 0,
+      left: 25,
+      right: 25,
+      height: 220,
+    },
+    yAxis: {
+      type: "value",
+      boundaryGap: false,
+      axisLabel: {
+        show: false,
+      },
+      splitLine: { show: false },
+    },
+    series: [
+      {
+        data: yprop,
+        type: "line",
+        lineStyle: {
+          width: 3,
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
+            {
+              offset: 0,
+              color: "rgba(106, 180, 255, 1)",
+            },
+            {
+              offset: 1,
+              color: "rgba(194, 166, 255, 1)",
+            },
+          ]),
+        },
+        symbol: "circle",
+        symbolSize: 15,
+        itemStyle: {
+          color: "#fff",
+          borderColor: "rgba(119, 179, 255, 1)",
+          borderWidth: 3,
+        },
+        areaStyle: {
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
+            {
+              offset: 0,
+              color: "rgba(160, 207, 255, 0.58)",
+            },
+            {
+              offset: 1,
+              color: "rgba(160, 207, 255, 0)",
+            },
+          ]),
+        },
+      },
+    ],
+  };
+  return option;
 };
 
-export const pieChart = {
-  tooltip: {
-    trigger: "item",
-  },
-  grid: {
-    width: 260,
-    height: 260,
-  },
-  legend: {
-    show: false,
-  },
-  series: [
-    {
-      name: "Access From",
-      type: "pie",
-      radius: ["85%", "100%"],
-      avoidLabelOverlap: false,
-      label: {
-        show: false,
-      },
-      emphasis: {
+export const pieChart = (arr) => {
+  const option = {
+    tooltip: {
+      trigger: "item",
+    },
+    grid: {
+      width: 260,
+      height: 260,
+    },
+    legend: {
+      show: false,
+    },
+    series: [
+      {
+        name: "Access From",
+        type: "pie",
+        radius: ["85%", "100%"],
+        avoidLabelOverlap: false,
         label: {
           show: false,
-          fontSize: "40",
-          fontWeight: "bold",
         },
+        emphasis: {
+          label: {
+            show: false,
+            fontSize: "40",
+            fontWeight: "bold",
+          },
+        },
+        labelLine: {
+          show: false,
+        },
+        data: [
+          {
+            value: arr[0],
+            itemStyle: {
+              color: new graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "rgba(112, 176, 255, 1)",
+                },
+                {
+                  offset: 1,
+                  color: "rgba(152, 198, 255, 1)",
+                },
+              ]),
+            },
+          },
+          {
+            value: arr[1],
+            itemStyle: {
+              color: new graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "rgba(96, 144, 255, 1)",
+                },
+                {
+                  offset: 1,
+                  color: "rgba(18, 50, 124, 1)",
+                },
+              ]),
+            },
+          },
+          {
+            value: arr[2],
+            itemStyle: {
+              color: new graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "rgba(169, 255, 187, 1)",
+                },
+                {
+                  offset: 1,
+                  color: "rgba(111, 255, 141, 1)",
+                },
+              ]),
+            },
+          },
+          {
+            value: arr[3],
+            itemStyle: {
+              color: new graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "rgba(0, 74, 254, 1)",
+                },
+                {
+                  offset: 1,
+                  color: "rgba(128, 165, 255, 1)",
+                },
+              ]),
+            },
+          },
+          {
+            value: arr[4],
+            itemStyle: {
+              color: new graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "rgba(197, 164, 255, 1)",
+                },
+                {
+                  offset: 1,
+                  color: "rgba(219, 199, 255, 1)",
+                },
+              ]),
+            },
+          },
+          {
+            value: arr[5],
+            itemStyle: {
+              color: new graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "rgba(254, 189, 66, 1)",
+                },
+                {
+                  offset: 1,
+                  color: "rgba(239, 215, 171, 1)",
+                },
+              ]),
+            },
+          },
+        ],
       },
-      labelLine: {
-        show: false,
-      },
-      data: [
-        {
-          value: 1048,
-          itemStyle: {
-            color: new graphic.LinearGradient(0, 0, 0, 1, [
-              {
-                offset: 0,
-                color: "rgba(112, 176, 255, 1)",
-              },
-              {
-                offset: 1,
-                color: "rgba(152, 198, 255, 1)",
-              },
-            ]),
-          },
-        },
-        {
-          value: 500,
-          itemStyle: {
-            color: new graphic.LinearGradient(0, 0, 0, 1, [
-              {
-                offset: 0,
-                color: "rgba(96, 144, 255, 1)",
-              },
-              {
-                offset: 1,
-                color: "rgba(18, 50, 124, 1)",
-              },
-            ]),
-          },
-        },
-        {
-          value: 1048,
-          itemStyle: {
-            color: new graphic.LinearGradient(0, 0, 0, 1, [
-              {
-                offset: 0,
-                color: "rgba(169, 255, 187, 1)",
-              },
-              {
-                offset: 1,
-                color: "rgba(111, 255, 141, 1)",
-              },
-            ]),
-          },
-        },
-        {
-          value: 1048,
-          itemStyle: {
-            color: new graphic.LinearGradient(0, 0, 0, 1, [
-              {
-                offset: 0,
-                color: "rgba(0, 74, 254, 1)",
-              },
-              {
-                offset: 1,
-                color: "rgba(128, 165, 255, 1)",
-              },
-            ]),
-          },
-        },
-        {
-          value: 1048,
-          itemStyle: {
-            color: new graphic.LinearGradient(0, 0, 0, 1, [
-              {
-                offset: 0,
-                color: "rgba(197, 164, 255, 1)",
-              },
-              {
-                offset: 1,
-                color: "rgba(219, 199, 255, 1)",
-              },
-            ]),
-          },
-        },
-        {
-          value: 1048,
-          itemStyle: {
-            color: new graphic.LinearGradient(0, 0, 0, 1, [
-              {
-                offset: 0,
-                color: "rgba(254, 189, 66, 1)",
-              },
-              {
-                offset: 1,
-                color: "rgba(239, 215, 171, 1)",
-              },
-            ]),
-          },
-        },
-      ],
-    },
-  ],
+    ],
+  };
+  return option;
 };
 
 export const scatterChart = {
@@ -296,85 +302,88 @@ export const scatterChart = {
   ],
 };
 
-export const gaugeChart = {
-  series: [
-    {
-      name: "Pressure",
-      type: "gauge",
-      radius: "110%",
-      center: ["50%", "60%"],
-      data: [
-        {
-          value: 86,
-          detail: {
-            show: true,
-            fontFamily: "Helvetica",
-            fontSize: 36,
-            fontWeight: 500,
-            lineHeight: 25,
-            offsetCenter: [0, "35%"],
-            formatter: function (str) {
-              return str + "%";
+export const gaugeChart = (val) => {
+  const option = {
+    series: [
+      {
+        name: "Pressure",
+        type: "gauge",
+        radius: "110%",
+        center: ["50%", "60%"],
+        data: [
+          {
+            value: val,
+            detail: {
+              show: true,
+              fontFamily: "Helvetica",
+              fontSize: 36,
+              fontWeight: 500,
+              lineHeight: 25,
+              offsetCenter: [0, "35%"],
+              formatter: function (str) {
+                return str + "%";
+              },
             },
           },
-        },
-      ],
-      startAngle: 205,
-      endAngle: -25,
-      axisLine: {
-        roundCap: true,
-        lineStyle: {
-          width: 30,
-          color: [
-            [
-              1,
-              new graphic.LinearGradient(0, 0, 0, 1, [
-                {
-                  offset: 0,
-                  color: "rgba(106, 180, 255, 1)",
-                },
-                {
-                  offset: 1,
-                  color: "rgba(194, 166, 255, 1)",
-                },
-              ]),
+        ],
+        startAngle: 205,
+        endAngle: -25,
+        axisLine: {
+          roundCap: true,
+          lineStyle: {
+            width: 30,
+            color: [
+              [
+                1,
+                new graphic.LinearGradient(0, 0, 0, 1, [
+                  {
+                    offset: 0,
+                    color: "rgba(106, 180, 255, 1)",
+                  },
+                  {
+                    offset: 1,
+                    color: "rgba(194, 166, 255, 1)",
+                  },
+                ]),
+              ],
             ],
-          ],
+          },
         },
-      },
-      pointer: {
-        icon: "path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z",
-        width: 23,
-        length: "75%",
-        itemStyle: {
-          color: "#FFFFFF",
+        pointer: {
+          icon: "path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z",
+          width: 23,
+          length: "75%",
+          itemStyle: {
+            color: "#FFFFFF",
+          },
         },
-      },
-      anchor: {
-        show: true,
-        showAbove: true,
-        icon: "circle",
-        size: 23,
-        itemStyle: {
+        anchor: {
+          show: true,
+          showAbove: true,
+          icon: "circle",
+          size: 23,
+          itemStyle: {
+            color: "#fff",
+            borderColor: "#DFDFDF",
+            borderWidth: 8,
+          },
+        },
+        axisTick: {
+          show: false,
+        },
+        splitLine: {
+          show: false,
+        },
+        axisLabel: {
+          show: false,
+        },
+        detail: {
+          valueAnimation: true,
+          formatter: "{value} %",
           color: "#fff",
-          borderColor: "#DFDFDF",
-          borderWidth: 8,
         },
       },
-      axisTick: {
-        show: false,
-      },
-      splitLine: {
-        show: false,
-      },
-      axisLabel: {
-        show: false,
-      },
-      detail: {
-        valueAnimation: true,
-        formatter: "{value} %",
-        color: "#fff",
-      },
-    },
-  ],
+    ],
+  };
+  return option;
 };
