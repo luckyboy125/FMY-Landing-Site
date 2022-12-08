@@ -108,14 +108,14 @@
 }
 
 .chartContent .databasePart {
-  padding: 32px 26.5px 39px 41px;
+  padding: 30px 26.5px 30px 41px;
   width: 55%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
 }
 
 .chartContent .casesPart {
-  padding: 32px 26.5px 39px 41px;
+  padding: 30px 26.5px 30px 41px;
   width: 45%;
   display: flex;
   align-items: center;
@@ -143,7 +143,7 @@
 }
 
 .casesPart .descriptionItem {
-  padding: 28px 0 32px 0;
+  padding: 24px 0 28px 0;
 }
 
 .descriptionItemTitle {
@@ -227,7 +227,7 @@
 }
 
 .statsItem {
-  padding: 40px 45px 39px 52px;
+  padding: 38px 45px 38px 52px;
 }
 .statsItemCount {
   font-family: "Helvetica";

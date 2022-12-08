@@ -40,7 +40,7 @@ function WebAnalysisItems() {
         <div className="chartContent">
           <div className="databasePart">
             <div className="descriptionRoot">
-              <div className="descriptionItem borderNone topPaddingNone pdBottom26">
+              <div className="descriptionItem borderNone topPaddingNone pdBottom22">
                 <div className="descriptionItemTitle">
                   Total items this week
                 </div>
@@ -48,13 +48,13 @@ function WebAnalysisItems() {
                   10,324
                 </div>
               </div>
-              <div className="descriptionItem pdTop28 pdBottom32">
+              <div className="descriptionItem pdTop24 pdBottom28">
                 <div className="descriptionItemTitle">
                   Changes from last week
                 </div>
                 <div className="descriptionItemCount green">+12%</div>
               </div>
-              <div className="descriptionItem bottomPaddingNone pdTop23">
+              <div className="descriptionItem bottomPaddingNone pdTop22">
                 <div className="descriptionItemTitle">Total items in DB</div>
                 <div className="descriptionItemCount white">5,403</div>
               </div>
@@ -65,7 +65,7 @@ function WebAnalysisItems() {
                   ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"],
                   [820, 932, 901, 934, 1290, 1330, 1320]
                 )}
-                style={{ width: "100%", height: "280px", marginTop: "50px" }}
+                style={{ width: "100%", height: "280px", marginTop: "30px" }}
               ></ReactEcharts>
             </div>
           </div>
