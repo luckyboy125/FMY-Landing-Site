@@ -33,7 +33,7 @@ function CustomizeLineChart({}) {
         grid: {
           borderDash: [1.6, 1.6],
           borderWidth: 0.8,
-          color: "#ffffff",
+          color: "#ffffff44",
         },
         ticks: {
           color: "#FFF",
@@ -87,6 +87,22 @@ function CustomizeLineChart({}) {
         height={80}
         options={linechartOption}
         data={linechartData}
+        plugins={[
+          {
+            beforeEvent: function (chart, ctx) {
+              const event = ctx.event;
+              // Take into account CSS zoom on some parent element.
+              // Zoom is used, e.g., by Reveal.js.
+              var zoom =
+                document.getElementsByClassName("websiteContainer")[0].style
+                  .zoom || 1;
+              if (zoom != 1) {
+                event.x = event.x / zoom;
+                event.y = event.y / zoom;
+              }
+            },
+          },
+        ]}
       />
     </>
   );

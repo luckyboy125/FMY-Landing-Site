@@ -31,11 +31,9 @@ body {
 .content {
   margin-left: 22%;
   position: absolute;
-  margin-left: 292px;
+  margin-left: 273px;
   margin-top: 150px;
-
-  width: 1963px;
-
+  width: 2000px;
   position: inherit;
 }
 
