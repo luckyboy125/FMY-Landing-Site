@@ -8,7 +8,7 @@ import "./asset/fonts/Helvetica.ttf";
 import "./asset/fonts/Helvetica-Oblique.ttf";
 import { useEffect, useState } from "react";
 import { useWindowDimensions, adjustContainer } from "./useWindowDimensions";
-import WebAnalysisItems from "./components/WebAnalysisItems";
+import WebAnalysisItems from "./pages/WebAnalysisItems/WebAnalysisItems";
 import { Row, Col, Container } from "react-bootstrap";
 import SideTaskBar from "./components/SideTaskBar";
 import TopTaskBar from "./components/TopTaskBar";

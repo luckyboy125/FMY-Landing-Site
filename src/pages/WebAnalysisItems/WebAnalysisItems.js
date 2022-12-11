@@ -1,11 +1,11 @@
-import Button from "./Button/Button";
-import handImage from "../asset/images/hand.svg";
+import Button from "../../components/Button/Button";
+import handImage from "../../asset/images/hand.svg";
 import "./WebAnalysisItem.css";
-import CustomizeLineChart from "./CustomizeLineChart/CustomizeLineChart";
-import Stats from "./Stats/Stats";
-import TopPlatforms from "./TopPlatforms/TopPlatforms";
-import Sentiment from "./Sentiment/Sentiment";
-import CustomizePieChart from "./CustomizePieChart/CustomizePieChart";
+import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
+import CustomizePieChart from "../../components/CustomizePieChart/CustomizePieChart";
+import Stats from "./component/Stats/Stats";
+import TopPlatforms from "./component/TopPlatforms/TopPlatforms";
+import Sentiment from "./component/Sentiment/Sentiment";
 
 function WebAnalysisItems() {
   return (
