@@ -132,6 +132,7 @@
 
 .lineChartRoot {
   flex-grow: 1;
+  padding-top: 50px;
 }
 
 .casesPart .descriptionRoot {

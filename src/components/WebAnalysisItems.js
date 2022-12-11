@@ -56,14 +56,10 @@ function WebAnalysisItems() {
               </div>
             </div>
             <div className="lineChartRoot">
-              {/* <ReactEcharts
-                option={lineChart(
-                  ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"],
-                  [820, 932, 901, 934, 1290, 1330, 1320]
-                )}
-                style={{ width: "100%", height: "280px", marginTop: "30px" }}
-              ></ReactEcharts> */}
-              <CustomizeLineChart />
+              <CustomizeLineChart
+                axis={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"]}
+                ayis={[1320, 932, 901, 1300, 1290, 1330, 1320]}
+              />
             </div>
           </div>
           <div className="casesPart">

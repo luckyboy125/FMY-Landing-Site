@@ -3,17 +3,17 @@ import { Chart, registerables } from "chart.js";
 import { useEffect, useRef, useState } from "react";
 Chart.register(...registerables);
 
-function CustomizeLineChart({}) {
+function CustomizeLineChart({ axis, ayis }) {
   const [lineColor, setLineColor] = useState("");
   const [areaColor, setAreaColor] = useState("");
 
   useEffect(() => {
     var canvas = document.getElementById("line_chart");
     var ctx = canvas.getContext("2d");
-    var _linecolor = ctx.createLinearGradient(0, 0, 0, 400);
+    var _linecolor = ctx.createLinearGradient(0, 0, 0, 100);
     _linecolor.addColorStop(0, "#6AB4FF");
     _linecolor.addColorStop(1, "#C2A6FF");
-    var _areacolor = ctx.createLinearGradient(0, 0, 0, 400);
+    var _areacolor = ctx.createLinearGradient(0, 0, 0, 210);
     _areacolor.addColorStop(0, "#A0CFFF94");
     _areacolor.addColorStop(1, "#A0CFFF00");
     setLineColor(_linecolor);
@@ -28,18 +28,28 @@ function CustomizeLineChart({}) {
     scales: {
       y: {
         display: false,
+        beginAtZero: true,
       },
       x: {
         grid: {
+          lineWidth: 0.8,
+          color: "#ffffff20",
+          drawBorder: false,
+          drawOnChartArea: true,
           borderDash: [1.6, 1.6],
-          borderWidth: 0.8,
-          color: "#ffffff44",
+          borderDashOffset: 25,
+          tickLength: 0,
         },
         ticks: {
           color: "#FFF",
           padding: 20,
-          font: "Helcetica",
-          fontSize: 20,
+          font: {
+            family: "Helvetica",
+            size: 20,
+            weight: "lighter",
+            style: "Light",
+            lineHeight: "22px",
+          },
         },
       },
     },
@@ -47,6 +57,7 @@ function CustomizeLineChart({}) {
       legend: {
         display: false,
       },
+      padding: 0,
       tooltip: {
         enabled: true,
         intersect: true,
@@ -59,23 +70,27 @@ function CustomizeLineChart({}) {
     },
   };
 
-  const linechartData = {
-    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"],
-    datasets: [
-      {
-        data: [1320, 932, 901, 1300, 1290, 1330, 1320],
-        label: "lineChart",
-        borderColor: lineColor,
-        backgroundColor: areaColor,
-        width: 3,
-        fill: true,
-        pointStyle: "circle",
-        pointRadius: 5,
-        pointBorderWidth: 2.5,
-        pointBackgroundColor: "#ffffff",
-        pointBorderColor: "#77B3FF",
-      },
-    ],
+  const lineChartAction = (x, y) => {
+    const linechartData = {
+      labels: x,
+      datasets: [
+        {
+          data: y,
+          label: "lineChart",
+          borderColor: lineColor,
+          backgroundColor: areaColor,
+          width: 3,
+          fill: true,
+          pointStyle: "circle",
+          pointRadius: 7.5,
+          pointBorderWidth: 2.5,
+          pointBackgroundColor: "#ffffff",
+          pointBorderColor: "#77B3FF",
+        },
+      ],
+    };
+
+    return linechartData;
   };
 
   return (
@@ -83,10 +98,10 @@ function CustomizeLineChart({}) {
       <Line
         id="line_chart"
         type="line"
-        width={160}
-        height={80}
+        width={637}
+        height={250}
         options={linechartOption}
-        data={linechartData}
+        data={lineChartAction(axis, ayis)}
         plugins={[
           {
             beforeEvent: function (chart, ctx) {
