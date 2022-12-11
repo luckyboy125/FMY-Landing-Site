@@ -2,13 +2,9 @@ import Button from "./Button/Button";
 import handImage from "../asset/images/hand.svg";
 import "./WebAnalysisItem.css";
 import ReactEcharts from "echarts-for-react";
-import {
-  gaugeChart,
-  lineChart,
-  pieChart,
-  scatterChart,
-} from "../config/ChartOptions";
+import { gaugeChart, pieChart, scatterChart } from "../config/ChartOptions";
 import ChartLayout from "./ChartLayout/ChartLayout";
+import CustomizeLineChart from "./CustomizeLineChart/CustomizeLineChart";
 
 function WebAnalysisItems() {
   return (
@@ -60,13 +56,14 @@ function WebAnalysisItems() {
               </div>
             </div>
             <div className="lineChartRoot">
-              <ReactEcharts
+              {/* <ReactEcharts
                 option={lineChart(
                   ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"],
                   [820, 932, 901, 934, 1290, 1330, 1320]
                 )}
                 style={{ width: "100%", height: "280px", marginTop: "30px" }}
-              ></ReactEcharts>
+              ></ReactEcharts> */}
+              <CustomizeLineChart />
             </div>
           </div>
           <div className="casesPart">
