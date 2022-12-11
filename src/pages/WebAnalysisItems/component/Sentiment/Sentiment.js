@@ -1,6 +1,6 @@
 import { graphic } from "echarts";
 import ReactEcharts from "echarts-for-react";
-import Button from "../../../../components/Button/Button";
+import ActionButton from "../../../../components/ActionButton/ActionButton";
 import ChartLayout from "../../../../components/ChartLayout/ChartLayout";
 import "./Sentiment.css";
 
@@ -90,7 +90,7 @@ function Sentiment({ value }) {
   return (
     <ChartLayout
       name="Sentiment"
-      button={<Button name="Show" content="This week" />}
+      button={<ActionButton name="Show" content="This week" />}
       className="topPlatforms"
     >
       <div className="chartRoot">

@@ -1,6 +1,6 @@
-import "./Button.css";
+import "./ActionButton.css";
 
-function Button({ name, content, className, type }) {
+function ActionButton({ name, content, className, type }) {
   return (
     <div className={`buttonRoot ${className}`}>
       {type !== "common" ? <div className="buttonName">{name}:</div> : <></>}
@@ -12,4 +12,4 @@ function Button({ name, content, className, type }) {
   );
 }
 
-export default Button;
+export default ActionButton;

@@ -1,4 +1,4 @@
-import Button from "../../components/Button/Button";
+import ActionButton from "../../components/ActionButton/ActionButton";
 import handImage from "../../asset/images/hand.svg";
 import "./WebAnalysisItem.css";
 import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
@@ -26,8 +26,12 @@ function WebAnalysisItems() {
           <div className="databasePart">
             <div className="headerItemTitle">Database Items</div>
             <div className="chartTools">
-              <Button name="Show" content="This Week" className="chartPeriod" />
-              <Button content="Compare" type="common" />
+              <ActionButton
+                name="Show"
+                content="This Week"
+                className="chartPeriod"
+              />
+              <ActionButton content="Compare" type="common" />
             </div>
           </div>
           <div className="casesPart">

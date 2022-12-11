@@ -1,4 +1,4 @@
-import Button from "../../../../components/Button/Button";
+import ActionButton from "../../../../components/ActionButton/ActionButton";
 import ChartLayout from "../../../../components/ChartLayout/ChartLayout";
 import "./Stats.css";
 
@@ -6,7 +6,7 @@ function Stats() {
   return (
     <ChartLayout
       name="Stats"
-      button={<Button name="Show" content="All" />}
+      button={<ActionButton name="Show" content="All" />}
       className="stats"
     >
       <div className="statsItems borderBottom">

@@ -1,6 +1,6 @@
 import ReactEcharts from "echarts-for-react";
-import Button from "../../../../components/Button/Button";
 import ChartLayout from "../../../../components/ChartLayout/ChartLayout";
+import ActionButton from "../../../../components/ActionButton/ActionButton";
 import "./TopPlatforms.css";
 
 function TopPlatforms() {
@@ -100,7 +100,7 @@ function TopPlatforms() {
   return (
     <ChartLayout
       name="Top platforms"
-      button={<Button name="Show" content="All" className="hidden" />}
+      button={<ActionButton name="Show" content="All" className="hidden" />}
       className="topPlatforms"
     >
       <ReactEcharts option={option}></ReactEcharts>

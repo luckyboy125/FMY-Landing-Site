@@ -12,6 +12,7 @@ import WebAnalysisItems from "./pages/WebAnalysisItems/WebAnalysisItems";
 import { Row, Col, Container } from "react-bootstrap";
 import SideTaskBar from "./components/SideTaskBar";
 import TopTaskBar from "./components/TopTaskBar";
+import Tasks from "./pages/Tasks/Tasks";
 
 //DONT TOUCH THIS FILE
 
@@ -38,7 +39,8 @@ function App() {
               <SideTaskBar />
             </Col>
             <Col sm={9} className="content">
-              <WebAnalysisItems />
+              {/* <WebAnalysisItems /> */}
+              <Tasks />
             </Col>
           </Row>
         </div>

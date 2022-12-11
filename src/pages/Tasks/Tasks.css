@@ -1,0 +1,19 @@
+.tasksRoot {
+  padding: 50px 34px;
+}
+.tasksTitle {
+  font-family: "Helvetica Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 18.5px;
+  padding: 0 6px;
+}
+.tasksHeaderRoot {
+  padding: 0 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
