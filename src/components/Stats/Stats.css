@@ -1,0 +1,40 @@
+.stats {
+  min-width: 500px;
+}
+.statsItems {
+  display: flex;
+  align-items: center;
+}
+
+.statsItem {
+  padding: 38px 45px 38px 52px;
+}
+.statsItemCount {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.statsItemDes {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.7;
+  padding: 17px 0 10px 0;
+}
+.statsItemPercent {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #0fdf63;
+}

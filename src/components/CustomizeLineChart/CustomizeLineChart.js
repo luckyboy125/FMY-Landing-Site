@@ -59,12 +59,97 @@ function CustomizeLineChart({ axis, ayis }) {
       },
       padding: 0,
       tooltip: {
-        enabled: true,
-        intersect: true,
-        mode: "nearest",
-        callbacks: {
-          title: () => "title",
-          label: (item) => item.parsed + "%",
+        // Disable the on-canvas tooltip
+        enabled: false,
+        backgroundColor: "#627F9D",
+        external: (context) => {
+          // Tooltip Element
+          let tooltipEl = document.getElementById("chartjs-tooltip");
+
+          // Create element on first render
+          if (!tooltipEl) {
+            tooltipEl = document.createElement("div");
+            tooltipEl.id = "chartjs-tooltip";
+            tooltipEl.innerHTML = "<table></table>";
+            document.body.appendChild(tooltipEl);
+          }
+
+          // Hide if no tooltip
+          const tooltipModel = context.tooltip;
+          if (tooltipModel.opacity === 0) {
+            tooltipEl.style.opacity = "0";
+            return;
+          }
+
+          // Set caret Position (above, below,no-transform ).As I need above I don't delete that class
+          tooltipEl.classList.remove("below", "no-transform");
+
+          // Set HTML & Data
+          if (tooltipModel.body) {
+            const innerHtml = `<div style=" background: #627F9D; padding: 15px; border-radius:10px; z-index:1000;">
+            <div
+              style="
+                padding: 5px 5px 12px 5px;
+                border-bottom: 1px solid #ffffff1a;
+                font-family: Helvetica;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 29px;
+                display: flex;
+                align-items: center;
+                color: rgba(255, 255, 255, 0.5);
+              "
+            >
+              Monday, June 8
+            </div>
+            <div
+              style="
+                padding: 12px 5px 5px 5px;
+                font-family: HelveticaMedium;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 29px;
+                display: flex;
+                align-items: center;
+                color: #ffffff;
+              "
+            >
+              <span style="color: #fff"> New Item : </span>
+              <span style="color: #37ce4a; margin-left: 10px"> value </span>
+            </div>
+            <div
+              style="
+                position: absolute;
+                left: 8px;
+                bottom: -15px;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 15px solid #627f9d;
+              "
+            ></div>
+          </div>
+          `;
+
+            tooltipEl.querySelector("table").innerHTML = innerHtml;
+          }
+
+          const position = context.chart.canvas.getBoundingClientRect();
+
+          console.log("tootltip: ", position, tooltipModel);
+
+          // Display, position, and set styles for font
+          tooltipEl.style.opacity = "1";
+          tooltipEl.style.marginLeft =
+            position.left + window.pageXOffset + tooltipModel.caretX + "px";
+          tooltipEl.style.marginTop =
+            position.top + window.pageYOffset + tooltipModel.caretY + "px";
+          tooltipEl.style.padding =
+            tooltipModel.padding + "px " + tooltipModel.padding + "px";
+          tooltipEl.style.pointerEvents = "none";
         },
       },
     },
