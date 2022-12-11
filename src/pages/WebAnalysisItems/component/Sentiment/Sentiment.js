@@ -1,7 +1,7 @@
 import { graphic } from "echarts";
-import Button from "../../components/Button/Button";
-import ChartLayout from "../../components/ChartLayout/ChartLayout";
 import ReactEcharts from "echarts-for-react";
+import Button from "../../../../components/Button/Button";
+import ChartLayout from "../../../../components/ChartLayout/ChartLayout";
 import "./Sentiment.css";
 
 function Sentiment({ value }) {

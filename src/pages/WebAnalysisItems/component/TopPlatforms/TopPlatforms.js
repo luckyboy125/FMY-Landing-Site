@@ -1,6 +1,6 @@
 import ReactEcharts from "echarts-for-react";
-import Button from "../Button/Button";
-import ChartLayout from "../ChartLayout/ChartLayout";
+import Button from "../../../../components/Button/Button";
+import ChartLayout from "../../../../components/ChartLayout/ChartLayout";
 import "./TopPlatforms.css";
 
 function TopPlatforms() {

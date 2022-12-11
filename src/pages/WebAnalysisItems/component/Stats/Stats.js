@@ -1,5 +1,5 @@
-import Button from "../Button/Button";
-import ChartLayout from "../ChartLayout/ChartLayout";
+import Button from "../../../../components/Button/Button";
+import ChartLayout from "../../../../components/ChartLayout/ChartLayout";
 import "./Stats.css";
 
 function Stats() {
