@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./TaskLongItem.css";
 
-function TaskLongItem({ className, avatar, dropdown, click, date }) {
+function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
   const dateConvert = (timeStamp) => {
     const time = new Date(timeStamp * 1000);
     const Month = [
@@ -54,7 +54,7 @@ function TaskLongItem({ className, avatar, dropdown, click, date }) {
         <div className="circleIcon">
           <div class="circle__inner"></div>
         </div>
-        <span className="taskTitle">Lorem ipsum dolor sit</span>
+        <span className="taskTitle">{title}</span>
       </div>
       <div className="secondPart">
         {dropdown}

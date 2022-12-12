@@ -1,0 +1,96 @@
+.taskShortItem {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  box-shadow: 0px 5px 25px rgba(117, 179, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px 20px 14px 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.taskShortItem .circleIcon {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
+  position: relative;
+  border-radius: 50%;
+  margin-right: 17px;
+  margin-bottom: 6px;
+}
+.taskShortItem .circleIcon .circle__inner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  background-color: #404e5e;
+}
+.taskShortItem .taskShortItemContent {
+  flex-grow: 1;
+}
+.taskShortItem .taskShortItemContent .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.taskShortItem .taskShortItemContent .des {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #d8e1ea;
+  margin-bottom: 18px;
+}
+
+.taskShortItem .taskShortItemContent .items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskShortItem .taskShortItemContent .items .itemBtn {
+  margin-right: 20px;
+}
+.taskShortItem .taskShortItemContent .items .itemsFirst {
+  display: flex;
+  align-items: center;
+}
+.taskShortItem .taskShortItemContent .items .itemsFirst .avatarRoot {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+.taskShortItem .taskShortItemContent .items .itemsFirst .avatarRoot .avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.taskShortItem .taskShortItemContent .items .deleteIcon i {
+  color: #adb1b3;
+  font-size: 24px;
+  line-height: 28px;
+}
+.taskShortItem .dotGroup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

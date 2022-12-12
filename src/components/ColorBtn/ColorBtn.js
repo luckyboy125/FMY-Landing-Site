@@ -1,6 +1,6 @@
 import "./ColorBtn.css";
 
-function ColorBtn({ className, color, width, name }) {
+function ColorBtn({ className, color, width, name, iconShow }) {
   return (
     <div
       className={`colorBtn ${className}`}
@@ -9,7 +9,11 @@ function ColorBtn({ className, color, width, name }) {
       <span className="btnName" style={{ color: color }}>
         {name}
       </span>
-      <i className="fas fa-angle-down" style={{ color: color }}></i>
+      {iconShow ? (
+        <i className="fas fa-angle-down" style={{ color: color }}></i>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

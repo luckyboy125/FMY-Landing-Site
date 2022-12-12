@@ -106,6 +106,9 @@ body {
 .marBottom10 {
   margin-bottom: 10px;
 }
+.marBottom20 {
+  margin-bottom: 20px;
+}
 .hidden {
   visibility: hidden;
 }
