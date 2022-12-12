@@ -1,4 +1,5 @@
 import ActionTab from "../../components/ActionTab/ActionTab";
+import PlusButton from "../../components/PlusButton/PlusButton";
 import "./Tasks.css";
 
 function Tasks() {
@@ -7,6 +8,7 @@ function Tasks() {
       <div className="tasksTitle">Tasks</div>
       <div className="tasksHeaderRoot">
         <ActionTab />
+        <PlusButton />
       </div>
     </div>
   );

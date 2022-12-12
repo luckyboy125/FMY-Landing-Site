@@ -1,6 +1,6 @@
 import "./ActionTab.css";
 
-function ActionTab({ name, content, className, type }) {
+function ActionTab({ className }) {
   return (
     <div className={`actionTabRoot ${className}`}>
       <div className="actionTabItem active">All</div>
