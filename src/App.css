@@ -100,6 +100,12 @@ body {
   font-size: 40px !important;
   font-weight: 400 !important;
 }
+.marLeft43 {
+  margin-left: 43px;
+}
+.marBottom10 {
+  margin-bottom: 10px;
+}
 .hidden {
   visibility: hidden;
 }

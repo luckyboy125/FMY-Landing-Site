@@ -1,0 +1,86 @@
+.taskLongItem {
+  padding: 15px 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  box-shadow: 0px 5px 25px rgba(117, 179, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskLongItem .firstPart {
+  display: flex;
+  align-items: center;
+}
+.taskLongItem .firstPart .circleIcon {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
+  position: relative;
+  border-radius: 50%;
+}
+.taskLongItem .firstPart .circleIcon .circle__inner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  background-color: #3d4855;
+}
+.taskLongItem .firstPart .taskTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-left: 20px;
+}
+.taskLongItem .secondPart {
+  display: flex;
+  align-items: center;
+}
+.taskLongItem .secondPart .btn {
+  margin-right: 100px;
+}
+
+.taskLongItem .secondPart .avatar {
+  margin-right: 100px;
+}
+.taskLongItem .secondPart .itemDate {
+  font-family: "HelveticaMedium";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffff;
+  margin-right: 43px;
+}
+.taskLongItem .secondPart .itemDate span {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffffb2;
+  margin-left: 5px;
+}
+.dotGroup :last-child {
+  margin-bottom: 0;
+}
+.dot {
+  width: 7px;
+  min-width: 7px;
+  height: 7px;
+  background: #e4e3e380;
+  margin-bottom: 1.5px;
+  border-radius: 50%;
+}

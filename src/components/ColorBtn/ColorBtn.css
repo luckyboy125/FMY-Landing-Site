@@ -1,0 +1,15 @@
+.colorBtn {
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+}
+.colorBtn .btnName {
+  flex-grow: 1;
+  text-align: center;
+}
+.colorBtn i {
+  width: 11px;
+  font-size: 11px;
+  line-height: 8px;
+}

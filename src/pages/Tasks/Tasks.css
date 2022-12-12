@@ -1,8 +1,8 @@
 .tasksRoot {
-  padding: 50px 34px;
+  padding: 0 34px 50px 34px;
 }
 .tasksTitle {
-  font-family: "Helvetica Medium";
+  font-family: "HelveticaMedium";
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
@@ -16,5 +16,104 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 50px ;
+  margin-bottom: 50px;
+}
+.tasksContainer {
+  margin-top: 49px;
+}
+.tasksContainerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tasksContainerHeader .firstItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.tasksContainerHeader .firstItem .headerTitle {
+  font-family: "HelveticaMedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tasksContainerHeader .firstItem .headerDesRoot {
+  display: flex;
+  align-items: center;
+  margin-left: 78px;
+}
+
+.tasksContainerHeader .firstItem .headerDesRoot span {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.tasksContainerHeader .firstItem .headerDesRoot i {
+  color: #75b3ff;
+  font-size: 12px;
+  line-height: 8px;
+  margin-right: 5px;
+}
+.tasksContainerHeader .secondItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.tasksContainerHeader .secondItem .headerTitle {
+  font-family: "HelveticaMedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tasksContainerHeader .secondItem .headerDesRoot {
+  display: flex;
+  align-items: center;
+  margin-left: 158px;
+}
+
+.tasksContainerHeader .secondItem .headerDesRoot span {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.tasksContainerHeader .secondItem .headerDesRoot i {
+  color: #75b3ff;
+  font-size: 12px;
+  line-height: 8px;
+  margin-right: 5px;
+}
+.tasksContainer .tasksContent {
+  margin-top: 30px;
+  display: flex;
+}
+.tasksContainer .tasksContent .firstContent {
+  flex-grow: 1;
+  padding-right: 42px;
+  border-right: 1px solid #75b3ffb2;
+}
+.tasksContainer .tasksContent .secondContent {
+  width: 446px;
+  padding-left: 43px;
 }
