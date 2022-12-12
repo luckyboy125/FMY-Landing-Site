@@ -1,7 +1,11 @@
 import ActionTab from "../../components/ActionTab/ActionTab";
 import PlusButton from "../../components/PlusButton/PlusButton";
 import TaskLongItem from "./component/TaskLongItem/TaskLongItem";
+import Person1 from "../../asset/person1.svg";
+import Person2 from "../../asset/person2.svg";
+import Person3 from "../../asset/person3.svg";
 import "./Tasks.css";
+import ColorBtn from "../../components/ColorBtn/ColorBtn";
 
 function Tasks() {
   return (
@@ -30,9 +34,45 @@ function Tasks() {
         </div>
         <div className="tasksContent">
           <div className="firstContent">
-            <TaskLongItem className="marBottom10" />
-            <TaskLongItem className="marBottom10" />
-            <TaskLongItem className="marBottom10" />
+            <TaskLongItem
+              className="marBottom10"
+              avatar={Person1}
+              dropdown={
+                <ColorBtn
+                  className="btn"
+                  name="High"
+                  width={130}
+                  color="#FF7A00"
+                />
+              }
+              date={1670850086}
+            />
+            <TaskLongItem
+              className="marBottom10"
+              avatar={Person2}
+              dropdown={
+                <ColorBtn
+                  className="btn"
+                  name="Medium"
+                  width={130}
+                  color="#75B3FF"
+                />
+              }
+              date={1670677286}
+            />
+            <TaskLongItem
+              className="marBottom10"
+              avatar={Person3}
+              dropdown={
+                <ColorBtn
+                  className="btn"
+                  name="Low"
+                  width={130}
+                  color="#37CE4A"
+                />
+              }
+              date={1672405286}
+            />
           </div>
           <div className="secondContent">second content</div>
         </div>

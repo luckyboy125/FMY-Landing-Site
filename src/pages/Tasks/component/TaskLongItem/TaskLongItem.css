@@ -62,6 +62,7 @@
   text-align: left;
   color: #ffffff;
   margin-right: 43px;
+  width: 250px;
 }
 .taskLongItem .secondPart .itemDate span {
   font-family: Helvetica;

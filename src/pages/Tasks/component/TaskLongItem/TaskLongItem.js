@@ -1,8 +1,53 @@
-import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
-import Person1 from "../../../../asset/person1.svg";
+import { useEffect, useState } from "react";
 import "./TaskLongItem.css";
 
-function TaskLongItem({ className }) {
+function TaskLongItem({ className, avatar, dropdown, click, date }) {
+  const dateConvert = (timeStamp) => {
+    const time = new Date(timeStamp * 1000);
+    const Month = [
+      "JAN",
+      "FEB",
+      "MAR",
+      "APR",
+      "MAY",
+      "JUN",
+      "JUL",
+      "AUG",
+      "SEP",
+      "OCT",
+      "NOV",
+      "DEC",
+    ];
+    const Week = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    return {
+      date:
+        time.getDate() +
+        " " +
+        Month[time.getMonth()] +
+        " " +
+        time.getFullYear(),
+      day: Week[time.getDay()],
+    };
+  };
+
+  const handleClick = () => {
+    click();
+  };
+  const [day, setDay] = useState("asdf");
+  const [time, setTime] = useState("asdfa");
+  useEffect(() => {
+    setDay(dateConvert(date).day);
+    setTime(dateConvert(date).date);
+  }, [date]);
+
   return (
     <div className={`taskLongItem ${className}`}>
       <div className="firstPart">
@@ -12,13 +57,12 @@ function TaskLongItem({ className }) {
         <span className="taskTitle">Lorem ipsum dolor sit</span>
       </div>
       <div className="secondPart">
-        <ColorBtn className="btn" name="High" width={130} color="#FF7A00" />
-        <img src={Person1} className="avatar" alt="avatar" />
+        {dropdown}
+        <img src={avatar} className="avatar" alt="avatar" />
         <div className="itemDate">
-          Monday,
-          <span>4 April 2022</span>
+          {day},<span>{time}</span>
         </div>
-        <div className="dotGroup">
+        <div className="dotGroup" onClick={handleClick}>
           <div className="dot"></div>
           <div className="dot"></div>
           <div className="dot"></div>
