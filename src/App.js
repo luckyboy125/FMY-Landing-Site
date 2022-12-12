@@ -39,8 +39,8 @@ function App() {
               <SideTaskBar />
             </Col>
             <Col sm={9} className="content">
-              {/* <WebAnalysisItems /> */}
-              <Tasks />
+              <WebAnalysisItems />
+              {/* <Tasks /> */}
             </Col>
           </Row>
         </div>

@@ -86,7 +86,7 @@ function CustomizeLineChart({ axis, ayis }) {
 
           // Set HTML & Data
           if (tooltipModel.body) {
-            const innerHtml = `<div style=" background: #627F9D; padding: 15px; border-radius:10px; z-index:1000;">
+            const innerHtml = `<div style=" background: #627F9D; padding: 15px; border-radius:10px; z-index:1000;position: absolute; display: block;width: 190px">
             <div
               style="
                 padding: 5px 5px 12px 5px;
@@ -139,17 +139,11 @@ function CustomizeLineChart({ axis, ayis }) {
 
           const position = context.chart.canvas.getBoundingClientRect();
 
-          console.log("tootltip: ", position, tooltipModel);
 
           // Display, position, and set styles for font
           tooltipEl.style.opacity = "1";
-          tooltipEl.style.marginLeft =
-            position.left + window.pageXOffset + tooltipModel.caretX + "px";
-          tooltipEl.style.marginTop =
-            position.top + window.pageYOffset + tooltipModel.caretY + "px";
-          tooltipEl.style.padding =
-            tooltipModel.padding + "px " + tooltipModel.padding + "px";
-          tooltipEl.style.pointerEvents = "none";
+          tooltipEl.style.marginLeft = tooltipModel.caretX - 20 + "px";
+          tooltipEl.style.marginTop = tooltipModel.caretY - 400 + "px";
         },
       },
     },
@@ -167,6 +161,9 @@ function CustomizeLineChart({ axis, ayis }) {
           width: 3,
           fill: true,
           pointStyle: "circle",
+          pointHitRadius: 50,
+          pointHoverRadius: 10,
+          pointHoverBorderWidth: 3.5,
           pointRadius: 7.5,
           pointBorderWidth: 2.5,
           pointBackgroundColor: "#ffffff",
@@ -193,9 +190,7 @@ function CustomizeLineChart({ axis, ayis }) {
               const event = ctx.event;
               // Take into account CSS zoom on some parent element.
               // Zoom is used, e.g., by Reveal.js.
-              var zoom =
-                document.getElementsByClassName("websiteContainer")[0].style
-                  .zoom || 1;
+              var zoom = document.getElementsByClassName("websiteContainer")[0].style.zoom || 1;
               if (zoom != 1) {
                 event.x = event.x / zoom;
                 event.y = event.y / zoom;
@@ -204,6 +199,9 @@ function CustomizeLineChart({ axis, ayis }) {
           },
         ]}
       />
+      <div style={{position: "relative"}}>
+      <div id="chartjs-tooltip"><table></table></div>
+      </div>
     </>
   );
 }
