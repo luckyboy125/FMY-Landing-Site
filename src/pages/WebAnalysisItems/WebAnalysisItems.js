@@ -62,7 +62,7 @@ function WebAnalysisItems() {
             </div>
             <div className="lineChartRoot">
               <CustomizeLineChart
-                axis={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"]}
+                axis={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
                 ayis={[1320, 932, 901, 1300, 1290, 1330, 1320]}
               />
             </div>

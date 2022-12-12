@@ -1,6 +1,6 @@
 import { Line } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 Chart.register(...registerables);
 
 function CustomizeLineChart({ axis, ayis }) {
@@ -41,7 +41,9 @@ function CustomizeLineChart({ axis, ayis }) {
           tickLength: 0,
         },
         ticks: {
-          color: "#FFF",
+          color: axis.map((item, index) => {
+            return index + 1 === axis.length ? "#75B3FF" : "#fff";
+          }),
           padding: 20,
           font: {
             family: "Helvetica",
@@ -139,7 +141,6 @@ function CustomizeLineChart({ axis, ayis }) {
 
           const position = context.chart.canvas.getBoundingClientRect();
 
-
           // Display, position, and set styles for font
           tooltipEl.style.opacity = "1";
           tooltipEl.style.marginLeft = tooltipModel.caretX - 20 + "px";
@@ -151,7 +152,9 @@ function CustomizeLineChart({ axis, ayis }) {
 
   const lineChartAction = (x, y) => {
     const linechartData = {
-      labels: x,
+      labels: x.map((label, id) => {
+        return id + 1 === x.length ? "Today" : label;
+      }),
       datasets: [
         {
           data: y,
@@ -190,7 +193,9 @@ function CustomizeLineChart({ axis, ayis }) {
               const event = ctx.event;
               // Take into account CSS zoom on some parent element.
               // Zoom is used, e.g., by Reveal.js.
-              var zoom = document.getElementsByClassName("websiteContainer")[0].style.zoom || 1;
+              var zoom =
+                document.getElementsByClassName("websiteContainer")[0].style
+                  .zoom || 1;
               if (zoom != 1) {
                 event.x = event.x / zoom;
                 event.y = event.y / zoom;
@@ -199,8 +204,10 @@ function CustomizeLineChart({ axis, ayis }) {
           },
         ]}
       />
-      <div style={{position: "relative"}}>
-      <div id="chartjs-tooltip"><table></table></div>
+      <div style={{ position: "relative" }}>
+        <div id="chartjs-tooltip">
+          <table></table>
+        </div>
       </div>
     </>
   );
