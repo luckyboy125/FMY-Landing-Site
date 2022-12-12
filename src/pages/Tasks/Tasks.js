@@ -35,53 +35,166 @@ function Tasks() {
         </div>
         <div className="tasksContent">
           <div className="firstContent">
-            <TaskLongItem
-              title="Lorem ipsum dolor sit"
-              className="marBottom10"
-              avatar={Person1}
-              dropdown={
-                <ColorBtn
-                  className="btn"
-                  name="High"
-                  width={130}
-                  iconShow
-                  color="#FF7A00"
-                />
-              }
-              date={1670850086}
-            />
-            <TaskLongItem
-              title="Lorem ipsum dolor sit"
-              className="marBottom10"
-              avatar={Person2}
-              dropdown={
-                <ColorBtn
-                  className="btn"
-                  name="Medium"
-                  width={130}
-                  iconShow
-                  color="#75B3FF"
-                />
-              }
-              date={1670677286}
-            />
-            <TaskLongItem
-              title="Lorem ipsum dolor sit"
-              className="marBottom10"
-              avatar={Person3}
-              dropdown={
-                <ColorBtn
-                  className="btn"
-                  name="Low"
-                  width={130}
-                  iconShow
-                  color="#37CE4A"
-                />
-              }
-              date={1672405286}
-            />
+            <div className="tasksContentItem">
+              <TaskLongItem
+                title="Lorem ipsum dolor sit"
+                className="marBottom10"
+                avatar={Person1}
+                dropdown={
+                  <ColorBtn
+                    className="btn"
+                    name="High"
+                    width={130}
+                    iconShow
+                    color="#FF7A00"
+                  />
+                }
+                date={1670850086}
+              />
+              <TaskLongItem
+                title="Lorem ipsum dolor sit"
+                className="marBottom10"
+                avatar={Person2}
+                dropdown={
+                  <ColorBtn
+                    className="btn"
+                    name="Medium"
+                    width={130}
+                    iconShow
+                    color="#75B3FF"
+                  />
+                }
+                date={1670677286}
+              />
+              <TaskLongItem
+                title="Lorem ipsum dolor sit"
+                className="marBottom18"
+                avatar={Person3}
+                dropdown={
+                  <ColorBtn
+                    className="btn"
+                    name="Low"
+                    width={130}
+                    iconShow
+                    color="#37CE4A"
+                  />
+                }
+                date={1672405286}
+              />
+              <div className="addTaskBtn marLeft129">+ New Task</div>
+            </div>
+            <div className="tasksContentItem">
+              <div className="headerRoot">
+                <div className="headerTitle">Tomorrow</div>
+                <div className="headerDesRoot">
+                  <i className="far fa-angle-right"></i>
+                  <span>17 Tasks</span>
+                </div>
+              </div>
+              <TaskLongItem
+                title="Lorem ipsum dolor sit"
+                className="marBottom10"
+                avatar={Person1}
+                dropdown={
+                  <ColorBtn
+                    className="btn"
+                    name="High"
+                    width={130}
+                    iconShow
+                    color="#FF7A00"
+                  />
+                }
+                date={1670850086}
+              />
+              <TaskLongItem
+                title="Lorem ipsum dolor sit"
+                className="marBottom10"
+                avatar={Person2}
+                dropdown={
+                  <ColorBtn
+                    className="btn"
+                    name="Medium"
+                    width={130}
+                    iconShow
+                    color="#75B3FF"
+                  />
+                }
+                date={1670677286}
+              />
+              <TaskLongItem
+                title="Lorem ipsum dolor sit"
+                className="marBottom18"
+                avatar={Person3}
+                dropdown={
+                  <ColorBtn
+                    className="btn"
+                    name="Low"
+                    width={130}
+                    iconShow
+                    color="#37CE4A"
+                  />
+                }
+                date={1672405286}
+              />
+              <div className="addTaskBtn marLeft129">+ New Task</div>
+            </div>
+            <div className="tasksContentItem">
+              <div className="headerRoot">
+                <div className="headerTitle">Upcoming</div>
+                <div className="headerDesRoot">
+                  <i className="far fa-angle-right"></i>
+                  <span>17 Tasks</span>
+                </div>
+              </div>
+              <TaskLongItem
+                title="Lorem ipsum dolor sit"
+                className="marBottom10"
+                avatar={Person1}
+                dropdown={
+                  <ColorBtn
+                    className="btn"
+                    name="High"
+                    width={130}
+                    iconShow
+                    color="#FF7A00"
+                  />
+                }
+                date={1670850086}
+              />
+              <TaskLongItem
+                title="Lorem ipsum dolor sit"
+                className="marBottom10"
+                avatar={Person2}
+                dropdown={
+                  <ColorBtn
+                    className="btn"
+                    name="Medium"
+                    width={130}
+                    iconShow
+                    color="#75B3FF"
+                  />
+                }
+                date={1670677286}
+              />
+              <TaskLongItem
+                title="Lorem ipsum dolor sit"
+                className="marBottom18"
+                avatar={Person3}
+                dropdown={
+                  <ColorBtn
+                    className="btn"
+                    name="Low"
+                    width={130}
+                    iconShow
+                    color="#37CE4A"
+                  />
+                }
+                date={1672405286}
+              />
+              {/* <div className="addTaskBtn marLeft129">+ New Task</div> */}
+            </div>
           </div>
-          <div className="secondContent">
+          <div className="overdueContent">
             <TaskShortItem
               className="marBottom20"
               avatar={Person1}
@@ -105,6 +218,7 @@ function Tasks() {
             />
           </div>
         </div>
+        <div className="addTaskBtn marLeft129 marTop18">+ New Task</div>
       </div>
     </div>
   );

@@ -60,7 +60,8 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
         {dropdown}
         <img src={avatar} className="avatar" alt="avatar" />
         <div className="itemDate">
-          {day},<span>{time}</span>
+          <div className="itemDateDay">{day}</div>
+          <div className="itemDateTime">{time}</div>
         </div>
         <div className="dotGroup" onClick={handleClick}>
           <div className="dot"></div>

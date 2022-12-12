@@ -30,7 +30,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
+  margin: 0 16px;
+  width: 250px;
 }
 
 .tasksContainerHeader .firstItem .headerTitle {
@@ -46,7 +47,6 @@
 .tasksContainerHeader .firstItem .headerDesRoot {
   display: flex;
   align-items: center;
-  margin-left: 78px;
 }
 
 .tasksContainerHeader .firstItem .headerDesRoot span {
@@ -113,16 +113,81 @@
   padding-right: 42px;
   border-right: 1px solid #75b3ffb2;
 }
-.tasksContainer .tasksContent .secondContent {
+.tasksContainer .tasksContent .firstContent :last-child {
+  margin-bottom: 0 !important;
+}
+.tasksContainer .tasksContent .firstContent .tasksContentItem {
+  margin-bottom: 50px;
+}
+.tasksContainer .tasksContent .firstContent .tasksContentItem .headerRoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px 30px 16px;
+  width: 250px;
+}
+
+.tasksContainer
+  .tasksContent
+  .firstContent
+  .tasksContentItem
+  .headerRoot
+  .headerTitle {
+  font-family: "HelveticaMedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tasksContainer
+  .tasksContent
+  .firstContent
+  .tasksContentItem
+  .headerRoot.headerDesRoot {
+  display: flex;
+  align-items: center;
+}
+
+.tasksContainer
+  .tasksContent
+  .firstContent
+  .tasksContentItem
+  .headerRoot
+  .headerDesRoot
+  span {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.tasksContainer
+  .tasksContent
+  .firstContent
+  .tasksContentItem
+  .headerRoot
+  .headerDesRoot
+  i {
+  color: #75b3ff;
+  font-size: 12px;
+  line-height: 8px;
+  margin-right: 5px;
+}
+.tasksContainer .tasksContent .overdueContent {
   width: 446px;
   padding-left: 43px;
 }
-
 .dotGroup {
   cursor: pointer;
 }
 .dotGroup :last-child {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 .dot {
   width: 7px;
@@ -132,4 +197,13 @@
   background: #e4e3e380;
   margin-bottom: 2px;
   border-radius: 50%;
+}
+.addTaskBtn {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #75b3ff;
+  cursor: pointer;
 }

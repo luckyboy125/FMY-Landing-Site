@@ -100,11 +100,20 @@ body {
   font-size: 40px !important;
   font-weight: 400 !important;
 }
+.marTop18 {
+  margin-top: 18px;
+}
 .marLeft43 {
   margin-left: 43px;
 }
+.marLeft129 {
+  margin-left: 129px;
+}
 .marBottom10 {
   margin-bottom: 10px;
+}
+.marBottom18 {
+  margin-bottom: 18px;
 }
 .marBottom20 {
   margin-bottom: 20px;
