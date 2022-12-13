@@ -41,23 +41,46 @@ function WebAnalysisItems() {
         <div className="chartContent">
           <div className="databasePart">
             <div className="descriptionRoot">
-              <div className="descriptionItem borderNone topPaddingNone pdBottom22">
+              <div
+                className="descriptionItem borderNone"
+                style={{ paddingTop: "0px !important", paddingBottom: "22px" }}
+              >
                 <div className="descriptionItemTitle">
                   Total items this week
                 </div>
-                <div className="descriptionItemCount blue fontSize40">
+                <div
+                  className="descriptionItemCount"
+                  style={{
+                    fontSize: "40px",
+                    color: "#75b3ff",
+                    fontWeight: 400,
+                  }}
+                >
                   10,324
                 </div>
               </div>
-              <div className="descriptionItem pdTop24 pdBottom28">
+              <div
+                className="descriptionItem"
+                style={{ paddingTop: "24px", paddingBottom: "28px" }}
+              >
                 <div className="descriptionItemTitle">
                   Changes from last week
                 </div>
-                <div className="descriptionItemCount green">+12%</div>
+                <div
+                  className="descriptionItemCount"
+                  style={{ color: "#0fdf63" }}
+                >
+                  +12%
+                </div>
               </div>
-              <div className="descriptionItem bottomPaddingNone pdTop22">
+              <div
+                className="descriptionItem"
+                style={{ paddingTop: "22px", paddingBottom: "0px !important" }}
+              >
                 <div className="descriptionItemTitle">Total items in DB</div>
-                <div className="descriptionItemCount white">5,403</div>
+                <div className="descriptionItemCount" style={{ color: "#fff" }}>
+                  5,403
+                </div>
               </div>
             </div>
             <div className="lineChartRoot">
@@ -71,42 +94,69 @@ function WebAnalysisItems() {
             <div className="descriptionRoot">
               <div className="descriptionItem borderNone topPaddingNone">
                 <div className="descriptionItemTitle">Lorem ipsum</div>
-                <div className="descriptionItemCount white">53</div>
+                <div className="descriptionItemCount" style={{ color: "#fff" }}>
+                  53
+                </div>
               </div>
               <div className="descriptionItem">
                 <div className="descriptionItemTitle">Lorem ipsum</div>
-                <div className="descriptionItemCount white">+2</div>
+                <div className="descriptionItemCount" style={{ color: "#fff" }}>
+                  +2
+                </div>
               </div>
-              <div className="descriptionItem bottomPaddingNone">
+              <div
+                className="descriptionItem"
+                style={{ paddingBottom: "0px !important" }}
+              >
                 <div className="descriptionItemTitle">Lorem ipsum</div>
-                <div className="descriptionItemCount white">Lorem ipsum</div>
+                <div className="descriptionItemCount" style={{ color: "#fff" }}>
+                  Lorem ipsum
+                </div>
               </div>
             </div>
             <div className="pieChartRoot">
               <CustomizePieChart axis={[100, 120, 124, 300, 145, 50]} />
               <div className="pieChartDes">
                 <div className="pieChartDesItem">
-                  <div className="pieChartIcon bgTenderblue"></div>
+                  <div
+                    className="pieChartIcon"
+                    style={{ backgroundColor: "#75b3ff" }}
+                  ></div>
                   <div className="pieChartItemName">Lorem ipsum</div>
                 </div>
                 <div className="pieChartDesItem">
-                  <div className="pieChartIcon bgDarkblue"></div>
+                  <div
+                    className="pieChartIcon"
+                    style={{ backgroundColor: "#12327c" }}
+                  ></div>
                   <div className="pieChartItemName">Lorem ipsum</div>
                 </div>
                 <div className="pieChartDesItem">
-                  <div className="pieChartIcon bgGreen"></div>
+                  <div
+                    className="pieChartIcon"
+                    style={{ backgroundColor: "#93eca6" }}
+                  ></div>
                   <div className="pieChartItemName">Lorem ipsum</div>
                 </div>
                 <div className="pieChartDesItem">
-                  <div className="pieChartIcon bgSmartblue"></div>
+                  <div
+                    className="pieChartIcon"
+                    style={{ backgroundColor: "#004afe" }}
+                  ></div>
                   <div className="pieChartItemName">Lorem ipsum</div>
                 </div>
                 <div className="pieChartDesItem">
-                  <div className="pieChartIcon bgPink"></div>
+                  <div
+                    className="pieChartIcon"
+                    style={{ backgroundColor: "#c6a6ff" }}
+                  ></div>
                   <div className="pieChartItemName">Lorem ipsum</div>
                 </div>
                 <div className="pieChartDesItem">
-                  <div className="pieChartIcon bgYellow"></div>
+                  <div
+                    className="pieChartIcon"
+                    style={{ backgroundColor: "#febd42" }}
+                  ></div>
                   <div className="pieChartItemName">Other</div>
                 </div>
               </div>

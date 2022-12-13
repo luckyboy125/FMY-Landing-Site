@@ -10,13 +10,14 @@
   color: #ffffff;
   margin-bottom: 18.5px;
   padding: 0 6px;
+  margin-top: 5px;
 }
 .tasksHeaderRoot {
   padding: 0 6px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 50px;
+  align-items: center;
+  margin-bottom: 45px;
 }
 .tasksContainer {
   margin-top: 49px;
@@ -119,6 +120,12 @@
 .tasksContainer .tasksContent .firstContent .tasksContentItem {
   margin-bottom: 50px;
 }
+.tasksContainer .tasksContent .firstContent .tasksContentItem .tasksItem {
+  margin-bottom: 10px;
+}
+.tasksContainer .tasksContent .firstContent .tasksContentItem .lastTasksItem {
+  margin-bottom: 18px;
+}
 .tasksContainer .tasksContent .firstContent .tasksContentItem .headerRoot {
   display: flex;
   justify-content: space-between;
@@ -183,6 +190,9 @@
   width: 446px;
   padding-left: 43px;
 }
+.tasksContainer .tasksContent .overdueContent .taskShortItem {
+  margin-bottom: 20px;
+}
 .dotGroup {
   cursor: pointer;
 }
@@ -206,4 +216,5 @@
   line-height: 24px;
   color: #75b3ff;
   cursor: pointer;
+  margin-left: 129px;
 }

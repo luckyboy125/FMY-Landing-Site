@@ -16,22 +16,22 @@
   display: flex;
   align-items: center;
 }
+
 .taskLongItem .firstPart .circleIcon {
-  width: 34px;
-  min-width: 34px;
-  height: 34px;
-  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
   position: relative;
-  border-radius: 50%;
+  width: 34px;
+  height: 34px;
 }
-.taskLongItem .firstPart .circleIcon .circle__inner {
+.taskLongItem .firstPart .circleIcon::before {
+  content: "";
   position: absolute;
-  width: 26px;
-  height: 26px;
-  top: 4px;
-  left: 4px;
+  inset: 0;
   border-radius: 50%;
-  background-color: #404e5e;
+  padding: 3px;
+  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 .taskLongItem .firstPart .taskTitle {
   font-family: "Helvetica";
@@ -80,5 +80,5 @@
   text-align: left;
   color: #ffffffb2;
   margin-left: 5px;
-  width: 121px;
+  width: 180px;
 }

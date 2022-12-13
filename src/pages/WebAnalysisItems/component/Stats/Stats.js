@@ -9,8 +9,14 @@ function Stats() {
       button={<ActionButton name="Show" content="All" />}
       className="stats"
     >
-      <div className="statsItems borderBottom">
-        <div className="statsItem borderRight">
+      <div
+        className="statsItems"
+        style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.5)" }}
+      >
+        <div
+          className="statsItem"
+          style={{ borderRight: "1px solid rgba(255, 255, 255, 0.5)" }}
+        >
           <div className="statsItemCount">1.7k</div>
           <div className="statsItemDes">Flagged posts</div>
           <div className="statsItemPercent">+12%</div>
@@ -22,7 +28,10 @@ function Stats() {
         </div>
       </div>
       <div className="statsItems">
-        <div className="statsItem borderRight">
+        <div
+          className="statsItem"
+          style={{ borderRight: "1px solid rgba(255, 255, 255, 0.5)" }}
+        >
           <div className="statsItemCount">1.7k</div>
           <div className="statsItemDes">Flagged posts</div>
           <div className="statsItemPercent">+12%</div>

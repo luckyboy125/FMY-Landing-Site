@@ -2,66 +2,36 @@ import { useEffect, useState } from "react";
 import "./TaskLongItem.css";
 
 function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
-  const dateConvert = (timeStamp) => {
-    const time = new Date(timeStamp * 1000);
-    const Month = [
-      "JAN",
-      "FEB",
-      "MAR",
-      "APR",
-      "MAY",
-      "JUN",
-      "JUL",
-      "AUG",
-      "SEP",
-      "OCT",
-      "NOV",
-      "DEC",
-    ];
-    const Week = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    return {
-      date:
-        time.getDate() +
-        " " +
-        Month[time.getMonth()] +
-        " " +
-        time.getFullYear(),
-      day: Week[time.getDay()],
-    };
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   };
-
   const handleClick = () => {
     click();
   };
-  const [day, setDay] = useState("asdf");
-  const [time, setTime] = useState("asdfa");
+  const [time, setTime] = useState("");
+
   useEffect(() => {
-    setDay(dateConvert(date).day);
-    setTime(dateConvert(date).date);
+    setTime(new Date(date * 1000).toLocaleDateString("en-US", options));
   }, [date]);
 
   return (
     <div className={`taskLongItem ${className}`}>
       <div className="firstPart">
-        <div className="circleIcon">
-          <div class="circle__inner"></div>
-        </div>
+        <div className="circleIcon"></div>
         <span className="taskTitle">{title}</span>
       </div>
       <div className="secondPart">
         {dropdown}
         <img src={avatar} className="avatar" alt="avatar" />
         <div className="itemDate">
-          <div className="itemDateDay">{day}</div>
-          <div className="itemDateTime">{time}</div>
+          <div className="itemDateDay">{time.split(",")[0]}</div>
+          <div className="itemDateTime">
+            {time.split(",")[1]}
+            {time.split(",")[2]}
+          </div>
         </div>
         <div className="dotGroup" onClick={handleClick}>
           <div className="dot"></div>

@@ -38,7 +38,7 @@ function Tasks() {
             <div className="tasksContentItem">
               <TaskLongItem
                 title="Lorem ipsum dolor sit"
-                className="marBottom10"
+                className="tasksItem"
                 avatar={Person1}
                 dropdown={
                   <ColorBtn
@@ -53,7 +53,7 @@ function Tasks() {
               />
               <TaskLongItem
                 title="Lorem ipsum dolor sit"
-                className="marBottom10"
+                className="tasksItem"
                 avatar={Person2}
                 dropdown={
                   <ColorBtn
@@ -68,7 +68,7 @@ function Tasks() {
               />
               <TaskLongItem
                 title="Lorem ipsum dolor sit"
-                className="marBottom18"
+                className="lastTasksItem"
                 avatar={Person3}
                 dropdown={
                   <ColorBtn
@@ -81,7 +81,7 @@ function Tasks() {
                 }
                 date={1672405286}
               />
-              <div className="addTaskBtn marLeft129">+ New Task</div>
+              <div className="addTaskBtn">+ New Task</div>
             </div>
             <div className="tasksContentItem">
               <div className="headerRoot">
@@ -93,7 +93,7 @@ function Tasks() {
               </div>
               <TaskLongItem
                 title="Lorem ipsum dolor sit"
-                className="marBottom10"
+                className="tasksItem"
                 avatar={Person1}
                 dropdown={
                   <ColorBtn
@@ -108,7 +108,7 @@ function Tasks() {
               />
               <TaskLongItem
                 title="Lorem ipsum dolor sit"
-                className="marBottom10"
+                className="tasksItem"
                 avatar={Person2}
                 dropdown={
                   <ColorBtn
@@ -123,7 +123,7 @@ function Tasks() {
               />
               <TaskLongItem
                 title="Lorem ipsum dolor sit"
-                className="marBottom18"
+                className="lastTasksItem"
                 avatar={Person3}
                 dropdown={
                   <ColorBtn
@@ -136,7 +136,7 @@ function Tasks() {
                 }
                 date={1672405286}
               />
-              <div className="addTaskBtn marLeft129">+ New Task</div>
+              <div className="addTaskBtn">+ New Task</div>
             </div>
             <div className="tasksContentItem">
               <div className="headerRoot">
@@ -148,7 +148,7 @@ function Tasks() {
               </div>
               <TaskLongItem
                 title="Lorem ipsum dolor sit"
-                className="marBottom10"
+                className="tasksItem"
                 avatar={Person1}
                 dropdown={
                   <ColorBtn
@@ -163,7 +163,7 @@ function Tasks() {
               />
               <TaskLongItem
                 title="Lorem ipsum dolor sit"
-                className="marBottom10"
+                className="tasksItem"
                 avatar={Person2}
                 dropdown={
                   <ColorBtn
@@ -178,7 +178,7 @@ function Tasks() {
               />
               <TaskLongItem
                 title="Lorem ipsum dolor sit"
-                className="marBottom18"
+                className="lastTasksItem"
                 avatar={Person3}
                 dropdown={
                   <ColorBtn
@@ -191,26 +191,25 @@ function Tasks() {
                 }
                 date={1672405286}
               />
-              {/* <div className="addTaskBtn marLeft129">+ New Task</div> */}
             </div>
           </div>
           <div className="overdueContent">
             <TaskShortItem
-              className="marBottom20"
+              className="taskShortItem"
               avatar={Person1}
               title="Lorem ipsum dolor sit"
               type="personal"
               user="Noy"
             />
             <TaskShortItem
-              className="marBottom20"
+              className="taskShortItem"
               avatar={Person3}
               title="Lorem ipsum dolor sit"
               type="work"
               user="Nimrod"
             />
             <TaskShortItem
-              className="marBottom20"
+              className="taskShortItem"
               avatar={Person2}
               title="Lorem ipsum dolor sit"
               type="personal"
@@ -218,7 +217,9 @@ function Tasks() {
             />
           </div>
         </div>
-        <div className="addTaskBtn marLeft129 marTop18">+ New Task</div>
+        <div className="addTaskBtn" style={{ marginTop: "18px" }}>
+          + New Task
+        </div>
       </div>
     </div>
   );
