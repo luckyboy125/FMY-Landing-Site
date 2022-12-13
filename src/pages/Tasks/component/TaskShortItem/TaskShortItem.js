@@ -8,9 +8,7 @@ function TaskShortItem({ className, title, type, avatar, user, click }) {
   };
   return (
     <div className={`taskShortItem ${className}`}>
-      <div className="circleIcon">
-        <div class="circle__inner"></div>
-      </div>
+      <div className="circleIcon"></div>
       <div className="taskShortItemContent">
         <div className="title">{title}</div>
         <div className="des">#{type}</div>

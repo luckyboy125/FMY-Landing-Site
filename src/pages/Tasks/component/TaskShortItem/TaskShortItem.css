@@ -12,25 +12,23 @@
   position: relative;
   width: 100%;
 }
-
 .taskShortItem .circleIcon {
-  width: 34px;
-  min-width: 34px;
-  height: 34px;
-  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
   position: relative;
-  border-radius: 50%;
+  width: 34px;
+  height: 34px;
   margin-right: 17px;
   margin-bottom: 6px;
 }
-.taskShortItem .circleIcon .circle__inner {
+.taskShortItem .circleIcon::before {
+  content: "";
   position: absolute;
-  width: 26px;
-  height: 26px;
-  top: 4px;
-  left: 4px;
+  inset: 0;
   border-radius: 50%;
-  background-color: #404e5e;
+  padding: 3px;
+  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 .taskShortItem .taskShortItemContent {
   flex-grow: 1;
