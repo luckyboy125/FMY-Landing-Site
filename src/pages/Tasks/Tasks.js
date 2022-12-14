@@ -89,7 +89,9 @@ function Tasks() {
                   }
                   date={1672405286}
                 />
-                <div className="addTaskBtn">+ New Task</div>
+                <div className="addTaskBtn" onClick={handleNewTaskModal}>
+                  + New Task
+                </div>
               </div>
               <div className="tasksContentItem">
                 <div className="headerRoot">
@@ -144,7 +146,9 @@ function Tasks() {
                   }
                   date={1672405286}
                 />
-                <div className="addTaskBtn">+ New Task</div>
+                <div className="addTaskBtn" onClick={handleNewTaskModal}>
+                  + New Task
+                </div>
               </div>
               <div className="tasksContentItem">
                 <div className="headerRoot">
@@ -225,7 +229,11 @@ function Tasks() {
               />
             </div>
           </div>
-          <div className="addTaskBtn" style={{ marginTop: "18px" }}>
+          <div
+            className="addTaskBtn"
+            style={{ marginTop: "18px" }}
+            onClick={handleNewTaskModal}
+          >
             + New Task
           </div>
         </div>

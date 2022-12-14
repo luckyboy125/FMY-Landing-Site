@@ -50,6 +50,12 @@ body {
 }
 
 @font-face {
+  font-family: "Helvetica"; /*Can be any text*/
+  src: local("Helvetica-Bold"),
+    url("./asset/fonts/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Helvetica-Bold"; /*Can be any text*/
   src: local("Helvetica-Bold"),
     url("./asset/fonts/Helvetica-Bold.ttf") format("truetype");
@@ -71,8 +77,4 @@ body {
   font-family: "Helvetica-Oblique"; /*Can be any text*/
   src: local("Helvetica-Oblique"),
     url("./asset/fonts/Helvetica-Oblique.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Helvetica"; /*Can be any text*/
-  src: local("Helvetica"), url("./asset/fonts/Helvetica.ttf") format("truetype");
 }
