@@ -50,7 +50,6 @@ function Tasks() {
                   avatar={Person1}
                   dropdown={
                     <ColorBtn
-                      className="btn"
                       name="High"
                       width={130}
                       arrowShow
@@ -65,7 +64,6 @@ function Tasks() {
                   avatar={Person2}
                   dropdown={
                     <ColorBtn
-                      className="btn"
                       name="Medium"
                       width={130}
                       arrowShow
@@ -80,7 +78,6 @@ function Tasks() {
                   avatar={Person3}
                   dropdown={
                     <ColorBtn
-                      className="btn"
                       name="Low"
                       width={130}
                       arrowShow
@@ -107,7 +104,6 @@ function Tasks() {
                   avatar={Person1}
                   dropdown={
                     <ColorBtn
-                      className="btn"
                       name="High"
                       width={130}
                       arrowShow
@@ -122,7 +118,6 @@ function Tasks() {
                   avatar={Person2}
                   dropdown={
                     <ColorBtn
-                      className="btn"
                       name="Medium"
                       width={130}
                       arrowShow
@@ -137,7 +132,6 @@ function Tasks() {
                   avatar={Person3}
                   dropdown={
                     <ColorBtn
-                      className="btn"
                       name="Low"
                       width={130}
                       arrowShow
@@ -164,7 +158,6 @@ function Tasks() {
                   avatar={Person1}
                   dropdown={
                     <ColorBtn
-                      className="btn"
                       name="High"
                       width={130}
                       arrowShow
@@ -179,7 +172,6 @@ function Tasks() {
                   avatar={Person2}
                   dropdown={
                     <ColorBtn
-                      className="btn"
                       name="Medium"
                       width={130}
                       arrowShow
@@ -194,7 +186,6 @@ function Tasks() {
                   avatar={Person3}
                   dropdown={
                     <ColorBtn
-                      className="btn"
                       name="Low"
                       width={130}
                       arrowShow

@@ -1,4 +1,4 @@
-.taskLongItem {
+.checkListsLongItem {
   padding: 15px 30px;
   background: linear-gradient(
     180deg,
@@ -12,17 +12,17 @@
   align-items: center;
 }
 
-.taskLongItem .firstPart {
+.checkListsLongItem .firstPart {
   display: flex;
   align-items: center;
 }
 
-.taskLongItem .firstPart .circleIcon {
+.checkListsLongItem .firstPart .circleIcon {
   position: relative;
   width: 34px;
   height: 34px;
 }
-.taskLongItem .firstPart .circleIcon::before {
+.checkListsLongItem .firstPart .circleIcon::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -33,7 +33,7 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
-.taskLongItem .firstPart .taskTitle {
+.checkListsLongItem .firstPart .checkListsTitle {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
@@ -42,41 +42,33 @@
   color: #ffffff;
   margin-left: 20px;
 }
-.taskLongItem .secondPart {
+.checkListsLongItem .secondPart {
   display: flex;
   align-items: center;
 }
 
-.taskLongItem .secondPart .avatar {
-  margin-right: 100px;
-  margin-left: 100px;
-  width: 50px;
-  height: 50px;
+.checkListsLongItem .secondPart .secondFirstPart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 377px;
+  margin-right: 20px;
 }
-.taskLongItem .secondPart .itemDate {
-  width: fit-content;
-  margin-right: 43px;
+
+.checkListsLongItem .secondPart .secondFirstPart .avatarRoot {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
   display: flex;
   align-items: center;
 }
-.taskLongItem .secondPart .itemDate .itemDateDay {
-  font-family: "HelveticaMedium";
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: left;
-  color: #ffffff;
-  width: 90px;
-}
-.taskLongItem .secondPart .itemDate .itemDateTime {
-  font-family: Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: left;
-  color: #ffffffb2;
-  margin-left: 5px;
-  width: 180px;
+
+.checkListsLongItem .secondPart .secondFirstPart .avatarRoot .avatar {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
 }

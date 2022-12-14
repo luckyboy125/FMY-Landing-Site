@@ -1,0 +1,93 @@
+.checkListsShortItem {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  box-shadow: 0px 5px 25px rgba(117, 179, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px 20px 14px 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.checkListsShortItem .circleIcon {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  margin-right: 17px;
+  margin-bottom: 6px;
+}
+.checkListsShortItem .circleIcon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.checkListsShortItem .checkListsShortItemContent {
+  flex-grow: 1;
+}
+.checkListsShortItem .checkListsShortItemContent .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 58px;
+}
+
+.checkListsShortItem .checkListsShortItemContent .items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkListsShortItem .checkListsShortItemContent .items .itemBtn {
+  margin-right: 20px;
+}
+.checkListsShortItem .checkListsShortItemContent .items .itemsFirst {
+  display: flex;
+  align-items: center;
+}
+.checkListsShortItem
+  .checkListsShortItemContent
+  .items
+  .itemsFirst
+  .avatarRoot {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+.checkListsShortItem
+  .checkListsShortItemContent
+  .items
+  .itemsFirst
+  .avatarRoot
+  .avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.checkListsShortItem .checkListsShortItemContent .items .deleteIcon i {
+  color: #adb1b3;
+  font-size: 24px;
+  line-height: 28px;
+}
+.checkListsShortItem .dotGroup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

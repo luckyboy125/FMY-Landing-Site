@@ -1,7 +1,7 @@
-.tasksRoot {
+.checkListsRoot {
   padding: 0 34px 50px 34px;
 }
-.tasksTitle {
+.checkListsTitle {
   font-family: "HelveticaMedium";
   font-style: normal;
   font-weight: 500;
@@ -12,30 +12,36 @@
   padding: 0 6px;
   margin-top: 5px;
 }
-.tasksHeaderRoot {
+.checkListsHeaderRoot {
   padding: 0 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 45px;
 }
-.tasksContainer {
+.checkListsContainer {
   margin-top: 49px;
 }
-.tasksContainerHeader {
+.checkListsContainerHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.tasksContainerHeader .firstItem {
+.checkListsContainerHeader .firstItem {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 16px;
-  width: 250px;
+  justify-content: space-between;
+  margin: 0 72px 0 16px;
+  flex-grow: 1;
 }
 
-.tasksContainerHeader .firstItem .headerTitle {
+.checkListsContainerHeader .firstItem .titleRoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkListsContainerHeader .firstItem .titleRoot .headerTitle {
   font-family: "HelveticaMedium";
   font-style: normal;
   font-weight: 500;
@@ -45,12 +51,13 @@
   color: #ffffff;
 }
 
-.tasksContainerHeader .firstItem .headerDesRoot {
+.checkListsContainerHeader .firstItem .titleRoot .headerDesRoot {
   display: flex;
   align-items: center;
+  margin-left: 30px;
 }
 
-.tasksContainerHeader .firstItem .headerDesRoot span {
+.checkListsContainerHeader .firstItem .titleRoot .headerDesRoot span {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -60,20 +67,31 @@
   opacity: 0.9;
 }
 
-.tasksContainerHeader .firstItem .headerDesRoot i {
+.checkListsContainerHeader .firstItem .titleRoot .headerDesRoot i {
   color: #75b3ff;
   font-size: 12px;
   line-height: 8px;
   margin-right: 5px;
 }
-.tasksContainerHeader .secondItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 16px;
+.checkListsContainerHeader .firstItem .completeCount {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #ffffff;
+  opacity: 0.9;
 }
 
-.tasksContainerHeader .secondItem .headerTitle {
+.checkListsContainerHeader .secondItem {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 63px;
+  width: 446px;
+}
+
+.checkListsContainerHeader .secondItem .headerTitle {
   font-family: "HelveticaMedium";
   font-style: normal;
   font-weight: 500;
@@ -83,13 +101,13 @@
   color: #ffffff;
 }
 
-.tasksContainerHeader .secondItem .headerDesRoot {
+.checkListsContainerHeader .secondItem .headerDesRoot {
   display: flex;
   align-items: center;
-  margin-left: 158px;
+  margin-left: 30px;
 }
 
-.tasksContainerHeader .secondItem .headerDesRoot span {
+.checkListsContainerHeader .secondItem .headerDesRoot span {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -99,46 +117,69 @@
   opacity: 0.9;
 }
 
-.tasksContainerHeader .secondItem .headerDesRoot i {
+.checkListsContainerHeader .secondItem .headerDesRoot i {
   color: #75b3ff;
   font-size: 12px;
   line-height: 8px;
   margin-right: 5px;
 }
-.tasksContainer .tasksContent {
+.checkListsContainer .checkListsContent {
   margin-top: 30px;
   display: flex;
 }
-.tasksContainer .tasksContent .firstContent {
+.checkListsContainer .checkListsContent .firstContent {
   flex-grow: 1;
   padding-right: 42px;
   border-right: 1px solid #75b3ffb2;
 }
-.tasksContainer .tasksContent .firstContent :last-child {
+.checkListsContainer .checkListsContent .firstContent :last-child {
   margin-bottom: 0 !important;
 }
-.tasksContainer .tasksContent .firstContent .tasksContentItem {
+.checkListsContainer .checkListsContent .firstContent .checkListsContentItem {
   margin-bottom: 50px;
 }
-.tasksContainer .tasksContent .firstContent .tasksContentItem .tasksItem {
+.checkListsContainer
+  .checkListsContent
+  .firstContent
+  .checkListsContentItem
+  .checkListsItem {
   margin-bottom: 10px;
 }
-.tasksContainer .tasksContent .firstContent .tasksContentItem .lastTasksItem {
+.checkListsContainer
+  .checkListsContent
+  .firstContent
+  .checkListsContentItem
+  .lastCheckListsItem {
   margin-bottom: 18px;
 }
-.tasksContainer .tasksContent .firstContent .tasksContentItem .headerRoot {
+.checkListsContainer
+  .checkListsContent
+  .firstContent
+  .checkListsContentItem
+  .headerRoot {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 16px 30px 16px;
-  width: 250px;
+  justify-content: space-between;
+  margin: 0 0 30px 0;
+  padding: 0 30px 0 16px;
+  width: 100%;
+}
+.checkListsContainer
+  .checkListsContent
+  .firstContent
+  .checkListsContentItem
+  .headerRoot
+  .titleRoot {
+  display: flex;
+  align-items: center;
 }
 
-.tasksContainer
-  .tasksContent
+.checkListsContainer
+  .checkListsContent
   .firstContent
-  .tasksContentItem
+  .checkListsContentItem
   .headerRoot
+  .titleRoot
   .headerTitle {
   font-family: "HelveticaMedium";
   font-style: normal;
@@ -149,21 +190,24 @@
   color: #ffffff;
 }
 
-.tasksContainer
-  .tasksContent
+.checkListsContainer
+  .checkListsContent
   .firstContent
-  .tasksContentItem
+  .checkListsContentItem
   .headerRoot
+  .titleRoot
   .headerDesRoot {
   display: flex;
   align-items: center;
+  margin-left: 30px;
 }
 
-.tasksContainer
-  .tasksContent
+.checkListsContainer
+  .checkListsContent
   .firstContent
-  .tasksContentItem
+  .checkListsContentItem
   .headerRoot
+  .titleRoot
   .headerDesRoot
   span {
   font-family: "Helvetica";
@@ -175,11 +219,12 @@
   opacity: 0.9;
 }
 
-.tasksContainer
-  .tasksContent
+.checkListsContainer
+  .checkListsContent
   .firstContent
-  .tasksContentItem
+  .checkListsContentItem
   .headerRoot
+  .titleRoot
   .headerDesRoot
   i {
   color: #75b3ff;
@@ -187,11 +232,26 @@
   line-height: 8px;
   margin-right: 5px;
 }
-.tasksContainer .tasksContent .overdueContent {
+.checkListsContainer
+  .checkListsContent
+  .firstContent
+  .checkListsContentItem
+  .headerRoot
+  .completeCount {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #ffffff;
+  opacity: 0.9;
+}
+.checkListsContainer .checkListsContent .overdueContent {
   width: 446px;
   padding-left: 43px;
 }
-.tasksContainer .tasksContent .overdueContent .taskShortItem {
+.checkListsContainer .checkListsContent .overdueContent .checkListShortItem {
   margin-bottom: 20px;
 }
 .dotGroup {
@@ -209,7 +269,7 @@
   margin-bottom: 2px;
   border-radius: 50%;
 }
-.addTaskBtn {
+.addCheckListsBtn {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;

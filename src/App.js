@@ -13,6 +13,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import SideTaskBar from "./components/SideTaskBar";
 import TopTaskBar from "./components/TopTaskBar";
 import Tasks from "./pages/Tasks/Tasks";
+import CheckLists from "./pages/CheckListPage/CheckLists";
 
 //DONT TOUCH THIS FILE
 
@@ -40,7 +41,8 @@ function App() {
             </Col>
             <Col sm={9} className="content">
               {/* <WebAnalysisItems /> */}
-              <Tasks />
+              {/* <Tasks /> */}
+              <CheckLists />
             </Col>
           </Row>
         </div>
