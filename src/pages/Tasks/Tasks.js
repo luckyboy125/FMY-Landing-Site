@@ -12,16 +12,26 @@ import { useState } from "react";
 
 function Tasks() {
   const [newTaskModalShow, setNewTaskModalShow] = useState(false);
+  const tabData = ["All", "Complete"];
+  const [tab, setTab] = useState(tabData[0]);
 
   const handleNewTaskModal = () => {
     setNewTaskModalShow(true);
   };
+  const handleTab = (e) => {
+    setTab(e);
+  };
+
   return (
     <>
       <div className="tasksRoot">
         <div className="tasksTitle">Tasks</div>
         <div className="tasksHeaderRoot">
-          <ActionTab />
+          <ActionTab
+            data={tabData}
+            onSelect={(e) => handleTab(e)}
+            select={tab}
+          />
           <PlusButton content="+ New task" action={handleNewTaskModal} />
         </div>
         <div className="tasksContainer">

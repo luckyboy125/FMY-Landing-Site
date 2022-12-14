@@ -11,16 +11,26 @@ import CheckListsShortItem from "./component/CheckListsShortItem/CheckListsShort
 
 function CheckLists() {
   const [newCheckListModalShow, setNewCheckListModalShow] = useState(false);
+  const tabData = ["All", "Daily", "Weekly"];
+  const [tab, setTab] = useState(tabData[0]);
 
   const handleNewCheckListsModal = () => {
     setNewCheckListModalShow(true);
+  };
+
+  const handleTab = (e) => {
+    setTab(e);
   };
   return (
     <>
       <div className="checkListsRoot">
         <div className="checkListsTitle">CheckLists</div>
         <div className="checkListsHeaderRoot">
-          <ActionTab />
+          <ActionTab
+            data={tabData}
+            onSelect={(e) => handleTab(e)}
+            select={tab}
+          />
           <PlusButton content="+ New task" action={handleNewCheckListsModal} />
         </div>
         <div className="checkListsContainer">

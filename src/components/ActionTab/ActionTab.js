@@ -1,10 +1,23 @@
 import "./ActionTab.css";
 
-function ActionTab({ className }) {
+function ActionTab({ className, data, onSelect, select }) {
+  const handleClick = (item) => {
+    onSelect(item);
+  };
+
   return (
     <div className={`actionTabRoot ${className}`}>
-      <div className="actionTabItem active">All</div>
-      <div className="actionTabItem">Completed</div>
+      {data?.map((item, index) => {
+        return (
+          <div
+            key={index}
+            className={` actionTabItem ${select === item ? "active" : ""}`}
+            onClick={() => handleClick(item)}
+          >
+            {item}
+          </div>
+        );
+      })}
     </div>
   );
 }
