@@ -1,0 +1,149 @@
+.newTaskModalLoaderWrapper {
+  position: fixed;
+  z-index: 99998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.newTaskModalRoot {
+  position: fixed;
+  flex-direction: column;
+  width: 569px;
+  background: #41505f;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 99999;
+  padding: 30px 40px;
+}
+.newTaskModalRoot .modalCloseIcon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.newTaskModalRoot .taskTitle {
+  width: 100%;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid transparent;
+  background-color: transparent;
+  margin-bottom: 55px;
+}
+.newTaskModalRoot .taskTitle::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.newTaskModalRoot .taskTitle:focus-visible {
+  outline: none;
+}
+.newTaskModalRoot .taskTitle:focus {
+  outline: none;
+}
+.newTaskModalRoot .newTaskToolRoot {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-family: "HelveticaMedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.newTaskModalRoot .newTaskToolRoot .todayBtn {
+  margin-left: 21px;
+  padding: 9px 16px 8px 16px !important;
+  border-radius: 20px !important;
+}
+
+.newTaskModalRoot .newTaskToolRoot .tomorrowBtn {
+  margin-left: 15px;
+  padding: 9px 16px 8px 16px !important;
+  border-radius: 20px !important;
+}
+.newTaskModalRoot .newTaskToolRoot .otherBtn {
+  margin-left: 15px;
+  padding: 10px 17px 9px 20px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+}
+.newTaskModalRoot .newTaskToolRoot .otherBtn i {
+  color: #ffffff66 !important;
+}
+.newTaskModalRoot .newTaskToolRoot .calendarIcon {
+  margin-right: 10px;
+}
+.newTaskModalRoot .newTaskToolRoot .participantsBtn {
+  margin-left: 13px;
+  padding: 8px 18px 9px 15px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+}
+.newTaskModalRoot .newTaskToolRoot .participantsBtn i {
+  margin-left: 10px !important;
+  color: #fff;
+}
+.newTaskModalRoot .additionDetail {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  color: #75b3ff;
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.newTaskModalRoot .additionDetail i {
+  font-size: 9px;
+  font-weight: 5px;
+  color: #75b3ff;
+  margin-left: 10px;
+}
+.newTaskModalRoot .additionDetailContent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.newTaskModalRoot .additionDetailContent .additionDetailItem {
+  display: flex;
+  align-items: center;
+  font-family: "HelveticaMedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.newTaskModalRoot .additionDetailContent .additionDetailItem .itemBtn {
+  margin-left: 13px;
+  padding: 8px 18px 9px 15px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+}
+
+.newTaskModalRoot .additionDetailContent .additionDetailItem .itemBtn i {
+  margin-left: 10px !important;
+  color: #fff;
+}
+.displayNone {
+  display: none !important;
+}
