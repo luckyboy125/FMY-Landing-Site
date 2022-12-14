@@ -24,7 +24,7 @@ function CheckLists() {
   return (
     <>
       <div className="checkListsRoot">
-        <div className="checkListsTitle">CheckLists</div>
+        <div className="checkListsTitle">Checklists</div>
         <div className="checkListsHeaderRoot">
           <ActionTab
             data={tabData}

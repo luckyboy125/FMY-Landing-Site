@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./asset/fonts/helvetica_medium.ttf";
@@ -31,23 +32,28 @@ function App() {
   }, [height, width]);
 
   return (
-    <div className="outer">
-      <div className="middle">
-        <div className="websiteContainer">
-          <TopTaskBar />
-          <Row>
-            <Col sm={3} className="position-fixed flex-fill" id="sidebarCol">
-              <SideTaskBar />
-            </Col>
-            <Col sm={9} className="content">
-              {/* <WebAnalysisItems /> */}
-              {/* <Tasks /> */}
-              <CheckLists />
-            </Col>
-          </Row>
+    <Router>
+      <div className="outer">
+        <div className="middle">
+          <div className="websiteContainer">
+            <TopTaskBar />
+            <Row>
+              <Col sm={3} className="position-fixed flex-fill" id="sidebarCol">
+                <SideTaskBar />
+              </Col>
+              <Col sm={9} className="content">
+                <Routes>
+                  <Route path="/" element={<WebAnalysisItems />} />
+                  <Route path="/dashboard" element={<WebAnalysisItems />} />
+                  <Route path="/tasks" element={<Tasks />} />
+                  <Route path="/CheckLists" element={<CheckLists />} />
+                </Routes>
+              </Col>
+            </Row>
+          </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

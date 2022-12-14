@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import TasksLogo from "./Logos/TasksLogo.svg";
 import FmyLogo from "./Logos/FmyLogo.svg";
@@ -6,16 +7,25 @@ import DashboardLogo from "./Logos/DashboardLogo.svg";
 import "./SideTaskBar.css";
 
 function SideTaskBar() {
+  const navigate = useNavigate();
   return (
     <div className="sideTaskBar">
-      <img src={FmyLogo} className="fmyLogo" alt="fmyLogo"></img>
+      <img
+        src={FmyLogo}
+        className="fmyLogo"
+        alt="fmyLogo"
+        onClick={() => window.location.reload()}
+      ></img>
 
       <div className="taskBarPagesButtons">
-        <Button className="taskBarButton active">
+        <Button className="taskBarButton active" onClick={() => navigate("/")}>
           <img src={HomeLogo} alt=""></img>
           Home
         </Button>
-        <Button className="taskBarButton">
+        <Button
+          className="taskBarButton"
+          onClick={() => navigate("/dashboard")}
+        >
           <img src={DashboardLogo} alt=""></img>
           Dashboard
         </Button>
@@ -42,13 +52,16 @@ function SideTaskBar() {
           <img src={TasksLogo} alt=""></img>
           NRDS
         </Button>
-        <Button className="taskBarButton">
-          <img src={TasksLogo} alt=""></img>
-          News
-        </Button>
-        <Button className="taskBarButton">
+        <Button className="taskBarButton" onClick={() => navigate("/tasks")}>
           <img src={TasksLogo} alt=""></img>
           Tasks
+        </Button>
+        <Button
+          className="taskBarButton"
+          onClick={() => navigate("/checklists")}
+        >
+          <img src={TasksLogo} alt=""></img>
+          Checklists
         </Button>
 
         <div className="dividerLine"></div>
