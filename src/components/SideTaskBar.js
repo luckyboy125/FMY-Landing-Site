@@ -1,9 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import TasksLogo from "./Logos/TasksLogo.svg";
-import FmyLogo from "./Logos/FmyLogo.svg";
-import HomeLogo from "./Logos/HomeLogo.svg";
-import DashboardLogo from "./Logos/DashboardLogo.svg";
+import TasksLogo from "../asset/sidebar/TasksLogo.svg";
+import FmyLogo from "../asset/sidebar/FmyLogo.svg";
+import DashboardLogo from "../asset/sidebar/DashboardLogo.svg";
+import HomeLogo from "../asset/sidebar/HomeLogo.svg";
+import CasesLogo from "../asset/sidebar/CasesLogo.svg";
+import ChecklistsLogo from "../asset/sidebar/ChecklistsLogo.svg";
+import DatabaseLogo from "../asset/sidebar/DatabaseLogo.svg";
+import ExitLogo from "../asset/sidebar/ExitLogo.svg";
+import InsightsLogo from "../asset/sidebar/InsightsLogo.svg";
+import InvestigationLogo from "../asset/sidebar/InvestigationLogo.svg";
+import NetworksLogo from "../asset/sidebar/NetworksLogo.svg";
+import NewsLogo from "../asset/sidebar/NewsLogo.svg";
+import NrdsLogo from "../asset/sidebar/NrdsLogo.svg";
+import ReportsLogo from "../asset/sidebar/ReportsLogo.svg";
+import SearchLogo from "../asset/sidebar/SearchLogo.svg";
+import SettingsLogo from "../asset/sidebar/SettingsLogo.svg";
 import "./SideTaskBar.css";
 
 function SideTaskBar() {
@@ -33,23 +45,23 @@ function SideTaskBar() {
         <div className="dividerLine"></div>
 
         <Button className="taskBarButton">
-          <img src={TasksLogo} alt=""></img>
+          <img src={DatabaseLogo} alt=""></img>
           Database
         </Button>
         <Button className="taskBarButton">
-          <img src={TasksLogo} alt=""></img>
+          <img src={InvestigationLogo} alt=""></img>
           Investigation
         </Button>
         <Button className="taskBarButton">
-          <img src={TasksLogo} alt=""></img>
+          <img src={CasesLogo} alt=""></img>
           Cases
         </Button>
         <Button className="taskBarButton">
-          <img src={TasksLogo} alt=""></img>
+          <img src={NetworksLogo} alt=""></img>
           Networks
         </Button>
         <Button className="taskBarButton">
-          <img src={TasksLogo} alt=""></img>
+          <img src={NrdsLogo} alt=""></img>
           NRDS
         </Button>
         <Button className="taskBarButton" onClick={() => navigate("/tasks")}>
@@ -60,18 +72,18 @@ function SideTaskBar() {
           className="taskBarButton"
           onClick={() => navigate("/checklists")}
         >
-          <img src={TasksLogo} alt=""></img>
+          <img src={ChecklistsLogo} alt=""></img>
           Checklists
         </Button>
 
         <div className="dividerLine"></div>
 
         <Button className="taskBarButton">
-          <img src={TasksLogo} alt=""></img>
+          <img src={ReportsLogo} alt=""></img>
           Reports
         </Button>
         <Button className="taskBarButton">
-          <img src={TasksLogo} alt=""></img>
+          <img src={InsightsLogo} alt=""></img>
           Insights
         </Button>
 
@@ -81,11 +93,11 @@ function SideTaskBar() {
           <div className="dividerLine"></div>
 
           <Button className="taskBarButton">
-            <img src={TasksLogo} alt=""></img>
+            <img src={SettingsLogo} alt=""></img>
             Settings
           </Button>
           <Button className="taskBarButton">
-            <img src={TasksLogo} alt=""></img>
+            <img src={ExitLogo} alt=""></img>
             Logout
           </Button>
         </div>
