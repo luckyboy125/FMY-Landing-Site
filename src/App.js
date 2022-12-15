@@ -7,6 +7,7 @@ import "./asset/fonts/Helvetica-BoldOblique.ttf";
 import "./asset/fonts/helvetica-light-587ebe5a59211.ttf";
 import "./asset/fonts/Helvetica.ttf";
 import "./asset/fonts/Helvetica-Oblique.ttf";
+import "./asset/fonts/helvetica_neue.ttf";
 import { useEffect, useState } from "react";
 import { useWindowDimensions, adjustContainer } from "./useWindowDimensions";
 import WebAnalysisItems from "./pages/WebAnalysisItems/WebAnalysisItems";

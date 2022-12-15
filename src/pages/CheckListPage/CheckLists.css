@@ -2,7 +2,7 @@
   padding: 0 34px 50px 34px;
 }
 .checkListsTitle {
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
@@ -42,7 +42,7 @@
 }
 
 .checkListsContainerHeader .firstItem .titleRoot .headerTitle {
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -92,7 +92,7 @@
 }
 
 .checkListsContainerHeader .secondItem .headerTitle {
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -181,7 +181,7 @@
   .headerRoot
   .titleRoot
   .headerTitle {
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 30px;

@@ -58,7 +58,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -126,7 +126,7 @@
 .newCheckListsModalRoot .additionDetailContent .additionDetailItem {
   display: flex;
   align-items: center;
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;

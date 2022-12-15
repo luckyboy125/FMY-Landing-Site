@@ -50,6 +50,12 @@ body {
 }
 
 @font-face {
+  font-family: "HelveticaNeue"; /*Can be any text*/
+  src: local("HelveticaNeue"),
+    url("./asset/fonts/helvetica_neue.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Helvetica"; /*Can be any text*/
   src: local("Helvetica-Bold"),
     url("./asset/fonts/Helvetica.ttf") format("truetype");

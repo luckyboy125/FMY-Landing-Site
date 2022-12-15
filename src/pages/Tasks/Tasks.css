@@ -2,7 +2,7 @@
   padding: 0 34px 50px 34px;
 }
 .tasksTitle {
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
@@ -36,7 +36,7 @@
 }
 
 .tasksContainerHeader .firstItem .headerTitle {
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -74,7 +74,7 @@
 }
 
 .tasksContainerHeader .secondItem .headerTitle {
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -140,7 +140,7 @@
   .tasksContentItem
   .headerRoot
   .headerTitle {
-  font-family: "HelveticaMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
