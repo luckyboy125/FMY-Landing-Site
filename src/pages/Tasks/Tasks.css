@@ -62,7 +62,8 @@
 
 .tasksContainerHeader .firstItem .headerDesRoot i {
   color: #75b3ff;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }
@@ -101,7 +102,8 @@
 
 .tasksContainerHeader .secondItem .headerDesRoot i {
   color: #75b3ff;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }
@@ -183,7 +185,8 @@
   .headerDesRoot
   i {
   color: #75b3ff;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }

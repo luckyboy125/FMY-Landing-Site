@@ -57,8 +57,8 @@ function CheckLists() {
             <div className="firstContent">
               <div className="checkListsContentItem">
                 <CheckListsLongItem
-                  user="Noy"
-                  title="Facebook"
+                  user="If it has long name item, I will add 3dots in this field"
+                  title="There are a lot of cases in future. So we have to add this function in this field. If there is a this function, we can keep pixel perfect in this page."
                   className="checkListsItem"
                   avatar={Person1}
                   type="blue"

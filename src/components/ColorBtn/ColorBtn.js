@@ -4,7 +4,7 @@ function ColorBtn({ icon, className, color, width, name, arrowShow }) {
   return (
     <div
       className={`colorBtn ${className}`}
-      style={{ background: `${color}33`, width: `${width}px` }}
+      style={{ background: `${color}33`, minWidth: `${width}px` }}
     >
       {icon}
       <span className="btnName" style={{ color: color }}>

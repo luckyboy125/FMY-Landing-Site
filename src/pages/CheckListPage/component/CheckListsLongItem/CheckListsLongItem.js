@@ -22,7 +22,7 @@ function CheckListsLongItem({ className, title, avatar, user, click, type }) {
         <div className="secondFirstPart">
           <div className="avatarRoot">
             <img src={avatar} className="avatar" alt="avatar" />
-            {user}
+            <span className="userName">{user}</span>
           </div>
           <ColorBtn name="10 Mar" width={128} color={colorType[type]} />
         </div>

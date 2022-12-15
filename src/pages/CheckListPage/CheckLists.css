@@ -17,10 +17,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 45px;
 }
 .checkListsContainer {
-  margin-top: 49px;
+  margin-top: 45px;
 }
 .checkListsContainerHeader {
   display: flex;
@@ -69,7 +68,8 @@
 
 .checkListsContainerHeader .firstItem .titleRoot .headerDesRoot i {
   color: #75b3ff;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }
@@ -119,7 +119,8 @@
 
 .checkListsContainerHeader .secondItem .headerDesRoot i {
   color: #75b3ff;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }
@@ -228,7 +229,8 @@
   .headerDesRoot
   i {
   color: #75b3ff;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }
