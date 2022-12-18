@@ -57,6 +57,8 @@ function Tasks() {
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
                   className="tasksItem"
+                  check
+                  checkedStatus={true}
                   avatar={Person1}
                   dropdown={
                     <ColorBtn

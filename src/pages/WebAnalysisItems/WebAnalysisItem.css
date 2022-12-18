@@ -4,7 +4,7 @@
 }
 
 .webAnalysisHeader {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,7 +26,7 @@
 }
 
 .analysisHeaderDes {
-  margin-top: 25px;
+  margin-top: 22px;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -108,7 +108,7 @@
 }
 
 .chartContent .databasePart {
-  padding: 30px 26.5px 30px 41px;
+  padding: 30px 26.5px 42px 41px;
   width: 55%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);

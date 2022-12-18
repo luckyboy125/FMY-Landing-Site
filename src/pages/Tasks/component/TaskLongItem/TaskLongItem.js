@@ -1,7 +1,18 @@
 import { useEffect, useState } from "react";
+import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./TaskLongItem.css";
 
-function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
+function TaskLongItem({
+  className,
+  title,
+  avatar,
+  dropdown,
+  click,
+  date,
+  check,
+  onCheck,
+  checkedStatus,
+}) {
   const options = {
     weekday: "long",
     year: "numeric",
@@ -17,15 +28,34 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
     setTime(new Date(date * 1000).toLocaleDateString("en-US", options));
   }, [date]);
 
+  const handleCheck = () => {
+    onCheck();
+  };
+
   return (
-    <div className={`taskLongItem ${className}`}>
+    <div
+      className={`taskLongItem ${className}`}
+      style={{ opacity: check ? 0.4 : 1 }}
+    >
       <div className="firstPart">
-        <div className="circleIcon"></div>
-        <span className="taskTitle">{title}</span>
+        {checkedStatus ? <i className="fas fa-chevron-right"></i> : <></>}
+        <div className="circleIcon" onClick={handleCheck}>
+          {check ? (
+            <img src={checkIcon} className="checkIcon" alt="checkIcon" />
+          ) : (
+            <></>
+          )}
+        </div>
+        <div className="titleRoot">
+          <div className="taskTitle">{title}</div>
+        </div>
       </div>
       <div className="secondPart">
         {dropdown}
-        <img src={avatar} className="avatar" alt="avatar" />
+        <div className="avatarRoot">
+          <img src={avatar} className="avatar" alt="avatar" />
+          <span className="avatarDes"></span>
+        </div>
         <div className="itemDate">
           <div className="itemDateDay">{time.split(",")[0]}</div>
           <div className="itemDateTime">
