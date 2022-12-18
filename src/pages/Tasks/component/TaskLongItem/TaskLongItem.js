@@ -2,17 +2,7 @@ import { useEffect, useState } from "react";
 import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./TaskLongItem.css";
 
-function TaskLongItem({
-  className,
-  title,
-  avatar,
-  dropdown,
-  click,
-  date,
-  check,
-  onCheck,
-  checkedStatus,
-}) {
+function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
   const options = {
     weekday: "long",
     year: "numeric",
@@ -23,31 +13,37 @@ function TaskLongItem({
     click();
   };
   const [time, setTime] = useState("");
+  const [checkStatus, setCheckStatus] = useState(false);
 
   useEffect(() => {
     setTime(new Date(date * 1000).toLocaleDateString("en-US", options));
   }, [date]);
 
   const handleCheck = () => {
-    onCheck();
+    setCheckStatus(!checkStatus);
   };
 
   return (
     <div
       className={`taskLongItem ${className}`}
-      style={{ opacity: check ? 0.4 : 1 }}
+      style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
       <div className="firstPart">
-        {checkedStatus ? <i className="fas fa-chevron-right"></i> : <></>}
+        {checkStatus ? <i className="fas fa-chevron-right"></i> : <></>}
         <div className="circleIcon" onClick={handleCheck}>
-          {check ? (
+          {checkStatus ? (
             <img src={checkIcon} className="checkIcon" alt="checkIcon" />
           ) : (
             <></>
           )}
         </div>
         <div className="titleRoot">
-          <div className="taskTitle">{title}</div>
+          <div
+            className="taskTitle"
+            style={{ textDecoration: checkStatus ? "line-through" : "initial" }}
+          >
+            {title}
+          </div>
         </div>
       </div>
       <div className="secondPart">

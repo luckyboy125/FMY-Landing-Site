@@ -25,6 +25,11 @@ function CustomizeLineChart({ axis, ayis }) {
     title: {
       display: false,
     },
+    layout: {
+      padding: {
+        bottom: -20,
+      },
+    },
     scales: {
       y: {
         display: false,
@@ -184,7 +189,7 @@ function CustomizeLineChart({ axis, ayis }) {
         id="line_chart"
         type="line"
         width={637}
-        height={250}
+        height={268}
         options={linechartOption}
         data={lineChartAction(axis, ayis)}
         plugins={[
