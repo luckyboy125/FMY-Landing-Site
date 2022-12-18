@@ -101,6 +101,7 @@
   font-size: 30px;
   line-height: 24px;
   color: #ffffff;
+  margin-top: 11px;
 }
 
 .chartContent {
@@ -108,7 +109,7 @@
 }
 
 .chartContent .databasePart {
-  padding: 32px 26.5px 42px 41px;
+  padding: 34px 26.5px 40px 40.5px;
   width: 55%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);

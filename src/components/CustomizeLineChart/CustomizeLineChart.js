@@ -189,7 +189,7 @@ function CustomizeLineChart({ axis, ayis }) {
         id="line_chart"
         type="line"
         width={637}
-        height={268}
+        height={259}
         options={linechartOption}
         data={lineChartAction(axis, ayis)}
         plugins={[

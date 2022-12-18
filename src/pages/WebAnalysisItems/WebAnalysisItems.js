@@ -61,7 +61,7 @@ function WebAnalysisItems() {
               </div>
               <div
                 className="descriptionItem"
-                style={{ paddingTop: "28px", paddingBottom: "30px" }}
+                style={{ paddingTop: "26px", paddingBottom: "30px" }}
               >
                 <div className="descriptionItemTitle">
                   Changes from last week
