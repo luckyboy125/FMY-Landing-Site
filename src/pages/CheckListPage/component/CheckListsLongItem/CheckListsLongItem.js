@@ -25,7 +25,6 @@ function CheckListsLongItem({ className, title, avatar, user, click, type }) {
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
       <div className="firstPart">
-        {checkStatus ? <i className="fas fa-chevron-right"></i> : <></>}
         <div className="circleIcon" onClick={handleCheck}>
           {checkStatus ? (
             <img src={checkIcon} className="checkIcon" alt="checkIcon" />

@@ -29,7 +29,6 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
       <div className="firstPart">
-        {checkStatus ? <i className="fas fa-chevron-right"></i> : <></>}
         <div className="circleIcon" onClick={handleCheck}>
           {checkStatus ? (
             <img src={checkIcon} className="checkIcon" alt="checkIcon" />
