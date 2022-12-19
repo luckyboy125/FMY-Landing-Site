@@ -32,7 +32,6 @@ function CustomizePieChart({ axis }) {
     +'</div>';
       },
       position: function (pos, params, dom, rect, size) {
-        console.log("test", size);
         return [pos[0], pos[1]];
       },
       textStyle: {

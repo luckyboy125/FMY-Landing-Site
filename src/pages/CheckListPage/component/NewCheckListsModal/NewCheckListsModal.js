@@ -104,7 +104,7 @@ function NewCheckListsModal({ className, show, onClose }) {
           <div
             className="additionDetailContent"
             style={{ visibility: addContentShow ? "visible" : "hidden" }}
-            onClick={() => console.log("it is working")}
+            onClick={() => {}}
           >
             <div className="additionDetailItem">
               Priority:

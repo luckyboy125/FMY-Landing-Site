@@ -52,7 +52,6 @@ function TopPlatforms() {
         +'</div>';
       },
       position: function (pt, params) {
-        console.log("test", pt, params);
         return params.dataIndex === 0
           ? [pt[0] - 20, pt[1] - 130]
           : [pt[0] - 75, pt[1] - 130];

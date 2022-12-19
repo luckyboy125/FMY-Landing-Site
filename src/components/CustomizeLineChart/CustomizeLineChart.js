@@ -91,29 +91,50 @@ function CustomizeLineChart({ axis, ayis }) {
           // Set caret Position (above, below,no-transform ).As I need above I don't delete that class
           tooltipEl.classList.remove("below", "no-transform");
 
+          const tooltipData = context.tooltip.dataPoints[0];
+
           // Set HTML & Data
           if (tooltipModel.body) {
-            const innerHtml = `<div style=" background: #627F9D; padding: 15px; border-radius:10px; z-index:1000;position: absolute; display: block;width: 190px">
+            const innerHtml = `<div
+            style="
+              background: #627f9d;
+              padding: 15px;
+              border-radius: 10px;
+              z-index: 1000;
+              position: absolute;
+              display: block;
+              width: 200px;
+            "
+          >
             <div
               style="
-                padding: 5px 5px 12px 5px;
-                border-bottom: 1px solid #ffffff1a;
-                font-family: Helvetica;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 29px;
                 display: flex;
                 align-items: center;
-                color: rgba(255, 255, 255, 0.5);
+                padding: 5px 5px 12px 5px;
+                border-bottom: 1px solid #ffffff1a;
+                overflow: hidden;
               "
             >
-              Monday, June 8
+              <span
+                style="
+                  font-family: Helvetica;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 20px;
+                  line-height: 29px;
+                  color: rgba(255, 255, 255, 0.5);
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              >
+                ${tooltipData.label}
+              </span>
             </div>
             <div
               style="
                 padding: 12px 5px 5px 5px;
-                font-family: HelveticaMedium;
+                font-family: Helvetica;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 20px;
@@ -123,13 +144,30 @@ function CustomizeLineChart({ axis, ayis }) {
                 color: #ffffff;
               "
             >
-              <span style="color: #fff"> New Item : </span>
-              <span style="color: #37ce4a; margin-left: 10px"> value </span>
+              <span style="color: #fff; white-space: nowrap"> New Item : </span>
+              <span
+                style="
+                  color: #37ce4a;
+                  margin-left: 10px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              >
+                ${tooltipData.formattedValue}
+              </span>
             </div>
             <div
               style="
                 position: absolute;
-                left: 8px;
+                left: ${
+                  tooltipData.dataIndex === 0
+                    ? "8px"
+                    : tooltipData.dataIndex + 1 ===
+                      tooltipData.dataset.data.length
+                    ? "168px"
+                    : "92px"
+                };
                 bottom: -15px;
                 width: 0;
                 height: 0;
@@ -138,8 +176,7 @@ function CustomizeLineChart({ axis, ayis }) {
                 border-top: 15px solid #627f9d;
               "
             ></div>
-          </div>
-          `;
+          </div>`;
 
             tooltipEl.querySelector("table").innerHTML = innerHtml;
           }
@@ -148,8 +185,15 @@ function CustomizeLineChart({ axis, ayis }) {
 
           // Display, position, and set styles for font
           tooltipEl.style.opacity = "1";
-          tooltipEl.style.marginLeft = tooltipModel.caretX - 20 + "px";
-          tooltipEl.style.marginTop = tooltipModel.caretY - 400 + "px";
+          tooltipEl.style.marginLeft =
+            tooltipModel.caretX -
+            (tooltipData.dataIndex === 0
+              ? 20
+              : tooltipData.dataIndex + 1 === tooltipData.dataset.data.length
+              ? 175
+              : 102) +
+            "px";
+          tooltipEl.style.marginTop = tooltipModel.caretY - 420 + "px";
         },
       },
     },

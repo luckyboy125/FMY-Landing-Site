@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
+import checkIcon from "../../../../asset/images/check_icon.svg";
+
 import "./CheckListsLongItem.css";
 
 function CheckListsLongItem({ className, title, avatar, user, click, type }) {
@@ -11,12 +13,32 @@ function CheckListsLongItem({ className, title, avatar, user, click, type }) {
     green: "#37CE4A",
     orange: "#FF7A00",
   };
+  const [checkStatus, setCheckStatus] = useState(false);
+
+  const handleCheck = () => {
+    setCheckStatus(!checkStatus);
+  };
 
   return (
-    <div className={`checkListsLongItem ${className}`}>
+    <div
+      className={`checkListsLongItem ${className}`}
+      style={{ opacity: checkStatus ? 0.4 : 1 }}
+    >
       <div className="firstPart">
-        <div className="circleIcon"></div>
-        <span className="checkListsTitle">{title}</span>
+        {checkStatus ? <i className="fas fa-chevron-right"></i> : <></>}
+        <div className="circleIcon" onClick={handleCheck}>
+          {checkStatus ? (
+            <img src={checkIcon} className="checkIcon" alt="checkIcon" />
+          ) : (
+            <></>
+          )}
+        </div>
+        <span
+          className="checkListsTitle"
+          style={{ textDecoration: checkStatus ? "line-through" : "initial" }}
+        >
+          {title}
+        </span>
       </div>
       <div className="secondPart">
         <div className="secondFirstPart">
