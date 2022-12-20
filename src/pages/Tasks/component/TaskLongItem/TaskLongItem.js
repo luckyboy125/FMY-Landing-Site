@@ -30,11 +30,7 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
     >
       <div className="firstPart">
         <div className="circleIcon" onClick={handleCheck}>
-          {checkStatus ? (
-            <img src={checkIcon} className="checkIcon" alt="checkIcon" />
-          ) : (
-            <></>
-          )}
+          {checkStatus ? <img src={checkIcon} alt="checkIcon" /> : <></>}
         </div>
         <div className="titleRoot">
           <div

@@ -13,7 +13,7 @@ function CustomizeLineChart({ axis, ayis }) {
     var _linecolor = ctx.createLinearGradient(0, 0, 0, 100);
     _linecolor.addColorStop(0, "#6AB4FF");
     _linecolor.addColorStop(1, "#C2A6FF");
-    var _areacolor = ctx.createLinearGradient(0, 0, 0, 300);
+    var _areacolor = ctx.createLinearGradient(0, 0, 0, 230);
     _areacolor.addColorStop(0, "#A0CFFF94");
     _areacolor.addColorStop(1, "#A0CFFF00");
     setLineColor(_linecolor);
