@@ -1,16 +1,38 @@
 import { useEffect, useState } from "react";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
+import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./CheckListsShortItem.css";
 
 function CheckListsShortItem({ className, title, type, avatar, user, click }) {
+  const [checkStatus, setCheckStatus] = useState(false);
+
   const handleClick = () => {
     click();
   };
+
+  const handleCheck = () => {
+    setCheckStatus(!checkStatus);
+  };
+
   return (
-    <div className={`checkListsShortItem ${className}`}>
-      <div className="circleIcon"></div>
+    <div
+      className={`checkListsShortItem ${className}`}
+      style={{ opacity: checkStatus ? 0.4 : 1 }}
+    >
+      <div className="circleIcon" onClick={handleCheck}>
+        {checkStatus ? (
+          <img src={checkIcon} className="checkIcon" alt="checkIcon" />
+        ) : (
+          <></>
+        )}
+      </div>
       <div className="checkListsShortItemContent">
-        <div className="title">{title}</div>
+        <div
+          className="title"
+          style={{ textDecoration: checkStatus ? "line-through" : "initial" }}
+        >
+          {title}
+        </div>
         <div className="des"></div>
         <div className="items">
           <div className="itemsFirst">

@@ -19,6 +19,10 @@
   height: 34px;
   margin-right: 17px;
   margin-bottom: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .checkListsShortItem .circleIcon::before {
   content: "";
