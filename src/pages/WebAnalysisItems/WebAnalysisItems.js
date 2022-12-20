@@ -2,10 +2,10 @@ import ActionButton from "../../components/ActionButton/ActionButton";
 import handImage from "../../asset/images/hand.svg";
 import "./WebAnalysisItem.css";
 import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
-import CustomizePieChart from "../../components/CustomizePieChart/CustomizePieChart";
 import Stats from "./component/Stats/Stats";
 import TopPlatforms from "./component/TopPlatforms/TopPlatforms";
 import Sentiment from "./component/Sentiment/Sentiment";
+import CustomizeDoughnutChart from "../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 
 function WebAnalysisItems() {
   return (
@@ -115,7 +115,7 @@ function WebAnalysisItems() {
               </div>
             </div>
             <div className="pieChartRoot">
-              <CustomizePieChart axis={[100, 120, 124, 300, 145, 50]} />
+              <CustomizeDoughnutChart axis={[100, 120, 124, 300, 145, 50]} />
               <div className="pieChartDes">
                 <div className="pieChartDesItem">
                   <div
