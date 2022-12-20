@@ -4,41 +4,15 @@ import { useEffect, useState } from "react";
 import "./CustomizeDoughnutChart.css";
 Chart.register(...registerables);
 
-function CustomizeDoughnutChart({ axis }) {
+function CustomizeDoughnutChart({ data, label, colorInfo }) {
   const [chartColor, setChartColor] = useState([]);
-  const colorArrayTest = [
-    {
-      first: "#70B0FF",
-      last: "#98C6FF",
-    },
-    {
-      first: "#6090FF",
-      last: "#12327C",
-    },
-    {
-      first: "#A9FFBB",
-      last: "#6FFF8D",
-    },
-    {
-      first: "#004AFE",
-      last: "#80A5FF",
-    },
-    {
-      first: "#C5A4FF",
-      last: "#DBC7FF",
-    },
-    {
-      first: "#FEBD42",
-      last: "#EFD7AB",
-    },
-  ];
 
   useEffect(() => {
     var canvas = document.getElementById("line_chart");
     var ctx = canvas.getContext("2d");
     let colorArray = [];
 
-    colorArrayTest.map((item) => {
+    colorInfo.map((item) => {
       var gradientColor = ctx.createLinearGradient(0, 0, 0, 300);
       gradientColor.addColorStop(0, item.first);
       gradientColor.addColorStop(1, item.last);
@@ -116,10 +90,8 @@ function CustomizeDoughnutChart({ axis }) {
                   width: 20px;
                   height: 20px;
                   background: linear-gradient(238.95deg, ${
-                    colorArrayTest[tooltipData.dataIndex].first
-                  } 31.21%, ${
-              colorArrayTest[tooltipData.dataIndex].last
-            } 62.45%);
+                    colorInfo[tooltipData.dataIndex].first
+                  } 31.21%, ${colorInfo[tooltipData.dataIndex].last} 62.45%);
                   margin-right: 11px;
                   border-radius: 50%;
                 "
@@ -166,14 +138,7 @@ function CustomizeDoughnutChart({ axis }) {
 
   const DoughnutChartAction = (data) => {
     const DoughnutchartData = {
-      labels: [
-        "Lorem ipsum1",
-        "Lorem ipsum2",
-        "Lorem ipsum3",
-        "Lorem ipsum4",
-        "Lorem ipsum5",
-        "Lorem ipsum6",
-      ],
+      labels: label,
       datasets: [
         {
           label: "My First Dataset",
@@ -202,7 +167,7 @@ function CustomizeDoughnutChart({ axis }) {
         type="doughnut"
         width={260}
         options={DoughnutChartOption}
-        data={DoughnutChartAction(axis)}
+        data={DoughnutChartAction(data, label)}
         plugins={[
           {
             beforeEvent: function (chart, ctx) {

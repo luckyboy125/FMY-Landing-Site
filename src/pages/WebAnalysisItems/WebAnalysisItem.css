@@ -166,14 +166,14 @@
   margin-top: 20px;
 }
 
-.pieChartRoot {
+.doughnutChartRoot {
   display: flex;
 }
 .chartRoot {
   position: relative;
 }
 
-.pieChartPercent {
+.doughnutChartPercent {
   position: absolute;
   top: 46%;
   right: 46%;
@@ -185,19 +185,19 @@
   text-align: center;
   color: #ffffff;
 }
-.pieChartDes {
+.doughnutChartDes {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.pieChartDesItem {
+.doughnutChartDesItem {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
 
-.pieChartIcon {
+.doughnutChartIcon {
   width: 12px;
   min-height: 12px;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -205,7 +205,7 @@
   border-radius: 50px;
 }
 
-.pieChartItemName {
+.doughnutChartItemName {
   font-family: Helvetica;
   font-style: normal;
   font-weight: 400;

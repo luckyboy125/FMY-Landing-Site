@@ -6,8 +6,19 @@ import Stats from "./component/Stats/Stats";
 import TopPlatforms from "./component/TopPlatforms/TopPlatforms";
 import Sentiment from "./component/Sentiment/Sentiment";
 import CustomizeDoughnutChart from "../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
+import { doughnutChartColorData } from "../../helpers/chart.helper";
 
 function WebAnalysisItems() {
+  const lineChartData = {
+    label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    data: [1320, 932, 901, 1300, 1290, 1330, 1320],
+  };
+
+  const doughnutChartData = {
+    label: ["first", "second", "third", "fourth", "fifth", "sixth"],
+    data: [100, 120, 124, 300, 145, 50],
+  };
+
   return (
     <div className="webAnalysisRoot">
       <div className="webAnalysisHeader">
@@ -85,8 +96,8 @@ function WebAnalysisItems() {
             </div>
             <div className="lineChartRoot">
               <CustomizeLineChart
-                axis={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
-                ayis={[1320, 932, 901, 1300, 1290, 1330, 1320]}
+                axis={lineChartData.label}
+                ayis={lineChartData.data}
               />
             </div>
           </div>
@@ -114,51 +125,26 @@ function WebAnalysisItems() {
                 </div>
               </div>
             </div>
-            <div className="pieChartRoot">
-              <CustomizeDoughnutChart axis={[100, 120, 124, 300, 145, 50]} />
-              <div className="pieChartDes">
-                <div className="pieChartDesItem">
-                  <div
-                    className="pieChartIcon"
-                    style={{ backgroundColor: "#75b3ff" }}
-                  ></div>
-                  <div className="pieChartItemName">Lorem ipsum</div>
-                </div>
-                <div className="pieChartDesItem">
-                  <div
-                    className="pieChartIcon"
-                    style={{ backgroundColor: "#12327c" }}
-                  ></div>
-                  <div className="pieChartItemName">Lorem ipsum</div>
-                </div>
-                <div className="pieChartDesItem">
-                  <div
-                    className="pieChartIcon"
-                    style={{ backgroundColor: "#93eca6" }}
-                  ></div>
-                  <div className="pieChartItemName">Lorem ipsum</div>
-                </div>
-                <div className="pieChartDesItem">
-                  <div
-                    className="pieChartIcon"
-                    style={{ backgroundColor: "#004afe" }}
-                  ></div>
-                  <div className="pieChartItemName">Lorem ipsum</div>
-                </div>
-                <div className="pieChartDesItem">
-                  <div
-                    className="pieChartIcon"
-                    style={{ backgroundColor: "#c6a6ff" }}
-                  ></div>
-                  <div className="pieChartItemName">Lorem ipsum</div>
-                </div>
-                <div className="pieChartDesItem">
-                  <div
-                    className="pieChartIcon"
-                    style={{ backgroundColor: "#febd42" }}
-                  ></div>
-                  <div className="pieChartItemName">Other</div>
-                </div>
+            <div className="doughnutChartRoot">
+              <CustomizeDoughnutChart
+                data={doughnutChartData.data}
+                label={doughnutChartData.label}
+                colorInfo={doughnutChartColorData}
+              />
+              <div className="doughnutChartDes">
+                {doughnutChartData.label.map((item, index) => {
+                  return (
+                    <div className="doughnutChartDesItem" key={index}>
+                      <div
+                        className="doughnutChartIcon"
+                        style={{
+                          background: `linear-gradient(238.95deg, ${doughnutChartColorData[index]?.first} 31.21%, ${doughnutChartColorData[index]?.last} 62.45%)`,
+                        }}
+                      ></div>
+                      <div className="doughnutChartItemName">{item}</div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
