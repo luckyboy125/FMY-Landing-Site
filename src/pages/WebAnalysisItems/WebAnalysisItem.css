@@ -109,7 +109,7 @@
 }
 
 .chartContent .databasePart {
-  padding: 34px 26.5px 40px 40.5px;
+  padding: 34px 26.5px 36px 40.5px;
   width: 55%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
@@ -133,7 +133,8 @@
 
 .lineChartRoot {
   flex-grow: 1;
-  padding-top: 50px;
+  padding-top: 49.35px;
+  height: 323.39px;
 }
 
 .casesPart .descriptionRoot {
