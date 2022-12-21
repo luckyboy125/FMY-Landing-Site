@@ -1,5 +1,6 @@
 .checkListsLongItem {
-  padding: 15px 30px;
+  height: 80px;
+  padding: 0 30px;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
