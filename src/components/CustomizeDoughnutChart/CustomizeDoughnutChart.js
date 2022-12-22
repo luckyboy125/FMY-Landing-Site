@@ -24,7 +24,7 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
 
   const DoughnutChartOption = {
     type: "doughnut",
-    cutout: "80%",
+    cutout: "85.8%",
     radius: 130,
     clip: 0,
     maintainAspectRatio: false,
@@ -130,7 +130,7 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
           // Display, position, and set styles for font
           tooltipEl.style.opacity = "1";
           tooltipEl.style.marginLeft = tooltipModel.caretX + "px";
-          tooltipEl.style.marginTop = tooltipModel.caretY - 260 + "px";
+          tooltipEl.style.marginTop = tooltipModel.caretY - 267 + "px";
         },
       },
     },
@@ -156,8 +156,8 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
   return (
     <div
       style={{
-        maxWidth: "260px",
-        maxHeight: "260px",
+        maxWidth: "267px",
+        maxHeight: "267px",
         marginRight: "44.56px",
         position: "relative",
       }}
@@ -165,7 +165,7 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
       <Doughnut
         id="doughnut_chart"
         type="doughnut"
-        width={260}
+        width={267}
         options={DoughnutChartOption}
         data={DoughnutChartAction(data, label)}
         plugins={[
