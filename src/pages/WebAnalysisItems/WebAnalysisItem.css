@@ -4,6 +4,7 @@
 }
 
 .webAnalysisHeader {
+  padding: 0 21px 0 7px;
   margin-bottom: 29px;
   display: flex;
   justify-content: space-between;
@@ -19,6 +20,7 @@
   color: #ffffff;
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .analysisHello img {
@@ -75,7 +77,7 @@
 
 .chartHeader .databasePart {
   padding: 0 11px 0 30px;
-  width: 55%;
+  width: 52.7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,7 +93,7 @@
 
 .chartHeader .casesPart {
   padding: 0 11px 0 30px;
-  width: 45%;
+  flex-grow: 1;
 }
 
 .headerItemTitle {
@@ -109,22 +111,22 @@
 }
 
 .chartContent .databasePart {
-  padding: 34px 26.5px 36px 40.5px;
-  width: 55%;
+  padding: 34px 0 36px 40.5px;
+  width: 52.7%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
 }
 
 .chartContent .casesPart {
   padding: 30px 26.5px 30px 41px;
-  width: 45%;
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 .descriptionRoot {
-  width: 250px;
-  margin-right: 56.46px;
+  width: 229.56px;
+  margin-right: 16px;
 }
 
 .descriptionRoot:first-child {

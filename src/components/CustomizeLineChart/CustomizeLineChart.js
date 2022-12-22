@@ -230,7 +230,7 @@ function CustomizeLineChart({ axis, ayis }) {
       <Line
         id="line_chart"
         type="line"
-        width={637}
+        width={700}
         height={259}
         options={linechartOption}
         data={lineChartAction(axis, ayis)}
