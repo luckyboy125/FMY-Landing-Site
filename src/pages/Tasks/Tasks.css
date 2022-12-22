@@ -1,5 +1,5 @@
 .tasksRoot {
-  padding: 0 34px 50px 34px;
+  padding: 0 35px 50px 35px;
 }
 .tasksTitle {
   font-family: "Helvetica";
@@ -13,7 +13,7 @@
   margin-top: 5px;
 }
 .tasksHeaderRoot {
-  padding: 0 6px;
+  padding: 0 12px 0 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -219,5 +219,5 @@
   line-height: 24px;
   color: #75b3ff;
   cursor: pointer;
-  margin-left: 129px;
+  margin-left: 142px;
 }
