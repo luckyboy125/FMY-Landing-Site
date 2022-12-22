@@ -76,7 +76,7 @@
 }
 
 .chartHeader .databasePart {
-  padding: 0 13px 0 30px;
+  padding: 0 10px 0 30px;
   width: 52.7%;
   display: flex;
   align-items: center;
@@ -89,6 +89,14 @@
 
 .chartPeriod {
   margin-right: 30px;
+}
+
+.chartPeriod i {
+  margin-left: 12px !important;
+}
+
+.chartCompare {
+  padding: 10.5px 23px 10.5px 20px !important;
 }
 
 .chartHeader .casesPart {

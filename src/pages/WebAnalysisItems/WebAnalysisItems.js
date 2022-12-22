@@ -42,7 +42,11 @@ function WebAnalysisItems() {
                 content="This Week"
                 className="chartPeriod"
               />
-              <ActionButton content="Compare" type="common" />
+              <ActionButton
+                content="Compare"
+                type="common"
+                className="chartCompare"
+              />
             </div>
           </div>
           <div className="casesPart">
