@@ -16,6 +16,7 @@ import SideTaskBar from "./components/SideTaskBar";
 import TopTaskBar from "./components/TopTaskBar";
 import Tasks from "./pages/Tasks/Tasks";
 import CheckLists from "./pages/CheckListPage/CheckLists";
+import Cases from "./pages/Cases/Cases";
 
 //DONT TOUCH THIS FILE
 
@@ -48,6 +49,7 @@ function App() {
                   <Route path="/dashboard" element={<WebAnalysisItems />} />
                   <Route path="/tasks" element={<Tasks />} />
                   <Route path="/CheckLists" element={<CheckLists />} />
+                  <Route path="/cases" element={<Cases />} />
                 </Routes>
               </Col>
             </Row>

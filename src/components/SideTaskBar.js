@@ -52,7 +52,7 @@ function SideTaskBar() {
           <img src={InvestigationLogo} alt=""></img>
           Investigation
         </Button>
-        <Button className="taskBarButton">
+        <Button className="taskBarButton" onClick={() => navigate("/cases")}>
           <img src={CasesLogo} alt=""></img>
           Cases
         </Button>
