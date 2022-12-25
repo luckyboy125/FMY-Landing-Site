@@ -1,0 +1,84 @@
+.homeCardRoot {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 16px;
+  position: relative;
+  padding: 20px 50px 30px 50px;
+}
+
+.homeCardRoot .dotGroup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.cardTitle {
+  padding: 10px 20px;
+  background: rgba(117, 179, 255, 0.5);
+  border-radius: 30px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  width: fit-content;
+  margin: auto;
+}
+
+.cardName {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-top: 91px;
+}
+.cardAuthor {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+.cardAuthor img {
+  margin-right: 10px;
+}
+.cardDate {
+  margin-top: 10px;
+  font-family: "Helvetica Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.cardIconSocial {
+  margin-top: 6px;
+  display: flex;
+}
+
+.cardIconSocial img {
+  margin-right: 5px;
+}
+
+.cardComments {
+  margin-top: 5px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #75b3ff;
+}

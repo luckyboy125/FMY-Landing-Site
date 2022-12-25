@@ -8,15 +8,16 @@ import "./asset/fonts/helvetica-light-587ebe5a59211.ttf";
 import "./asset/fonts/Helvetica.ttf";
 import "./asset/fonts/Helvetica-Oblique.ttf";
 import "./asset/fonts/helvetica_neue.ttf";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useWindowDimensions, adjustContainer } from "./useWindowDimensions";
 import WebAnalysisItems from "./pages/WebAnalysisItems/WebAnalysisItems";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import SideTaskBar from "./components/SideTaskBar";
 import TopTaskBar from "./components/TopTaskBar";
 import Tasks from "./pages/Tasks/Tasks";
 import CheckLists from "./pages/CheckListPage/CheckLists";
 import Cases from "./pages/Cases/Cases";
+import Home from "./pages/Home/Home";
 
 //DONT TOUCH THIS FILE
 
@@ -45,7 +46,7 @@ function App() {
               </Col>
               <Col sm={9} className="content">
                 <Routes>
-                  <Route path="/" element={<WebAnalysisItems />} />
+                  <Route path="/" element={<Home />} />
                   <Route path="/dashboard" element={<WebAnalysisItems />} />
                   <Route path="/tasks" element={<Tasks />} />
                   <Route path="/CheckLists" element={<CheckLists />} />

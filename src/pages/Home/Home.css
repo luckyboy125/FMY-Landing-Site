@@ -1,0 +1,75 @@
+.homeRoot {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.homeHeader {
+  padding: 3px 21px 0 4.2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeHello {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.homeHello img {
+  margin-left: 20px;
+}
+
+.homeHeaderDes {
+  margin-top: 20px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.homeHeaderBtn {
+  background: rgba(117, 179, 255, 0.3);
+  border-radius: 30px;
+  padding: 14px 16.5px 13px 16.5px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #75b3ff;
+  cursor: pointer;
+}
+
+.homeRoot .lineRoot {
+  display: flex;
+  align-items: center;
+  margin: 42.2px 338px 50px 11.5px;
+}
+
+.homeRoot .lineRoot .lineBtn {
+  border: none !important;
+  margin-right: 100px;
+  min-width: 216px;
+  height: 50px;
+  align-items: center;
+}
+
+.homeRoot .homeHeader .homeBtn {
+  margin-top: 39px;
+}
+.homeRoot .mainContentRoot {
+  display: flex;
+}
+.homeCard {
+  width: 30%;
+  margin: 15px;
+}
