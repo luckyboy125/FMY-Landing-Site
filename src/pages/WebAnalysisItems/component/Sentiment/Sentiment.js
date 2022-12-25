@@ -10,8 +10,8 @@ function Sentiment({ value }) {
       {
         name: "Pressure",
         type: "gauge",
-        radius: "110%",
-        center: ["50%", "60%"],
+        radius: "115%",
+        center: ["49.9%", "59.9%"],
         data: [
           {
             value: value,
@@ -90,7 +90,13 @@ function Sentiment({ value }) {
   return (
     <ChartLayout
       name="Sentiment"
-      button={<ActionButton name="Show" content="This week" />}
+      button={
+        <ActionButton
+          name="Show"
+          content="This week"
+          className="sentimentBtn"
+        />
+      }
       className="topPlatforms"
     >
       <div className="chartRoot">

@@ -1,3 +1,7 @@
+.sentimentBtn {
+  padding: 10.5px 27px !important;
+}
+
 .gaugeMoreDetail {
   position: absolute;
   left: 37%;
@@ -24,11 +28,11 @@
 .negative {
   position: absolute;
   bottom: -2%;
-  left: 22%;
+  left: 21.5%;
 }
 
 .positive {
   position: absolute;
   bottom: -2%;
-  right: 22%;
+  right: 22.5%;
 }
