@@ -25,7 +25,7 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
   const DoughnutChartOption = {
     type: "doughnut",
     cutout: "85.8%",
-    radius: 130,
+    radius: 131,
     clip: 0,
     maintainAspectRatio: false,
     layout: {
@@ -156,16 +156,17 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
   return (
     <div
       style={{
-        maxWidth: "267px",
-        maxHeight: "267px",
-        marginRight: "44.56px",
+        maxWidth: "266px",
+        maxHeight: "266px",
+        marginRight: "42.5px",
         position: "relative",
       }}
     >
       <Doughnut
         id="doughnut_chart"
         type="doughnut"
-        width={267}
+        width={266}
+        height={266}
         options={DoughnutChartOption}
         data={DoughnutChartAction(data, label)}
         plugins={[

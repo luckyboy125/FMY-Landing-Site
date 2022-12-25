@@ -4,7 +4,7 @@
 }
 
 .webAnalysisHeader {
-  padding: 0 21px 0 7px;
+  padding: 0 21px 0 8.8px;
   margin-bottom: 29px;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@
 .webAnalysisHeaderBtn {
   background: rgba(117, 179, 255, 0.3);
   border-radius: 30px;
-  padding: 14px 16px 13px 16px;
+  padding: 14px 16.5px 13px 16.5px;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -153,7 +153,7 @@
 }
 
 .casesPart .descriptionRoot {
-  margin-right: 38px;
+  margin-right: 42px;
 }
 
 .descriptionItem {
