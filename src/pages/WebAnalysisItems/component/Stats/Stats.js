@@ -15,7 +15,9 @@ function Stats() {
       >
         <div
           className="statsItem"
-          style={{ borderRight: "1px solid rgba(255, 255, 255, 0.5)" }}
+          style={{
+            borderRight: "1px solid rgba(255, 255, 255, 0.5)",
+          }}
         >
           <div className="statsItemCount">1.7k</div>
           <div className="statsItemDes">Flagged posts</div>

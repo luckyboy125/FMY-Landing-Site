@@ -15,11 +15,11 @@
 .statsItems .statsItemRight {
   width: unset !important;
   flex-grow: 1;
-  padding: 38px 0 37px 0;
+  padding: 38px 0 36px 0;
 }
 .statsItem {
   width: 233px;
-  padding: 38px 0 37px 0;
+  padding: 38px 0 36px 0;
 }
 .statsItemCount {
   font-family: "Helvetica";
@@ -39,7 +39,7 @@
   text-align: center;
   color: #ffffff;
   opacity: 0.7;
-  padding: 17px 0 10px 0;
+  padding: 17px 0 12px 0;
 }
 .statsItemPercent {
   font-family: "Helvetica";
