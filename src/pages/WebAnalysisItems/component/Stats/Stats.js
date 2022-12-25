@@ -6,7 +6,7 @@ function Stats() {
   return (
     <ChartLayout
       name="Stats"
-      button={<ActionButton name="Show" content="All" />}
+      button={<ActionButton name="Show" content="All" className="statsBtn" />}
       className="stats"
     >
       <div
@@ -21,7 +21,7 @@ function Stats() {
           <div className="statsItemDes">Flagged posts</div>
           <div className="statsItemPercent">+12%</div>
         </div>
-        <div className="statsItem">
+        <div className="statsItemRight">
           <div className="statsItemCount">1.7k</div>
           <div className="statsItemDes">Flagged posts</div>
           <div className="statsItemPercent">+12%</div>
@@ -36,7 +36,7 @@ function Stats() {
           <div className="statsItemDes">Flagged posts</div>
           <div className="statsItemPercent">+12%</div>
         </div>
-        <div className="statsItem">
+        <div className="statsItemRight">
           <div className="statsItemCount">1.7k</div>
           <div className="statsItemDes">Flagged posts</div>
           <div className="statsItemPercent">+12%</div>

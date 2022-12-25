@@ -1,13 +1,25 @@
 .stats {
-  min-width: 500px;
+  min-width: 507px;
+  width: 507px;
 }
+
+.statsBtn {
+  padding: 9.5px 25px !important;
+}
+
 .statsItems {
   display: flex;
   align-items: center;
 }
 
+.statsItems .statsItemRight {
+  width: unset !important;
+  flex-grow: 1;
+  padding: 38px 0 37px 0;
+}
 .statsItem {
-  padding: 37px 45px 37px 52px;
+  width: 233px;
+  padding: 38px 0 37px 0;
 }
 .statsItemCount {
   font-family: "Helvetica";
