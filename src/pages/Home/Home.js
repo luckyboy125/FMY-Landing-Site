@@ -28,9 +28,58 @@ function Home() {
           <CustomizeInlineChart />
         </div>
         <div className="mainContentRoot">
-          <HomeCard className="homeCard" />
-          <HomeCard className="homeCard" />
-          <HomeCard className="homeCard" />
+          <div className="inline">
+            <HomeCard
+              className="homeCard"
+              cardType="boycott"
+              cardContent="Hezbollah called out for boycotting the elections in Bahrain"
+              author="Nimrod Ben Efraim"
+              cardDate="31 October 2022"
+              commitCount="2"
+            />
+            <HomeCard
+              className="homeCard"
+              cardType="newupdate"
+              cardContent="Hezbollah called out for boycotting the elections in Bahrain"
+              author="Nimrod Ben Efraim"
+              cardDate="31 October 2022"
+              commitCount="2"
+            />
+            <HomeCard
+              className="lastHomeCard"
+              cardType="newupdate"
+              cardContent="Hezbollah called out for boycotting the elections in Bahrain"
+              author="Nimrod Ben Efraim"
+              cardDate="31 October 2022"
+              commitCount="2"
+            />
+          </div>
+          <div className="inline">
+            <HomeCard
+              className="homeCard"
+              cardType="newupdate"
+              cardContent="Hezbollah called out for boycotting the elections in Bahrain"
+              author="Nimrod Ben Efraim"
+              cardDate="31 October 2022"
+              commitCount="2"
+            />
+            <HomeCard
+              className="homeCard"
+              cardType="newupdate"
+              cardContent="Hezbollah called out for boycotting the elections in Bahrain"
+              author="Nimrod Ben Efraim"
+              cardDate="31 October 2022"
+              commitCount="2"
+            />
+            <HomeCard
+              className="lastHomeCard"
+              cardType="event"
+              cardContent="Hezbollah called out for boycotting the elections in Bahrain"
+              author="Nimrod Ben Efraim"
+              cardDate="31 October 2022"
+              commitCount="2"
+            />
+          </div>
         </div>
       </div>
     </>

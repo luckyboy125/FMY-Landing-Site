@@ -66,10 +66,17 @@
 .homeRoot .homeHeader .homeBtn {
   margin-top: 39px;
 }
-.homeRoot .mainContentRoot {
+.homeRoot .mainContentRoot .inline {
   display: flex;
+  margin-bottom: 28px;
 }
+
 .homeCard {
-  width: 30%;
-  margin: 15px;
+  width: 33%;
+  margin-right: 29px;
+}
+
+.lastHomeCard {
+  width: 33%;
+  margin-right: 29px;
 }

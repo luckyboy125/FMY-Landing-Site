@@ -7,7 +7,7 @@ function CustomizeInlineChart() {
     "Tuesday",
     "Wednesday",
     "Thursday",
-    "Friday",
+    "Today",
     "Saturday",
     "Sunday",
   ];
@@ -24,7 +24,15 @@ function CustomizeInlineChart() {
               }}
             >
               <div className="customizeInlineChartDot"></div>
-              <span className="customizeInlineChartDes">{item}</span>
+              <span
+                className={
+                  item !== "Today"
+                    ? "customizeInlineChartDes"
+                    : "activeCustomizeInlineChartDes"
+                }
+              >
+                {item}
+              </span>
             </div>
           );
         })}

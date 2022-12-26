@@ -15,9 +15,8 @@
   right: 20px;
 }
 
-.cardTitle {
+.homeCardRoot .cardTitle {
   padding: 10px 20px;
-  background: rgba(117, 179, 255, 0.5);
   border-radius: 30px;
   font-family: "Helvetica";
   font-style: normal;
@@ -29,7 +28,7 @@
   margin: auto;
 }
 
-.cardName {
+.homeCardRoot .cardName {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -38,7 +37,7 @@
   color: #ffffff;
   margin-top: 91px;
 }
-.cardAuthor {
+.homeCardRoot .cardAuthor {
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -50,12 +49,12 @@
   letter-spacing: 0.01em;
   color: #ffffff;
 }
-.cardAuthor img {
+.homeCardRoot .cardAuthor .authorAvatar {
   margin-right: 10px;
 }
 .cardDate {
   margin-top: 10px;
-  font-family: "Helvetica Medium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -64,16 +63,16 @@
   opacity: 0.6;
 }
 
-.cardIconSocial {
+.homeCardRoot .cardIconSocial {
   margin-top: 6px;
   display: flex;
 }
 
-.cardIconSocial img {
+.homeCardRoot .cardIconSocial img {
   margin-right: 5px;
 }
 
-.cardComments {
+.homeCardRoot .cardComments {
   margin-top: 5px;
   font-family: "Helvetica";
   font-style: normal;
