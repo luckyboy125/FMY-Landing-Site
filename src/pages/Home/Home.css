@@ -4,7 +4,7 @@
 }
 
 .homeHeader {
-  padding: 3px 21px 0 4.2px;
+  padding: 6.5px 21px 0 4.2px;
   display: flex;
   justify-content: space-between;
 }
@@ -26,7 +26,7 @@
 }
 
 .homeHeaderDes {
-  margin-top: 20px;
+  margin-top: 17px;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -52,7 +52,7 @@
 .homeRoot .lineRoot {
   display: flex;
   align-items: center;
-  margin: 42.2px 338px 50px 11.5px;
+  margin: 41px 338px 50px 11.5px;
 }
 
 .homeRoot .lineRoot .lineBtn {
