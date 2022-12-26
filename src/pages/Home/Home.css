@@ -52,7 +52,7 @@
 .homeRoot .lineRoot {
   display: flex;
   align-items: center;
-  margin: 41px 338px 50px 11.5px;
+  margin: 41px 338px 52px 11.5px;
 }
 
 .homeRoot .lineRoot .lineBtn {
@@ -68,7 +68,7 @@
 }
 .homeRoot .mainContentRoot .inline {
   display: flex;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 }
 
 .homeCard {
