@@ -6,7 +6,7 @@
   );
   border-radius: 16px;
   position: relative;
-  padding: 20px 50px 30px 50px;
+  padding: 19px 50px 30px 50px;
 }
 
 .homeCardRoot .dotGroup {
@@ -35,7 +35,8 @@
   font-size: 30px;
   line-height: 30px;
   color: #ffffff;
-  margin-top: 91px;
+  margin-top: 31px;
+  min-height: 142px;
 }
 .homeCardRoot .cardAuthor {
   margin-top: 12px;
@@ -66,20 +67,10 @@
 }
 
 .homeCardRoot .cardIconSocial {
-  margin-top: 6px;
+  margin-top: 20px;
   display: flex;
 }
 
 .homeCardRoot .cardIconSocial img {
   margin-right: 5px;
-}
-
-.homeCardRoot .cardComments {
-  margin-top: 5px;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  color: #75b3ff;
 }

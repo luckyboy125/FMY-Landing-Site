@@ -62,8 +62,6 @@ function HomeCard({
           <img src={youtube} alt="youtube" />
           <img src={w3} alt="w3" />
         </div>
-
-        <div className="cardComments">{commitCount} Comments</div>
       </div>
     </>
   );

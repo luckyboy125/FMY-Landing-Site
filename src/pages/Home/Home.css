@@ -1,10 +1,10 @@
 .homeRoot {
-  padding-left: 30px;
+  padding-left: 29px;
   padding-right: 30px;
 }
 
 .homeHeader {
-  padding: 6.5px 21px 0 4.2px;
+  padding: 2.5px 21px 0 5.2px;
   display: flex;
   justify-content: space-between;
 }
@@ -23,10 +23,11 @@
 
 .homeHello img {
   margin-left: 20px;
+  margin-bottom: 3px;
 }
 
 .homeHeaderDes {
-  margin-top: 17px;
+  margin-top: 18px;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -52,23 +53,24 @@
 .homeRoot .lineRoot {
   display: flex;
   align-items: center;
-  margin: 41px 338px 52px 11.5px;
+  margin: 45px 353px 51px 18px;
 }
 
 .homeRoot .lineRoot .lineBtn {
   border: none !important;
-  margin-right: 100px;
-  min-width: 216px;
-  height: 50px;
+  margin-right: 110px;
+  min-width: 217px;
+  height: 52px;
   align-items: center;
 }
 
 .homeRoot .homeHeader .homeBtn {
-  margin-top: 39px;
+  margin-top: 38px;
+  padding: 14px 20px 14px 20px !important;
 }
 .homeRoot .mainContentRoot .inline {
   display: flex;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
 .homeCard {
@@ -78,5 +80,4 @@
 
 .lastHomeCard {
   width: 33%;
-  margin-right: 29px;
 }
