@@ -17,9 +17,15 @@ function Cases() {
         <div className="casesTitle">Cases</div>
         <div className="casesHeaderRoot">
           <ActionTab
+            className="casesTab"
             data={tabData}
             onSelect={(e) => handleTab(e)}
             select={tab}
+          />
+          <PlusButton
+            content="+ New case"
+            className="casesHeaderBtn"
+            action={() => {}}
           />
         </div>
         <div className="casesContainer">content</div>
