@@ -6,7 +6,7 @@
   );
   border-radius: 16px;
   position: relative;
-  padding: 19px 50px 30px 50px;
+  padding: 19px 50px 30px 49px;
 }
 
 .homeCardRoot .dotGroup {
@@ -72,5 +72,5 @@
 }
 
 .homeCardRoot .cardIconSocial img {
-  margin-right: 5px;
+  margin-right: 5.4px;
 }

@@ -18,7 +18,7 @@ function Home() {
             <p className="homeHeaderDes">Here are today's updates.</p>
           </div>
           <PlusButton
-            content="+ New task"
+            content="+ New update"
             action={() => {}}
             className="homeBtn"
           />
