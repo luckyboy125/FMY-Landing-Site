@@ -34,13 +34,14 @@
   color: #ffffff;
   border: 1px solid transparent;
   background-color: transparent;
+  padding: 0 !important;
 }
 .searchInputRoot .inputContent::placeholder {
   font-family: "Helvetica";
   font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
   color: rgba(255, 255, 255, 0.4);
 }
 .searchInputRoot .inputContent:focus-visible {
