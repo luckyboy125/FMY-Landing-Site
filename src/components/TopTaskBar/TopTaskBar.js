@@ -1,5 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-import SearchLogo from "../asset/sidebar/SearchLogo.svg";
+import SearchLogo from "../../asset/sidebar/SearchLogo.svg";
 import "./TopTaskBar.css";
 
 function TopTaskBar() {

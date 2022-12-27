@@ -10,15 +10,15 @@ import "./asset/fonts/Helvetica-Oblique.ttf";
 import "./asset/fonts/helvetica_neue.ttf";
 import { useEffect } from "react";
 import { useWindowDimensions, adjustContainer } from "./useWindowDimensions";
-import WebAnalysisItems from "./pages/WebAnalysisItems/WebAnalysisItems";
 import { Row, Col } from "react-bootstrap";
-import SideTaskBar from "./components/SideTaskBar";
-import TopTaskBar from "./components/TopTaskBar";
 import Tasks from "./pages/Tasks/Tasks";
-import CheckLists from "./pages/CheckListPage/CheckLists";
 import Cases from "./pages/Cases/Cases";
 import Home from "./pages/Home/Home";
 import NRDS from "./pages/NRDS/NRDS";
+import CheckLists from "./pages/CheckListPage/CheckLists";
+import WebAnalysisItems from "./pages/WebAnalysisItems/WebAnalysisItems";
+import TopTaskBar from "./components/TopTaskBar/TopTaskBar";
+import SideTaskBar from "./components/SideTaskBar/SideTaskBar";
 
 //DONT TOUCH THIS FILE
 
