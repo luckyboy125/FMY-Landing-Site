@@ -10,12 +10,12 @@ import "./NRDS.css";
 function NRDS() {
   const lineChartData = {
     label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    data: [1320, 932, 901, 1300, 1290, 1330, 1320],
+    data: [500, 600, 700, 800, 900, 1000, 1200],
   };
 
   const doughnutChartData = {
-    label: ["first", "second", "third", "fourth", "fifth", "sixth"],
-    data: [100, 120, 124, 300, 145, 50],
+    label: ["a", "b", "c", "d", "e", "f"],
+    data: [500, 600, 700, 800, 900, 1000, 1200],
   };
 
   const tabData = ["NRD's", "Database", "Archive"];
@@ -35,12 +35,12 @@ function NRDS() {
             onSelect={(e) => handleTab(e)}
             select={tab}
           />
-          <PlusButton content="+ New task" action={() => {}} />
+          <PlusButton content="+ New keyword" action={() => {}} />
         </div>
         <div className="chartContainer">
           <div className="chartHeader">
             <div className="databasePart">
-              <div className="headerItemTitle">Database Items</div>
+              <div className="headerItemTitle">Flagged NRD’s</div>
               <div className="chartTools">
                 <ActionButton
                   name="Show"
@@ -55,7 +55,7 @@ function NRDS() {
               </div>
             </div>
             <div className="casesPart">
-              <div className="headerItemTitle">Cases</div>
+              <div className="headerItemTitle">Keywords</div>
             </div>
           </div>
           <div className="chartContent">
@@ -69,7 +69,7 @@ function NRDS() {
                   }}
                 >
                   <div className="descriptionItemTitle">
-                    Total items this week
+                    Total NRD’s flagged today
                   </div>
                   <div
                     className="descriptionItemCount"
@@ -79,7 +79,7 @@ function NRDS() {
                       fontWeight: 400,
                     }}
                   >
-                    10,324
+                    108
                   </div>
                 </div>
                 <div
@@ -87,7 +87,7 @@ function NRDS() {
                   style={{ paddingTop: "26px", paddingBottom: "30px" }}
                 >
                   <div className="descriptionItemTitle">
-                    Changes from last week
+                    Changes from yesterday
                   </div>
                   <div
                     className="descriptionItemCount"
@@ -103,7 +103,9 @@ function NRDS() {
                     paddingBottom: "0px !important",
                   }}
                 >
-                  <div className="descriptionItemTitle">Total items in DB</div>
+                  <div className="descriptionItemTitle">
+                    Domains under monitoring
+                  </div>
                   <div
                     className="descriptionItemCount"
                     style={{ color: "#fff" }}
@@ -122,7 +124,7 @@ function NRDS() {
             <div className="casesPart">
               <div className="descriptionRoot">
                 <div className="descriptionItem borderNone topPaddingNone">
-                  <div className="descriptionItemTitle">Lorem ipsum</div>
+                  <div className="descriptionItemTitle">Keywords in use</div>
                   <div
                     className="descriptionItemCount"
                     style={{ color: "#fff" }}
@@ -131,7 +133,7 @@ function NRDS() {
                   </div>
                 </div>
                 <div className="descriptionItem">
-                  <div className="descriptionItemTitle">Lorem ipsum</div>
+                  <div className="descriptionItemTitle">{`New keywords (past 7 days)`}</div>
                   <div
                     className="descriptionItemCount"
                     style={{ color: "#fff" }}
@@ -143,7 +145,9 @@ function NRDS() {
                   className="descriptionItem"
                   style={{ paddingBottom: "0px !important" }}
                 >
-                  <div className="descriptionItemTitle">Lorem ipsum</div>
+                  <div className="descriptionItemTitle">
+                    {`Most flagged keyword (past 7 days)`}
+                  </div>
                   <div
                     className="descriptionItemCount"
                     style={{ color: "#fff" }}
