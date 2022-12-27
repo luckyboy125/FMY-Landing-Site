@@ -32,3 +32,14 @@
 .casesRoot .casesContainer {
   margin-top: 42.5px;
 }
+
+.casesRoot .casesHeaderRoot .lastItemRoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.casesRoot .casesHeaderRoot .lastItemRoot .caseSearchInput {
+  margin-right: 20px;
+  padding: 14px 20px 14px 10px !important;
+}
