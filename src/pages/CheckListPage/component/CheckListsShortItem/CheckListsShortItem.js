@@ -6,10 +6,6 @@ import "./CheckListsShortItem.css";
 function CheckListsShortItem({ className, title, type, avatar, user, click }) {
   const [checkStatus, setCheckStatus] = useState(false);
 
-  const handleClick = () => {
-    click();
-  };
-
   const handleCheck = () => {
     setCheckStatus(!checkStatus);
   };
@@ -52,7 +48,7 @@ function CheckListsShortItem({ className, title, type, avatar, user, click }) {
           </div>
         </div>
       </div>
-      <div className="dotGroup" onClick={handleClick}>
+      <div className="dotGroup" onClick={() => click()}>
         <div className="dot"></div>
         <div className="dot"></div>
         <div className="dot"></div>

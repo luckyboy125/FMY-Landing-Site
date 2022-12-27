@@ -4,9 +4,6 @@ import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./CheckListsLongItem.css";
 
 function CheckListsLongItem({ className, title, avatar, user, click, type }) {
-  const handleClick = () => {
-    click();
-  };
   const colorType = {
     blue: "#75B3FF",
     green: "#37CE4A",
@@ -46,7 +43,7 @@ function CheckListsLongItem({ className, title, avatar, user, click, type }) {
           </div>
           <ColorBtn name="10 Mar" width={128} color={colorType[type]} />
         </div>
-        <div className="dotGroup" onClick={handleClick}>
+        <div className="dotGroup" onClick={() => click()}>
           <div className="dot"></div>
           <div className="dot"></div>
           <div className="dot"></div>

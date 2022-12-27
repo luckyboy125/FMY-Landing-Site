@@ -4,10 +4,6 @@ import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./TaskShortItem.css";
 
 function TaskShortItem({ className, title, type, avatar, user, click }) {
-  const handleClick = () => {
-    click();
-  };
-
   const [checkStatus, setCheckStatus] = useState(false);
 
   const handleCheck = () => {
@@ -47,7 +43,7 @@ function TaskShortItem({ className, title, type, avatar, user, click }) {
           </div>
         </div>
       </div>
-      <div className="dotGroup" onClick={handleClick}>
+      <div className="dotGroup" onClick={() => click()}>
         <div className="dot"></div>
         <div className="dot"></div>
         <div className="dot"></div>

@@ -9,9 +9,6 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
     month: "long",
     day: "numeric",
   };
-  const handleClick = () => {
-    click();
-  };
   const [time, setTime] = useState("");
   const [checkStatus, setCheckStatus] = useState(false);
 
@@ -54,7 +51,7 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
             {time.split(",")[2]}
           </div>
         </div>
-        <div className="dotGroup" onClick={handleClick}>
+        <div className="dotGroup" onClick={() => click()}>
           <div className="dot"></div>
           <div className="dot"></div>
           <div className="dot"></div>
