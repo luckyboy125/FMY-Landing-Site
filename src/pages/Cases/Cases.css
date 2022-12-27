@@ -41,5 +41,6 @@
 
 .casesRoot .casesHeaderRoot .lastItemRoot .caseSearchInput {
   margin-right: 20px;
-  padding: 14px 20px 14px 10px !important;
+  padding: 10px 20px 10px 10px !important;
+  margin-bottom: 1px;
 }
