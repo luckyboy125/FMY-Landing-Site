@@ -158,6 +158,8 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
       style={{
         maxWidth: "266px",
         maxHeight: "266px",
+        width: "266px",
+        height: "266px",
         marginRight: "42.5px",
         position: "relative",
       }}

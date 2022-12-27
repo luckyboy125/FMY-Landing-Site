@@ -3,7 +3,7 @@
   padding-right: 30px;
 }
 
-.webAnalysisHeader {
+.webAnalysisRoot .webAnalysisHeader {
   padding: 0 21px 0 8.8px;
   margin-bottom: 29px;
   display: flex;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.analysisHello {
+.webAnalysisRoot .webAnalysisHeader .analysisHello {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -23,11 +23,11 @@
   margin: 0;
 }
 
-.analysisHello img {
+.webAnalysisRoot .webAnalysisHeader .analysisHello img {
   margin-left: 20px;
 }
 
-.analysisHeaderDes {
+.webAnalysisRoot .webAnalysisHeader .analysisHeaderDes {
   margin-top: 20px;
   font-family: "Helvetica";
   font-style: normal;
@@ -38,7 +38,7 @@
   margin-bottom: 0;
 }
 
-.webAnalysisHeaderBtn {
+.webAnalysisRoot .webAnalysisHeader .webAnalysisHeaderBtn {
   background: rgba(117, 179, 255, 0.3);
   border-radius: 30px;
   padding: 14px 16.5px 13px 16.5px;
@@ -68,14 +68,14 @@
   );
 }
 
-.chartHeader {
+.webAnalysisRoot .chartContainer .chartHeader {
   display: flex;
   align-items: center;
   height: 66px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.chartHeader .databasePart {
+.webAnalysisRoot .chartContainer .chartHeader .databasePart {
   padding: 0 10px 0 30px;
   width: 52.8%;
   display: flex;
@@ -83,33 +83,55 @@
   justify-content: space-between;
 }
 
-.chartTools {
+.webAnalysisRoot .chartContainer .chartHeader .databasePart .chartTools {
   display: flex;
 }
 
-.chartPeriod {
+.webAnalysisRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartPeriod {
   margin-right: 30px;
   padding: 10.5px 20px 10.5px 20px;
 }
 
-.chartPeriod i {
+.webAnalysisRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartPeriod
+  i {
   margin-left: 12px !important;
 }
 
-.chartCompare {
+.webAnalysisRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartCompare {
   padding: 10.5px 23px 10.5px 20px !important;
 }
 
-.chartCompare i {
+.webAnalysisRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartCompare
+  i {
   margin-left: 12px !important;
 }
 
-.chartHeader .casesPart {
+.webAnalysisRoot .chartContainer .chartHeader .casesPart {
   padding: 0 11px 0 30px;
   flex-grow: 1;
 }
 
-.headerItemTitle {
+.webAnalysisRoot .chartContainer .chartHeader .databasePart .headerItemTitle {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -119,52 +141,62 @@
   margin-top: 11px;
 }
 
-.chartContent {
+.webAnalysisRoot .chartContainer .chartHeader .casesPart .headerItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 11px;
+}
+
+.webAnalysisRoot .chartContent {
   display: flex;
 }
 
-.chartContent .databasePart {
+.webAnalysisRoot .chartContent .databasePart {
   padding: 34px 0 36px 40.5px;
   width: 52.8%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
 }
 
-.chartContent .casesPart {
+.webAnalysisRoot .chartContent .casesPart {
   padding: 30px 26.5px 30px 50px;
   display: flex;
   align-items: center;
   flex-grow: 1;
 }
 
-.descriptionRoot {
+.webAnalysisRoot .descriptionRoot {
   width: 229.88px;
   margin-right: 16px;
 }
 
-.descriptionRoot:first-child {
+.webAnalysisRoot .descriptionRoot:first-child {
   border-top: 1px solid transparent;
 }
 
-.lineChartRoot {
+.webAnalysisRoot .lineChartRoot {
   flex-grow: 1;
   padding-top: 49.35px;
   height: 323.39px;
 }
 
-.casesPart .descriptionRoot {
+.webAnalysisRoot .casesPart .descriptionRoot {
   margin-right: 42px;
 }
 
-.descriptionItem {
+.webAnalysisRoot .descriptionItem {
   border-top: 1px solid rgba(149, 166, 184, 0.1);
 }
 
-.casesPart .descriptionItem {
+.webAnalysisRoot .casesPart .descriptionItem {
   padding: 17px 0 22px 0;
 }
 
-.descriptionItemTitle {
+.webAnalysisRoot .descriptionItemTitle {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -173,7 +205,7 @@
   color: #ffffff;
   opacity: 0.7;
 }
-.descriptionItemCount {
+.webAnalysisRoot .descriptionItemCount {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 300;
@@ -182,14 +214,14 @@
   margin-top: 20px;
 }
 
-.doughnutChartRoot {
+.webAnalysisRoot .doughnutChartRoot {
   display: flex;
 }
-.chartRoot {
+.webAnalysisRoot .chartRoot {
   position: relative;
 }
 
-.doughnutChartPercent {
+.webAnalysisRoot .doughnutChartPercent {
   position: absolute;
   top: 46%;
   right: 46%;
@@ -201,19 +233,19 @@
   text-align: center;
   color: #ffffff;
 }
-.doughnutChartDes {
+.webAnalysisRoot .doughnutChartDes {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.doughnutChartDesItem {
+.webAnalysisRoot .doughnutChartDesItem {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
 
-.doughnutChartIcon {
+.webAnalysisRoot .doughnutChartIcon {
   width: 12px;
   min-height: 12px;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -221,7 +253,7 @@
   border-radius: 50px;
 }
 
-.doughnutChartItemName {
+.webAnalysisRoot .doughnutChartItemName {
   font-family: Helvetica;
   font-style: normal;
   font-weight: 400;
@@ -230,7 +262,7 @@
   color: #ffffff;
 }
 
-.sencondPart {
+.webAnalysisRoot .secondPart {
   display: flex;
   margin-top: 30px;
   margin-bottom: 27px;

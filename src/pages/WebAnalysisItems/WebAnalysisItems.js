@@ -154,7 +154,7 @@ function WebAnalysisItems() {
           </div>
         </div>
       </div>
-      <div className="sencondPart">
+      <div className="secondPart">
         <Stats />
         <TopPlatforms />
         <Sentiment value={78} />

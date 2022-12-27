@@ -1,46 +1,280 @@
-.casesRoot {
-  padding: 2px 35px 50px 33px;
+.nrdsRoot {
+  padding-left: 30px;
+  padding-right: 30px;
 }
-.casesRoot .casesTitle {
+.nrdsTitle {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
   line-height: 24px;
   color: #ffffff;
-  margin-bottom: 23px;
+  margin-bottom: 30.5px;
   padding: 0 6px;
   margin-top: 5px;
 }
-.casesRoot .casesTab .actionTabItem {
-  padding: 4px !important;
-  margin-right: 42px !important;
-}
-.casesRoot .casesTab .active {
-  margin-bottom: -2px !important;
-}
-.casesRoot .casesHeaderRoot {
-  padding: 0 16px 0 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.casesRoot .casesHeaderBtn {
-  padding: 14px 20px !important;
-  margin-bottom: 2px;
-}
-.casesRoot .casesContainer {
-  margin-top: 42.5px;
-}
-
-.casesRoot .casesHeaderRoot .lastItemRoot {
+.nrdsHeaderRoot {
+  padding: 0 12px 0 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.casesRoot .casesHeaderRoot .lastItemRoot .caseSearchInput {
-  margin-right: 20px;
-  padding: 10px 20px 10px 10px !important;
-  margin-bottom: 1px;
+.nrdsRoot .nrdsHeader {
+  padding: 0 21px 0 8.8px;
+  margin-bottom: 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nrdsRoot .nrdsHeader .nrdsHello {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.nrdsRoot .nrdsHeader .nrdsHello img {
+  margin-left: 20px;
+}
+
+.nrdsRoot .nrdsHeader .nrdsHeaderDes {
+  margin-top: 20px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.nrdsRoot .nrdsHeader .nrdsHeaderBtn {
+  background: rgba(117, 179, 255, 0.3);
+  border-radius: 30px;
+  padding: 14px 16.5px 13px 16.5px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #75b3ff;
+  cursor: pointer;
+}
+
+.nrdsRoot .chartContainer {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  border: 2px solid;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+}
+
+.nrdsRoot .chartContainer .chartHeader {
+  display: flex;
+  align-items: center;
+  height: 66px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nrdsRoot .chartContainer .chartHeader .databasePart {
+  padding: 0 10px 0 30px;
+  width: 52.8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nrdsRoot .chartContainer .chartHeader .databasePart .chartTools {
+  display: flex;
+}
+
+.nrdsRoot .chartContainer .chartHeader .databasePart .chartTools .chartPeriod {
+  margin-right: 30px;
+  padding: 10.5px 20px 10.5px 20px;
+}
+
+.nrdsRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartPeriod
+  i {
+  margin-left: 12px !important;
+}
+
+.nrdsRoot .chartContainer .chartHeader .databasePart .chartTools .chartCompare {
+  padding: 10.5px 23px 10.5px 20px !important;
+}
+
+.nrdsRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartCompare
+  i {
+  margin-left: 12px !important;
+}
+
+.nrdsRoot .chartContainer .chartHeader .casesPart {
+  padding: 0 11px 0 30px;
+  flex-grow: 1;
+}
+
+.nrdsRoot .chartContainer .chartHeader .databasePart .headerItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 11px;
+}
+
+.nrdsRoot .chartContainer .chartHeader .casesPart .headerItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 11px;
+}
+
+.nrdsRoot .chartContent {
+  display: flex;
+}
+
+.nrdsRoot .chartContent .databasePart {
+  padding: 34px 0 36px 40.5px;
+  width: 52.8%;
+  display: flex;
+  border-right: 2px solid rgba(149, 166, 184, 0.4);
+}
+
+.nrdsRoot .chartContent .casesPart {
+  padding: 30px 26.5px 30px 50px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nrdsRoot .descriptionRoot {
+  width: 229.88px;
+  margin-right: 16px;
+}
+
+.nrdsRoot .descriptionRoot:first-child {
+  border-top: 1px solid transparent;
+}
+
+.nrdsRoot .lineChartRoot {
+  flex-grow: 1;
+  padding-top: 49.35px;
+  height: 323.39px;
+}
+
+.nrdsRoot .casesPart .descriptionRoot {
+  margin-right: 42px;
+}
+
+.nrdsRoot .descriptionItem {
+  border-top: 1px solid rgba(149, 166, 184, 0.1);
+}
+
+.nrdsRoot .casesPart .descriptionItem {
+  padding: 17px 0 22px 0;
+}
+
+.nrdsRoot .descriptionItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.nrdsRoot .descriptionItemCount {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+.nrdsRoot .doughnutChartRoot {
+  display: flex;
+}
+.nrdsRoot .chartRoot {
+  position: relative;
+}
+
+.nrdsRoot .doughnutChartPercent {
+  position: absolute;
+  top: 46%;
+  right: 46%;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.nrdsRoot .doughnutChartDes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nrdsRoot .doughnutChartDesItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.nrdsRoot .doughnutChartIcon {
+  width: 12px;
+  min-height: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin-right: 12.64px;
+  border-radius: 50px;
+}
+
+.nrdsRoot .doughnutChartItemName {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.nrdsRoot .secondPart {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 27px;
+}
+
+.borderNone {
+  border: none !important;
 }
