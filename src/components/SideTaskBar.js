@@ -60,7 +60,7 @@ function SideTaskBar() {
           <img src={NetworksLogo} alt=""></img>
           Networks
         </Button>
-        <Button className="taskBarButton">
+        <Button className="taskBarButton" onClick={() => navigate("/nrds")}>
           <img src={NrdsLogo} alt=""></img>
           NRDS
         </Button>

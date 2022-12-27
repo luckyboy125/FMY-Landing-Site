@@ -18,6 +18,7 @@ import Tasks from "./pages/Tasks/Tasks";
 import CheckLists from "./pages/CheckListPage/CheckLists";
 import Cases from "./pages/Cases/Cases";
 import Home from "./pages/Home/Home";
+import NRDS from "./pages/NRDS/NRDS";
 
 //DONT TOUCH THIS FILE
 
@@ -47,6 +48,7 @@ function App() {
               <Col sm={9} className="content">
                 <Routes>
                   <Route path="/" element={<Home />} />
+                  <Route path="/nrds" element={<NRDS />} />
                   <Route path="/dashboard" element={<WebAnalysisItems />} />
                   <Route path="/tasks" element={<Tasks />} />
                   <Route path="/CheckLists" element={<CheckLists />} />

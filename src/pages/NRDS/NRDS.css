@@ -1,0 +1,46 @@
+.casesRoot {
+  padding: 2px 35px 50px 33px;
+}
+.casesRoot .casesTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 23px;
+  padding: 0 6px;
+  margin-top: 5px;
+}
+.casesRoot .casesTab .actionTabItem {
+  padding: 4px !important;
+  margin-right: 42px !important;
+}
+.casesRoot .casesTab .active {
+  margin-bottom: -2px !important;
+}
+.casesRoot .casesHeaderRoot {
+  padding: 0 16px 0 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.casesRoot .casesHeaderBtn {
+  padding: 14px 20px !important;
+  margin-bottom: 2px;
+}
+.casesRoot .casesContainer {
+  margin-top: 42.5px;
+}
+
+.casesRoot .casesHeaderRoot .lastItemRoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.casesRoot .casesHeaderRoot .lastItemRoot .caseSearchInput {
+  margin-right: 20px;
+  padding: 10px 20px 10px 10px !important;
+  margin-bottom: 1px;
+}
