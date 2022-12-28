@@ -46,6 +46,7 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
         // Disable the on-canvas tooltip
         enabled: false,
         backgroundColor: "#627F9D",
+        // first: "",
         external: (context) => {
           // Tooltip Element
           let tooltipEl = document.getElementById("doughnut-chartjs-tooltip");

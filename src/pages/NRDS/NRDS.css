@@ -276,18 +276,6 @@
   margin-top: 30px;
   margin-bottom: 27px;
 }
-
-.nrdsRoot .nrdsTableRoot {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
-  border-radius: 16px;
-}
-
 .nrdsRoot .nrdsTableRoot .nrdsTableHeader {
   padding: 20px 20px 20px 30px;
   display: flex;
@@ -312,40 +300,7 @@
   margin-right: 18px;
 }
 
-.nrdsRoot .nrdsTable {
-  width: 100%;
-}
-
-.nrdsRoot .nrdsTable thead {
-  background: rgba(117, 179, 255, 0.1);
-}
-
-.nrdsRoot .nrdsTable thead tr :first-child {
-  padding-left: 50px;
-  text-align: left;
-}
-
-.nrdsRoot .nrdsTable thead th {
-  padding: 13px 0;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #ffffff;
-  text-align: center;
-}
-
-.nrdsRoot .nrdsTable tbody tr {
-  border: 2px solid rgba(143, 146, 161, 0.1);
-}
-
-.nrdsRoot .nrdsTable tbody tr :first-child {
-  padding-left: 50px;
-  text-align: left;
-}
-
-.nrdsRoot .nrdsTable tbody tr .firstTd {
+.nrdsRoot .nrdsTableRoot .firstTd {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -354,7 +309,7 @@
   color: #75b3ff;
 }
 
-.nrdsRoot .nrdsTable tbody tr .secondTd {
+.nrdsRoot .nrdsTableRoot .secondTd {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
@@ -362,7 +317,7 @@
   line-height: 24px;
   color: #ffffff;
 }
-.nrdsRoot .nrdsTable tbody tr .thirdTd {
+.nrdsRoot .nrdsTableRoot .thirdTd {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -371,7 +326,7 @@
   text-align: center;
   color: #75b3ff;
 }
-.nrdsRoot .nrdsTable tbody tr .fourthTd {
+.nrdsRoot .nrdsTableRoot .fourthTd {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -380,18 +335,18 @@
   color: #ffffff;
   opacity: 0.5;
 }
-.nrdsRoot .nrdsTable tbody tr .fifthTd {
+.nrdsRoot .nrdsTableRoot .fifthTd {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nrdsRoot .nrdsTable tbody tr .fifthTd .addBtn {
+.nrdsRoot .nrdsTableRoot .fifthTd .addBtn {
   margin-right: 30px;
   padding: 14px 20px 13px 20px !important;
 }
 
-.nrdsRoot .nrdsTable tbody tr .fifthTd .des {
+.nrdsRoot .nrdsTableRoot .fifthTd .des {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -402,136 +357,6 @@
   color: #75b3ff;
 }
 
-.nrdsRoot .nrdsTable tbody td {
-  padding: 35px 0;
-  text-align: center;
-}
-
-.nrdsRoot .nrdsTableRoot .nrdsTablePaginationRoot {
-  padding: 30px 0;
-}
-
-.nrdsRoot .nrdsTableRoot .nrdsTablePaginationRoot .nrdsTablePagination {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  margin: auto;
-}
-
-.nrdsRoot
-  .nrdsTableRoot
-  .nrdsTablePaginationRoot
-  .nrdsTablePagination
-  .toolLeft {
-  display: flex;
-  margin-right: 99px;
-  cursor: pointer;
-}
-
-.nrdsRoot
-  .nrdsTableRoot
-  .nrdsTablePaginationRoot
-  .nrdsTablePagination
-  .toolLeft
-  span {
-  padding-bottom: 3px;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  color: #75b3ff;
-  border-bottom: solid 1.5px #75b3ff;
-}
-.nrdsRoot
-  .nrdsTableRoot
-  .nrdsTablePaginationRoot
-  .nrdsTablePagination
-  .toolLeft
-  img {
-  margin-right: 5px;
-  margin-bottom: 4.5px;
-}
-
-.nrdsRoot
-  .nrdsTableRoot
-  .nrdsTablePaginationRoot
-  .nrdsTablePagination
-  .toolRight {
-  display: flex;
-  margin-left: 99px;
-  cursor: pointer;
-}
-
-.nrdsRoot
-  .nrdsTableRoot
-  .nrdsTablePaginationRoot
-  .nrdsTablePagination
-  .toolRight
-  span {
-  padding-bottom: 3px;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  color: #75b3ff;
-  border-bottom: solid 1.5px #75b3ff;
-}
-.nrdsRoot
-  .nrdsTableRoot
-  .nrdsTablePaginationRoot
-  .nrdsTablePagination
-  .toolRight
-  img {
-  margin-left: 5px;
-  margin-bottom: 4.5px;
-  transform: rotate(180deg);
-}
-
-.nrdsRoot .nrdsTableRoot .nrdsTablePaginationContent {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-}
-
-.nrdsRoot .nrdsTableRoot .nrdsTablePaginationContent .item {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  color: #75b3ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 40px;
-  width: 40px;
-  min-height: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.nrdsRoot .nrdsTableRoot .nrdsTablePaginationContent .activeItem {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 40px;
-  width: 40px;
-  min-height: 40px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #75b3ff;
-}
 .borderNone {
   border: none !important;
 }

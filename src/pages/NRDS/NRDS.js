@@ -8,6 +8,7 @@ import SearchInput from "../../components/SearchInput/SearchInput";
 import { doughnutChartColorData } from "../../helpers/chart.helper";
 import arrowIcon from "../../asset/images/arrow_icon.svg";
 import "./NRDS.css";
+import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
 
 function NRDS() {
   const lineChartData = {
@@ -190,80 +191,50 @@ function NRDS() {
             </div>
           </div>
         </div>
-        <div className="nrdsTableRoot">
-          <div className="nrdsTableHeader">
-            <div className="nrdsTableTitle">NRD’s</div>
-            <div className="nrdsTableToolRoot">
-              <SearchInput
-                action={(e) => setSearchValue(e.target.value)}
-                inputValue={searchValue}
-                className="nrdsTableSearchTool"
-              />
-              <SearchInput
-                action={(e) => setSearchValue(e.target.value)}
-                inputValue={searchValue}
-                className="nrdsTableSearchTool"
-              />
-              <SearchInput
-                action={(e) => setSearchValue(e.target.value)}
-                inputValue={searchValue}
-                className="nrdsTableSearchTool"
-              />
+        <CustomizeTable
+          className="nrdsTableRoot"
+          header={
+            <div className="nrdsTableHeader">
+              <div className="nrdsTableTitle">NRD’s</div>
+              <div className="nrdsTableToolRoot">
+                <SearchInput
+                  action={(e) => setSearchValue(e.target.value)}
+                  inputValue={searchValue}
+                  className="nrdsTableSearchTool"
+                />
+                <SearchInput
+                  action={(e) => setSearchValue(e.target.value)}
+                  inputValue={searchValue}
+                  className="nrdsTableSearchTool"
+                />
+                <SearchInput
+                  action={(e) => setSearchValue(e.target.value)}
+                  inputValue={searchValue}
+                  className="nrdsTableSearchTool"
+                />
+              </div>
             </div>
-          </div>
-          <table className="nrdsTable">
-            <thead>
-              <tr>
-                <th>Domain</th>
-                <th>Added Date</th>
-                <th>IP Address</th>
-                <th>Keyword</th>
-                <th></th>
+          }
+          tableHeader={["Domain", "Added Date", "IP Address", "Keyword", ""]}
+          body={mockTableData.map((item, index) => {
+            return (
+              <tr key={index}>
+                <td className="firstTd">{item.domain}</td>
+                <td className="secondTd">{item.addedDate}</td>
+                <td className="thirdTd">{item.ipaddress}</td>
+                <td className="fourthTd">{item.keyword}</td>
+                <td className="fifthTd">
+                  <PlusButton
+                    content="+ Add to monitoring"
+                    action={() => {}}
+                    className="addBtn"
+                  />
+                  <div className="des">Active</div>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {mockTableData.map((item, index) => {
-                return (
-                  <tr key={index}>
-                    <td className="firstTd">{item.domain}</td>
-                    <td className="secondTd">{item.addedDate}</td>
-                    <td className="thirdTd">{item.ipaddress}</td>
-                    <td className="fourthTd">{item.keyword}</td>
-                    <td className="fifthTd">
-                      <PlusButton
-                        content="+ Add to monitoring"
-                        action={() => {}}
-                        className="addBtn"
-                      />
-                      <div className="des">Active</div>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          <div className="nrdsTablePaginationRoot">
-            <div className="nrdsTablePagination">
-              <div className="toolLeft">
-                <img src={arrowIcon} alt="arrow" />
-                <span>Previous</span>
-              </div>
-              <div className="nrdsTablePaginationContent">
-                <div className="item">1</div>
-                <div className="item">2</div>
-                <div className="activeItem">3</div>
-                <div className="item">4</div>
-                <div className="item">5</div>
-                <div className="item">...</div>
-                <div className="item">23</div>
-              </div>
-              <div className="toolRight">
-                <span>Next</span>
-                <img src={arrowIcon} alt="arrow" />
-              </div>
-            </div>
-          </div>
-        </div>
+            );
+          })}
+        />
       </div>
     </>
   );

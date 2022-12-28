@@ -1,59 +1,19 @@
 import "./CustomizeTable.css";
 import arrowIcon from "../../asset/images/arrow_icon.svg";
 
-function CustomizeTable() {
+function CustomizeTable({ header, body, tableHeader, className }) {
   return (
-    <div className="customizeTableRoot">
-      <div className="customizeTableHeader">
-        <div className="customizeTableTitle">NRD’s</div>
-        <div className="customizeTableToolRoot">
-          <SearchInput
-            action={(e) => setSearchValue(e.target.value)}
-            inputValue={searchValue}
-            className="customizeTableSearchTool"
-          />
-          <SearchInput
-            action={(e) => setSearchValue(e.target.value)}
-            inputValue={searchValue}
-            className="customizeTableSearchTool"
-          />
-          <SearchInput
-            action={(e) => setSearchValue(e.target.value)}
-            inputValue={searchValue}
-            className="customizeTableSearchTool"
-          />
-        </div>
-      </div>
+    <div className={`customizeTableRoot ${className}`}>
+      {header}
       <table className="customizeTable">
         <thead>
           <tr>
-            <th>Domain</th>
-            <th>Added Date</th>
-            <th>IP Address</th>
-            <th>Keyword</th>
-            <th></th>
+            {tableHeader.map((item, index) => {
+              return <th key={index}>{item}</th>;
+            })}
           </tr>
         </thead>
-        <tbody>
-          {mockTableData.map((item, index) => {
-            return (
-              <tr key={index}>
-                <td className="firstTd">{item.domain}</td>
-                <td className="secondTd">{item.addedDate}</td>
-                <td className="thirdTd">{item.ipaddress}</td>
-                <td className="fourthTd">{item.keyword}</td>
-                <td className="fifthTd">
-                  <PlusButton
-                    content="+ Add to monitoring"
-                    action={() => {}}
-                    className="addBtn"
-                  />
-                  <div className="des">Active</div>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
+        <tbody>{body}</tbody>
       </table>
       <div className="customizeTablePaginationRoot">
         <div className="customizeTablePagination">
