@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ActionButton from "../../components/ActionButton/ActionButton";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import CustomizeDoughnutChart from "../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
 import PlusButton from "../../components/PlusButton/PlusButton";
+import SearchInput from "../../components/SearchInput/SearchInput";
 import { doughnutChartColorData } from "../../helpers/chart.helper";
 import "./NRDS.css";
 
@@ -17,24 +18,31 @@ function NRDS() {
     label: ["a", "b", "c", "d", "e", "f"],
     data: [500, 600, 700, 800, 900, 1000, 1200],
   };
-
   const tabData = ["NRD's", "Database", "Archive"];
+  const [searchValue, setSearchValue] = useState("");
   const [tab, setTab] = useState(tabData[0]);
+  const [mockTableData, setMockTableData] = useState([]);
 
-  const handleTab = (e) => {
-    setTab(e);
-  };
+  useEffect(() => {
+    for (let i = 0; i < 5; i++) {
+      setMockTableData((pre) => [
+        ...pre,
+        {
+          domain: "rock.myspace.com",
+          addedDate: "June 26, 2022",
+          ipaddress: "251.196.63",
+          keyword: "Lorem ipsum",
+        },
+      ]);
+    }
+  }, []);
 
   return (
     <>
       <div className="nrdsRoot">
         <div className="nrdsTitle">NRD's</div>
         <div className="nrdsHeaderRoot">
-          <ActionTab
-            data={tabData}
-            onSelect={(e) => handleTab(e)}
-            select={tab}
-          />
+          <ActionTab data={tabData} onSelect={(e) => setTab(e)} select={tab} />
           <PlusButton content="+ New keyword" action={() => {}} />
         </div>
         <div className="chartContainer">
@@ -180,6 +188,59 @@ function NRDS() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="nrdsTableRoot">
+          <div className="nrdsTableHeader">
+            <div className="nrdsTableTitle">NRD’s</div>
+            <div className="nrdsTableToolRoot">
+              <SearchInput
+                action={(e) => setSearchValue(e.target.value)}
+                inputValue={searchValue}
+                className="nrdsTableSearchTool"
+              />
+              <SearchInput
+                action={(e) => setSearchValue(e.target.value)}
+                inputValue={searchValue}
+                className="nrdsTableSearchTool"
+              />
+              <SearchInput
+                action={(e) => setSearchValue(e.target.value)}
+                inputValue={searchValue}
+                className="nrdsTableSearchTool"
+              />
+            </div>
+          </div>
+          <table className="nrdsTable">
+            <thead>
+              <tr>
+                <th>Domain</th>
+                <th>Added Date</th>
+                <th>IP Address</th>
+                <th>Keyword</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {mockTableData.map((item, index) => {
+                return (
+                  <tr key={index}>
+                    <td className="firstTd">{item.domain}</td>
+                    <td className="secondTd">{item.addedDate}</td>
+                    <td className="thirdTd">{item.ipaddress}</td>
+                    <td className="fourthTd">{item.keyword}</td>
+                    <td className="fifthTd">
+                      <PlusButton
+                        content="+ Add to monitoring"
+                        action={() => {}}
+                        className="addBtn"
+                      />
+                      <div className="des">Active</div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
     </>

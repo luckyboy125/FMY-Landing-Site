@@ -277,6 +277,135 @@
   margin-bottom: 27px;
 }
 
+.nrdsRoot .nrdsTableRoot {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 16px;
+}
+
+.nrdsRoot .nrdsTableRoot .nrdsTableHeader {
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nrdsRoot .nrdsTableTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.nrdsRoot .nrdsTableToolRoot {
+  display: flex;
+  align-items: center;
+}
+
+.nrdsRoot .nrdsTableSearchTool {
+  margin-right: 18px;
+}
+
+.nrdsRoot .nrdsTable {
+  width: 100%;
+}
+
+.nrdsRoot .nrdsTable thead {
+  background: rgba(117, 179, 255, 0.1);
+}
+
+.nrdsRoot .nrdsTable thead tr :first-child {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.nrdsRoot .nrdsTable thead th {
+  padding: 13px 0;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.nrdsRoot .nrdsTable tbody tr {
+  border: 2px solid rgba(143, 146, 161, 0.1);
+}
+
+.nrdsRoot .nrdsTable tbody tr :first-child {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.nrdsRoot .nrdsTable tbody tr .firstTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 18px;
+  color: #75b3ff;
+}
+
+.nrdsRoot .nrdsTable tbody tr .secondTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.nrdsRoot .nrdsTable tbody tr .thirdTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #75b3ff;
+}
+.nrdsRoot .nrdsTable tbody tr .fourthTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.nrdsRoot .nrdsTable tbody tr .fifthTd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nrdsRoot .nrdsTable tbody tr .fifthTd .addBtn {
+  margin-right: 30px;
+  padding: 14px 20px 13px 20px !important;
+}
+
+.nrdsRoot .nrdsTable tbody tr .fifthTd .des {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #75b3ff;
+}
+
+.nrdsRoot .nrdsTable tbody td {
+  padding: 35px 0;
+  text-align: center;
+}
 .borderNone {
   border: none !important;
 }

@@ -54,7 +54,6 @@ function CustomizeLineChart({ axis, ayis }) {
             family: "Helvetica",
             size: 20,
             weight: "lighter",
-            style: "Light",
             lineHeight: "22px",
           },
         },

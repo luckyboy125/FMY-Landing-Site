@@ -9,10 +9,6 @@ function Cases() {
   const [tab, setTab] = useState(tabData[0]);
   const [searchValue, setSearchValue] = useState("");
 
-  const handleTab = (e) => {
-    setTab(e);
-  };
-
   return (
     <>
       <div className="casesRoot">
@@ -21,7 +17,7 @@ function Cases() {
           <ActionTab
             className="casesTab"
             data={tabData}
-            onSelect={(e) => handleTab(e)}
+            onSelect={(e) => setTab(e)}
             select={tab}
           />
           <div className="lastItemRoot">
