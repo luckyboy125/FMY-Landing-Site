@@ -1,0 +1,251 @@
+.customizeTableRoot {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 16px;
+}
+
+.customizeTableRoot .customizeTableHeader {
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customizeTableTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.customizeTableToolRoot {
+  display: flex;
+  align-items: center;
+}
+
+.customizeTableSearchTool {
+  margin-right: 18px;
+}
+
+.customizeTable {
+  width: 100%;
+}
+
+.customizeTable thead {
+  background: rgba(117, 179, 255, 0.1);
+}
+
+.customizeTable thead tr :first-child {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.customizeTable thead th {
+  padding: 13px 0;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.customizeTable tbody tr {
+  border: 2px solid rgba(143, 146, 161, 0.1);
+}
+
+.customizeTable tbody tr :first-child {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.customizeTable tbody tr .firstTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 18px;
+  color: #75b3ff;
+}
+
+.customizeTable tbody tr .secondTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.customizeTable tbody tr .thirdTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #75b3ff;
+}
+.customizeTable tbody tr .fourthTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.customizeTable tbody tr .fifthTd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customizeTable tbody tr .fifthTd .addBtn {
+  margin-right: 30px;
+  padding: 14px 20px 13px 20px !important;
+}
+
+.customizeTable tbody tr .fifthTd .des {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #75b3ff;
+}
+
+.customizeTable tbody td {
+  padding: 35px 0;
+  text-align: center;
+}
+
+.customizeTableRoot .customizeTablePaginationRoot {
+  padding: 30px 0;
+}
+
+.customizeTableRoot .customizeTablePaginationRoot .customizeTablePagination {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+}
+
+.customizeTableRoot
+  .customizeTablePaginationRoot
+  .customizeTablePagination
+  .toolLeft {
+  display: flex;
+  margin-right: 99px;
+  cursor: pointer;
+}
+
+.customizeTableRoot
+  .customizeTablePaginationRoot
+  .customizeTablePagination
+  .toolLeft
+  span {
+  padding-bottom: 3px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #75b3ff;
+  border-bottom: solid 1.5px #75b3ff;
+}
+
+.customizeTableRoot
+  .customizeTablePaginationRoot
+  .customizeTablePagination
+  .toolLeft
+  img {
+  margin-right: 5px;
+  margin-bottom: 4.5px;
+}
+
+.customizeTableRoot
+  .customizeTablePaginationRoot
+  .customizeTablePagination
+  .toolRight {
+  display: flex;
+  margin-left: 99px;
+  cursor: pointer;
+}
+
+.customizeTableRoot
+  .customizeTablePaginationRoot
+  .customizeTablePagination
+  .toolRight
+  span {
+  padding-bottom: 3px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #75b3ff;
+  border-bottom: solid 1.5px #75b3ff;
+}
+
+.customizeTableRoot
+  .customizeTablePaginationRoot
+  .customizeTablePagination
+  .toolRight
+  img {
+  margin-left: 5px;
+  margin-bottom: 4.5px;
+  transform: rotate(180deg);
+}
+
+.customizeTableRoot .customizeTablePaginationContent {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.customizeTableRoot .customizeTablePaginationContent .item {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #75b3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  width: 40px;
+  min-height: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.customizeTableRoot .customizeTablePaginationContent .activeItem {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  width: 40px;
+  min-height: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #75b3ff;
+}

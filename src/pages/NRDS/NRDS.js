@@ -6,6 +6,7 @@ import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLin
 import PlusButton from "../../components/PlusButton/PlusButton";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import { doughnutChartColorData } from "../../helpers/chart.helper";
+import arrowIcon from "../../asset/images/arrow_icon.svg";
 import "./NRDS.css";
 
 function NRDS() {
@@ -241,6 +242,27 @@ function NRDS() {
               })}
             </tbody>
           </table>
+          <div className="nrdsTablePaginationRoot">
+            <div className="nrdsTablePagination">
+              <div className="toolLeft">
+                <img src={arrowIcon} alt="arrow" />
+                <span>Previous</span>
+              </div>
+              <div className="nrdsTablePaginationContent">
+                <div className="item">1</div>
+                <div className="item">2</div>
+                <div className="activeItem">3</div>
+                <div className="item">4</div>
+                <div className="item">5</div>
+                <div className="item">...</div>
+                <div className="item">23</div>
+              </div>
+              <div className="toolRight">
+                <span>Next</span>
+                <img src={arrowIcon} alt="arrow" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

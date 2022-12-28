@@ -406,6 +406,132 @@
   padding: 35px 0;
   text-align: center;
 }
+
+.nrdsRoot .nrdsTableRoot .nrdsTablePaginationRoot {
+  padding: 30px 0;
+}
+
+.nrdsRoot .nrdsTableRoot .nrdsTablePaginationRoot .nrdsTablePagination {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+}
+
+.nrdsRoot
+  .nrdsTableRoot
+  .nrdsTablePaginationRoot
+  .nrdsTablePagination
+  .toolLeft {
+  display: flex;
+  margin-right: 99px;
+  cursor: pointer;
+}
+
+.nrdsRoot
+  .nrdsTableRoot
+  .nrdsTablePaginationRoot
+  .nrdsTablePagination
+  .toolLeft
+  span {
+  padding-bottom: 3px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #75b3ff;
+  border-bottom: solid 1.5px #75b3ff;
+}
+.nrdsRoot
+  .nrdsTableRoot
+  .nrdsTablePaginationRoot
+  .nrdsTablePagination
+  .toolLeft
+  img {
+  margin-right: 5px;
+  margin-bottom: 4.5px;
+}
+
+.nrdsRoot
+  .nrdsTableRoot
+  .nrdsTablePaginationRoot
+  .nrdsTablePagination
+  .toolRight {
+  display: flex;
+  margin-left: 99px;
+  cursor: pointer;
+}
+
+.nrdsRoot
+  .nrdsTableRoot
+  .nrdsTablePaginationRoot
+  .nrdsTablePagination
+  .toolRight
+  span {
+  padding-bottom: 3px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #75b3ff;
+  border-bottom: solid 1.5px #75b3ff;
+}
+.nrdsRoot
+  .nrdsTableRoot
+  .nrdsTablePaginationRoot
+  .nrdsTablePagination
+  .toolRight
+  img {
+  margin-left: 5px;
+  margin-bottom: 4.5px;
+  transform: rotate(180deg);
+}
+
+.nrdsRoot .nrdsTableRoot .nrdsTablePaginationContent {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.nrdsRoot .nrdsTableRoot .nrdsTablePaginationContent .item {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #75b3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  width: 40px;
+  min-height: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.nrdsRoot .nrdsTableRoot .nrdsTablePaginationContent .activeItem {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  width: 40px;
+  min-height: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #75b3ff;
+}
 .borderNone {
   border: none !important;
 }
