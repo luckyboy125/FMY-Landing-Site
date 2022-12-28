@@ -44,7 +44,12 @@ function NRDS() {
       <div className="nrdsRoot">
         <div className="nrdsTitle">NRD's</div>
         <div className="nrdsHeaderRoot">
-          <ActionTab data={tabData} onSelect={(e) => setTab(e)} select={tab} />
+          <ActionTab
+            className="nrdsHeaderTab"
+            data={tabData}
+            onSelect={(e) => setTab(e)}
+            select={tab}
+          />
           <PlusButton content="+ New keyword" action={() => {}} />
         </div>
         <div className="chartContainer">
@@ -54,13 +59,8 @@ function NRDS() {
               <div className="chartTools">
                 <ActionButton
                   name="Show"
-                  content="This Week"
+                  content="Last Week"
                   className="chartPeriod"
-                />
-                <ActionButton
-                  content="Compare"
-                  type="common"
-                  className="chartCompare"
                 />
               </div>
             </div>
