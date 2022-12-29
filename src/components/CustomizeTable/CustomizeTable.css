@@ -23,7 +23,7 @@
 }
 
 .customizeTable thead th {
-  padding: 13px 0;
+  padding: 14px 0;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -43,7 +43,7 @@
 }
 
 .customizeTable tbody td {
-  padding: 35px 0;
+  padding: 22px 0;
   text-align: center;
 }
 

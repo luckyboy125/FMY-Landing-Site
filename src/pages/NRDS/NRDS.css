@@ -66,7 +66,7 @@
 
 .nrdsRoot .chartContainer .chartHeader .databasePart .chartTools .chartPeriod {
   margin-right: 30px;
-  padding: 10.5px 20px 10.5px 20px;
+  padding: 7px 20px 7px 20px;
 }
 
 .nrdsRoot
@@ -123,7 +123,7 @@
 }
 
 .nrdsRoot .chartContent .databasePart {
-  padding: 34px 0 36px 40.5px;
+  padding: 31.5px 0 36px 40.5px;
   width: 52.8%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
@@ -147,7 +147,7 @@
 
 .nrdsRoot .lineChartRoot {
   flex-grow: 1;
-  padding-top: 49.35px;
+  padding-top: 45px;
   height: 323.39px;
 }
 

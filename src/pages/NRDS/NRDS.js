@@ -6,7 +6,6 @@ import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLin
 import PlusButton from "../../components/PlusButton/PlusButton";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import { doughnutChartColorData } from "../../helpers/chart.helper";
-import arrowIcon from "../../asset/images/arrow_icon.svg";
 import "./NRDS.css";
 import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
 
