@@ -234,3 +234,12 @@
   width: 100%;
   max-width: 100% !important;
 }
+.governmentRoot .governmentContent .governmentContentItemRoot :last-child {
+  margin-bottom: 0;
+}
+.governmentRoot
+  .governmentContent
+  .governmentContentItemRoot
+  .governmentContentItem {
+  margin-bottom: 30px;
+}

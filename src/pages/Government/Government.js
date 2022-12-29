@@ -8,6 +8,17 @@ import "./Government.css";
 import { useEffect, useState } from "react";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
+import GovernmentCard from "./component/GovernmentCard/GovernmentCard";
+import neymar1 from "../../asset/government/neymar1.svg";
+import neymar2 from "../../asset/government/neymar2.svg";
+import neymar3 from "../../asset/government/neymar3.svg";
+import messi1 from "../../asset/government/messi1.svg";
+import messi2 from "../../asset/government/messi2.svg";
+import messi3 from "../../asset/government/messi3.svg";
+import messi4 from "../../asset/government/messi4.svg";
+import ronaldo1 from "../../asset/government/ronaldo1.svg";
+import ronaldo2 from "../../asset/government/ronaldo2.svg";
+import mbappe from "../../asset/government/mbappe.svg";
 
 function Government() {
   const [ran, setRan] = useState();
@@ -122,22 +133,21 @@ function Government() {
             </div>
             <div className="casesPart">
               <ReactWordcloud
-                callbacks={{
-                  getWordColor: (word) => {
-                    const _value = word.value;
-                    return _value > 75
-                      ? "#fff"
-                      : _value > 50
-                      ? "#75B3FF"
-                      : _value > 25
-                      ? "#C2A6FF"
-                      : "#B8B8B8";
-                  },
-                }}
                 words={ran}
                 options={{
+                  colors: ["#fff", "#75B3FF", "#C2A6FF", "#B8B8B8"],
+                  enableTooltip: false,
+                  deterministic: true,
+                  fontFamily: "Helvetica",
+                  fontSizes: [0, 60],
+                  fontStyle: "normal",
+                  fontWeight: "normal",
+                  padding: 35,
                   rotations: 2,
-                  rotationAngles: [-90, 0, 90],
+                  rotationAngles: [0, 90, -90],
+                  scale: "sqrt",
+                  spiral: "archimedean",
+                  transitionDuration: 1000,
                 }}
               />
             </div>
@@ -158,22 +168,51 @@ function Government() {
           </div>
           <div class="container governmentContent">
             <div class="row">
-              <div
-                class="col"
-                style={{
-                  marginRight: "36px",
-                }}
-              >
-                first container
+              <div className="col governmentContentItemRoot">
+                <GovernmentCard
+                  imgRoot={<img src={neymar1} alt="neymar" />}
+                  className="governmentContentItem"
+                />
+                <GovernmentCard
+                  imgRoot={<img src={neymar3} alt="neymar" />}
+                  className="governmentContentItem"
+                />
+                <GovernmentCard
+                  imgRoot={<img src={messi3} alt="messi" />}
+                  className="governmentContentItem"
+                />
+                <GovernmentCard
+                  imgRoot={<img src={mbappe} alt="mbappe" />}
+                  className="governmentContentItem"
+                />
               </div>
-              <div class="col">Column</div>
-              <div
-                class="col"
-                style={{
-                  marginLeft: "36px",
-                }}
-              >
-                Column
+              <div className="col governmentContentItemRoot">
+                <GovernmentCard
+                  imgRoot={<img src={neymar2} alt="neymar" />}
+                  className="governmentContentItem"
+                />
+                <GovernmentCard
+                  imgRoot={<img src={messi2} alt="messi" />}
+                  className="governmentContentItem"
+                />
+                <GovernmentCard
+                  imgRoot={<img src={messi4} alt="messi" />}
+                  className="governmentContentItem"
+                />
+              </div>
+              <div className="col governmentContentItemRoot">
+                <GovernmentCard
+                  imgRoot={<img src={messi1} alt="messi" />}
+                  className="governmentContentItem"
+                />
+                <GovernmentCard
+                  imgRoot={<img src={ronaldo1} alt="ronaldo" />}
+                  className="governmentContentItem"
+                />
+                <GovernmentCard
+                  imgRoot={<img src={ronaldo2} alt="ronaldo" />}
+                  className="governmentContentItem"
+                />
               </div>
             </div>
           </div>
