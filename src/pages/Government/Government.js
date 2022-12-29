@@ -20,7 +20,7 @@ function Government() {
     label: ["a", "b", "c", "d", "e", "f"],
     data: [500, 600, 700, 800, 900, 1000, 1200],
   };
-  const tabData = ["NRD's", "Database", "Archive"];
+  const tabData = ["Government", "Database", "Archive"];
   const [searchValue, setSearchValue] = useState("");
   const [tab, setTab] = useState(tabData[0]);
   const [mockTableData, setMockTableData] = useState([]);
@@ -42,7 +42,7 @@ function Government() {
   return (
     <>
       <div className="governmentRoot">
-        <div className="governmentTitle">NRD's</div>
+        <div className="governmentTitle">Government</div>
         <div className="governmentHeaderRoot">
           <ActionTab
             className="governmentHeaderTab"
