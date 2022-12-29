@@ -1,0 +1,43 @@
+.dropdownToolRoot {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 9px 9px;
+  background: #ecf0f51a;
+  border-radius: 30px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.dropdownToolRoot .inputIcon {
+  width: 31px;
+  min-width: 31px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  margin-right: 15px;
+  border-radius: 100%;
+}
+
+.dropdownToolRoot .dropdownToolIconRoot {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.dropdownToolRoot .dropdownToolIconRoot img {
+  font-size: 9px;
+  line-height: 5px;
+  color: #fff;
+  margin-left: 5px;
+}

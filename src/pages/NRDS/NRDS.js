@@ -8,6 +8,7 @@ import SearchInput from "../../components/SearchInput/SearchInput";
 import { doughnutChartColorData } from "../../helpers/chart.helper";
 import "./NRDS.css";
 import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
+import DropdownTool from "./component/DropdownTool/DropdownTool";
 
 function NRDS() {
   const lineChartData = {
@@ -201,16 +202,8 @@ function NRDS() {
                   inputValue={searchValue}
                   className="nrdsTableSearchTool"
                 />
-                <SearchInput
-                  action={(e) => setSearchValue(e.target.value)}
-                  inputValue={searchValue}
-                  className="nrdsTableSearchTool"
-                />
-                <SearchInput
-                  action={(e) => setSearchValue(e.target.value)}
-                  inputValue={searchValue}
-                  className="nrdsTableSearchTool"
-                />
+                <DropdownTool className="nrdsTableSearchTool" type="filter" />
+                <DropdownTool className="nrdsTableSearchTool" />
               </div>
             </div>
           }
