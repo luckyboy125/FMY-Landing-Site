@@ -6,9 +6,12 @@ import BackBtn from "../../components/BackBtn/BackBtn";
 import { words } from "./mock.data";
 import "./Government.css";
 import { useEffect, useState } from "react";
+import SearchInput from "../../components/SearchInput/SearchInput";
+import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
 
 function Government() {
   const [ran, setRan] = useState();
+  const [searchValue, setSearchValue] = useState("");
   const lineChartData = {
     label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     data: [500, 600, 700, 800, 900, 1000, 1200],
@@ -28,8 +31,6 @@ function Government() {
   useEffect(() => {
     ramdomSize();
   }, []);
-
-  console.log("words", ran);
 
   return (
     <>
@@ -139,6 +140,41 @@ function Government() {
                   rotationAngles: [-90, 0, 90],
                 }}
               />
+            </div>
+          </div>
+        </div>
+        <div className="governmentContentRoot">
+          <div className="governmentHeader">
+            <div className="governmentTitle">Items</div>
+            <div className="governmentToolRoot">
+              <SearchInput
+                action={(e) => setSearchValue(e.target.value)}
+                inputValue={searchValue}
+                className="governmentSearchTool"
+              />
+              <FilterDropdown className="governmentSearchTool" type="filter" />
+              <FilterDropdown className="governmentSearchTool" />
+            </div>
+          </div>
+          <div class="container governmentContent">
+            <div class="row">
+              <div
+                class="col"
+                style={{
+                  marginRight: "36px",
+                }}
+              >
+                first container
+              </div>
+              <div class="col">Column</div>
+              <div
+                class="col"
+                style={{
+                  marginLeft: "36px",
+                }}
+              >
+                Column
+              </div>
             </div>
           </div>
         </div>

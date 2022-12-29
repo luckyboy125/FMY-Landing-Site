@@ -194,3 +194,43 @@
 .borderNone {
   border: none !important;
 }
+
+.governmentRoot .governmentContentRoot {
+  margin-top: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 16px;
+  padding: 30px 32px 30px 30px;
+}
+
+.governmentRoot .governmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.governmentRoot .governmentTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.governmentRoot .governmentToolRoot {
+  display: flex;
+  align-items: center;
+}
+
+.governmentRoot .governmentSearchTool {
+  margin-right: 18px;
+}
+
+.governmentRoot .governmentContent {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 100% !important;
+}
