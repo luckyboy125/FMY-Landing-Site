@@ -1,0 +1,331 @@
+.governmentRoot {
+  margin-top: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.governmentTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 23px;
+  padding: 0 6px;
+}
+.governmentHeaderRoot {
+  padding: 0 12px 0 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 29px;
+}
+.governmentRoot .governmentHeaderTab .actionTabItem {
+  padding: 0px 5px !important;
+}
+
+.governmentRoot .governmentHeaderTab .active {
+  margin-bottom: -1px;
+}
+
+.governmentRoot .chartContainer {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  border: 2px solid;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+}
+
+.governmentRoot .chartContainer .chartHeader {
+  display: flex;
+  align-items: center;
+  height: 66px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.governmentRoot .chartContainer .chartHeader .databasePart {
+  padding: 0 10px 0 30px;
+  width: 52.8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.governmentRoot .chartContainer .chartHeader .databasePart .chartTools {
+  display: flex;
+}
+
+.governmentRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartPeriod {
+  margin-right: 30px;
+  padding: 7px 20px 7px 20px;
+}
+
+.governmentRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartPeriod
+  i {
+  margin-left: 12px !important;
+}
+
+.governmentRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartCompare {
+  padding: 10.5px 23px 10.5px 20px !important;
+}
+
+.governmentRoot
+  .chartContainer
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartCompare
+  i {
+  margin-left: 12px !important;
+}
+
+.governmentRoot .chartContainer .chartHeader .casesPart {
+  padding: 0 11px 0 30px;
+  flex-grow: 1;
+}
+
+.governmentRoot .chartContainer .chartHeader .databasePart .headerItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 11px;
+}
+
+.governmentRoot .chartContainer .chartHeader .casesPart .headerItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 11px;
+}
+
+.governmentRoot .chartContent {
+  display: flex;
+}
+
+.governmentRoot .chartContent .databasePart {
+  padding: 31.5px 0 36px 40.5px;
+  width: 52.8%;
+  display: flex;
+  border-right: 2px solid rgba(149, 166, 184, 0.4);
+}
+
+.governmentRoot .chartContent .casesPart {
+  padding: 30px 26.5px 30px 50px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.governmentRoot .descriptionRoot {
+  width: 229.88px;
+  margin-right: 16px;
+}
+
+.governmentRoot .descriptionRoot:first-child {
+  border-top: 1px solid transparent;
+}
+
+.governmentRoot .lineChartRoot {
+  flex-grow: 1;
+  padding-top: 45px;
+  height: 323.39px;
+}
+
+.governmentRoot .casesPart .descriptionRoot {
+  margin-right: 80px;
+}
+
+.governmentRoot .descriptionItem {
+  border-top: 1px solid rgba(149, 166, 184, 0.1);
+}
+
+.governmentRoot .casesPart .descriptionItem {
+  padding: 17px 0 22px 0;
+}
+
+.governmentRoot .descriptionItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  white-space: nowrap;
+  opacity: 0.7;
+}
+.governmentRoot .descriptionItemCount {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+.governmentRoot .doughnutChartRoot {
+  display: flex;
+}
+.governmentRoot .chartRoot {
+  position: relative;
+}
+
+.governmentRoot .doughnutChartPercent {
+  position: absolute;
+  top: 46%;
+  right: 46%;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.governmentRoot .doughnutChartDes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.governmentRoot .doughnutChartDesItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.governmentRoot .doughnutChartIcon {
+  width: 12px;
+  min-height: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin-right: 12.64px;
+  border-radius: 50px;
+}
+
+.governmentRoot .doughnutChartItemName {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.governmentRoot .secondPart {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 27px;
+}
+.governmentRoot .governmentTableRoot .governmentTableHeader {
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.governmentRoot .governmentTableTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.governmentRoot .governmentTableToolRoot {
+  display: flex;
+  align-items: center;
+}
+
+.governmentRoot .governmentTableSearchTool {
+  margin-right: 18px;
+}
+
+.governmentRoot .governmentTableRoot .firstTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 18px;
+  color: #75b3ff;
+}
+
+.governmentRoot .governmentTableRoot .secondTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.governmentRoot .governmentTableRoot .thirdTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #75b3ff;
+}
+.governmentRoot .governmentTableRoot .fourthTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.governmentRoot .governmentTableRoot .fifthTd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.governmentRoot .governmentTableRoot .fifthTd .addBtn {
+  margin-right: 30px;
+  padding: 14px 20px 13px 20px !important;
+}
+
+.governmentRoot .governmentTableRoot .fifthTd .des {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #75b3ff;
+}
+
+.borderNone {
+  border: none !important;
+}

@@ -5,12 +5,12 @@ import CustomizeDoughnutChart from "../../components/CustomizeDoughnutChart/Cust
 import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
 import PlusButton from "../../components/PlusButton/PlusButton";
 import SearchInput from "../../components/SearchInput/SearchInput";
-import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
 import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
+import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
 import { doughnutChartColorData } from "../../helpers/chart.helper";
-import "./NRDS.css";
+import "./Government.css";
 
-function NRDS() {
+function Government() {
   const lineChartData = {
     label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     data: [500, 600, 700, 800, 900, 1000, 1200],
@@ -41,11 +41,11 @@ function NRDS() {
 
   return (
     <>
-      <div className="nrdsRoot">
-        <div className="nrdsTitle">NRD's</div>
-        <div className="nrdsHeaderRoot">
+      <div className="governmentRoot">
+        <div className="governmentTitle">NRD's</div>
+        <div className="governmentHeaderRoot">
           <ActionTab
-            className="nrdsHeaderTab"
+            className="governmentHeaderTab"
             data={tabData}
             onSelect={(e) => setTab(e)}
             select={tab}
@@ -192,18 +192,21 @@ function NRDS() {
           </div>
         </div>
         <CustomizeTable
-          className="nrdsTableRoot"
+          className="governmentTableRoot"
           header={
-            <div className="nrdsTableHeader">
-              <div className="nrdsTableTitle">NRD’s</div>
-              <div className="nrdsTableToolRoot">
+            <div className="governmentTableHeader">
+              <div className="governmentTableTitle">NRD’s</div>
+              <div className="governmentTableToolRoot">
                 <SearchInput
                   action={(e) => setSearchValue(e.target.value)}
                   inputValue={searchValue}
-                  className="nrdsTableSearchTool"
+                  className="governmentTableSearchTool"
                 />
-                <FilterDropdown className="nrdsTableSearchTool" type="filter" />
-                <FilterDropdown className="nrdsTableSearchTool" />
+                <FilterDropdown
+                  className="governmentTableSearchTool"
+                  type="filter"
+                />
+                <FilterDropdown className="governmentTableSearchTool" />
               </div>
             </div>
           }
@@ -232,4 +235,4 @@ function NRDS() {
   );
 }
 
-export default NRDS;
+export default Government;

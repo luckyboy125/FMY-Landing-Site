@@ -33,7 +33,7 @@ function Cases() {
             />
           </div>
         </div>
-        <div className="casesContainer">content</div>
+        <div className="casesContainer"></div>
       </div>
     </>
   );

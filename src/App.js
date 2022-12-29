@@ -15,6 +15,7 @@ import Tasks from "./pages/Tasks/Tasks";
 import Cases from "./pages/Cases/Cases";
 import Home from "./pages/Home/Home";
 import NRDS from "./pages/NRDS/NRDS";
+import Government from "./pages/Government/Government";
 import CheckLists from "./pages/CheckListPage/CheckLists";
 import WebAnalysisItems from "./pages/WebAnalysisItems/WebAnalysisItems";
 import TopTaskBar from "./components/TopTaskBar/TopTaskBar";
@@ -49,6 +50,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/nrds" element={<NRDS />} />
+                  <Route path="/government" element={<Government />} />
                   <Route path="/dashboard" element={<WebAnalysisItems />} />
                   <Route path="/tasks" element={<Tasks />} />
                   <Route path="/CheckLists" element={<CheckLists />} />
