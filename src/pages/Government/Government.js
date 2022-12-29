@@ -1,45 +1,35 @@
-import { useEffect, useState } from "react";
 import ActionButton from "../../components/ActionButton/ActionButton";
-import ActionTab from "../../components/ActionTab/ActionTab";
-import CustomizeDoughnutChart from "../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
-import PlusButton from "../../components/PlusButton/PlusButton";
-import SearchInput from "../../components/SearchInput/SearchInput";
-import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
-import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
-import { doughnutChartColorData } from "../../helpers/chart.helper";
-import "./Government.css";
+import ReactWordcloud from "react-wordcloud";
 import ActionDropdown from "../../components/ActionDropdown/ActionDropdown";
 import BackBtn from "../../components/BackBtn/BackBtn";
+import { words } from "./mock.data";
+import "./Government.css";
+import { useEffect, useState } from "react";
 
 function Government() {
+  const [ran, setRan] = useState();
   const lineChartData = {
     label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     data: [500, 600, 700, 800, 900, 1000, 1200],
   };
 
-  const doughnutChartData = {
-    label: ["a", "b", "c", "d", "e", "f"],
-    data: [500, 600, 700, 800, 900, 1000, 1200],
+  const ramdomSize = () => {
+    let letterArray = [];
+    words.map((item) => {
+      letterArray.push({
+        text: item,
+        value: Math.floor(Math.random() * 90) + 10,
+      });
+    });
+    setRan(letterArray);
   };
-  const tabData = ["Government", "Database", "Archive"];
-  const [searchValue, setSearchValue] = useState("");
-  const [tab, setTab] = useState(tabData[0]);
-  const [mockTableData, setMockTableData] = useState([]);
 
   useEffect(() => {
-    for (let i = 0; i < 5; i++) {
-      setMockTableData((pre) => [
-        ...pre,
-        {
-          domain: "rock.myspace.com",
-          addedDate: "June 26, 2022",
-          ipaddress: "251.196.63",
-          keyword: "Lorem ipsum",
-        },
-      ]);
-    }
+    ramdomSize();
   }, []);
+
+  console.log("words", ran);
 
   return (
     <>
@@ -52,17 +42,22 @@ function Government() {
         <div className="chartContainer">
           <div className="chartHeader">
             <div className="databasePart">
-              <div className="headerItemTitle">Flagged NRD’s</div>
+              <div className="headerItemTitle">General info</div>
               <div className="chartTools">
                 <ActionButton
                   name="Show"
-                  content="Last Week"
+                  content="This Week"
                   className="chartPeriod"
+                />
+                <ActionButton
+                  content="Compare"
+                  type="common"
+                  className="chartCompare"
                 />
               </div>
             </div>
             <div className="casesPart">
-              <div className="headerItemTitle">Keywords</div>
+              <div className="headerItemTitle">Word Cloud</div>
             </div>
           </div>
           <div className="chartContent">
@@ -75,9 +70,7 @@ function Government() {
                     paddingBottom: "27px",
                   }}
                 >
-                  <div className="descriptionItemTitle">
-                    Total NRD’s flagged today
-                  </div>
+                  <div className="descriptionItemTitle">Total items</div>
                   <div
                     className="descriptionItemCount"
                     style={{
@@ -94,7 +87,7 @@ function Government() {
                   style={{ paddingTop: "26px", paddingBottom: "30px" }}
                 >
                   <div className="descriptionItemTitle">
-                    Changes from yesterday
+                    New items (past 7 days)
                   </div>
                   <div
                     className="descriptionItemCount"
@@ -110,9 +103,7 @@ function Government() {
                     paddingBottom: "0px !important",
                   }}
                 >
-                  <div className="descriptionItemTitle">
-                    Domains under monitoring
-                  </div>
+                  <div className="descriptionItemTitle">Case open date</div>
                   <div
                     className="descriptionItemCount"
                     style={{ color: "#fff" }}
@@ -129,104 +120,28 @@ function Government() {
               </div>
             </div>
             <div className="casesPart">
-              <div className="descriptionRoot">
-                <div className="descriptionItem borderNone topPaddingNone">
-                  <div className="descriptionItemTitle">Keywords in use</div>
-                  <div
-                    className="descriptionItemCount"
-                    style={{ color: "#fff" }}
-                  >
-                    53
-                  </div>
-                </div>
-                <div className="descriptionItem">
-                  <div className="descriptionItemTitle">{`New keywords (past 7 days)`}</div>
-                  <div
-                    className="descriptionItemCount"
-                    style={{ color: "#fff" }}
-                  >
-                    +2
-                  </div>
-                </div>
-                <div
-                  className="descriptionItem"
-                  style={{ paddingBottom: "0px !important" }}
-                >
-                  <div className="descriptionItemTitle">
-                    {`Most flagged keyword (past 7 days)`}
-                  </div>
-                  <div
-                    className="descriptionItemCount"
-                    style={{ color: "#fff" }}
-                  >
-                    Lorem ipsum
-                  </div>
-                </div>
-              </div>
-              <div className="doughnutChartRoot">
-                <CustomizeDoughnutChart
-                  data={doughnutChartData.data}
-                  label={doughnutChartData.label}
-                  colorInfo={doughnutChartColorData}
-                />
-                <div className="doughnutChartDes">
-                  {doughnutChartData.label.map((item, index) => {
-                    return (
-                      <div className="doughnutChartDesItem" key={index}>
-                        <div
-                          className="doughnutChartIcon"
-                          style={{
-                            background: `linear-gradient(238.95deg, ${doughnutChartColorData[index]?.first} 31.21%, ${doughnutChartColorData[index]?.last} 62.45%)`,
-                          }}
-                        ></div>
-                        <div className="doughnutChartItemName">{item}</div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+              <ReactWordcloud
+                callbacks={{
+                  getWordColor: (word) => {
+                    const _value = word.value;
+                    return _value > 75
+                      ? "#fff"
+                      : _value > 50
+                      ? "#75B3FF"
+                      : _value > 25
+                      ? "#C2A6FF"
+                      : "#B8B8B8";
+                  },
+                }}
+                words={ran}
+                options={{
+                  rotations: 2,
+                  rotationAngles: [-90, 0, 90],
+                }}
+              />
             </div>
           </div>
         </div>
-        <CustomizeTable
-          className="governmentTableRoot"
-          header={
-            <div className="governmentTableHeader">
-              <div className="governmentTableTitle">NRD’s</div>
-              <div className="governmentTableToolRoot">
-                <SearchInput
-                  action={(e) => setSearchValue(e.target.value)}
-                  inputValue={searchValue}
-                  className="governmentTableSearchTool"
-                />
-                <FilterDropdown
-                  className="governmentTableSearchTool"
-                  type="filter"
-                />
-                <FilterDropdown className="governmentTableSearchTool" />
-              </div>
-            </div>
-          }
-          tableHeader={["Domain", "Added Date", "IP Address", "Keyword", ""]}
-          body={mockTableData.map((item, index) => {
-            return (
-              <tr key={index}>
-                <td className="firstTd">{item.domain}</td>
-                <td className="secondTd">{item.addedDate}</td>
-                <td className="thirdTd">{item.ipaddress}</td>
-                <td className="fourthTd">{item.keyword}</td>
-                <td className="fifthTd">
-                  <PlusButton
-                    content="+ Add to monitoring"
-                    action={() => {}}
-                    className="addBtn"
-                  />
-                  <div className="des">Active</div>
-                </td>
-              </tr>
-            );
-          })}
-        />
       </div>
     </>
   );
