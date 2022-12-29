@@ -1,0 +1,22 @@
+.actionDropdownRoot {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.actionDropdownRoot img {
+  margin-left: 10px;
+}

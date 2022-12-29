@@ -9,6 +9,8 @@ import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
 import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
 import { doughnutChartColorData } from "../../helpers/chart.helper";
 import "./Government.css";
+import ActionDropdown from "../../components/ActionDropdown/ActionDropdown";
+import BackBtn from "../../components/BackBtn/BackBtn";
 
 function Government() {
   const lineChartData = {
@@ -44,13 +46,8 @@ function Government() {
       <div className="governmentRoot">
         <div className="governmentTitle">Government</div>
         <div className="governmentHeaderRoot">
-          <ActionTab
-            className="governmentHeaderTab"
-            data={tabData}
-            onSelect={(e) => setTab(e)}
-            select={tab}
-          />
-          <PlusButton content="+ New keyword" action={() => {}} />
+          <BackBtn className="governmentHeaderLink" />
+          <ActionDropdown className="governmentHeaderBtn" />
         </div>
         <div className="chartContainer">
           <div className="chartHeader">

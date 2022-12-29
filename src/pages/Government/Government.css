@@ -20,12 +20,13 @@
   align-items: flex-end;
   margin-bottom: 29px;
 }
-.governmentRoot .governmentHeaderTab .actionTabItem {
-  padding: 0px 5px !important;
+
+.governmentRoot .governmentHeaderRoot .governmentHeaderLink {
+  margin-left: 0px;
 }
 
-.governmentRoot .governmentHeaderTab .active {
-  margin-bottom: -1px;
+.governmentRoot .governmentHeaderRoot .governmentHeaderBtn {
+  margin-right: 0px;
 }
 
 .governmentRoot .chartContainer {
