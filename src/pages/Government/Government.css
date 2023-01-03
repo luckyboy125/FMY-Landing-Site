@@ -1,7 +1,7 @@
 .governmentRoot {
   margin-top: 8px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 33px;
+  padding-right: 33px;
 }
 .governmentRoot .governmentTitle {
   font-family: "Helvetica";
@@ -14,7 +14,7 @@
   padding: 0 6px;
 }
 .governmentRoot .governmentHeaderRoot {
-  padding: 0 12px 0 6px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -27,7 +27,7 @@
 
 .governmentRoot .governmentHeaderRoot .governmentHeaderBtn {
   margin-right: 0px;
-  padding: 8px 20px !important;
+  padding: 8px 18px !important;
 }
 
 .governmentRoot .chartContainer {
