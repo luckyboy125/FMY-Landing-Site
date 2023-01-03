@@ -1,11 +1,9 @@
+import { useEffect, useState } from "react";
+import ReactWordcloud from "react-wordcloud";
 import ActionButton from "../../components/ActionButton/ActionButton";
 import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
-import ReactWordcloud from "react-wordcloud";
 import ActionDropdown from "../../components/ActionDropdown/ActionDropdown";
 import BackBtn from "../../components/BackBtn/BackBtn";
-import { words } from "./mock.data";
-import "./Government.css";
-import { useEffect, useState } from "react";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
 import GovernmentCard from "./component/GovernmentCard/GovernmentCard";
@@ -19,6 +17,8 @@ import messi4 from "../../asset/government/messi4.svg";
 import ronaldo1 from "../../asset/government/ronaldo1.svg";
 import ronaldo2 from "../../asset/government/ronaldo2.svg";
 import mbappe from "../../asset/government/mbappe.svg";
+import { words } from "./mock.data";
+import "./Government.css";
 
 function Government() {
   const [ran, setRan] = useState();
@@ -139,7 +139,7 @@ function Government() {
                   enableTooltip: false,
                   deterministic: true,
                   fontFamily: "Helvetica",
-                  fontSizes: [0, 60],
+                  fontSizes: [30, 60],
                   fontStyle: "normal",
                   fontWeight: "normal",
                   padding: 35,
@@ -147,7 +147,7 @@ function Government() {
                   rotationAngles: [0, 90, -90],
                   scale: "sqrt",
                   spiral: "archimedean",
-                  transitionDuration: 1000,
+                  transitionDuration: 100,
                 }}
               />
             </div>
@@ -155,7 +155,7 @@ function Government() {
         </div>
         <div className="governmentContentRoot">
           <div className="governmentHeader">
-            <div className="governmentTitle">Items</div>
+            <div className="governmentContentTitle">Items</div>
             <div className="governmentToolRoot">
               <SearchInput
                 action={(e) => setSearchValue(e.target.value)}
@@ -166,8 +166,8 @@ function Government() {
               <FilterDropdown className="governmentSearchTool" />
             </div>
           </div>
-          <div class="container governmentContent">
-            <div class="row">
+          <div className="container governmentContent">
+            <div className="row">
               <div className="col governmentContentItemRoot">
                 <GovernmentCard
                   imgRoot={<img src={neymar1} alt="neymar" />}
