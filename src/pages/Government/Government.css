@@ -136,7 +136,7 @@
 
 .governmentRoot .chartContent .databasePart {
   padding: 31.5px 0 36px 40.5px;
-  width: 52.8%;
+  width: 52.9%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
 }
@@ -233,7 +233,8 @@
 .governmentRoot .governmentContent {
   margin-top: 30px;
   width: 100%;
-  max-width: 100% !important;
+  display: flex;
+  justify-content: space-between;
 }
 .governmentRoot .governmentContent .governmentContentItemRoot :last-child {
   margin-bottom: 0;
@@ -242,5 +243,8 @@
   .governmentContent
   .governmentContentItemRoot
   .governmentContentItem {
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
+  width: 595px;
+  display: flex;
+  flex-direction: column;
 }

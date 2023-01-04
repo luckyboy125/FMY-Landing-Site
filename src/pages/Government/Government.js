@@ -17,6 +17,10 @@ import messi4 from "../../asset/government/messi4.svg";
 import ronaldo1 from "../../asset/government/ronaldo1.svg";
 import ronaldo2 from "../../asset/government/ronaldo2.svg";
 import mbappe from "../../asset/government/mbappe.svg";
+import refresh from "../../asset/images/refresh_icon.svg";
+import more_tool from "../../asset/images/more_tool_icon.svg";
+import more_detail from "../../asset/images/more_detail_icon.svg";
+import csv from "../../asset/images/csv_icon.svg";
 import { words } from "./mock.data";
 import "./Government.css";
 
@@ -164,56 +168,62 @@ function Government() {
               />
               <FilterDropdown className="governmentSearchTool" type="filter" />
               <FilterDropdown className="governmentSearchTool" />
+              <img src={refresh} className="governmentSearchTool" alt="tool" />
+              <img src={csv} className="governmentSearchTool" alt="tool" />
+              <img
+                src={more_tool}
+                className="governmentSearchTool"
+                alt="tool"
+              />
+              <img src={more_detail} alt="tool" />
             </div>
           </div>
-          <div className="container governmentContent">
-            <div className="row">
-              <div className="col governmentContentItemRoot">
-                <GovernmentCard
-                  imgRoot={<img src={neymar1} alt="neymar" />}
-                  className="governmentContentItem"
-                />
-                <GovernmentCard
-                  imgRoot={<img src={neymar3} alt="neymar" />}
-                  className="governmentContentItem"
-                />
-                <GovernmentCard
-                  imgRoot={<img src={messi3} alt="messi" />}
-                  className="governmentContentItem"
-                />
-                <GovernmentCard
-                  imgRoot={<img src={mbappe} alt="mbappe" />}
-                  className="governmentContentItem"
-                />
-              </div>
-              <div className="col governmentContentItemRoot">
-                <GovernmentCard
-                  imgRoot={<img src={neymar2} alt="neymar" />}
-                  className="governmentContentItem"
-                />
-                <GovernmentCard
-                  imgRoot={<img src={messi2} alt="messi" />}
-                  className="governmentContentItem"
-                />
-                <GovernmentCard
-                  imgRoot={<img src={messi4} alt="messi" />}
-                  className="governmentContentItem"
-                />
-              </div>
-              <div className="col governmentContentItemRoot">
-                <GovernmentCard
-                  imgRoot={<img src={messi1} alt="messi" />}
-                  className="governmentContentItem"
-                />
-                <GovernmentCard
-                  imgRoot={<img src={ronaldo1} alt="ronaldo" />}
-                  className="governmentContentItem"
-                />
-                <GovernmentCard
-                  imgRoot={<img src={ronaldo2} alt="ronaldo" />}
-                  className="governmentContentItem"
-                />
-              </div>
+          <div className="governmentContent">
+            <div className="governmentContentItemRoot">
+              <GovernmentCard
+                imgRoot={<img src={neymar1} alt="neymar" />}
+                className="governmentContentItem"
+              />
+              <GovernmentCard
+                imgRoot={<img src={neymar3} alt="neymar" />}
+                className="governmentContentItem"
+              />
+              <GovernmentCard
+                imgRoot={<img src={messi3} alt="messi" />}
+                className="governmentContentItem"
+              />
+              <GovernmentCard
+                imgRoot={<img src={mbappe} alt="mbappe" />}
+                className="governmentContentItem"
+              />
+            </div>
+            <div className="governmentContentItemRoot">
+              <GovernmentCard
+                imgRoot={<img src={neymar2} alt="neymar" />}
+                className="governmentContentItem"
+              />
+              <GovernmentCard
+                imgRoot={<img src={messi2} alt="messi" />}
+                className="governmentContentItem"
+              />
+              <GovernmentCard
+                imgRoot={<img src={messi4} alt="messi" />}
+                className="governmentContentItem"
+              />
+            </div>
+            <div className="governmentContentItemRoot">
+              <GovernmentCard
+                imgRoot={<img src={messi1} alt="messi" />}
+                className="governmentContentItem"
+              />
+              <GovernmentCard
+                imgRoot={<img src={ronaldo1} alt="ronaldo" />}
+                className="governmentContentItem"
+              />
+              <GovernmentCard
+                imgRoot={<img src={ronaldo2} alt="ronaldo" />}
+                className="governmentContentItem"
+              />
             </div>
           </div>
         </div>
