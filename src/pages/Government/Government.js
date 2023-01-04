@@ -168,13 +168,9 @@ function Government() {
               />
               <FilterDropdown className="governmentSearchTool" type="filter" />
               <FilterDropdown className="governmentSearchTool" />
-              <img src={refresh} className="governmentSearchTool" alt="tool" />
-              <img src={csv} className="governmentSearchTool" alt="tool" />
-              <img
-                src={more_tool}
-                className="governmentSearchTool"
-                alt="tool"
-              />
+              <img src={refresh} alt="tool" />
+              <img src={csv} alt="tool" />
+              <img src={more_tool} alt="tool" />
               <img src={more_detail} alt="tool" />
             </div>
           </div>
