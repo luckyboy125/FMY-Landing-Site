@@ -12,9 +12,8 @@
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
   opacity: 0.5;
-  margin-left: 7px;
+  margin-left: 15px;
   color: #fff;
 }
 
@@ -23,8 +22,8 @@
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
   color: #fff;
+  margin-left: 5px;
 }
 .databaseDropdownRoot i {
   font-size: 20px;

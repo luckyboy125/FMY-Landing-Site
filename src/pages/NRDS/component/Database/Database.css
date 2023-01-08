@@ -51,6 +51,25 @@
   color: #75b3ff;
 }
 
+.nrdsDatabaseTableRoot .avatarTd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.nrdsDatabaseTableRoot .avatarTd img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
 .nrdsDatabaseTableRoot .secondTd {
   font-family: "Helvetica";
   font-style: normal;
@@ -82,12 +101,6 @@
   justify-content: center;
   align-items: center;
 }
-
-.nrdsDatabaseTableRoot .fifthTd .addBtn {
-  margin-right: 30px;
-  padding: 14px 20px 13px 20px !important;
-}
-
 .nrdsDatabaseTableRoot .fifthTd .des {
   font-family: "Helvetica";
   font-style: normal;
@@ -97,4 +110,5 @@
   text-align: center;
   text-decoration-line: underline;
   color: #75b3ff;
+  margin-right: 50px;
 }

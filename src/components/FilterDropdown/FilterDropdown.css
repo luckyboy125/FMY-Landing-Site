@@ -10,6 +10,7 @@
   font-size: 20px;
   line-height: 29px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .filterDropdownRoot .inputIcon {

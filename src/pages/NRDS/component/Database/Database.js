@@ -4,6 +4,7 @@ import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown
 import SearchInput from "../../../../components/SearchInput/SearchInput";
 import DatabaseDropdown from "./component/DatabaseDropdown/DatabaseDropdown";
 import DatabaseInput from "./component/DatabaseInput/DatabaseInput";
+import person1 from "../../../../asset/person1.svg";
 import "./Database.css";
 
 function Database() {
@@ -51,8 +52,17 @@ function Database() {
               <div className="nrdsDatabaseSeacrhRoot">
                 <DatabaseInput />
                 <div className="plusLetter">+</div>
-                <DatabaseDropdown className="dropdown" />
-                <DatabaseDropdown className="dropdown" />
+                <DatabaseDropdown
+                  content="Keywords"
+                  select="All"
+                  className="dropdown"
+                />
+                <DatabaseDropdown
+                  content="Upload dates"
+                  select="All"
+                  type="calendar"
+                  className="dropdown"
+                />
               </div>
             </div>
           </>
@@ -69,11 +79,20 @@ function Database() {
           return (
             <tr key={index}>
               <td className="firstTd">{item.domain}</td>
+              <td className="avatarTd">
+                <img src={person1} alt="avatar" />
+                Noy
+              </td>
               <td className="secondTd">{item.addedDate}</td>
               <td className="thirdTd">{item.ipaddress}</td>
               <td className="fourthTd">{item.keyword}</td>
               <td className="fifthTd">
                 <div className="des">View</div>
+                <div className="dotGroup" onClick={() => {}}>
+                  <div className="dot"></div>
+                  <div className="dot"></div>
+                  <div className="dot"></div>
+                </div>
               </td>
             </tr>
           );
