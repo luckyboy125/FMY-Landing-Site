@@ -1,6 +1,7 @@
 .databaseDropdownRoot {
   display: flex;
-  padding: 20px;
+  padding: 0 20px;
+  height: 74px;
   align-items: center;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.1);
