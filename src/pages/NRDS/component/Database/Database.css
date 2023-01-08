@@ -1,0 +1,80 @@
+.nrdsDatabaseTableRoot .nrdsDatabaseTableHeader {
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nrdsDatabaseTableRoot .nrdsDatabaseTableTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.nrdsDatabaseTableRoot .nrdsDatabaseTableToolRoot {
+  display: flex;
+  align-items: center;
+}
+
+.nrdsDatabaseTableRoot .nrdsDatabaseTableSearchTool {
+  margin-right: 18px;
+}
+
+.nrdsDatabaseTableRoot .firstTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 18px;
+  color: #75b3ff;
+}
+
+.nrdsDatabaseTableRoot .secondTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.nrdsDatabaseTableRoot .thirdTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #75b3ff;
+}
+.nrdsDatabaseTableRoot .fourthTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.nrdsDatabaseTableRoot .fifthTd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nrdsDatabaseTableRoot .fifthTd .addBtn {
+  margin-right: 30px;
+  padding: 14px 20px 13px 20px !important;
+}
+
+.nrdsDatabaseTableRoot .fifthTd .des {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #75b3ff;
+}

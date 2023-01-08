@@ -1,0 +1,275 @@
+.NRDSChart {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  border: 2px solid;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+}
+
+.NRDSChart .chartHeader {
+  display: flex;
+  align-items: center;
+  height: 66px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.NRDSChart .chartHeader .databasePart {
+  padding: 0 10px 0 30px;
+  width: 52.8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NRDSChart .chartHeader .databasePart .chartTools {
+  display: flex;
+}
+
+.NRDSChart .chartHeader .databasePart .chartTools .chartPeriod {
+  margin-right: 30px;
+  padding: 7px 20px 7px 20px;
+}
+
+.NRDSChart .chartHeader .databasePart .chartTools .chartPeriod i {
+  margin-left: 12px !important;
+}
+
+.NRDSChart .chartHeader .databasePart .chartTools .chartCompare {
+  padding: 10.5px 23px 10.5px 20px !important;
+}
+
+.NRDSChart .chartHeader .databasePart .chartTools .chartCompare i {
+  margin-left: 12px !important;
+}
+
+.NRDSChart .chartHeader .casesPart {
+  padding: 0 11px 0 30px;
+  flex-grow: 1;
+}
+
+.NRDSChart .chartHeader .databasePart .headerItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 11px;
+}
+
+.NRDSChart .chartHeader .casesPart .headerItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 11px;
+}
+
+.NRDSChart.chartContent {
+  display: flex;
+}
+
+.NRDSChart.chartContent .databasePart {
+  padding: 31.5px 0 36px 40.5px;
+  width: 52.8%;
+  display: flex;
+  border-right: 2px solid rgba(149, 166, 184, 0.4);
+}
+
+.NRDSChart.chartContent .casesPart {
+  padding: 30px 26.5px 30px 50px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.NRDSChart.descriptionRoot {
+  width: 229.88px;
+  margin-right: 16px;
+}
+
+.NRDSChart.descriptionRoot:first-child {
+  border-top: 1px solid transparent;
+}
+
+.NRDSChart.lineChartRoot {
+  flex-grow: 1;
+  padding-top: 45px;
+  height: 323.39px;
+}
+
+.NRDSChart.casesPart .descriptionRoot {
+  margin-right: 80px;
+}
+
+.NRDSChart.descriptionItem {
+  border-top: 1px solid rgba(149, 166, 184, 0.1);
+}
+
+.NRDSChart.casesPart .descriptionItem {
+  padding: 17px 0 22px 0;
+}
+
+.NRDSChart.descriptionItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  white-space: nowrap;
+  opacity: 0.7;
+}
+.NRDSChart.descriptionItemCount {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+.NRDSChart.doughnutChartRoot {
+  display: flex;
+}
+.NRDSChart.chartRoot {
+  position: relative;
+}
+
+.NRDSChart.doughnutChartPercent {
+  position: absolute;
+  top: 46%;
+  right: 46%;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.NRDSChart.doughnutChartDes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.NRDSChart.doughnutChartDesItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.NRDSChart.doughnutChartIcon {
+  width: 12px;
+  min-height: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin-right: 12.64px;
+  border-radius: 50px;
+}
+
+.NRDSChart.doughnutChartItemName {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.NRDSChart.secondPart {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 27px;
+}
+.nrdsTableRoot .nrdsTableHeader {
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nrdsTableRoot .nrdsTableTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.nrdsTableRoot .nrdsTableToolRoot {
+  display: flex;
+  align-items: center;
+}
+
+.nrdsTableRoot .nrdsTableSearchTool {
+  margin-right: 18px;
+}
+
+.nrdsTableRoot .firstTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 18px;
+  color: #75b3ff;
+}
+
+.nrdsTableRoot .secondTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.nrdsTableRoot .thirdTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #75b3ff;
+}
+.nrdsTableRoot .fourthTd {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.nrdsTableRoot .fifthTd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nrdsTableRoot .fifthTd .addBtn {
+  margin-right: 30px;
+  padding: 14px 20px 13px 20px !important;
+}
+
+.nrdsTableRoot .fifthTd .des {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #75b3ff;
+}
