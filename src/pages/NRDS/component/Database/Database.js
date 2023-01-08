@@ -46,7 +46,7 @@ function Database() {
                     className="nrdsDatabaseTableSearchTool"
                     type="filter"
                   />
-                  <FilterDropdown className="nrdsDatabaseTableSearchTool" />
+                  <FilterDropdown />
                 </div>
               </div>
               <div className="nrdsDatabaseSeacrhRoot">
