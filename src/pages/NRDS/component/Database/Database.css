@@ -30,6 +30,18 @@
   margin-top: 30px;
 }
 
+.nrdsDatabaseTableRoot .databaseHeader .nrdsDatabaseSeacrhRoot .plusLetter {
+  font-size: 50px;
+  line-height: 50px;
+  color: #75b3ff;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nrdsDatabaseTableRoot .databaseHeader .nrdsDatabaseSeacrhRoot .dropdown {
+  margin-left: 20px;
+}
+
 .nrdsDatabaseTableRoot .firstTd {
   font-family: "Helvetica";
   font-style: normal;

@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
 import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
 import SearchInput from "../../../../components/SearchInput/SearchInput";
-import DatabaseInput from "./component/DatabaseInput";
+import DatabaseDropdown from "./component/DatabaseDropdown/DatabaseDropdown";
+import DatabaseInput from "./component/DatabaseInput/DatabaseInput";
 import "./Database.css";
 
 function Database() {
@@ -49,6 +50,9 @@ function Database() {
               </div>
               <div className="nrdsDatabaseSeacrhRoot">
                 <DatabaseInput />
+                <div className="plusLetter">+</div>
+                <DatabaseDropdown className="dropdown" />
+                <DatabaseDropdown className="dropdown" />
               </div>
             </div>
           </>

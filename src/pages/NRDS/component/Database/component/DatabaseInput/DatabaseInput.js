@@ -1,12 +1,12 @@
 import { useState } from "react";
-import SearchIcon from "../../../../../asset/images/nrds/search_icon.svg";
-import arrow from "../../../../../asset/images/nrds/arrow_down.svg";
+import SearchIcon from "../../../../../../asset/images/nrds/search_icon.svg";
+import arrow from "../../../../../../asset/images/nrds/arrow_down.svg";
 import "./DatabaseInput.css";
 
-function DatabaseInput() {
+function DatabaseInput({ className }) {
   const [searchValue, setSearchValue] = useState("");
   return (
-    <div className="databaseInputRoot">
+    <div className={`databaseInputRoot ${className}`}>
       <div className="front">
         <img src={SearchIcon} alt="search_icon" />
         <input
