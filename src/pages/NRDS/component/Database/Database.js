@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
 import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
 import SearchInput from "../../../../components/SearchInput/SearchInput";
+import DatabaseInput from "./component/DatabaseInput";
 import "./Database.css";
 
 function Database() {
@@ -28,21 +29,26 @@ function Database() {
         className="nrdsDatabaseTableRoot"
         header={
           <>
-            <div className="nrdsDatabaseTableHeader">
-              <div className="nrdsDatabaseTableTitle">
-                Domains under monitoring
+            <div className="databaseHeader">
+              <div className="nrdsDatabaseTableHeader">
+                <div className="nrdsDatabaseTableTitle">
+                  Domains under monitoring
+                </div>
+                <div className="nrdsDatabaseTableToolRoot">
+                  <SearchInput
+                    action={(e) => setSearchValue(e.target.value)}
+                    inputValue={searchValue}
+                    className="nrdsDatabaseTableSearchTool"
+                  />
+                  <FilterDropdown
+                    className="nrdsDatabaseTableSearchTool"
+                    type="filter"
+                  />
+                  <FilterDropdown className="nrdsDatabaseTableSearchTool" />
+                </div>
               </div>
-              <div className="nrdsDatabaseTableToolRoot">
-                <SearchInput
-                  action={(e) => setSearchValue(e.target.value)}
-                  inputValue={searchValue}
-                  className="nrdsDatabaseTableSearchTool"
-                />
-                <FilterDropdown
-                  className="nrdsDatabaseTableSearchTool"
-                  type="filter"
-                />
-                <FilterDropdown className="nrdsDatabaseTableSearchTool" />
+              <div className="nrdsDatabaseSeacrhRoot">
+                <DatabaseInput />
               </div>
             </div>
           </>
