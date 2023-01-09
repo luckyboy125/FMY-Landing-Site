@@ -4,8 +4,8 @@ import { Vega } from "react-vega";
 function BubbleChart() {
   const spec = {
     $schema: "https://vega.github.io/schema/vega/v5.json",
-    width: 1366,
-    height: 768,
+    width: 1960,
+    height: 800,
     padding: { left: 5, right: 5, top: 20, bottom: 0 },
     autosize: "none",
     signals: [
@@ -13,13 +13,11 @@ function BubbleChart() {
       { name: "cy", update: "height / 2" },
       {
         name: "gravityX",
-        value: 0.2,
-        bind: { input: "range", min: 0, max: 1 },
+        value: 0,
       },
       {
         name: "gravityY",
-        value: 0.1,
-        bind: { input: "range", min: 0, max: 1 },
+        value: 0.2,
       },
     ],
     data: [
@@ -29,7 +27,7 @@ function BubbleChart() {
           { category: "A", amount: 0.28 },
           { category: "B", amount: 0.55 },
           { category: "C", amount: 0.43 },
-          { category: "D", amount: 0.91 },
+          { category: "D", amount: 0.31 },
           { category: "E", amount: 0.81 },
           { category: "F", amount: 0.53 },
           { category: "G", amount: 0.19 },
@@ -39,9 +37,9 @@ function BubbleChart() {
           { category: "K", amount: 0.43 },
           { category: "L", amount: 0.91 },
           { category: "M", amount: 0.81 },
-          { category: "N", amount: 0.53 },
-          { category: "O", amount: 0.19 },
-          { category: "P", amount: 0.87 },
+          { category: "Government", amount: 0.99 },
+          { category: "Service", amount: 0.59 },
+          { category: "Army", amount: 0.27 },
         ],
       },
     ],
@@ -72,7 +70,7 @@ function BubbleChart() {
           update: {
             size: { signal: "pow(2 * datum.amount, 2)", scale: "size" },
             stroke: { value: "#fff" },
-            strokeWidth: { value: 10 },
+            strokeWidth: { value: 0 },
             tooltip: { signal: "datum" },
           },
         },
@@ -85,7 +83,7 @@ function BubbleChart() {
               {
                 force: "collide",
                 iterations: 2,
-                radius: { expr: "sqrt(datum.size) / 2" },
+                radius: { expr: "sqrt(datum.size) / 1.5" },
               },
               { force: "center", x: { signal: "cx" }, y: { signal: "cy" } },
               { force: "x", x: "xfocus", strength: { signal: "gravityX" } },
@@ -101,9 +99,10 @@ function BubbleChart() {
           enter: {
             align: { value: "center" },
             baseline: { value: "middle" },
-            fontSize: { value: 15 },
-            fontWeight: { value: "bold" },
-            fill: { value: "white" },
+            fontSize: { value: 30 },
+            fontFamily: { value: "Helvetica" },
+            fontWeight: { value: 400 },
+            fill: { value: "#fff" },
             text: { field: "datum.category" },
           },
           update: { x: { field: "x" }, y: { field: "y" } },
