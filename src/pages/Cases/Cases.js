@@ -3,6 +3,7 @@ import ActionTab from "../../components/ActionTab/ActionTab";
 import PlusButton from "../../components/PlusButton/PlusButton";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import "./Cases.css";
+import BubbleChart from "./component/BubbleChart";
 
 function Cases() {
   const tabData = ["All", "Case Comparison"];
@@ -33,7 +34,9 @@ function Cases() {
             />
           </div>
         </div>
-        <div className="casesContainer"></div>
+        <div className="casesContainer">
+          <BubbleChart />
+        </div>
       </div>
     </>
   );

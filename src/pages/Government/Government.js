@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ReactWordcloud from "react-wordcloud";
 import ActionButton from "../../components/ActionButton/ActionButton";
 import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
 import ActionDropdown from "../../components/ActionDropdown/ActionDropdown";
@@ -21,31 +20,15 @@ import refresh from "../../asset/images/refresh_icon.svg";
 import more_tool from "../../asset/images/more_tool_icon.svg";
 import more_detail from "../../asset/images/more_detail_icon.svg";
 import csv from "../../asset/images/csv_icon.svg";
-import { words } from "./mock.data";
 import "./Government.css";
+import WordCloud from "./component/GovernmentCard/WordCloud/WordCloud";
 
 function Government() {
-  const [ran, setRan] = useState();
   const [searchValue, setSearchValue] = useState("");
   const lineChartData = {
     label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     data: [500, 600, 700, 800, 900, 1000, 1200],
   };
-
-  const ramdomSize = () => {
-    let letterArray = [];
-    words.map((item) => {
-      letterArray.push({
-        text: item,
-        value: Math.floor(Math.random() * 90) + 10,
-      });
-    });
-    setRan(letterArray);
-  };
-
-  useEffect(() => {
-    ramdomSize();
-  }, []);
 
   return (
     <>
@@ -136,24 +119,7 @@ function Government() {
               </div>
             </div>
             <div className="casesPart">
-              <ReactWordcloud
-                words={ran}
-                options={{
-                  colors: ["#fff", "#75B3FF", "#C2A6FF", "#B8B8B8"],
-                  enableTooltip: false,
-                  deterministic: true,
-                  fontFamily: "Helvetica",
-                  fontSizes: [30, 60],
-                  fontStyle: "normal",
-                  fontWeight: "normal",
-                  padding: 35,
-                  rotations: 2,
-                  rotationAngles: [0, 90, -90],
-                  scale: "sqrt",
-                  spiral: "archimedean",
-                  transitionDuration: 100,
-                }}
-              />
+              <WordCloud />
             </div>
           </div>
         </div>
