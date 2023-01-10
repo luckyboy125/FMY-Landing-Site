@@ -2,7 +2,7 @@
   display: flex;
   border-bottom: 2px solid #69b3ff4d;
 }
-.actionTabRoot :last-child {
+.actionTabRoot .actionTabItem:last-child {
   margin-right: 0 !important;
 }
 

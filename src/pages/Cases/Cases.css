@@ -16,6 +16,9 @@
   padding: 4px !important;
   margin-right: 42px !important;
 }
+.casesRoot .casesTab .actionTabItem:last-child {
+  margin-right: 0 !important;
+}
 .casesRoot .casesTab .active {
   margin-bottom: -2px !important;
 }
