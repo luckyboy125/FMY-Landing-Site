@@ -17,7 +17,7 @@ function Service() {
           contentStyle="relativeService"
         >
           <div className="descriptionRoot">
-            <div className="descriptionItem borderNone topPaddingNone">
+            <div className="descriptionItem">
               <div className="descriptionItemTitle">Lorem ipsum</div>
               <div className="descriptionItemCount" style={{ color: "#fff" }}>
                 53
@@ -29,10 +29,7 @@ function Service() {
                 +2
               </div>
             </div>
-            <div
-              className="descriptionItem"
-              style={{ paddingBottom: "0px !important" }}
-            >
+            <div className="descriptionItem">
               <div className="descriptionItemTitle">Lorem ipsum</div>
               <div className="descriptionItemCount" style={{ color: "#fff" }}>
                 Lorem ipsum

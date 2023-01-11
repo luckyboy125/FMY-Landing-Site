@@ -17,8 +17,13 @@
   margin-right: 16px;
 }
 
-.serviceRoot1 .descriptionRoot:first-child {
+.serviceRoot1 .descriptionRoot .descriptionItem:first-child {
   border-top: 1px solid transparent;
+  padding-top: 0px !important;
+}
+
+.serviceRoot1 .descriptionRoot .descriptionItem:last-child {
+  padding-bottom: 0 !important;
 }
 
 .serviceRoot1 .lineChartRoot {
