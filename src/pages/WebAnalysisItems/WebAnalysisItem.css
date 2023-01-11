@@ -174,8 +174,13 @@
   margin-right: 16px;
 }
 
-.webAnalysisRoot .descriptionRoot:first-child {
-  border-top: 1px solid transparent;
+.webAnalysisRoot .descriptionRoot .descriptionItem:first-child {
+  border: none !important;
+  padding-top: 0 !important;
+}
+
+.webAnalysisRoot .descriptionRoot .descriptionItem:last-child {
+  padding-bottom: 0 !important;
 }
 
 .webAnalysisRoot .lineChartRoot {
@@ -266,8 +271,4 @@
   display: flex;
   margin-top: 30px;
   margin-bottom: 27px;
-}
-
-.borderNone {
-  border: none !important;
 }

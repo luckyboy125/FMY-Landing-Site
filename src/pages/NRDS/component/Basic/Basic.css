@@ -76,52 +76,57 @@
   margin-top: 11px;
 }
 
-.NRDSChart.chartContent {
+.NRDSChart .chartContent {
   display: flex;
 }
 
-.NRDSChart.chartContent .databasePart {
+.NRDSChart .chartContent .databasePart {
   padding: 31.5px 0 36px 40.5px;
   width: 52.8%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
 }
 
-.NRDSChart.chartContent .casesPart {
+.NRDSChart .chartContent .casesPart {
   padding: 30px 26.5px 30px 50px;
   display: flex;
   align-items: center;
   flex-grow: 1;
 }
 
-.NRDSChart.descriptionRoot {
+.NRDSChart .descriptionRoot {
   width: 229.88px;
   margin-right: 16px;
 }
 
-.NRDSChart.descriptionRoot:first-child {
-  border-top: 1px solid transparent;
+.NRDSChart .descriptionRoot .descriptionItem:first-child {
+  border: none !important;
+  padding-top: 0 !important;
 }
 
-.NRDSChart.lineChartRoot {
+.NRDSChart .descriptionRoot .descriptionItem:last-child {
+  padding-bottom: 0 !important;
+}
+
+.NRDSChart .lineChartRoot {
   flex-grow: 1;
   padding-top: 45px;
   height: 323.39px;
 }
 
-.NRDSChart.casesPart .descriptionRoot {
+.NRDSChart .casesPart .descriptionRoot {
   margin-right: 80px;
 }
 
-.NRDSChart.descriptionItem {
+.NRDSChart .descriptionItem {
   border-top: 1px solid rgba(149, 166, 184, 0.1);
 }
 
-.NRDSChart.casesPart .descriptionItem {
+.NRDSChart .casesPart .descriptionItem {
   padding: 17px 0 22px 0;
 }
 
-.NRDSChart.descriptionItemTitle {
+.NRDSChart .descriptionItemTitle {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -131,7 +136,7 @@
   white-space: nowrap;
   opacity: 0.7;
 }
-.NRDSChart.descriptionItemCount {
+.NRDSChart .descriptionItemCount {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 300;
@@ -140,14 +145,14 @@
   margin-top: 20px;
 }
 
-.NRDSChart.doughnutChartRoot {
+.NRDSChart .doughnutChartRoot {
   display: flex;
 }
-.NRDSChart.chartRoot {
+.NRDSChart .chartRoot {
   position: relative;
 }
 
-.NRDSChart.doughnutChartPercent {
+.NRDSChart .doughnutChartPercent {
   position: absolute;
   top: 46%;
   right: 46%;
@@ -159,19 +164,19 @@
   text-align: center;
   color: #ffffff;
 }
-.NRDSChart.doughnutChartDes {
+.NRDSChart .doughnutChartDes {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.NRDSChart.doughnutChartDesItem {
+.NRDSChart .doughnutChartDesItem {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
 
-.NRDSChart.doughnutChartIcon {
+.NRDSChart .doughnutChartIcon {
   width: 12px;
   min-height: 12px;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -179,7 +184,7 @@
   border-radius: 50px;
 }
 
-.NRDSChart.doughnutChartItemName {
+.NRDSChart .doughnutChartItemName {
   font-family: Helvetica;
   font-style: normal;
   font-weight: 400;
@@ -188,7 +193,7 @@
   color: #ffffff;
 }
 
-.NRDSChart.secondPart {
+.NRDSChart .secondPart {
   display: flex;
   margin-top: 30px;
   margin-bottom: 27px;

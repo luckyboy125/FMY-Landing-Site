@@ -154,8 +154,13 @@
   margin-right: 16px;
 }
 
-.governmentRoot .descriptionRoot:first-child {
-  border-top: 1px solid transparent;
+.governmentRoot .descriptionRoot .descriptionItem:first-child {
+  border: none !important;
+  padding-top: 0 !important;
+}
+
+.governmentRoot .descriptionRoot .descriptionItem:last-child {
+  padding-bottom: 0 !important;
 }
 
 .governmentRoot .lineChartRoot {
@@ -193,10 +198,6 @@
   font-size: 34px;
   line-height: 24px;
   margin-top: 20px;
-}
-
-.borderNone {
-  border: none !important;
 }
 
 .governmentRoot .governmentContentRoot {
@@ -248,7 +249,10 @@
   display: flex;
   justify-content: space-between;
 }
-.governmentRoot .governmentContent .governmentContentItemRoot :last-child {
+.governmentRoot
+  .governmentContent
+  .governmentContentItemRoot
+  .governmentContentItem:last-child {
   margin-bottom: 0;
 }
 .governmentRoot

@@ -57,8 +57,8 @@ function WebAnalysisItems() {
           <div className="databasePart">
             <div className="descriptionRoot">
               <div
-                className="descriptionItem borderNone"
-                style={{ paddingTop: "0px !important", paddingBottom: "27px" }}
+                className="descriptionItem"
+                style={{ paddingBottom: "27px" }}
               >
                 <div className="descriptionItemTitle">
                   Total items this week
@@ -107,7 +107,7 @@ function WebAnalysisItems() {
           </div>
           <div className="casesPart">
             <div className="descriptionRoot">
-              <div className="descriptionItem borderNone topPaddingNone">
+              <div className="descriptionItem">
                 <div className="descriptionItemTitle">Lorem ipsum</div>
                 <div className="descriptionItemCount" style={{ color: "#fff" }}>
                   53
@@ -119,10 +119,7 @@ function WebAnalysisItems() {
                   +2
                 </div>
               </div>
-              <div
-                className="descriptionItem"
-                style={{ paddingBottom: "0px !important" }}
-              >
+              <div className="descriptionItem">
                 <div className="descriptionItemTitle">Lorem ipsum</div>
                 <div className="descriptionItemCount" style={{ color: "#fff" }}>
                   Lorem ipsum

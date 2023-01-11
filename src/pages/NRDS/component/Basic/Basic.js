@@ -58,9 +58,8 @@ function Basic() {
           <div className="databasePart">
             <div className="descriptionRoot">
               <div
-                className="descriptionItem borderNone"
+                className="descriptionItem"
                 style={{
-                  paddingTop: "0px !important",
                   paddingBottom: "27px",
                 }}
               >
@@ -96,7 +95,6 @@ function Basic() {
                 className="descriptionItem"
                 style={{
                   paddingTop: "26px",
-                  paddingBottom: "0px !important",
                 }}
               >
                 <div className="descriptionItemTitle">
@@ -116,7 +114,7 @@ function Basic() {
           </div>
           <div className="casesPart">
             <div className="descriptionRoot">
-              <div className="descriptionItem borderNone topPaddingNone">
+              <div className="descriptionItem">
                 <div className="descriptionItemTitle">Keywords in use</div>
                 <div className="descriptionItemCount" style={{ color: "#fff" }}>
                   53

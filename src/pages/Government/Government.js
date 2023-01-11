@@ -148,9 +148,8 @@ function Government() {
             <div className="databasePart">
               <div className="descriptionRoot">
                 <div
-                  className="descriptionItem borderNone"
+                  className="descriptionItem"
                   style={{
-                    paddingTop: "0px !important",
                     paddingBottom: "27px",
                   }}
                 >
@@ -184,7 +183,6 @@ function Government() {
                   className="descriptionItem"
                   style={{
                     paddingTop: "26px",
-                    paddingBottom: "0px !important",
                   }}
                 >
                   <div className="descriptionItemTitle">Case open date</div>
