@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ActionButton from "../../components/ActionButton/ActionButton";
 import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
 import ActionDropdown from "../../components/ActionDropdown/ActionDropdown";
@@ -24,6 +25,7 @@ import "./Government.css";
 import WordCloud from "./component/GovernmentCard/WordCloud/WordCloud";
 
 function Government() {
+  const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState("");
   const lineChartData = {
     label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
@@ -35,7 +37,10 @@ function Government() {
       <div className="governmentRoot">
         <div className="governmentTitle">Government</div>
         <div className="governmentHeaderRoot">
-          <BackBtn className="governmentHeaderLink" />
+          <BackBtn
+            className="governmentHeaderLink"
+            action={() => navigate(-1)}
+          />
           <ActionDropdown className="governmentHeaderBtn" />
         </div>
         <div className="chartContainer">

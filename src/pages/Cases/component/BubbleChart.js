@@ -1,120 +1,142 @@
-import React from "react";
-import { Vega } from "react-vega";
+import React, { useEffect, useState } from "react";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import { useNavigate } from "react-router-dom";
 
-function BubbleChart() {
-  const spec = {
-    $schema: "https://vega.github.io/schema/vega/v5.json",
-    width: 1960,
-    height: 800,
-    padding: { left: 5, right: 5, top: 20, bottom: 0 },
-    autosize: "none",
-    signals: [
-      { name: "cx", update: "width / 2" },
-      { name: "cy", update: "height / 2" },
-      {
-        name: "gravityX",
-        value: 0,
-      },
-      {
-        name: "gravityY",
-        value: 0.2,
-      },
-    ],
-    data: [
-      {
-        name: "table",
-        values: [
-          { category: "A", amount: 0.28 },
-          { category: "B", amount: 0.55 },
-          { category: "C", amount: 0.43 },
-          { category: "D", amount: 0.31 },
-          { category: "E", amount: 0.81 },
-          { category: "F", amount: 0.53 },
-          { category: "G", amount: 0.19 },
-          { category: "H", amount: 0.87 },
-          { category: "I", amount: 0.28 },
-          { category: "J", amount: 0.55 },
-          { category: "K", amount: 0.43 },
-          { category: "L", amount: 0.91 },
-          { category: "M", amount: 0.81 },
-          { category: "Government", amount: 0.99 },
-          { category: "Service", amount: 0.59 },
-          { category: "Army", amount: 0.27 },
-        ],
-      },
-    ],
-    scales: [
-      {
-        name: "size",
-        domain: { data: "table", field: "amount" },
-        range: [5000, 20000],
-      },
-      {
-        name: "color",
-        type: "ordinal",
-        domain: { data: "table", field: "category" },
-        range: "ramp",
-      },
-    ],
-    marks: [
-      {
-        name: "nodes",
-        type: "symbol",
-        from: { data: "table" },
-        encode: {
-          enter: {
-            fill: { scale: "color", field: "category" },
-            xfocus: { signal: "cx" },
-            yfocus: { signal: "cy" },
-          },
-          update: {
-            size: { signal: "pow(2 * datum.amount, 2)", scale: "size" },
-            stroke: { value: "#fff" },
-            strokeWidth: { value: 0 },
-            tooltip: { signal: "datum" },
-          },
-        },
-        transform: [
-          {
-            type: "force",
-            iterations: 100,
-            static: true,
-            forces: [
-              {
-                force: "collide",
-                iterations: 2,
-                radius: { expr: "sqrt(datum.size) / 1.5" },
-              },
-              { force: "center", x: { signal: "cx" }, y: { signal: "cy" } },
-              { force: "x", x: "xfocus", strength: { signal: "gravityX" } },
-              { force: "y", y: "yfocus", strength: { signal: "gravityY" } },
-            ],
-          },
-        ],
-      },
-      {
-        type: "text",
-        from: { data: "nodes" },
-        encode: {
-          enter: {
-            align: { value: "center" },
-            baseline: { value: "middle" },
-            fontSize: { value: 30 },
-            fontFamily: { value: "Helvetica" },
-            fontWeight: { value: 400 },
-            fill: { value: "#fff" },
-            text: { field: "datum.category" },
-          },
-          update: { x: { field: "x" }, y: { field: "y" } },
-        },
-      },
-    ],
+function BubbleChart({ data, width, height }) {
+  const navigate = useNavigate();
+  const [mount, setMount] = useState(false);
+  const [minValue, setMinValue] = useState(1);
+  const [maxValue, setMaxValue] = useState(100);
+  const [chartData, setChartData] = useState([]);
+
+  const radiusScale = (value) => {
+    const fx = d3.scaleSqrt().range([40, 100]).domain([minValue, maxValue]);
+    return fx(value);
   };
 
+  const simulatePositions = (cData) => {
+    d3.forceSimulation()
+      .nodes(cData)
+      .velocityDecay(0.5)
+      .force("x", d3.forceX().strength(0.05))
+      .force("y", d3.forceY().strength(0.2))
+      .force(
+        "collide",
+        d3.forceCollide((d) => {
+          return radiusScale(d.amount) + 20;
+        })
+      )
+      .on("tick", () => {
+        setChartData(cData);
+      });
+  };
+
+  const init = async () => {
+    const zoomRatio =
+      document.getElementsByClassName("websiteContainer")[0].style.zoom || 1;
+    if (data.length > 0) {
+      setMinValue(
+        0.95 *
+          d3.min(data, (item) => {
+            return item.amount;
+          })
+      );
+      setMaxValue(
+        1.05 *
+          d3.max(data, (item) => {
+            return item.amount;
+          })
+      );
+      simulatePositions(data);
+      setMount(true);
+    }
+  };
+
+  const handleBubbleClick = (link) => {
+    navigate(`/${link}`);
+  };
+
+  useEffect(() => {
+    init();
+  }, [mount]);
+
+  console.log("chart data : ", chartData);
+
   return (
-    <>
-      <Vega spec={spec} actions={false} />
-    </>
+    <svg width={width} height={height}>
+      <linearGradient
+        spreadMethod="reflect"
+        id="smartPurpleGradient"
+        cx="50%"
+        cy="50%"
+        r="50%"
+        fx="50%"
+        fy="50%"
+        fr="10%"
+      >
+        <stop offset="0%" stopColor="#5D43FF" />
+        <stop offset="98.25%" stopColor="#A5A4FF" />
+      </linearGradient>
+      <linearGradient
+        spreadMethod="reflect"
+        id="smartBlueGradient"
+        cx="50%"
+        cy="50%"
+        r="50%"
+        fx="50%"
+        fy="50%"
+        fr="10%"
+      >
+        <stop offset="0%" stopColor="#90C2FF" />
+        <stop offset="98.25%" stopColor="#60A7FF" />
+      </linearGradient>
+      {chartData.map((item, index) => {
+        return (
+          <g
+            key={index}
+            transform={`translate(${width / 2 + item.x}, ${
+              height / 2 + item.y
+            })`}
+            style={{
+              cursor: "pointer",
+              filter: `${
+                item.link
+                  ? "drop-shadow(rgba(117, 179, 255, 1) 0px 0px 10px)"
+                  : ""
+              }`,
+            }}
+            onClick={item.link ? () => handleBubbleClick(item.link) : () => {}}
+          >
+            <circle
+              r={radiusScale(item.amount)}
+              fill={`${
+                radiusScale(item.amount) >= 80
+                  ? "url(#smartBlueGradient)"
+                  : radiusScale(item.amount) >= 60
+                  ? "url(#smartPurpleGradient)"
+                  : "#fff"
+              }`}
+            />
+            <text
+              dy="6"
+              fill={`${radiusScale(item.amount) >= 60 ? "#fff" : "#000"}`}
+              textAnchor="middle"
+              fontSize={`${
+                radiusScale(item.amount) >= 80
+                  ? "30px"
+                  : radiusScale(item.amount) >= 60
+                  ? "25px"
+                  : "20px"
+              }`}
+              fontWeight="400"
+              fontFamily="Helvetica"
+            >
+              {item.category}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
   );
 }
 
