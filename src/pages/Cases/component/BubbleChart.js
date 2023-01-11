@@ -19,7 +19,7 @@ function BubbleChart({ data, width, height }) {
     return fx(value);
   };
 
-  const simulatePositions = (cData) => {
+  const simulatePositions = async (cData) => {
     d3.forceSimulation()
       .nodes(cData)
       .velocityDecay(0.5)
@@ -33,12 +33,13 @@ function BubbleChart({ data, width, height }) {
       )
       .on("tick", () => {
         setChartData(cData);
+      })
+      .on("end", () => {
+        setMount(true);
       });
   };
 
   const init = async () => {
-    const zoomRatio =
-      document.getElementsByClassName("websiteContainer")[0].style.zoom || 1;
     if (data.length > 0) {
       setMinValue(
         0.95 *
@@ -53,7 +54,6 @@ function BubbleChart({ data, width, height }) {
           })
       );
       simulatePositions(data);
-      setMount(true);
     }
   };
 
@@ -64,8 +64,6 @@ function BubbleChart({ data, width, height }) {
   useEffect(() => {
     init();
   }, [mount]);
-
-  console.log("chart data : ", chartData);
 
   return (
     <svg width={width} height={height}>
@@ -95,60 +93,64 @@ function BubbleChart({ data, width, height }) {
         <stop offset="0%" stopColor="#90C2FF" />
         <stop offset="98.25%" stopColor="#60A7FF" />
       </linearGradient>
-      {chartData.map((item, index) => {
-        return (
-          <g
-            key={index}
-            transform={`translate(${width / 2 + item.x}, ${
-              height / 2 + item.y
-            })`}
-            style={{
-              cursor: "pointer",
-              filter: `${
-                item.link
-                  ? "drop-shadow(rgba(117, 179, 255, 1) 0px 0px 10px)"
-                  : ""
-              }`,
-            }}
-            onClick={item.link ? () => handleBubbleClick(item.link) : () => {}}
-          >
-            <circle
-              r={radiusScale(item.amount)}
-              fill={`${
-                radiusScale(item.amount) >=
-                ((rangeMax - rangeMin) / 3) * 2 + rangeMin
-                  ? "url(#smartBlueGradient)"
-                  : radiusScale(item.amount) >=
-                    (rangeMax - rangeMin) / 3 + rangeMin
-                  ? "url(#smartPurpleGradient)"
-                  : "#fff"
-              }`}
-            />
-            <text
-              dy="6"
-              fill={`${
-                radiusScale(item.amount) >= (rangeMax - rangeMin) / 3 + rangeMin
-                  ? "#fff"
-                  : "#000"
-              }`}
-              textAnchor="middle"
-              fontSize={`${
-                radiusScale(item.amount) >=
-                ((rangeMax - rangeMin) / 3) * 2 + rangeMin
-                  ? "30px"
-                  : radiusScale(item.amount) >=
-                    (rangeMax - rangeMin) / 3 + rangeMin
-                  ? "23px"
-                  : "16px"
-              }`}
-              fontWeight="400"
-              fontFamily="Helvetica"
+      {mount &&
+        chartData.map((item, index) => {
+          return (
+            <g
+              key={index}
+              transform={`translate(${width / 2 + item.x}, ${
+                height / 2 + item.y
+              })`}
+              style={{
+                cursor: "pointer",
+                filter: `${
+                  item.link
+                    ? "drop-shadow(rgba(117, 179, 255, 1) 0px 0px 10px)"
+                    : ""
+                }`,
+              }}
+              onClick={
+                item.link ? () => handleBubbleClick(item.link) : () => {}
+              }
             >
-              {item.category}
-            </text>
-          </g>
-        );
-      })}
+              <circle
+                r={radiusScale(item.amount)}
+                fill={`${
+                  radiusScale(item.amount) >=
+                  ((rangeMax - rangeMin) / 3) * 2 + rangeMin
+                    ? "url(#smartBlueGradient)"
+                    : radiusScale(item.amount) >=
+                      (rangeMax - rangeMin) / 3 + rangeMin
+                    ? "url(#smartPurpleGradient)"
+                    : "#fff"
+                }`}
+              />
+              <text
+                dy="6"
+                fill={`${
+                  radiusScale(item.amount) >=
+                  (rangeMax - rangeMin) / 3 + rangeMin
+                    ? "#fff"
+                    : "#000"
+                }`}
+                textAnchor="middle"
+                fontSize={`${
+                  radiusScale(item.amount) >=
+                  ((rangeMax - rangeMin) / 3) * 2 + rangeMin
+                    ? "30px"
+                    : radiusScale(item.amount) >=
+                      (rangeMax - rangeMin) / 3 + rangeMin
+                    ? "23px"
+                    : "16px"
+                }`}
+                fontWeight="400"
+                fontFamily="Helvetica"
+              >
+                {item.category}
+              </text>
+            </g>
+          );
+        })}
     </svg>
   );
 }
