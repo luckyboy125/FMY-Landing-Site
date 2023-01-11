@@ -8,7 +8,7 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
   const [chartColor, setChartColor] = useState([]);
 
   useEffect(() => {
-    var canvas = document.getElementById("line_chart");
+    var canvas = document.getElementById("doughnut_chart");
     var ctx = canvas.getContext("2d");
     let colorArray = [];
 

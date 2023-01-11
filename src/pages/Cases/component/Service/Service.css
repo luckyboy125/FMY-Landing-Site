@@ -1,0 +1,106 @@
+.serviceRoot1 {
+  display: flex;
+  align-items: center;
+}
+.serviceRoot1 .relativeServiceRoot {
+  width: 860px;
+  margin-right: 30px;
+}
+.serviceRoot1 .relativeServiceRoot .relativeService {
+  padding: 30px 26.5px 30px 50px;
+  display: flex;
+  align-items: center;
+}
+
+.serviceRoot1 .descriptionRoot {
+  width: 229.88px;
+  margin-right: 16px;
+}
+
+.serviceRoot1 .descriptionRoot:first-child {
+  border-top: 1px solid transparent;
+}
+
+.serviceRoot1 .lineChartRoot {
+  flex-grow: 1;
+  padding-top: 49.35px;
+  height: 323.39px;
+}
+
+.serviceRoot1 .relativeService .descriptionRoot {
+  margin-right: 42px;
+}
+
+.serviceRoot1 .descriptionItem {
+  border-top: 1px solid rgba(149, 166, 184, 0.1);
+}
+
+.serviceRoot1 .relativeService .descriptionItem {
+  padding: 17px 0 22px 0;
+}
+
+.serviceRoot1 .descriptionItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.serviceRoot1 .descriptionItemCount {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+.serviceRoot1 .doughnutChartRoot {
+  display: flex;
+}
+.serviceRoot1 .chartRoot {
+  position: relative;
+}
+
+.serviceRoot1 .doughnutChartPercent {
+  position: absolute;
+  top: 46%;
+  right: 46%;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.serviceRoot1 .doughnutChartDes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.serviceRoot1 .doughnutChartDesItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.serviceRoot1 .doughnutChartIcon {
+  width: 12px;
+  min-height: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin-right: 12.64px;
+  border-radius: 50px;
+}
+
+.serviceRoot1 .doughnutChartItemName {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
