@@ -4,13 +4,18 @@ import { useNavigate } from "react-router-dom";
 
 function BubbleChart({ data, width, height }) {
   const navigate = useNavigate();
+  const rangeMin = 30;
+  const rangeMax = 100;
   const [mount, setMount] = useState(false);
   const [minValue, setMinValue] = useState(1);
   const [maxValue, setMaxValue] = useState(100);
   const [chartData, setChartData] = useState([]);
 
   const radiusScale = (value) => {
-    const fx = d3.scaleSqrt().range([40, 100]).domain([minValue, maxValue]);
+    const fx = d3
+      .scaleSqrt()
+      .range([rangeMin, rangeMax])
+      .domain([minValue, maxValue]);
     return fx(value);
   };
 
@@ -110,23 +115,31 @@ function BubbleChart({ data, width, height }) {
             <circle
               r={radiusScale(item.amount)}
               fill={`${
-                radiusScale(item.amount) >= 80
+                radiusScale(item.amount) >=
+                ((rangeMax - rangeMin) / 3) * 2 + rangeMin
                   ? "url(#smartBlueGradient)"
-                  : radiusScale(item.amount) >= 60
+                  : radiusScale(item.amount) >=
+                    (rangeMax - rangeMin) / 3 + rangeMin
                   ? "url(#smartPurpleGradient)"
                   : "#fff"
               }`}
             />
             <text
               dy="6"
-              fill={`${radiusScale(item.amount) >= 60 ? "#fff" : "#000"}`}
+              fill={`${
+                radiusScale(item.amount) >= (rangeMax - rangeMin) / 3 + rangeMin
+                  ? "#fff"
+                  : "#000"
+              }`}
               textAnchor="middle"
               fontSize={`${
-                radiusScale(item.amount) >= 80
+                radiusScale(item.amount) >=
+                ((rangeMax - rangeMin) / 3) * 2 + rangeMin
                   ? "30px"
-                  : radiusScale(item.amount) >= 60
-                  ? "25px"
-                  : "20px"
+                  : radiusScale(item.amount) >=
+                    (rangeMax - rangeMin) / 3 + rangeMin
+                  ? "23px"
+                  : "16px"
               }`}
               fontWeight="400"
               fontFamily="Helvetica"
