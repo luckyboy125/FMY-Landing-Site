@@ -1,15 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import "./asset/fonts/helvetica_medium.ttf";
-import "./asset/fonts/Helvetica-Bold.ttf";
-import "./asset/fonts/Helvetica-BoldOblique.ttf";
-import "./asset/fonts/helvetica-light-587ebe5a59211.ttf";
-import "./asset/fonts/Helvetica.ttf";
-import "./asset/fonts/Helvetica-Oblique.ttf";
-import "./asset/fonts/helvetica_neue.ttf";
 import { useEffect } from "react";
-import { useWindowDimensions, adjustContainer } from "./useWindowDimensions";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
 import Tasks from "./pages/Tasks/Tasks";
 import Cases from "./pages/Cases/Cases";
@@ -20,6 +10,16 @@ import CheckLists from "./pages/CheckListPage/CheckLists";
 import WebAnalysisItems from "./pages/WebAnalysisItems/WebAnalysisItems";
 import TopTaskBar from "./components/TopTaskBar/TopTaskBar";
 import SideTaskBar from "./components/SideTaskBar/SideTaskBar";
+import { useWindowDimensions, adjustContainer } from "./useWindowDimensions";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import "./asset/fonts/helvetica_medium.ttf";
+import "./asset/fonts/Helvetica-Bold.ttf";
+import "./asset/fonts/Helvetica-BoldOblique.ttf";
+import "./asset/fonts/helvetica-light-587ebe5a59211.ttf";
+import "./asset/fonts/Helvetica.ttf";
+import "./asset/fonts/Helvetica-Oblique.ttf";
+import "./asset/fonts/helvetica_neue.ttf";
 
 //DONT TOUCH THIS FILE
 

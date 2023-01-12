@@ -1,7 +1,7 @@
-import "./GovernmentCard.css";
 import copyIcon from "../../../../asset/government/copy.svg";
 import twitterIcon from "../../../../asset/government/twitter.svg";
 import person4 from "../../../../asset/person4.svg";
+import "./GovernmentCard.css";
 
 function GovernmentCard({ className, imgRoot }) {
   return (

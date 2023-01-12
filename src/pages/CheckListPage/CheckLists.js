@@ -1,12 +1,12 @@
+import { useState } from "react";
+import CheckListsLongItem from "./component/CheckListsLongItem/CheckListsLongItem";
+import NewCheckListsModal from "./component/NewCheckListsModal/NewCheckListsModal";
+import CheckListsShortItem from "./component/CheckListsShortItem/CheckListsShortItem";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import PlusButton from "../../components/PlusButton/PlusButton";
 import Person1 from "../../asset/person1.svg";
 import Person2 from "../../asset/person2.svg";
 import Person3 from "../../asset/person3.svg";
-import { useState } from "react";
-import CheckListsLongItem from "./component/CheckListsLongItem/CheckListsLongItem";
-import NewCheckListsModal from "./component/NewCheckListsModal/NewCheckListsModal";
-import CheckListsShortItem from "./component/CheckListsShortItem/CheckListsShortItem";
 import "./CheckLists.css";
 
 function CheckLists() {

@@ -1,10 +1,9 @@
-import { useState } from "react";
+import HomeCard from "./component/HomeCard";
 import PlusButton from "../../components/PlusButton/PlusButton";
-import handImage from "../../asset/images/hand.svg";
-import "./Home.css";
 import ActionButton from "../../components/ActionButton/ActionButton";
 import CustomizeInlineChart from "../../components/CustomizeInlineChart/CustomizeInlineChart";
-import HomeCard from "./component/HomeCard";
+import handImage from "../../asset/images/hand.svg";
+import "./Home.css";
 
 function Home() {
   return (
@@ -35,7 +34,6 @@ function Home() {
               cardContent="Hezbollah called out for boycotting the elections in Bahrain"
               author="Nimrod Ben Efraim"
               cardDate="31 October 2022"
-              commitCount="2"
             />
             <HomeCard
               className="homeCard"
@@ -43,7 +41,6 @@ function Home() {
               cardContent="Hezbollah called out for boycotting the elections in Bahrain"
               author="Nimrod Ben Efraim"
               cardDate="31 October 2022"
-              commitCount="2"
             />
             <HomeCard
               className="lastHomeCard"
@@ -51,7 +48,6 @@ function Home() {
               cardContent="Hezbollah called out for boycotting the elections in Bahrain"
               author="Nimrod Ben Efraim"
               cardDate="31 October 2022"
-              commitCount="2"
             />
           </div>
           <div className="inline">
@@ -61,7 +57,6 @@ function Home() {
               cardContent="Hezbollah called out for boycotting the elections in Bahrain"
               author="Nimrod Ben Efraim"
               cardDate="31 October 2022"
-              commitCount="2"
             />
             <HomeCard
               className="homeCard"
@@ -69,7 +64,6 @@ function Home() {
               cardContent="Hezbollah called out for boycotting the elections in Bahrain"
               author="Nimrod Ben Efraim"
               cardDate="31 October 2022"
-              commitCount="2"
             />
             <HomeCard
               className="lastHomeCard"
@@ -77,7 +71,6 @@ function Home() {
               cardContent="Hezbollah called out for boycotting the elections in Bahrain"
               author="Nimrod Ben Efraim"
               cardDate="31 October 2022"
-              commitCount="2"
             />
           </div>
         </div>

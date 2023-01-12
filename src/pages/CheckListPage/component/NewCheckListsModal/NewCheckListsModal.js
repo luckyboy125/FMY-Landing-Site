@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import "./NewCheckListsModal.css";
 import CloseIcon from "../../../../asset/images/close_icon.svg";
 import Calendar from "../../../../asset/images/calendar.svg";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
 import PlusButton from "../../../../components/PlusButton/PlusButton";
+import "./NewCheckListsModal.css";
 
 function NewCheckListsModal({ className, show, onClose }) {
   const [title, setTitle] = useState("");

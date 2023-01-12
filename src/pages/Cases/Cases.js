@@ -2,9 +2,9 @@ import { useState } from "react";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import PlusButton from "../../components/PlusButton/PlusButton";
 import SearchInput from "../../components/SearchInput/SearchInput";
-import "./Cases.css";
 import BubbleChart from "./component/BubbleChart/BubbleChart";
 import Service from "./component/Service/Service";
+import "./Cases.css";
 
 function Cases() {
   const tabData = ["All", "Case Comparison"];
@@ -22,13 +22,16 @@ function Cases() {
     { category: "Lorem", amount: 0.28 },
     { category: "Lorem", amount: 0.55 },
     { category: "Lorem", amount: 0.43 },
+    { category: "Government", amount: 0.99, link: "government" },
     { category: "Lorem", amount: 0.31 },
     { category: "Lorem", amount: 0.81 },
     { category: "Lorem", amount: 0.53 },
     { category: "Lorem", amount: 0.19 },
     { category: "Ipsum", amount: 0.87 },
+    { category: "Service", amount: 0.59, link: "service" },
     { category: "Ipsum", amount: 0.28 },
     { category: "Ipsum", amount: 0.55 },
+    { category: "Army", amount: 0.27, link: "army" },
     { category: "Ipsum", amount: 0.43 },
     { category: "Ipsum", amount: 0.91 },
     { category: "Ipsum", amount: 0.81 },
@@ -39,9 +42,6 @@ function Cases() {
     { category: "Ipsum", amount: 0.91 },
     { category: "Ipsum", amount: 0.81 },
     { category: "Ipsum", amount: 0.81 },
-    { category: "Government", amount: 0.99, link: "government" },
-    { category: "Service", amount: 0.59, link: "service" },
-    { category: "Army", amount: 0.27, link: "army" },
   ];
 
   return (

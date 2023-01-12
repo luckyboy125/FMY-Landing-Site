@@ -1,12 +1,12 @@
-import ActionButton from "../../components/ActionButton/ActionButton";
-import handImage from "../../asset/images/hand.svg";
-import "./WebAnalysisItem.css";
-import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
 import Stats from "./component/Stats/Stats";
 import TopPlatforms from "./component/TopPlatforms/TopPlatforms";
 import Sentiment from "./component/Sentiment/Sentiment";
+import ActionButton from "../../components/ActionButton/ActionButton";
+import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
 import CustomizeDoughnutChart from "../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 import { doughnutChartColorData } from "../../helpers/chart.helper";
+import handImage from "../../asset/images/hand.svg";
+import "./WebAnalysisItem.css";
 
 function WebAnalysisItems() {
   const lineChartData = {

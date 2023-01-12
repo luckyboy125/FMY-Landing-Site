@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
 import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./TaskShortItem.css";

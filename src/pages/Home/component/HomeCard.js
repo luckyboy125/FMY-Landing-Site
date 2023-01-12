@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Person3 from "../../../asset/person3.svg";
 import facebook from "../../../asset/images/social/facebook.svg";
 import instagram from "../../../asset/images/social/instagram.svg";
@@ -10,14 +9,7 @@ import telegram from "../../../asset/images/social/telegram.svg";
 import twitter from "../../../asset/images/social/twitter.svg";
 import "./HomeCard.css";
 
-function HomeCard({
-  className,
-  cardType,
-  cardContent,
-  author,
-  cardDate,
-  commitCount,
-}) {
+function HomeCard({ className, cardType, cardContent, author, cardDate }) {
   const card_type = {
     boycott: {
       title: "Boycott elections",

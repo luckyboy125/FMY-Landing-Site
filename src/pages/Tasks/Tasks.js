@@ -1,14 +1,14 @@
+import { useState } from "react";
+import TaskShortItem from "./component/TaskShortItem/TaskShortItem";
+import TaskLongItem from "./component/TaskLongItem/TaskLongItem";
+import NewTaskModal from "./component/NewTaskModal/NewTaskModal";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import PlusButton from "../../components/PlusButton/PlusButton";
-import TaskLongItem from "./component/TaskLongItem/TaskLongItem";
+import ColorBtn from "../../components/ColorBtn/ColorBtn";
 import Person1 from "../../asset/person1.svg";
 import Person2 from "../../asset/person2.svg";
 import Person3 from "../../asset/person3.svg";
 import "./Tasks.css";
-import ColorBtn from "../../components/ColorBtn/ColorBtn";
-import TaskShortItem from "./component/TaskShortItem/TaskShortItem";
-import NewTaskModal from "./component/NewTaskModal/NewTaskModal";
-import { useState } from "react";
 
 function Tasks() {
   const [newTaskModalShow, setNewTaskModalShow] = useState(false);
