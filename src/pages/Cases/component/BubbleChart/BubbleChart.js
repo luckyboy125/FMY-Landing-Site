@@ -2,6 +2,13 @@ import React, { useEffect, useState } from "react";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import { useNavigate } from "react-router-dom";
 
+function useForceUpdate() {
+  const [value, setValue] = useState(0); // integer state
+  return () => setValue((value) => value + 1); // update state to force render
+  // A function that increment 👆🏻 the previous state like here
+  // is better than directly setting `setValue(value + 1)`
+}
+
 function BubbleChart({ data, width, height }) {
   const navigate = useNavigate();
   const rangeMin = 30;
@@ -10,6 +17,8 @@ function BubbleChart({ data, width, height }) {
   const [minValue, setMinValue] = useState(1);
   const [maxValue, setMaxValue] = useState(100);
   const [chartData, setChartData] = useState([]);
+
+  const forceUpdate = useForceUpdate();
 
   const radiusScale = (value) => {
     const fx = d3
@@ -35,8 +44,15 @@ function BubbleChart({ data, width, height }) {
         setChartData(cData);
       })
       .on("end", () => {
-        setMount(true);
+        handlePrepare();
       });
+  };
+
+  const handlePrepare = () => {
+    setMount(true);
+    setTimeout(() => {
+      forceUpdate();
+    }, 1000);
   };
 
   const init = async () => {
@@ -65,93 +81,99 @@ function BubbleChart({ data, width, height }) {
     init();
   }, [mount]);
 
+  console.log("render count: ");
   return (
-    <svg width={width} height={height}>
-      <linearGradient
-        spreadMethod="reflect"
-        id="smartPurpleGradient"
-        cx="50%"
-        cy="50%"
-        r="50%"
-        fx="50%"
-        fy="50%"
-        fr="10%"
-      >
-        <stop offset="0%" stopColor="#5D43FF" />
-        <stop offset="98.25%" stopColor="#A5A4FF" />
-      </linearGradient>
-      <linearGradient
-        spreadMethod="reflect"
-        id="smartBlueGradient"
-        cx="50%"
-        cy="50%"
-        r="50%"
-        fx="50%"
-        fy="50%"
-        fr="10%"
-      >
-        <stop offset="0%" stopColor="#90C2FF" />
-        <stop offset="98.25%" stopColor="#60A7FF" />
-      </linearGradient>
-      {mount &&
-        chartData.map((item, index) => {
-          return (
-            <g
-              key={index}
-              transform={`translate(${width / 2 + item.x}, ${
-                height / 2 + item.y
-              })`}
-              style={{
-                cursor: "pointer",
-                filter: `${
-                  item.link
-                    ? "drop-shadow(rgba(117, 179, 255, 1) 0px 0px 10px)"
-                    : ""
-                }`,
-              }}
-              onClick={
-                item.link ? () => handleBubbleClick(item.link) : () => {}
-              }
-            >
-              <circle
-                r={radiusScale(item.amount)}
-                fill={`${
-                  radiusScale(item.amount) >=
-                  ((rangeMax - rangeMin) / 3) * 2 + rangeMin
-                    ? "url(#smartBlueGradient)"
-                    : radiusScale(item.amount) >=
-                      (rangeMax - rangeMin) / 3 + rangeMin
-                    ? "url(#smartPurpleGradient)"
-                    : "#fff"
-                }`}
-              />
-              <text
-                dy="6"
-                fill={`${
-                  radiusScale(item.amount) >=
-                  (rangeMax - rangeMin) / 3 + rangeMin
-                    ? "#fff"
-                    : "#000"
-                }`}
-                textAnchor="middle"
-                fontSize={`${
-                  radiusScale(item.amount) >=
-                  ((rangeMax - rangeMin) / 3) * 2 + rangeMin
-                    ? "30px"
-                    : radiusScale(item.amount) >=
-                      (rangeMax - rangeMin) / 3 + rangeMin
-                    ? "23px"
-                    : "16px"
-                }`}
-                fontWeight="400"
-                fontFamily="Helvetica"
+    <>
+      {mount ? (
+        <svg width={width} height={height}>
+          <linearGradient
+            spreadMethod="reflect"
+            id="smartPurpleGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+            fr="10%"
+          >
+            <stop offset="0%" stopColor="#5D43FF" />
+            <stop offset="98.25%" stopColor="#A5A4FF" />
+          </linearGradient>
+          <linearGradient
+            spreadMethod="reflect"
+            id="smartBlueGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+            fr="10%"
+          >
+            <stop offset="0%" stopColor="#90C2FF" />
+            <stop offset="98.25%" stopColor="#60A7FF" />
+          </linearGradient>
+          {chartData.map((item, index) => {
+            return (
+              <g
+                key={index}
+                transform={`translate(${width / 2 + item.x}, ${
+                  height / 2 + item.y
+                })`}
+                style={{
+                  cursor: "pointer",
+                  filter: `${
+                    item.link
+                      ? "drop-shadow(rgba(117, 179, 255, 1) 0px 0px 10px)"
+                      : ""
+                  }`,
+                }}
+                onClick={
+                  item.link ? () => handleBubbleClick(item.link) : () => {}
+                }
               >
-                {item.category}
-              </text>
-            </g>
-          );
-        })}
-    </svg>
+                <circle
+                  r={radiusScale(item.amount)}
+                  fill={`${
+                    radiusScale(item.amount) >=
+                    ((rangeMax - rangeMin) / 3) * 2 + rangeMin
+                      ? "url(#smartBlueGradient)"
+                      : radiusScale(item.amount) >=
+                        (rangeMax - rangeMin) / 3 + rangeMin
+                      ? "url(#smartPurpleGradient)"
+                      : "#fff"
+                  }`}
+                />
+                <text
+                  dy="6"
+                  fill={`${
+                    radiusScale(item.amount) >=
+                    (rangeMax - rangeMin) / 3 + rangeMin
+                      ? "#fff"
+                      : "#000"
+                  }`}
+                  textAnchor="middle"
+                  fontSize={`${
+                    radiusScale(item.amount) >=
+                    ((rangeMax - rangeMin) / 3) * 2 + rangeMin
+                      ? "30px"
+                      : radiusScale(item.amount) >=
+                        (rangeMax - rangeMin) / 3 + rangeMin
+                      ? "23px"
+                      : "16px"
+                  }`}
+                  fontWeight="400"
+                  fontFamily="Helvetica"
+                >
+                  {item.category}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+      ) : (
+        <h1 style={{ color: "#fff", margin: "auto" }}>Loading</h1>
+      )}
+    </>
   );
 }
 

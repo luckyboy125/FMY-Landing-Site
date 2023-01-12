@@ -69,8 +69,8 @@ function Cases() {
           </div>
         </div>
         <div className="casesContainer">
-          {/* <BubbleChart data={rawdata} width={1616} height={894} /> */}
-          <Service />
+          <BubbleChart data={rawdata} width={1616} height={894} />
+          {/* <Service /> */}
         </div>
       </div>
     </>
