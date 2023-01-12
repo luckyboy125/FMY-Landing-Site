@@ -102,8 +102,8 @@ function WebAnalysisItems() {
               <CustomizeLineChart
                 axis={lineChartData.label}
                 ayis={lineChartData.data}
-                width={678}
-                height={259}
+                width={717}
+                height={274}
               />
             </div>
           </div>

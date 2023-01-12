@@ -92,7 +92,11 @@ function Service() {
           header={
             <>
               <div className="title">Case tagging over time</div>
-              <ActionButton name="Show" content="Last Week" className="" />
+              <ActionButton
+                name="Show"
+                content="Last Week"
+                className="timeTool"
+              />
             </>
           }
         >
@@ -100,8 +104,8 @@ function Service() {
             <CustomizeLineChart
               axis={lineChartData.label}
               ayis={lineChartData.data}
-              width={628}
-              height={100}
+              width={714}
+              height={280}
             />
           </div>
         </CardLayout>

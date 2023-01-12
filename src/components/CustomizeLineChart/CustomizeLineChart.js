@@ -22,6 +22,8 @@ function CustomizeLineChart({ axis, ayis, width, height }) {
 
   const linechartOption = {
     type: "line",
+    responsive: false,
+    maintainAspectRatio: false,
     title: {
       display: false,
     },
