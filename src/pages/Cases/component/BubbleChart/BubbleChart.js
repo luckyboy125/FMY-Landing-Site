@@ -3,10 +3,8 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import { useNavigate } from "react-router-dom";
 
 function useForceUpdate() {
-  const [value, setValue] = useState(0); // integer state
-  return () => setValue((value) => value + 1); // update state to force render
-  // A function that increment 👆🏻 the previous state like here
-  // is better than directly setting `setValue(value + 1)`
+  const [value, setValue] = useState(0);
+  return () => setValue((value) => value + 1);
 }
 
 function BubbleChart({ data, width, height }) {
@@ -42,17 +40,13 @@ function BubbleChart({ data, width, height }) {
       )
       .on("tick", () => {
         setChartData(cData);
-      })
-      .on("end", () => {
         handlePrepare();
       });
   };
 
   const handlePrepare = () => {
     setMount(true);
-    setTimeout(() => {
-      forceUpdate();
-    }, 1000);
+    forceUpdate();
   };
 
   const init = async () => {
