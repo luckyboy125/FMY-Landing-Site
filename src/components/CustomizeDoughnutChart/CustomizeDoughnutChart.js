@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./CustomizeDoughnutChart.css";
 Chart.register(...registerables);
 
-function CustomizeDoughnutChart({ data, label, colorInfo }) {
+function CustomizeDoughnutChart({ data, label, colorInfo, showNumber }) {
   const [chartColor, setChartColor] = useState([]);
 
   useEffect(() => {
@@ -188,7 +188,7 @@ function CustomizeDoughnutChart({ data, label, colorInfo }) {
           },
         ]}
       />
-      <div className="topPercent">86%</div>
+      {showNumber ? <div className="topPercent">86%</div> : <></>}
       <div style={{ position: "relative" }}>
         <div id="doughnut-chartjs-tooltip">
           <table></table>

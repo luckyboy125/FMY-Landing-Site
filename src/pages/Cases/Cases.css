@@ -1,5 +1,5 @@
 .casesRoot {
-  padding: 2px 35px 50px 33px;
+  padding: 2px 35px 50px 30px;
 }
 .casesRoot .casesTitle {
   font-family: "Helvetica";
@@ -8,9 +8,9 @@
   font-size: 40px;
   line-height: 24px;
   color: #ffffff;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
   padding: 0 6px;
-  margin-top: 5px;
+  margin-top: 6px;
 }
 .casesRoot .casesTab .actionTabItem {
   padding: 4px !important;
@@ -33,7 +33,7 @@
   margin-bottom: 2px;
 }
 .casesRoot .casesContainer {
-  margin-top: 42.5px;
+  margin-top: 29px;
   text-align: center;
 }
 

@@ -198,6 +198,8 @@ function Government() {
                 <CustomizeLineChart
                   axis={lineChartData.label}
                   ayis={lineChartData.data}
+                  width={678}
+                  height={259}
                 />
               </div>
             </div>

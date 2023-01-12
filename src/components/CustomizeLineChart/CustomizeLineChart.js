@@ -3,7 +3,7 @@ import { Chart, registerables } from "chart.js";
 import { useEffect, useState } from "react";
 Chart.register(...registerables);
 
-function CustomizeLineChart({ axis, ayis }) {
+function CustomizeLineChart({ axis, ayis, width, height }) {
   const [lineColor, setLineColor] = useState("");
   const [areaColor, setAreaColor] = useState("");
 
@@ -229,8 +229,8 @@ function CustomizeLineChart({ axis, ayis }) {
       <Line
         id="line_chart"
         type="line"
-        width={678}
-        height={259}
+        width={width}
+        height={height}
         options={linechartOption}
         data={lineChartAction(axis, ayis)}
         plugins={[

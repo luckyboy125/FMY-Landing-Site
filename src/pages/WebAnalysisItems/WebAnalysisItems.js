@@ -102,6 +102,8 @@ function WebAnalysisItems() {
               <CustomizeLineChart
                 axis={lineChartData.label}
                 ayis={lineChartData.data}
+                width={678}
+                height={259}
               />
             </div>
           </div>
@@ -131,6 +133,7 @@ function WebAnalysisItems() {
                 data={doughnutChartData.data}
                 label={doughnutChartData.label}
                 colorInfo={doughnutChartColorData}
+                showNumber
               />
               <div className="doughnutChartDes">
                 {doughnutChartData.label.map((item, index) => {

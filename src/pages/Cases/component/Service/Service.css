@@ -1,13 +1,14 @@
 .serviceRoot1 {
   display: flex;
-  align-items: center;
 }
+
 .serviceRoot1 .relativeServiceRoot {
-  width: 860px;
+  width: 871px;
   margin-right: 30px;
 }
+
 .serviceRoot1 .relativeServiceRoot .relativeService {
-  padding: 30px 26.5px 30px 50px;
+  padding: 30px 26.5px 37px 42px;
   display: flex;
   align-items: center;
 }
@@ -18,7 +19,7 @@
 }
 
 .serviceRoot1 .descriptionRoot .descriptionItem:first-child {
-  border-top: 1px solid transparent;
+  border: none !important;
   padding-top: 0px !important;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .serviceRoot1 .relativeServiceRoot .relativeServiceHeader {
-  padding: 0 20px;
+  padding: 0 21px;
 }
 
 .serviceRoot1 .relativeServiceRoot .relativeServiceHeader .headerContent {
@@ -44,7 +45,7 @@
   font-size: 30px;
   line-height: 24px;
   color: #ffffff;
-  margin-right: 65px;
+  margin-right: 63px;
 }
 
 .serviceRoot1 .relativeService .descriptionRoot {
@@ -56,7 +57,6 @@
 }
 
 .serviceRoot1 .relativeService .descriptionItem {
-  padding: 17px 0 22px 0;
   text-align: left;
 }
 
@@ -75,12 +75,18 @@
   font-weight: 300;
   font-size: 34px;
   line-height: 24px;
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 .serviceRoot1 .doughnutChartRoot {
   display: flex;
+  margin-left: 25px;
 }
+
+.serviceRoot1 .doughnutChartRoot .doughnutChartDes {
+  margin-left: 29px;
+}
+
 .serviceRoot1 .chartRoot {
   position: relative;
 }
@@ -110,8 +116,8 @@
 }
 
 .serviceRoot1 .doughnutChartIcon {
-  width: 12px;
-  min-height: 12px;
+  width: 13px;
+  min-height: 13px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   margin-right: 12.64px;
   border-radius: 50px;
@@ -124,4 +130,32 @@
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.serviceRoot1 .tagOverTimeRoot {
+  flex-grow: 1;
+}
+
+.serviceRoot1 .tagOverTimeRoot .tagOverTimeHeader {
+  justify-content: space-between;
+  padding: 0 10px 0 20px;
+}
+
+.serviceRoot1 .tagOverTimeRoot .tagOverTimeHeader .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.serviceRoot1 .tagOverTimeRoot .tagOverTime {
+  display: flex;
+  justify-content: center;
+}
+
+.tagOverTimeLineRoot {
+  margin-top: 83px;
+  max-width: 668px;
 }

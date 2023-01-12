@@ -109,6 +109,8 @@ function Basic() {
               <CustomizeLineChart
                 axis={lineChartData.label}
                 ayis={lineChartData.data}
+                width={678}
+                height={259}
               />
             </div>
           </div>
@@ -143,6 +145,7 @@ function Basic() {
                 data={doughnutChartData.data}
                 label={doughnutChartData.label}
                 colorInfo={doughnutChartColorData}
+                showNumber
               />
               <div className="doughnutChartDes">
                 {doughnutChartData.label.map((item, index) => {
