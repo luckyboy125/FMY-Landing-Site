@@ -26,10 +26,10 @@ function BubbleChart({ data, width, height }) {
     return fx(value);
   };
 
-  const simulatePositions = async (cData) => {
+  const simulatePositions = (cData) => {
     d3.forceSimulation()
       .nodes(cData)
-      .velocityDecay(0.5)
+      .velocityDecay(0.8)
       .force("x", d3.forceX().strength(0.05))
       .force("y", d3.forceY().strength(0.2))
       .force(
@@ -40,16 +40,16 @@ function BubbleChart({ data, width, height }) {
       )
       .on("tick", () => {
         setChartData(cData);
-        handlePrepare();
+        setMount(true);
+        forceUpdate();
       });
   };
 
-  const handlePrepare = () => {
-    setMount(true);
-    forceUpdate();
+  const handleBubbleClick = (link) => {
+    navigate(`/${link}`);
   };
 
-  const init = async () => {
+  useEffect(() => {
     if (data.length > 0) {
       setMinValue(
         0.95 *
@@ -65,14 +65,6 @@ function BubbleChart({ data, width, height }) {
       );
       simulatePositions(data);
     }
-  };
-
-  const handleBubbleClick = (link) => {
-    navigate(`/${link}`);
-  };
-
-  useEffect(() => {
-    init();
   }, [mount]);
 
   return (
