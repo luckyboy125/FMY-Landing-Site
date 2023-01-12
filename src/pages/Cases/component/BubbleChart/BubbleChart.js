@@ -81,11 +81,10 @@ function BubbleChart({ data, width, height }) {
     init();
   }, [mount]);
 
-  console.log("render count: ");
   return (
     <>
       {mount ? (
-        <svg width={width} height={height}>
+        <svg id="bubble_chart" width={width} height={height}>
           <linearGradient
             spreadMethod="reflect"
             id="smartPurpleGradient"
