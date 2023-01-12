@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CardLayout from "../../../../components/CardLayout/CardLayout";
 import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
+import GradientButton from "../../../../components/GradientButton/GradientButton";
 import { doughnutChartColorData } from "../../../../helpers/chart.helper";
 import "./Service.css";
 
@@ -15,24 +16,39 @@ function Service() {
         <CardLayout
           className="relativeServiceRoot"
           contentStyle="relativeService"
+          headerStyle="relativeServiceHeader"
+          header={
+            <>
+              <GradientButton content="Service" />
+              <div className="headerContent">Related cases</div>
+            </>
+          }
         >
           <div className="descriptionRoot">
             <div className="descriptionItem">
-              <div className="descriptionItemTitle">Lorem ipsum</div>
-              <div className="descriptionItemCount" style={{ color: "#fff" }}>
-                53
+              <div className="descriptionItemTitle">Total items</div>
+              <div
+                className="descriptionItemCount"
+                style={{ color: "#0FDF63" }}
+              >
+                630
               </div>
             </div>
             <div className="descriptionItem">
-              <div className="descriptionItemTitle">Lorem ipsum</div>
-              <div className="descriptionItemCount" style={{ color: "#fff" }}>
-                +2
+              <div className="descriptionItemTitle">
+                New items (past 7 days)
+              </div>
+              <div
+                className="descriptionItemCount"
+                style={{ color: "#75B3FF" }}
+              >
+                100
               </div>
             </div>
             <div className="descriptionItem">
-              <div className="descriptionItemTitle">Lorem ipsum</div>
+              <div className="descriptionItemTitle">Added date</div>
               <div className="descriptionItemCount" style={{ color: "#fff" }}>
-                Lorem ipsum
+                17 Nov 2022
               </div>
             </div>
           </div>
