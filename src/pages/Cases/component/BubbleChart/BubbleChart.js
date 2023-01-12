@@ -69,35 +69,35 @@ function BubbleChart({ data, width, height }) {
 
   return (
     <>
-      {mount ? (
-        <svg id="bubble_chart" width={width} height={height}>
-          <linearGradient
-            spreadMethod="reflect"
-            id="smartPurpleGradient"
-            cx="50%"
-            cy="50%"
-            r="50%"
-            fx="50%"
-            fy="50%"
-            fr="10%"
-          >
-            <stop offset="0%" stopColor="#5D43FF" />
-            <stop offset="98.25%" stopColor="#A5A4FF" />
-          </linearGradient>
-          <linearGradient
-            spreadMethod="reflect"
-            id="smartBlueGradient"
-            cx="50%"
-            cy="50%"
-            r="50%"
-            fx="50%"
-            fy="50%"
-            fr="10%"
-          >
-            <stop offset="0%" stopColor="#90C2FF" />
-            <stop offset="98.25%" stopColor="#60A7FF" />
-          </linearGradient>
-          {chartData.map((item, index) => {
+      <svg id="bubble_chart" width={width} height={height}>
+        <linearGradient
+          spreadMethod="reflect"
+          id="smartPurpleGradient"
+          cx="50%"
+          cy="50%"
+          r="50%"
+          fx="50%"
+          fy="50%"
+          fr="10%"
+        >
+          <stop offset="0%" stopColor="#5D43FF" />
+          <stop offset="98.25%" stopColor="#A5A4FF" />
+        </linearGradient>
+        <linearGradient
+          spreadMethod="reflect"
+          id="smartBlueGradient"
+          cx="50%"
+          cy="50%"
+          r="50%"
+          fx="50%"
+          fy="50%"
+          fr="10%"
+        >
+          <stop offset="0%" stopColor="#90C2FF" />
+          <stop offset="98.25%" stopColor="#60A7FF" />
+        </linearGradient>
+        {mount &&
+          chartData.map((item, index) => {
             return (
               <g
                 key={index}
@@ -154,10 +154,7 @@ function BubbleChart({ data, width, height }) {
               </g>
             );
           })}
-        </svg>
-      ) : (
-        <h1 style={{ color: "#fff", margin: "auto" }}>Loading</h1>
-      )}
+      </svg>
     </>
   );
 }
