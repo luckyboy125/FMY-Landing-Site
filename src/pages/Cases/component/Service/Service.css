@@ -155,13 +155,10 @@
 }
 
 .serviceRoot1 .tagOverTimeRoot .tagOverTime {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .serviceRoot1 .tagOverTimeRoot .tagOverTime .tagOverTimeLineRoot {
   margin: 73px 0 0;
-}
-
-.serviceRoot1 .tagOverTimeRoot .tagOverTime .tagOverTimeLineRoot canvas {
-  margin: auto;
 }
