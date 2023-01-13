@@ -64,7 +64,7 @@ function Cases() {
             className="casesTab"
             data={tabData}
             onSelect={(e) => handleTab(e)}
-            select={query.get("cases_tab") === null ? tabData[0]:query.get("cases_tab")}
+            select={query.get("cases_tab") === null ? tabData[0] : query.get("cases_tab")}
           />
           <div className="lastItemRoot">
             <SearchInput
@@ -75,13 +75,13 @@ function Cases() {
             <PlusButton
               content="+ New case"
               className="casesHeaderBtn"
-              action={() => {}}
+              action={() => { }}
             />
           </div>
         </div>
         <div className="casesContainer">
           {query.get("cases_tab") === tabData[0] ||
-          query.get("cases_tab") === null ? (
+            query.get("cases_tab") === null ? (
             <BubbleChart data={rawdata} width={1616} height={894} />
           ) : query.get("cases_tab") === tabData[1] ? (
             <></>

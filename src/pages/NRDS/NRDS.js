@@ -28,12 +28,12 @@ function NRDS() {
             className="nrdsHeaderTab"
             data={tabData}
             onSelect={(item) => handleTab(item)}
-            select={ query.get("nrds_tab") === null ?tabData[0]: query.get("nrds_tab")}
+            select={query.get("nrds_tab") === null ? tabData[0] : query.get("nrds_tab")}
           />
-          <PlusButton content="+ New keyword" action={() => {}} />
+          <PlusButton content="+ New keyword" action={() => { }} />
         </div>
         {query.get("nrds_tab") === tabData[0] ||
-        query.get("nrds_tab") === null ? (
+          query.get("nrds_tab") === null ? (
           <Basic />
         ) : query.get("nrds_tab") === tabData[1] ? (
           <Database />
