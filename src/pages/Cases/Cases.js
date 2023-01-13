@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import PlusButton from "../../components/PlusButton/PlusButton";
 import SearchInput from "../../components/SearchInput/SearchInput";
@@ -7,9 +8,19 @@ import Service from "./component/Service/Service";
 import "./Cases.css";
 
 function Cases() {
-  const tabData = ["All", "Case Comparison"];
-  const [tab, setTab] = useState(tabData[0]);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const query = new URLSearchParams(location.search);
+  const tabData = ["All", "Case Comparison", "Service"];
   const [searchValue, setSearchValue] = useState("");
+
+  const handleTab = (_tab) => {
+    query.set("cases_tab", _tab);
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+  };
 
   const rawdata = [
     { category: "Lorem", amount: 0.28 },
@@ -52,8 +63,8 @@ function Cases() {
           <ActionTab
             className="casesTab"
             data={tabData}
-            onSelect={(e) => setTab(e)}
-            select={tab}
+            onSelect={(e) => handleTab(e)}
+            select={query.get("cases_tab") === null ? tabData[0]:query.get("cases_tab")}
           />
           <div className="lastItemRoot">
             <SearchInput
@@ -69,8 +80,14 @@ function Cases() {
           </div>
         </div>
         <div className="casesContainer">
-          <BubbleChart data={rawdata} width={1616} height={894} />
-          {/* <Service /> */}
+          {query.get("cases_tab") === tabData[0] ||
+          query.get("cases_tab") === null ? (
+            <BubbleChart data={rawdata} width={1616} height={894} />
+          ) : query.get("cases_tab") === tabData[1] ? (
+            <></>
+          ) : (
+            <Service />
+          )}
         </div>
       </div>
     </>

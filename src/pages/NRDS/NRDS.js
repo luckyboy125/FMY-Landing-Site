@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Basic from "./component/Basic/Basic";
 import Database from "./component/Database/Database";
@@ -12,9 +11,7 @@ function NRDS() {
   const query = new URLSearchParams(location.search);
   const tabData = ["NRD's", "Database", "Archive"];
 
-  const [tab, setTab] = useState(tabData[0]);
   const handleTab = (_tab) => {
-    setTab(_tab);
     query.set("nrds_tab", _tab);
     navigate({
       pathname: location.pathname,
@@ -31,7 +28,7 @@ function NRDS() {
             className="nrdsHeaderTab"
             data={tabData}
             onSelect={(item) => handleTab(item)}
-            select={tab}
+            select={ query.get("nrds_tab") === null ?tabData[0]: query.get("nrds_tab")}
           />
           <PlusButton content="+ New keyword" action={() => {}} />
         </div>
