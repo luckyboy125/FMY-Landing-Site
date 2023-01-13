@@ -5,6 +5,7 @@ import CardLayout from "../../../../components/CardLayout/CardLayout";
 import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
 import GradientButton from "../../../../components/GradientButton/GradientButton";
+import RoundButton from "../../../../components/RoundButton/RoundButton";
 import { doughnutChartColorData } from "../../../../helpers/chart.helper";
 import "./Service.css";
 
@@ -193,6 +194,7 @@ function Service() {
               })}
             </div>
           </div>
+          <RoundButton className="toolRoot" />
         </CardLayout>
         <CardLayout
           className="tagOverTimeRoot"
