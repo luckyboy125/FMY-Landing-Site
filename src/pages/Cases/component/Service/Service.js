@@ -23,15 +23,8 @@ import "./Service.css";
 function Service() {
   const [searchValue, setSearchValue] = useState("");
   const [mockTableData, setMockTableData] = useState([]);
-  const lineChartData = {
-    label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    data: [1320, 932, 901, 1300, 1290, 1330, 1320],
-  };
-
-  const doughnutChartData = {
-    label: ["first", "second", "third", "fourth", "fifth", "sixth"],
-    data: [100, 120, 124, 300, 145, 50],
-  };
+  const [mockLineData, setMockLineData] = useState([]);
+  const [mockDoughnutData, setMockDoughnutData] = useState([]);
 
   const WordCloudOption = {
     $schema: "https://vega.github.io/schema/vega/v5.json",
@@ -157,6 +150,25 @@ function Service() {
         },
       ]);
     }
+    setInterval(() => {
+      setMockLineData([
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+      ]);
+      setMockDoughnutData([
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+      ]);
+    }, 3000);
   }, []);
 
   return (
@@ -206,24 +218,26 @@ function Service() {
           </div>
           <div className="doughnutChartRoot">
             <CustomizeDoughnutChart
-              data={doughnutChartData.data}
-              label={doughnutChartData.label}
+              data={mockDoughnutData}
+              label={["first", "second", "third", "fourth", "fifth", "sixth"]}
               colorInfo={doughnutChartColorData}
             />
             <div className="doughnutChartDes">
-              {doughnutChartData.label.map((item, index) => {
-                return (
-                  <div className="doughnutChartDesItem" key={index}>
-                    <div
-                      className="doughnutChartIcon"
-                      style={{
-                        background: `linear-gradient(238.95deg, ${doughnutChartColorData[index]?.first} 31.21%, ${doughnutChartColorData[index]?.last} 62.45%)`,
-                      }}
-                    ></div>
-                    <div className="doughnutChartItemName">{item}</div>
-                  </div>
-                );
-              })}
+              {["first", "second", "third", "fourth", "fifth", "sixth"].map(
+                (item, index) => {
+                  return (
+                    <div className="doughnutChartDesItem" key={index}>
+                      <div
+                        className="doughnutChartIcon"
+                        style={{
+                          background: `linear-gradient(238.95deg, ${doughnutChartColorData[index]?.first} 31.21%, ${doughnutChartColorData[index]?.last} 62.45%)`,
+                        }}
+                      ></div>
+                      <div className="doughnutChartItemName">{item}</div>
+                    </div>
+                  );
+                }
+              )}
             </div>
           </div>
           <RoundButton className="toolRoot" />
@@ -245,8 +259,8 @@ function Service() {
         >
           <div className="tagOverTimeLineRoot">
             <CustomizeLineChart
-              axis={lineChartData.label}
-              ayis={lineChartData.data}
+              axis={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
+              ayis={mockLineData}
               width={714}
               height={280}
             />
