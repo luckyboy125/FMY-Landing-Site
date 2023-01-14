@@ -23,7 +23,6 @@
 }
 
 .customizeTable thead th {
-  padding: 14px 0;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -31,6 +30,7 @@
   line-height: 24px;
   color: #ffffff;
   text-align: center;
+  height: 50px;
 }
 
 .customizeTable tbody tr {
@@ -43,8 +43,8 @@
 }
 
 .customizeTable tbody td {
-  padding: 22px 0;
   text-align: center;
+  height: 88px;
 }
 
 .customizeTableRoot .customizeTablePaginationRoot {

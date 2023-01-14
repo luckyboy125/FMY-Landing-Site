@@ -196,21 +196,6 @@
 .tasksContainer .tasksContent .overdueContent .taskShortItem {
   margin-bottom: 20px;
 }
-.dotGroup {
-  cursor: pointer;
-}
-.dotGroup :last-child {
-  margin-bottom: 0 !important;
-}
-.dot {
-  width: 7px;
-  min-width: 7px;
-  height: 7px;
-  min-height: 7px;
-  background: #e4e3e380;
-  margin-bottom: 2px;
-  border-radius: 50%;
-}
 .addTaskBtn {
   font-family: "Helvetica";
   font-style: normal;

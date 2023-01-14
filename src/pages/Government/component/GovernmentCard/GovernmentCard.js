@@ -1,6 +1,7 @@
 import copyIcon from "../../../../asset/government/copy.svg";
 import twitterIcon from "../../../../asset/government/twitter.svg";
 import person4 from "../../../../asset/person4.svg";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 import "./GovernmentCard.css";
 
 function GovernmentCard({ className, imgRoot }) {
@@ -22,11 +23,7 @@ function GovernmentCard({ className, imgRoot }) {
         </div>
         <div className="divline"></div>
         <div className="view">View</div>
-        <div className="dotGroup" onClick={() => {}}>
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-        </div>
+        <ThreeDotBtn action={() => {}} />
       </div>
     </div>
   );

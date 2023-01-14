@@ -2,6 +2,7 @@ import { useState } from "react";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
 import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./TaskShortItem.css";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 
 function TaskShortItem({ className, title, type, avatar, user, click }) {
   const [checkStatus, setCheckStatus] = useState(false);
@@ -43,11 +44,7 @@ function TaskShortItem({ className, title, type, avatar, user, click }) {
           </div>
         </div>
       </div>
-      <div className="dotGroup" onClick={() => click()}>
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
-      </div>
+      <ThreeDotBtn className="dotBtn" action={() => {}} />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import DatabaseDropdown from "./component/DatabaseDropdown/DatabaseDropdown";
 import DatabaseInput from "./component/DatabaseInput/DatabaseInput";
 import person1 from "../../../../asset/person1.svg";
 import "./Database.css";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 
 function Database() {
   const [searchValue, setSearchValue] = useState("");
@@ -88,11 +89,7 @@ function Database() {
               <td className="fourthTd">{item.keyword}</td>
               <td className="fifthTd">
                 <div className="des">View</div>
-                <div className="dotGroup" onClick={() => {}}>
-                  <div className="dot"></div>
-                  <div className="dot"></div>
-                  <div className="dot"></div>
-                </div>
+                <ThreeDotBtn action={() => {}} />
               </td>
             </tr>
           );

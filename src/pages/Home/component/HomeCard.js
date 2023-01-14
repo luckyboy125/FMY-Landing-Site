@@ -8,6 +8,7 @@ import tiktok from "../../../asset/images/social/tiktok.svg";
 import telegram from "../../../asset/images/social/telegram.svg";
 import twitter from "../../../asset/images/social/twitter.svg";
 import "./HomeCard.css";
+import ThreeDotBtn from "../../../components/ThreeDotBtn/ThreeDotBtn";
 
 function HomeCard({ className, cardType, cardContent, author, cardDate }) {
   const card_type = {
@@ -27,11 +28,7 @@ function HomeCard({ className, cardType, cardContent, author, cardDate }) {
   return (
     <>
       <div className={`homeCardRoot ${className}`}>
-        <div className="dotGroup">
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-        </div>
+        <ThreeDotBtn className="dotBtn" />
         <div
           className="cardTitle"
           style={{ backgroundColor: card_type[cardType].color }}

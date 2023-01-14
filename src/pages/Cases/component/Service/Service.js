@@ -15,7 +15,11 @@ import refresh from "../../../../asset/images/refresh_icon.svg";
 import more_tool from "../../../../asset/images/more_tool_icon.svg";
 import more_detail from "../../../../asset/images/more_detail_icon.svg";
 import csv from "../../../../asset/images/csv_icon.svg";
+import person2 from "../../../../asset/person2.svg";
+import youtube from "../../../../asset/images/social/youtube.svg";
 import "./Service.css";
+import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 
 function Service() {
   const [searchValue, setSearchValue] = useState("");
@@ -142,10 +146,15 @@ function Service() {
       setMockTableData((pre) => [
         ...pre,
         {
-          domain: "rock.myspace.com",
-          addedDate: "June 26, 2022",
-          ipaddress: "251.196.63",
-          keyword: "Lorem ipsum",
+          item: "Post",
+          user: "Olive Yew",
+          addeddate: "June 26, 2022 15:45",
+          addbyuser: {
+            name: "Nimrod",
+            image: person2,
+          },
+          case: "Lorem ipsum",
+          priority: "Medium",
         },
       ]);
     }
@@ -289,17 +298,24 @@ function Service() {
         body={mockTableData.map((item, index) => {
           return (
             <tr key={index}>
-              <td className="firstTd">{item.domain}</td>
-              <td className="secondTd">{item.addedDate}</td>
-              <td className="thirdTd">{item.ipaddress}</td>
-              <td className="fourthTd">{item.keyword}</td>
-              <td className="fifthTd">
-                <PlusButton
-                  content="+ Add to monitoring"
-                  action={() => {}}
-                  className="addBtn"
-                />
-                <div className="des">Active</div>
+              <td>
+                <img src={youtube} alt="social_icon"></img>
+              </td>
+              <td>{item.item}</td>
+              <td>{item.user}</td>
+              <td>{item.addeddate}</td>
+              <td>
+                <img src={item.addbyuser.image} alt="avatar" />{" "}
+                {item.addbyuser.name}
+              </td>
+              <td>{item.case}</td>
+              <td>
+                <ColorBtn name="Medium" width={130} arrowShow color="#37CE4A" />
+              </td>
+              <td>View</td>
+              <td>Link</td>
+              <td>
+                <ThreeDotBtn action={() => {}} />
               </td>
             </tr>
           );

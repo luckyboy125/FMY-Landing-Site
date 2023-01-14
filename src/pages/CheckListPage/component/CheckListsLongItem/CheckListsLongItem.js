@@ -2,6 +2,7 @@ import { useState } from "react";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
 import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./CheckListsLongItem.css";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 
 function CheckListsLongItem({ className, title, avatar, user, click, type }) {
   const colorType = {
@@ -43,11 +44,7 @@ function CheckListsLongItem({ className, title, avatar, user, click, type }) {
           </div>
           <ColorBtn name="10 Mar" width={128} color={colorType[type]} />
         </div>
-        <div className="dotGroup" onClick={() => click()}>
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-        </div>
+        <ThreeDotBtn action={() => {}} />
       </div>
     </div>
   );

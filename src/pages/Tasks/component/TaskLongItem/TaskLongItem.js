@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./TaskLongItem.css";
 
@@ -51,11 +52,7 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }) {
             {time.split(",")[2]}
           </div>
         </div>
-        <div className="dotGroup" onClick={() => click()}>
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-        </div>
+        <ThreeDotBtn action={() => click()} />
       </div>
     </div>
   );

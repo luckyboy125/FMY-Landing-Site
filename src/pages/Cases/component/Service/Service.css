@@ -222,3 +222,13 @@
 .serviceRoot3 .serviceTableHeader .toolEndRoot .tool {
   margin-left: 20px;
 }
+
+.serviceRoot3 .customizeTable thead tr th:nth-child(1) {
+  width: 110px;
+  padding-left: 13px !important;
+}
+
+.serviceRoot3 .customizeTable tbody tr td:nth-child(1) {
+  text-align: center !important;
+  padding-left: 13px !important;
+}
