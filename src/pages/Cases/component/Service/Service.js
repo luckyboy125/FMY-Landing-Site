@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Vega } from "react-vega";
 import ActionButton from "../../../../components/ActionButton/ActionButton";
 import CardLayout from "../../../../components/CardLayout/CardLayout";
 import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
+import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
+import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
 import GradientButton from "../../../../components/GradientButton/GradientButton";
+import PlusButton from "../../../../components/PlusButton/PlusButton";
 import RoundButton from "../../../../components/RoundButton/RoundButton";
+import SearchInput from "../../../../components/SearchInput/SearchInput";
 import { doughnutChartColorData } from "../../../../helpers/chart.helper";
+import refresh from "../../../../asset/images/refresh_icon.svg";
+import more_tool from "../../../../asset/images/more_tool_icon.svg";
+import more_detail from "../../../../asset/images/more_detail_icon.svg";
+import csv from "../../../../asset/images/csv_icon.svg";
 import "./Service.css";
 
 function Service() {
+  const [searchValue, setSearchValue] = useState("");
+  const [mockTableData, setMockTableData] = useState([]);
   const lineChartData = {
     label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     data: [1320, 932, 901, 1300, 1290, 1330, 1320],
@@ -127,6 +137,20 @@ function Service() {
     ],
   };
 
+  useEffect(() => {
+    for (let i = 0; i < 5; i++) {
+      setMockTableData((pre) => [
+        ...pre,
+        {
+          domain: "rock.myspace.com",
+          addedDate: "June 26, 2022",
+          ipaddress: "251.196.63",
+          keyword: "Lorem ipsum",
+        },
+      ]);
+    }
+  }, []);
+
   return (
     <>
       <div className="serviceRoot1">
@@ -229,6 +253,58 @@ function Service() {
       >
         <Vega spec={WordCloudOption} actions={false} />
       </CardLayout>
+      <CustomizeTable
+        className="serviceRoot3"
+        header={
+          <div className="serviceTableHeader">
+            <div className="serviceTableTitle">Goverment</div>
+            <SearchInput
+              action={(e) => setSearchValue(e.target.value)}
+              inputValue={searchValue}
+              className="serviceTableSearchTool"
+              inputWith
+            />
+            <div className="toolEndRoot">
+              <FilterDropdown className="tool" type="filter" />
+              <FilterDropdown className="tool" />
+              <img src={refresh} alt="tool" className="tool" />
+              <img src={csv} alt="tool" className="tool" />
+              <img src={more_tool} alt="tool" className="tool" />
+              <img src={more_detail} alt="tool" className="tool" />
+            </div>
+          </div>
+        }
+        tableHeader={[
+          "",
+          "Item",
+          "User",
+          "Added date",
+          "Added by",
+          "Case",
+          "Priority",
+          "Screenshot",
+          "Link",
+          "",
+        ]}
+        body={mockTableData.map((item, index) => {
+          return (
+            <tr key={index}>
+              <td className="firstTd">{item.domain}</td>
+              <td className="secondTd">{item.addedDate}</td>
+              <td className="thirdTd">{item.ipaddress}</td>
+              <td className="fourthTd">{item.keyword}</td>
+              <td className="fifthTd">
+                <PlusButton
+                  content="+ Add to monitoring"
+                  action={() => {}}
+                  className="addBtn"
+                />
+                <div className="des">Active</div>
+              </td>
+            </tr>
+          );
+        })}
+      />
     </>
   );
 }

@@ -190,3 +190,35 @@
 .serviceRoot2 .wordCloud {
   padding: 18px 20px 19px;
 }
+
+.serviceRoot3 {
+  margin-top: 28px;
+}
+
+.serviceRoot3 .serviceTableHeader {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  padding: 0 31.69px 0 30px;
+}
+
+.serviceRoot3 .serviceTableHeader .serviceTableTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-right: 31px;
+}
+.serviceRoot3 .serviceTableHeader .serviceTableSearchTool {
+  flex-grow: 1;
+}
+
+.serviceRoot3 .serviceTableHeader .toolEndRoot {
+  display: flex;
+}
+
+.serviceRoot3 .serviceTableHeader .toolEndRoot .tool {
+  margin-left: 20px;
+}

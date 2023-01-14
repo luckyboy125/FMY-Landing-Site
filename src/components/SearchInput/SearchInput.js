@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import searchIcon from "../../asset/images/search_icon.svg";
 import "./SearchInput.css";
 
-function SearchInput({ className, action, inputValue }) {
+function SearchInput({ className, action, inputValue, inputWith }) {
   const [initStatus, setInitStatus] = useState(true);
   const rootRef = useRef(null);
 
@@ -33,7 +33,16 @@ function SearchInput({ className, action, inputValue }) {
       <div className="inputIcon">
         <img src={searchIcon} alt="searchIcon" />
       </div>
-      {initStatus ? (
+      {inputWith ? (
+        <>
+          Search
+          <input
+            className="inputContent"
+            value={inputValue}
+            onChange={(e) => action(e)}
+          />
+        </>
+      ) : initStatus ? (
         "Search"
       ) : (
         <input
