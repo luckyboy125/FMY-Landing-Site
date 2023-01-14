@@ -259,8 +259,14 @@ function Service() {
         >
           <div className="tagOverTimeLineRoot">
             <CustomizeLineChart
-              axis={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
-              ayis={mockLineData}
+              label={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
+              data={[
+                {
+                  line_color: ["#6AB4FF", "#C2A6FF"],
+                  value: mockLineData,
+                  fill: true,
+                },
+              ]}
               width={714}
               height={280}
             />

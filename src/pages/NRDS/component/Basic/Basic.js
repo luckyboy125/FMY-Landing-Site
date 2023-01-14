@@ -107,8 +107,14 @@ function Basic() {
             </div>
             <div className="lineChartRoot">
               <CustomizeLineChart
-                axis={lineChartData.label}
-                ayis={lineChartData.data}
+                label={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
+                data={[
+                  {
+                    line_color: ["#6AB4FF", "#C2A6FF"],
+                    value: [1000, 1232, 1322, 900, 1488, 800, 1100],
+                    fill: true,
+                  },
+                ]}
                 width={721}
                 height={275}
               />
@@ -148,7 +154,7 @@ function Basic() {
                 showNumber
               />
               <div className="doughnutChartDes">
-                {doughnutChartData.label.map((item, index) => {
+                {doughnutChartData.label?.map((item, index) => {
                   return (
                     <div className="doughnutChartDesItem" key={index}>
                       <div
@@ -183,7 +189,7 @@ function Basic() {
           </div>
         }
         tableHeader={["Domain", "Added Date", "IP Address", "Keyword", ""]}
-        body={mockTableData.map((item, index) => {
+        body={mockTableData?.map((item, index) => {
           return (
             <tr key={index}>
               <td className="firstTd">{item.domain}</td>

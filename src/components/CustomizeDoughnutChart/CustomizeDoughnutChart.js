@@ -12,7 +12,7 @@ function CustomizeDoughnutChart({ data, label, colorInfo, showNumber }) {
     var ctx = canvas.getContext("2d");
     let colorArray = [];
 
-    colorInfo.map((item) => {
+    colorInfo?.map((item) => {
       var gradientColor = ctx.createLinearGradient(0, 0, 0, 300);
       gradientColor.addColorStop(0, item.first);
       gradientColor.addColorStop(1, item.last);

@@ -97,7 +97,7 @@ function BubbleChart({ data, width, height }) {
           <stop offset="98.25%" stopColor="#60A7FF" />
         </linearGradient>
         {mount &&
-          chartData.map((item, index) => {
+          chartData?.map((item, index) => {
             return (
               <g
                 key={index}

@@ -14,7 +14,7 @@ function CustomizeInlineChart() {
   return (
     <>
       <div className="customizeInlineChartRoot">
-        {data.map((item, index) => {
+        {data?.map((item, index) => {
           return (
             <div
               className="itemRoot"

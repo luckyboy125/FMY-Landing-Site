@@ -76,7 +76,7 @@ function Database() {
           "Keyword",
           "",
         ]}
-        body={mockTableData.map((item, index) => {
+        body={mockTableData?.map((item, index) => {
           return (
             <tr key={index}>
               <td className="firstTd">{item.domain}</td>

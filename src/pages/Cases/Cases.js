@@ -6,6 +6,7 @@ import SearchInput from "../../components/SearchInput/SearchInput";
 import BubbleChart from "./component/BubbleChart/BubbleChart";
 import Service from "./component/Service/Service";
 import "./Cases.css";
+import Comparison from "./component/Comparison/Comparison";
 
 function Cases() {
   const location = useLocation();
@@ -39,7 +40,7 @@ function Cases() {
     { category: "Lorem", amount: 0.53 },
     { category: "Lorem", amount: 0.19 },
     { category: "Ipsum", amount: 0.87 },
-    { category: "Service", amount: 0.59, link: "service" },
+    { category: "Service", amount: 0.59, link: "cases?cases_tab=Service" },
     { category: "Ipsum", amount: 0.28 },
     { category: "Ipsum", amount: 0.55 },
     { category: "Army", amount: 0.27, link: "army" },
@@ -64,7 +65,11 @@ function Cases() {
             className="casesTab"
             data={tabData}
             onSelect={(e) => handleTab(e)}
-            select={query.get("cases_tab") === null ? tabData[0] : query.get("cases_tab")}
+            select={
+              query.get("cases_tab") === null
+                ? tabData[0]
+                : query.get("cases_tab")
+            }
           />
           <div className="lastItemRoot">
             <SearchInput
@@ -75,16 +80,16 @@ function Cases() {
             <PlusButton
               content="+ New case"
               className="casesHeaderBtn"
-              action={() => { }}
+              action={() => {}}
             />
           </div>
         </div>
         <div className="casesContainer">
           {query.get("cases_tab") === tabData[0] ||
-            query.get("cases_tab") === null ? (
+          query.get("cases_tab") === null ? (
             <BubbleChart data={rawdata} width={1616} height={894} />
           ) : query.get("cases_tab") === tabData[1] ? (
-            <></>
+            <Comparison />
           ) : (
             <Service />
           )}

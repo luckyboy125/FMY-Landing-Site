@@ -3,21 +3,26 @@ import { Chart, registerables } from "chart.js";
 import { useEffect, useState } from "react";
 Chart.register(...registerables);
 
-function CustomizeLineChart({ axis, ayis, width, height }) {
-  const [lineColor, setLineColor] = useState("");
+function CustomizeLineChart({ data, label, width, height }) {
+  const [lineColors, setLineColors] = useState("");
   const [areaColor, setAreaColor] = useState("");
 
   useEffect(() => {
     var canvas = document.getElementById("line_chart");
     var ctx = canvas.getContext("2d");
-    var _linecolor = ctx.createLinearGradient(0, 0, 0, 100);
-    _linecolor.addColorStop(0, "#6AB4FF");
-    _linecolor.addColorStop(1, "#C2A6FF");
     var _areacolor = ctx.createLinearGradient(0, 0, 0, 230);
     _areacolor.addColorStop(0, "#A0CFFF94");
     _areacolor.addColorStop(1, "#A0CFFF00");
-    setLineColor(_linecolor);
     setAreaColor(_areacolor);
+
+    let colorArray = [];
+    data?.map((item) => {
+      var gradientColor = ctx.createLinearGradient(0, 0, 0, 100);
+      gradientColor.addColorStop(0, item.line_color[0]);
+      gradientColor.addColorStop(1, item.line_color[1]);
+      colorArray.push(gradientColor);
+    });
+    setLineColors(colorArray);
   }, []);
 
   const linechartOption = {
@@ -48,8 +53,8 @@ function CustomizeLineChart({ axis, ayis, width, height }) {
           tickLength: 0,
         },
         ticks: {
-          color: axis.map((item, index) => {
-            return index + 1 === axis.length ? "#75B3FF" : "#fff";
+          color: label?.map((item, index) => {
+            return index + 1 === label.length ? "#75B3FF" : "#fff";
           }),
           padding: 20,
           font: {
@@ -198,29 +203,31 @@ function CustomizeLineChart({ axis, ayis, width, height }) {
     },
   };
 
-  const lineChartAction = (x, y) => {
+  const lineChartAction = (data) => {
+    const _datasets = data?.map((item, index) => {
+      return {
+        data: item.value,
+        label: "lineChart",
+        borderColor: lineColors[index],
+        backgroundColor: areaColor,
+        width: 3,
+        fill: item.fill,
+        pointStyle: "circle",
+        pointHitRadius: 50,
+        pointHoverRadius: 10,
+        pointHoverBorderWidth: 3.5,
+        pointRadius: 7.5,
+        pointBorderWidth: 2.5,
+        pointBackgroundColor: "#ffffff",
+        pointBorderColor: "#77B3FF",
+      };
+    });
+
     const linechartData = {
-      labels: x.map((label, id) => {
-        return id + 1 === x.length ? "Today" : label;
+      labels: label?.map((label, id) => {
+        return id + 1 === label.length ? "Today" : label;
       }),
-      datasets: [
-        {
-          data: y,
-          label: "lineChart",
-          borderColor: lineColor,
-          backgroundColor: areaColor,
-          width: 3,
-          fill: true,
-          pointStyle: "circle",
-          pointHitRadius: 50,
-          pointHoverRadius: 10,
-          pointHoverBorderWidth: 3.5,
-          pointRadius: 7.5,
-          pointBorderWidth: 2.5,
-          pointBackgroundColor: "#ffffff",
-          pointBorderColor: "#77B3FF",
-        },
-      ],
+      datasets: _datasets,
     };
 
     return linechartData;
@@ -234,7 +241,7 @@ function CustomizeLineChart({ axis, ayis, width, height }) {
         width={width}
         height={height}
         options={linechartOption}
-        data={lineChartAction(axis, ayis)}
+        data={lineChartAction(data)}
         plugins={[
           {
             beforeEvent: function (chart, ctx) {

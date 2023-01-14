@@ -8,7 +8,7 @@ function CustomizeTable({ header, body, tableHeader, className }) {
       <table className="customizeTable">
         <thead>
           <tr>
-            {tableHeader.map((item, index) => {
+            {tableHeader?.map((item, index) => {
               return <th key={index}>{item}</th>;
             })}
           </tr>

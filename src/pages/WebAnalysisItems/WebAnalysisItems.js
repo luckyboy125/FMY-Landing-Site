@@ -100,8 +100,14 @@ function WebAnalysisItems() {
             </div>
             <div className="lineChartRoot">
               <CustomizeLineChart
-                axis={lineChartData.label}
-                ayis={lineChartData.data}
+                label={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
+                data={[
+                  {
+                    line_color: ["#6AB4FF", "#C2A6FF"],
+                    value: [1000, 1232, 1322, 900, 1488, 800, 1100],
+                    fill: true,
+                  },
+                ]}
                 width={717}
                 height={274}
               />
