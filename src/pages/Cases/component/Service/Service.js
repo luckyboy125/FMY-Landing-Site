@@ -7,19 +7,18 @@ import CustomizeLineChart from "../../../../components/CustomizeLineChart/Custom
 import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
 import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
 import GradientButton from "../../../../components/GradientButton/GradientButton";
-import PlusButton from "../../../../components/PlusButton/PlusButton";
 import RoundButton from "../../../../components/RoundButton/RoundButton";
 import SearchInput from "../../../../components/SearchInput/SearchInput";
 import { doughnutChartColorData } from "../../../../helpers/chart.helper";
+import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 import refresh from "../../../../asset/images/refresh_icon.svg";
 import more_tool from "../../../../asset/images/more_tool_icon.svg";
 import more_detail from "../../../../asset/images/more_detail_icon.svg";
 import csv from "../../../../asset/images/csv_icon.svg";
-import person2 from "../../../../asset/person2.svg";
+import person3 from "../../../../asset/person3.svg";
 import youtube from "../../../../asset/images/social/youtube.svg";
 import "./Service.css";
-import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 
 function Service() {
   const [searchValue, setSearchValue] = useState("");
@@ -151,7 +150,7 @@ function Service() {
           addeddate: "June 26, 2022 15:45",
           addbyuser: {
             name: "Nimrod",
-            image: person2,
+            image: person3,
           },
           case: "Lorem ipsum",
           priority: "Medium",
@@ -315,7 +314,7 @@ function Service() {
               <td>View</td>
               <td>Link</td>
               <td>
-                <ThreeDotBtn action={() => {}} />
+                <ThreeDotBtn className="dotBtn" action={() => {}} />
               </td>
             </tr>
           );
