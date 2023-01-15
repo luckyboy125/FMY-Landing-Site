@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import ActionTab from "../../components/ActionTab/ActionTab";
+import reportCard from "../../asset/images/report_card.svg";
 import "./Reports.css";
 
 function Reports() {
@@ -41,7 +42,33 @@ function Reports() {
         <div className="reportsContent">
           <div className="item">
             <div className="reportsItemTitle">Lorem ipsum</div>
-            <div className="reportsItemRoot"></div>
+            <div className="reportsItemRoot">
+              <img src={reportCard} className="" alt="report_card" />
+              <img src={reportCard} className="" alt="report_card" />
+              <img src={reportCard} className="" alt="report_card" />
+              <img src={reportCard} className="" alt="report_card" />
+              <div className="toolArrow left">
+                <i className="fas fa-chevron-left"></i>
+              </div>
+              <div className="toolArrow right">
+                <i className="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+          <div className="item">
+            <div className="reportsItemTitle">Lorem ipsum</div>
+            <div className="reportsItemRoot">
+              <img src={reportCard} className="" alt="report_card" />
+              <img src={reportCard} className="" alt="report_card" />
+              <img src={reportCard} className="" alt="report_card" />
+              <img src={reportCard} className="" alt="report_card" />
+              <div className="toolArrow left">
+                <i className="fas fa-chevron-left"></i>
+              </div>
+              <div className="toolArrow right">
+                <i className="fas fa-chevron-right"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>

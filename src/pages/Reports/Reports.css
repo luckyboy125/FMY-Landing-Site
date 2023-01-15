@@ -1,6 +1,7 @@
 .reportsRoot {
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 30px;
 }
 
 .reportsRoot .reportsHeaderRoot {
@@ -44,6 +45,10 @@
   margin-top: 65px;
 }
 
+.reportsRoot .reportsContent .item:last-child {
+  margin-bottom: 0 !important;
+}
+
 .reportsRoot .reportsContent .item {
   margin-bottom: 100px;
 }
@@ -58,5 +63,37 @@
 }
 
 .reportsRoot .reportsContent .reportsItemRoot {
-  margin-top: 50px;
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: space-between;
+  width: 1685px;
+  position: relative;
+}
+
+.reportsRoot .reportsContent .reportsItemRoot .toolArrow {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: rgba(117, 179, 255, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reportsRoot .reportsContent .reportsItemRoot .toolArrow i {
+  color: #fff;
+  font-size: 30px;
+}
+
+.reportsRoot .reportsContent .reportsItemRoot .left {
+  position: absolute;
+  left: -80px;
+  top: 41%;
+}
+
+.reportsRoot .reportsContent .reportsItemRoot .right {
+  position: absolute;
+  right: -80px;
+  top: 41%;
 }
