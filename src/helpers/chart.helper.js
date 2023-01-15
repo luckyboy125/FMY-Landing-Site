@@ -24,3 +24,18 @@ export const doughnutChartColorData = [
     last: "#EFD7AB",
   },
 ];
+
+export const comparisonDoughnutChartColorData = [
+  {
+    first: "#FEBD42",
+    last: "#EFD7AB",
+  },
+  {
+    first: "#A9FFBB",
+    last: "#6FFF8D",
+  },
+  {
+    first: "#5D43FF",
+    last: "#A5A4FF",
+  },
+];

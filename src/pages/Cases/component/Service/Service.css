@@ -88,22 +88,6 @@
   margin-left: 29px;
 }
 
-.serviceRoot1 .chartRoot {
-  position: relative;
-}
-
-.serviceRoot1 .doughnutChartPercent {
-  position: absolute;
-  top: 46%;
-  right: 46%;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 24px;
-  text-align: center;
-  color: #ffffff;
-}
 .serviceRoot1 .doughnutChartDes {
   display: flex;
   flex-direction: column;

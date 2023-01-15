@@ -1,3 +1,139 @@
-.ComparisonRoot1 {
+.comparisonRoot {
   margin-top: 29px;
+}
+
+.comparisonRoot .comparisonHeader {
+  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
+  border-radius: 30px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  height: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 433px;
+}
+
+.comparisonRoot .comparisonRoot1 {
+  display: flex;
+  margin-top: 15px;
+}
+
+.comparisonRoot .comparisonRoot1 .tagOverTimeRoot {
+  width: 932px;
+  margin-right: 30px;
+}
+
+.comparisonRoot .comparisonRoot1 .tagOverTimeRoot .tagOverTimeHeader {
+  justify-content: space-between;
+  padding: 0 10px 0 28px;
+}
+
+.comparisonRoot .comparisonRoot1 .tagOverTimeRoot .tagOverTimeHeader .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.comparisonRoot .comparisonRoot1 .tagOverTimeRoot .tagOverTimeHeader .timeTool {
+  width: 220px;
+}
+
+.comparisonRoot .comparisonRoot1 .tagOverTimeRoot .tagOverTime {
+  display: flex;
+  justify-content: center;
+}
+
+.comparisonRoot
+  .comparisonRoot1
+  .tagOverTimeRoot
+  .tagOverTime
+  .tagOverTimeLineRoot {
+  display: flex;
+  flex-direction: column;
+  margin: 73px 0 42.58px;
+}
+
+.comparisonRoot .comparisonRoot1 .taggingRoot {
+  flex-grow: 1;
+}
+
+.comparisonRoot .comparisonRoot1 .taggingRoot .taggingHeader {
+  justify-content: space-between;
+  padding: 0 10px 0 28px;
+}
+
+.comparisonRoot .comparisonRoot1 .taggingRoot .taggingHeader .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartRoot {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.comparisonRoot
+  .comparisonRoot1
+  .taggingRoot
+  .doughnutChartRoot
+  .doughnutChartDes {
+  margin-left: 29px;
+}
+
+.comparisonRoot .comparisonRoot1 .taggingRoot .chartRoot {
+  position: relative;
+}
+
+.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartPercent {
+  position: absolute;
+  top: 46%;
+  right: 46%;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartDes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartDesItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartIcon {
+  width: 13px;
+  min-height: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin-right: 12.64px;
+  border-radius: 50px;
+}
+
+.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartItemName {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
 }
