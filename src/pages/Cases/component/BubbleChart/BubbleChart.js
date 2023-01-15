@@ -29,8 +29,8 @@ function BubbleChart({ data, width, height }) {
   const simulatePositions = (cData) => {
     d3.forceSimulation()
       .nodes(cData)
-      .velocityDecay(0.7)
-      .force("x", d3.forceX().strength(0.04))
+      .velocityDecay(0.9)
+      .force("x", d3.forceX().strength(0.01))
       .force("y", d3.forceY().strength(0.2))
       .force(
         "collide",
@@ -52,20 +52,20 @@ function BubbleChart({ data, width, height }) {
   useEffect(() => {
     if (data.length > 0) {
       setMinValue(
-        0.95 *
-          d3.min(data, (item) => {
-            return item.amount;
-          })
+        d3.min(data, (item) => {
+          return item.amount;
+        })
       );
       setMaxValue(
-        1.05 *
-          d3.max(data, (item) => {
-            return item.amount;
-          })
+        d3.max(data, (item) => {
+          return item.amount;
+        })
       );
       simulatePositions(data);
     }
   }, [mount]);
+
+  console.log("chart data: ", chartData);
 
   return (
     <>
