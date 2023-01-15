@@ -78,7 +78,7 @@ function SideTaskBar() {
 
         <div className="dividerLine"></div>
 
-        <Button className="taskBarButton">
+        <Button className="taskBarButton" onClick={() => navigate("/reports")}>
           <img src={ReportsLogo} alt=""></img>
           Reports
         </Button>
