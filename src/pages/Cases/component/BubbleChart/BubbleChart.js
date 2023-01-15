@@ -29,9 +29,10 @@ function BubbleChart({ data, width, height }) {
   const simulatePositions = (cData) => {
     d3.forceSimulation()
       .nodes(cData)
-      .velocityDecay(0.9)
+      .alpha(0.05)
+      .velocityDecay(0.7)
       .force("x", d3.forceX().strength(0.01))
-      .force("y", d3.forceY().strength(0.2))
+      .force("y", d3.forceY().strength(0.8))
       .force(
         "collide",
         d3.forceCollide((d) => {
