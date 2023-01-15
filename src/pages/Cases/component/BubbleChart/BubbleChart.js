@@ -66,8 +66,6 @@ function BubbleChart({ data, width, height }) {
     }
   }, [mount]);
 
-  console.log("chart data: ", chartData);
-
   return (
     <>
       <svg id="bubble_chart" width={width} height={height}>
