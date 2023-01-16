@@ -17,6 +17,20 @@ function BubbleChart({ data, width, height }) {
   const [chartData, setChartData] = useState([]);
   const arrLength = chartData.length;
   const textRef = useRef([]);
+  const circleRef = useRef([]);
+  const [renderCount, setRenderCount] = useState(0);
+
+  if (textRef.current.length !== arrLength) {
+    textRef.current = Array(arrLength)
+      .fill()
+      .map((_, i) => textRef.current[i] || createRef());
+  }
+
+  if (circleRef.current.length !== arrLength) {
+    circleRef.current = Array(arrLength)
+      .fill()
+      .map((_, i) => circleRef.current[i] || createRef());
+  }
 
   const forceUpdate = useForceUpdate();
 
@@ -66,18 +80,16 @@ function BubbleChart({ data, width, height }) {
       );
       simulatePositions(data);
     }
+    setRenderCount(renderCount + 1);
   }, [mount]);
 
-  if (textRef.current.length !== arrLength) {
-    textRef.current = Array(arrLength)
-      .fill()
-      .map((_, i) => textRef.current[i] || createRef());
-  }
-
   const textElli = (str, width, i) => {
-    const textWidth = textRef?.current[i].current?.getBBox().width;
+    const textWidth = textRef?.current[i]?.current?.getBBox()?.width;
+    const textContent = textRef?.current[i]?.current?.innerHTML;
 
-    return textWidth > width
+    return textContent?.indexOf("...") > -1
+      ? textContent
+      : textWidth > width
       ? str.slice(0, (str.length * width) / textWidth - 3) + "..."
       : str;
   };
@@ -135,6 +147,7 @@ function BubbleChart({ data, width, height }) {
               >
                 <circle
                   r={radiusScale(item.amount)}
+                  ref={circleRef.current[index]}
                   fill={`${
                     radiusScale(item.amount) >=
                     ((rangeMax - rangeMin) / 3) * 2 + rangeMin
@@ -146,7 +159,6 @@ function BubbleChart({ data, width, height }) {
                   }`}
                 ></circle>
                 <text
-                  id="text1"
                   ref={textRef.current[index]}
                   dy="6"
                   fill={`${
@@ -172,7 +184,7 @@ function BubbleChart({ data, width, height }) {
                 >
                   {textElli(
                     item.category,
-                    (radiusScale(item.amount) * 3) / 2,
+                    (radiusScale(item.amount) * 5) / 3,
                     index
                   )}
                 </text>
