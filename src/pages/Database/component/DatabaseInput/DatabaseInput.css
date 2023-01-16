@@ -1,0 +1,38 @@
+.databaseInputRoot {
+  background: rgba(15, 18, 26, 0.4);
+  border-radius: 50px;
+  display: flex;
+  padding: 0 20px 0 30px;
+  height: 73px;
+  align-items: center;
+}
+
+.databaseInputRoot input {
+  flex-grow: 1;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0 !important;
+}
+
+.databaseInputRoot input::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.databaseInputRoot input:focus-visible {
+  outline: none;
+}
+
+.databaseInputRoot input:focus {
+  outline: none;
+}

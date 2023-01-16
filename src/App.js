@@ -21,6 +21,7 @@ import "./asset/fonts/Helvetica.ttf";
 import "./asset/fonts/Helvetica-Oblique.ttf";
 import "./asset/fonts/helvetica_neue.ttf";
 import Reports from "./pages/Reports/Reports";
+import Database from "./pages/Database/Database";
 
 //DONT TOUCH THIS FILE
 
@@ -57,6 +58,7 @@ function App() {
                   <Route path="/CheckLists" element={<CheckLists />} />
                   <Route path="/cases" element={<Cases />} />
                   <Route path="/reports" element={<Reports />} />
+                  <Route path="/database" element={<Database />} />
                 </Routes>
               </Col>
             </Row>

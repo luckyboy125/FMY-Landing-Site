@@ -33,7 +33,7 @@ function Cases() {
     { category: "Lorem", amount: 0.19 },
     { category: "Lorem", amount: 0.28 },
     { category: "Lorem", amount: 0.55 },
-    { category: "Lorem", amount: 0.43 },
+    { category: "LoremTestLongWordsdf", amount: 0.43 },
     { category: "Government", amount: 0.99, link: "government" },
     { category: "Lorem", amount: 0.31 },
     { category: "Lorem", amount: 0.81 },

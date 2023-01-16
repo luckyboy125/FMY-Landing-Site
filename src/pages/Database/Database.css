@@ -1,0 +1,126 @@
+.databaseRoot {
+  padding-top: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.databaseRoot .databaseHeaderRoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 10px;
+}
+
+.databaseRoot .databaseHeaderRoot .databaseHeaderTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.databaseRoot .databaseHeaderRoot .databaseHeaderTab {
+  margin-top: 23px;
+}
+
+.databaseRoot .databaseContent {
+  margin-top: 65px;
+}
+
+.databaseRoot .databaseContent .databaseContent1 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.databaseRoot .databaseContent .databaseContent1 .urlInput {
+  width: 100%;
+}
+
+.databaseRoot .databaseContent .databaseContent1 .urlInput .addDBBtn {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  display: flex;
+  width: 148px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  border-radius: 30px;
+}
+
+.databaseRoot .databaseContent .databaseContent1 .secondRoot {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.databaseRoot .databaseContent .databaseContent1 .secondRoot .commentInput {
+  width: 895px;
+  margin-right: 20px;
+}
+
+.databaseRoot .databaseContent .databaseContent1 .secondRoot .casesInput {
+  flex-grow: 1;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent1
+  .secondRoot
+  .casesInput
+  .toolRoot {
+  display: flex;
+  align-items: center;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent1
+  .secondRoot
+  .casesInput
+  .toolRoot
+  .plus {
+  font-size: 20px;
+  color: #75b3ff;
+  margin-right: 6px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent1
+  .secondRoot
+  .casesInput
+  .toolRoot
+  .circleBtn {
+  width: 43px;
+  height: 43px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent1
+  .secondRoot
+  .casesInput
+  .toolRoot
+  .circleBtn
+  i {
+  font-size: 16px;
+  color: #75b3ff;
+}
