@@ -10,6 +10,7 @@ import DatabaseInput from "./component/DatabaseInput/DatabaseInput";
 import refresh from "../../asset/images/refresh_icon.svg";
 import person3 from "../../asset/person3.svg";
 import youtube from "../../asset/images/social/youtube.svg";
+import tableAlertIcon from "../../asset/images/alert_icon.svg";
 import "./Database.css";
 
 function Database() {
@@ -54,6 +55,9 @@ function Database() {
           },
           case: "Lorem ipsum",
           priority: "Medium",
+          view: {
+            alert: Math.floor(Math.random() * 2) === 1,
+          },
         },
       ]);
     }
@@ -160,7 +164,18 @@ function Database() {
                       color="#37CE4A"
                     />
                   </td>
-                  <td>View</td>
+                  <td>
+                    {item.view.alert ? (
+                      <img
+                        src={tableAlertIcon}
+                        className="alertIcon"
+                        alt="alert"
+                      />
+                    ) : (
+                      <></>
+                    )}
+                    View
+                  </td>
                   <td>Link</td>
                   <td>
                     <ThreeDotBtn className="dotBtn" action={() => {}} />

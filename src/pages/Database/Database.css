@@ -385,6 +385,20 @@
   font-size: 20px;
   line-height: 24px;
   color: #75b3ff;
+  position: relative;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(8)
+  .alertIcon {
+  position: absolute;
+  left: 26%;
+  top: 36%;
 }
 
 .databaseRoot
