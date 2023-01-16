@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { createRef, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
@@ -15,6 +15,8 @@ function BubbleChart({ data, width, height }) {
   const [minValue, setMinValue] = useState(1);
   const [maxValue, setMaxValue] = useState(100);
   const [chartData, setChartData] = useState([]);
+  const arrLength = chartData.length;
+  const textRef = useRef([]);
 
   const forceUpdate = useForceUpdate();
 
@@ -66,6 +68,20 @@ function BubbleChart({ data, width, height }) {
     }
   }, [mount]);
 
+  if (textRef.current.length !== arrLength) {
+    textRef.current = Array(arrLength)
+      .fill()
+      .map((_, i) => textRef.current[i] || createRef());
+  }
+
+  const textElli = (str, width, i) => {
+    const textWidth = textRef?.current[i].current?.getBBox().width;
+
+    return textWidth > width
+      ? str.slice(0, (str.length * width) / textWidth - 3) + "..."
+      : str;
+  };
+
   return (
     <>
       <svg id="bubble_chart" width={width} height={height}>
@@ -95,6 +111,8 @@ function BubbleChart({ data, width, height }) {
           <stop offset="0%" stopColor="#90C2FF" />
           <stop offset="98.25%" stopColor="#60A7FF" />
         </linearGradient>
+        <script></script>
+
         {mount &&
           chartData?.map((item, index) => {
             return (
@@ -126,8 +144,10 @@ function BubbleChart({ data, width, height }) {
                       ? "url(#smartPurpleGradient)"
                       : "#fff"
                   }`}
-                />
+                ></circle>
                 <text
+                  id="text1"
+                  ref={textRef.current[index]}
                   dy="6"
                   fill={`${
                     radiusScale(item.amount) >=
@@ -135,7 +155,9 @@ function BubbleChart({ data, width, height }) {
                       ? "#fff"
                       : "#000"
                   }`}
+                  className="dotme"
                   textAnchor="middle"
+                  width={(radiusScale(item.amount) * 5) / 3}
                   fontSize={`${
                     radiusScale(item.amount) >=
                     ((rangeMax - rangeMin) / 3) * 2 + rangeMin
@@ -148,7 +170,11 @@ function BubbleChart({ data, width, height }) {
                   fontWeight="400"
                   fontFamily="Helvetica"
                 >
-                  {item.category}
+                  {textElli(
+                    item.category,
+                    (radiusScale(item.amount) * 3) / 2,
+                    index
+                  )}
                 </text>
               </g>
             );

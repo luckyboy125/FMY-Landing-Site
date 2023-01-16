@@ -43,7 +43,7 @@ function Cases() {
     { category: "Service", amount: 0.59, link: "cases?cases_tab=Service" },
     { category: "Ipsum", amount: 0.28 },
     { category: "Ipsum", amount: 0.55 },
-    { category: "Army", amount: 0.27, link: "army" },
+    { category: "ArmyLongWordTest", amount: 0.27, link: "army" },
     { category: "Ipsum", amount: 0.43 },
     { category: "Ipsum", amount: 0.91 },
     { category: "Ipsum", amount: 0.81 },
