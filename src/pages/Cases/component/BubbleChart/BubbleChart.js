@@ -157,7 +157,7 @@ function BubbleChart({ data, width, height }) {
                   }`}
                   className="dotme"
                   textAnchor="middle"
-                  width={(radiusScale(item.amount) * 5) / 3}
+                  width={(radiusScale(item.amount) * 3) / 2}
                   fontSize={`${
                     radiusScale(item.amount) >=
                     ((rangeMax - rangeMin) / 3) * 2 + rangeMin
