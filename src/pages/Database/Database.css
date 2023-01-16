@@ -57,6 +57,7 @@
   align-items: center;
   background: #d9d9d9;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .databaseRoot .databaseContent .databaseContent1 .secondRoot {
@@ -111,6 +112,7 @@
   align-items: center;
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .databaseRoot
@@ -123,4 +125,314 @@
   i {
   font-size: 16px;
   color: #75b3ff;
+}
+
+.databaseRoot .databaseContent .databaseContent2 {
+  margin-top: 28px;
+}
+
+.databaseRoot .databaseContent .databaseContent2 .databaseTableHeader {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 31.69px 0 30px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .databaseTableTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-right: 31px;
+}
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .toolEndRoot {
+  display: flex;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .toolEndRoot
+  .tool {
+  margin-left: 20px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(1) {
+  width: 110px;
+  padding-left: 13px !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(1) {
+  text-align: center !important;
+  padding-left: 13px !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(2) {
+  padding-left: 4px;
+  text-align: left !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(2) {
+  text-align: left !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(3) {
+  text-align: left !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(3) {
+  text-align: left !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(4) {
+  text-align: left !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(4) {
+  text-align: left !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(5) {
+  text-align: left !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(5) {
+  display: flex;
+  align-items: center;
+  text-align: left !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(5)
+  img {
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(6) {
+  text-align: center;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(6) {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(7) {
+  text-align: center;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(7)
+  div {
+  background: #2d452f !important;
+  min-width: none !important;
+  max-width: 124px;
+  margin: auto;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(8) {
+  text-align: center;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(8) {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #75b3ff;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(9) {
+  text-align: center;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(9) {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #75b3ff;
+  text-decoration: underline;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(10) {
+  width: 97px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(10)
+  .dotBtn {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

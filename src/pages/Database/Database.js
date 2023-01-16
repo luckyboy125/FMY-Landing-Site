@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import ActionTab from "../../components/ActionTab/ActionTab";
+import ColorBtn from "../../components/ColorBtn/ColorBtn";
+import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
+import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
+import SearchInput from "../../components/SearchInput/SearchInput";
+import ThreeDotBtn from "../../components/ThreeDotBtn/ThreeDotBtn";
 import DatabaseInput from "./component/DatabaseInput/DatabaseInput";
+import refresh from "../../asset/images/refresh_icon.svg";
+import person3 from "../../asset/person3.svg";
+import youtube from "../../asset/images/social/youtube.svg";
 import "./Database.css";
 
 function Database() {
@@ -21,6 +29,8 @@ function Database() {
   const [url, setUrl] = useState("");
   const [comment, setComment] = useState("");
   const [cases, setCases] = useState("");
+  const [searchValue, setSearchValue] = useState("");
+  const [mockTableData, setMockTableData] = useState([]);
 
   const handleTab = (_tab) => {
     query.set("database_tab", _tab);
@@ -29,6 +39,25 @@ function Database() {
       search: query.toString(),
     });
   };
+
+  useEffect(() => {
+    for (let i = 0; i < 5; i++) {
+      setMockTableData((pre) => [
+        ...pre,
+        {
+          item: "Post",
+          user: "Olive Yew",
+          addeddate: "June 26, 2022 15:45",
+          addbyuser: {
+            name: "Nimrod",
+            image: person3,
+          },
+          case: "Lorem ipsum",
+          priority: "Medium",
+        },
+      ]);
+    }
+  }, []);
 
   return (
     <>
@@ -80,6 +109,66 @@ function Database() {
               />
             </div>
           </div>
+          <CustomizeTable
+            className="databaseContent2"
+            header={
+              <div className="databaseTableHeader">
+                <div className="databaseTableTitle">Database items</div>
+                <div className="toolEndRoot">
+                  <SearchInput
+                    action={(e) => setSearchValue(e.target.value)}
+                    inputValue={searchValue}
+                    className="searchTool"
+                  />
+                  <FilterDropdown className="tool" type="filter" />
+                  <FilterDropdown className="tool" />
+                  <img src={refresh} alt="tool" className="tool" />
+                </div>
+              </div>
+            }
+            tableHeader={[
+              "",
+              "Item",
+              "User",
+              "Added date",
+              "Added by",
+              "Case",
+              "Priority",
+              "Screenshot",
+              "Link",
+              "",
+            ]}
+            body={mockTableData.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>
+                    <img src={youtube} alt="social_icon"></img>
+                  </td>
+                  <td>{item.item}</td>
+                  <td>{item.user}</td>
+                  <td>{item.addeddate}</td>
+                  <td>
+                    <img src={item.addbyuser.image} alt="avatar" />{" "}
+                    {item.addbyuser.name}
+                  </td>
+                  <td>{item.case}</td>
+                  <td>
+                    <ColorBtn
+                      name="Medium"
+                      width={130}
+                      arrowShow
+                      color="#37CE4A"
+                    />
+                  </td>
+                  <td>View</td>
+                  <td>Link</td>
+                  <td>
+                    <ThreeDotBtn className="dotBtn" action={() => {}} />
+                  </td>
+                </tr>
+              );
+            })}
+          />
         </div>
       </div>
     </>
