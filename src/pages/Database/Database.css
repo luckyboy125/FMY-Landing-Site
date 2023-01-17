@@ -132,11 +132,7 @@
 }
 
 .databaseRoot .databaseContent .databaseContent2 .databaseTableHeader {
-  display: flex;
-  height: 90px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 31.69px 0 30px;
+  padding: 21px 31.69px 30px 30px;
   margin-bottom: 2px;
 }
 
@@ -148,6 +144,17 @@
   .databaseContent
   .databaseContent2
   .databaseTableHeader
+  .firstItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .firstItem
   .databaseTableTitle {
   font-family: "Helvetica";
   font-style: normal;
@@ -161,6 +168,7 @@
   .databaseContent
   .databaseContent2
   .databaseTableHeader
+  .firstItem
   .toolEndRoot {
   display: flex;
 }
@@ -169,8 +177,42 @@
   .databaseContent
   .databaseContent2
   .databaseTableHeader
+  .firstItem
   .toolEndRoot
   .tool {
+  margin-left: 20px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .secondItem {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .secondItem
+  .plusLetter {
+  font-size: 50px;
+  line-height: 50px;
+  color: #75b3ff;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .secondItem
+  .dropdown {
   margin-left: 20px;
 }
 

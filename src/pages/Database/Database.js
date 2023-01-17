@@ -12,6 +12,8 @@ import person3 from "../../asset/person3.svg";
 import youtube from "../../asset/images/social/youtube.svg";
 import tableAlertIcon from "../../asset/images/alert_icon.svg";
 import "./Database.css";
+import DatabaseSearchInput from "../../components/DatabaseSearchInput/DatabaseSearchInput";
+import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
 
 function Database() {
   const location = useLocation();
@@ -117,16 +119,33 @@ function Database() {
             className="databaseContent2"
             header={
               <div className="databaseTableHeader">
-                <div className="databaseTableTitle">Database items</div>
-                <div className="toolEndRoot">
-                  <SearchInput
-                    action={(e) => setSearchValue(e.target.value)}
-                    inputValue={searchValue}
-                    className="searchTool"
+                <div className="firstItem">
+                  <div className="databaseTableTitle">Database items</div>
+                  <div className="toolEndRoot">
+                    <SearchInput
+                      action={(e) => setSearchValue(e.target.value)}
+                      inputValue={searchValue}
+                      className="searchTool"
+                    />
+                    <FilterDropdown className="tool" type="filter" />
+                    <FilterDropdown className="tool" />
+                    <img src={refresh} alt="tool" className="tool" />
+                  </div>
+                </div>
+                <div className="secondItem">
+                  <DatabaseSearchInput />
+                  <div className="plusLetter">+</div>
+                  <DatabaseSearchDropdown
+                    content="Keywords"
+                    select="All"
+                    className="dropdown"
                   />
-                  <FilterDropdown className="tool" type="filter" />
-                  <FilterDropdown className="tool" />
-                  <img src={refresh} alt="tool" className="tool" />
+                  <DatabaseSearchDropdown
+                    content="Upload dates"
+                    select="All"
+                    type="calendar"
+                    className="dropdown"
+                  />
                 </div>
               </div>
             }

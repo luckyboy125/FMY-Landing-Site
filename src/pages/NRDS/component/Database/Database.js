@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
 import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
 import SearchInput from "../../../../components/SearchInput/SearchInput";
-import DatabaseDropdown from "./component/DatabaseDropdown/DatabaseDropdown";
-import DatabaseInput from "./component/DatabaseInput/DatabaseInput";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
+import DatabaseSearchInput from "../../../../components/DatabaseSearchInput/DatabaseSearchInput";
+import DatabaseSearchDropdown from "../../../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
 import person1 from "../../../../asset/person1.svg";
 import "./Database.css";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 
 function Database() {
   const [searchValue, setSearchValue] = useState("");
@@ -51,14 +51,14 @@ function Database() {
                 </div>
               </div>
               <div className="nrdsDatabaseSeacrhRoot">
-                <DatabaseInput />
+                <DatabaseSearchInput />
                 <div className="plusLetter">+</div>
-                <DatabaseDropdown
+                <DatabaseSearchDropdown
                   content="Keywords"
                   select="All"
                   className="dropdown"
                 />
-                <DatabaseDropdown
+                <DatabaseSearchDropdown
                   content="Upload dates"
                   select="All"
                   type="calendar"

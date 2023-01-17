@@ -1,4 +1,4 @@
-.databaseInputRoot {
+.databaseSearchInputRoot {
   background: rgba(15, 18, 26, 0.4);
   border-radius: 50px;
   padding: 0 15px 0 25px;
@@ -9,12 +9,12 @@
   width: 550px;
 }
 
-.databaseInputRoot .front {
+.databaseSearchInputRoot .front {
   display: flex;
   align-items: center;
 }
 
-.databaseInputRoot .front .databaseInput {
+.databaseSearchInputRoot .front .databaseSearchInput {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -26,7 +26,7 @@
   padding: 0 !important;
   margin-left: 10px;
 }
-.databaseInputRoot .front .databaseInput::placeholder {
+.databaseSearchInputRoot .front .databaseSearchInput::placeholder {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -34,14 +34,14 @@
   line-height: 24px;
   color: #fff;
 }
-.databaseInputRoot .front .databaseInput:focus-visible {
+.databaseSearchInputRoot .front .databaseSearchInput:focus-visible {
   outline: none;
 }
-.databaseInputRoot .front .databaseInput:focus {
+.databaseSearchInputRoot .front .databaseSearchInput:focus {
   outline: none;
 }
 
-.databaseInputRoot .databaseInputDropdown {
+.databaseSearchInputRoot .databaseSearchInputDropdown {
   width: 43px;
   height: 43px;
   background: #ffffff;
