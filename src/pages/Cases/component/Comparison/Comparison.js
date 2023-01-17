@@ -2,12 +2,25 @@ import { useEffect, useState } from "react";
 import { Vega } from "react-vega";
 import ActionButton from "../../../../components/ActionButton/ActionButton";
 import CardLayout from "../../../../components/CardLayout/CardLayout";
+import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
 import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
+import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
+import SearchInput from "../../../../components/SearchInput/SearchInput";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 import { comparisonDoughnutChartColorData } from "../../../../helpers/chart.helper";
+import refresh from "../../../../asset/images/refresh_icon.svg";
+import more_tool from "../../../../asset/images/more_tool_icon.svg";
+import more_detail from "../../../../asset/images/more_detail_icon.svg";
+import csv from "../../../../asset/images/csv_icon.svg";
+import person3 from "../../../../asset/person3.svg";
+import youtube from "../../../../asset/images/social/youtube.svg";
 import "./Comparison.css";
+import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
 
 function Comparison() {
+  const [searchValue, setSearchValue] = useState("");
+  const [mockTableData, setMockTableData] = useState([]);
   const [mockLineData1, setMockLineData1] = useState([]);
   const [mockLineData2, setMockLineData2] = useState([]);
   const [mockLineData3, setMockLineData3] = useState([]);
@@ -121,6 +134,22 @@ function Comparison() {
   };
 
   useEffect(() => {
+    for (let i = 0; i < 5; i++) {
+      setMockTableData((pre) => [
+        ...pre,
+        {
+          item: "Post",
+          user: "Olive Yew",
+          addeddate: "June 26, 2022 15:45",
+          addbyuser: {
+            name: "Nimrod",
+            image: person3,
+          },
+          case: "Lorem ipsum",
+          priority: "Medium",
+        },
+      ]);
+    }
     setMockLineData1([
       Math.floor(Math.random() * 300 + 1200),
       Math.floor(Math.random() * 300 + 1200),
@@ -262,6 +291,70 @@ function Comparison() {
             <Vega spec={WordCloudOption} actions={false} />
           </CardLayout>
         </div>
+        <CustomizeTable
+          className="comparisonRoot4"
+          header={
+            <div className="comparisonTableHeader">
+              <div className="comparisonTableTitle">Shared Items</div>
+              <SearchInput
+                action={(e) => setSearchValue(e.target.value)}
+                inputValue={searchValue}
+                className="comparisonTableSearchTool"
+                inputWith
+              />
+              <div className="toolEndRoot">
+                <FilterDropdown className="tool" type="filter" />
+                <FilterDropdown className="tool" />
+                <img src={refresh} alt="tool" className="tool" />
+                <img src={csv} alt="tool" className="tool" />
+                <img src={more_tool} alt="tool" className="tool" />
+                <img src={more_detail} alt="tool" className="tool" />
+              </div>
+            </div>
+          }
+          tableHeader={[
+            "",
+            "Item",
+            "User",
+            "Added date",
+            "Added by",
+            "Case",
+            "Priority",
+            "Screenshot",
+            "Link",
+            "",
+          ]}
+          body={mockTableData.map((item, index) => {
+            return (
+              <tr key={index}>
+                <td>
+                  <img src={youtube} alt="social_icon"></img>
+                </td>
+                <td>{item.item}</td>
+                <td>{item.user}</td>
+                <td>{item.addeddate}</td>
+                <td>
+                  <img src={item.addbyuser.image} alt="avatar" />{" "}
+                  {item.addbyuser.name}
+                </td>
+                <td>{item.case}</td>
+                <td>
+                  <ColorBtn
+                    name="Medium"
+                    width={130}
+                    arrowShow
+                    color="#37CE4A"
+                  />
+                </td>
+                <td>View</td>
+                <td>Link</td>
+                <td>
+                  <ThreeDotBtn className="dotBtn" action={() => {}} />
+                </td>
+              </tr>
+            );
+          })}
+        />
       </div>
     </>
   );
