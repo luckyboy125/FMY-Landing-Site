@@ -64,6 +64,7 @@ function SideTaskBar() {
           className={`taskBarButton ${
             location.pathname === "/investigation" && "active"
           }`}
+          onClick={() => navigate("/investigation")}
         >
           <img src={InvestigationLogo} alt=""></img>
           Investigation

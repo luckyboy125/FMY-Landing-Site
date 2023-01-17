@@ -59,6 +59,7 @@ function App() {
                   <Route path="/cases" element={<Cases />} />
                   <Route path="/reports" element={<Reports />} />
                   <Route path="/database" element={<Database />} />
+                  <Route path="/investigation" element={<Investigation />} />
                 </Routes>
               </Col>
             </Row>
