@@ -22,6 +22,7 @@ import "./asset/fonts/Helvetica-Oblique.ttf";
 import "./asset/fonts/helvetica_neue.ttf";
 import Reports from "./pages/Reports/Reports";
 import Database from "./pages/Database/Database";
+import Investigation from "./pages/Investigation/Investigation";
 
 //DONT TOUCH THIS FILE
 
