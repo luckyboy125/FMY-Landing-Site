@@ -8,6 +8,7 @@ import CustomizeLineChart from "../../../../components/CustomizeLineChart/Custom
 import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
 import SearchInput from "../../../../components/SearchInput/SearchInput";
 import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
+import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
 import { comparisonDoughnutChartColorData } from "../../../../helpers/chart.helper";
 import refresh from "../../../../asset/images/refresh_icon.svg";
 import more_tool from "../../../../asset/images/more_tool_icon.svg";
@@ -16,7 +17,6 @@ import csv from "../../../../asset/images/csv_icon.svg";
 import person3 from "../../../../asset/person3.svg";
 import youtube from "../../../../asset/images/social/youtube.svg";
 import "./Comparison.css";
-import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
 
 function Comparison() {
   const [searchValue, setSearchValue] = useState("");
