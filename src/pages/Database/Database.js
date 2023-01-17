@@ -32,7 +32,7 @@ function Database() {
   const [url, setUrl] = useState("");
   const [comment, setComment] = useState("");
   const [cases, setCases] = useState("");
-  const [searchValue, setSearchValue] = useState("");
+  const [searchStatus, setSearchStatus] = useState(false);
   const [mockTableData, setMockTableData] = useState([]);
 
   const handleTab = (_tab) => {
@@ -123,8 +123,8 @@ function Database() {
                   <div className="databaseTableTitle">Database items</div>
                   <div className="toolEndRoot">
                     <SearchInput
-                      action={(e) => setSearchValue(e.target.value)}
-                      inputValue={searchValue}
+                      clickAction={() => setSearchStatus(!searchStatus)}
+                      onlyClick
                       className="searchTool"
                     />
                     <FilterDropdown className="tool" type="filter" />
@@ -132,21 +132,25 @@ function Database() {
                     <img src={refresh} alt="tool" className="tool" />
                   </div>
                 </div>
-                <div className="secondItem">
-                  <DatabaseSearchInput />
-                  <div className="plusLetter">+</div>
-                  <DatabaseSearchDropdown
-                    content="Keywords"
-                    select="All"
-                    className="dropdown"
-                  />
-                  <DatabaseSearchDropdown
-                    content="Upload dates"
-                    select="All"
-                    type="calendar"
-                    className="dropdown"
-                  />
-                </div>
+                {searchStatus ? (
+                  <div className="secondItem">
+                    <DatabaseSearchInput />
+                    <div className="plusLetter">+</div>
+                    <DatabaseSearchDropdown
+                      content="Keywords"
+                      select="All"
+                      className="dropdown"
+                    />
+                    <DatabaseSearchDropdown
+                      content="Upload dates"
+                      select="All"
+                      type="calendar"
+                      className="dropdown"
+                    />
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
             }
             tableHeader={[

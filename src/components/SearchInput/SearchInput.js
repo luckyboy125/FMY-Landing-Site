@@ -2,7 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import searchIcon from "../../asset/images/search_icon.svg";
 import "./SearchInput.css";
 
-function SearchInput({ className, action, inputValue, inputWith }) {
+function SearchInput({
+  className,
+  action,
+  inputValue,
+  inputWith,
+  onlyClick,
+  clickAction,
+}) {
   const [initStatus, setInitStatus] = useState(true);
   const rootRef = useRef(null);
 
@@ -24,16 +31,23 @@ function SearchInput({ className, action, inputValue, inputWith }) {
     }
   }, [rootRef]);
 
+  const handleClick = () => {
+    onlyClick ? clickAction() : setInitStatus(false);
+  };
+
   return (
     <div
       className={`searchInputRoot ${className}`}
-      onClick={() => setInitStatus(false)}
+      style={{ cursor: `${onlyClick ? "pointer" : ""}` }}
+      onClick={handleClick}
       ref={rootRef}
     >
       <div className="inputIcon">
         <img src={searchIcon} alt="searchIcon" />
       </div>
-      {inputWith ? (
+      {onlyClick ? (
+        <>Search</>
+      ) : inputWith ? (
         <>
           Search
           <input
