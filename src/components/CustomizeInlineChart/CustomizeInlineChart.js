@@ -17,6 +17,7 @@ function CustomizeInlineChart() {
         {data?.map((item, index) => {
           return (
             <div
+              key={index}
               className="itemRoot"
               style={{
                 left: `calc(${(100 / (data.length - 1)) * index}% - 63.5px)`,

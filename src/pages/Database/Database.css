@@ -1,5 +1,5 @@
 .databaseRoot {
-  padding-top: 8px;
+  padding-top: 7px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
@@ -22,11 +22,11 @@
 }
 
 .databaseRoot .databaseHeaderRoot .databaseHeaderTab {
-  margin-top: 23px;
+  margin-top: 36px;
 }
 
 .databaseRoot .databaseContent {
-  margin-top: 65px;
+  margin-top: 30px;
 }
 
 .databaseRoot .databaseContent .databaseContent1 {
@@ -63,7 +63,7 @@
 .databaseRoot .databaseContent .databaseContent1 .secondRoot {
   display: flex;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 31px;
 }
 
 .databaseRoot .databaseContent .databaseContent1 .secondRoot .commentInput {
