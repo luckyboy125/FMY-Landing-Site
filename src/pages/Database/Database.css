@@ -343,6 +343,70 @@
   .databaseTableHeader
   .thirdItem
   .itemRoot
+  .cases
+  .dropChildrenRoot {
+  right: 20px !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .cases
+  .dropRoot {
+  width: 192px;
+  text-align: center;
+  padding: 0 10px;
+  background: #8097af;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  border-top-right-radius: 0;
+  position: relative;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .cases
+  .dropRoot
+  .dropItem:last-child {
+  border-bottom: none !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .cases
+  .dropRoot
+  .dropItem {
+  padding-left: 10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 44px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
   .social {
   margin-right: 20px;
   height: 70px !important;

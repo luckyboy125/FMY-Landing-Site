@@ -230,7 +230,27 @@ function Database() {
                         select="All"
                         className="cases"
                         type="calendar"
-                      />
+                        childrenStyle="dropChildrenRoot"
+                      >
+                        <div className="dropRoot">
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div
+                            style={{
+                              position: "absolute",
+                              right: "0",
+                              top: "-15px",
+                              width: 0,
+                              height: 0,
+                              borderLeft: "10px solid transparent",
+                              borderRight: 0,
+                              borderBottom: "15px solid #8097AF",
+                            }}
+                          ></div>
+                        </div>
+                      </DatabaseSearchDropdown>
                       <DatabaseSearchDropdown
                         content="Added by"
                         select="All"
