@@ -284,7 +284,7 @@
   .itemRoot {
   margin-bottom: 20px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .databaseRoot
@@ -378,7 +378,7 @@
   .topRightArrow {
   position: absolute;
   right: 0;
-  top: -15px;
+  top: -13px;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
@@ -475,7 +475,7 @@
   .topRightArrow {
   position: absolute;
   right: 0;
-  top: -15px;
+  top: -13px;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
@@ -550,7 +550,7 @@
   .topRightArrow {
   position: absolute;
   right: 0;
-  top: -15px;
+  top: -13px;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
