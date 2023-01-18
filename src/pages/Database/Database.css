@@ -148,6 +148,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 44px;
 }
 
 .databaseRoot
@@ -164,6 +165,7 @@
   color: #ffffff;
   margin-right: 31px;
 }
+
 .databaseRoot
   .databaseContent
   .databaseContent2
@@ -179,8 +181,42 @@
   .databaseTableHeader
   .firstItem
   .toolEndRoot
+  .tool:last-child {
+  margin-right: 0 !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .firstItem
+  .toolEndRoot
+  .searchTool {
+  background: rgba(117, 179, 255, 0.2);
+  border-radius: 30px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #75b3ff;
+  padding: 0 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .firstItem
+  .toolEndRoot
   .tool {
-  margin-left: 20px;
+  margin-right: 20px;
   cursor: pointer;
 }
 

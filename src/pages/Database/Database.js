@@ -3,11 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import ColorBtn from "../../components/ColorBtn/ColorBtn";
 import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
-import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
-import SearchInput from "../../components/SearchInput/SearchInput";
 import ThreeDotBtn from "../../components/ThreeDotBtn/ThreeDotBtn";
 import DatabaseInput from "./component/DatabaseInput/DatabaseInput";
-import DatabaseSearchInput from "../../components/DatabaseSearchInput/DatabaseSearchInput";
 import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
 import refresh from "../../asset/images/refresh_icon.svg";
 import person3 from "../../asset/person3.svg";
@@ -26,6 +23,7 @@ function Database() {
   const [cases, setCases] = useState("Add a case here...");
   const [tableSearch, setTableSearch] = useState("");
   const [mockTableData, setMockTableData] = useState([]);
+  const [advancedToolBtn, setAdvancedToolBtn] = useState(false);
 
   const tabData = [
     "All",
@@ -46,6 +44,7 @@ function Database() {
   };
 
   const handleSearchShow = () => {
+    setAdvancedToolBtn(false);
     query.set(
       "search_panel",
       query.get("search_panel") === null
@@ -144,6 +143,14 @@ function Database() {
                 <div className="firstItem">
                   <div className="databaseTableTitle">Database items</div>
                   <div className="toolEndRoot">
+                    {advancedToolBtn ? (
+                      <>
+                        <div className="searchTool">Save Search</div>
+                        <div className="searchTool">Cancel Search</div>
+                      </>
+                    ) : (
+                      <></>
+                    )}
                     <img src={refresh} alt="tool" className="tool" />
                     <img
                       src={searchIcon}
@@ -278,7 +285,10 @@ function Database() {
                         <span className="selected">Comment</span>
                       </div>
                     </div>
-                    <div className="searchBtn">
+                    <div
+                      className="searchBtn"
+                      onClick={() => setAdvancedToolBtn(!advancedToolBtn)}
+                    >
                       <img src={searchIcon} alt="tool" />
                     </div>
                   </div>
