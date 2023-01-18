@@ -21,10 +21,10 @@ function Database() {
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
 
-  const [url, setUrl] = useState("");
-  const [comment, setComment] = useState("");
-  const [cases, setCases] = useState("");
-  const [searchStatus, setSearchStatus] = useState(false);
+  const [url, setUrl] = useState("Add URL of: post, user, website...");
+  const [comment, setComment] = useState("Add a comment here...");
+  const [cases, setCases] = useState("Add a case here...");
+  const [tableSearch, setTableSearch] = useState("");
   const [mockTableData, setMockTableData] = useState([]);
 
   const tabData = [
@@ -47,13 +47,21 @@ function Database() {
 
   const handleSearchShow = () => {
     query.set(
-      "search_show",
-      query.get("search_show") === null
-        ? true
-        : query.get("search_show") === "true"
-        ? false
-        : true
+      "search_panel",
+      query.get("search_panel") === null
+        ? 1
+        : query.get("search_panel") !== "0"
+        ? 0
+        : 1
     );
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+  };
+
+  const handleAdvancedShow = () => {
+    query.set("search_panel", 2);
     navigate({
       pathname: location.pathname,
       search: query.toString(),
@@ -105,7 +113,6 @@ function Database() {
             <DatabaseInput
               className="urlInput"
               inputValue={url}
-              placeholder="Add URL of: post, user, website..."
               action={(e) => setUrl(e)}
               tool={<div className="addDBBtn">+ Add to DB</div>}
             />
@@ -113,13 +120,11 @@ function Database() {
               <DatabaseInput
                 className="commentInput"
                 inputValue={comment}
-                placeholder="Add a comment here..."
                 action={(e) => setComment(e)}
               />
               <DatabaseInput
                 className="casesInput"
                 inputValue={cases}
-                placeholder="Add a case here..."
                 action={(e) => setCases(e)}
                 tool={
                   <div className="toolRoot">
@@ -148,27 +153,95 @@ function Database() {
                     />
                   </div>
                 </div>
-                {query.get("search_show") === "true" ? (
+                {query.get("search_panel") === "1" ? (
                   <div className="secondItem">
-                    <DatabaseSearchInput />
-                    <div className="plusLetter">+</div>
-                    <DatabaseSearchDropdown
-                      content="Cases"
-                      select="All"
-                      className="dropdown"
+                    <DatabaseInput
+                      className="tableSearchInput"
+                      inputValue={tableSearch}
+                      placeholder="Insert text here..."
+                      action={(e) => setTableSearch(e)}
                     />
-                    <DatabaseSearchDropdown
-                      content="Posted dates"
-                      select="All"
-                      type="calendar"
-                      className="dropdown"
-                    />
-                    <DatabaseSearchDropdown
-                      content="Upload dates"
-                      select="All"
-                      type="calendar"
-                      className="dropdown"
-                    />
+                    <div className="searchBtn">
+                      <img src={searchIcon} alt="tool" />
+                    </div>
+                    <div className="advancedBtn" onClick={handleAdvancedShow}>
+                      Advanced Search
+                    </div>
+                  </div>
+                ) : query.get("search_panel") === "2" ? (
+                  <div className="thirdItem">
+                    <div className="itemRoot">
+                      <div className="inputRoot">
+                        <div className="inputDes">Any of these words:</div>
+                        <DatabaseInput
+                          className="input"
+                          inputValue={tableSearch}
+                          placeholder="Insert text here..."
+                          action={(e) => setTableSearch(e)}
+                        />
+                      </div>
+                      <div className="inputRoot">
+                        <div className="inputDes">All of these words:</div>
+                        <DatabaseInput
+                          className="input"
+                          inputValue={tableSearch}
+                          placeholder="Insert text here..."
+                          action={(e) => setTableSearch(e)}
+                        />
+                      </div>
+                      <DatabaseSearchDropdown
+                        content="Cases"
+                        select="All"
+                        className="cases"
+                      />
+                      <DatabaseSearchDropdown
+                        content="Social platform"
+                        select="All"
+                        className="social"
+                      />
+                      <div className="selectRoot">
+                        <span>User</span>/<span className="selected">Post</span>
+                        /<span>URL</span>
+                      </div>
+                    </div>
+                    <div className="itemRoot">
+                      <div className="inputRoot">
+                        <div className="inputDes">This exact phrase:</div>
+                        <DatabaseInput
+                          className="input"
+                          inputValue={tableSearch}
+                          placeholder="Insert text here..."
+                          action={(e) => setTableSearch(e)}
+                        />
+                      </div>
+                      <div className="inputRoot">
+                        <div className="inputDes">None of these words:</div>
+                        <DatabaseInput
+                          className="input"
+                          inputValue={tableSearch}
+                          placeholder="Insert text here..."
+                          action={(e) => setTableSearch(e)}
+                        />
+                      </div>
+                      <DatabaseSearchDropdown
+                        content="Added date"
+                        select="All"
+                        className="cases"
+                        type="calendar"
+                      />
+                      <DatabaseSearchDropdown
+                        content="Added by"
+                        select="All"
+                        className="social"
+                      />
+                      <div className="selectRoot">
+                        <span>Content</span>/
+                        <span className="selected">Comment</span>
+                      </div>
+                    </div>
+                    <div className="searchBtn">
+                      <img src={searchIcon} alt="tool" />
+                    </div>
                   </div>
                 ) : (
                   <></>

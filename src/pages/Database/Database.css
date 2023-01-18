@@ -200,11 +200,27 @@
   .databaseContent2
   .databaseTableHeader
   .secondItem
-  .plusLetter {
-  font-size: 50px;
-  line-height: 50px;
-  color: #75b3ff;
-  margin-left: 20px;
+  .tableSearchInput {
+  width: 521px;
+  margin-right: 20px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .secondItem
+  .searchBtn {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  margin-right: 20px;
   cursor: pointer;
 }
 
@@ -213,8 +229,196 @@
   .databaseContent2
   .databaseTableHeader
   .secondItem
-  .dropdown {
+  .searchBtn
+  img {
+  width: 20px;
+  height: 20px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .secondItem
+  .advancedBtn {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #75b3ff;
+  background: rgba(117, 179, 255, 0.2);
+  border-radius: 30px;
+  width: 198px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem {
+  margin-top: 32px;
   margin-left: 20px;
+  position: relative;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot:last-child {
+  margin-bottom: 0 !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: end;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .inputRoot {
+  margin-right: 20px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .inputRoot
+  .inputDes {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .inputRoot
+  .input {
+  width: 521px !important;
+  height: 70px !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .cases {
+  margin-right: 20px;
+  height: 70px !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .social {
+  margin-right: 20px;
+  height: 70px !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .selectRoot {
+  padding: 0 25px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .selectRoot
+  span {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .selectRoot
+  .selected {
+  font-weight: 700 !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .searchBtn {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .databaseRoot
