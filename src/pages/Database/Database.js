@@ -194,13 +194,32 @@ function Database() {
                         select="All"
                         className="cases"
                         type="keyword"
-                      />
+                        childrenStyle="dropChildrenRoot"
+                      >
+                        <div className="dropRoot">
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="topRightArrow"></div>
+                        </div>
+                      </DatabaseSearchDropdown>
                       <DatabaseSearchDropdown
                         content="Social platform"
                         select="All"
                         className="social"
                         type="keyword"
-                      />
+                        childrenStyle="dropChildrenRoot"
+                      >
+                        <div className="plateformDropdown">
+                          <img src={youtube} alt="social_icon" />
+                          <img src={youtube} alt="social_icon" />
+                          <img src={youtube} alt="social_icon" />
+                          <img src={youtube} alt="social_icon" />
+                          <img src={youtube} alt="social_icon" />
+                          <div className="topRightArrow"></div>
+                        </div>
+                      </DatabaseSearchDropdown>
                       <div className="selectRoot">
                         <span>User</span>/<span className="selected">Post</span>
                         /<span>URL</span>
@@ -237,25 +256,23 @@ function Database() {
                           <div className="dropItem">Lorem ipsum</div>
                           <div className="dropItem">Lorem ipsum</div>
                           <div className="dropItem">Lorem ipsum</div>
-                          <div
-                            style={{
-                              position: "absolute",
-                              right: "0",
-                              top: "-15px",
-                              width: 0,
-                              height: 0,
-                              borderLeft: "10px solid transparent",
-                              borderRight: 0,
-                              borderBottom: "15px solid #8097AF",
-                            }}
-                          ></div>
+                          <div className="topRightArrow"></div>
                         </div>
                       </DatabaseSearchDropdown>
                       <DatabaseSearchDropdown
                         content="Added by"
                         select="All"
                         className="social"
-                      />
+                        childrenStyle="dropChildrenRoot"
+                      >
+                        <div className="dropRoot">
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="dropItem">Lorem ipsum</div>
+                          <div className="topRightArrow"></div>
+                        </div>
+                      </DatabaseSearchDropdown>
                       <div className="selectRoot">
                         <span>Content</span>/
                         <span className="selected">Comment</span>

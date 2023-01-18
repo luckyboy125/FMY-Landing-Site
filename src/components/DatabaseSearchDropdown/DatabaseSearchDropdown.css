@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.databaseSearchDropdownRoot img {
+.databaseSearchDropdownRoot > img {
   margin-right: 15px;
 }
 

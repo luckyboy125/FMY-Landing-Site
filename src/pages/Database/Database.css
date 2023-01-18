@@ -346,6 +346,7 @@
   .cases
   .dropChildrenRoot {
   right: 20px !important;
+  top: 60px !important;
 }
 
 .databaseRoot
@@ -364,6 +365,25 @@
   border-radius: 16px;
   border-top-right-radius: 0;
   position: relative;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .cases
+  .dropRoot
+  .topRightArrow {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 0;
+  border-bottom: 15px solid #8097af;
 }
 
 .databaseRoot
@@ -411,6 +431,146 @@
   margin-right: 20px;
   height: 70px !important;
 }
+
+/* /////////////          */
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .social
+  .dropChildrenRoot {
+  right: 20px !important;
+  top: 60px !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .social
+  .dropRoot {
+  width: 192px;
+  text-align: center;
+  padding: 0 10px;
+  background: #8097af;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  border-top-right-radius: 0;
+  position: relative;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .social
+  .dropRoot
+  .topRightArrow {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 0;
+  border-bottom: 15px solid #8097af;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .social
+  .dropRoot
+  .dropItem:last-child {
+  border-bottom: none !important;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .social
+  .dropRoot
+  .dropItem {
+  padding-left: 10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 44px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .social
+  .plateformDropdown {
+  width: 245px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background: #8097af;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  position: relative;
+  height: 72px;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .social
+  .plateformDropdown
+  .topRightArrow {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 0;
+  border-bottom: 15px solid #8097af;
+}
+
+.databaseRoot
+  .databaseContent
+  .databaseContent2
+  .databaseTableHeader
+  .thirdItem
+  .itemRoot
+  .social
+  .plateformDropdown
+  img {
+  width: 33px;
+  height: 33px;
+}
+/* sssssssssssssssociallllllllllllllllll */
 
 .databaseRoot
   .databaseContent
