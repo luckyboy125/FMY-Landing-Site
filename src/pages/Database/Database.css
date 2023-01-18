@@ -132,7 +132,7 @@
 }
 
 .databaseRoot .databaseContent .databaseContent2 .databaseTableHeader {
-  padding: 21px 31.69px 30px 30px;
+  padding: 30px;
   margin-bottom: 2px;
 }
 
@@ -181,6 +181,7 @@
   .toolEndRoot
   .tool {
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .databaseRoot

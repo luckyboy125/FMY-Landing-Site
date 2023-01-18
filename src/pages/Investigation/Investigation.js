@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import ActionTab from "../../components/ActionTab/ActionTab";
+import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
 import "./Investigation.css";
 
 function Investigation() {
@@ -34,7 +35,16 @@ function Investigation() {
             />
           </div>
         </div>
-        <div className="investigationContent"></div>
+        <div className="investigationContent">
+          <div className="investigationContent1">
+            <DatabaseSearchDropdown
+              content="Cases"
+              select="All"
+              className="dropdown"
+            />
+            <div className="inputRoot"></div>
+          </div>
+        </div>
       </div>
     </>
   );

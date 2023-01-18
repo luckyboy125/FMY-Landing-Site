@@ -7,18 +7,26 @@ import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import ThreeDotBtn from "../../components/ThreeDotBtn/ThreeDotBtn";
 import DatabaseInput from "./component/DatabaseInput/DatabaseInput";
+import DatabaseSearchInput from "../../components/DatabaseSearchInput/DatabaseSearchInput";
+import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
 import refresh from "../../asset/images/refresh_icon.svg";
 import person3 from "../../asset/person3.svg";
 import youtube from "../../asset/images/social/youtube.svg";
 import tableAlertIcon from "../../asset/images/alert_icon.svg";
+import searchIcon from "../../asset/images/search_icon_white.svg";
 import "./Database.css";
-import DatabaseSearchInput from "../../components/DatabaseSearchInput/DatabaseSearchInput";
-import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
 
 function Database() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
+
+  const [url, setUrl] = useState("");
+  const [comment, setComment] = useState("");
+  const [cases, setCases] = useState("");
+  const [searchStatus, setSearchStatus] = useState(false);
+  const [mockTableData, setMockTableData] = useState([]);
+
   const tabData = [
     "All",
     "Posts",
@@ -29,14 +37,23 @@ function Database() {
     "Other design",
   ];
 
-  const [url, setUrl] = useState("");
-  const [comment, setComment] = useState("");
-  const [cases, setCases] = useState("");
-  const [searchStatus, setSearchStatus] = useState(false);
-  const [mockTableData, setMockTableData] = useState([]);
-
   const handleTab = (_tab) => {
     query.set("database_tab", _tab);
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+  };
+
+  const handleSearchShow = () => {
+    query.set(
+      "search_show",
+      query.get("search_show") === null
+        ? true
+        : query.get("search_show") === "true"
+        ? false
+        : true
+    );
     navigate({
       pathname: location.pathname,
       search: query.toString(),
@@ -122,23 +139,28 @@ function Database() {
                 <div className="firstItem">
                   <div className="databaseTableTitle">Database items</div>
                   <div className="toolEndRoot">
-                    <SearchInput
-                      clickAction={() => setSearchStatus(!searchStatus)}
-                      onlyClick
-                      className="searchTool"
-                    />
-                    <FilterDropdown className="tool" type="filter" />
-                    <FilterDropdown className="tool" />
                     <img src={refresh} alt="tool" className="tool" />
+                    <img
+                      src={searchIcon}
+                      alt="tool"
+                      className="tool"
+                      onClick={handleSearchShow}
+                    />
                   </div>
                 </div>
-                {searchStatus ? (
+                {query.get("search_show") === "true" ? (
                   <div className="secondItem">
                     <DatabaseSearchInput />
                     <div className="plusLetter">+</div>
                     <DatabaseSearchDropdown
-                      content="Keywords"
+                      content="Cases"
                       select="All"
+                      className="dropdown"
+                    />
+                    <DatabaseSearchDropdown
+                      content="Posted dates"
+                      select="All"
+                      type="calendar"
                       className="dropdown"
                     />
                     <DatabaseSearchDropdown
