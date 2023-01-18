@@ -57,6 +57,7 @@ function Database() {
                   content="Keywords"
                   select="All"
                   className="dropdown"
+                  type="keyword"
                 />
                 <DatabaseSearchDropdown
                   content="Upload dates"

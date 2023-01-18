@@ -193,11 +193,13 @@ function Database() {
                         content="Cases"
                         select="All"
                         className="cases"
+                        type="keyword"
                       />
                       <DatabaseSearchDropdown
                         content="Social platform"
                         select="All"
                         className="social"
+                        type="keyword"
                       />
                       <div className="selectRoot">
                         <span>User</span>/<span className="selected">Post</span>

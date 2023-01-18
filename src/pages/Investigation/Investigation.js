@@ -41,6 +41,7 @@ function Investigation() {
               content="Cases"
               select="All"
               className="dropdown"
+              type="keyword"
             />
             <div className="inputRoot"></div>
           </div>

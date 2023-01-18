@@ -7,8 +7,10 @@ function DatabaseSearchDropdown({ className, content, select, type }) {
     <div className={`databaseSearchDropdownRoot ${className}`}>
       {type === "calendar" ? (
         <img src={calendar} alt="calendar" />
-      ) : (
+      ) : type === "keyword" ? (
         <img src={keyword} alt="keyword" />
+      ) : (
+        <></>
       )}
       <div className="dropdownContent">{content}:</div>
       <div className="dropdownSelect">{select}</div>
