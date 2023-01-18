@@ -1,11 +1,16 @@
 .letterSelectButtonRoot {
   padding: 0 25px;
   height: 70px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(163, 113, 113, 0.1);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.letterSelectButtonRoot .item {
+  display: flex;
   align-items: center;
   font-family: "Helvetica";
   font-style: normal;
@@ -15,7 +20,7 @@
   color: #ffffff;
 }
 
-.letterSelectButtonRoot span {
+.letterSelectButtonRoot .item span {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;

@@ -5,16 +5,15 @@ function LetterSelectButton({ data, className, selected, action }) {
     <div className={`${className} letterSelectButtonRoot`}>
       {data?.map((item, index) => {
         return (
-          <>
+          <div key={index} className="item">
             {index === 0 ? <></> : <>/</>}
             <span
-              key={index}
               className={`${selected === item && "selected"}`}
               onClick={() => action(item)}
             >
               {item}
             </span>
-          </>
+          </div>
         );
       })}
     </div>
