@@ -12,6 +12,7 @@ import youtube from "../../asset/images/social/youtube.svg";
 import tableAlertIcon from "../../asset/images/alert_icon.svg";
 import searchIcon from "../../asset/images/search_icon_white.svg";
 import "./Database.css";
+import LetterSelectButton from "./component/LetterSelectButton/LetterSelectButton";
 
 function Database() {
   const location = useLocation();
@@ -24,6 +25,10 @@ function Database() {
   const [tableSearch, setTableSearch] = useState("");
   const [mockTableData, setMockTableData] = useState([]);
   const [advancedToolBtn, setAdvancedToolBtn] = useState(false);
+  const firstLetterSelect = ["User", "Post", "URL"];
+  const [firstLetter, setFirstLetter] = useState(firstLetterSelect[0]);
+  const secondLetterSelect = ["Content", "Comment"];
+  const [secondLetter, setSecondLetter] = useState(secondLetterSelect[0]);
 
   const tabData = [
     "All",
@@ -227,10 +232,11 @@ function Database() {
                           <div className="topRightArrow"></div>
                         </div>
                       </DatabaseSearchDropdown>
-                      <div className="selectRoot">
-                        <span>User</span>/<span className="selected">Post</span>
-                        /<span>URL</span>
-                      </div>
+                      <LetterSelectButton
+                        data={firstLetterSelect}
+                        selected={firstLetter}
+                        action={(e) => setFirstLetter(e)}
+                      />
                     </div>
                     <div className="itemRoot">
                       <div className="inputRoot">
@@ -280,10 +286,11 @@ function Database() {
                           <div className="topRightArrow"></div>
                         </div>
                       </DatabaseSearchDropdown>
-                      <div className="selectRoot">
-                        <span>Content</span>/
-                        <span className="selected">Comment</span>
-                      </div>
+                      <LetterSelectButton
+                        data={secondLetterSelect}
+                        selected={secondLetter}
+                        action={(e) => setSecondLetter(e)}
+                      />
                     </div>
                     <div
                       className="searchBtn"

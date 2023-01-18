@@ -1,0 +1,30 @@
+.letterSelectButtonRoot {
+  padding: 0 25px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.letterSelectButtonRoot span {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.letterSelectButtonRoot .selected {
+  font-weight: 700 !important;
+}
