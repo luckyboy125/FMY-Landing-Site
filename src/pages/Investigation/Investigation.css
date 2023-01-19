@@ -56,4 +56,120 @@
   display: flex;
   align-items: center;
   height: 73px;
+  padding: 0 25px 0 15px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  > img {
+  margin-right: 12px;
+  width: 19px;
+  height: 19px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  input {
+  flex-grow: 1;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0 !important;
+}
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  input::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+}
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  input:focus-visible {
+  outline: none;
+}
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  input:focus {
+  outline: none;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .divline {
+  height: 73px;
+  width: 1px;
+  background: #ffffff33;
+  margin: 0 10px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchDropdown {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ececf1;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchDropdown
+  i {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #ececf1;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchBtn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchBtn
+  > img {
+  width: 17.25px;
+  height: 17.25px;
 }

@@ -1,0 +1,9 @@
+.dropdownLayoutRoot {
+  position: relative;
+}
+
+.dropdownLayoutRoot .dropRoot {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
