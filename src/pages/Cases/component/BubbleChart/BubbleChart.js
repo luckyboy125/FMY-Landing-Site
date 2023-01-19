@@ -1,6 +1,6 @@
 import React, { createRef, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import * as d3 from "d3";
 
 function useForceUpdate() {
   const [, setValue] = useState(0);
