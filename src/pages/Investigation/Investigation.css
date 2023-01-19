@@ -182,7 +182,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot {
+  .userAnalysisRoot {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -191,12 +191,13 @@
   border-radius: 16px;
   width: 930px;
   padding: 30px 24px 30px 30px;
+  margin-right: 30px;
 }
 
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .headerRoot {
   display: flex;
   width: 100%;
@@ -208,7 +209,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .headerRoot
   .title {
   font-family: "Helvetica";
@@ -222,7 +223,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .headerRoot
   .viewDetail {
   display: flex;
@@ -238,7 +239,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .headerRoot
   .viewDetail
   i {
@@ -250,7 +251,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .nameRoot {
   display: flex;
   justify-content: space-between;
@@ -260,7 +261,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .nameRoot
   .front {
   display: flex;
@@ -270,7 +271,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .nameRoot
   .front
   > img {
@@ -282,7 +283,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .nameRoot
   .front
   .name {
@@ -297,7 +298,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .nameRoot
   .front
   .socialnameRoot {
@@ -315,7 +316,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .nameRoot
   .front
   .socialnameRoot
@@ -327,7 +328,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .nameRoot
   .end {
   display: flex;
@@ -343,7 +344,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .nameRoot
   .end
   > i {
@@ -355,7 +356,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .bio {
   margin-top: 41px;
   margin-left: 20px;
@@ -370,7 +371,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .bioRoot {
   width: 100%;
   margin-top: 30px;
@@ -379,7 +380,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .bioRoot
   .itemRoot:last-child {
   margin-bottom: 0 !important;
@@ -388,7 +389,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .bioRoot
   .itemRoot {
   display: flex;
@@ -400,7 +401,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .bioRoot
   .itemRoot
   .biocardRoot
@@ -420,7 +421,7 @@
 .investigationRoot
   .investigationContent
   .investigationContent2
-  .userAnalsysRoot
+  .userAnalysisRoot
   .bioRoot
   .itemRoot
   .biocardRoot
@@ -429,4 +430,334 @@
   font-size: 24px;
   line-height: 20px;
   color: #37ce4a;
+}
+
+.investigationRoot .investigationContent .investigationContent2 .linkAnalisys {
+  flex-grow: 1;
+  padding: 30;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .linkAnalisys
+  .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.investigationRoot .investigationContent .investigationContent3 {
+  display: flex;
+  margin-top: 30px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot {
+  width: 930px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 16px;
+  padding: 32px 30px 30px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .searchRoot {
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.15);
+  background: rgba(15, 18, 26, 0.4);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  margin-top: 29px;
+  padding: 0 8px 0 20px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .searchRoot
+  input {
+  flex-grow: 1;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0 !important;
+}
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .searchRoot
+  input::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #fff;
+}
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .searchRoot
+  input:focus-visible {
+  outline: none;
+}
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .searchRoot
+  input:focus {
+  outline: none;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .searchRoot
+  .searchBtn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .searchRoot
+  .searchBtn
+  > img {
+  width: 17.25px;
+  height: 17.25px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot {
+  margin-top: 29px;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.15));
+  border-radius: 16px;
+  padding: 30px 30px 44px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postHeaderRoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postHeaderRoot
+  .front {
+  display: flex;
+  align-items: center;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postHeaderRoot
+  .front
+  img {
+  width: 59px;
+  height: 59px;
+  margin-right: 20px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postHeaderRoot
+  .front
+  div
+  .nameRoot {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postHeaderRoot
+  .front
+  div
+  .nameRoot
+  .id {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-left: 23px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postHeaderRoot
+  .front
+  div
+  .time {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-top: 3.73px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postHeaderRoot
+  .social {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  display: flex;
+  width: 145.19px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postHeaderRoot
+  .social
+  img {
+  margin-right: 10px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postContent {
+  width: 100%;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.15));
+  border-radius: 16px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot
+  .item {
+  width: 33%;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
