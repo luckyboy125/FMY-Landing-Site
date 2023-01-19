@@ -173,3 +173,181 @@
   width: 17.25px;
   height: 17.25px;
 }
+
+.investigationRoot .investigationContent .investigationContent2 {
+  display: flex;
+  margin-top: 30px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 16px;
+  width: 930px;
+  padding: 30px 24px 30px 30px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .headerRoot {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 31px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .headerRoot
+  .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .headerRoot
+  .viewDetail {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #75b3ff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .headerRoot
+  .viewDetail
+  i {
+  margin-left: 5px;
+  color: #75b3ff;
+  font-size: 16px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .nameRoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .nameRoot
+  .front {
+  display: flex;
+  align-items: center;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .nameRoot
+  .front
+  > img {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .nameRoot
+  .front
+  .name {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .nameRoot
+  .front
+  .socialnameRoot {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #75b3ff;
+  margin-top: 10px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .nameRoot
+  .front
+  .socialnameRoot
+  > i {
+  font-size: 18px;
+  color: #1da1f2;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .nameRoot
+  .end {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .nameRoot
+  .end
+  > i {
+  width: 16px;
+  color: #fff;
+  margin-right: 7.75px;
+}

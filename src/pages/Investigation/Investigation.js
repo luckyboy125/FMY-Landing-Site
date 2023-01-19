@@ -3,6 +3,7 @@ import ActionTab from "../../components/ActionTab/ActionTab";
 import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
 import searchIcon from "../../asset/images/search_icon_white.svg";
 import _searchIcon from "../../asset/images/search_icon.svg";
+import person1 from "../../asset/person1.svg";
 import "./Investigation.css";
 import { useState } from "react";
 import DropdownLayout from "../../components/DropdownLayout/DropdownLayout";
@@ -74,6 +75,32 @@ function Investigation() {
               <div className="divline"></div>
               <div className="searchBtn">
                 <img src={_searchIcon} alt="search_icon" />
+              </div>
+            </div>
+          </div>
+          <div className="investigationContent2">
+            <div className="userAnalsysRoot">
+              <div className="headerRoot">
+                <div className="title">User analysis</div>
+                <div className="viewDetail">
+                  View Details <i className="fas fa-chevron-right"></i>
+                </div>
+              </div>
+              <div className="nameRoot">
+                <div className="front">
+                  <img src={person1} alt="person" />
+                  <div>
+                    <div className="name">Victor Vance</div>
+                    <div className="socialnameRoot">
+                      <i className="fab fa-twitter"></i>
+                      @vectorvance
+                    </div>
+                  </div>
+                </div>
+                <div className="end">
+                  <i className="fas fa-map-marker-alt"></i>
+                  New York, USA
+                </div>
               </div>
             </div>
           </div>
