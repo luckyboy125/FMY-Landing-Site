@@ -7,6 +7,7 @@ import person1 from "../../asset/person1.svg";
 import "./Investigation.css";
 import { useState } from "react";
 import DropdownLayout from "../../components/DropdownLayout/DropdownLayout";
+import Biocard from "./component/Biocard";
 
 function Investigation() {
   const location = useLocation();
@@ -100,6 +101,73 @@ function Investigation() {
                 <div className="end">
                   <i className="fas fa-map-marker-alt"></i>
                   New York, USA
+                </div>
+              </div>
+              <div className="bio">Bio</div>
+              <div className="bioRoot">
+                <div className="itemRoot">
+                  <Biocard
+                    title="Followers"
+                    count="204"
+                    des="(178 last week)"
+                    countDes={
+                      <div className="biocardDes">
+                        <i className="fas fa-caret-up"></i>105.23 %
+                      </div>
+                    }
+                  />
+                  <Biocard
+                    title="Followers"
+                    count="204"
+                    des="(178 last week)"
+                    countDes={
+                      <div className="biocardDes">
+                        <i className="fas fa-caret-up"></i>105.23 %
+                      </div>
+                    }
+                  />
+                  <Biocard
+                    title="Followers"
+                    count="204"
+                    des="(178 last week)"
+                    countDes={
+                      <div className="biocardDes">
+                        <i className="fas fa-caret-up"></i>105.23 %
+                      </div>
+                    }
+                  />
+                </div>
+                <div className="itemRoot">
+                  <Biocard
+                    title="Followers"
+                    count="204"
+                    des="(178 last week)"
+                    countDes={
+                      <div className="biocardDes">
+                        <i className="fas fa-caret-up"></i>105.23 %
+                      </div>
+                    }
+                  />
+                  <Biocard
+                    title="Followers"
+                    count="204"
+                    des="(178 last week)"
+                    countDes={
+                      <div className="biocardDes">
+                        <i className="fas fa-caret-up"></i>105.23 %
+                      </div>
+                    }
+                  />
+                  <Biocard
+                    title="Followers"
+                    count="204"
+                    des="(178 last week)"
+                    countDes={
+                      <div className="biocardDes">
+                        <i className="fas fa-caret-up"></i>105.23 %
+                      </div>
+                    }
+                  />
                 </div>
               </div>
             </div>

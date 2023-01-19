@@ -351,3 +351,48 @@
   color: #fff;
   margin-right: 7.75px;
 }
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .bio {
+  margin-top: 41px;
+  margin-left: 20px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .bioRoot {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .bioRoot
+  .itemRoot:last-child {
+  margin-bottom: 0 !important;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .bioRoot
+  .itemRoot {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
