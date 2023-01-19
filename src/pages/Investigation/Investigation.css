@@ -396,3 +396,37 @@
   width: 100%;
   margin-bottom: 30px;
 }
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .bioRoot
+  .itemRoot
+  .biocardRoot
+  .biocardDes {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 20px;
+  color: #37ce4a;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent2
+  .userAnalsysRoot
+  .bioRoot
+  .itemRoot
+  .biocardRoot
+  .biocardDes
+  i {
+  font-size: 24px;
+  line-height: 20px;
+  color: #37ce4a;
+}
