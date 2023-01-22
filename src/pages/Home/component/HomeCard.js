@@ -10,7 +10,14 @@ import twitter from "../../../asset/images/social/twitter.svg";
 import "./HomeCard.css";
 import ThreeDotBtn from "../../../components/ThreeDotBtn/ThreeDotBtn";
 
-function HomeCard({ className, cardType, cardContent, author, cardDate }) {
+function HomeCard({
+  className,
+  cardType,
+  cardContent,
+  author,
+  cardDate,
+  commentAction,
+}) {
   const card_type = {
     boycott: {
       title: "Boycott elections",
@@ -42,14 +49,19 @@ function HomeCard({ className, cardType, cardContent, author, cardDate }) {
         </div>
         <div className="cardDate">{cardDate}</div>
         <div className="cardIconSocial">
-          <img src={instagram} alt="instagram" />
-          <img src={facebook} alt="facebook" />
-          <img src={twitter} alt="twitter" />
-          <img src={tiktok} alt="tiktok" />
-          <img src={reddit} alt="reddit" />
-          <img src={telegram} alt="telegram" />
-          <img src={youtube} alt="youtube" />
-          <img src={w3} alt="w3" />
+          <div className="front">
+            <img src={instagram} alt="instagram" />
+            <img src={facebook} alt="facebook" />
+            <img src={twitter} alt="twitter" />
+            <img src={tiktok} alt="tiktok" />
+            <img src={reddit} alt="reddit" />
+            <img src={telegram} alt="telegram" />
+            <img src={youtube} alt="youtube" />
+            <img src={w3} alt="w3" />
+          </div>
+          <div className="commentBtn" onClick={commentAction}>
+            Comment
+          </div>
         </div>
       </div>
     </>

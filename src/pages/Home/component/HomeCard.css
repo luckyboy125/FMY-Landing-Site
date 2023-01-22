@@ -69,8 +69,32 @@
 .homeCardRoot .cardIconSocial {
   margin-top: 20px;
   display: flex;
+  justify-content: space-between;
 }
 
-.homeCardRoot .cardIconSocial img {
+.homeCardRoot .cardIconSocial .front {
+  display: flex;
+  align-items: center;
+}
+
+.homeCardRoot .cardIconSocial .front img {
   margin-right: 5.4px;
+}
+
+.homeCardRoot .cardIconSocial .commentBtn {
+  width: 127px;
+  height: 40px;
+  background: rgba(117, 179, 255, 0.5);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-right: -20px;
+  cursor: pointer;
 }
