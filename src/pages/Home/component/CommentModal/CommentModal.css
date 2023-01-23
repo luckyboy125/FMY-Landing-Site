@@ -44,6 +44,7 @@
   position: absolute;
   top: 30px;
   right: 30px;
+  cursor: pointer;
 }
 
 .commentModalRoot .headerRoot {
@@ -71,10 +72,6 @@
   width: 720px;
   border-right: solid 1px rgba(255, 255, 255, 0.2);
   padding: 32.5px 30px 22px 0;
-}
-
-.commentModalRoot .contentRoot .rightPart {
-  flex-grow: 1;
 }
 
 .commentModalRoot .contentRoot .leftPart .leftPart1 {
@@ -385,7 +382,8 @@
 }
 
 .commentModalRoot .contentRoot .rightPart {
-  padding: 47px 0 23px 50px;
+  flex-grow: 1;
+  padding: 47px 20px 23px 50px;
 }
 
 .commentModalRoot .contentRoot .rightPart .inputFileRoot {
@@ -398,4 +396,404 @@
   border-radius: 40px;
   font-size: 100px;
   color: #fff;
+}
+
+.commentModalRoot .modalContainer {
+  width: 100%;
+  display: flex;
+  /* align-items: flex-end; */
+}
+
+.commentModalRoot .modalContainer .leftPart {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-radius: 16px;
+  width: 690px;
+  padding: 20px 39px 0 30px;
+}
+
+.commentModalRoot .modalContainer .leftPart .titleBtn {
+  width: 155px;
+  height: 40px;
+  background: rgba(255, 122, 0, 0.7);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: auto;
+}
+
+.commentModalRoot .modalContainer .leftPart .titleDes {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.commentModalRoot .modalContainer .leftPart .inputFileRoot {
+  width: 400px;
+  height: 382px;
+  border: 3px dashed #ffffff;
+  border-radius: 40px;
+  margin: 128px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  color: #fff;
+}
+
+.commentModalRoot .modalContainer .divLine {
+  width: 2px;
+  height: 720px;
+  background: #ffffff33;
+  margin: 70px 20px 0;
+}
+
+.commentModalRoot .modalContainer .rightPart {
+  flex-grow: 1;
+  padding: 20px 30px 0 0;
+}
+
+.commentModalRoot .modalContainer .rightPart .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart1 {
+  margin-top: 30px;
+  display: flex;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart1 .item1 {
+  width: 323px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart1 .item1 .date {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff99;
+  margin-left: 10px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart1 .item2 {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart1 .item2 img {
+  width: 30px;
+  height: 30px;
+  margin-left: 17.96px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart1 .item2 .name {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart2 {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart2 .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart2 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 156px;
+  height: 44px;
+  background: #01a1fd;
+  border-radius: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart2 .plus {
+  color: #01a1fd;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart3 {
+  margin-top: 93px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart3 .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart3
+  .socialRoot
+  img:last-child {
+  margin-right: 0;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart4 {
+  margin-top: 30px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart4 .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart4 .commentsRoot {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 20px 10px 20px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart4 .commentsRoot img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsRoot
+  .commentDes {
+  width: 506px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsRoot
+  .commentDate {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 33px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 19px;
+}
+
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsRoot
+  .dotGroupRoot {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsRoot
+  .dotGroupRoot
+  .dot {
+  background: #ffffff !important;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart4 .commentsInputRoot {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  height: 216px;
+  padding: 24px 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsInputRoot
+  textarea {
+  width: 550px;
+  height: 110px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0 !important;
+  resize: none;
+}
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsInputRoot
+  textarea::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsInputRoot
+  textarea:focus-visible {
+  outline: none;
+}
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsInputRoot
+  textarea:focus {
+  outline: none;
+}
+
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsInputRoot
+  .postBtn {
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
+  background: #75b3ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  width: 81px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsInputRoot
+  .moreSetting {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.commentModalRoot
+  .modalContainer
+  .rightPart
+  .rightPart4
+  .commentsInputRoot
+  .moreSetting
+  .dot {
+  background: #fff !important;
 }

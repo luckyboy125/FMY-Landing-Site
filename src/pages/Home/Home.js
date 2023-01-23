@@ -31,6 +31,7 @@ function Home() {
             <HomeCard
               className="homeCard"
               cardType="boycott"
+              commentType="boycott"
               cardContent="Hezbollah called out for boycotting the elections in Bahrain"
               author="Nimrod Ben Efraim"
               cardDate="31 October 2022"
@@ -38,6 +39,7 @@ function Home() {
             <HomeCard
               className="homeCard"
               cardType="newupdate"
+              commentType="newupdate"
               cardContent="Hezbollah called out for boycotting the elections in Bahrain"
               author="Nimrod Ben Efraim"
               cardDate="31 October 2022"

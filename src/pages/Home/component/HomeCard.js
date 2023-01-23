@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { card_type } from "../../../helpers/home.helper";
+import CommentModal from "./CommentModal/CommentModal";
+import ThreeDotBtn from "../../../components/ThreeDotBtn/ThreeDotBtn";
 import Person3 from "../../../asset/person3.svg";
 import facebook from "../../../asset/images/social/facebook.svg";
 import instagram from "../../../asset/images/social/instagram.svg";
@@ -8,9 +12,6 @@ import tiktok from "../../../asset/images/social/tiktok.svg";
 import telegram from "../../../asset/images/social/telegram.svg";
 import twitter from "../../../asset/images/social/twitter.svg";
 import "./HomeCard.css";
-import ThreeDotBtn from "../../../components/ThreeDotBtn/ThreeDotBtn";
-import CommentModal from "./CommentModal/CommentModal";
-import { useState } from "react";
 
 function HomeCard({
   className,
@@ -18,22 +19,9 @@ function HomeCard({
   cardContent,
   author,
   cardDate,
-  commentAction,
+  commentType,
 }) {
-  const card_type = {
-    boycott: {
-      title: "Boycott elections",
-      color: "#75B3FF80",
-    },
-    newupdate: {
-      title: "News update",
-      color: "#FF7A00B2",
-    },
-    event: {
-      title: "Event",
-      color: "#FF0000B2",
-    },
-  };
+  console.log("type : ", commentType);
   const [modalShow, setModalShow] = useState(false);
   return (
     <>
@@ -62,12 +50,20 @@ function HomeCard({
             <img src={youtube} alt="youtube" />
             <img src={w3} alt="w3" />
           </div>
-          <div className="commentBtn" onClick={() => setModalShow(true)}>
-            Comment
-          </div>
+          {commentType ? (
+            <div className="commentBtn" onClick={() => setModalShow(true)}>
+              Comment
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
-      <CommentModal show={modalShow} onClose={() => setModalShow(false)} />
+      <CommentModal
+        show={modalShow}
+        onClose={() => setModalShow(false)}
+        type={card_type[cardType].title}
+      />
     </>
   );
 }
