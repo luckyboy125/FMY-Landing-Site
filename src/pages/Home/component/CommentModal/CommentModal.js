@@ -44,14 +44,12 @@ function CommentModal({ className, show, onClose }) {
         ref={rootRef}
       >
         <div className={`commentModalRoot ${className}`} ref={contentRef}>
+          <ThreeDotBtn className="setting" action={() => {}} />
+          <img src={CloseIcon} className="closeIcon" alt="closeIcon" />
           <div className="headerRoot">
             <div className="title">
               Hezbollah called out for boycotting the <br /> elections in
               Bahrain.
-            </div>
-            <div className="toolRoot">
-              <ThreeDotBtn action={() => {}} />
-              <img src={CloseIcon} alt="closeIcon" />
             </div>
           </div>
           <div className="contentRoot">

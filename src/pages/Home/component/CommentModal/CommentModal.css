@@ -25,6 +25,27 @@
   border-radius: 20px;
 }
 
+.commentModalRoot .setting {
+  position: absolute;
+  top: 30px;
+  right: 69.4px;
+}
+
+.commentModalRoot .setting .dot {
+  background: #fff !important;
+  width: 5px !important;
+  min-width: 5px !important;
+  height: 5px !important;
+  min-height: 5px !important;
+  margin-bottom: 1px !important;
+}
+
+.commentModalRoot .closeIcon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
 .commentModalRoot .headerRoot {
   display: flex;
   justify-content: space-between;
@@ -39,21 +60,6 @@
   font-size: 32px;
   line-height: 40px;
   color: #ffffff;
-}
-
-.commentModalRoot .headerRoot .toolRoot {
-  display: flex;
-  align-items: center;
-}
-
-.commentModalRoot .headerRoot .toolRoot .dotGroupRoot .dot {
-  background: #ffffff !important;
-  margin-right: 12.5px;
-}
-
-.commentModalRoot .headerRoot .toolRoot img {
-  width: 17px;
-  height: 17px;
 }
 
 .commentModalRoot .contentRoot {
