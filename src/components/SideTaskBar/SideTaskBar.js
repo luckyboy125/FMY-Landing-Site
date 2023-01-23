@@ -29,7 +29,7 @@ function SideTaskBar() {
         className="fmyLogo"
         alt="fmyLogo"
         onClick={() => window.location.reload()}
-      ></img>
+      />
 
       <div className="taskBarPagesButtons">
         <Button

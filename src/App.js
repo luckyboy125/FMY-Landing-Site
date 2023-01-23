@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
+import { useWindowDimensions, adjustContainer } from "./useWindowDimensions";
 import Tasks from "./pages/Tasks/Tasks";
 import Cases from "./pages/Cases/Cases";
 import Home from "./pages/Home/Home";
@@ -10,9 +11,11 @@ import CheckLists from "./pages/CheckListPage/CheckLists";
 import WebAnalysisItems from "./pages/WebAnalysisItems/WebAnalysisItems";
 import TopTaskBar from "./components/TopTaskBar/TopTaskBar";
 import SideTaskBar from "./components/SideTaskBar/SideTaskBar";
-import { useWindowDimensions, adjustContainer } from "./useWindowDimensions";
+import Reports from "./pages/Reports/Reports";
+import Database from "./pages/Database/Database";
+import Investigation from "./pages/Investigation/Investigation";
+import Login from "./pages/Login/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
 import "./asset/fonts/helvetica_medium.ttf";
 import "./asset/fonts/Helvetica-Bold.ttf";
 import "./asset/fonts/Helvetica-BoldOblique.ttf";
@@ -20,9 +23,7 @@ import "./asset/fonts/helvetica-light-587ebe5a59211.ttf";
 import "./asset/fonts/Helvetica.ttf";
 import "./asset/fonts/Helvetica-Oblique.ttf";
 import "./asset/fonts/helvetica_neue.ttf";
-import Reports from "./pages/Reports/Reports";
-import Database from "./pages/Database/Database";
-import Investigation from "./pages/Investigation/Investigation";
+import "./App.css";
 
 //DONT TOUCH THIS FILE
 
@@ -44,7 +45,7 @@ function App() {
       <div className="outer">
         <div className="middle">
           <div className="websiteContainer">
-            <TopTaskBar />
+            {/* <TopTaskBar />
             <Row>
               <Col sm={3} className="position-fixed flex-fill" id="sidebarCol">
                 <SideTaskBar />
@@ -63,7 +64,8 @@ function App() {
                   <Route path="/investigation" element={<Investigation />} />
                 </Routes>
               </Col>
-            </Row>
+            </Row> */}
+            <Login />
           </div>
         </div>
       </div>
