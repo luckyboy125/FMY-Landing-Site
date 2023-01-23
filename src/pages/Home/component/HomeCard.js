@@ -9,6 +9,8 @@ import telegram from "../../../asset/images/social/telegram.svg";
 import twitter from "../../../asset/images/social/twitter.svg";
 import "./HomeCard.css";
 import ThreeDotBtn from "../../../components/ThreeDotBtn/ThreeDotBtn";
+import CommentModal from "./CommentModal/CommentModal";
+import { useState } from "react";
 
 function HomeCard({
   className,
@@ -32,6 +34,7 @@ function HomeCard({
       color: "#FF0000B2",
     },
   };
+  const [modalShow, setModalShow] = useState(false);
   return (
     <>
       <div className={`homeCardRoot ${className}`}>
@@ -59,11 +62,12 @@ function HomeCard({
             <img src={youtube} alt="youtube" />
             <img src={w3} alt="w3" />
           </div>
-          <div className="commentBtn" onClick={commentAction}>
+          <div className="commentBtn" onClick={() => setModalShow(true)}>
             Comment
           </div>
         </div>
       </div>
+      <CommentModal show={modalShow} onClose={() => setModalShow(false)} />
     </>
   );
 }
