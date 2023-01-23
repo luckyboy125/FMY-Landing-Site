@@ -756,8 +756,126 @@
   .postAnalysisRoot
   .postContentRoot
   .postPercentRoot
+  .item:last-child {
+  border-right: none;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot
   .item {
-  width: 33%;
+  height: 134px;
   text-align: center;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot
+  .item
+  .itemContainer {
+  text-align: left;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot
+  .item
+  .itemContainer
+  .itemHeader {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot
+  .item
+  .itemContainer
+  .itemHeader
+  img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot
+  .item
+  .itemContainer
+  .itemDes {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot
+  .item
+  .itemContainer
+  .itemPercenRoot {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot
+  .item
+  .itemContainer
+  .itemPercenRoot
+  .percent_line {
+  height: 5px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .postAnalysisRoot
+  .postContentRoot
+  .postPercentRoot
+  .item
+  .itemContainer
+  .itemPercenRoot
+  .white_line {
+  flex-grow: 1;
+  height: 5px;
+  background: #fff;
 }

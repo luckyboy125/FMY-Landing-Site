@@ -1,14 +1,17 @@
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import Biocard from "./component/Biocard";
 import ActionTab from "../../components/ActionTab/ActionTab";
+import DropdownLayout from "../../components/DropdownLayout/DropdownLayout";
 import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
+import person1 from "../../asset/person1.svg";
 import searchIcon from "../../asset/images/search_icon_white.svg";
 import _searchIcon from "../../asset/images/search_icon.svg";
 import socialIcon from "../../asset/images/social/facebook_icon.svg";
-import person1 from "../../asset/person1.svg";
+import Sentiment from "../../asset/investigation/sentiment_icon.svg";
+import Engagement from "../../asset/investigation/engagement_icon.svg";
+import Impace_score from "../../asset/investigation/impace_score_icon.svg";
 import "./Investigation.css";
-import { useState } from "react";
-import DropdownLayout from "../../components/DropdownLayout/DropdownLayout";
-import Biocard from "./component/Biocard";
 
 function Investigation() {
   const location = useLocation();
@@ -25,6 +28,30 @@ function Investigation() {
       search: query.toString(),
     });
   };
+
+  const post_percent_data = [
+    {
+      title: "Sentiment",
+      color: "#FF6628",
+      content: "74%",
+      des_icon: Sentiment,
+      percent: Math.random(50) + 50,
+    },
+    {
+      title: "Engagement",
+      color: "#FFA2C0",
+      content: "1m",
+      des_icon: Engagement,
+      percent: Math.random(50) + 50,
+    },
+    {
+      title: "Impace Score",
+      color: "#7FBA7A",
+      content: "91",
+      des_icon: Impace_score,
+      percent: Math.random(50) + 50,
+    },
+  ];
 
   return (
     <>
@@ -234,9 +261,33 @@ function Investigation() {
                   suspendisse. Read more
                 </div>
                 <div className="postPercentRoot">
-                  <div className="item">
-                    <div className=""></div>
-                  </div>
+                  {post_percent_data?.map((item, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="item"
+                        style={{ width: `${100 / post_percent_data.length}%` }}
+                      >
+                        <div className="itemContainer">
+                          <div className="itemHeader">
+                            <img src={item.des_icon} alt="icon" />
+                            {item.title}
+                          </div>
+                          <div className="itemDes">{item.content}</div>
+                          <div className="itemPercenRoot">
+                            <div
+                              className="percent_line"
+                              style={{
+                                width: `${item.percent}%`,
+                                background: item.color,
+                              }}
+                            ></div>
+                            <div className="white_line"></div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

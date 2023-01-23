@@ -45,7 +45,7 @@ function App() {
       <div className="outer">
         <div className="middle">
           <div className="websiteContainer">
-            {/* <TopTaskBar />
+            <TopTaskBar />
             <Row>
               <Col sm={3} className="position-fixed flex-fill" id="sidebarCol">
                 <SideTaskBar />
@@ -64,8 +64,8 @@ function App() {
                   <Route path="/investigation" element={<Investigation />} />
                 </Routes>
               </Col>
-            </Row> */}
-            <Login />
+            </Row>
+            {/* <Login /> */}
           </div>
         </div>
       </div>
