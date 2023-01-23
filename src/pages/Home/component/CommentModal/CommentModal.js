@@ -1,11 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 import CloseIcon from "../../../../asset/images/close_icon.svg";
-import person1 from "../../../../asset/person1.svg";
+import person3 from "../../../../asset/person3.svg";
+import facebook from "../../../../asset/images/social/facebook.svg";
+import instagram from "../../../../asset/images/social/instagram.svg";
+import youtube from "../../../../asset/images/social/youtube.svg";
+import reddit from "../../../../asset/images/social/reddit.svg";
+import w3 from "../../../../asset/images/social/w3.svg";
+import tiktok from "../../../../asset/images/social/tiktok.svg";
+import telegram from "../../../../asset/images/social/telegram.svg";
+import twitter from "../../../../asset/images/social/twitter.svg";
 import "./CommentModal.css";
 
 function CommentModal({ className, show, onClose }) {
   const [addContentShow, setAddContentShow] = useState(false);
+  const [commentArea, setCommentArea] = useState("");
   const rootRef = useRef(null);
   const contentRef = useRef(null);
 
@@ -54,12 +63,56 @@ function CommentModal({ className, show, onClose }) {
                 </div>
                 <div className="item2">
                   <div className="title">Username:</div>
-                  <img src={person1} alt="avatar" />
+                  <img src={person3} alt="avatar" />
                   Nimrod Ben Efraim
                 </div>
               </div>
+              <div className="leftPart2">
+                <div className="title">Cases:</div>
+                <div className="btn">Lorem ipsum</div>
+                <div className="plus">+</div>
+              </div>
+              <div className="leftPart3">
+                <div className="title">Links:</div>
+                <div className="socialRoot">
+                  <img src={instagram} alt="social_icon" />
+                  <img src={facebook} alt="social_icon" />
+                  <img src={twitter} alt="social_icon" />
+                  <img src={tiktok} alt="social_icon" />
+                  <img src={reddit} alt="social_icon" />
+                  <img src={telegram} alt="social_icon" />
+                  <img src={youtube} alt="social_icon" />
+                  <img src={w3} alt="social_icon" />
+                </div>
+              </div>
+              <div className="leftPart4">
+                <div className="title">Comments</div>
+                <div className="commentsRoot">
+                  <img src={person3} alt="avatar" />
+                  <div>
+                    <div className="commentDes">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Pellentesque cras felis interdum tempor, lobortis egestas
+                      volutpat consectetur.....
+                    </div>
+                    <div className="commentDate">Feb 6, 11:49 AM</div>
+                  </div>
+                  <ThreeDotBtn action={() => {}} />
+                </div>
+                <div className="commentsInputRoot">
+                  <textarea
+                    placeholder="Comment here"
+                    value={commentArea}
+                    onChange={(e) => setCommentArea(e.target.value)}
+                  />
+                  <div className="postBtn">Post</div>
+                  <ThreeDotBtn className="moreSetting" action={() => {}} />
+                </div>
+              </div>
             </div>
-            <div className="rightPart"></div>
+            <div className="rightPart">
+              <div className="inputFileRoot">+</div>
+            </div>
           </div>
         </div>
       </div>

@@ -124,3 +124,272 @@
   color: #ffffff;
   margin-right: 20px;
 }
+
+.commentModalRoot .contentRoot .leftPart .leftPart2 {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart2 .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart2 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 156px;
+  height: 44px;
+  background: #01a1fd;
+  border-radius: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart2 .plus {
+  color: #01a1fd;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart3 {
+  margin-top: 30px;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart3 .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart3 .socialRoot {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart3 .socialRoot img:last-child {
+  margin-right: 0;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart3 .socialRoot img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart4 {
+  margin-top: 30px;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart4 .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsRoot {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 20px 10px 20px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsRoot img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsRoot .commentDes {
+  width: 506px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsRoot .commentDate {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 33px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 19px;
+}
+
+.commentModalRoot
+  .contentRoot
+  .leftPart
+  .leftPart4
+  .commentsRoot
+  .dotGroupRoot {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.commentModalRoot
+  .contentRoot
+  .leftPart
+  .leftPart4
+  .commentsRoot
+  .dotGroupRoot
+  .dot {
+  background: #ffffff !important;
+}
+
+.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsInputRoot {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  height: 216px;
+  padding: 24px 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.commentModalRoot
+  .contentRoot
+  .leftPart
+  .leftPart4
+  .commentsInputRoot
+  textarea {
+  width: 550px;
+  height: 110px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0 !important;
+  resize: none;
+}
+.commentModalRoot
+  .contentRoot
+  .leftPart
+  .leftPart4
+  .commentsInputRoot
+  textarea::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.commentModalRoot
+  .contentRoot
+  .leftPart
+  .leftPart4
+  .commentsInputRoot
+  textarea:focus-visible {
+  outline: none;
+}
+.commentModalRoot
+  .contentRoot
+  .leftPart
+  .leftPart4
+  .commentsInputRoot
+  textarea:focus {
+  outline: none;
+}
+
+.commentModalRoot
+  .contentRoot
+  .leftPart
+  .leftPart4
+  .commentsInputRoot
+  .postBtn {
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
+  background: #75b3ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  width: 81px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.commentModalRoot
+  .contentRoot
+  .leftPart
+  .leftPart4
+  .commentsInputRoot
+  .moreSetting {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.commentModalRoot
+  .contentRoot
+  .leftPart
+  .leftPart4
+  .commentsInputRoot
+  .moreSetting
+  .dot {
+  background: #fff !important;
+}
+
+.commentModalRoot .contentRoot .rightPart {
+  padding: 47px 0 23px 50px;
+}
+
+.commentModalRoot .contentRoot .rightPart .inputFileRoot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 650px;
+  border: 3px dashed #ffffff;
+  border-radius: 40px;
+  font-size: 100px;
+  color: #fff;
+}
