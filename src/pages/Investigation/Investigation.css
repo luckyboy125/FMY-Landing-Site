@@ -924,3 +924,22 @@
   margin-top: 30px;
   display: flex;
 }
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot1
+  .hashtagChartCard1 {
+  width: 413.21px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot1
+  .hashtagChartCard2 {
+  margin-left: 43.79px;
+  flex-grow: 1;
+}

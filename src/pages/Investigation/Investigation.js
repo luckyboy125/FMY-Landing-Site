@@ -13,6 +13,7 @@ import Engagement from "../../asset/investigation/engagement_icon.svg";
 import Impace_score from "../../asset/investigation/impace_score_icon.svg";
 import "./Investigation.css";
 import HashtagSelectInput from "./component/HashtagSelectInput/HashtagSelectInput";
+import HashtagChartCard from "./component/HashtagChartCard/HashtagChartCard";
 
 function Investigation() {
   const location = useLocation();
@@ -295,7 +296,56 @@ function Investigation() {
             <div className="hashtagAnalysisRoot">
               <div className="title">Hashtag analysis</div>
               <HashtagSelectInput className="hashSelect" />
-              <div className="hashtagAnalysisRoot1"></div>
+              <div className="hashtagAnalysisRoot1">
+                <HashtagChartCard
+                  chartData={[
+                    {
+                      color: "#A0D7E7",
+                      value: 60,
+                    },
+                    {
+                      color: "#A0D7E7",
+                      value: 90,
+                    },
+                    {
+                      color: "#A0D7E7",
+                      value: 30,
+                    },
+                    {
+                      color: "#75B3FF",
+                      value: 45,
+                    },
+                  ]}
+                  title="Hashtage Used"
+                  size="4.5M"
+                  description="+58.2 %"
+                  className="hashtagChartCard1"
+                />
+                <HashtagChartCard
+                  chartData={[
+                    {
+                      color: "#CFC8FF",
+                      value: 77,
+                    },
+                    {
+                      color: "#CFC8FF",
+                      value: 100,
+                    },
+                    {
+                      color: "#6C5DD3",
+                      value: 100,
+                    },
+                    {
+                      color: "#CFC8FF",
+                      value: 20,
+                    },
+                  ]}
+                  title="Total Posts"
+                  size="2.1M"
+                  description="+102.2 %"
+                  className="hashtagChartCard2"
+                />
+              </div>
             </div>
           </div>
         </div>
