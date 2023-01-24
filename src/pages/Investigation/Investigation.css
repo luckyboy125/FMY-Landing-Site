@@ -879,3 +879,164 @@
   height: 5px;
   background: #fff;
 }
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot {
+  margin-left: 30px;
+  flex-grow: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .selectInputRoot {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: rgba(15, 18, 26, 0.4);
+  border-radius: 30px;
+  padding-right: 8px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .selectInputRoot
+  .selectContent {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .selectInputRoot
+  .selectContent
+  .select:last-child {
+  margin-right: 0;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .selectInputRoot
+  .selectContent
+  .select {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin-right: 8px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .selectInputRoot
+  .selectContent
+  .select
+  img {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  margin-left: 9px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .selectInputRoot
+  .selectRoot {
+  width: 167px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #2e333d;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .selectInputRoot
+  .selectRoot
+  i {
+  font-size: 20px;
+  color: #ffffff99;
+  margin-left: 10px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .selectInputRoot
+  .searchBtn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .selectInputRoot
+  .searchBtn
+  > img {
+  width: 17.25px;
+  height: 17.25px;
+}

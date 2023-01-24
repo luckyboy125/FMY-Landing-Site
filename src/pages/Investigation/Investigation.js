@@ -7,6 +7,7 @@ import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/Data
 import person1 from "../../asset/person1.svg";
 import searchIcon from "../../asset/images/search_icon_white.svg";
 import _searchIcon from "../../asset/images/search_icon.svg";
+import closeIcon from "../../asset/images/close_icon.svg";
 import socialIcon from "../../asset/images/social/facebook_icon.svg";
 import Sentiment from "../../asset/investigation/sentiment_icon.svg";
 import Engagement from "../../asset/investigation/engagement_icon.svg";
@@ -288,6 +289,28 @@ function Investigation() {
                       </div>
                     );
                   })}
+                </div>
+              </div>
+            </div>
+            <div className="hashtagAnalysisRoot">
+              <div className="title">Hashtag analysis</div>
+              <div className="selectInputRoot">
+                <div className="selectContent">
+                  <div className="select">
+                    Messi <img src={closeIcon} alt="closeIcon" />
+                  </div>
+                  <div className="select">
+                    Ramos <img src={closeIcon} alt="closeIcon" />
+                  </div>
+                  <div className="select">
+                    Mumbapee <img src={closeIcon} alt="closeIcon" />
+                  </div>
+                </div>
+                <div className="selectRoot">
+                  Last 7 Days <i className="fas fa-caret-down"></i>
+                </div>
+                <div className="searchBtn">
+                  <img src={_searchIcon} alt="search_icon" />
                 </div>
               </div>
             </div>
