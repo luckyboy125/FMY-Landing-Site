@@ -16,16 +16,14 @@ function HashtagChartCard({ className, title, size, description, chartData }) {
           <div className="chartRoot">
             {chartData?.map((item, index) => {
               return (
-                <>
-                  <div
-                    className="item"
-                    key={index}
-                    style={{
-                      height: `${(98.67 / 100) * item.value}px`,
-                      background: item.color,
-                    }}
-                  ></div>
-                </>
+                <div
+                  className="item"
+                  key={index}
+                  style={{
+                    height: `${(98.67 / 100) * item.value}px`,
+                    background: item.color,
+                  }}
+                ></div>
               );
             })}
           </div>

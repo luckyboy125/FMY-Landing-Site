@@ -24,7 +24,6 @@ function DropdownLayout({ className, children, dropRoot, dropRootStyle }) {
       }
     }
   }, [contentRef, dropShow]);
-  console.log("show : ", dropShow);
 
   return (
     <div

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { post_percent_data, top_nfluencer } from "./Investigation.mock";
 import Biocard from "./component/Biocard/Biocard";
+import HashtagSelectInput from "./component/HashtagSelectInput/HashtagSelectInput";
+import HashtagChartCard from "./component/HashtagChartCard/HashtagChartCard";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import DropdownLayout from "../../components/DropdownLayout/DropdownLayout";
 import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
@@ -8,12 +11,7 @@ import person1 from "../../asset/person1.svg";
 import searchIcon from "../../asset/images/search_icon_white.svg";
 import _searchIcon from "../../asset/images/search_icon.svg";
 import socialIcon from "../../asset/images/social/facebook_icon.svg";
-import Sentiment from "../../asset/investigation/sentiment_icon.svg";
-import Engagement from "../../asset/investigation/engagement_icon.svg";
-import Impace_score from "../../asset/investigation/impace_score_icon.svg";
 import "./Investigation.css";
-import HashtagSelectInput from "./component/HashtagSelectInput/HashtagSelectInput";
-import HashtagChartCard from "./component/HashtagChartCard/HashtagChartCard";
 
 function Investigation() {
   const location = useLocation();
@@ -30,30 +28,6 @@ function Investigation() {
       search: query.toString(),
     });
   };
-
-  const post_percent_data = [
-    {
-      title: "Sentiment",
-      color: "#FF6628",
-      content: "74%",
-      des_icon: Sentiment,
-      percent: Math.random(50) + 50,
-    },
-    {
-      title: "Engagement",
-      color: "#FFA2C0",
-      content: "1m",
-      des_icon: Engagement,
-      percent: Math.random(50) + 50,
-    },
-    {
-      title: "Impace Score",
-      color: "#7FBA7A",
-      content: "91",
-      des_icon: Impace_score,
-      percent: Math.random(50) + 50,
-    },
-  ];
 
   return (
     <>
@@ -345,6 +319,37 @@ function Investigation() {
                   description="+102.2 %"
                   className="hashtagChartCard2"
                 />
+              </div>
+              <div className="hashtagAnalysisRoot2">
+                <div className="title">
+                  Top Influencer
+                  <i className="fas fa-angle-down"></i>
+                </div>
+                <div className="influencerContent">
+                  {top_nfluencer?.map((item, index) => {
+                    return (
+                      <div key={index} className="item">
+                        <img src={item.avatar} alt="avatar" />
+                        <div className="desRoot">
+                          <div className="name">{item.name}</div>
+                          <div className="sizeRoot">
+                            {item.size}
+                            <span>followers</span>
+                          </div>
+                        </div>
+                        <div className="analysisRoot">
+                          <div className="title">Post Reach</div>
+                          <div className="lineRoot">
+                            <div
+                              className="mainLine"
+                              style={{ width: `${item.percent}%` }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>

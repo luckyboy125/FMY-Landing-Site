@@ -943,3 +943,220 @@
   margin-left: 43.79px;
   flex-grow: 1;
 }
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2 {
+  margin-top: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 20.5px 0 20px 38px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .title {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .title
+  i {
+  font-size: 20px;
+  color: #fff;
+  margin-left: 10.75px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent {
+  margin-top: 52.5px;
+  margin-left: 4px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item:last-child {
+  margin-bottom: 0;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 29px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item
+  > img {
+  width: 66px;
+  height: 66px;
+  margin-right: 19px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item
+  .desRoot {
+  width: 245px;
+  margin-bottom: 5px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item
+  .desRoot
+  .name {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item
+  .desRoot
+  .sizeRoot {
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item
+  .desRoot
+  .sizeRoot
+  span {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff80;
+  margin-left: 5px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item
+  .analysisRoot {
+  width: 398px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item
+  .analysisRoot
+  .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item
+  .analysisRoot
+  .lineRoot {
+  width: 100%;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 32px;
+  display: flex;
+  margin-top: 18px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent3
+  .hashtagAnalysisRoot
+  .hashtagAnalysisRoot2
+  .influencerContent
+  .item
+  .analysisRoot
+  .lineRoot
+  .mainLine {
+  height: 12px;
+  background: #75b3ff;
+  border-radius: 32px;
+}
