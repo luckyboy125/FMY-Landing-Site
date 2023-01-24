@@ -61,3 +61,38 @@ export const top_nfluencer = [
     percent: 10,
   },
 ];
+
+export const wordCloudAnalysisData = [
+  {
+    word: "Bercelona",
+    use: "894K",
+  },
+  {
+    word: "Sergio Ramos",
+    use: "894K",
+  },
+  {
+    word: "Free agent",
+    use: "294K",
+  },
+  {
+    word: "messi",
+    use: "1.8M",
+  },
+  {
+    word: "leomessi",
+    use: "2.6M",
+  },
+  {
+    word: "real madrid",
+    use: "1.2M",
+  },
+  {
+    word: "as free",
+    use: "201K",
+  },
+  {
+    word: "sergio",
+    use: "83K",
+  },
+];
