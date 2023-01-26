@@ -1,0 +1,52 @@
+.networksRoot {
+  padding-top: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.networksRoot .networksHeaderRoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 20px 0 10px;
+}
+
+.networksRoot .networksHeaderRoot .networksHeaderTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.networksRoot .networksHeaderRoot .networksHeaderTab {
+  margin-top: 23px;
+}
+
+.networksRoot .networksHeaderRoot .networksHeaderEnd {
+  display: flex;
+  margin-top: 5px;
+}
+
+.networksRoot .networksHeaderRoot .networksHeaderEnd .headerBtn {
+  width: 177px;
+  height: 50px;
+  background: #75b3ff;
+  border-radius: 30px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.networksRoot .networksContent {
+  margin-top: 30px;
+}

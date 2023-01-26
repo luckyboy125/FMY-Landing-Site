@@ -24,6 +24,7 @@ import "./asset/fonts/Helvetica.ttf";
 import "./asset/fonts/Helvetica-Oblique.ttf";
 import "./asset/fonts/helvetica_neue.ttf";
 import "./App.css";
+import Networks from "./pages/Networks/Networks";
 
 //DONT TOUCH THIS FILE
 
@@ -62,6 +63,7 @@ function App() {
                   <Route path="/reports" element={<Reports />} />
                   <Route path="/database" element={<Database />} />
                   <Route path="/investigation" element={<Investigation />} />
+                  <Route path="/networks" element={<Networks />} />
                 </Routes>
               </Col>
             </Row>
