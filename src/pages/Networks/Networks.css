@@ -313,8 +313,9 @@
   thead
   tr
   th:nth-child(1) {
-  width: 110px;
-  padding-left: 13px !important;
+  width: 376px;
+  margin-right: 36px;
+  text-align: center !important;
 }
 
 .networksRoot
@@ -325,7 +326,12 @@
   tr
   td:nth-child(1) {
   text-align: center !important;
-  padding-left: 13px !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 18px;
+  color: #ffffff;
 }
 
 .networksRoot
@@ -335,8 +341,7 @@
   thead
   tr
   th:nth-child(2) {
-  padding-left: 4px;
-  text-align: left !important;
+  width: 421px;
 }
 
 .networksRoot
@@ -346,59 +351,6 @@
   tbody
   tr
   td:nth-child(2) {
-  text-align: left !important;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 24px;
-  color: #ffffff;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  thead
-  tr
-  th:nth-child(3) {
-  text-align: left !important;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  tbody
-  tr
-  td:nth-child(3) {
-  text-align: left !important;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: #ffffff;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  thead
-  tr
-  th:nth-child(4) {
-  text-align: left !important;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  tbody
-  tr
-  td:nth-child(4) {
-  text-align: left !important;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -413,8 +365,135 @@
   .customizeTable
   thead
   tr
+  th:nth-child(3) {
+  width: 359px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(3) {
+  text-align: center;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(3)
+  .imageRoot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(3)
+  .imageRoot
+  .big {
+  width: 50px;
+  height: 50px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(3)
+  .imageRoot
+  .small {
+  width: 30px;
+  height: 30px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(4) {
+  width: 334px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(4) {
+  text-align: center;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(4)
+  .active {
+  width: 113px;
+  height: 44px;
+  background: #2d452f;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #37ce4a;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(4)
+  .inactive {
+  width: 113px;
+  height: 44px;
+  background: #472d4d;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fd6767;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
   th:nth-child(5) {
-  text-align: left !important;
+  width: 336px;
 }
 
 .networksRoot
@@ -424,152 +503,10 @@
   tbody
   tr
   td:nth-child(5) {
-  display: flex;
-  align-items: center;
-  text-align: left !important;
   font-family: "Helvetica";
   font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-  color: #ffffff;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  tbody
-  tr
-  td:nth-child(5)
-  img {
-  min-width: 50px;
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  thead
-  tr
-  th:nth-child(6) {
-  text-align: center;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  tbody
-  tr
-  td:nth-child(6) {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
-  opacity: 0.5;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  thead
-  tr
-  th:nth-child(7) {
-  text-align: center;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  tbody
-  tr
-  td:nth-child(7)
-  div {
-  background: #2d452f !important;
-  min-width: none !important;
-  max-width: 124px;
-  margin: auto;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  thead
-  tr
-  th:nth-child(8) {
-  text-align: center;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  tbody
-  tr
-  td:nth-child(8) {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #75b3ff;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  thead
-  tr
-  th:nth-child(9) {
-  text-align: center;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  tbody
-  tr
-  td:nth-child(9) {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #75b3ff;
-  text-decoration: underline;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  thead
-  tr
-  th:nth-child(10) {
-  width: 97px;
-}
-
-.networksRoot
-  .networksContent
-  .networksContent2
-  .customizeTable
-  tbody
-  tr
-  td:nth-child(10)
-  .dotBtn {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

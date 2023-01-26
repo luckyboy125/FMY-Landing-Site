@@ -1,24 +1,15 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import ActionButton from "../../components/ActionButton/ActionButton";
+import { doughnutChartColorData } from "../../helpers/chart.helper";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import CardLayout from "../../components/CardLayout/CardLayout";
-import ColorBtn from "../../components/ColorBtn/ColorBtn";
-import CustomizeDoughnutChart from "../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
-import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
-import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
-import FilterDropdown from "../../components/FilterDropdown/FilterDropdown";
-import GradientButton from "../../components/GradientButton/GradientButton";
 import RoundButton from "../../components/RoundButton/RoundButton";
 import SearchInput from "../../components/SearchInput/SearchInput";
-import ThreeDotBtn from "../../components/ThreeDotBtn/ThreeDotBtn";
-import { doughnutChartColorData } from "../../helpers/chart.helper";
-import refresh from "../../asset/images/refresh_icon.svg";
-import more_tool from "../../asset/images/more_tool_icon.svg";
-import more_detail from "../../asset/images/more_detail_icon.svg";
-import csv from "../../asset/images/csv_icon.svg";
-import person3 from "../../asset/person3.svg";
+import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
+import CustomizeDoughnutChart from "../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 import youtube from "../../asset/images/social/youtube.svg";
+import facebook from "../../asset/images/social/facebook.svg";
+import instagram from "../../asset/images/social/instagram.svg";
 import "./Networks.css";
 
 function Networks() {
@@ -29,7 +20,6 @@ function Networks() {
 
   const [searchValue, setSearchValue] = useState("");
   const [mockTableData, setMockTableData] = useState([]);
-  const [mockLineData, setMockLineData] = useState([]);
   const [mockDoughnutData, setMockDoughnutData] = useState([]);
 
   const handleTab = (_tab) => {
@@ -45,28 +35,15 @@ function Networks() {
       setMockTableData((pre) => [
         ...pre,
         {
-          item: "Post",
-          user: "Olive Yew",
-          addeddate: "June 26, 2022 15:45",
-          addbyuser: {
-            name: "Nimrod",
-            image: person3,
-          },
-          case: "Lorem ipsum",
-          priority: "Medium",
+          network: "Lorem ipsum dolor",
+          addeddate: "17 Nov 2022",
+          active: Math.floor(Math.random() * 2) === 0,
+          number_of_users: Math.floor(Math.random() * 250),
         },
       ]);
     }
+
     setInterval(() => {
-      setMockLineData([
-        Math.floor(Math.random() * 500 + 900),
-        Math.floor(Math.random() * 500 + 900),
-        Math.floor(Math.random() * 500 + 900),
-        Math.floor(Math.random() * 500 + 900),
-        Math.floor(Math.random() * 500 + 900),
-        Math.floor(Math.random() * 500 + 900),
-        Math.floor(Math.random() * 500 + 900),
-      ]);
       setMockDoughnutData([
         Math.floor(Math.random() * 500 + 900),
         Math.floor(Math.random() * 500 + 900),
@@ -198,44 +175,45 @@ function Networks() {
               </div>
             }
             tableHeader={[
-              "",
-              "Item",
-              "User",
+              "Network",
               "Added date",
-              "Added by",
-              "Case",
-              "Priority",
-              "Screenshot",
-              "Link",
-              "",
+              "Platform",
+              "Active/Inactive",
+              "Number of users",
             ]}
             body={mockTableData.map((item, index) => {
               return (
                 <tr key={index}>
-                  <td>
-                    <img src={youtube} alt="social_icon"></img>
-                  </td>
-                  <td>{item.item}</td>
-                  <td>{item.user}</td>
+                  <td>{item.network}</td>
                   <td>{item.addeddate}</td>
                   <td>
-                    <img src={item.addbyuser.image} alt="avatar" />{" "}
-                    {item.addbyuser.name}
+                    {index % 3 === 0 ? (
+                      <div>
+                        <div className="imageRoot">
+                          <img className="small" src={instagram} alt="social" />
+                        </div>
+                        <div className="imageRoot" style={{ marginTop: "5px" }}>
+                          <img
+                            className="small"
+                            src={facebook}
+                            alt="social"
+                            style={{ marginRight: "10px" }}
+                          />
+                          <img className="small" src={youtube} alt="social" />
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="imageRoot">
+                        <img className="big" src={instagram} alt="social" />
+                      </div>
+                    )}
                   </td>
-                  <td>{item.case}</td>
                   <td>
-                    <ColorBtn
-                      name="Medium"
-                      width={130}
-                      arrowShow
-                      color="#37CE4A"
-                    />
+                    <div className={`${item.active ? "active" : "inactive"}`}>
+                      {item.active ? "Active" : "Inactive"}
+                    </div>
                   </td>
-                  <td>View</td>
-                  <td>Link</td>
-                  <td>
-                    <ThreeDotBtn className="dotBtn" action={() => {}} />
-                  </td>
+                  <td>{item.number_of_users}</td>
                 </tr>
               );
             })}
