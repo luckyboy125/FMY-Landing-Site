@@ -50,3 +50,526 @@
 .networksRoot .networksContent {
   margin-top: 30px;
 }
+
+.networksRoot .networksContent .networksContent1 {
+  display: flex;
+}
+
+.networksRoot .networksContent .networksContent1 .networksChart1Root {
+  width: 871px;
+  margin-right: 30px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1 {
+  padding: 30px 26.5px 37px 42px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.networksRoot .networksContent .networksContent1 .descriptionRoot {
+  width: 250px;
+  margin-right: 16px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .descriptionRoot
+  .descriptionItem:first-child {
+  border: none !important;
+  padding-top: 0px !important;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .descriptionRoot
+  .descriptionItem:last-child {
+  padding-bottom: 0 !important;
+}
+
+.networksRoot .networksContent .networksContent1 .lineChartRoot {
+  flex-grow: 1;
+  padding-top: 49.35px;
+  height: 323.39px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1Header {
+  padding: 0 21px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1Header
+  .headerTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1Header
+  .headerContent {
+  flex-grow: 1;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-right: 63px;
+  text-align: center;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1
+  .descriptionRoot {
+  margin-right: 42px;
+}
+
+.networksRoot .networksContent .networksContent1 .descriptionItem {
+  border-top: 1px solid rgba(149, 166, 184, 0.1);
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1
+  .descriptionItem {
+  text-align: left;
+}
+
+.networksRoot .networksContent .networksContent1 .descriptionItemTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.networksRoot .networksContent .networksContent1 .descriptionItemCount {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 24px;
+  margin-top: 22px;
+}
+
+.networksRoot .networksContent .networksContent1 .doughnutChartRoot {
+  display: flex;
+  margin-left: 25px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .doughnutChartRoot
+  .doughnutChartDes {
+  margin-left: 29px;
+}
+
+.networksRoot .networksContent .networksContent1 .doughnutChartDes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.networksRoot .networksContent .networksContent1 .doughnutChartDesItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.networksRoot .networksContent .networksContent1 .doughnutChartIcon {
+  width: 13px;
+  min-height: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin-right: 12.64px;
+  border-radius: 50px;
+}
+
+.networksRoot .networksContent .networksContent1 .doughnutChartItemName {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRoot {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+
+.networksRoot .networksContent .networksContent1 .networksChart2Root {
+  flex-grow: 1;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart2Root
+  .networksChart2Header {
+  justify-content: space-between;
+  padding: 0 10px 0 28px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart2Root
+  .networksChart2Header
+  .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart2Root
+  .networksChart2Header
+  .timeTool {
+  width: 220px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart2Root
+  .networksChart2 {
+  display: flex;
+  justify-content: center;
+}
+
+.networksRoot .networksContent .networksContent2 {
+  margin-top: 28px;
+}
+
+.networksRoot .networksContent .networksContent2 .networksTableHeader {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  padding: 0 31.69px 0 30px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .networksTableHeader
+  .networksTableTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-right: 31px;
+}
+.networksRoot
+  .networksContent
+  .networksContent2
+  .networksTableHeader
+  .networksTableSearchTool {
+  flex-grow: 1;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(1) {
+  width: 110px;
+  padding-left: 13px !important;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(1) {
+  text-align: center !important;
+  padding-left: 13px !important;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(2) {
+  padding-left: 4px;
+  text-align: left !important;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(2) {
+  text-align: left !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(3) {
+  text-align: left !important;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(3) {
+  text-align: left !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(4) {
+  text-align: left !important;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(4) {
+  text-align: left !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(5) {
+  text-align: left !important;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(5) {
+  display: flex;
+  align-items: center;
+  text-align: left !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(5)
+  img {
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(6) {
+  text-align: center;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(6) {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(7) {
+  text-align: center;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(7)
+  div {
+  background: #2d452f !important;
+  min-width: none !important;
+  max-width: 124px;
+  margin: auto;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(8) {
+  text-align: center;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(8) {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #75b3ff;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(9) {
+  text-align: center;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(9) {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #75b3ff;
+  text-decoration: underline;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  thead
+  tr
+  th:nth-child(10) {
+  width: 97px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent2
+  .customizeTable
+  tbody
+  tr
+  td:nth-child(10)
+  .dotBtn {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
