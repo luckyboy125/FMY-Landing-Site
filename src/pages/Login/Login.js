@@ -4,9 +4,20 @@ import Analysis from "../../asset/login/login_analysis.svg";
 import "./Login.css";
 import { useState } from "react";
 
-function Login() {
+function Login({ onSubmit }) {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+
+  const handleSubmit = () => {
+    if (!email) {
+      return;
+    }
+    if (!pass) {
+      return;
+    }
+    onSubmit();
+  };
+
   return (
     <>
       <div className="loginRoot">
@@ -35,7 +46,9 @@ function Login() {
               onChange={(e) => setPass(e.target.value)}
             />
           </div>
-          <div className="submitBtn">Get Started</div>
+          <div className="submitBtn" onClick={handleSubmit}>
+            Get Started
+          </div>
           <div className="termLetter">
             By entering your e-mail address you confirm that you agree with our{" "}
             <a href="#">Terms of Service</a>

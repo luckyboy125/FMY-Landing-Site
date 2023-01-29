@@ -3,16 +3,16 @@ import { staticHeight, staticWidth } from './App';
 
 //DONT TOUCH THIS FILE
 
-export function adjustContainer(height, width) {
+export function adjustContainer(height, width, containerStyle) {
 
     //height proportions ajuster
     if (width / staticWidth > height / staticHeight) {
-        document.getElementsByClassName("websiteContainer")[0].style.zoom = (height / staticHeight);
+        document.getElementsByClassName(containerStyle)[0].style.zoom = (height / staticHeight);
     }
 
     //width proportions adjuster
     if (height / staticHeight > width / staticWidth) {
-    document.getElementsByClassName("websiteContainer")[0].style.zoom = (width / staticWidth);
+    document.getElementsByClassName(containerStyle)[0].style.zoom = (width / staticWidth);
     }
 
 }
