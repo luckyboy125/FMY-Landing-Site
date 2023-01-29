@@ -9,15 +9,13 @@ import handImage from "../../asset/images/hand.svg";
 import "./WebAnalysisItem.css";
 
 function WebAnalysisItems() {
-  const lineChartData = {
-    label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    data: [1320, 932, 901, 1300, 1290, 1330, 1320],
-  };
-
   const doughnutChartData = {
     label: ["first", "second", "third", "fourth", "fifth", "sixth"],
     data: [100, 120, 124, 300, 145, 50],
   };
+
+  const datePeriod = ["Last week", "Last week", "Last week", "Custom"];
+  const compare = ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"];
 
   return (
     <div className="webAnalysisRoot">
@@ -41,11 +39,35 @@ function WebAnalysisItems() {
                 name="Show"
                 content="This Week"
                 className="chartPeriod"
+                dropRootStyle="periodChildRoot"
+                dropRoot={
+                  <>
+                    {datePeriod?.map((item, index) => {
+                      return (
+                        <div key={index} className="item">
+                          {item}
+                        </div>
+                      );
+                    })}
+                  </>
+                }
               />
               <ActionButton
                 content="Compare"
                 type="common"
                 className="chartCompare"
+                dropRootStyle="compareChildRoot"
+                dropRoot={
+                  <>
+                    {compare?.map((item, index) => {
+                      return (
+                        <div key={index} className="item">
+                          {item}
+                        </div>
+                      );
+                    })}
+                  </>
+                }
               />
             </div>
           </div>

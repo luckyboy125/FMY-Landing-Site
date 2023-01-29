@@ -1,4 +1,4 @@
-.buttonRoot {
+.actionButtonRoot {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -12,9 +12,10 @@
   justify-content: space-between;
   cursor: pointer;
   align-items: center;
+  position: relative;
 }
 
-.buttonRoot .buttonName {
+.actionButtonRoot .buttonName {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -26,7 +27,7 @@
   margin-right: 8px;
 }
 
-.buttonRoot .buttonContent {
+.actionButtonRoot .buttonContent {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -39,7 +40,7 @@
   align-items: center;
 }
 
-.buttonRoot .buttonContent i {
+.actionButtonRoot .buttonContent i {
   font-size: 12px;
   line-height: 6px;
   color: #fff;
