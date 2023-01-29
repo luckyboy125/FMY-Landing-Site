@@ -6,11 +6,9 @@ body {
 
 .loginContainer {
   border-radius: 32px;
-  height: 1250px;
   margin: 0 auto;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 2250px;
   background: radial-gradient(
     71.56% 71.56% at 49.8% 50%,
     #2ac2f3 0%,
@@ -26,12 +24,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   width: 2250px;
-
-  /* background: radial-gradient(
-    71.56% 71.56% at 49.8% 50%,
-    #2ac2f3 0%,
-    #0e0123 92.27%
-  ); */
 }
 
 .outer {
