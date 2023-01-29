@@ -6,6 +6,7 @@ import handImage from "../../asset/images/hand.svg";
 import "./Home.css";
 
 function Home() {
+  const compare = ["This Week", "Custom"];
   return (
     <>
       <div className="homeRoot">
@@ -23,7 +24,23 @@ function Home() {
           />
         </div>
         <div className="lineRoot">
-          <ActionButton name="Show" content="This Week" className="lineBtn" />
+          <ActionButton
+            name="Show"
+            content="This Week"
+            className="lineBtn"
+            dropRootStyle="childRoot"
+            dropRoot={
+              <>
+                {compare?.map((item, index) => {
+                  return (
+                    <div key={index} className="item">
+                      {item}
+                    </div>
+                  );
+                })}
+              </>
+            }
+          />
           <CustomizeInlineChart />
         </div>
         <div className="mainContentRoot">
