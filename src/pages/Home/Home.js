@@ -11,7 +11,10 @@ import "./Home.css";
 function Home() {
   const compare = ["This Week", "Custom"];
   const [modalShow, setModalShow] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+  const [attachLinkValue, setAttachLinkValue] = useState("");
+  const [categoryValue, setCategoryValue] = useState("");
+  const [caseValue, setCaseValue] = useState("");
+  const [updateValue, setUpdateValue] = useState("");
 
   return (
     <div className="homeRoot">
@@ -115,9 +118,9 @@ function Home() {
             <div className="title">Category</div>
             <div className="inputRoot">
               <input
-                value={inputValue}
+                value={categoryValue}
                 placeholder="Write update here"
-                onChange={(e) => setInputValue(e.target.value)}
+                onChange={(e) => setCategoryValue(e.target.value)}
               />
               <div className="plus">+</div>
               <div className="roundBtn">
@@ -129,9 +132,9 @@ function Home() {
             <div className="title">Cases</div>
             <div className="inputRoot">
               <input
-                value={inputValue}
+                value={caseValue}
                 placeholder="Choose case"
-                onChange={(e) => setInputValue(e.target.value)}
+                onChange={(e) => setCaseValue(e.target.value)}
               />
               <div className="plus">+</div>
               <div className="roundBtn">
@@ -143,9 +146,9 @@ function Home() {
             <div className="title">Update</div>
             <div className="inputRoot">
               <input
-                value={inputValue}
+                value={updateValue}
                 placeholder="Write update here"
-                onChange={(e) => setInputValue(e.target.value)}
+                onChange={(e) => setUpdateValue(e.target.value)}
               />
             </div>
           </div>
@@ -153,9 +156,9 @@ function Home() {
             <div className="title">Attach link</div>
             <div className="inputRoot">
               <input
-                value={inputValue}
+                value={attachLinkValue}
                 placeholder="Paste link here..."
-                onChange={(e) => setInputValue(e.target.value)}
+                onChange={(e) => setAttachLinkValue(e.target.value)}
               />
             </div>
           </div>
