@@ -1,10 +1,10 @@
 import { useState } from "react";
+import { useOutsideClick } from "../../../../hook/DetectOutsideClick";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
 import PlusButton from "../../../../components/PlusButton/PlusButton";
 import CloseIcon from "../../../../asset/images/close_icon.svg";
 import Calendar from "../../../../asset/images/calendar.svg";
 import "./NewTaskModal.css";
-import { useOutsideClick } from "../../../../hook/DetectOutsideClick";
 
 function NewTaskModal({ className, show, onClose }) {
   const [title, setTitle] = useState("");
