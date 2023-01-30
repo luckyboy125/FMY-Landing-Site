@@ -142,6 +142,8 @@ function CommentModal({ className, show, onClose, type }) {
                 <div className="rightPart2">
                   <div className="title">Cases:</div>
                   <div className="btn">Lorem ipsum</div>
+                  <div className="btn">Lorem ipsum</div>
+                  <div className="btn">Lorem ipsum</div>
                   <div className="plus">+</div>
                 </div>
                 <div className="rightPart3">
