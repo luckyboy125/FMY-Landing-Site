@@ -152,17 +152,26 @@ function Investigation() {
               <DropdownLayout
                 className="searchDropdown"
                 dropRoot={
-                  <div className="dropRoot">
-                    <div className="dropItem">Lorem ipsum</div>
-                    <div className="dropItem">Lorem ipsum</div>
-                    <div className="dropItem">Lorem ipsum</div>
-                    <div className="dropItem">Lorem ipsum</div>
-                    <div className="topRightArrow"></div>
-                  </div>
+                  <>
+                    <div className="item">
+                      <div className="greenDot"></div>Last 7 Days
+                    </div>
+                    <div className="item">
+                      <div className="greenDot"></div>Last 15 Days
+                    </div>
+                    <div className="item">
+                      <div className="greenDot"></div>Last 30 Days
+                    </div>
+                    <div className="item">
+                      <div className="greenDot"></div>Last 60 Days
+                    </div>
+                  </>
                 }
                 dropRootStyle="dropdownRoot"
               >
-                Last 15 Days <i className="fas fa-caret-down"></i>
+                <div className="dayBtn">
+                  Last 15 Days <i className="fas fa-caret-down"></i>
+                </div>
               </DropdownLayout>
               <div className="divline"></div>
               <div className="searchBtn">

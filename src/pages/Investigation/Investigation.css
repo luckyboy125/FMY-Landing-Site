@@ -130,6 +130,16 @@
   .searchDropdown {
   display: flex;
   align-items: center;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchDropdown
+  .dayBtn {
+  display: flex;
+  align-items: center;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -143,10 +153,90 @@
   .investigationContent1
   .inputRoot
   .searchDropdown
+  .dayBtn
   i {
   margin-left: 10px;
   font-size: 20px;
   color: #ececf1;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchDropdown
+  .dropdownRoot {
+  padding: 15px 0;
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  background: #8097af;
+  border-radius: 20px;
+  width: max-content;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchDropdown
+  .dropdownRoot::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 22px solid transparent;
+  border-bottom-color: #8097af;
+  border-top: 0;
+  margin-right: 40px;
+  margin-top: -20px;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchDropdown
+  .dropdownRoot
+  .item:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchDropdown
+  .dropdownRoot
+  .item {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px 5px 15px;
+  border-bottom: 1px solid #0000001a;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.investigationRoot
+  .investigationContent
+  .investigationContent1
+  .inputRoot
+  .searchDropdown
+  .dropdownRoot
+  .item
+  .greenDot {
+  width: 9px;
+  min-width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #4fbf67;
+  margin-right: 11px;
 }
 
 .investigationRoot
