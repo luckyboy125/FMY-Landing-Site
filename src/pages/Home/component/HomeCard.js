@@ -21,7 +21,6 @@ function HomeCard({
   cardDate,
   commentType,
 }) {
-  console.log("type : ", commentType);
   const [modalShow, setModalShow] = useState(false);
   return (
     <>

@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useOutsideClick } from "../../../../hook/DetectOutsideClick";
 import CloseIcon from "../../../../asset/images/close_icon.svg";
 import Calendar from "../../../../asset/images/calendar.svg";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
@@ -8,28 +9,10 @@ import "./NewCheckListsModal.css";
 function NewCheckListsModal({ className, show, onClose }) {
   const [title, setTitle] = useState("");
   const [addContentShow, setAddContentShow] = useState(false);
-  const rootRef = useRef(null);
-  const contentRef = useRef(null);
-
-  useEffect(() => {
-    if (show) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
-    function handleClick(e) {
-      if (rootRef && rootRef.current && contentRef && contentRef.current) {
-        const root = rootRef.current;
-        const content = contentRef.current;
-        if (root.contains(e.target) && !content.contains(e.target)) {
-          setAddContentShow(false);
-          onClose();
-        }
-      }
-    }
-  }, [rootRef, contentRef, show]);
+  const modalRef = useOutsideClick(() => {
+    setAddContentShow(false);
+    onClose();
+  });
 
   const handleCloseModal = () => {
     addContentShow ? setAddContentShow(false) : onClose();
@@ -45,11 +28,8 @@ function NewCheckListsModal({ className, show, onClose }) {
 
   return (
     <>
-      <div
-        className={show ? "newCheckListsModalLoaderWrapper" : "displayNone"}
-        ref={rootRef}
-      >
-        <div className={`newCheckListsModalRoot ${className}`} ref={contentRef}>
+      <div className={show ? "newCheckListsModalLoaderWrapper" : "displayNone"}>
+        <div className={`newCheckListsModalRoot ${className}`} ref={modalRef}>
           <img
             src={CloseIcon}
             className="modalCloseIcon"

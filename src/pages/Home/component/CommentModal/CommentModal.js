@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useOutsideClick } from "../../../../hook/DetectOutsideClick";
 import { card_type } from "../../../../helpers/home.helper";
 import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 import CloseIcon from "../../../../asset/images/close_icon.svg";
@@ -22,35 +23,12 @@ import "./CommentModal.css";
 
 function CommentModal({ className, show, onClose, type }) {
   const [commentArea, setCommentArea] = useState("");
-  const rootRef = useRef(null);
-  const contentRef = useRef(null);
-  console.log("type : ", type);
+  const modalRef = useOutsideClick(onClose);
 
-  useEffect(() => {
-    if (show) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
-    function handleClick(e) {
-      if (rootRef && rootRef.current && contentRef && contentRef.current) {
-        const root = rootRef.current;
-        const content = contentRef.current;
-        if (root.contains(e.target) && !content.contains(e.target)) {
-          onClose();
-        }
-      }
-    }
-  }, [rootRef, contentRef, show]);
   return (
     <>
-      <div
-        className={show ? "commentModalLoaderWrapper" : "displayNone"}
-        ref={rootRef}
-      >
-        <div className={`commentModalRoot ${className}`} ref={contentRef}>
+      <div className={show ? "commentModalLoaderWrapper" : "displayNone"}>
+        <div className={`commentModalRoot ${className}`} ref={modalRef}>
           <ThreeDotBtn className="setting" action={() => {}} />
           <img
             src={CloseIcon}
