@@ -1,0 +1,236 @@
+.newUpdataModalRoot {
+  width: 569px;
+  background: #41505f;
+  border-radius: 20px;
+  padding: 30px 40px 27px;
+  position: relative;
+}
+
+.newUpdataModalRoot .closeIcon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.newUpdataModalRoot .modalTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.newUpdataModalRoot .modalInputContent {
+  margin-top: 30px;
+}
+
+.newUpdataModalRoot .modalInputContent .modalItem:last-child {
+  margin-bottom: 0;
+}
+
+.newUpdataModalRoot .modalInputContent .modalItem {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.newUpdataModalRoot .modalInputContent .modalItem .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.newUpdataModalRoot .modalInputContent .modalItem .inputRoot {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: linear-gradient(#41505f, #41505f) content-box,
+    linear-gradient(90deg, #c7a5ff 0%, #68b3ff 100%) border-box;
+}
+
+.newUpdataModalRoot .modalInputContent .modalItem .inputRoot input {
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0 !important;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #fff;
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  input::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  input:focus-visible {
+  outline: none;
+}
+
+.newUpdataModalRoot .modalInputContent .modalItem .inputRoot input:focus {
+  outline: none;
+}
+
+.newUpdataModalRoot .modalInputContent .modalItem .inputRoot .plus {
+  font-size: 30px;
+  color: #75b3ff;
+  margin-right: 16px;
+}
+
+.newUpdataModalRoot .modalInputContent .modalItem .inputRoot .roundBtn {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  margin-right: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.newUpdataModalRoot .modalInputContent .modalItem .inputRoot .roundBtn i {
+  font-size: 20px;
+  color: #75b3ff;
+}
+
+.newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .selectDropdownRoot {
+  position: absolute;
+  right: 23px;
+  top: 43px;
+  width: 419px;
+  padding: 6.5px 10px 0;
+  background: #54616f;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  z-index: 5;
+}
+
+.newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .selectDropdownRoot::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 17.5px solid transparent;
+  border-bottom-color: #54616f;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -16px;
+  margin-top: -16px;
+}
+
+.newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .selectDropdownRoot
+  .item:last-child {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .selectDropdownRoot
+  .item {
+  width: 100%;
+  padding: 11px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .selectDropdownRoot
+  .activeItem {
+  width: 100%;
+  padding: 11px 10px;
+  border-bottom: 1px solid #ffffff;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.newUpdataModalRoot .addLink {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #75b3ff;
+}
+
+.newUpdataModalRoot .updateBtn {
+  width: 115px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #75b3ff;
+  border-radius: 30px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 60px auto 0;
+}
