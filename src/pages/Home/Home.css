@@ -271,7 +271,7 @@
   .modalItem
   .inputRoot
   .roundBtn
-  .categorySelectRoot {
+  .selectDropdownRoot {
   position: absolute;
   right: 23px;
   top: 43px;
@@ -290,7 +290,7 @@
   .modalItem
   .inputRoot
   .roundBtn
-  .categorySelectRoot::after {
+  .selectDropdownRoot::after {
   content: "";
   position: absolute;
   top: 0;
@@ -311,7 +311,7 @@
   .modalItem
   .inputRoot
   .roundBtn
-  .categorySelectRoot
+  .selectDropdownRoot
   .item:last-child {
   border-bottom: none;
   padding-bottom: 10px;
@@ -323,7 +323,7 @@
   .modalItem
   .inputRoot
   .roundBtn
-  .categorySelectRoot
+  .selectDropdownRoot
   .item {
   width: 100%;
   padding: 11px 10px;
@@ -342,7 +342,7 @@
   .modalItem
   .inputRoot
   .roundBtn
-  .categorySelectRoot
+  .selectDropdownRoot
   .activeItem {
   width: 100%;
   padding: 11px 10px;

@@ -17,7 +17,6 @@ function Home() {
 
   const compare = ["This Week", "Custom"];
   const [modalShow, setModalShow] = useState(false);
-  const [attachLinkValue, setAttachLinkValue] = useState("");
   const [categoryValue, setCategoryValue] = useState("");
   const [categorySelectShow, setCategorySelectShow] = useState(false);
   const categorySelectRef = useOutsideClick(() => setCategorySelectShow(false));
@@ -41,7 +40,30 @@ function Home() {
   };
 
   const [caseValue, setCaseValue] = useState("");
+
+  const [caseSelectShow, setCaseSelectShow] = useState(false);
+  const caseSelectRef = useOutsideClick(() => setCaseSelectShow(false));
+  const caseSelect = [
+    "Lorem ipsum",
+    "Lorem ipsum",
+    "Human rights",
+    "Lorem ipsum",
+    "Lorem ipsum",
+    "Lorem ipsum",
+    "Lorem ipsum",
+  ];
+
+  const handlCase = (item) => {
+    query.set("newupdate_case", item);
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+    setCaseSelectShow(false);
+  };
+
   const [updateValue, setUpdateValue] = useState("");
+  const [attachLinkValue, setAttachLinkValue] = useState("");
 
   return (
     <div className="homeRoot">
@@ -156,7 +178,7 @@ function Home() {
               >
                 <i className="fas fa-chevron-down" />
                 {categorySelectShow ? (
-                  <div className="categorySelectRoot" ref={categorySelectRef}>
+                  <div className="selectDropdownRoot" ref={categorySelectRef}>
                     {categorySelect.map((item, index) => {
                       return (
                         <div
@@ -188,8 +210,32 @@ function Home() {
                 onChange={(e) => setCaseValue(e.target.value)}
               />
               <div className="plus">+</div>
-              <div className="roundBtn">
+              <div
+                className="roundBtn"
+                onClick={() => setCaseSelectShow(!caseSelectShow)}
+              >
                 <i className="fas fa-chevron-down" />
+                {caseSelectShow ? (
+                  <div className="selectDropdownRoot" ref={caseSelectRef}>
+                    {caseSelect.map((item, index) => {
+                      return (
+                        <div
+                          key={index}
+                          className={`${
+                            query.get("newupdate_case") === item
+                              ? "activeItem"
+                              : "item"
+                          }`}
+                          onClick={() => handlCase(item)}
+                        >
+                          {item}
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
             </div>
           </div>
