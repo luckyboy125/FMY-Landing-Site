@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useOutsideClick } from "../../hook/DetectOutsideClick";
 import searchIcon from "../../asset/images/search_icon.svg";
 import "./SearchInput.css";
 
@@ -11,25 +12,7 @@ function SearchInput({
   clickAction,
 }) {
   const [initStatus, setInitStatus] = useState(true);
-  const rootRef = useRef(null);
-
-  useEffect(() => {
-    if (!initStatus) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
-    function handleClick(e) {
-      if (rootRef && rootRef.current) {
-        const root = rootRef.current;
-        if (!root.contains(e.target)) {
-          setInitStatus(true);
-        }
-      }
-    }
-  }, [rootRef]);
+  const searchInputRef = useOutsideClick(() => setInitStatus(true));
 
   const handleClick = () => {
     onlyClick ? clickAction() : setInitStatus(false);
@@ -40,7 +23,7 @@ function SearchInput({
       className={`searchInputRoot ${className}`}
       style={{ cursor: `${onlyClick ? "pointer" : ""}` }}
       onClick={handleClick}
-      ref={rootRef}
+      ref={searchInputRef}
     >
       <div className="inputIcon">
         <img src={searchIcon} alt="searchIcon" />
