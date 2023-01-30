@@ -40,4 +40,5 @@
 .databaseSearchDropdownRoot .childrenRoot {
   position: absolute;
   top: 84px;
+  z-index: 2;
 }

@@ -498,6 +498,8 @@
   border-radius: 16px;
   border-top-right-radius: 0;
   position: relative;
+  top: 63px;
+  right: 20px;
 }
 
 .databaseRoot
