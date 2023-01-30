@@ -401,18 +401,14 @@
 .commentModalRoot .modalContainer {
   width: 100%;
   display: flex;
-  /* align-items: flex-end; */
 }
 
 .commentModalRoot .modalContainer .leftPart {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
   border-radius: 16px;
   width: 690px;
-  padding: 20px 39px 0 30px;
+  padding: 10px 0 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .commentModalRoot .modalContainer .leftPart .titleBtn {
@@ -429,30 +425,41 @@
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .commentModalRoot .modalContainer .leftPart .titleDes {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 40px;
   color: #ffffff;
   margin-top: 30px;
+  padding: 20px 34px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-radius: 16px;
 }
 
 .commentModalRoot .modalContainer .leftPart .inputFileRoot {
-  width: 400px;
-  height: 382px;
+  flex-grow: 1;
   border: 3px dashed #ffffff;
-  border-radius: 40px;
-  margin: 128px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 100px;
   color: #fff;
+  margin-top: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-radius: 16px;
 }
 
 .commentModalRoot .modalContainer .divLine {
@@ -464,7 +471,7 @@
 
 .commentModalRoot .modalContainer .rightPart {
   flex-grow: 1;
-  padding: 20px 30px 0 0;
+  padding: 64px 30px 0 0;
 }
 
 .commentModalRoot .modalContainer .rightPart .title {
@@ -477,7 +484,6 @@
 }
 
 .commentModalRoot .modalContainer .rightPart .rightPart1 {
-  margin-top: 30px;
   display: flex;
 }
 
@@ -572,7 +578,7 @@
 }
 
 .commentModalRoot .modalContainer .rightPart .rightPart3 {
-  margin-top: 93px;
+  margin-top: 30px;
 }
 
 .commentModalRoot .modalContainer .rightPart .rightPart3 .title {
@@ -581,6 +587,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 24px;
+  color: #fff;
 }
 
 .commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot {
@@ -590,6 +597,18 @@
 }
 
 .commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot1 {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot1 img {
   width: 40px;
   height: 40px;
   margin-right: 5px;

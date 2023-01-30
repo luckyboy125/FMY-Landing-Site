@@ -19,6 +19,11 @@ import linkedin from "../../../../asset/images/social/linkedin.svg";
 import behance from "../../../../asset/images/social/behance.svg";
 import dribbble from "../../../../asset/images/social/dribbble.svg";
 import whatsapp from "../../../../asset/images/social/whatsapp.svg";
+import vimeo from "../../../../asset/images/social/vimeo.svg";
+import gmail from "../../../../asset/images/social/gmail.svg";
+import blogger from "../../../../asset/images/social/blogger.svg";
+import viber from "../../../../asset/images/social/viber.svg";
+import wechat from "../../../../asset/images/social/wechat.svg";
 import "./CommentModal.css";
 
 function CommentModal({ className, show, onClose, type }) {
@@ -111,14 +116,18 @@ function CommentModal({ className, show, onClose, type }) {
               <div className="leftPart">
                 <div className="titleBtn">New update</div>
                 <div className="titleDes">
-                  Hezbollah called out for boycotting the elections in Bahrain.
-                  Lorem ipsum dolor sit amet consectetur.
+                  The death of a young woman at King Herzog hospital has finally
+                  promoted the country’s lawmakers to promise an investigation
+                  into claims of medical negligence at the state-run facility.
+                  The Government Reminds that Guatama citizens are entitled to
+                  recive free treatment without limit at all government medical
+                  facilities. A campaign regarding this is issue is being
+                  evident on all major social media platforms
                 </div>
                 <div className="inputFileRoot">+</div>
               </div>
               <div className="divLine"></div>
               <div className="rightPart">
-                <div className="title">General info:</div>
                 <div className="rightPart1">
                   <div className="item1">
                     Upload date:
@@ -153,6 +162,13 @@ function CommentModal({ className, show, onClose, type }) {
                     <img src={ball} alt="social_icon" />
                     <img src={spotify} alt="social_icon" />
                     <img src={w3} alt="social_icon" />
+                  </div>
+                  <div className="socialRoot1">
+                    <img src={viber} alt="social_icon" />
+                    <img src={vimeo} alt="social_icon" />
+                    <img src={gmail} alt="social_icon" />
+                    <img src={blogger} alt="social_icon" />
+                    <img src={wechat} alt="social_icon" />
                   </div>
                 </div>
                 <div className="rightPart4">

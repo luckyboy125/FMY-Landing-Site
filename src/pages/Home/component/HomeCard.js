@@ -11,6 +11,10 @@ import w3 from "../../../asset/images/social/w3.svg";
 import tiktok from "../../../asset/images/social/tiktok.svg";
 import telegram from "../../../asset/images/social/telegram.svg";
 import twitter from "../../../asset/images/social/twitter.svg";
+import vimeo from "../../../asset/images/social/vimeo.svg";
+import gmail from "../../../asset/images/social/gmail.svg";
+import blogger from "../../../asset/images/social/blogger.svg";
+import viber from "../../../asset/images/social/viber.svg";
 import "./HomeCard.css";
 
 function HomeCard({
@@ -45,13 +49,15 @@ function HomeCard({
             <img src={twitter} alt="twitter" />
             <img src={tiktok} alt="tiktok" />
             <img src={reddit} alt="reddit" />
+            <img src={viber} alt="reddit" />
+            <img src={vimeo} alt="w3" />
+            <img src={gmail} alt="w3" />
+            <img src={blogger} alt="w3" />
             <img src={telegram} alt="telegram" />
-            <img src={youtube} alt="youtube" />
-            <img src={w3} alt="w3" />
           </div>
           {commentType ? (
             <div className="commentBtn" onClick={() => setModalShow(true)}>
-              Comment
+              View
             </div>
           ) : (
             <></>
