@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useOutsideClick } from "../../hook/DetectOutsideClick";
 import HomeCard from "./component/HomeCard";
 import PlusButton from "../../components/PlusButton/PlusButton";
 import ActionButton from "../../components/ActionButton/ActionButton";
@@ -9,10 +11,35 @@ import CloseIcon from "../../asset/images/close_icon.svg";
 import "./Home.css";
 
 function Home() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const query = new URLSearchParams(location.search);
+
   const compare = ["This Week", "Custom"];
   const [modalShow, setModalShow] = useState(false);
   const [attachLinkValue, setAttachLinkValue] = useState("");
   const [categoryValue, setCategoryValue] = useState("");
+  const [categorySelectShow, setCategorySelectShow] = useState(false);
+  const categorySelectRef = useOutsideClick(() => setCategorySelectShow(false));
+  const categorySelect = [
+    "News update",
+    "Event",
+    "Human rights",
+    "Lorem ipsum",
+    "Lorem ipsum",
+    "Lorem ipsum",
+    "Lorem ipsum",
+  ];
+
+  const handlCategory = (category) => {
+    query.set("newupdate_category", category);
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+    setCategorySelectShow(false);
+  };
+
   const [caseValue, setCaseValue] = useState("");
   const [updateValue, setUpdateValue] = useState("");
 
@@ -123,8 +150,32 @@ function Home() {
                 onChange={(e) => setCategoryValue(e.target.value)}
               />
               <div className="plus">+</div>
-              <div className="roundBtn">
+              <div
+                className="roundBtn"
+                onClick={() => setCategorySelectShow(!categorySelectShow)}
+              >
                 <i className="fas fa-chevron-down" />
+                {categorySelectShow ? (
+                  <div className="categorySelectRoot" ref={categorySelectRef}>
+                    {categorySelect.map((item, index) => {
+                      return (
+                        <div
+                          key={index}
+                          className={`${
+                            query.get("newupdate_category") === item
+                              ? "activeItem"
+                              : "item"
+                          }`}
+                          onClick={() => handlCategory(item)}
+                        >
+                          {item}
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
             </div>
           </div>

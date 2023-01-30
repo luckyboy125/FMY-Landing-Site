@@ -250,6 +250,8 @@
   align-items: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   margin-right: 14px;
+  cursor: pointer;
+  position: relative;
 }
 
 .homeRoot
@@ -257,9 +259,100 @@
   .modalInputContent
   .modalItem
   .inputRoot
-  .roundBtn {
+  .roundBtn
+  i {
   font-size: 20px;
   color: #75b3ff;
+}
+
+.homeRoot
+  .newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .categorySelectRoot {
+  position: absolute;
+  right: 23px;
+  top: 43px;
+  width: 419px;
+  padding: 6.5px 10px 0;
+  background: #54616f;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  z-index: 5;
+}
+
+.homeRoot
+  .newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .categorySelectRoot::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 17.5px solid transparent;
+  border-bottom-color: #54616f;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -16px;
+  margin-top: -16px;
+}
+
+.homeRoot
+  .newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .categorySelectRoot
+  .item:last-child {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.homeRoot
+  .newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .categorySelectRoot
+  .item {
+  width: 100%;
+  padding: 11px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.homeRoot
+  .newUpdataModalRoot
+  .modalInputContent
+  .modalItem
+  .inputRoot
+  .roundBtn
+  .categorySelectRoot
+  .activeItem {
+  width: 100%;
+  padding: 11px 10px;
+  border-bottom: 1px solid #ffffff;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
 }
 
 .homeRoot .newUpdataModalRoot .addLink {
