@@ -9,6 +9,10 @@ import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/Data
 import refresh from "../../asset/images/refresh_icon.svg";
 import person3 from "../../asset/person3.svg";
 import youtube from "../../asset/images/social/youtube.svg";
+import facebook from "../../asset/images/social/facebook.svg";
+import instagram from "../../asset/images/social/instagram.svg";
+import twitter from "../../asset/images/social/twitter.svg";
+import tiktok from "../../asset/images/social/tiktok.svg";
 import tableAlertIcon from "../../asset/images/alert_icon.svg";
 import searchIcon from "../../asset/images/search_icon_white.svg";
 import "./Database.css";
@@ -224,12 +228,26 @@ function Database() {
                         childrenStyle="dropChildrenRoot"
                       >
                         <div className="plateformDropdown">
-                          <img src={youtube} alt="social_icon" />
-                          <img src={youtube} alt="social_icon" />
-                          <img src={youtube} alt="social_icon" />
-                          <img src={youtube} alt="social_icon" />
-                          <img src={youtube} alt="social_icon" />
-                          <div className="topRightArrow"></div>
+                          <div className="item">
+                            <div className="checkRoot"></div>
+                            <img src={youtube} alt="social_icon" />
+                          </div>
+                          <div className="item">
+                            <div className="checkRoot"></div>
+                            <img src={instagram} alt="social_icon" />
+                          </div>
+                          <div className="item">
+                            <div className="checkRoot"></div>
+                            <img src={facebook} alt="social_icon" />
+                          </div>
+                          <div className="item">
+                            <div className="checkRoot"></div>
+                            <img src={twitter} alt="social_icon" />
+                          </div>
+                          <div className="item">
+                            <div className="checkRoot"></div>
+                            <img src={tiktok} alt="social_icon" />
+                          </div>
                         </div>
                       </DatabaseSearchDropdown>
                       <LetterSelectButton
