@@ -1,25 +1,7 @@
-.newTaskModalLoaderWrapper {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
-}
 .newTaskModalRoot {
-  position: fixed;
-  flex-direction: column;
   width: 569px;
   background: #41505f;
   border-radius: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 10;
   padding: 30px 40px;
 }
 .newTaskModalRoot .modalCloseIcon {
@@ -143,7 +125,4 @@
 .newTaskModalRoot .additionDetailContent .additionDetailItem .itemBtn i {
   margin-left: 10px !important;
   color: #fff;
-}
-.displayNone {
-  display: none !important;
 }
