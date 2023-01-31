@@ -1,24 +1,31 @@
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Vega } from "react-vega";
-import ActionButton from "../../../../components/ActionButton/ActionButton";
-import CardLayout from "../../../../components/CardLayout/CardLayout";
+import { comparisonDoughnutChartColorData } from "../../../../helpers/chart.helper";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
-import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
-import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
-import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
+import CardLayout from "../../../../components/CardLayout/CardLayout";
+import ModalLayout from "../../../../components/ModalLayout/ModalLayout";
 import SearchInput from "../../../../components/SearchInput/SearchInput";
 import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
+import ActionButton from "../../../../components/ActionButton/ActionButton";
+import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
 import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
-import { comparisonDoughnutChartColorData } from "../../../../helpers/chart.helper";
+import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
+import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
+import person3 from "../../../../asset/person3.svg";
+import csv from "../../../../asset/images/csv_icon.svg";
 import refresh from "../../../../asset/images/refresh_icon.svg";
+import youtube from "../../../../asset/images/social/youtube.svg";
 import more_tool from "../../../../asset/images/more_tool_icon.svg";
 import more_detail from "../../../../asset/images/more_detail_icon.svg";
-import csv from "../../../../asset/images/csv_icon.svg";
-import person3 from "../../../../asset/person3.svg";
-import youtube from "../../../../asset/images/social/youtube.svg";
+import closeIcon from "../../../../asset/images/close_icon.svg";
 import "./Comparison.css";
 
 function Comparison() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const query = new URLSearchParams(location.search);
+
   const [searchValue, setSearchValue] = useState("");
   const tagOverTimeDropdown = ["Last week", "Last week", "Last week", "Custom"];
   const [mockTableData, setMockTableData] = useState([]);
@@ -26,6 +33,7 @@ function Comparison() {
   const [mockLineData2, setMockLineData2] = useState([]);
   const [mockLineData3, setMockLineData3] = useState([]);
   const [mockDoughnutData, setMockDoughnutData] = useState([]);
+  const [commentArea, setCommentArea] = useState("");
 
   const WordCloudOption = {
     $schema: "https://vega.github.io/schema/vega/v5.json",
@@ -184,6 +192,14 @@ function Comparison() {
       Math.floor(Math.random() * 500 + 900),
     ]);
   }, []);
+
+  const handleViewModal = (index) => {
+    query.set("tableviewmodal_show", index);
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+  };
 
   return (
     <>
@@ -359,7 +375,69 @@ function Comparison() {
                     color="#37CE4A"
                   />
                 </td>
-                <td>View</td>
+                <td onClick={() => handleViewModal(index)}>
+                  View
+                  <ModalLayout
+                    show={query.get("tableviewmodal_show")}
+                    onClose={() => query.delete("tableviewmodal_show")}
+                    className="tabelViewModalRoot"
+                  >
+                    <ThreeDotBtn className="dotBtn" action={() => {}} />
+                    <img src={closeIcon} alt="closIcon" />
+                    <div
+                      className="mainRoot"
+                      onClick={() => {
+                        console.log("test", query);
+                        query.delete("tableviewmodal_show");
+                        console.log("test1", query);
+                        navigate({
+                          pathname: location.pathname,
+                          search: query.toString(),
+                        });
+                      }}
+                    >
+                      <div className="leftPart">+</div>
+                      <div className="divLinePart"></div>
+                      <div className="rightPart">
+                        <div className="title">General info:</div>
+                        <div className="rightPart1">
+                          <div className="item">Upload date:</div>
+                          <div className="item">Username:</div>
+                        </div>
+                        <div className="casesPart">
+                          <div className="title">Cases</div>
+                          <div className="desRoot">
+                            <img src={person3} alt="avatart" />
+                            <div className="desRoot1">
+                              <div className="desContent">
+                                <div className="des">
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit. Pellentesque cras felis
+                                  interdum tempor, lobortis egestas volutpat
+                                  consectetur.....
+                                </div>
+                                <div className="desDate">Feb 6, 11:49 AM</div>
+                              </div>
+                            </div>
+                            <ThreeDotBtn className="dotBtn" action={() => {}} />
+                          </div>
+                        </div>
+                        <div className="commentPart">
+                          <div className="title">Comments:</div>
+                          <div className="desRoot">
+                            <ThreeDotBtn className="dotBtn" action={() => {}} />
+                            <textarea
+                              placeholder="Comment here"
+                              value={commentArea}
+                              onChange={(e) => setCommentArea(e.target.value)}
+                            />
+                            <div className="postBtn">Post</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ModalLayout>
+                </td>
                 <td>Link</td>
                 <td>
                   <ThreeDotBtn className="dotBtn" action={() => {}} />
