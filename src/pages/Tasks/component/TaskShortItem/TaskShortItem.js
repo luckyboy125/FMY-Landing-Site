@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 import checkIcon from "../../../../asset/images/check_icon.svg";
 import "./TaskShortItem.css";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 
 function TaskShortItem({ className, title, type, avatar, user, click }) {
   const [checkStatus, setCheckStatus] = useState(false);

@@ -1,21 +1,21 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import TasksLogo from "../../asset/sidebar/TasksLogo.svg";
 import FmyLogo from "../../asset/sidebar/FmyLogo.svg";
-import DashboardLogo from "../../asset/sidebar/DashboardLogo.svg";
 import HomeLogo from "../../asset/sidebar/HomeLogo.svg";
-import CasesLogo from "../../asset/sidebar/CasesLogo.svg";
-import ChecklistsLogo from "../../asset/sidebar/ChecklistsLogo.svg";
-import DatabaseLogo from "../../asset/sidebar/DatabaseLogo.svg";
 import ExitLogo from "../../asset/sidebar/ExitLogo.svg";
-import InsightsLogo from "../../asset/sidebar/InsightsLogo.svg";
-import InvestigationLogo from "../../asset/sidebar/InvestigationLogo.svg";
-import NetworksLogo from "../../asset/sidebar/NetworksLogo.svg";
 import NrdsLogo from "../../asset/sidebar/NrdsLogo.svg";
+import CasesLogo from "../../asset/sidebar/CasesLogo.svg";
+import TasksLogo from "../../asset/sidebar/TasksLogo.svg";
+// import NewsLogo from "../../asset/sidebar/NewsLogo.svg";
+// import SearchLogo from "../../asset/sidebar/SearchLogo.svg";
+import DatabaseLogo from "../../asset/sidebar/DatabaseLogo.svg";
+import InsightsLogo from "../../asset/sidebar/InsightsLogo.svg";
+import NetworksLogo from "../../asset/sidebar/NetworksLogo.svg";
 import ReportsLogo from "../../asset/sidebar/ReportsLogo.svg";
 import SettingsLogo from "../../asset/sidebar/SettingsLogo.svg";
-// import SearchLogo from "../../asset/sidebar/SearchLogo.svg";
-// import NewsLogo from "../../asset/sidebar/NewsLogo.svg";
+import DashboardLogo from "../../asset/sidebar/DashboardLogo.svg";
+import ChecklistsLogo from "../../asset/sidebar/ChecklistsLogo.svg";
+import InvestigationLogo from "../../asset/sidebar/InvestigationLogo.svg";
 import "./SideTaskBar.css";
 
 function SideTaskBar() {

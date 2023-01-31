@@ -1,5 +1,5 @@
-import "./CustomizeTable.css";
 import arrowIcon from "../../asset/images/arrow_icon.svg";
+import "./CustomizeTable.css";
 
 function CustomizeTable({ header, body, tableHeader, className }) {
   return (

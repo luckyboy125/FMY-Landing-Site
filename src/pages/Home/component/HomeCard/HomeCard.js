@@ -3,18 +3,18 @@ import { card_type } from "../../../../helpers/home.helper";
 import CommentModal from "../CommentModal/CommentModal";
 import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 import Person3 from "../../../../asset/person3.svg";
-import facebook from "../../../../asset/images/social/facebook.svg";
-import instagram from "../../../../asset/images/social/instagram.svg";
-import youtube from "../../../../asset/images/social/youtube.svg";
-import reddit from "../../../../asset/images/social/reddit.svg";
 import w3 from "../../../../asset/images/social/w3.svg";
-import tiktok from "../../../../asset/images/social/tiktok.svg";
-import telegram from "../../../../asset/images/social/telegram.svg";
-import twitter from "../../../../asset/images/social/twitter.svg";
 import vimeo from "../../../../asset/images/social/vimeo.svg";
-import gmail from "../../../../asset/images/social/gmail.svg";
-import blogger from "../../../../asset/images/social/blogger.svg";
 import viber from "../../../../asset/images/social/viber.svg";
+import gmail from "../../../../asset/images/social/gmail.svg";
+import tiktok from "../../../../asset/images/social/tiktok.svg";
+import reddit from "../../../../asset/images/social/reddit.svg";
+import youtube from "../../../../asset/images/social/youtube.svg";
+import twitter from "../../../../asset/images/social/twitter.svg";
+import blogger from "../../../../asset/images/social/blogger.svg";
+import facebook from "../../../../asset/images/social/facebook.svg";
+import telegram from "../../../../asset/images/social/telegram.svg";
+import instagram from "../../../../asset/images/social/instagram.svg";
 import "./HomeCard.css";
 
 function HomeCard({

@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import { Vega } from "react-vega";
-import ActionButton from "../../../../components/ActionButton/ActionButton";
+import { doughnutChartColorData } from "../../../../helpers/chart.helper";
+import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
 import CardLayout from "../../../../components/CardLayout/CardLayout";
-import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
-import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
+import RoundButton from "../../../../components/RoundButton/RoundButton";
+import SearchInput from "../../../../components/SearchInput/SearchInput";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
+import ActionButton from "../../../../components/ActionButton/ActionButton";
 import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
 import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
 import GradientButton from "../../../../components/GradientButton/GradientButton";
-import RoundButton from "../../../../components/RoundButton/RoundButton";
-import SearchInput from "../../../../components/SearchInput/SearchInput";
-import { doughnutChartColorData } from "../../../../helpers/chart.helper";
-import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
+import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
+import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
+import person3 from "../../../../asset/person3.svg";
+import csv from "../../../../asset/images/csv_icon.svg";
 import refresh from "../../../../asset/images/refresh_icon.svg";
+import youtube from "../../../../asset/images/social/youtube.svg";
 import more_tool from "../../../../asset/images/more_tool_icon.svg";
 import more_detail from "../../../../asset/images/more_detail_icon.svg";
-import csv from "../../../../asset/images/csv_icon.svg";
-import person3 from "../../../../asset/person3.svg";
-import youtube from "../../../../asset/images/social/youtube.svg";
 import "./Service.css";
 
 function Service() {

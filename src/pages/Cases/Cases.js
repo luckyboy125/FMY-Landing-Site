@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import BubbleChart from "./component/BubbleChart/BubbleChart";
 import Service from "./component/Service/Service";
 import Comparison from "./component/Comparison/Comparison";
+import BubbleChart from "./component/BubbleChart/BubbleChart";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import PlusButton from "../../components/PlusButton/PlusButton";
 import SearchInput from "../../components/SearchInput/SearchInput";

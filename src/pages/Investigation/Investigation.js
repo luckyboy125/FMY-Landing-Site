@@ -13,8 +13,8 @@ import ActionTab from "../../components/ActionTab/ActionTab";
 import DropdownLayout from "../../components/DropdownLayout/DropdownLayout";
 import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
 import person1 from "../../asset/person1.svg";
-import searchIcon from "../../asset/images/search_icon_white.svg";
 import _searchIcon from "../../asset/images/search_icon.svg";
+import searchIcon from "../../asset/images/search_icon_white.svg";
 import socialIcon from "../../asset/images/social/facebook_icon.svg";
 import "./Investigation.css";
 

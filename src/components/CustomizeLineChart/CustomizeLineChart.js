@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
-import { useEffect, useState } from "react";
 Chart.register(...registerables);
 
 function CustomizeLineChart({ data, label, width, height }) {

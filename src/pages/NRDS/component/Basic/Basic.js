@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import ActionButton from "../../../../components/ActionButton/ActionButton";
-import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
-import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
-import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
-import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
+import { doughnutChartColorData } from "../../../../helpers/chart.helper";
 import PlusButton from "../../../../components/PlusButton/PlusButton";
 import SearchInput from "../../../../components/SearchInput/SearchInput";
-import { doughnutChartColorData } from "../../../../helpers/chart.helper";
+import ActionButton from "../../../../components/ActionButton/ActionButton";
+import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
+import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
+import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
+import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 import "./Basic.css";
 
 function Basic() {

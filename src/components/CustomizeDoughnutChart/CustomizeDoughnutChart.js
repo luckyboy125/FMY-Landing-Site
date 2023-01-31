@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
-import { useEffect, useState } from "react";
 import "./CustomizeDoughnutChart.css";
 Chart.register(...registerables);
 

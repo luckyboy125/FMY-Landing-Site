@@ -1,8 +1,8 @@
-import FmyLogo from "../../asset/sidebar/FmyLogo.svg";
+import { useState } from "react";
 import Effect from "../../asset/login/effect.svg";
+import FmyLogo from "../../asset/sidebar/FmyLogo.svg";
 import Analysis from "../../asset/login/login_analysis.svg";
 import "./Login.css";
-import { useState } from "react";
 
 function Login({ onSubmit }) {
   const [email, setEmail] = useState("");

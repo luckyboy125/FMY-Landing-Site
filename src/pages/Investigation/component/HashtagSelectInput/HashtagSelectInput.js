@@ -1,5 +1,5 @@
-import searchIcon from "../../../../asset/images/search_icon.svg";
 import closeIcon from "../../../../asset/images/close_icon.svg";
+import searchIcon from "../../../../asset/images/search_icon.svg";
 import "./HashtagSelectInput.css";
 
 function HashtagSelectInput({ className }) {

@@ -1,10 +1,10 @@
+import { doughnutChartColorData } from "../../helpers/chart.helper";
 import Stats from "./component/Stats/Stats";
-import TopPlatforms from "./component/TopPlatforms/TopPlatforms";
 import Sentiment from "./component/Sentiment/Sentiment";
+import TopPlatforms from "./component/TopPlatforms/TopPlatforms";
 import ActionButton from "../../components/ActionButton/ActionButton";
 import CustomizeLineChart from "../../components/CustomizeLineChart/CustomizeLineChart";
 import CustomizeDoughnutChart from "../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
-import { doughnutChartColorData } from "../../helpers/chart.helper";
 import handImage from "../../asset/images/hand.svg";
 import "./WebAnalysisItem.css";
 

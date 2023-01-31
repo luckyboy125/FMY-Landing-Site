@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useOutsideClick } from "../../../../hook/DetectOutsideClick";
-import CloseIcon from "../../../../asset/images/close_icon.svg";
 import ModalLayout from "../../../../components/ModalLayout/ModalLayout";
+import CloseIcon from "../../../../asset/images/close_icon.svg";
 import "./NewUpdateModal.css";
 
 function NewUpdateModal({ show, onClose }) {

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import SearchIcon from "../../asset/images/nrds/search_icon.svg";
 import arrow from "../../asset/images/nrds/arrow_down.svg";
+import SearchIcon from "../../asset/images/nrds/search_icon.svg";
 import "./DatabaseSearchInput.css";
 
 function DatabaseSearchInput({ className }) {

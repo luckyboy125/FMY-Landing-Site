@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useOutsideClick } from "../../../../hook/DetectOutsideClick";
-import CloseIcon from "../../../../asset/images/close_icon.svg";
-import Calendar from "../../../../asset/images/calendar.svg";
 import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
 import PlusButton from "../../../../components/PlusButton/PlusButton";
+import Calendar from "../../../../asset/images/calendar.svg";
+import CloseIcon from "../../../../asset/images/close_icon.svg";
 import "./NewCheckListsModal.css";
 
 function NewCheckListsModal({ className, show, onClose }) {

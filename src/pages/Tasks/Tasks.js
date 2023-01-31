@@ -1,10 +1,10 @@
 import { useState } from "react";
-import TaskShortItem from "./component/TaskShortItem/TaskShortItem";
 import TaskLongItem from "./component/TaskLongItem/TaskLongItem";
 import NewTaskModal from "./component/NewTaskModal/NewTaskModal";
+import TaskShortItem from "./component/TaskShortItem/TaskShortItem";
+import ColorBtn from "../../components/ColorBtn/ColorBtn";
 import ActionTab from "../../components/ActionTab/ActionTab";
 import PlusButton from "../../components/PlusButton/PlusButton";
-import ColorBtn from "../../components/ColorBtn/ColorBtn";
 import Person1 from "../../asset/person1.svg";
 import Person2 from "../../asset/person2.svg";
 import Person3 from "../../asset/person3.svg";

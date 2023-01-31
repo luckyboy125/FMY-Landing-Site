@@ -1,5 +1,5 @@
-import ActionButton from "../../../../components/ActionButton/ActionButton";
 import ChartLayout from "../../../../components/ChartLayout/ChartLayout";
+import ActionButton from "../../../../components/ActionButton/ActionButton";
 import "./Stats.css";
 
 function Stats() {
