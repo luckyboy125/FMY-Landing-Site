@@ -202,9 +202,7 @@ function Comparison() {
   };
 
   const handleViewModalClose = () => {
-    console.log("test", query.toString());
     query.delete("tableviewmodal_show");
-    console.log("test1", query.toString());
     navigate({
       pathname: location.pathname,
       search: query.toString(),
