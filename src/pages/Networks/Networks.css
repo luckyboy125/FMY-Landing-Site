@@ -227,6 +227,166 @@
   position: absolute;
   right: 16px;
   bottom: 16px;
+  cursor: pointer;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown {
+  width: 192px;
+  border-radius: 20px;
+  background: #8097af;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 0;
+  padding: 6px 10px;
+  position: absolute;
+  right: 35px;
+  top: 317px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-bottom-color: #8097af;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -13px;
+  margin-top: -13px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown
+  .searchRoot {
+  width: 100%;
+  height: 41px;
+  background: #788899;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  margin-bottom: 9.5px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown
+  .searchRoot
+  .round {
+  width: 31px;
+  min-width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown
+  .searchRoot
+  > input {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #ffffff;
+  flex-grow: 1;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0 !important;
+}
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown
+  .searchRoot
+  > input::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #ffffff;
+}
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown
+  .searchRoot
+  > input:focus-visible {
+  outline: none;
+}
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown
+  .searchRoot
+  > input:focus {
+  outline: none;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown
+  .searchRoot
+  .round
+  i {
+  font-size: 13px;
+  color: #7c7c7c;
+}
+
+.networksRoot
+  .networksContent
+  .networksContent1
+  .networksChart1Root
+  .networksChart1
+  .toolRootDropdown
+  .item {
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .networksRoot .networksContent .networksContent1 .networksChart2Root {

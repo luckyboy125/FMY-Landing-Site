@@ -11,14 +11,27 @@ import youtube from "../../asset/images/social/youtube.svg";
 import facebook from "../../asset/images/social/facebook.svg";
 import instagram from "../../asset/images/social/instagram.svg";
 import "./Networks.css";
+import { useOutsideClick } from "../../hook/DetectOutsideClick";
 
 function Networks() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
   const tabData = ["All", "Government", "networkss", "Army"];
+  const toolDropdownRef = useOutsideClick(() => setDropdownShow(false));
+
+  const toolDropdown = [
+    "Lorem ipsum",
+    "Lorem ipsum",
+    "Lorem ipsum",
+    "Lorem ipsum",
+    "Lorem ipsum",
+    "Lorem ipsum",
+  ];
 
   const [searchValue, setSearchValue] = useState("");
+  const [dropdownSearch, setDropdownSearch] = useState("");
+  const [dropdownShow, setDropdownShow] = useState(false);
   const [mockTableData, setMockTableData] = useState([]);
   const [mockDoughnutData, setMockDoughnutData] = useState([]);
 
@@ -148,7 +161,37 @@ function Networks() {
                   )}
                 </div>
               </div>
-              <RoundButton className="toolRoot" />
+              <RoundButton
+                className="toolRoot"
+                action={() => setDropdownShow(!dropdownShow)}
+              />
+              {dropdownShow ? (
+                <div className="toolRootDropdown" ref={toolDropdownRef}>
+                  <div className="searchRoot">
+                    <div className="round">
+                      <i className="fas fa-search"></i>
+                    </div>
+                    <input
+                      placeholder="Search"
+                      value={dropdownSearch}
+                      onChange={(e) => setDropdownSearch(e.target.value)}
+                    />
+                  </div>
+                  {toolDropdown.map((item, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="item"
+                        onClick={() => setDropdownShow(false)}
+                      >
+                        {item}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <></>
+              )}
             </CardLayout>
             <CardLayout
               className="networksChart2Root"
