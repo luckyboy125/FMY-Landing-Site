@@ -20,6 +20,7 @@ import "./Comparison.css";
 
 function Comparison() {
   const [searchValue, setSearchValue] = useState("");
+  const tagOverTimeDropdown = ["Last week", "Last week", "Last week", "Custom"];
   const [mockTableData, setMockTableData] = useState([]);
   const [mockLineData1, setMockLineData1] = useState([]);
   const [mockLineData2, setMockLineData2] = useState([]);
@@ -200,6 +201,18 @@ function Comparison() {
                   name="Show"
                   content="Last Week"
                   className="timeTool"
+                  dropRootStyle="timeToolDropdownRoot"
+                  dropRoot={
+                    <>
+                      {tagOverTimeDropdown?.map((item, index) => {
+                        return (
+                          <div key={index} className="item">
+                            {item}
+                          </div>
+                        );
+                      })}
+                    </>
+                  }
                 />
               </>
             }
