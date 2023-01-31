@@ -201,6 +201,16 @@ function Comparison() {
     });
   };
 
+  const handleViewModalClose = () => {
+    console.log("test", query.toString());
+    query.delete("tableviewmodal_show");
+    console.log("test1", query.toString());
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+  };
+
   return (
     <>
       <div className="comparisonRoot">
@@ -375,69 +385,7 @@ function Comparison() {
                     color="#37CE4A"
                   />
                 </td>
-                <td onClick={() => handleViewModal(index)}>
-                  View
-                  <ModalLayout
-                    show={query.get("tableviewmodal_show")}
-                    onClose={() => query.delete("tableviewmodal_show")}
-                    className="tabelViewModalRoot"
-                  >
-                    <ThreeDotBtn className="dotBtn" action={() => {}} />
-                    <img src={closeIcon} alt="closIcon" />
-                    <div
-                      className="mainRoot"
-                      onClick={() => {
-                        console.log("test", query);
-                        query.delete("tableviewmodal_show");
-                        console.log("test1", query);
-                        navigate({
-                          pathname: location.pathname,
-                          search: query.toString(),
-                        });
-                      }}
-                    >
-                      <div className="leftPart">+</div>
-                      <div className="divLinePart"></div>
-                      <div className="rightPart">
-                        <div className="title">General info:</div>
-                        <div className="rightPart1">
-                          <div className="item">Upload date:</div>
-                          <div className="item">Username:</div>
-                        </div>
-                        <div className="casesPart">
-                          <div className="title">Cases</div>
-                          <div className="desRoot">
-                            <img src={person3} alt="avatart" />
-                            <div className="desRoot1">
-                              <div className="desContent">
-                                <div className="des">
-                                  Lorem ipsum dolor sit amet, consectetur
-                                  adipiscing elit. Pellentesque cras felis
-                                  interdum tempor, lobortis egestas volutpat
-                                  consectetur.....
-                                </div>
-                                <div className="desDate">Feb 6, 11:49 AM</div>
-                              </div>
-                            </div>
-                            <ThreeDotBtn className="dotBtn" action={() => {}} />
-                          </div>
-                        </div>
-                        <div className="commentPart">
-                          <div className="title">Comments:</div>
-                          <div className="desRoot">
-                            <ThreeDotBtn className="dotBtn" action={() => {}} />
-                            <textarea
-                              placeholder="Comment here"
-                              value={commentArea}
-                              onChange={(e) => setCommentArea(e.target.value)}
-                            />
-                            <div className="postBtn">Post</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </ModalLayout>
-                </td>
+                <td onClick={() => handleViewModal(index)}>View</td>
                 <td>Link</td>
                 <td>
                   <ThreeDotBtn className="dotBtn" action={() => {}} />
@@ -446,6 +394,54 @@ function Comparison() {
             );
           })}
         />
+        <ModalLayout
+          show={query.get("tableviewmodal_show")}
+          onClose={handleViewModalClose}
+          className="tabelViewModalRoot"
+        >
+          <ThreeDotBtn className="dotBtn" action={() => {}} />
+          <img src={closeIcon} alt="closIcon" onClick={handleViewModalClose} />
+          <div className="mainRoot">
+            <div className="leftPart">+</div>
+            <div className="divLinePart"></div>
+            <div className="rightPart">
+              <div className="title">General info:</div>
+              <div className="rightPart1">
+                <div className="item">Upload date:</div>
+                <div className="item">Username:</div>
+              </div>
+              <div className="casesPart">
+                <div className="title">Cases</div>
+                <div className="desRoot">
+                  <img src={person3} alt="avatart" />
+                  <div className="desRoot1">
+                    <div className="desContent">
+                      <div className="des">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque cras felis interdum tempor, lobortis
+                        egestas volutpat consectetur.....
+                      </div>
+                      <div className="desDate">Feb 6, 11:49 AM</div>
+                    </div>
+                  </div>
+                  <ThreeDotBtn className="dotBtn" action={() => {}} />
+                </div>
+              </div>
+              <div className="commentPart">
+                <div className="title">Comments:</div>
+                <div className="desRoot">
+                  <ThreeDotBtn className="dotBtn" action={() => {}} />
+                  <textarea
+                    placeholder="Comment here"
+                    value={commentArea}
+                    onChange={(e) => setCommentArea(e.target.value)}
+                  />
+                  <div className="postBtn">Post</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ModalLayout>
       </div>
     </>
   );
