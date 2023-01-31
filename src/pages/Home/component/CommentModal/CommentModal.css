@@ -47,6 +47,118 @@
   cursor: pointer;
 }
 
+.commentModalRoot .settingDropdownRoot {
+  position: absolute;
+  top: 37px;
+  right: 99px;
+  width: 152px;
+  background: #8097af;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  z-index: 5;
+}
+
+.commentModalRoot .settingDropdownRoot::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-left-color: #8097af;
+  border-top: 0;
+  border-right: 0;
+  margin-right: -19px;
+}
+
+.commentModalRoot .settingDropdownRoot .item:last-child {
+  border-bottom: none;
+}
+
+.commentModalRoot .settingDropdownRoot .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #0000001a;
+  cursor: pointer;
+}
+
+.commentModalRoot .settingDropdownRoot .item .itemContainer {
+  width: 111px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.commentModalRoot .settingDropdownRoot .item i {
+  font-size: 16px;
+  color: #fff;
+}
+
+.commentModalRoot .deleteModalRoot {
+  width: 489px;
+  padding: 48px 30px 25px;
+  background: #54616f;
+  border-radius: 20px;
+  position: relative;
+}
+
+.commentModalRoot .deleteModalRoot .closeIcon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.commentModalRoot .deleteModalRoot .des {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.commentModalRoot .deleteModalRoot .btnRoot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.commentModalRoot .deleteModalRoot .btnRoot .modalBtn:last-child {
+  margin-right: 0;
+}
+
+.commentModalRoot .deleteModalRoot .btnRoot .modalBtn {
+  width: 113px;
+  height: 34px;
+  background: #75b3ff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .commentModalRoot .headerRoot {
   display: flex;
   justify-content: space-between;

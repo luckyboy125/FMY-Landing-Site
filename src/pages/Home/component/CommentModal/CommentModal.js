@@ -25,23 +25,50 @@ import blogger from "../../../../asset/images/social/blogger.svg";
 import viber from "../../../../asset/images/social/viber.svg";
 import wechat from "../../../../asset/images/social/wechat.svg";
 import "./CommentModal.css";
+import ModalLayout from "../../../../components/ModalLayout/ModalLayout";
 
 function CommentModal({ className, show, onClose, type }) {
   const [commentArea, setCommentArea] = useState("");
+  const [settingDropdownShow, setSettingDropdownShow] = useState(false);
+  const [deleteModalShow, setDeleteModalShow] = useState(false);
   const modalRef = useOutsideClick(onClose);
+  const settingDropdownRef = useOutsideClick(() =>
+    setSettingDropdownShow(false)
+  );
 
   return (
     <>
       <div className={show ? "commentModalLoaderWrapper" : "displayNone"}>
         <div className={`commentModalRoot ${className}`} ref={modalRef}>
-          <ThreeDotBtn className="setting" action={() => {}} />
+          <ThreeDotBtn
+            className="setting"
+            action={() => setSettingDropdownShow(!settingDropdownShow)}
+          />
           <img
             src={CloseIcon}
             className="closeIcon"
             alt="closeIcon"
             onClick={onClose}
           />
-
+          {settingDropdownShow ? (
+            <div className="settingDropdownRoot" ref={settingDropdownRef}>
+              <div className="item">
+                <div className="itemContainer">
+                  Edit <i className="fas fa-pen"></i>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="itemContainer"
+                  onClick={() => setDeleteModalShow(true)}
+                >
+                  Delete <i className="fas fa-trash-alt"></i>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
           {type === card_type.boycott.title ? (
             <>
               <div className="headerRoot">
@@ -202,6 +229,23 @@ function CommentModal({ className, show, onClose, type }) {
           ) : (
             <></>
           )}
+          <ModalLayout
+            show={deleteModalShow}
+            onClose={() => setDeleteModalShow(false)}
+            className="deleteModalRoot"
+          >
+            <img
+              src={CloseIcon}
+              className="closeIcon"
+              alt="closeIcon"
+              onClick={() => setDeleteModalShow(false)}
+            />
+            <div className="des">Are you sure you want to delete the item?</div>
+            <div className="btnRoot">
+              <div className="modalBtn">Yes</div>
+              <div className="modalBtn">No</div>
+            </div>
+          </ModalLayout>
         </div>
       </div>
     </>
