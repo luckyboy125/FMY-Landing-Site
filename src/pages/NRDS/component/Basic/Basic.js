@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { doughnutChartColorData } from "../../../../helpers/chart.helper";
 import PlusButton from "../../../../components/PlusButton/PlusButton";
+import DeleteModal from "../../../../components/DeleteModal/DeleteModal";
 import SearchInput from "../../../../components/SearchInput/SearchInput";
 import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
 import ModalLayout from "../../../../components/ModalLayout/ModalLayout";
@@ -28,6 +29,23 @@ function Basic() {
   const [searchValue, setSearchValue] = useState("");
   const [commentArea, setCommentArea] = useState("");
   const [mockTableData, setMockTableData] = useState([]);
+  const [deleteModalShow, setDeleteModalShow] = useState(false);
+
+  const handleTableDeleteModal = (index) => {
+    query.set("tabledeletemodal_show", index);
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+  };
+
+  const handleTableDeleteModalClose = () => {
+    query.delete("tabledeletemodal_show");
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+  };
 
   const handleViewModal = (index) => {
     query.set("tableviewmodal_show", index);
@@ -265,7 +283,7 @@ function Basic() {
               <td className="fifthTd">
                 <PlusButton
                   content="+ Add to monitoring"
-                  action={() => {}}
+                  action={() => handleTableDeleteModal(index)}
                   className="addBtn"
                 />
                 <div className="des">Active</div>
@@ -322,6 +340,12 @@ function Basic() {
           </div>
         </div>
       </ModalLayout>
+      <DeleteModal
+        className="tableDeleteModal"
+        show={query.get("tabledeletemodal_show")}
+        onClose={handleTableDeleteModalClose}
+        description="Are you sure you want to add this domain to the database?"
+      />
     </>
   );
 }

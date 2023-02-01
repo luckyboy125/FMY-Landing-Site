@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useOutsideClick } from "../../../../hook/DetectOutsideClick";
 import { card_type } from "../../../../helpers/home.helper";
 import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
+import DeleteModal from "../../../../components/DeleteModal/DeleteModal";
 import ModalLayout from "../../../../components/ModalLayout/ModalLayout";
 import person3 from "../../../../asset/person3.svg";
 import w3 from "../../../../asset/images/social/w3.svg";
@@ -231,23 +232,12 @@ function CommentModal({ className, show, onClose, type }) {
         ) : (
           <></>
         )}
-        <ModalLayout
+        <DeleteModal
           show={deleteModalShow}
           onClose={() => setDeleteModalShow(false)}
           className="deleteModalRoot"
-        >
-          <img
-            src={CloseIcon}
-            className="closeIcon"
-            alt="closeIcon"
-            onClick={() => setDeleteModalShow(false)}
-          />
-          <div className="des">Are you sure you want to delete the item?</div>
-          <div className="btnRoot">
-            <div className="modalBtn">Yes</div>
-            <div className="modalBtn">No</div>
-          </div>
-        </ModalLayout>
+          description="Are you sure you want to delete the item?"
+        />
       </ModalLayout>
     </>
   );
