@@ -37,10 +37,77 @@
 .NRDSChart .chartHeader .databasePart .chartTools .chartPeriod {
   margin-right: 30px;
   padding: 7px 20px 7px 20px;
+  position: relative;
 }
 
 .NRDSChart .chartHeader .databasePart .chartTools .chartPeriod i {
   margin-left: 12px !important;
+}
+
+.NRDSChart
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartPeriod
+  .chartPeriodDropdownRoot {
+  position: absolute;
+  top: 63px;
+  right: 20px;
+  background: #8097af;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  padding: 5px 10px;
+}
+
+.NRDSChart
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartPeriod
+  .chartPeriodDropdownRoot::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 13px solid transparent;
+  border-bottom-color: #8097af;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -13px;
+  margin-top: -10px;
+}
+
+.NRDSChart
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartPeriod
+  .chartPeriodDropdownRoot
+  .item:last-child {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.NRDSChart
+  .chartHeader
+  .databasePart
+  .chartTools
+  .chartPeriod
+  .chartPeriodDropdownRoot
+  .item {
+  width: 172px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  padding: 10px 0 16px 5px;
+  border-bottom: 1px solid #ffffff1a;
 }
 
 .NRDSChart .chartHeader .databasePart .chartTools .chartCompare {
@@ -220,6 +287,53 @@
 
 .nrdsTableRoot .nrdsTableSearchTool {
   margin-right: 18px;
+}
+
+.nrdsTableRoot .nrdsTableSearchTool .nrdsTableSearchToolDropdown {
+  position: absolute;
+  top: 63px;
+  right: 20px;
+  background: #8097af;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  padding: 5px 10px;
+}
+
+.nrdsTableRoot .nrdsTableSearchTool .nrdsTableSearchToolDropdown ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 13px solid transparent;
+  border-bottom-color: #8097af;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -13px;
+  margin-top: -10px;
+}
+
+.nrdsTableRoot
+  .nrdsTableSearchTool
+  .nrdsTableSearchToolDropdown
+  .item:last-child {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.nrdsTableRoot .nrdsTableSearchTool .nrdsTableSearchToolDropdown .item {
+  width: 172px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  padding: 10px 0 16px 5px;
+  border-bottom: 1px solid #ffffff1a;
 }
 
 .nrdsTableRoot .firstTd {

@@ -10,10 +10,8 @@ import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChar
 import "./Basic.css";
 
 function Basic() {
-  const lineChartData = {
-    label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    data: [500, 600, 700, 800, 900, 1000, 1200],
-  };
+  const chartPeriodDropdown = ["Last week", "Last week", "Last week", "Custom"];
+  const nrdsTableSearchToolDropdown = ["Lorem", "Lorem", "Lorem", "Lorem"];
 
   const doughnutChartData = {
     label: ["a", "b", "c", "d", "e", "f"],
@@ -47,6 +45,18 @@ function Basic() {
                 name="Show"
                 content="Last Week"
                 className="chartPeriod"
+                dropRootStyle="chartPeriodDropdownRoot"
+                dropRoot={
+                  <>
+                    {chartPeriodDropdown?.map((item, index) => {
+                      return (
+                        <div key={index} className="item">
+                          {item}
+                        </div>
+                      );
+                    })}
+                  </>
+                }
               />
             </div>
           </div>
@@ -183,7 +193,22 @@ function Basic() {
                 inputValue={searchValue}
                 className="nrdsTableSearchTool"
               />
-              <FilterDropdown className="nrdsTableSearchTool" type="filter" />
+              <FilterDropdown
+                className="nrdsTableSearchTool"
+                type="filter"
+                dropRootStyle="nrdsTableSearchToolDropdown"
+                dropRoot={
+                  <>
+                    {nrdsTableSearchToolDropdown?.map((item, index) => {
+                      return (
+                        <div key={index} className="item">
+                          {item}
+                        </div>
+                      );
+                    })}
+                  </>
+                }
+              />
               <FilterDropdown className="nrdsTableSearchTool" />
             </div>
           </div>

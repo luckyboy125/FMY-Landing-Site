@@ -11,6 +11,7 @@
   line-height: 29px;
   color: #ffffff;
   cursor: pointer;
+  position: relative;
 }
 
 .filterDropdownRoot .inputIcon {
