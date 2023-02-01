@@ -33,6 +33,7 @@ function Login({ onSubmit }) {
           <div className="title">Sign in</div>
           <div className="inputRoot">
             <input
+              type="text"
               placeholder="Enter your e-mail address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}

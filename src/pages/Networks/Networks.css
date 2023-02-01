@@ -670,3 +670,41 @@
   line-height: 24px;
   color: #ffffff;
 }
+
+.networksRoot .newNetworkModal {
+  width: 798px;
+  height: 231px;
+  background: linear-gradient(180deg, #343d49 0%, #336497 100%);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  position: relative;
+  padding: 30px;
+}
+
+.networksRoot .newNetworkModal .closeIcon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.networksRoot .newNetworkModal .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.networksRoot .newNetworkModal .uploadBtn {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #75b3ff;
+  cursor: pointer;
+}
