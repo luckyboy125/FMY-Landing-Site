@@ -14,11 +14,11 @@ import CustomizeLineChart from "../../../../components/CustomizeLineChart/Custom
 import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
 import person3 from "../../../../asset/person3.svg";
 import csv from "../../../../asset/images/csv_icon.svg";
+import closeIcon from "../../../../asset/images/close_icon.svg";
 import refresh from "../../../../asset/images/refresh_icon.svg";
 import youtube from "../../../../asset/images/social/youtube.svg";
 import more_tool from "../../../../asset/images/more_tool_icon.svg";
 import more_detail from "../../../../asset/images/more_detail_icon.svg";
-import closeIcon from "../../../../asset/images/close_icon.svg";
 import "./Comparison.css";
 
 function Comparison() {

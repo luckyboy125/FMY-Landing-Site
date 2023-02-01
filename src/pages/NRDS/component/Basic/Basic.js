@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { doughnutChartColorData } from "../../../../helpers/chart.helper";
 import PlusButton from "../../../../components/PlusButton/PlusButton";
 import SearchInput from "../../../../components/SearchInput/SearchInput";
+import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
+import ModalLayout from "../../../../components/ModalLayout/ModalLayout";
 import ActionButton from "../../../../components/ActionButton/ActionButton";
 import CustomizeTable from "../../../../components/CustomizeTable/CustomizeTable";
 import FilterDropdown from "../../../../components/FilterDropdown/FilterDropdown";
 import CustomizeLineChart from "../../../../components/CustomizeLineChart/CustomizeLineChart";
 import CustomizeDoughnutChart from "../../../../components/CustomizeDoughnutChart/CustomizeDoughnutChart";
+import person3 from "../../../../asset/person3.svg";
+import closeIcon from "../../../../asset/images/close_icon.svg";
 import "./Basic.css";
 
 function Basic() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const query = new URLSearchParams(location.search);
   const chartPeriodDropdown = ["Last week", "Last week", "Last week", "Custom"];
   const nrdsTableSearchToolDropdown = ["Lorem", "Lorem", "Lorem", "Lorem"];
 
@@ -18,7 +26,24 @@ function Basic() {
     data: [500, 600, 700, 800, 900, 1000, 1200],
   };
   const [searchValue, setSearchValue] = useState("");
+  const [commentArea, setCommentArea] = useState("");
   const [mockTableData, setMockTableData] = useState([]);
+
+  const handleViewModal = (index) => {
+    query.set("tableviewmodal_show", index);
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+  };
+
+  const handleViewModalClose = () => {
+    query.delete("tableviewmodal_show");
+    navigate({
+      pathname: location.pathname,
+      search: query.toString(),
+    });
+  };
 
   useEffect(() => {
     for (let i = 0; i < 5; i++) {
@@ -231,7 +256,9 @@ function Basic() {
         body={mockTableData?.map((item, index) => {
           return (
             <tr key={index}>
-              <td className="firstTd">{item.domain}</td>
+              <td className="firstTd" onClick={() => handleViewModal(index)}>
+                {item.domain}
+              </td>
               <td className="secondTd">{item.addedDate}</td>
               <td className="thirdTd">{item.ipaddress}</td>
               <td className="fourthTd">{item.keyword}</td>
@@ -247,6 +274,54 @@ function Basic() {
           );
         })}
       />
+      <ModalLayout
+        show={query.get("tableviewmodal_show")}
+        onClose={handleViewModalClose}
+        className="tabelDomainModalRoot"
+      >
+        <ThreeDotBtn className="dotBtn" action={() => {}} />
+        <img src={closeIcon} alt="closIcon" onClick={handleViewModalClose} />
+        <div className="mainRoot">
+          <div className="leftPart">+</div>
+          <div className="divLinePart"></div>
+          <div className="rightPart">
+            <div className="title">General info:</div>
+            <div className="rightPart1">
+              <div className="item">Upload date:</div>
+              <div className="item">Username:</div>
+            </div>
+            <div className="casesPart">
+              <div className="title">Cases</div>
+              <div className="desRoot">
+                <img src={person3} alt="avatart" />
+                <div className="desRoot1">
+                  <div className="desContent">
+                    <div className="des">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Pellentesque cras felis interdum tempor, lobortis egestas
+                      volutpat consectetur.....
+                    </div>
+                    <div className="desDate">Feb 6, 11:49 AM</div>
+                  </div>
+                </div>
+                <ThreeDotBtn className="dotBtn" action={() => {}} />
+              </div>
+            </div>
+            <div className="commentPart">
+              <div className="title">Comments:</div>
+              <div className="desRoot">
+                <ThreeDotBtn className="dotBtn" action={() => {}} />
+                <textarea
+                  placeholder="Comment here"
+                  value={commentArea}
+                  onChange={(e) => setCommentArea(e.target.value)}
+                />
+                <div className="postBtn">Post</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ModalLayout>
     </>
   );
 }

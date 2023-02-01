@@ -340,6 +340,7 @@
   font-weight: 500;
   font-size: 22px;
   line-height: 18px;
+  cursor: pointer;
   color: #75b3ff;
 }
 
@@ -389,4 +390,268 @@
   text-align: center;
   text-decoration-line: underline;
   color: #75b3ff;
+}
+
+.tabelDomainModalRoot {
+  width: 1500px;
+  background: linear-gradient(180deg, #343d49 0%, #336497 100%);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 30px 30px 20px;
+}
+
+.tabelDomainModalRoot > img {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 2;
+}
+
+.tabelDomainModalRoot .dotBtn {
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  z-index: 2;
+}
+
+.tabelDomainModalRoot .dotBtn .dot {
+  background: #fff !important;
+  min-width: 5px;
+  width: 5px;
+  height: 5px;
+  min-height: 5px;
+}
+
+.tabelDomainModalRoot .mainRoot {
+  display: flex;
+  align-items: flex-end;
+}
+
+.tabelDomainModalRoot .mainRoot .leftPart {
+  width: 650px;
+  min-width: 650px;
+  height: 650px;
+  border: 3px dashed #ffffff;
+  border-radius: 40px;
+  margin: 0 50px 37px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.tabelDomainModalRoot .mainRoot .divLinePart {
+  width: 2px;
+  height: 688px;
+  background: #ffffff33;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart {
+  padding-left: 30px;
+  flex-grow: 1;
+  text-align: left;
+  position: relative;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .rightPart1 {
+  display: flex;
+  align-items: center;
+  margin-top: 34px;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .rightPart1 .item {
+  width: 323px;
+  display: flex;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .casesPart {
+  margin-top: 76px;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .casesPart .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px 20px 10px;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot > img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot .desRoot1 {
+  width: 506px;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot .desRoot1 .des {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.tabelDomainModalRoot
+  .mainRoot
+  .rightPart
+  .casesPart
+  .desRoot
+  .desRoot1
+  .desDate {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 33px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 19px;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot .dotBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .commentPart {
+  margin-top: 78px;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .commentPart .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot {
+  margin-top: 28px;
+  height: 297px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 30px 33px;
+  position: relative;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot .dotBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot .dotBtn .dot {
+  width: 5px;
+  min-width: 5px;
+  height: 5px;
+  min-height: 5px;
+  background: #fff !important;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot textarea {
+  width: 550px;
+  height: 110px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0 !important;
+  resize: none;
+}
+.tabelDomainModalRoot
+  .mainRoot
+  .rightPart
+  .commentPart
+  .desRoot
+  textarea::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.tabelDomainModalRoot
+  .mainRoot
+  .rightPart
+  .commentPart
+  .desRoot
+  textarea:focus-visible {
+  outline: none;
+}
+.tabelDomainModalRoot
+  .mainRoot
+  .rightPart
+  .commentPart
+  .desRoot
+  textarea:focus {
+  outline: none;
+}
+
+.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot .postBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 81px;
+  height: 34px;
+  background: #75b3ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
 }
