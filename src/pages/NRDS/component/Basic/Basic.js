@@ -209,7 +209,21 @@ function Basic() {
                   </>
                 }
               />
-              <FilterDropdown className="nrdsTableSearchTool" />
+              <FilterDropdown
+                className="nrdsTableSearchTool"
+                dropRootStyle="nrdsTableSearchToolDropdown"
+                dropRoot={
+                  <>
+                    {nrdsTableSearchToolDropdown?.map((item, index) => {
+                      return (
+                        <div key={index} className="item">
+                          {item}
+                        </div>
+                      );
+                    })}
+                  </>
+                }
+              />
             </div>
           </div>
         }
