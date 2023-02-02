@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { doughnutChartColorData } from "../../helpers/chart.helper";
 import Stats from "./component/Stats/Stats";
 import Sentiment from "./component/Sentiment/Sentiment";
@@ -9,9 +10,47 @@ import handImage from "../../asset/images/hand.svg";
 import "./WebAnalysisItem.css";
 
 function WebAnalysisItems() {
+  const [mockLineData, setMockLineData] = useState([
+    100,
+    120,
+    124,
+    300,
+    145,
+    50,
+  ]);
+
+  const [mockDoughnutData, setMockDoughnutData] = useState([
+    100,
+    120,
+    124,
+    300,
+    145,
+    50,
+  ]);
+
+  useEffect(() => {
+    setInterval(() => {
+      setMockLineData([
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+      ]);
+      setMockDoughnutData([
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+        Math.floor(Math.random() * 500 + 900),
+      ]);
+    }, 3000);
+  }, []);
   const doughnutChartData = {
     label: ["first", "second", "third", "fourth", "fifth", "sixth"],
-    data: [100, 120, 124, 300, 145, 50],
   };
 
   const datePeriod = ["Last week", "Last week", "Last week", "Custom"];
@@ -126,7 +165,7 @@ function WebAnalysisItems() {
                 data={[
                   {
                     line_color: ["#6AB4FF", "#C2A6FF"],
-                    value: [1000, 1232, 1322, 900, 1488, 800, 1100],
+                    value: mockLineData,
                     fill: true,
                   },
                 ]}
@@ -158,7 +197,7 @@ function WebAnalysisItems() {
             </div>
             <div className="doughnutChartRoot">
               <CustomizeDoughnutChart
-                data={doughnutChartData.data}
+                data={mockDoughnutData}
                 label={doughnutChartData.label}
                 colorInfo={doughnutChartColorData}
                 showNumber

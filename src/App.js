@@ -34,7 +34,7 @@ export const staticHeight = 1250;
 
 function App() {
   //get current screen dimentions
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const { height, width } = useWindowDimensions();
 
   //deal with every change in dimentions to keep the screen ratio
