@@ -1,0 +1,65 @@
+/* BubbleChart: layout containment and GPU-friendly updates */
+.bubble-chart {
+  display: block;
+  contain: layout style;
+}
+
+.bubble-chart__bubbles {
+  contain: layout;
+}
+
+.bubble-chart__bubble {
+  will-change: transform;
+  pointer-events: bounding-box;
+}
+
+.bubble-chart__bubble--clickable {
+  cursor: pointer;
+  filter: drop-shadow(rgba(117, 179, 255, 1) 0px 0px 10px);
+}
+
+.bubble-chart__circle {
+  vector-effect: non-scaling-stroke;
+}
+
+/* Size tier: small (default) */
+.bubble-chart__bubble--size-small .bubble-chart__circle {
+  fill: #fff;
+}
+
+.bubble-chart__bubble--size-small .bubble-chart__label {
+  fill: #000;
+  font-size: 16px;
+}
+
+/* Size tier: medium */
+.bubble-chart__bubble--size-medium .bubble-chart__circle {
+  fill: url(#smartPurpleGradient);
+}
+
+.bubble-chart__bubble--size-medium .bubble-chart__label {
+  fill: #fff;
+  font-size: 23px;
+}
+
+/* Size tier: large */
+.bubble-chart__bubble--size-large .bubble-chart__circle {
+  fill: url(#smartBlueGradient);
+}
+
+.bubble-chart__bubble--size-large .bubble-chart__label {
+  fill: #fff;
+  font-size: 30px;
+}
+
+/* Shared label typography */
+.bubble-chart__label {
+  font-weight: 400;
+  font-family: Helvetica, sans-serif;
+  text-anchor: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  dominant-baseline: central;
+  pointer-events: none;
+}
