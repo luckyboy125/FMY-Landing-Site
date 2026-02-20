@@ -56,38 +56,38 @@ function Database() {
 
   const handleTab = useCallback(
     (tab: string) => {
-      query.set('database_tab', tab);
+      const next = new URLSearchParams(location.search);
+      next.set('database_tab', tab);
       navigate({
         pathname: location.pathname,
-        search: query.toString()
+        search: next.toString()
       });
     },
-    [location.pathname, navigate, query]
+    [location.pathname, navigate, location.search]
   );
 
   const handleSearchShow = useCallback(() => {
     setAdvancedToolBtn(false);
-    query.set(
+    const next = new URLSearchParams(location.search);
+    const panel = next.get('search_panel');
+    next.set(
       'search_panel',
-      query.get('search_panel') === null
-        ? '1'
-        : query.get('search_panel') !== '0'
-          ? '0'
-          : '1'
+      panel === null ? '1' : panel !== '0' ? '0' : '1'
     );
     navigate({
       pathname: location.pathname,
-      search: query.toString()
+      search: next.toString()
     });
-  }, [location.pathname, navigate, query]);
+  }, [location.pathname, navigate, location.search]);
 
   const handleAdvancedShow = useCallback(() => {
-    query.set('search_panel', '2');
+    const next = new URLSearchParams(location.search);
+    next.set('search_panel', '2');
     navigate({
       pathname: location.pathname,
-      search: query.toString()
+      search: next.toString()
     });
-  }, [location.pathname, navigate, query]);
+  }, [location.pathname, navigate, location.search]);
 
   useEffect(() => {
     for (let i = 0; i < 5; i++) {

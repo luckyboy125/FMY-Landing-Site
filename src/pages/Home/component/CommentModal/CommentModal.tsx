@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useOutsideClick } from '../../../../hook/DetectOutsideClick';
-import { card_type, type CardTypeKey } from '../../../../helpers/home.helper';
+import { card_type } from '../../../../helpers/home.helper';
 import ThreeDotBtn from '../../../../components/ThreeDotBtn/ThreeDotBtn';
 import DeleteModal from '../../../../components/DeleteModal/DeleteModal';
 import ModalLayout from '../../../../components/ModalLayout/ModalLayout';

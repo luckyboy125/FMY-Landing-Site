@@ -128,7 +128,7 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
     });
 
     simulation.on('end', () => {
-      g.select<SVGTextElement, SimNode>('text').call(
+      g.select<SVGTextElement>('text').call(
         ellipsizeText,
         textMaxWidth
       );

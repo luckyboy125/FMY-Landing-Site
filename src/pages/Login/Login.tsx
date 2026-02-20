@@ -64,7 +64,7 @@ function Login({ onSubmit }: LoginProps) {
         </div>
         <div className="termLetter">
           By entering your e-mail address you confirm that you agree with our{' '}
-          <a href="#">Terms of Service</a>
+          <a href="/terms-of-service">Terms of Service</a>
         </div>
       </div>
     </div>

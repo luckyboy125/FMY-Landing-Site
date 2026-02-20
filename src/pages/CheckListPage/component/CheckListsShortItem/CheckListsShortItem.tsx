@@ -9,6 +9,7 @@ export interface CheckListsShortItemProps {
   title: string;
   avatar: string;
   user: string;
+  type?: string;
   click?: () => void;
 }
 
@@ -17,6 +18,7 @@ function CheckListsShortItem({
   title,
   avatar,
   user,
+  type,
   click
 }: CheckListsShortItemProps) {
   const [checkStatus, setCheckStatus] = useState(false);

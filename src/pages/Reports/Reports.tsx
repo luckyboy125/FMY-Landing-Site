@@ -13,13 +13,14 @@ function Reports() {
 
   const handleTab = useCallback(
     (tab: string) => {
-      query.set('reports_tab', tab);
+      const next = new URLSearchParams(location.search);
+      next.set('reports_tab', tab);
       navigate({
         pathname: location.pathname,
-        search: query.toString()
+        search: next.toString()
       });
     },
-    [navigate, location.pathname, query]
+    [navigate, location.pathname, location.search]
   );
 
   const currentTab =

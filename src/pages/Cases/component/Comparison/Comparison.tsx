@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Vega } from 'react-vega';
+import type { VisualizationSpec } from 'vega-embed';
 import { comparisonDoughnutChartColorData } from '../../../../helpers/chart.helper';
 import ColorBtn from '../../../../components/ColorBtn/ColorBtn';
 import CardLayout from '../../../../components/CardLayout/CardLayout';
@@ -63,7 +64,7 @@ const WordCloudOption = {
       ],
       transform: [
         {
-          type: 'countpattern',
+          type: 'countpattern' as const,
           field: 'data',
           case: 'upper',
           pattern: "[\\w']{3,}",
@@ -71,12 +72,12 @@ const WordCloudOption = {
             "(i|me|my|myself|we|us|our|ours|ourselves|you|your|yours|yourself|yourselves|he|him|his|himself|she|her|hers|herself|it|its|itself|they|them|their|theirs|themselves|what|which|who|whom|whose|this|that|these|those|am|is|are|was|were|be|been|being|have|has|had|having|do|does|did|doing|will|would|should|can|could|ought|i'm|you're|he's|she's|it's|we're|they're|i've|you've|we've|they've|i'd|you'd|he'd|she'd|we'd|they'd|i'll|you'll|he'll|she'll|we'll|they'll|isn't|aren't|wasn't|weren't|hasn't|haven't|hadn't|doesn't|don't|didn't|won't|wouldn't|shan't|shouldn't|can't|cannot|couldn't|mustn't|let's|that's|who's|what's|here's|there's|when's|where's|why's|how's|a|an|the|and|but|if|or|because|as|until|while|of|at|by|for|with|about|against|between|into|through|during|before|after|above|below|to|from|up|upon|down|in|out|on|off|over|under|again|further|then|once|here|there|when|where|why|how|all|any|both|each|few|more|most|other|some|such|no|nor|not|only|own|same|so|than|too|very|say|says|said|shall)"
         },
         {
-          type: 'formula',
+          type: 'formula' as const,
           as: 'angle',
           expr: '[-90, 0, 90][~~(random() * 3)]'
         },
         {
-          type: 'formula',
+          type: 'formula' as const,
           as: 'weight',
           expr: "if(datum.text=='VEGA', 600, 300)"
         }
@@ -86,7 +87,7 @@ const WordCloudOption = {
   scales: [
     {
       name: 'color',
-      type: 'ordinal',
+      type: 'ordinal' as const,
       domain: { data: 'table', field: 'text' },
       range: [
         '#75B3FF',
@@ -101,7 +102,7 @@ const WordCloudOption = {
   ],
   marks: [
     {
-      type: 'text',
+      type: 'text' as const,
       from: { data: 'table' },
       encode: {
         enter: {
@@ -115,8 +116,8 @@ const WordCloudOption = {
       },
       transform: [
         {
-          type: 'wordcloud',
-          size: [872, 351],
+          type: 'wordcloud' as const,
+          size: [872, 351] as [number, number],
           text: { field: 'text' },
           rotate: { field: 'datum.angle' },
           font: 'Helvetica Neue, Arial',
@@ -146,22 +147,24 @@ function Comparison() {
 
   const handleViewModal = useCallback(
     (index: number) => {
-      query.set('tableviewmodal_show', String(index));
+      const next = new URLSearchParams(location.search);
+      next.set('tableviewmodal_show', String(index));
       navigate({
         pathname: location.pathname,
-        search: query.toString()
+        search: next.toString()
       });
     },
-    [location.pathname, navigate, query]
+    [location.pathname, navigate, location.search]
   );
 
   const handleViewModalClose = useCallback(() => {
-    query.delete('tableviewmodal_show');
+    const next = new URLSearchParams(location.search);
+    next.delete('tableviewmodal_show');
     navigate({
       pathname: location.pathname,
-      search: query.toString()
+      search: next.toString()
     });
-  }, [location.pathname, navigate, query]);
+  }, [location.pathname, navigate, location.search]);
 
   useEffect(() => {
     for (let i = 0; i < 5; i++) {
@@ -301,7 +304,7 @@ function Comparison() {
             header={<div className="headerTitle">Word Cloud - Government</div>}
             contentStyle="wordCloud"
           >
-            <Vega spec={WordCloudOption} actions={false} />
+            <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
           </CardLayout>
           <CardLayout
             className="servicesWordCloud"
@@ -309,7 +312,7 @@ function Comparison() {
             header={<div className="headerTitle">Word Cloud - Services</div>}
             contentStyle="wordCloud"
           >
-            <Vega spec={WordCloudOption} actions={false} />
+            <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
           </CardLayout>
         </div>
         <div className="comparisonRoot3">
@@ -319,7 +322,7 @@ function Comparison() {
             header={<div className="headerTitle">Word Cloud - Army</div>}
             contentStyle="wordCloud"
           >
-            <Vega spec={WordCloudOption} actions={false} />
+            <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
           </CardLayout>
         </div>
         <CustomizeTable

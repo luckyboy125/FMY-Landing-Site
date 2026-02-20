@@ -38,6 +38,12 @@ function SearchInput({
       className={`searchInputRoot ${className}`}
       style={{ cursor: onlyClick ? 'pointer' : undefined }}
       onClick={handleClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleClick();
+        }
+      }}
       ref={searchInputRef}
       role="button"
       tabIndex={0}
