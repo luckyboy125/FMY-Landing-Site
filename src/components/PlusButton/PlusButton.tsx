@@ -11,7 +11,7 @@ function PlusButton({
   className = '',
   action,
   content
-}: PlusButtonProps): JSX.Element {
+}: PlusButtonProps) {
   const handleClick = useCallback(() => {
     action();
   }, [action]);

@@ -17,7 +17,7 @@ function ColorBtn({
   width,
   name,
   arrowShow = false,
-}: ColorBtnProps): JSX.Element {
+}: ColorBtnProps) {
   return (
     <div
       className={`colorBtn ${className}`}

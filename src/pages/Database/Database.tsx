@@ -28,7 +28,7 @@ interface DatabaseTableRow {
   view: { alert: boolean };
 }
 
-function Database(): JSX.Element {
+function Database() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);

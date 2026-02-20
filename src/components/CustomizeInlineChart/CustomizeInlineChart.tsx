@@ -11,7 +11,7 @@ const WEEK_DATA = [
   "Sunday",
 ];
 
-function CustomizeInlineChart(): JSX.Element {
+function CustomizeInlineChart() {
   const [data, setData] = useState([
     "Monday",
     "Tuesday",

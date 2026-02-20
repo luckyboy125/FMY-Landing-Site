@@ -30,7 +30,7 @@ const CASE_SELECT = [
   'Lorem ipsum'
 ];
 
-function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
+function NewUpdateModal({ show, onClose }: NewUpdateModalProps) {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);

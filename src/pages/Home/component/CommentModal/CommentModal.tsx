@@ -40,7 +40,7 @@ function CommentModal({
   show,
   onClose,
   type
-}: CommentModalProps): JSX.Element {
+}: CommentModalProps) {
   const [commentArea, setCommentArea] = useState('');
   const [settingDropdownShow, setSettingDropdownShow] = useState(false);
   const [deleteModalShow, setDeleteModalShow] = useState(false);

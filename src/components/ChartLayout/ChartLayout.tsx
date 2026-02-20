@@ -13,7 +13,7 @@ function ChartLayout({
   button,
   className = "",
   children,
-}: ChartLayoutProps): JSX.Element {
+}: ChartLayoutProps) {
   return (
     <div className={`chartLayout ${className}`}>
       <div className="chartLayoutHeaderPart">

@@ -8,7 +8,7 @@ export interface LoginProps {
   onSubmit: () => void;
 }
 
-function Login({ onSubmit }: LoginProps): JSX.Element {
+function Login({ onSubmit }: LoginProps) {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
 

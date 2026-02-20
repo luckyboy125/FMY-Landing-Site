@@ -6,7 +6,7 @@ import './Reports.css';
 
 const TAB_DATA = ['Lorem', 'Lorem'];
 
-function Reports(): JSX.Element {
+function Reports() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);

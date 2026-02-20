@@ -9,7 +9,7 @@ export interface GovernmentCardProps {
   imgRoot: React.ReactNode;
 }
 
-function GovernmentCard({ className, imgRoot }: GovernmentCardProps): JSX.Element {
+function GovernmentCard({ className, imgRoot }: GovernmentCardProps) {
   return (
     <div className={`governmentCardRoot ${className ?? ""}`}>
       {imgRoot}

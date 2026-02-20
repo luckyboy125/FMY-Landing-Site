@@ -19,7 +19,7 @@ function TaskLongItem({
   dropdown,
   click,
   date
-}: TaskLongItemProps): JSX.Element {
+}: TaskLongItemProps) {
   const options: Intl.DateTimeFormatOptions = {
     weekday: 'long',
     year: 'numeric',

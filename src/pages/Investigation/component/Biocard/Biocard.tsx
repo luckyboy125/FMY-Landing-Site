@@ -14,7 +14,7 @@ function Biocard({
   count,
   des,
   countDes
-}: BiocardProps): JSX.Element {
+}: BiocardProps) {
   return (
     <>
       <div className={`${className ?? ''} biocardRoot`}>

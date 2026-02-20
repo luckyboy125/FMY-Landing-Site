@@ -20,7 +20,7 @@ function ActionButton({
   children,
   dropRoot,
   dropRootStyle = ''
-}: ActionButtonProps): JSX.Element {
+}: ActionButtonProps) {
   const [dropShow, setDropShow] = useState(false);
   const dropDownRootRef = useOutsideClick<HTMLDivElement>(() =>
     setDropShow(false)

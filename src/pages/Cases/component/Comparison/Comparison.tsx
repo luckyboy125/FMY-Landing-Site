@@ -130,7 +130,7 @@ const WordCloudOption = {
   ]
 };
 
-function Comparison(): JSX.Element {
+function Comparison() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);

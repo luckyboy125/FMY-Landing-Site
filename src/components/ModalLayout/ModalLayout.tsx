@@ -13,7 +13,7 @@ function ModalLayout({
   show,
   onClose,
   children
-}: ModalLayoutProps): JSX.Element {
+}: ModalLayoutProps) {
   const modalRef = useOutsideClick<HTMLDivElement>(onClose);
 
   if (!show) return <></>;

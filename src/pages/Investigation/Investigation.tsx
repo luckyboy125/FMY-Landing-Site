@@ -93,7 +93,7 @@ const WordCloudOption = {
   ]
 };
 
-function Investigation(): JSX.Element {
+function Investigation() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);

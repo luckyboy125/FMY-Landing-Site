@@ -9,7 +9,7 @@ import CustomizeDoughnutChart from '../../components/CustomizeDoughnutChart/Cust
 import handImage from '../../asset/images/hand.svg';
 import './WebAnalysisItem.css';
 
-function WebAnalysisItems(): JSX.Element {
+function WebAnalysisItems() {
   const [mockLineData, setMockLineData] = useState<number[]>([
     100, 120, 124, 300, 145, 50
   ]);

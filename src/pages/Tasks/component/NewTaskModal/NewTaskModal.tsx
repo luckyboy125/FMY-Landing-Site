@@ -16,7 +16,7 @@ function NewTaskModal({
   className,
   show,
   onClose
-}: NewTaskModalProps): JSX.Element {
+}: NewTaskModalProps) {
   const [title, setTitle] = useState('');
   const [addContentShow, setAddContentShow] = useState(false);
 

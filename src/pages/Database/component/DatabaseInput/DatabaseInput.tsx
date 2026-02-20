@@ -14,7 +14,7 @@ function DatabaseInput({
   action,
   className,
   tool
-}: DatabaseInputProps): JSX.Element {
+}: DatabaseInputProps) {
   return (
     <div className={`${className ?? ''} databaseInputRoot`}>
       <input

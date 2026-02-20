@@ -15,7 +15,7 @@ function CardLayout({
   header,
   headerStyle = "",
   contentStyle = "",
-}: CardLayoutProps): JSX.Element {
+}: CardLayoutProps) {
   return (
     <div className={`${className} cardLayoutRoot`}>
       <div className={`${headerStyle} headerRoot`}>{header}</div>

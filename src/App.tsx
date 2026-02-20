@@ -26,7 +26,7 @@ import './asset/fonts/helvetica-light-587ebe5a59211.ttf';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App(): JSX.Element {
+function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { height, width } = useWindowDimensions();
 

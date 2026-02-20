@@ -44,7 +44,7 @@ const RAW_DATA: BubbleDatum[] = [
   { category: 'Ipsum', amount: 0.81 }
 ];
 
-function Cases(): JSX.Element {
+function Cases() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);

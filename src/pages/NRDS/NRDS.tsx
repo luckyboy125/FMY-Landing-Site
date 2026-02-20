@@ -5,7 +5,7 @@ import ActionTab from '../../components/ActionTab/ActionTab';
 import PlusButton from '../../components/PlusButton/PlusButton';
 import './NRDS.css';
 
-function NRDS(): JSX.Element {
+function NRDS() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);

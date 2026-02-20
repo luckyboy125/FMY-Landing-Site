@@ -8,7 +8,7 @@ export interface ActionTabProps {
   select?: string;
 }
 
-function ActionTab({ className = "", data, onSelect, select }: ActionTabProps): JSX.Element {
+function ActionTab({ className = "", data, onSelect, select }: ActionTabProps) {
   const handleClick = useCallback(
     (item: string) => {
       onSelect(item);

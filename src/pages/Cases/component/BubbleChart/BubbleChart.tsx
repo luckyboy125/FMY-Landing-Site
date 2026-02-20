@@ -53,7 +53,7 @@ function ellipsizeText(
 
 interface SimNode extends BubbleDatum, d3.SimulationNodeDatum {}
 
-function BubbleChart({ data, width, height }: BubbleChartProps): JSX.Element {
+function BubbleChart({ data, width, height }: BubbleChartProps) {
   const navigate = useNavigate();
   const containerRef = useRef<SVGGElement>(null);
   const simulationRef = useRef<d3.Simulation<SimNode, undefined> | null>(null);

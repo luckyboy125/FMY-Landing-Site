@@ -16,7 +16,7 @@ function NewCheckListsModal({
   className,
   show,
   onClose
-}: NewCheckListsModalProps): JSX.Element {
+}: NewCheckListsModalProps) {
   const [title, setTitle] = useState('');
   const [addContentShow, setAddContentShow] = useState(false);
 

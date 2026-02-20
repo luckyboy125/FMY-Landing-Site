@@ -17,7 +17,7 @@ import ChecklistsLogo from '../../asset/sidebar/ChecklistsLogo.svg';
 import InvestigationLogo from '../../asset/sidebar/InvestigationLogo.svg';
 import './SideTaskBar.css';
 
-function SideTaskBar(): JSX.Element {
+function SideTaskBar() {
   const location = useLocation();
   const navigate = useNavigate();
 

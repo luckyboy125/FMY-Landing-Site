@@ -18,7 +18,7 @@ function CheckListsShortItem({
   avatar,
   user,
   click
-}: CheckListsShortItemProps): JSX.Element {
+}: CheckListsShortItemProps) {
   const [checkStatus, setCheckStatus] = useState(false);
 
   const handleCheck = useCallback(() => {

@@ -22,7 +22,7 @@ interface BasicTableRow {
   keyword: string;
 }
 
-function Basic(): JSX.Element {
+function Basic() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);

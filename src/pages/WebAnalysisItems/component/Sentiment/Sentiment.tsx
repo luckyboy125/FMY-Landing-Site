@@ -8,7 +8,7 @@ export interface SentimentProps {
   value: number;
 }
 
-function Sentiment({ value }: SentimentProps): JSX.Element {
+function Sentiment({ value }: SentimentProps) {
   const compare = ['This Week', 'This Month', 'This Year'];
   const option = {
     series: [

@@ -22,7 +22,7 @@ function CustomizeLineChart({
   label,
   width,
   height,
-}: CustomizeLineChartProps): JSX.Element {
+}: CustomizeLineChartProps) {
   const [lineColors, setLineColors] = useState<
     CanvasGradient | (CanvasGradient | null)[]
   >([]);

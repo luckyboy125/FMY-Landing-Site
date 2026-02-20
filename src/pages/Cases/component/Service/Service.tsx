@@ -129,7 +129,7 @@ const WordCloudOption = {
   ]
 };
 
-function Service(): JSX.Element {
+function Service() {
   const [searchValue, setSearchValue] = useState('');
   const [mockTableData, setMockTableData] = useState<ServiceTableRow[]>([]);
   const [mockLineData, setMockLineData] = useState<number[]>([]);

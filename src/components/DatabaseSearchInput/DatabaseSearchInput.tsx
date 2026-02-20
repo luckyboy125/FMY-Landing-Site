@@ -9,7 +9,7 @@ export interface DatabaseSearchInputProps {
 
 function DatabaseSearchInput({
   className = ''
-}: DatabaseSearchInputProps): JSX.Element {
+}: DatabaseSearchInputProps) {
   const [searchValue, setSearchValue] = useState('');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {

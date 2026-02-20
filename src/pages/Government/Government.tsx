@@ -99,7 +99,7 @@ const WordCloudOption = {
   ]
 };
 
-function Government(): JSX.Element {
+function Government() {
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState('');
 

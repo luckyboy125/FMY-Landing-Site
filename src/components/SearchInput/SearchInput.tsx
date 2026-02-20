@@ -19,7 +19,7 @@ function SearchInput({
   inputWith = false,
   onlyClick = false,
   clickAction
-}: SearchInputProps): JSX.Element {
+}: SearchInputProps) {
   const [initStatus, setInitStatus] = useState(true);
   const searchInputRef = useOutsideClick<HTMLDivElement>(() =>
     setInitStatus(true)

@@ -9,7 +9,7 @@ export interface ThreeDotBtnProps {
 function ThreeDotBtn({
   className = '',
   action
-}: ThreeDotBtnProps): JSX.Element {
+}: ThreeDotBtnProps) {
   const handleClick = useCallback(
     (e: React.MouseEvent) => {
       action(e);

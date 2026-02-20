@@ -2,7 +2,7 @@ import ChartLayout from '../../../../components/ChartLayout/ChartLayout';
 import ActionButton from '../../../../components/ActionButton/ActionButton';
 import './Stats.css';
 
-function Stats(): JSX.Element {
+function Stats() {
   return (
     <ChartLayout
       name="Stats"
