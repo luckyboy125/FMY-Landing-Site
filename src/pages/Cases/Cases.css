@@ -37,6 +37,16 @@
   text-align: center;
 }
 
+.casesRoot .casesContainer .casesChartWrapper {
+  width: 100%;
+  min-height: 900px;
+  position: relative;
+}
+
+.casesRoot .casesContainer .casesChartWrapper .bubble-chart {
+  display: block;
+}
+
 .casesRoot .casesHeaderRoot .lastItemRoot {
   display: flex;
   justify-content: space-between;

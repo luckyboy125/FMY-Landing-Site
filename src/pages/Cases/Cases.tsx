@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Service from './component/Service/Service';
 import Comparison from './component/Comparison/Comparison';
@@ -8,6 +8,9 @@ import ActionTab from '../../components/ActionTab/ActionTab';
 import PlusButton from '../../components/PlusButton/PlusButton';
 import SearchInput from '../../components/SearchInput/SearchInput';
 import './Cases.css';
+
+const DEFAULT_CHART_WIDTH = 800;
+const DEFAULT_CHART_HEIGHT = 500;
 
 const TAB_DATA = ['All', 'Case Comparison', 'Service'] as const;
 
@@ -20,6 +23,12 @@ const RAW_DATA: BubbleDatum[] = [
   { category: 'Lorem', amount: 0.53 },
   { category: 'Lorem', amount: 0.19 },
   { category: 'Lorem', amount: 0.28 },
+  { category: 'Lorem', amount: 0.55 },
+  { category: 'Lorem', amount: 0.55 },
+  { category: 'Lorem', amount: 0.55 },
+  { category: 'Lorem', amount: 0.55 },
+  { category: 'Lorem', amount: 0.55 },
+  { category: 'Lorem', amount: 0.55 },
   { category: 'Lorem', amount: 0.55 },
   { category: 'LoremTestLongWordsdf', amount: 0.43 },
   { category: 'Government', amount: 0.99, link: 'government' },
@@ -49,6 +58,28 @@ function Cases() {
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
   const [searchValue, setSearchValue] = useState('');
+  const chartContainerRef = useRef<HTMLDivElement>(null);
+  const [chartSize, setChartSize] = useState({
+    width: DEFAULT_CHART_WIDTH,
+    height: DEFAULT_CHART_HEIGHT
+  });
+
+  useEffect(() => {
+    const el = chartContainerRef.current;
+    if (!el) return;
+
+    const observer = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (!entry) return;
+      const { width, height } = entry.contentRect;
+      if (width > 0 && height > 0) {
+        setChartSize({ width: Math.floor(width), height: Math.floor(height) });
+      }
+    });
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const handleTab = useCallback(
     (tab: string) => {
@@ -90,7 +121,13 @@ function Cases() {
       </div>
       <div className="casesContainer">
         {currentTab === TAB_DATA[0] ? (
-          <BubbleChart data={RAW_DATA} width={1616} height={894} />
+          <div ref={chartContainerRef} className="casesChartWrapper">
+            <BubbleChart
+              data={RAW_DATA}
+              width={chartSize.width}
+              height={chartSize.height}
+            />
+          </div>
         ) : currentTab === TAB_DATA[1] ? (
           <Comparison />
         ) : (

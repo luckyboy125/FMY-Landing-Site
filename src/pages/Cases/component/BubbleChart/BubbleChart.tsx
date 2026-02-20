@@ -75,19 +75,23 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
 
     const nodeData: SimNode[] = data.map((d) => ({ ...d }));
 
-    const simulation = d3
-      .forceSimulation<SimNode>(nodeData)
-      .alpha(0.05)
-      .velocityDecay(0.7)
-      .force('x', d3.forceX().strength(0.01))
-      .force('y', d3.forceY().strength(0.8))
-      .force(
-        'collide',
-        d3.forceCollide<SimNode>((d) => scale(d.amount) + 20)
-      );
-
     const cx = width / 2;
     const cy = height / 2;
+
+    const simulation = d3
+      .forceSimulation<SimNode>(nodeData)
+      .alpha(0.08)
+      .velocityDecay(0.4)
+      .force('x', d3.forceX(0).strength(0.03))
+      .force('y', d3.forceY(0).strength(0.03))
+      .force(
+        'charge',
+        d3.forceManyBody<SimNode>().strength(-80)
+      )
+      .force(
+        'collide',
+        d3.forceCollide<SimNode>((d) => scale(d.amount) + 28)
+      );
 
     const g = container
       .selectAll<SVGGElement, SimNode>('g')
@@ -114,15 +118,26 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
       .attr('dy', 6)
       .text((d) => d.category);
 
+    const padding = 2;
     let rafScheduled = false;
     simulation.on('tick', () => {
       if (rafScheduled) return;
       rafScheduled = true;
       requestAnimationFrame(() => {
-        g.attr(
-          'transform',
-          (d) => `translate(${cx + (d.x ?? 0)},${cy + (d.y ?? 0)})`
-        );
+        g.attr('transform', (d) => {
+          const r = scale(d.amount) + padding;
+          const minX = r;
+          const maxX = width - r;
+          const minY = r;
+          const maxY = height - r;
+          let px = cx + (d.x ?? 0);
+          let py = cy + (d.y ?? 0);
+          px = Math.max(minX, Math.min(maxX, px));
+          py = Math.max(minY, Math.min(maxY, py));
+          d.x = px - cx;
+          d.y = py - cy;
+          return `translate(${px},${py})`;
+        });
         rafScheduled = false;
       });
     });
