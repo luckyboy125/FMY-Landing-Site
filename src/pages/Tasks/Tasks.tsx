@@ -1,18 +1,18 @@
-import { useState, useCallback } from "react";
-import TaskLongItem from "./component/TaskLongItem/TaskLongItem";
-import NewTaskModal from "./component/NewTaskModal/NewTaskModal";
-import TaskShortItem from "./component/TaskShortItem/TaskShortItem";
-import ColorBtn from "../../components/ColorBtn/ColorBtn";
-import ActionTab from "../../components/ActionTab/ActionTab";
-import PlusButton from "../../components/PlusButton/PlusButton";
-import Person1 from "../../asset/person1.svg";
-import Person2 from "../../asset/person2.svg";
-import Person3 from "../../asset/person3.svg";
-import "./Tasks.css";
+import { useState, useCallback } from 'react';
+import TaskLongItem from './component/TaskLongItem/TaskLongItem';
+import NewTaskModal from './component/NewTaskModal/NewTaskModal';
+import TaskShortItem from './component/TaskShortItem/TaskShortItem';
+import ColorBtn from '../../components/ColorBtn/ColorBtn';
+import ActionTab from '../../components/ActionTab/ActionTab';
+import PlusButton from '../../components/PlusButton/PlusButton';
+import Person1 from '../../asset/person1.svg';
+import Person2 from '../../asset/person2.svg';
+import Person3 from '../../asset/person3.svg';
+import './Tasks.css';
 
 function Tasks(): JSX.Element {
   const [newTaskModalShow, setNewTaskModalShow] = useState(false);
-  const tabData = ["All", "Complete"];
+  const tabData = ['All', 'Complete'];
   const [tab, setTab] = useState(tabData[0]);
 
   const handleNewTaskModal = useCallback(() => {
@@ -28,11 +28,7 @@ function Tasks(): JSX.Element {
       <div className="tasksRoot">
         <div className="tasksTitle">Tasks</div>
         <div className="tasksHeaderRoot">
-          <ActionTab
-            data={tabData}
-            onSelect={handleTab}
-            select={tab}
-          />
+          <ActionTab data={tabData} onSelect={handleTab} select={tab} />
           <PlusButton content="+ New task" action={handleNewTaskModal} />
         </div>
         <div className="tasksContainer">
@@ -233,7 +229,7 @@ function Tasks(): JSX.Element {
           </div>
           <div
             className="addTaskBtn"
-            style={{ marginTop: "18px" }}
+            style={{ marginTop: '18px' }}
             onClick={handleNewTaskModal}
           >
             + New Task

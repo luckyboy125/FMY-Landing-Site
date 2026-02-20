@@ -1,22 +1,22 @@
-import { useState, useCallback } from "react";
-import { useOutsideClick } from "../../hook/DetectOutsideClick";
-import sortIcon from "../../asset/images/sort_icon.svg";
-import filterIcon from "../../asset/images/filter_icon.svg";
-import chevronIcon from "../../asset/images/chevron_icon.svg";
-import "./FilterDropdown.css";
+import { useState, useCallback } from 'react';
+import { useOutsideClick } from '../../hook/DetectOutsideClick';
+import sortIcon from '../../asset/images/sort_icon.svg';
+import filterIcon from '../../asset/images/filter_icon.svg';
+import chevronIcon from '../../asset/images/chevron_icon.svg';
+import './FilterDropdown.css';
 
 export interface FilterDropdownProps {
   className?: string;
-  type?: "filter" | "sort";
+  type?: 'filter' | 'sort';
   dropRoot?: React.ReactNode;
   dropRootStyle?: string;
 }
 
 function FilterDropdown({
-  className = "",
-  type = "filter",
+  className = '',
+  type = 'filter',
   dropRoot,
-  dropRootStyle = "",
+  dropRootStyle = ''
 }: FilterDropdownProps): JSX.Element {
   const [dropShow, setDropShow] = useState(false);
   const dropDownRootRef = useOutsideClick<HTMLDivElement>(() =>
@@ -36,14 +36,14 @@ function FilterDropdown({
       tabIndex={0}
     >
       <div className="inputIcon">
-        {type === "filter" ? (
+        {type === 'filter' ? (
           <img src={filterIcon} alt="filter" />
         ) : (
           <img src={sortIcon} alt="sort" />
         )}
       </div>
       <div className="filterDropdownIconRoot">
-        {type === "filter" ? "Filter" : "Sort"}
+        {type === 'filter' ? 'Filter' : 'Sort'}
         <img src={chevronIcon} alt="chevron" />
       </div>
       {dropShow ? (

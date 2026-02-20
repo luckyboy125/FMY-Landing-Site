@@ -1,22 +1,22 @@
-import { useEffect, useState, useCallback } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import DatabaseInput from "./component/DatabaseInput/DatabaseInput";
-import LetterSelectButton from "./component/LetterSelectButton/LetterSelectButton";
-import ColorBtn from "../../components/ColorBtn/ColorBtn";
-import ActionTab from "../../components/ActionTab/ActionTab";
-import ThreeDotBtn from "../../components/ThreeDotBtn/ThreeDotBtn";
-import CustomizeTable from "../../components/CustomizeTable/CustomizeTable";
-import DatabaseSearchDropdown from "../../components/DatabaseSearchDropdown/DatabaseSearchDropdown";
-import person3 from "../../asset/person3.svg";
-import tiktok from "../../asset/images/social/tiktok.svg";
-import refresh from "../../asset/images/refresh_icon.svg";
-import youtube from "../../asset/images/social/youtube.svg";
-import twitter from "../../asset/images/social/twitter.svg";
-import facebook from "../../asset/images/social/facebook.svg";
-import tableAlertIcon from "../../asset/images/alert_icon.svg";
-import instagram from "../../asset/images/social/instagram.svg";
-import searchIcon from "../../asset/images/search_icon_white.svg";
-import "./Database.css";
+import { useEffect, useState, useCallback } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import DatabaseInput from './component/DatabaseInput/DatabaseInput';
+import LetterSelectButton from './component/LetterSelectButton/LetterSelectButton';
+import ColorBtn from '../../components/ColorBtn/ColorBtn';
+import ActionTab from '../../components/ActionTab/ActionTab';
+import ThreeDotBtn from '../../components/ThreeDotBtn/ThreeDotBtn';
+import CustomizeTable from '../../components/CustomizeTable/CustomizeTable';
+import DatabaseSearchDropdown from '../../components/DatabaseSearchDropdown/DatabaseSearchDropdown';
+import person3 from '../../asset/person3.svg';
+import tiktok from '../../asset/images/social/tiktok.svg';
+import refresh from '../../asset/images/refresh_icon.svg';
+import youtube from '../../asset/images/social/youtube.svg';
+import twitter from '../../asset/images/social/twitter.svg';
+import facebook from '../../asset/images/social/facebook.svg';
+import tableAlertIcon from '../../asset/images/alert_icon.svg';
+import instagram from '../../asset/images/social/instagram.svg';
+import searchIcon from '../../asset/images/search_icon_white.svg';
+import './Database.css';
 
 interface DatabaseTableRow {
   item: string;
@@ -33,33 +33,33 @@ function Database(): JSX.Element {
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
 
-  const [url, setUrl] = useState("Add URL of: post, user, website...");
-  const [comment, setComment] = useState("Add a comment here...");
-  const [cases, setCases] = useState("Add a case here...");
-  const [tableSearch, setTableSearch] = useState("");
+  const [url, setUrl] = useState('Add URL of: post, user, website...');
+  const [comment, setComment] = useState('Add a comment here...');
+  const [cases, setCases] = useState('Add a case here...');
+  const [tableSearch, setTableSearch] = useState('');
   const [mockTableData, setMockTableData] = useState<DatabaseTableRow[]>([]);
   const [advancedToolBtn, setAdvancedToolBtn] = useState(false);
-  const firstLetterSelect = ["User", "Post", "URL"];
+  const firstLetterSelect = ['User', 'Post', 'URL'];
   const [firstLetter, setFirstLetter] = useState(firstLetterSelect[0]);
-  const secondLetterSelect = ["Content", "Comment"];
+  const secondLetterSelect = ['Content', 'Comment'];
   const [secondLetter, setSecondLetter] = useState(secondLetterSelect[0]);
 
   const tabData = [
-    "All",
-    "Posts",
-    "Users",
-    "Groups",
-    "Pages",
-    "Networks",
-    "Other design",
+    'All',
+    'Posts',
+    'Users',
+    'Groups',
+    'Pages',
+    'Networks',
+    'Other design'
   ];
 
   const handleTab = useCallback(
     (tab: string) => {
-      query.set("database_tab", tab);
+      query.set('database_tab', tab);
       navigate({
         pathname: location.pathname,
-        search: query.toString(),
+        search: query.toString()
       });
     },
     [location.pathname, navigate, query]
@@ -68,24 +68,24 @@ function Database(): JSX.Element {
   const handleSearchShow = useCallback(() => {
     setAdvancedToolBtn(false);
     query.set(
-      "search_panel",
-      query.get("search_panel") === null
-        ? "1"
-        : query.get("search_panel") !== "0"
-        ? "0"
-        : "1"
+      'search_panel',
+      query.get('search_panel') === null
+        ? '1'
+        : query.get('search_panel') !== '0'
+          ? '0'
+          : '1'
     );
     navigate({
       pathname: location.pathname,
-      search: query.toString(),
+      search: query.toString()
     });
   }, [location.pathname, navigate, query]);
 
   const handleAdvancedShow = useCallback(() => {
-    query.set("search_panel", "2");
+    query.set('search_panel', '2');
     navigate({
       pathname: location.pathname,
-      search: query.toString(),
+      search: query.toString()
     });
   }, [location.pathname, navigate, query]);
 
@@ -94,14 +94,14 @@ function Database(): JSX.Element {
       setMockTableData((pre) => [
         ...pre,
         {
-          item: "Post",
-          user: "Olive Yew",
-          addeddate: "June 26, 2022 15:45",
-          addbyuser: { name: "Nimrod", image: person3 },
-          case: "Lorem ipsum",
-          priority: "Medium",
-          view: { alert: Math.floor(Math.random() * 2) === 1 },
-        },
+          item: 'Post',
+          user: 'Olive Yew',
+          addeddate: 'June 26, 2022 15:45',
+          addbyuser: { name: 'Nimrod', image: person3 },
+          case: 'Lorem ipsum',
+          priority: 'Medium',
+          view: { alert: Math.floor(Math.random() * 2) === 1 }
+        }
       ]);
     }
   }, []);
@@ -116,7 +116,11 @@ function Database(): JSX.Element {
               className="databaseHeaderTab"
               data={tabData}
               onSelect={handleTab}
-              select={query.get("database_tab") === null ? tabData[0] : (query.get("database_tab") ?? tabData[0])}
+              select={
+                query.get('database_tab') === null
+                  ? tabData[0]
+                  : (query.get('database_tab') ?? tabData[0])
+              }
             />
           </div>
         </div>
@@ -129,7 +133,11 @@ function Database(): JSX.Element {
               tool={<div className="addDBBtn">+ Add to DB</div>}
             />
             <div className="secondRoot">
-              <DatabaseInput className="commentInput" inputValue={comment} action={setComment} />
+              <DatabaseInput
+                className="commentInput"
+                inputValue={comment}
+                action={setComment}
+              />
               <DatabaseInput
                 className="casesInput"
                 inputValue={cases}
@@ -161,10 +169,15 @@ function Database(): JSX.Element {
                       <></>
                     )}
                     <img src={refresh} alt="tool" className="tool" />
-                    <img src={searchIcon} alt="tool" className="tool" onClick={handleSearchShow} />
+                    <img
+                      src={searchIcon}
+                      alt="tool"
+                      className="tool"
+                      onClick={handleSearchShow}
+                    />
                   </div>
                 </div>
-                {query.get("search_panel") === "1" ? (
+                {query.get('search_panel') === '1' ? (
                   <div className="secondItem">
                     <DatabaseInput
                       className="tableSearchInput"
@@ -179,7 +192,7 @@ function Database(): JSX.Element {
                       Advanced Search
                     </div>
                   </div>
-                ) : query.get("search_panel") === "2" ? (
+                ) : query.get('search_panel') === '2' ? (
                   <div className="thirdItem">
                     <div className="itemRoot">
                       <div className="inputRoot">
@@ -318,16 +331,16 @@ function Database(): JSX.Element {
               </div>
             }
             tableHeader={[
-              "",
-              "Item",
-              "User",
-              "Added date",
-              "Added by",
-              "Case",
-              "Priority",
-              "Screenshot",
-              "Link",
-              "",
+              '',
+              'Item',
+              'User',
+              'Added date',
+              'Added by',
+              'Case',
+              'Priority',
+              'Screenshot',
+              'Link',
+              ''
             ]}
             body={mockTableData.map((item, index) => (
               <tr key={index}>
@@ -338,15 +351,25 @@ function Database(): JSX.Element {
                 <td>{item.user}</td>
                 <td>{item.addeddate}</td>
                 <td>
-                  <img src={item.addbyuser.image} alt="avatar" /> {item.addbyuser.name}
+                  <img src={item.addbyuser.image} alt="avatar" />{' '}
+                  {item.addbyuser.name}
                 </td>
                 <td>{item.case}</td>
                 <td>
-                  <ColorBtn name="Medium" width={130} arrowShow color="#37CE4A" />
+                  <ColorBtn
+                    name="Medium"
+                    width={130}
+                    arrowShow
+                    color="#37CE4A"
+                  />
                 </td>
                 <td>
                   {item.view.alert ? (
-                    <img src={tableAlertIcon} className="alertIcon" alt="alert" />
+                    <img
+                      src={tableAlertIcon}
+                      className="alertIcon"
+                      alt="alert"
+                    />
                   ) : (
                     <></>
                   )}

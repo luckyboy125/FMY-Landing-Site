@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import * as d3 from "d3";
-import "./BubbleChart.css";
+import { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import * as d3 from 'd3';
+import './BubbleChart.css';
 
 const RANGE_MIN = 30;
 const RANGE_MAX = 100;
@@ -18,19 +18,18 @@ export interface BubbleChartProps {
   height: number;
 }
 
-type SizeTier = "small" | "medium" | "large";
+type SizeTier = 'small' | 'medium' | 'large';
 
 function radiusScale(value: number, minVal: number, maxVal: number): number {
-  return d3
-    .scaleSqrt()
-    .range([RANGE_MIN, RANGE_MAX])
-    .domain([minVal, maxVal])(value);
+  return d3.scaleSqrt().range([RANGE_MIN, RANGE_MAX]).domain([minVal, maxVal])(
+    value
+  );
 }
 
 function getSizeTier(radius: number): SizeTier {
-  if (radius >= ((RANGE_MAX - RANGE_MIN) / 3) * 2 + RANGE_MIN) return "large";
-  if (radius >= (RANGE_MAX - RANGE_MIN) / 3 + RANGE_MIN) return "medium";
-  return "small";
+  if (radius >= ((RANGE_MAX - RANGE_MIN) / 3) * 2 + RANGE_MIN) return 'large';
+  if (radius >= (RANGE_MAX - RANGE_MIN) / 3 + RANGE_MIN) return 'medium';
+  return 'small';
 }
 
 function ellipsizeText(
@@ -44,10 +43,10 @@ function ellipsizeText(
     textEl.text(str);
     const bbox = this.getBBox?.();
     if (bbox && bbox.width <= maxWidth) return;
-    textEl.text(str + "...");
+    textEl.text(str + '...');
     while (str.length > 0 && this.getBBox().width > maxWidth) {
       str = str.slice(0, -1);
-      textEl.text(str + "...");
+      textEl.text(str + '...');
     }
   });
 }
@@ -72,7 +71,7 @@ function BubbleChart({ data, width, height }: BubbleChartProps): JSX.Element {
     }
 
     const container = d3.select(containerRef.current);
-    container.selectAll("*").remove();
+    container.selectAll('*').remove();
 
     const nodeData: SimNode[] = data.map((d) => ({ ...d }));
 
@@ -80,10 +79,10 @@ function BubbleChart({ data, width, height }: BubbleChartProps): JSX.Element {
       .forceSimulation<SimNode>(nodeData)
       .alpha(0.05)
       .velocityDecay(0.7)
-      .force("x", d3.forceX().strength(0.01))
-      .force("y", d3.forceY().strength(0.8))
+      .force('x', d3.forceX().strength(0.01))
+      .force('y', d3.forceY().strength(0.8))
       .force(
-        "collide",
+        'collide',
         d3.forceCollide<SimNode>((d) => scale(d.amount) + 20)
       );
 
@@ -91,46 +90,48 @@ function BubbleChart({ data, width, height }: BubbleChartProps): JSX.Element {
     const cy = height / 2;
 
     const g = container
-      .selectAll<SVGGElement, SimNode>("g")
+      .selectAll<SVGGElement, SimNode>('g')
       .data(nodeData)
-      .join("g")
-      .attr("class", (d) => {
+      .join('g')
+      .attr('class', (d) => {
         const r = scale(d.amount);
         const tier = getSizeTier(r);
-        const clickable = d.link ? " bubble-chart__bubble--clickable" : "";
+        const clickable = d.link ? ' bubble-chart__bubble--clickable' : '';
         return `bubble-chart__bubble bubble-chart__bubble--size-${tier}${clickable}`;
       })
-      .on("click", (_event, d) => {
+      .on('click', (_event, d) => {
         if (d.link) navigate(`/${d.link}`);
       });
 
-    g.append("circle")
-      .attr("class", "bubble-chart__circle")
-      .attr("r", (d) => scale(d.amount));
+    g.append('circle')
+      .attr('class', 'bubble-chart__circle')
+      .attr('r', (d) => scale(d.amount));
 
     const textMaxWidth = (d: SimNode) => (scale(d.amount) * 5) / 3;
 
-    g.append("text")
-      .attr("class", "bubble-chart__label")
-      .attr("dy", 6)
+    g.append('text')
+      .attr('class', 'bubble-chart__label')
+      .attr('dy', 6)
       .text((d) => d.category);
 
     let rafScheduled = false;
-    simulation.on("tick", () => {
+    simulation.on('tick', () => {
       if (rafScheduled) return;
       rafScheduled = true;
       requestAnimationFrame(() => {
         g.attr(
-          "transform",
-          (d) =>
-            `translate(${cx + (d.x ?? 0)},${cy + (d.y ?? 0)})`
+          'transform',
+          (d) => `translate(${cx + (d.x ?? 0)},${cy + (d.y ?? 0)})`
         );
         rafScheduled = false;
       });
     });
 
-    simulation.on("end", () => {
-      g.select<SVGTextElement, SimNode>("text").call(ellipsizeText, textMaxWidth);
+    simulation.on('end', () => {
+      g.select<SVGTextElement, SimNode>('text').call(
+        ellipsizeText,
+        textMaxWidth
+      );
     });
 
     simulationRef.current = simulation;

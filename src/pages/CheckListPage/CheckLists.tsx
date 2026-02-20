@@ -1,17 +1,17 @@
-import { useState, useCallback } from "react";
-import CheckListsLongItem from "./component/CheckListsLongItem/CheckListsLongItem";
-import NewCheckListsModal from "./component/NewCheckListsModal/NewCheckListsModal";
-import CheckListsShortItem from "./component/CheckListsShortItem/CheckListsShortItem";
-import ActionTab from "../../components/ActionTab/ActionTab";
-import PlusButton from "../../components/PlusButton/PlusButton";
-import Person1 from "../../asset/person1.svg";
-import Person2 from "../../asset/person2.svg";
-import Person3 from "../../asset/person3.svg";
-import "./CheckLists.css";
+import { useState, useCallback } from 'react';
+import CheckListsLongItem from './component/CheckListsLongItem/CheckListsLongItem';
+import NewCheckListsModal from './component/NewCheckListsModal/NewCheckListsModal';
+import CheckListsShortItem from './component/CheckListsShortItem/CheckListsShortItem';
+import ActionTab from '../../components/ActionTab/ActionTab';
+import PlusButton from '../../components/PlusButton/PlusButton';
+import Person1 from '../../asset/person1.svg';
+import Person2 from '../../asset/person2.svg';
+import Person3 from '../../asset/person3.svg';
+import './CheckLists.css';
 
 function CheckLists(): JSX.Element {
   const [newCheckListModalShow, setNewCheckListModalShow] = useState(false);
-  const tabData = ["All", "Daily", "Weekly"];
+  const tabData = ['All', 'Daily', 'Weekly'];
   const [tab, setTab] = useState(tabData[0]);
 
   const handleNewCheckListsModal = useCallback(() => {
@@ -74,7 +74,10 @@ function CheckLists(): JSX.Element {
                   avatar={Person3}
                   type="orange"
                 />
-                <div className="addCheckListsBtn" onClick={handleNewCheckListsModal}>
+                <div
+                  className="addCheckListsBtn"
+                  onClick={handleNewCheckListsModal}
+                >
                   + New Task
                 </div>
               </div>
@@ -110,7 +113,10 @@ function CheckLists(): JSX.Element {
                   avatar={Person3}
                   type="orange"
                 />
-                <div className="addCheckListsBtn" onClick={handleNewCheckListsModal}>
+                <div
+                  className="addCheckListsBtn"
+                  onClick={handleNewCheckListsModal}
+                >
                   + New Task
                 </div>
               </div>
@@ -174,7 +180,7 @@ function CheckLists(): JSX.Element {
           </div>
           <div
             className="addCheckListsBtn"
-            style={{ marginTop: "18px" }}
+            style={{ marginTop: '18px' }}
             onClick={handleNewCheckListsModal}
           >
             + New Task

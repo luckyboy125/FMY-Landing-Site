@@ -1,7 +1,7 @@
-import { useState, useCallback } from "react";
-import { useOutsideClick } from "../../hook/DetectOutsideClick";
-import searchIcon from "../../asset/images/search_icon.svg";
-import "./SearchInput.css";
+import { useState, useCallback } from 'react';
+import { useOutsideClick } from '../../hook/DetectOutsideClick';
+import searchIcon from '../../asset/images/search_icon.svg';
+import './SearchInput.css';
 
 export interface SearchInputProps {
   className?: string;
@@ -13,12 +13,12 @@ export interface SearchInputProps {
 }
 
 function SearchInput({
-  className = "",
+  className = '',
   action,
-  inputValue = "",
+  inputValue = '',
   inputWith = false,
   onlyClick = false,
-  clickAction,
+  clickAction
 }: SearchInputProps): JSX.Element {
   const [initStatus, setInitStatus] = useState(true);
   const searchInputRef = useOutsideClick<HTMLDivElement>(() =>
@@ -36,7 +36,7 @@ function SearchInput({
   return (
     <div
       className={`searchInputRoot ${className}`}
-      style={{ cursor: onlyClick ? "pointer" : undefined }}
+      style={{ cursor: onlyClick ? 'pointer' : undefined }}
       onClick={handleClick}
       ref={searchInputRef}
       role="button"
@@ -46,7 +46,7 @@ function SearchInput({
         <img src={searchIcon} alt="search" />
       </div>
       {onlyClick ? (
-        "Search"
+        'Search'
       ) : inputWith ? (
         <>
           Search
@@ -58,7 +58,7 @@ function SearchInput({
           />
         </>
       ) : initStatus ? (
-        "Search"
+        'Search'
       ) : (
         <input
           className="inputContent"

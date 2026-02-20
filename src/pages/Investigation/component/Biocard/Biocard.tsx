@@ -1,4 +1,4 @@
-import "./Biocard.css";
+import './Biocard.css';
 
 export interface BiocardProps {
   className?: string;
@@ -8,10 +8,16 @@ export interface BiocardProps {
   countDes: React.ReactNode;
 }
 
-function Biocard({ className, title, count, des, countDes }: BiocardProps): JSX.Element {
+function Biocard({
+  className,
+  title,
+  count,
+  des,
+  countDes
+}: BiocardProps): JSX.Element {
   return (
     <>
-      <div className={`${className ?? ""} biocardRoot`}>
+      <div className={`${className ?? ''} biocardRoot`}>
         <div className="title">{title}</div>
         <div className="count">{count}</div>
         <div className="des">{des}</div>

@@ -1,5 +1,5 @@
-import { useCallback, memo } from "react";
-import "./ThreeDotBtn.css";
+import { useCallback, memo } from 'react';
+import './ThreeDotBtn.css';
 
 export interface ThreeDotBtnProps {
   className?: string;
@@ -7,8 +7,8 @@ export interface ThreeDotBtnProps {
 }
 
 function ThreeDotBtn({
-  className = "",
-  action,
+  className = '',
+  action
 }: ThreeDotBtnProps): JSX.Element {
   const handleClick = useCallback(
     (e: React.MouseEvent) => {
@@ -18,7 +18,12 @@ function ThreeDotBtn({
   );
 
   return (
-    <div className={`${className} dotGroupRoot`} onClick={handleClick} role="button" tabIndex={0}>
+    <div
+      className={`${className} dotGroupRoot`}
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+    >
       <div className="dot" aria-hidden />
       <div className="dot" aria-hidden />
       <div className="dot" aria-hidden />

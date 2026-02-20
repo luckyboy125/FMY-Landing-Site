@@ -1,5 +1,5 @@
-import { useOutsideClick } from "../../hook/DetectOutsideClick";
-import "./ModalLayout.css";
+import { useOutsideClick } from '../../hook/DetectOutsideClick';
+import './ModalLayout.css';
 
 export interface ModalLayoutProps {
   className?: string;
@@ -9,10 +9,10 @@ export interface ModalLayoutProps {
 }
 
 function ModalLayout({
-  className = "",
+  className = '',
   show,
   onClose,
-  children,
+  children
 }: ModalLayoutProps): JSX.Element {
   const modalRef = useOutsideClick<HTMLDivElement>(onClose);
 

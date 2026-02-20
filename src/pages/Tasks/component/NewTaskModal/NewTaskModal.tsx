@@ -1,10 +1,10 @@
-import { useState, useCallback } from "react";
-import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
-import PlusButton from "../../../../components/PlusButton/PlusButton";
-import ModalLayout from "../../../../components/ModalLayout/ModalLayout";
-import Calendar from "../../../../asset/images/calendar.svg";
-import CloseIcon from "../../../../asset/images/close_icon.svg";
-import "./NewTaskModal.css";
+import { useState, useCallback } from 'react';
+import ColorBtn from '../../../../components/ColorBtn/ColorBtn';
+import PlusButton from '../../../../components/PlusButton/PlusButton';
+import ModalLayout from '../../../../components/ModalLayout/ModalLayout';
+import Calendar from '../../../../asset/images/calendar.svg';
+import CloseIcon from '../../../../asset/images/close_icon.svg';
+import './NewTaskModal.css';
 
 export interface NewTaskModalProps {
   className?: string;
@@ -12,8 +12,12 @@ export interface NewTaskModalProps {
   onClose: () => void;
 }
 
-function NewTaskModal({ className, show, onClose }: NewTaskModalProps): JSX.Element {
-  const [title, setTitle] = useState("");
+function NewTaskModal({
+  className,
+  show,
+  onClose
+}: NewTaskModalProps): JSX.Element {
+  const [title, setTitle] = useState('');
   const [addContentShow, setAddContentShow] = useState(false);
 
   const handleModalClose = useCallback(() => {
@@ -29,9 +33,12 @@ function NewTaskModal({ className, show, onClose }: NewTaskModalProps): JSX.Elem
     }
   }, [addContentShow, onClose]);
 
-  const handleTitleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setTitle(e.target.value);
-  }, []);
+  const handleTitleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setTitle(e.target.value);
+    },
+    []
+  );
 
   const handleAdditionDetail = useCallback(() => {
     setAddContentShow((prev) => !prev);
@@ -40,7 +47,7 @@ function NewTaskModal({ className, show, onClose }: NewTaskModalProps): JSX.Elem
   return (
     <ModalLayout
       show={show}
-      className={`newTaskModalRoot ${className ?? ""}`}
+      className={`newTaskModalRoot ${className ?? ''}`}
       onClose={handleModalClose}
     >
       <img
@@ -94,7 +101,7 @@ function NewTaskModal({ className, show, onClose }: NewTaskModalProps): JSX.Elem
       </div>
       <div
         className="additionDetailContent"
-        style={{ visibility: addContentShow ? "visible" : "hidden" }}
+        style={{ visibility: addContentShow ? 'visible' : 'hidden' }}
         onClick={() => {}}
       >
         <div className="additionDetailItem">
@@ -107,7 +114,7 @@ function NewTaskModal({ className, show, onClose }: NewTaskModalProps): JSX.Elem
             color="#fff"
           />
         </div>
-        <div className="additionDetailItem" style={{ marginLeft: "50px" }}>
+        <div className="additionDetailItem" style={{ marginLeft: '50px' }}>
           Repeat:
           <ColorBtn
             className="itemBtn"

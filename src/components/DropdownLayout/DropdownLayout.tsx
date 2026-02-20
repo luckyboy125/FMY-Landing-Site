@@ -1,6 +1,6 @@
-import { useState, useCallback } from "react";
-import { useOutsideClick } from "../../hook/DetectOutsideClick";
-import "./DropdownLayout.css";
+import { useState, useCallback } from 'react';
+import { useOutsideClick } from '../../hook/DetectOutsideClick';
+import './DropdownLayout.css';
 
 export interface DropdownLayoutProps {
   className?: string;
@@ -10,10 +10,10 @@ export interface DropdownLayoutProps {
 }
 
 function DropdownLayout({
-  className = "",
+  className = '',
   children,
   dropRoot,
-  dropRootStyle = "",
+  dropRootStyle = ''
 }: DropdownLayoutProps): JSX.Element {
   const [dropShow, setDropShow] = useState(false);
   const dropDownRef = useOutsideClick<HTMLDivElement>(() => setDropShow(false));

@@ -1,10 +1,10 @@
-import { useState, useCallback } from "react";
-import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
-import checkIcon from "../../../../asset/images/check_icon.svg";
-import "./CheckListsLongItem.css";
+import { useState, useCallback } from 'react';
+import ColorBtn from '../../../../components/ColorBtn/ColorBtn';
+import ThreeDotBtn from '../../../../components/ThreeDotBtn/ThreeDotBtn';
+import checkIcon from '../../../../asset/images/check_icon.svg';
+import './CheckListsLongItem.css';
 
-type ColorType = "blue" | "green" | "orange";
+type ColorType = 'blue' | 'green' | 'orange';
 
 export interface CheckListsLongItemProps {
   className?: string;
@@ -16,9 +16,9 @@ export interface CheckListsLongItemProps {
 }
 
 const colorTypeMap: Record<ColorType, string> = {
-  blue: "#75B3FF",
-  green: "#37CE4A",
-  orange: "#FF7A00",
+  blue: '#75B3FF',
+  green: '#37CE4A',
+  orange: '#FF7A00'
 };
 
 function CheckListsLongItem({
@@ -26,7 +26,7 @@ function CheckListsLongItem({
   title,
   avatar,
   user,
-  type,
+  type
 }: CheckListsLongItemProps): JSX.Element {
   const [checkStatus, setCheckStatus] = useState(false);
 
@@ -36,7 +36,7 @@ function CheckListsLongItem({
 
   return (
     <div
-      className={`checkListsLongItem ${className ?? ""}`}
+      className={`checkListsLongItem ${className ?? ''}`}
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
       <div className="firstPart">
@@ -49,7 +49,7 @@ function CheckListsLongItem({
         </div>
         <span
           className="checkListsTitle"
-          style={{ textDecoration: checkStatus ? "line-through" : "initial" }}
+          style={{ textDecoration: checkStatus ? 'line-through' : 'initial' }}
         >
           {title}
         </span>

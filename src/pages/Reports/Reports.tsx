@@ -1,10 +1,10 @@
-import { useCallback } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import ActionTab from "../../components/ActionTab/ActionTab";
-import reportCard from "../../asset/images/report_card.svg";
-import "./Reports.css";
+import { useCallback } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import ActionTab from '../../components/ActionTab/ActionTab';
+import reportCard from '../../asset/images/report_card.svg';
+import './Reports.css';
 
-const TAB_DATA = ["Lorem", "Lorem"];
+const TAB_DATA = ['Lorem', 'Lorem'];
 
 function Reports(): JSX.Element {
   const location = useLocation();
@@ -13,17 +13,17 @@ function Reports(): JSX.Element {
 
   const handleTab = useCallback(
     (tab: string) => {
-      query.set("reports_tab", tab);
+      query.set('reports_tab', tab);
       navigate({
         pathname: location.pathname,
-        search: query.toString(),
+        search: query.toString()
       });
     },
     [navigate, location.pathname, query]
   );
 
   const currentTab =
-    query.get("reports_tab") === null ? TAB_DATA[0] : query.get("reports_tab");
+    query.get('reports_tab') === null ? TAB_DATA[0] : query.get('reports_tab');
 
   return (
     <div className="reportsRoot">

@@ -1,9 +1,9 @@
-import { useState, useCallback } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useOutsideClick } from "../../../../hook/DetectOutsideClick";
-import ModalLayout from "../../../../components/ModalLayout/ModalLayout";
-import CloseIcon from "../../../../asset/images/close_icon.svg";
-import "./NewUpdateModal.css";
+import { useState, useCallback } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useOutsideClick } from '../../../../hook/DetectOutsideClick';
+import ModalLayout from '../../../../components/ModalLayout/ModalLayout';
+import CloseIcon from '../../../../asset/images/close_icon.svg';
+import './NewUpdateModal.css';
 
 export interface NewUpdateModalProps {
   show: boolean;
@@ -11,23 +11,23 @@ export interface NewUpdateModalProps {
 }
 
 const CATEGORY_SELECT = [
-  "News update",
-  "Event",
-  "Human rights",
-  "Lorem ipsum",
-  "Lorem ipsum",
-  "Lorem ipsum",
-  "Lorem ipsum",
+  'News update',
+  'Event',
+  'Human rights',
+  'Lorem ipsum',
+  'Lorem ipsum',
+  'Lorem ipsum',
+  'Lorem ipsum'
 ];
 
 const CASE_SELECT = [
-  "Lorem ipsum",
-  "Lorem ipsum",
-  "Human rights",
-  "Lorem ipsum",
-  "Lorem ipsum",
-  "Lorem ipsum",
-  "Lorem ipsum",
+  'Lorem ipsum',
+  'Lorem ipsum',
+  'Human rights',
+  'Lorem ipsum',
+  'Lorem ipsum',
+  'Lorem ipsum',
+  'Lorem ipsum'
 ];
 
 function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
@@ -35,7 +35,7 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
 
-  const [categoryValue, setCategoryValue] = useState("");
+  const [categoryValue, setCategoryValue] = useState('');
   const [categorySelectShow, setCategorySelectShow] = useState(false);
   const categorySelectRef = useOutsideClick<HTMLDivElement>(() =>
     setCategorySelectShow(false)
@@ -43,14 +43,14 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
 
   const handleCategory = useCallback(
     (category: string) => {
-      query.set("newupdate_category", category);
+      query.set('newupdate_category', category);
       navigate({ pathname: location.pathname, search: query.toString() });
       setCategorySelectShow(false);
     },
     [navigate, location.pathname, query]
   );
 
-  const [caseValue, setCaseValue] = useState("");
+  const [caseValue, setCaseValue] = useState('');
   const [caseSelectShow, setCaseSelectShow] = useState(false);
   const caseSelectRef = useOutsideClick<HTMLDivElement>(() =>
     setCaseSelectShow(false)
@@ -58,15 +58,15 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
 
   const handleCase = useCallback(
     (item: string) => {
-      query.set("newupdate_case", item);
+      query.set('newupdate_case', item);
       navigate({ pathname: location.pathname, search: query.toString() });
       setCaseSelectShow(false);
     },
     [navigate, location.pathname, query]
   );
 
-  const [updateValue, setUpdateValue] = useState("");
-  const [attachLinkValue, setAttachLinkValue] = useState("");
+  const [updateValue, setUpdateValue] = useState('');
+  const [attachLinkValue, setAttachLinkValue] = useState('');
 
   return (
     <ModalLayout show={show} onClose={onClose} className="newUpdataModalRoot">
@@ -103,9 +103,9 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
                     <div
                       key={`${item}-${index}`}
                       className={
-                        query.get("newupdate_category") === item
-                          ? "activeItem"
-                          : "item"
+                        query.get('newupdate_category') === item
+                          ? 'activeItem'
+                          : 'item'
                       }
                       onClick={() => handleCategory(item)}
                       role="option"
@@ -141,9 +141,9 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
                     <div
                       key={`${item}-${index}`}
                       className={
-                        query.get("newupdate_case") === item
-                          ? "activeItem"
-                          : "item"
+                        query.get('newupdate_case') === item
+                          ? 'activeItem'
+                          : 'item'
                       }
                       onClick={() => handleCase(item)}
                       role="option"

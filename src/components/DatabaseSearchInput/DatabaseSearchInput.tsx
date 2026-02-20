@@ -1,23 +1,20 @@
-import { useState, useCallback } from "react";
-import arrow from "../../asset/images/nrds/arrow_down.svg";
-import SearchIcon from "../../asset/images/nrds/search_icon.svg";
-import "./DatabaseSearchInput.css";
+import { useState, useCallback } from 'react';
+import arrow from '../../asset/images/nrds/arrow_down.svg';
+import SearchIcon from '../../asset/images/nrds/search_icon.svg';
+import './DatabaseSearchInput.css';
 
 export interface DatabaseSearchInputProps {
   className?: string;
 }
 
 function DatabaseSearchInput({
-  className = "",
+  className = ''
 }: DatabaseSearchInputProps): JSX.Element {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
 
-  const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setSearchValue(e.target.value);
-    },
-    []
-  );
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(e.target.value);
+  }, []);
 
   return (
     <div className={`databaseSearchInputRoot ${className}`}>

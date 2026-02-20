@@ -1,6 +1,6 @@
-import { useState, useCallback } from "react";
-import { useOutsideClick } from "../../hook/DetectOutsideClick";
-import "./ActionButton.css";
+import { useState, useCallback } from 'react';
+import { useOutsideClick } from '../../hook/DetectOutsideClick';
+import './ActionButton.css';
 
 export interface ActionButtonProps {
   name?: string;
@@ -15,11 +15,11 @@ export interface ActionButtonProps {
 function ActionButton({
   name,
   content,
-  className = "",
+  className = '',
   type,
   children,
   dropRoot,
-  dropRootStyle = "",
+  dropRootStyle = ''
 }: ActionButtonProps): JSX.Element {
   const [dropShow, setDropShow] = useState(false);
   const dropDownRootRef = useOutsideClick<HTMLDivElement>(() =>
@@ -38,7 +38,7 @@ function ActionButton({
       role="button"
       tabIndex={0}
     >
-      {type !== "common" ? <div className="buttonName">{name}:</div> : null}
+      {type !== 'common' ? <div className="buttonName">{name}:</div> : null}
       <div className="buttonContent">
         {content}
         <i className="fas fa-caret-down" aria-hidden />

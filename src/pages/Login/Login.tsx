@@ -1,16 +1,16 @@
-import { useState, useCallback } from "react";
-import Effect from "../../asset/login/effect.svg";
-import FmyLogo from "../../asset/sidebar/FmyLogo.svg";
-import Analysis from "../../asset/login/login_analysis.svg";
-import "./Login.css";
+import { useState, useCallback } from 'react';
+import Effect from '../../asset/login/effect.svg';
+import FmyLogo from '../../asset/sidebar/FmyLogo.svg';
+import Analysis from '../../asset/login/login_analysis.svg';
+import './Login.css';
 
 export interface LoginProps {
   onSubmit: () => void;
 }
 
 function Login({ onSubmit }: LoginProps): JSX.Element {
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
 
   const handleSubmit = useCallback(() => {
     if (!email || !pass) return;
@@ -58,12 +58,12 @@ function Login({ onSubmit }: LoginProps): JSX.Element {
           onClick={handleSubmit}
           role="button"
           tabIndex={0}
-          onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
+          onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
         >
           Get Started
         </div>
         <div className="termLetter">
-          By entering your e-mail address you confirm that you agree with our{" "}
+          By entering your e-mail address you confirm that you agree with our{' '}
           <a href="#">Terms of Service</a>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, RefObject } from "react";
+import { useEffect, useRef, RefObject } from 'react';
 
 export function useOutsideClick<T extends HTMLElement = HTMLElement>(
   callback: () => void
@@ -12,8 +12,8 @@ export function useOutsideClick<T extends HTMLElement = HTMLElement>(
       }
     };
 
-    document.addEventListener("click", handleClick, true);
-    return () => document.removeEventListener("click", handleClick, true);
+    document.addEventListener('click', handleClick, true);
+    return () => document.removeEventListener('click', handleClick, true);
   }, [callback]);
 
   return ref;

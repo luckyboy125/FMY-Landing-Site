@@ -1,13 +1,13 @@
-import { useState, useCallback } from "react";
-import HomeCard from "./component/HomeCard/HomeCard";
-import NewUpdateModal from "./component/NewUpdateModal/NewUpdateModal";
-import PlusButton from "../../components/PlusButton/PlusButton";
-import ActionButton from "../../components/ActionButton/ActionButton";
-import CustomizeInlineChart from "../../components/CustomizeInlineChart/CustomizeInlineChart";
-import handImage from "../../asset/images/hand.svg";
-import "./Home.css";
+import { useState, useCallback } from 'react';
+import HomeCard from './component/HomeCard/HomeCard';
+import NewUpdateModal from './component/NewUpdateModal/NewUpdateModal';
+import PlusButton from '../../components/PlusButton/PlusButton';
+import ActionButton from '../../components/ActionButton/ActionButton';
+import CustomizeInlineChart from '../../components/CustomizeInlineChart/CustomizeInlineChart';
+import handImage from '../../asset/images/hand.svg';
+import './Home.css';
 
-const COMPARE_OPTIONS = ["This Week", "Custom"];
+const COMPARE_OPTIONS = ['This Week', 'Custom'];
 
 function Home(): JSX.Element {
   const [modalShow, setModalShow] = useState(false);

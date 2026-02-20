@@ -1,5 +1,5 @@
-import { useCallback, memo } from "react";
-import "./PlusButton.css";
+import { useCallback, memo } from 'react';
+import './PlusButton.css';
 
 export interface PlusButtonProps {
   className?: string;
@@ -8,16 +8,22 @@ export interface PlusButtonProps {
 }
 
 function PlusButton({
-  className = "",
+  className = '',
   action,
-  content,
+  content
 }: PlusButtonProps): JSX.Element {
   const handleClick = useCallback(() => {
     action();
   }, [action]);
 
   return (
-    <div className={`plusBtnRoot ${className}`} onClick={handleClick} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && action()}>
+    <div
+      className={`plusBtnRoot ${className}`}
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && action()}
+    >
       {content}
     </div>
   );

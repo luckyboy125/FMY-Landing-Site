@@ -1,24 +1,24 @@
-import { useState, useCallback } from "react";
-import keyword from "../../asset/images/nrds/keyword_icon.svg";
-import calendar from "../../asset/images/nrds/calendar_icon.svg";
-import "./DatabaseSearchDropdown.css";
+import { useState, useCallback } from 'react';
+import keyword from '../../asset/images/nrds/keyword_icon.svg';
+import calendar from '../../asset/images/nrds/calendar_icon.svg';
+import './DatabaseSearchDropdown.css';
 
 export interface DatabaseSearchDropdownProps {
   className?: string;
   content?: string;
   select?: React.ReactNode;
-  type?: "calendar" | "keyword";
+  type?: 'calendar' | 'keyword';
   children?: React.ReactNode;
   childrenStyle?: string;
 }
 
 function DatabaseSearchDropdown({
-  className = "",
+  className = '',
   content,
   select,
   type,
   children,
-  childrenStyle = "",
+  childrenStyle = ''
 }: DatabaseSearchDropdownProps): JSX.Element {
   const [dropwDownShow, setDropdownShow] = useState(false);
 
@@ -33,9 +33,9 @@ function DatabaseSearchDropdown({
       role="button"
       tabIndex={0}
     >
-      {type === "calendar" ? (
+      {type === 'calendar' ? (
         <img src={calendar} alt="calendar" />
-      ) : type === "keyword" ? (
+      ) : type === 'keyword' ? (
         <img src={keyword} alt="keyword" />
       ) : null}
       <div className="dropdownContent">{content}:</div>

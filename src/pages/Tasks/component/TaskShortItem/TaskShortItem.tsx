@@ -1,8 +1,8 @@
-import { useState, useCallback } from "react";
-import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
-import checkIcon from "../../../../asset/images/check_icon.svg";
-import "./TaskShortItem.css";
+import { useState, useCallback } from 'react';
+import ColorBtn from '../../../../components/ColorBtn/ColorBtn';
+import ThreeDotBtn from '../../../../components/ThreeDotBtn/ThreeDotBtn';
+import checkIcon from '../../../../asset/images/check_icon.svg';
+import './TaskShortItem.css';
 
 export interface TaskShortItemProps {
   className?: string;
@@ -13,7 +13,14 @@ export interface TaskShortItemProps {
   click?: () => void;
 }
 
-function TaskShortItem({ className, title, type, avatar, user, click }: TaskShortItemProps): JSX.Element {
+function TaskShortItem({
+  className,
+  title,
+  type,
+  avatar,
+  user,
+  click
+}: TaskShortItemProps): JSX.Element {
   const [checkStatus, setCheckStatus] = useState(false);
 
   const handleCheck = useCallback(() => {
@@ -22,7 +29,7 @@ function TaskShortItem({ className, title, type, avatar, user, click }: TaskShor
 
   return (
     <div
-      className={`taskShortItem ${className ?? ""}`}
+      className={`taskShortItem ${className ?? ''}`}
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
       <div className="circleIcon" onClick={handleCheck}>
@@ -31,7 +38,7 @@ function TaskShortItem({ className, title, type, avatar, user, click }: TaskShor
       <div className="taskShortItemContent">
         <div
           className="title"
-          style={{ textDecoration: checkStatus ? "line-through" : "initial" }}
+          style={{ textDecoration: checkStatus ? 'line-through' : 'initial' }}
         >
           {title}
         </div>

@@ -1,19 +1,19 @@
-import { useState, useCallback } from "react";
-import { card_type, type CardTypeKey } from "../../../../helpers/home.helper";
-import CommentModal from "../CommentModal/CommentModal";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
-import Person3 from "../../../../asset/person3.svg";
-import instagram from "../../../../asset/images/social/instagram.svg";
-import facebook from "../../../../asset/images/social/facebook.svg";
-import twitter from "../../../../asset/images/social/twitter.svg";
-import tiktok from "../../../../asset/images/social/tiktok.svg";
-import reddit from "../../../../asset/images/social/reddit.svg";
-import viber from "../../../../asset/images/social/viber.svg";
-import vimeo from "../../../../asset/images/social/vimeo.svg";
-import gmail from "../../../../asset/images/social/gmail.svg";
-import blogger from "../../../../asset/images/social/blogger.svg";
-import telegram from "../../../../asset/images/social/telegram.svg";
-import "./HomeCard.css";
+import { useState, useCallback } from 'react';
+import { card_type, type CardTypeKey } from '../../../../helpers/home.helper';
+import CommentModal from '../CommentModal/CommentModal';
+import ThreeDotBtn from '../../../../components/ThreeDotBtn/ThreeDotBtn';
+import Person3 from '../../../../asset/person3.svg';
+import instagram from '../../../../asset/images/social/instagram.svg';
+import facebook from '../../../../asset/images/social/facebook.svg';
+import twitter from '../../../../asset/images/social/twitter.svg';
+import tiktok from '../../../../asset/images/social/tiktok.svg';
+import reddit from '../../../../asset/images/social/reddit.svg';
+import viber from '../../../../asset/images/social/viber.svg';
+import vimeo from '../../../../asset/images/social/vimeo.svg';
+import gmail from '../../../../asset/images/social/gmail.svg';
+import blogger from '../../../../asset/images/social/blogger.svg';
+import telegram from '../../../../asset/images/social/telegram.svg';
+import './HomeCard.css';
 
 export interface HomeCardProps {
   className?: string;
@@ -25,12 +25,12 @@ export interface HomeCardProps {
 }
 
 function HomeCard({
-  className = "",
+  className = '',
   cardType,
   cardContent,
   author,
   cardDate,
-  commentType,
+  commentType
 }: HomeCardProps): JSX.Element {
   const [modalShow, setModalShow] = useState(false);
 
@@ -43,10 +43,7 @@ function HomeCard({
     <>
       <div className={`homeCardRoot ${className}`}>
         <ThreeDotBtn className="dotBtn" action={() => {}} />
-        <div
-          className="cardTitle"
-          style={{ backgroundColor: typeInfo.color }}
-        >
+        <div className="cardTitle" style={{ backgroundColor: typeInfo.color }}>
           {typeInfo.title}
         </div>
         <div className="cardName">{cardContent}</div>

@@ -1,4 +1,4 @@
-import "./DatabaseInput.css";
+import './DatabaseInput.css';
 
 export interface DatabaseInputProps {
   placeholder?: string;
@@ -8,13 +8,21 @@ export interface DatabaseInputProps {
   tool?: React.ReactNode;
 }
 
-function DatabaseInput({ placeholder, inputValue, action, className, tool }: DatabaseInputProps): JSX.Element {
+function DatabaseInput({
+  placeholder,
+  inputValue,
+  action,
+  className,
+  tool
+}: DatabaseInputProps): JSX.Element {
   return (
-    <div className={`${className ?? ""} databaseInputRoot`}>
+    <div className={`${className ?? ''} databaseInputRoot`}>
       <input
         placeholder={placeholder}
         value={inputValue}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => action(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          action(e.target.value)
+        }
       />
       {tool}
     </div>

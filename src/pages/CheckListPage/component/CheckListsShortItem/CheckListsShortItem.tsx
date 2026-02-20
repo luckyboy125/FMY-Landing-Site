@@ -1,13 +1,12 @@
-import { useState, useCallback } from "react";
-import ColorBtn from "../../../../components/ColorBtn/ColorBtn";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
-import checkIcon from "../../../../asset/images/check_icon.svg";
-import "./CheckListsShortItem.css";
+import { useState, useCallback } from 'react';
+import ColorBtn from '../../../../components/ColorBtn/ColorBtn';
+import ThreeDotBtn from '../../../../components/ThreeDotBtn/ThreeDotBtn';
+import checkIcon from '../../../../asset/images/check_icon.svg';
+import './CheckListsShortItem.css';
 
 export interface CheckListsShortItemProps {
   className?: string;
   title: string;
-  type: string;
   avatar: string;
   user: string;
   click?: () => void;
@@ -16,10 +15,9 @@ export interface CheckListsShortItemProps {
 function CheckListsShortItem({
   className,
   title,
-  type,
   avatar,
   user,
-  click,
+  click
 }: CheckListsShortItemProps): JSX.Element {
   const [checkStatus, setCheckStatus] = useState(false);
 
@@ -29,7 +27,7 @@ function CheckListsShortItem({
 
   return (
     <div
-      className={`checkListsShortItem ${className ?? ""}`}
+      className={`checkListsShortItem ${className ?? ''}`}
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
       <div className="circleIcon" onClick={handleCheck}>
@@ -42,14 +40,19 @@ function CheckListsShortItem({
       <div className="checkListsShortItemContent">
         <div
           className="title"
-          style={{ textDecoration: checkStatus ? "line-through" : "initial" }}
+          style={{ textDecoration: checkStatus ? 'line-through' : 'initial' }}
         >
           {title}
         </div>
         <div className="des"></div>
         <div className="items">
           <div className="itemsFirst">
-            <ColorBtn className="itemBtn" name="10 Mar" color="#FF0000" width={128} />
+            <ColorBtn
+              className="itemBtn"
+              name="10 Mar"
+              color="#FF0000"
+              width={128}
+            />
             <div className="avatarRoot">
               <img src={avatar} className="avatar" alt="avatar" />
               {user}

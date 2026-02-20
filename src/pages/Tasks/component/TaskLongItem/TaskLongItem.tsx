@@ -1,7 +1,7 @@
-import { useEffect, useState, useCallback } from "react";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
-import checkIcon from "../../../../asset/images/check_icon.svg";
-import "./TaskLongItem.css";
+import { useEffect, useState, useCallback } from 'react';
+import ThreeDotBtn from '../../../../components/ThreeDotBtn/ThreeDotBtn';
+import checkIcon from '../../../../asset/images/check_icon.svg';
+import './TaskLongItem.css';
 
 export interface TaskLongItemProps {
   className?: string;
@@ -12,18 +12,25 @@ export interface TaskLongItemProps {
   date: number;
 }
 
-function TaskLongItem({ className, title, avatar, dropdown, click, date }: TaskLongItemProps): JSX.Element {
+function TaskLongItem({
+  className,
+  title,
+  avatar,
+  dropdown,
+  click,
+  date
+}: TaskLongItemProps): JSX.Element {
   const options: Intl.DateTimeFormatOptions = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   };
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState('');
   const [checkStatus, setCheckStatus] = useState(false);
 
   useEffect(() => {
-    setTime(new Date(date * 1000).toLocaleDateString("en-US", options));
+    setTime(new Date(date * 1000).toLocaleDateString('en-US', options));
   }, [date]);
 
   const handleCheck = useCallback(() => {
@@ -32,7 +39,7 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }: TaskL
 
   return (
     <div
-      className={`taskLongItem ${className ?? ""}`}
+      className={`taskLongItem ${className ?? ''}`}
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
       <div className="firstPart">
@@ -42,7 +49,7 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }: TaskL
         <div className="titleRoot">
           <div
             className="taskTitle"
-            style={{ textDecoration: checkStatus ? "line-through" : "initial" }}
+            style={{ textDecoration: checkStatus ? 'line-through' : 'initial' }}
           >
             {title}
           </div>
@@ -55,10 +62,10 @@ function TaskLongItem({ className, title, avatar, dropdown, click, date }: TaskL
           <span className="avatarDes"></span>
         </div>
         <div className="itemDate">
-          <div className="itemDateDay">{time.split(",")[0]}</div>
+          <div className="itemDateDay">{time.split(',')[0]}</div>
           <div className="itemDateTime">
-            {time.split(",")[1]}
-            {time.split(",")[2]}
+            {time.split(',')[1]}
+            {time.split(',')[2]}
           </div>
         </div>
         <ThreeDotBtn action={() => click?.()} />

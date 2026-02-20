@@ -1,15 +1,17 @@
-import closeIcon from "../../../../asset/images/close_icon.svg";
-import searchIcon from "../../../../asset/images/search_icon.svg";
-import "./HashtagSelectInput.css";
+import closeIcon from '../../../../asset/images/close_icon.svg';
+import searchIcon from '../../../../asset/images/search_icon.svg';
+import './HashtagSelectInput.css';
 
 export interface HashtagSelectInputProps {
   className?: string;
 }
 
-function HashtagSelectInput({ className }: HashtagSelectInputProps): JSX.Element {
+function HashtagSelectInput({
+  className
+}: HashtagSelectInputProps): JSX.Element {
   return (
     <>
-      <div className={`hashtagSelectInputRoot ${className ?? ""}`}>
+      <div className={`hashtagSelectInputRoot ${className ?? ''}`}>
         <div className="selectContent">
           <div className="select">
             Messi <img src={closeIcon} alt="closeIcon" />

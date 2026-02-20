@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
-import { staticHeight, staticWidth } from "./constants";
+import { useState, useEffect, useCallback } from 'react';
+import { staticHeight, staticWidth } from './constants';
 
 export interface WindowDimensions {
   width: number;
@@ -38,11 +38,11 @@ export function useWindowDimensions(): WindowDimensions {
       setWindowDimensions(getWindowDimensions());
     };
 
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("fullscreenchange", handleResize);
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('fullscreenchange', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("fullscreenchange", handleResize);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('fullscreenchange', handleResize);
     };
   }, []);
 

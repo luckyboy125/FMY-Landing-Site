@@ -1,4 +1,4 @@
-import "./HashtagChartCard.css";
+import './HashtagChartCard.css';
 
 export interface HashtagChartDataItem {
   color: string;
@@ -18,11 +18,11 @@ function HashtagChartCard({
   title,
   size,
   description,
-  chartData,
+  chartData
 }: HashtagChartCardProps): JSX.Element {
   return (
     <>
-      <div className={`${className ?? ""} hashtagChartCardRoot`}>
+      <div className={`${className ?? ''} hashtagChartCardRoot`}>
         <div className="title">{title}</div>
         <div className="hashtagChartCardRoot1">
           <div className="desRoot">
@@ -39,7 +39,7 @@ function HashtagChartCard({
                 key={index}
                 style={{
                   height: `${(98.67 / 100) * item.value}px`,
-                  background: item.color,
+                  background: item.color
                 }}
               />
             ))}

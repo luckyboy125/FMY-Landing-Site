@@ -1,6 +1,6 @@
-import ModalLayout from "../ModalLayout/ModalLayout";
-import closeIcon from "../../asset/images/close_icon.svg";
-import "./DeleteModal.css";
+import ModalLayout from '../ModalLayout/ModalLayout';
+import closeIcon from '../../asset/images/close_icon.svg';
+import './DeleteModal.css';
 
 export interface DeleteModalProps {
   className?: string;
@@ -10,10 +10,10 @@ export interface DeleteModalProps {
 }
 
 function DeleteModal({
-  className = "",
+  className = '',
   show,
   onClose,
-  description,
+  description
 }: DeleteModalProps): JSX.Element {
   return (
     <ModalLayout

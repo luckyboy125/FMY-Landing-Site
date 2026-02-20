@@ -1,32 +1,32 @@
-import { useState, useCallback } from "react";
-import { useOutsideClick } from "../../../../hook/DetectOutsideClick";
-import { card_type, type CardTypeKey } from "../../../../helpers/home.helper";
-import ThreeDotBtn from "../../../../components/ThreeDotBtn/ThreeDotBtn";
-import DeleteModal from "../../../../components/DeleteModal/DeleteModal";
-import ModalLayout from "../../../../components/ModalLayout/ModalLayout";
-import person3 from "../../../../asset/person3.svg";
-import w3 from "../../../../asset/images/social/w3.svg";
-import ball from "../../../../asset/images/social/ball.svg";
-import vimeo from "../../../../asset/images/social/vimeo.svg";
-import gmail from "../../../../asset/images/social/gmail.svg";
-import viber from "../../../../asset/images/social/viber.svg";
-import wechat from "../../../../asset/images/social/wechat.svg";
-import tiktok from "../../../../asset/images/social/tiktok.svg";
-import CloseIcon from "../../../../asset/images/close_icon.svg";
-import reddit from "../../../../asset/images/social/reddit.svg";
-import youtube from "../../../../asset/images/social/youtube.svg";
-import twitter from "../../../../asset/images/social/twitter.svg";
-import spotify from "../../../../asset/images/social/spotify.svg";
-import behance from "../../../../asset/images/social/behance.svg";
-import blogger from "../../../../asset/images/social/blogger.svg";
-import facebook from "../../../../asset/images/social/facebook.svg";
-import telegram from "../../../../asset/images/social/telegram.svg";
-import linkedin from "../../../../asset/images/social/linkedin.svg";
-import dribbble from "../../../../asset/images/social/dribbble.svg";
-import whatsapp from "../../../../asset/images/social/whatsapp.svg";
-import instagram from "../../../../asset/images/social/instagram.svg";
-import pinterest from "../../../../asset/images/social/pinterest.svg";
-import "./CommentModal.css";
+import { useState, useCallback } from 'react';
+import { useOutsideClick } from '../../../../hook/DetectOutsideClick';
+import { card_type, type CardTypeKey } from '../../../../helpers/home.helper';
+import ThreeDotBtn from '../../../../components/ThreeDotBtn/ThreeDotBtn';
+import DeleteModal from '../../../../components/DeleteModal/DeleteModal';
+import ModalLayout from '../../../../components/ModalLayout/ModalLayout';
+import person3 from '../../../../asset/person3.svg';
+import w3 from '../../../../asset/images/social/w3.svg';
+import ball from '../../../../asset/images/social/ball.svg';
+import vimeo from '../../../../asset/images/social/vimeo.svg';
+import gmail from '../../../../asset/images/social/gmail.svg';
+import viber from '../../../../asset/images/social/viber.svg';
+import wechat from '../../../../asset/images/social/wechat.svg';
+import tiktok from '../../../../asset/images/social/tiktok.svg';
+import CloseIcon from '../../../../asset/images/close_icon.svg';
+import reddit from '../../../../asset/images/social/reddit.svg';
+import youtube from '../../../../asset/images/social/youtube.svg';
+import twitter from '../../../../asset/images/social/twitter.svg';
+import spotify from '../../../../asset/images/social/spotify.svg';
+import behance from '../../../../asset/images/social/behance.svg';
+import blogger from '../../../../asset/images/social/blogger.svg';
+import facebook from '../../../../asset/images/social/facebook.svg';
+import telegram from '../../../../asset/images/social/telegram.svg';
+import linkedin from '../../../../asset/images/social/linkedin.svg';
+import dribbble from '../../../../asset/images/social/dribbble.svg';
+import whatsapp from '../../../../asset/images/social/whatsapp.svg';
+import instagram from '../../../../asset/images/social/instagram.svg';
+import pinterest from '../../../../asset/images/social/pinterest.svg';
+import './CommentModal.css';
 
 export interface CommentModalProps {
   className?: string;
@@ -36,12 +36,12 @@ export interface CommentModalProps {
 }
 
 function CommentModal({
-  className = "",
+  className = '',
   show,
   onClose,
-  type,
+  type
 }: CommentModalProps): JSX.Element {
-  const [commentArea, setCommentArea] = useState("");
+  const [commentArea, setCommentArea] = useState('');
   const [settingDropdownShow, setSettingDropdownShow] = useState(false);
   const [deleteModalShow, setDeleteModalShow] = useState(false);
   const settingDropdownRef = useOutsideClick<HTMLDivElement>(() =>

@@ -1,6 +1,6 @@
-import ChartLayout from "../../../../components/ChartLayout/ChartLayout";
-import ActionButton from "../../../../components/ActionButton/ActionButton";
-import "./Stats.css";
+import ChartLayout from '../../../../components/ChartLayout/ChartLayout';
+import ActionButton from '../../../../components/ActionButton/ActionButton';
+import './Stats.css';
 
 function Stats(): JSX.Element {
   return (
@@ -11,11 +11,11 @@ function Stats(): JSX.Element {
     >
       <div
         className="statsItems"
-        style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.5)" }}
+        style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.5)' }}
       >
         <div
           className="statsItem"
-          style={{ borderRight: "1px solid rgba(255, 255, 255, 0.5)" }}
+          style={{ borderRight: '1px solid rgba(255, 255, 255, 0.5)' }}
         >
           <div className="statsItemCount">1.7k</div>
           <div className="statsItemDes">Flagged posts</div>
@@ -30,7 +30,7 @@ function Stats(): JSX.Element {
       <div className="statsItems">
         <div
           className="statsItem"
-          style={{ borderRight: "1px solid rgba(255, 255, 255, 0.5)" }}
+          style={{ borderRight: '1px solid rgba(255, 255, 255, 0.5)' }}
         >
           <div className="statsItemCount">1.7k</div>
           <div className="statsItemDes">Flagged posts</div>

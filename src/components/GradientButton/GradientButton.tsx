@@ -1,5 +1,5 @@
-import { memo } from "react";
-import "./GradientButton.css";
+import { memo } from 'react';
+import './GradientButton.css';
 
 export interface GradientButtonProps {
   content?: React.ReactNode;
@@ -8,7 +8,7 @@ export interface GradientButtonProps {
 
 function GradientButton({
   content,
-  className = "",
+  className = ''
 }: GradientButtonProps): JSX.Element {
   return <div className={`gradientBtnRoot ${className}`}>{content}</div>;
 }
