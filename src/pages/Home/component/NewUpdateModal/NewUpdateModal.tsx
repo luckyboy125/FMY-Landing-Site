@@ -30,7 +30,7 @@ const CASE_SELECT = [
   'Lorem ipsum'
 ];
 
-function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
+function NewUpdateModal({ show, onClose }: NewUpdateModalProps) {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
@@ -43,11 +43,12 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
 
   const handleCategory = useCallback(
     (category: string) => {
-      query.set('newupdate_category', category);
-      navigate({ pathname: location.pathname, search: query.toString() });
+      const next = new URLSearchParams(location.search);
+      next.set('newupdate_category', category);
+      navigate({ pathname: location.pathname, search: next.toString() });
       setCategorySelectShow(false);
     },
-    [navigate, location.pathname, query]
+    [navigate, location.pathname, location.search]
   );
 
   const [caseValue, setCaseValue] = useState('');
@@ -58,11 +59,12 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
 
   const handleCase = useCallback(
     (item: string) => {
-      query.set('newupdate_case', item);
-      navigate({ pathname: location.pathname, search: query.toString() });
+      const next = new URLSearchParams(location.search);
+      next.set('newupdate_case', item);
+      navigate({ pathname: location.pathname, search: next.toString() });
       setCaseSelectShow(false);
     },
-    [navigate, location.pathname, query]
+    [navigate, location.pathname, location.search]
   );
 
   const [updateValue, setUpdateValue] = useState('');
@@ -109,6 +111,7 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
                       }
                       onClick={() => handleCategory(item)}
                       role="option"
+                      aria-selected={query.get('newupdate_category') === item}
                     >
                       {item}
                     </div>
@@ -147,6 +150,7 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps): JSX.Element {
                       }
                       onClick={() => handleCase(item)}
                       role="option"
+                      aria-selected={query.get('newupdate_case') === item}
                     >
                       {item}
                     </div>

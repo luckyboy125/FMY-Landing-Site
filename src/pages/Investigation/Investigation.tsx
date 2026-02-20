@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Vega } from 'react-vega';
+import type { VisualizationSpec } from 'vega-embed';
 import {
   post_percent_data,
   top_nfluencer,
@@ -93,7 +94,7 @@ const WordCloudOption = {
   ]
 };
 
-function Investigation(): JSX.Element {
+function Investigation() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
@@ -103,13 +104,14 @@ function Investigation(): JSX.Element {
 
   const handleTab = useCallback(
     (tab: string) => {
-      query.set('investigation_tab', tab);
+      const next = new URLSearchParams(location.search);
+      next.set('investigation_tab', tab);
       navigate({
         pathname: location.pathname,
-        search: query.toString()
+        search: next.toString()
       });
     },
-    [location.pathname, navigate, query]
+    [location.pathname, navigate, location.search]
   );
 
   return (
@@ -449,7 +451,7 @@ function Investigation(): JSX.Element {
               </div>
             </div>
             <div className="end">
-              <Vega spec={WordCloudOption} actions={false} />
+              <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
             </div>
           </div>
         </div>

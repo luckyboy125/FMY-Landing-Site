@@ -8,7 +8,7 @@ export interface LoginProps {
   onSubmit: () => void;
 }
 
-function Login({ onSubmit }: LoginProps): JSX.Element {
+function Login({ onSubmit }: LoginProps) {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
 
@@ -64,7 +64,7 @@ function Login({ onSubmit }: LoginProps): JSX.Element {
         </div>
         <div className="termLetter">
           By entering your e-mail address you confirm that you agree with our{' '}
-          <a href="#">Terms of Service</a>
+          <a href="/terms-of-service">Terms of Service</a>
         </div>
       </div>
     </div>

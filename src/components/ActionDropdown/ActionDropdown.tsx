@@ -3,10 +3,9 @@ import "./ActionDropdown.css";
 
 export interface ActionDropdownProps {
   className?: string;
-  type?: string;
 }
 
-function ActionDropdown({ className = "" }: ActionDropdownProps): JSX.Element {
+function ActionDropdown({ className = "" }: ActionDropdownProps) {
   return (
     <div className={`actionDropdownRoot ${className}`}>
       Related cases

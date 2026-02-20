@@ -9,7 +9,7 @@ import './Home.css';
 
 const COMPARE_OPTIONS = ['This Week', 'Custom'];
 
-function Home(): JSX.Element {
+function Home() {
   const [modalShow, setModalShow] = useState(false);
 
   const openModal = useCallback(() => setModalShow(true), []);

@@ -8,7 +8,7 @@ export interface HashtagSelectInputProps {
 
 function HashtagSelectInput({
   className
-}: HashtagSelectInputProps): JSX.Element {
+}: HashtagSelectInputProps) {
   return (
     <>
       <div className={`hashtagSelectInputRoot ${className ?? ''}`}>

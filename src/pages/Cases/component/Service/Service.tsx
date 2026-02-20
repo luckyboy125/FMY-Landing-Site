@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Vega } from 'react-vega';
+import type { VisualizationSpec } from 'vega-embed';
 import { doughnutChartColorData } from '../../../../helpers/chart.helper';
 import ColorBtn from '../../../../components/ColorBtn/ColorBtn';
 import CardLayout from '../../../../components/CardLayout/CardLayout';
@@ -129,7 +130,7 @@ const WordCloudOption = {
   ]
 };
 
-function Service(): JSX.Element {
+function Service() {
   const [searchValue, setSearchValue] = useState('');
   const [mockTableData, setMockTableData] = useState<ServiceTableRow[]>([]);
   const [mockLineData, setMockLineData] = useState<number[]>([]);
@@ -238,7 +239,7 @@ function Service(): JSX.Element {
               )}
             </div>
           </div>
-          <RoundButton className="toolRoot" />
+          <RoundButton className="toolRoot" action={() => {}} />
         </CardLayout>
         <CardLayout
           className="tagOverTimeRoot"
@@ -277,7 +278,7 @@ function Service(): JSX.Element {
         header={<div className="headerTitle">Word Cloud</div>}
         contentStyle="wordCloud"
       >
-        <Vega spec={WordCloudOption} actions={false} />
+        <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
       </CardLayout>
       <CustomizeTable
         className="serviceRoot3"

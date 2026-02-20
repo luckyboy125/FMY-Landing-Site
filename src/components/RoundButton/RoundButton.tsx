@@ -6,10 +6,7 @@ export interface RoundButtonProps {
   action: () => void;
 }
 
-function RoundButton({
-  className = '',
-  action
-}: RoundButtonProps): JSX.Element {
+function RoundButton({ className = '', action }: RoundButtonProps) {
   const handleClick = useCallback(() => {
     action();
   }, [action]);

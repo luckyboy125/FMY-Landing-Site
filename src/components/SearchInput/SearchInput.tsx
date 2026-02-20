@@ -19,7 +19,7 @@ function SearchInput({
   inputWith = false,
   onlyClick = false,
   clickAction
-}: SearchInputProps): JSX.Element {
+}: SearchInputProps) {
   const [initStatus, setInitStatus] = useState(true);
   const searchInputRef = useOutsideClick<HTMLDivElement>(() =>
     setInitStatus(true)
@@ -38,6 +38,12 @@ function SearchInput({
       className={`searchInputRoot ${className}`}
       style={{ cursor: onlyClick ? 'pointer' : undefined }}
       onClick={handleClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleClick();
+        }
+      }}
       ref={searchInputRef}
       role="button"
       tabIndex={0}

@@ -27,7 +27,7 @@ function CheckListsLongItem({
   avatar,
   user,
   type
-}: CheckListsLongItemProps): JSX.Element {
+}: CheckListsLongItemProps) {
   const [checkStatus, setCheckStatus] = useState(false);
 
   const handleCheck = useCallback(() => {

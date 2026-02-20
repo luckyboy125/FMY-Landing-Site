@@ -12,7 +12,7 @@ function LetterSelectButton({
   className,
   selected,
   action
-}: LetterSelectButtonProps): JSX.Element {
+}: LetterSelectButtonProps) {
   return (
     <div className={`${className ?? ''} letterSelectButtonRoot`}>
       {data?.map((item, index) => (

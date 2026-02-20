@@ -22,7 +22,7 @@ interface NetworksTableRow {
   number_of_users: number;
 }
 
-function Networks(): JSX.Element {
+function Networks() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
@@ -49,13 +49,14 @@ function Networks(): JSX.Element {
 
   const handleTab = useCallback(
     (tab: string) => {
-      query.set('networks_tab', tab);
+      const next = new URLSearchParams(location.search);
+      next.set('networks_tab', tab);
       navigate({
         pathname: location.pathname,
-        search: query.toString()
+        search: next.toString()
       });
     },
-    [location.pathname, navigate, query]
+    [location.pathname, navigate, location.search]
   );
 
   useEffect(() => {

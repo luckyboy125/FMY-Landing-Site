@@ -9,7 +9,7 @@ export interface GradientButtonProps {
 function GradientButton({
   content,
   className = ''
-}: GradientButtonProps): JSX.Element {
+}: GradientButtonProps) {
   return <div className={`gradientBtnRoot ${className}`}>{content}</div>;
 }
 

@@ -3,7 +3,7 @@ import ChartLayout from '../../../../components/ChartLayout/ChartLayout';
 import ActionButton from '../../../../components/ActionButton/ActionButton';
 import './TopPlatforms.css';
 
-function TopPlatforms(): JSX.Element {
+function TopPlatforms() {
   const option = {
     xAxis: { show: false },
     yAxis: { show: false, max: 150, min: 0 },

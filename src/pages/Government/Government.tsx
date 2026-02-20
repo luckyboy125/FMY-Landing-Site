@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Vega } from 'react-vega';
+import type { VisualizationSpec } from 'vega-embed';
 import GovernmentCard from './component/GovernmentCard/GovernmentCard';
 import BackBtn from '../../components/BackBtn/BackBtn';
 import SearchInput from '../../components/SearchInput/SearchInput';
@@ -99,7 +100,7 @@ const WordCloudOption = {
   ]
 };
 
-function Government(): JSX.Element {
+function Government() {
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState('');
 
@@ -195,7 +196,7 @@ function Government(): JSX.Element {
               </div>
             </div>
             <div className="casesPart">
-              <Vega spec={WordCloudOption} actions={false} />
+              <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
             </div>
           </div>
         </div>

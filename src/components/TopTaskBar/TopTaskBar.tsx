@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import SearchLogo from '../../asset/sidebar/SearchLogo.svg';
 import './TopTaskBar.css';
 
-function TopTaskBar(): JSX.Element {
+function TopTaskBar() {
   const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
   }, []);

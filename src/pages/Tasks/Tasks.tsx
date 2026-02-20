@@ -10,7 +10,7 @@ import Person2 from '../../asset/person2.svg';
 import Person3 from '../../asset/person3.svg';
 import './Tasks.css';
 
-function Tasks(): JSX.Element {
+function Tasks() {
   const [newTaskModalShow, setNewTaskModalShow] = useState(false);
   const tabData = ['All', 'Complete'];
   const [tab, setTab] = useState(tabData[0]);

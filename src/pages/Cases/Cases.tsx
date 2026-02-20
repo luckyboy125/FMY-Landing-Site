@@ -44,7 +44,7 @@ const RAW_DATA: BubbleDatum[] = [
   { category: 'Ipsum', amount: 0.81 }
 ];
 
-function Cases(): JSX.Element {
+function Cases() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
@@ -52,13 +52,14 @@ function Cases(): JSX.Element {
 
   const handleTab = useCallback(
     (tab: string) => {
-      query.set('cases_tab', tab);
+      const next = new URLSearchParams(location.search);
+      next.set('cases_tab', tab);
       navigate({
         pathname: location.pathname,
-        search: query.toString()
+        search: next.toString()
       });
     },
-    [navigate, location.pathname, query]
+    [navigate, location.pathname, location.search]
   );
 
   const currentTab =

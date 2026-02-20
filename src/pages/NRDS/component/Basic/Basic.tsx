@@ -22,7 +22,7 @@ interface BasicTableRow {
   keyword: string;
 }
 
-function Basic(): JSX.Element {
+function Basic() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
@@ -40,41 +40,45 @@ function Basic(): JSX.Element {
 
   const handleTableDeleteModal = useCallback(
     (index: string) => {
-      query.set("tabledeletemodal_show", index);
+      const next = new URLSearchParams(location.search);
+      next.set("tabledeletemodal_show", index);
       navigate({
         pathname: location.pathname,
-        search: query.toString(),
+        search: next.toString(),
       });
     },
-    [location.pathname, navigate, query]
+    [location.pathname, navigate, location.search]
   );
 
   const handleTableDeleteModalClose = useCallback(() => {
-    query.delete("tabledeletemodal_show");
+    const next = new URLSearchParams(location.search);
+    next.delete("tabledeletemodal_show");
     navigate({
       pathname: location.pathname,
-      search: query.toString(),
+      search: next.toString(),
     });
-  }, [location.pathname, navigate, query]);
+  }, [location.pathname, navigate, location.search]);
 
   const handleViewModal = useCallback(
     (index: number) => {
-      query.set("tableviewmodal_show", String(index));
+      const next = new URLSearchParams(location.search);
+      next.set("tableviewmodal_show", String(index));
       navigate({
         pathname: location.pathname,
-        search: query.toString(),
+        search: next.toString(),
       });
     },
-    [location.pathname, navigate, query]
+    [location.pathname, navigate, location.search]
   );
 
   const handleViewModalClose = useCallback(() => {
-    query.delete("tableviewmodal_show");
+    const next = new URLSearchParams(location.search);
+    next.delete("tableviewmodal_show");
     navigate({
       pathname: location.pathname,
-      search: query.toString(),
+      search: next.toString(),
     });
-  }, [location.pathname, navigate, query]);
+  }, [location.pathname, navigate, location.search]);
 
   useEffect(() => {
     for (let i = 0; i < 5; i++) {

@@ -20,7 +20,7 @@ function TaskShortItem({
   avatar,
   user,
   click
-}: TaskShortItemProps): JSX.Element {
+}: TaskShortItemProps) {
   const [checkStatus, setCheckStatus] = useState(false);
 
   const handleCheck = useCallback(() => {

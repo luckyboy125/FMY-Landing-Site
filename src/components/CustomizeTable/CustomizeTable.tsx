@@ -13,7 +13,7 @@ function CustomizeTable({
   body,
   tableHeader,
   className = "",
-}: CustomizeTableProps): JSX.Element {
+}: CustomizeTableProps) {
   return (
     <div className={`customizeTableRoot ${className}`}>
       {header}

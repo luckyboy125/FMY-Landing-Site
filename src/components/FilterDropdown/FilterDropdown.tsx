@@ -17,7 +17,7 @@ function FilterDropdown({
   type = 'filter',
   dropRoot,
   dropRootStyle = ''
-}: FilterDropdownProps): JSX.Element {
+}: FilterDropdownProps) {
   const [dropShow, setDropShow] = useState(false);
   const dropDownRootRef = useOutsideClick<HTMLDivElement>(() =>
     setDropShow(false)

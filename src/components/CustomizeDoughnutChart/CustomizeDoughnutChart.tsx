@@ -18,7 +18,7 @@ function CustomizeDoughnutChart({
   label = [],
   colorInfo = [],
   showNumber = false,
-}: CustomizeDoughnutChartProps): JSX.Element {
+}: CustomizeDoughnutChartProps) {
   const [chartColor, setChartColor] = useState<CanvasGradient[]>([]);
 
   useEffect(() => {

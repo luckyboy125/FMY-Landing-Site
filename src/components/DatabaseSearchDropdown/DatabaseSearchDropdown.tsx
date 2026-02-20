@@ -19,7 +19,7 @@ function DatabaseSearchDropdown({
   type,
   children,
   childrenStyle = ''
-}: DatabaseSearchDropdownProps): JSX.Element {
+}: DatabaseSearchDropdownProps) {
   const [dropwDownShow, setDropdownShow] = useState(false);
 
   const handleToggle = useCallback(() => {

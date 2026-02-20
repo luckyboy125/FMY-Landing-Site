@@ -31,7 +31,7 @@ function HomeCard({
   author,
   cardDate,
   commentType
-}: HomeCardProps): JSX.Element {
+}: HomeCardProps) {
   const [modalShow, setModalShow] = useState(false);
 
   const openComment = useCallback(() => setModalShow(true), []);

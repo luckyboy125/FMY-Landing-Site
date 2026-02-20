@@ -6,7 +6,7 @@ export interface BackBtnProps {
   action: () => void;
 }
 
-function BackBtn({ className = "", action }: BackBtnProps): JSX.Element {
+function BackBtn({ className = "", action }: BackBtnProps) {
   const handleClick = useCallback(() => {
     action();
   }, [action]);

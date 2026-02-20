@@ -19,7 +19,7 @@ function HashtagChartCard({
   size,
   description,
   chartData
-}: HashtagChartCardProps): JSX.Element {
+}: HashtagChartCardProps) {
   return (
     <>
       <div className={`${className ?? ''} hashtagChartCardRoot`}>

@@ -14,7 +14,7 @@ function DeleteModal({
   show,
   onClose,
   description
-}: DeleteModalProps): JSX.Element {
+}: DeleteModalProps) {
   return (
     <ModalLayout
       show={show}

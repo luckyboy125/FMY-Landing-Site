@@ -14,7 +14,7 @@ function DropdownLayout({
   children,
   dropRoot,
   dropRootStyle = ''
-}: DropdownLayoutProps): JSX.Element {
+}: DropdownLayoutProps) {
   const [dropShow, setDropShow] = useState(false);
   const dropDownRef = useOutsideClick<HTMLDivElement>(() => setDropShow(false));
 

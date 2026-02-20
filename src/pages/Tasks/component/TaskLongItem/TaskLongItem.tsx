@@ -3,6 +3,13 @@ import ThreeDotBtn from '../../../../components/ThreeDotBtn/ThreeDotBtn';
 import checkIcon from '../../../../asset/images/check_icon.svg';
 import './TaskLongItem.css';
 
+const DATE_FORMAT_OPTIONS: Intl.DateTimeFormatOptions = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+};
+
 export interface TaskLongItemProps {
   className?: string;
   title: string;
@@ -19,18 +26,12 @@ function TaskLongItem({
   dropdown,
   click,
   date
-}: TaskLongItemProps): JSX.Element {
-  const options: Intl.DateTimeFormatOptions = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  };
+}: TaskLongItemProps) {
   const [time, setTime] = useState('');
   const [checkStatus, setCheckStatus] = useState(false);
 
   useEffect(() => {
-    setTime(new Date(date * 1000).toLocaleDateString('en-US', options));
+    setTime(new Date(date * 1000).toLocaleDateString('en-US', DATE_FORMAT_OPTIONS));
   }, [date]);
 
   const handleCheck = useCallback(() => {

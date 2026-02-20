@@ -9,7 +9,7 @@ import Person2 from '../../asset/person2.svg';
 import Person3 from '../../asset/person3.svg';
 import './CheckLists.css';
 
-function CheckLists(): JSX.Element {
+function CheckLists() {
   const [newCheckListModalShow, setNewCheckListModalShow] = useState(false);
   const tabData = ['All', 'Daily', 'Weekly'];
   const [tab, setTab] = useState(tabData[0]);

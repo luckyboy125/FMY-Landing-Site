@@ -15,7 +15,7 @@ interface NrdsDatabaseTableRow {
   keyword: string;
 }
 
-function Database(): JSX.Element {
+function Database() {
   const [searchValue, setSearchValue] = useState("");
   const [mockTableData, setMockTableData] = useState<NrdsDatabaseTableRow[]>([]);
 
