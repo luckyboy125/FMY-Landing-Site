@@ -1,10 +1,12 @@
-.filterDropdownRoot {
+/* Block: filter-dropdown (BEM) */
+
+.filter-dropdown {
   display: flex;
   align-items: center;
   padding: 10px 20px 9px 9px;
   background: #ecf0f51a;
   border-radius: 30px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -14,7 +16,7 @@
   position: relative;
 }
 
-.filterDropdownRoot .inputIcon {
+.filter-dropdown__icon {
   width: 31px;
   min-width: 31px;
   height: 31px;
@@ -26,10 +28,10 @@
   border-radius: 100%;
 }
 
-.filterDropdownRoot .filterDropdownIconRoot {
+.filter-dropdown__label {
   display: flex;
   align-items: center;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -37,9 +39,13 @@
   color: #ffffff;
 }
 
-.filterDropdownRoot .filterDropdownIconRoot img {
-  font-size: 9px;
-  line-height: 5px;
-  color: #fff;
+.filter-dropdown__caret {
   margin-left: 5px;
+}
+
+.filter-dropdown__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
 }

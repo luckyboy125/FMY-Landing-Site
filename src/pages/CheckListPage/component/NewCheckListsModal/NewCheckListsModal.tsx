@@ -66,21 +66,21 @@ function NewCheckListsModal({
         Due date:
         <ColorBtn
           className="todayBtn"
-          name="Today"
+          label="Today"
           width={86}
           color="#75B3FF"
         />
         <ColorBtn
           className="tomorrowBtn"
-          name="Tomorrow"
+          label="Tomorrow"
           width={120}
           color="#75B3FF"
         />
         <ColorBtn
           className="otherBtn"
           icon={<img src={Calendar} className="calendarIcon" alt="calendar" />}
-          arrowShow
-          name="Other"
+          showArrow
+          label="Other"
           width={139}
           color="#fff"
         />
@@ -89,8 +89,8 @@ function NewCheckListsModal({
         Add participants:
         <ColorBtn
           className="participantsBtn"
-          arrowShow
-          name="None"
+          showArrow
+          label="None"
           width={97}
           color="#fff"
         />
@@ -108,8 +108,8 @@ function NewCheckListsModal({
           Priority:
           <ColorBtn
             className="itemBtn"
-            arrowShow
-            name="None"
+            showArrow
+            label="None"
             width={97}
             color="#fff"
           />
@@ -118,8 +118,8 @@ function NewCheckListsModal({
           Repeat:
           <ColorBtn
             className="itemBtn"
-            arrowShow
-            name="None"
+            showArrow
+            label="None"
             width={97}
             color="#fff"
           />

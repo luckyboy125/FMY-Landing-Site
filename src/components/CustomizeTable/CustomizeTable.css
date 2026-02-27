@@ -1,4 +1,6 @@
-.customizeTableRoot {
+/* Block: customize-table (BEM) */
+
+.customize-table {
   margin-top: 30px;
   margin-bottom: 30px;
   background: linear-gradient(
@@ -9,21 +11,21 @@
   border-radius: 16px;
 }
 
-.customizeTable {
+.customize-table__table {
   width: 100%;
 }
 
-.customizeTable thead {
+.customize-table__table thead {
   background: rgba(117, 179, 255, 0.1);
 }
 
-.customizeTable thead tr th:first-child {
+.customize-table__table thead tr th:first-child {
   padding-left: 50px;
   text-align: left;
 }
 
-.customizeTable thead th {
-  font-family: "Helvetica";
+.customize-table__table thead th {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -33,47 +35,49 @@
   height: 50px;
 }
 
-.customizeTable tbody tr {
+.customize-table__table tbody tr {
   border: 2px solid rgba(143, 146, 161, 0.1);
 }
 
-.customizeTable tbody tr td:first-child {
+.customize-table__table tbody tr td:first-child {
   padding-left: 50px;
   text-align: left !important;
 }
 
-.customizeTable tbody td {
+.customize-table__table tbody td {
   text-align: center;
   height: 88px;
 }
 
-.customizeTableRoot .customizeTablePaginationRoot {
+.customize-table__pagination {
   padding: 30px 0;
 }
 
-.customizeTableRoot .customizeTablePaginationRoot .customizeTablePagination {
+.customize-table__pagination-inner {
   display: flex;
   align-items: center;
   width: fit-content;
   margin: auto;
 }
 
-.customizeTableRoot
-  .customizeTablePaginationRoot
-  .customizeTablePagination
-  .toolLeft {
+.customize-table__nav {
   display: flex;
-  margin-right: 99px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
   cursor: pointer;
+  font: inherit;
+  color: inherit;
 }
 
-.customizeTableRoot
-  .customizeTablePaginationRoot
-  .customizeTablePagination
-  .toolLeft
-  span {
+.customize-table__nav--prev {
+  margin-right: 99px;
+}
+
+.customize-table__nav--prev span {
   padding-bottom: 3px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -82,31 +86,18 @@
   border-bottom: solid 1.5px #75b3ff;
 }
 
-.customizeTableRoot
-  .customizeTablePaginationRoot
-  .customizeTablePagination
-  .toolLeft
-  img {
+.customize-table__nav--prev img {
   margin-right: 5px;
   margin-bottom: 4.5px;
 }
 
-.customizeTableRoot
-  .customizeTablePaginationRoot
-  .customizeTablePagination
-  .toolRight {
-  display: flex;
+.customize-table__nav--next {
   margin-left: 99px;
-  cursor: pointer;
 }
 
-.customizeTableRoot
-  .customizeTablePaginationRoot
-  .customizeTablePagination
-  .toolRight
-  span {
+.customize-table__nav--next span {
   padding-bottom: 3px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -115,24 +106,20 @@
   border-bottom: solid 1.5px #75b3ff;
 }
 
-.customizeTableRoot
-  .customizeTablePaginationRoot
-  .customizeTablePagination
-  .toolRight
-  img {
+.customize-table__nav--next img {
   margin-left: 5px;
   margin-bottom: 4.5px;
   transform: rotate(180deg);
 }
 
-.customizeTableRoot .customizeTablePaginationContent {
+.customize-table__pages {
   display: flex;
   align-items: center;
   width: fit-content;
 }
 
-.customizeTableRoot .customizeTablePaginationContent .item {
-  font-family: "Helvetica";
+.customize-table__page {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -149,22 +136,8 @@
   cursor: pointer;
 }
 
-.customizeTableRoot .customizeTablePaginationContent .activeItem {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
+.customize-table__page--active {
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 40px;
-  width: 40px;
-  min-height: 40px;
-  height: 40px;
-  cursor: pointer;
   border-radius: 50%;
   background: #75b3ff;
 }

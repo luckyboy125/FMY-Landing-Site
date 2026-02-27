@@ -1,8 +1,10 @@
-.casesRoot {
+/* Block: cases (BEM) */
+.cases {
   padding: 2px 35px 50px 30px;
 }
-.casesRoot .casesTitle {
-  font-family: "Helvetica";
+
+.cases__title {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
@@ -12,48 +14,56 @@
   padding: 0 6px;
   margin-top: 6px;
 }
-.casesRoot .casesTab .actionTabItem {
+
+.cases__tabs .actionTabItem {
   padding: 4px !important;
   margin-right: 42px !important;
 }
-.casesRoot .casesTab .actionTabItem:last-child {
+
+.cases__tabs .actionTabItem:last-child {
   margin-right: 0 !important;
 }
-.casesRoot .casesTab .active {
+
+.cases__tabs .active {
   margin-bottom: -2px !important;
 }
-.casesRoot .casesHeaderRoot {
+
+.cases__header {
   padding: 0 16px 0 6px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-.casesRoot .casesHeaderBtn {
+
+.cases__primary-btn {
   padding: 14px 20px !important;
   margin-bottom: 2px;
 }
-.casesRoot .casesContainer {
+
+.cases__content {
   margin-top: 29px;
   text-align: center;
+  overflow: hidden;
+  min-height: 900px;
 }
 
-.casesRoot .casesContainer .casesChartWrapper {
+.cases__chart-wrap {
   width: 100%;
   min-height: 900px;
   position: relative;
 }
 
-.casesRoot .casesContainer .casesChartWrapper .bubble-chart {
+.cases__chart-wrap .bubble-chart {
   display: block;
 }
 
-.casesRoot .casesHeaderRoot .lastItemRoot {
+.cases__header-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.casesRoot .casesHeaderRoot .lastItemRoot .caseSearchInput {
+.cases__search {
   margin-right: 20px;
   padding: 10px 20px 10px 10px !important;
   margin-bottom: 1px;

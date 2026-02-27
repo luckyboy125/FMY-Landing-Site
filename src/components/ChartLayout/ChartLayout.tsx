@@ -2,25 +2,25 @@ import { memo } from "react";
 import "./ChartLayout.css";
 
 export interface ChartLayoutProps {
-  name?: string;
-  button?: React.ReactNode;
+  title?: string;
+  headerAction?: React.ReactNode;
   className?: string;
   children?: React.ReactNode;
 }
 
 function ChartLayout({
-  name,
-  button,
+  title,
+  headerAction,
   className = "",
   children,
 }: ChartLayoutProps) {
   return (
-    <div className={`chartLayout ${className}`}>
-      <div className="chartLayoutHeaderPart">
-        <div className="chartLayoutHeaderPartName">{name}</div>
-        {button}
+    <div className={`chart-layout ${className}`.trim()}>
+      <div className="chart-layout__header">
+        <h2 className="chart-layout__title">{title}</h2>
+        {headerAction}
       </div>
-      <div className="chartLayoutContent">{children}</div>
+      <div className="chart-layout__content">{children}</div>
     </div>
   );
 }

@@ -1,55 +1,58 @@
 import { useEffect, useState, useMemo } from "react";
 import { Line } from "react-chartjs-2";
-import { Chart, registerables } from "chart.js";
+import { Chart, registerables, type Plugin } from "chart.js";
 
 Chart.register(...registerables);
 
-export interface LineChartDataItem {
+const LINE_CHART_CANVAS_ID = "line-chart-canvas";
+const LINE_CHART_TOOLTIP_ID = "line-chart-tooltip";
+
+export interface LineChartSeries {
   value: number[];
-  line_color: [string, string];
+  lineColor: [string, string];
   fill?: boolean;
 }
 
 export interface CustomizeLineChartProps {
-  data?: LineChartDataItem[];
-  label?: string[];
+  data?: LineChartSeries[];
+  labels?: string[];
   width?: number;
   height?: number;
 }
 
 function CustomizeLineChart({
   data,
-  label,
+  labels,
   width,
   height,
 }: CustomizeLineChartProps) {
-  const [lineColors, setLineColors] = useState<
+  const [lineGradients, setLineGradients] = useState<
     CanvasGradient | (CanvasGradient | null)[]
   >([]);
-  const [areaColor, setAreaColor] = useState<CanvasGradient | "">("");
+  const [areaGradient, setAreaGradient] = useState<CanvasGradient | "">("");
 
   useEffect(() => {
-    const canvas = document.getElementById("line_chart") as HTMLCanvasElement | null;
+    const canvas = document.getElementById(LINE_CHART_CANVAS_ID) as HTMLCanvasElement | null;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const _areacolor = ctx.createLinearGradient(0, 0, 0, 230);
-    _areacolor.addColorStop(0, "#A0CFFF94");
-    _areacolor.addColorStop(1, "#A0CFFF00");
-    setAreaColor(_areacolor);
+    const gradient = ctx.createLinearGradient(0, 0, 0, 230);
+    gradient.addColorStop(0, "#A0CFFF94");
+    gradient.addColorStop(1, "#A0CFFF00");
+    setAreaGradient(gradient);
 
-    const colorArray: CanvasGradient[] = [];
-    data?.forEach((item) => {
-      const gradientColor = ctx.createLinearGradient(0, 0, 0, 100);
-      gradientColor.addColorStop(0, item.line_color[0]);
-      gradientColor.addColorStop(1, item.line_color[1]);
-      colorArray.push(gradientColor);
+    const gradients: CanvasGradient[] = [];
+    data?.forEach((series) => {
+      const lineGradient = ctx.createLinearGradient(0, 0, 0, 100);
+      lineGradient.addColorStop(0, series.lineColor[0]);
+      lineGradient.addColorStop(1, series.lineColor[1]);
+      gradients.push(lineGradient);
     });
-    setLineColors(colorArray);
+    setLineGradients(gradients);
   }, [data]);
 
-  const linechartOption = useMemo(
+  const chartOptions = useMemo(
     () => ({
       type: "line" as const,
       responsive: false,
@@ -70,14 +73,14 @@ function CustomizeLineChart({
             tickLength: 0,
           },
           ticks: {
-            color: label?.map((_, index) =>
-              index + 1 === label?.length ? "#75B3FF" : "#fff"
+            color: labels?.map((_, index) =>
+              index + 1 === labels?.length ? "#75B3FF" : "#fff"
             ),
             padding: 20,
             font: {
               family: "Helvetica",
               size: 20,
-              weight: "lighter",
+              weight: "lighter" as const,
               lineHeight: "22px",
             },
           },
@@ -90,10 +93,10 @@ function CustomizeLineChart({
           enabled: false,
           backgroundColor: "#627F9D",
           external: (context: { tooltip: { opacity: number; dataPoints: { label: string; formattedValue: string; dataIndex: number; dataset: { data: unknown[] } }[]; caretX: number; caretY: number } }) => {
-            let tooltipEl = document.getElementById("chartjs-tooltip");
+            let tooltipEl = document.getElementById(LINE_CHART_TOOLTIP_ID);
             if (!tooltipEl) {
               tooltipEl = document.createElement("div");
-              tooltipEl.id = "chartjs-tooltip";
+              tooltipEl.id = LINE_CHART_TOOLTIP_ID;
               tooltipEl.innerHTML = "<table></table>";
               document.body.appendChild(tooltipEl);
             }
@@ -104,10 +107,10 @@ function CustomizeLineChart({
             }
             tooltipEl.classList.remove("below", "no-transform");
             const tooltipData = context.tooltip.dataPoints[0];
-            if (tooltipModel.body && tooltipData) {
+            if (tooltipData) {
               const table = tooltipEl.querySelector("table");
               if (table) {
-                const innerHtml = `<div style="background: #627f9d; padding: 15px; border-radius: 10px; z-index: 1000; position: absolute; display: block; width: 200px;">
+                const tooltipContent = `<div style="background: #627f9d; padding: 15px; border-radius: 10px; z-index: 1000; position: absolute; display: block; width: 200px;">
                   <div style="display: flex; align-items: center; padding: 5px 5px 12px 5px; border-bottom: 1px solid #ffffff1a; overflow: hidden;">
                     <span style="font-family: Helvetica; font-style: normal; font-weight: 400; font-size: 20px; line-height: 29px; color: rgba(255, 255, 255, 0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${tooltipData.label}</span>
                   </div>
@@ -117,15 +120,15 @@ function CustomizeLineChart({
                   </div>
                   <div style="position: absolute; left: ${tooltipData.dataIndex === 0 ? "8px" : tooltipData.dataIndex + 1 === tooltipData.dataset.data.length ? "168px" : "92px"}; bottom: -15px; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 15px solid #627f9d;"></div>
                 </div>`;
-                table.innerHTML = innerHtml;
+                table.innerHTML = tooltipContent;
               }
             }
             (tooltipEl as HTMLElement).style.opacity = "1";
             (tooltipEl as HTMLElement).style.marginLeft =
               tooltipModel.caretX -
-              (tooltipData.dataIndex === 0
+              (tooltipData?.dataIndex === 0
                 ? 20
-                : tooltipData.dataIndex + 1 === tooltipData.dataset.data.length
+                : tooltipData && tooltipData.dataIndex + 1 === tooltipData.dataset.data.length
                 ? 175
                 : 102) +
               "px";
@@ -135,19 +138,19 @@ function CustomizeLineChart({
         },
       },
     }),
-    [label]
+    [labels]
   );
 
-  const linechartData = useMemo(() => {
-    const lineColorsArr = Array.isArray(lineColors) ? lineColors : [];
-    const _datasets =
-      data?.map((item, index) => ({
-        data: item.value,
-        label: "lineChart",
-        borderColor: lineColorsArr[index] ?? undefined,
-        backgroundColor: areaColor || undefined,
+  const chartData = useMemo(() => {
+    const gradientList = Array.isArray(lineGradients) ? lineGradients : [];
+    const datasets =
+      data?.map((series, index) => ({
+        data: series.value,
+        label: "series",
+        borderColor: gradientList[index] ?? undefined,
+        backgroundColor: areaGradient || undefined,
         width: 3,
-        fill: item.fill,
+        fill: series.fill,
         pointStyle: "circle",
         pointHitRadius: 50,
         pointHoverRadius: 10,
@@ -159,47 +162,49 @@ function CustomizeLineChart({
       })) ?? [];
 
     return {
-      labels: label?.map((l, id) =>
-        id + 1 === label?.length ? "Today" : l
+      labels: labels?.map((l, id) =>
+        id + 1 === labels?.length ? "Today" : l
       ) ?? [],
-      datasets: _datasets,
+      datasets,
     };
-  }, [data, label, lineColors, areaColor]);
+  }, [data, labels, lineGradients, areaGradient]);
 
   const plugins = useMemo(
-    () => [
-      {
-        beforeEvent: function (
-          _chart: unknown,
-          ctx: { event: { x: number; y: number } }
-        ) {
-          const event = ctx.event;
-          const zoom =
-            (document.getElementsByClassName("websiteContainer")[0] as HTMLElement)?.style?.zoom || "1";
-          const z = Number(zoom);
-          if (z !== 1) {
-            event.x = event.x / z;
-            event.y = event.y / z;
-          }
+    () =>
+      [
+        {
+          id: "lineChartZoomCompensate",
+          beforeEvent(
+            _chart: unknown,
+            args: { event: { x: number | null; y: number | null } }
+          ) {
+            const event = args.event;
+            if (event.x == null || event.y == null) return;
+            const zoom =
+              (document.getElementsByClassName("websiteContainer")[0] as HTMLElement)?.style?.zoom || "1";
+            const z = Number(zoom);
+            if (z !== 1) {
+              (event as { x: number; y: number }).x = event.x / z;
+              (event as { x: number; y: number }).y = event.y / z;
+            }
+          },
         },
-      },
-    ],
+      ] as Plugin<"line", unknown>[],
     []
   );
 
   return (
     <>
       <Line
-        id="line_chart"
-        type="line"
+        id={LINE_CHART_CANVAS_ID}
         width={width}
         height={height}
-        options={linechartOption}
-        data={linechartData}
+        options={chartOptions}
+        data={chartData}
         plugins={plugins}
       />
       <div style={{ position: "relative" }}>
-        <div id="chartjs-tooltip">
+        <div id={LINE_CHART_TOOLTIP_ID}>
           <table />
         </div>
       </div>

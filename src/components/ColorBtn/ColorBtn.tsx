@@ -6,8 +6,8 @@ export interface ColorBtnProps {
   className?: string;
   color?: string;
   width?: number;
-  name?: string;
-  arrowShow?: boolean;
+  label?: string;
+  showArrow?: boolean;
 }
 
 function ColorBtn({
@@ -15,23 +15,27 @@ function ColorBtn({
   className = "",
   color = "#000",
   width,
-  name,
-  arrowShow = false,
+  label,
+  showArrow = false,
 }: ColorBtnProps) {
   return (
     <div
-      className={`colorBtn ${className}`}
+      className={`color-btn ${className}`.trim()}
       style={{
         background: `${color}33`,
         ...(width != null && { minWidth: `${width}px` }),
       }}
     >
       {icon}
-      <span className="btnName" style={{ color }}>
-        {name}
+      <span className="color-btn__label" style={{ color }}>
+        {label}
       </span>
-      {arrowShow ? (
-        <i className="fas fa-angle-down" style={{ color }} aria-hidden />
+      {showArrow ? (
+        <i
+          className="color-btn__arrow fas fa-angle-down"
+          style={{ color }}
+          aria-hidden
+        />
       ) : null}
     </div>
   );

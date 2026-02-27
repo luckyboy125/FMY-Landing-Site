@@ -57,9 +57,9 @@ function Tasks() {
                   avatar={Person1}
                   dropdown={
                     <ColorBtn
-                      name="High"
+                      label="High"
                       width={130}
-                      arrowShow
+                      showArrow
                       color="#FF7A00"
                     />
                   }
@@ -71,9 +71,9 @@ function Tasks() {
                   avatar={Person2}
                   dropdown={
                     <ColorBtn
-                      name="Medium"
+                      label="Medium"
                       width={130}
-                      arrowShow
+                      showArrow
                       color="#75B3FF"
                     />
                   }
@@ -85,9 +85,9 @@ function Tasks() {
                   avatar={Person3}
                   dropdown={
                     <ColorBtn
-                      name="Low"
+                      label="Low"
                       width={130}
-                      arrowShow
+                      showArrow
                       color="#37CE4A"
                     />
                   }
@@ -111,9 +111,9 @@ function Tasks() {
                   avatar={Person1}
                   dropdown={
                     <ColorBtn
-                      name="High"
+                      label="High"
                       width={130}
-                      arrowShow
+                      showArrow
                       color="#FF7A00"
                     />
                   }
@@ -125,9 +125,9 @@ function Tasks() {
                   avatar={Person2}
                   dropdown={
                     <ColorBtn
-                      name="Medium"
+                      label="Medium"
                       width={130}
-                      arrowShow
+                      showArrow
                       color="#75B3FF"
                     />
                   }
@@ -139,9 +139,9 @@ function Tasks() {
                   avatar={Person3}
                   dropdown={
                     <ColorBtn
-                      name="Low"
+                      label="Low"
                       width={130}
-                      arrowShow
+                      showArrow
                       color="#37CE4A"
                     />
                   }
@@ -165,9 +165,9 @@ function Tasks() {
                   avatar={Person1}
                   dropdown={
                     <ColorBtn
-                      name="High"
+                      label="High"
                       width={130}
-                      arrowShow
+                      showArrow
                       color="#FF7A00"
                     />
                   }
@@ -179,9 +179,9 @@ function Tasks() {
                   avatar={Person2}
                   dropdown={
                     <ColorBtn
-                      name="Medium"
+                      label="Medium"
                       width={130}
-                      arrowShow
+                      showArrow
                       color="#75B3FF"
                     />
                   }
@@ -193,9 +193,9 @@ function Tasks() {
                   avatar={Person3}
                   dropdown={
                     <ColorBtn
-                      name="Low"
+                      label="Low"
                       width={130}
-                      arrowShow
+                      showArrow
                       color="#37CE4A"
                     />
                   }

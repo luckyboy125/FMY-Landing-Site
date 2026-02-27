@@ -150,7 +150,7 @@ function Networks() {
             <div className="doughnutChartRoot">
               <CustomizeDoughnutChart
                 data={mockDoughnutData}
-                label={[
+                labels={[
                   'Lorem ipsum',
                   'Lorem ipsum',
                   'Lorem ipsum',
@@ -158,7 +158,7 @@ function Networks() {
                   'Lorem ipsum',
                   'Other'
                 ]}
-                colorInfo={doughnutChartColorData}
+                segmentColors={doughnutChartColorData}
               />
               <div className="doughnutChartDes">
                 {['first', 'second', 'third', 'fourth', 'fifth', 'sixth'].map(
@@ -230,14 +230,14 @@ function Networks() {
               />
             </div>
           }
-          tableHeader={[
+          columnHeaders={[
             'Network',
             'Added date',
             'Platform',
             'Active/Inactive',
             'Number of users'
           ]}
-          body={mockTableData.map((item, index) => (
+          children={mockTableData.map((item, index) => (
             <tr key={index}>
               <td>{item.network}</td>
               <td>{item.addeddate}</td>

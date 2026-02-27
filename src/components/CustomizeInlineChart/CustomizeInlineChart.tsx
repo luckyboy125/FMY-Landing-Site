@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import "./CustomizeInlineChart.css";
 
-const WEEK_DATA = [
+const WEEKDAY_LABELS = [
   "Monday",
   "Tuesday",
   "Wednesday",
@@ -11,46 +11,44 @@ const WEEK_DATA = [
   "Sunday",
 ];
 
-function CustomizeInlineChart() {
-  const [data, setData] = useState([
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Today",
-  ]);
+const INITIAL_DAY_LABELS = [
+  ...WEEKDAY_LABELS.slice(0, -1),
+  "Today",
+];
 
-  const handleClick = useCallback((index: number) => {
-    setData(
-      WEEK_DATA.map((item, i) => (i === index ? "Today" : item))
+function CustomizeInlineChart() {
+  const [dayLabels, setDayLabels] = useState(INITIAL_DAY_LABELS);
+
+  const handleDaySelect = useCallback((selectedIndex: number) => {
+    setDayLabels(
+      WEEKDAY_LABELS.map((label, i) => (i === selectedIndex ? "Today" : label))
     );
   }, []);
 
   return (
-    <div className="customizeInlineChartRoot">
-      {data.map((item, index) => (
+    <div className="inline-chart">
+      {dayLabels.map((label, index) => (
         <div
-          key={`${item}-${index}`}
-          className="itemRoot"
+          key={`${label}-${index}`}
+          className="inline-chart__item"
           style={{
-            left: `calc(${(100 / (data.length - 1)) * index}% - 63.5px)`,
+            left: `calc(${(100 / (dayLabels.length - 1)) * index}% - 63.5px)`,
             top: "-7px",
           }}
-          onClick={() => handleClick(index)}
+          onClick={() => handleDaySelect(index)}
           role="button"
           tabIndex={0}
         >
-          <div className="customizeInlineChartDot" aria-hidden />
+          <div className="inline-chart__dot" aria-hidden />
           <span
-            className={
-              item !== "Today"
-                ? "customizeInlineChartDes"
-                : "activeCustomizeInlineChartDes"
-            }
+            className={[
+              "inline-chart__label",
+              label === "Today" && "inline-chart__label--active",
+            ]
+              .filter(Boolean)
+              .join(" ")}
           >
-            {item}
+            {label}
           </span>
         </div>
       ))}

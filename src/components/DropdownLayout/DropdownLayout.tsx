@@ -5,34 +5,38 @@ import './DropdownLayout.css';
 export interface DropdownLayoutProps {
   className?: string;
   children?: React.ReactNode;
-  dropRoot?: React.ReactNode;
-  dropRootStyle?: string;
+  panelContent?: React.ReactNode;
+  panelClassName?: string;
 }
 
 function DropdownLayout({
   className = '',
   children,
-  dropRoot,
-  dropRootStyle = ''
+  panelContent,
+  panelClassName = '',
 }: DropdownLayoutProps) {
-  const [dropShow, setDropShow] = useState(false);
-  const dropDownRef = useOutsideClick<HTMLDivElement>(() => setDropShow(false));
+  const [isOpen, setIsOpen] = useState(false);
+  const panelRef = useOutsideClick<HTMLDivElement>(() => setIsOpen(false));
 
   const handleToggle = useCallback(() => {
-    setDropShow((prev) => !prev);
+    setIsOpen((prev) => !prev);
   }, []);
 
   return (
     <div
-      className={`dropdownLayoutRoot ${className}`}
+      className={`dropdown-layout ${className}`.trim()}
       onClick={handleToggle}
       role="button"
       tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && handleToggle()}
     >
       {children}
-      {dropShow ? (
-        <div className={`dropRoot ${dropRootStyle}`} ref={dropDownRef}>
-          {dropRoot}
+      {isOpen ? (
+        <div
+          className={`dropdown-layout__panel ${panelClassName}`.trim()}
+          ref={panelRef}
+        >
+          {panelContent}
         </div>
       ) : null}
     </div>

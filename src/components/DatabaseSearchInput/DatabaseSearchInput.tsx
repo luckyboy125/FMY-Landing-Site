@@ -8,29 +8,39 @@ export interface DatabaseSearchInputProps {
 }
 
 function DatabaseSearchInput({
-  className = ''
+  className = '',
 }: DatabaseSearchInputProps) {
-  const [searchValue, setSearchValue] = useState('');
+  const [value, setValue] = useState('');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(e.target.value);
+    setValue(e.target.value);
   }, []);
 
   return (
-    <div className={`databaseSearchInputRoot ${className}`}>
-      <div className="front">
-        <img src={SearchIcon} alt="search" />
+    <div className={`database-search-input ${className}`.trim()}>
+      <div className="database-search-input__field">
+        <img
+          src={SearchIcon}
+          alt=""
+          className="database-search-input__icon"
+          aria-hidden
+        />
         <input
-          value={searchValue}
+          type="search"
+          value={value}
           onChange={handleChange}
-          className="databaseSearchInput"
+          className="database-search-input__input"
           placeholder="Insert text here..."
           aria-label="Search"
         />
       </div>
-      <div className="databaseSearchInputDropdown">
-        <img src={arrow} alt="down" />
-      </div>
+      <button
+        type="button"
+        className="database-search-input__trigger"
+        aria-label="Open filters"
+      >
+        <img src={arrow} alt="" aria-hidden />
+      </button>
     </div>
   );
 }

@@ -61,8 +61,8 @@ function TopPlatforms() {
 
   return (
     <ChartLayout
-      name="Top platforms"
-      button={<ActionButton name="Show" content="All" className="hidden" />}
+      title="Top platforms"
+      headerAction={<ActionButton name="Show" content="All" className="hidden" />}
       className="topPlatforms"
     >
       <ReactEcharts option={option} />

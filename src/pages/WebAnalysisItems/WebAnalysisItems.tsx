@@ -68,8 +68,8 @@ function WebAnalysisItems() {
                 name="Show"
                 content="This Week"
                 className="chartPeriod"
-                dropRootStyle="periodChildRoot"
-                dropRoot={
+                panelClassName="periodChildRoot"
+                panelContent={
                   <>
                     {datePeriod?.map((item, index) => (
                       <div key={index} className="item">
@@ -83,8 +83,8 @@ function WebAnalysisItems() {
                 content="Compare"
                 type="common"
                 className="chartCompare"
-                dropRootStyle="compareChildRoot"
-                dropRoot={
+                panelClassName="compareChildRoot"
+                panelContent={
                   <>
                     {compare?.map((item, index) => (
                       <div key={index} className="item">
@@ -147,10 +147,10 @@ function WebAnalysisItems() {
             </div>
             <div className="lineChartRoot">
               <CustomizeLineChart
-                label={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
+                labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
                 data={[
                   {
-                    line_color: ['#6AB4FF', '#C2A6FF'],
+                    lineColor: ['#6AB4FF', '#C2A6FF'],
                     value: mockLineData,
                     fill: true
                   }
@@ -184,9 +184,9 @@ function WebAnalysisItems() {
             <div className="doughnutChartRoot">
               <CustomizeDoughnutChart
                 data={mockDoughnutData}
-                label={doughnutChartData.label}
-                colorInfo={doughnutChartColorData}
-                showNumber
+                labels={doughnutChartData.label}
+                segmentColors={doughnutChartColorData}
+                showCenterValue
               />
               <div className="doughnutChartDes">
                 {doughnutChartData.label.map((item, index) => (

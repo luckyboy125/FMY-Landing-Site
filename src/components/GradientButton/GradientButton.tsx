@@ -2,15 +2,19 @@ import { memo } from 'react';
 import './GradientButton.css';
 
 export interface GradientButtonProps {
-  content?: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 
 function GradientButton({
-  content,
-  className = ''
+  children,
+  className = '',
 }: GradientButtonProps) {
-  return <div className={`gradientBtnRoot ${className}`}>{content}</div>;
+  return (
+    <div className={`gradient-button ${className}`.trim()}>
+      {children}
+    </div>
+  );
 }
 
 export default memo(GradientButton);

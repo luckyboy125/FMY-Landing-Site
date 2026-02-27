@@ -7,9 +7,9 @@ export interface ActionDropdownProps {
 
 function ActionDropdown({ className = "" }: ActionDropdownProps) {
   return (
-    <div className={`actionDropdownRoot ${className}`}>
-      Related cases
-      <img src={chevronIcon} alt="chevron" />
+    <div className={`action-dropdown ${className}`.trim()}>
+      <span className="action-dropdown__label">Related cases</span>
+      <img className="action-dropdown__icon" src={chevronIcon} alt="chevron" />
     </div>
   );
 }

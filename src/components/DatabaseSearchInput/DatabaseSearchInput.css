@@ -1,4 +1,6 @@
-.databaseSearchInputRoot {
+/* Block: database-search-input (BEM) */
+
+.database-search-input {
   background: rgba(15, 18, 26, 0.4);
   border-radius: 50px;
   padding: 0 15px 0 25px;
@@ -9,13 +11,17 @@
   width: 550px;
 }
 
-.databaseSearchInputRoot .front {
+.database-search-input__field {
   display: flex;
   align-items: center;
 }
 
-.databaseSearchInputRoot .front .databaseSearchInput {
-  font-family: "Helvetica";
+.database-search-input__icon {
+  flex-shrink: 0;
+}
+
+.database-search-input__input {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -26,24 +32,26 @@
   padding: 0 !important;
   margin-left: 10px;
 }
-.databaseSearchInputRoot .front .databaseSearchInput::placeholder {
-  font-family: "Helvetica";
+
+.database-search-input__input::placeholder {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #fff;
 }
-.databaseSearchInputRoot .front .databaseSearchInput:focus-visible {
-  outline: none;
-}
-.databaseSearchInputRoot .front .databaseSearchInput:focus {
+
+.database-search-input__input:focus,
+.database-search-input__input:focus-visible {
   outline: none;
 }
 
-.databaseSearchInputRoot .databaseSearchInputDropdown {
+.database-search-input__trigger {
   width: 43px;
   height: 43px;
+  padding: 0;
+  border: none;
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -51,4 +59,6 @@
   align-items: center;
   border-radius: 50px;
   cursor: pointer;
+  font: inherit;
+  color: inherit;
 }

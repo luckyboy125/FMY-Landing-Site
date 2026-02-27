@@ -22,20 +22,20 @@ function Login({ onSubmit }: LoginProps) {
   }, []);
 
   return (
-    <div className="loginRoot">
+    <div className="login">
       <img
         src={FmyLogo}
-        className="fmyLogo"
+        className="login__logo"
         alt="fmyLogo"
         onClick={handleReload}
         role="button"
         tabIndex={0}
       />
-      <img src={Effect} className="effect" alt="effect" />
-      <img src={Analysis} className="analysis" alt="analysis" />
-      <div className="loginCard">
-        <div className="title">Sign in</div>
-        <div className="inputRoot">
+      <img src={Effect} className="login__effect" alt="effect" />
+      <img src={Analysis} className="login__analysis" alt="analysis" />
+      <div className="login__card">
+        <div className="login__title">Sign in</div>
+        <div className="login__field">
           <input
             type="text"
             placeholder="Enter your e-mail address"
@@ -44,7 +44,7 @@ function Login({ onSubmit }: LoginProps) {
             aria-label="Email"
           />
         </div>
-        <div className="inputRoot">
+        <div className="login__field">
           <input
             type="password"
             placeholder="Enter your password"
@@ -54,7 +54,7 @@ function Login({ onSubmit }: LoginProps) {
           />
         </div>
         <div
-          className="submitBtn"
+          className="login__submit"
           onClick={handleSubmit}
           role="button"
           tabIndex={0}
@@ -62,7 +62,7 @@ function Login({ onSubmit }: LoginProps) {
         >
           Get Started
         </div>
-        <div className="termLetter">
+        <div className="login__terms">
           By entering your e-mail address you confirm that you agree with our{' '}
           <a href="/terms-of-service">Terms of Service</a>
         </div>

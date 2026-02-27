@@ -60,7 +60,7 @@ function CheckListsLongItem({
             <img src={avatar} className="avatar" alt="avatar" />
             <span className="userName">{user}</span>
           </div>
-          <ColorBtn name="10 Mar" width={128} color={colorTypeMap[type]} />
+          <ColorBtn label="10 Mar" width={128} color={colorTypeMap[type]} />
         </div>
         <ThreeDotBtn action={() => {}} />
       </div>

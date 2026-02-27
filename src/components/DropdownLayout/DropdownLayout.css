@@ -1,8 +1,10 @@
-.dropdownLayoutRoot {
+/* Block: dropdown-layout (BEM) */
+
+.dropdown-layout {
   position: relative;
 }
 
-.dropdownLayoutRoot .dropRoot {
+.dropdown-layout__panel {
   position: absolute;
   right: 0;
   top: 0;

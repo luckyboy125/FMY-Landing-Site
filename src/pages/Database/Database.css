@@ -136,7 +136,7 @@
   margin-bottom: 2px;
 }
 
-.databaseRoot .databaseContent .databaseContent2 .customizeTable thead tr th {
+.databaseRoot .databaseContent .databaseContent2 .customize-table__table thead tr th {
   height: 53px !important;
 }
 
@@ -696,7 +696,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(1) {
@@ -707,7 +707,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(1) {
@@ -718,7 +718,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(1)
@@ -730,7 +730,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(2) {
@@ -742,7 +742,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(2) {
@@ -758,7 +758,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(3) {
@@ -770,7 +770,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(3) {
@@ -786,7 +786,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(4) {
@@ -797,7 +797,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(4) {
@@ -813,7 +813,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(5) {
@@ -824,7 +824,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(5) {
@@ -842,7 +842,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(5)
@@ -856,7 +856,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(6) {
@@ -867,7 +867,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(6) {
@@ -883,7 +883,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(7) {
@@ -894,7 +894,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(7)
@@ -907,7 +907,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(8) {
@@ -918,7 +918,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(8) {
@@ -934,7 +934,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(8)
@@ -947,7 +947,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(9) {
@@ -957,7 +957,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(9) {
@@ -973,7 +973,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   thead
   tr
   th:nth-child(10) {
@@ -983,7 +983,7 @@
 .databaseRoot
   .databaseContent
   .databaseContent2
-  .customizeTable
+  .customize-table__table
   tbody
   tr
   td:nth-child(10)

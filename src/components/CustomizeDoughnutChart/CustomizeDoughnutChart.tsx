@@ -1,43 +1,46 @@
 import { useEffect, useState, useMemo } from "react";
 import { Doughnut } from "react-chartjs-2";
-import { Chart, registerables } from "chart.js";
+import { Chart, registerables, type Plugin } from "chart.js";
 import type { GradientColor } from "../../helpers/chart.helper";
 import "./CustomizeDoughnutChart.css";
 
 Chart.register(...registerables);
 
+const CHART_CANVAS_ID = "doughnut-chart-canvas";
+const CHART_TOOLTIP_ID = "doughnut-chart-tooltip";
+
 export interface CustomizeDoughnutChartProps {
   data?: number[];
-  label?: string[];
-  colorInfo?: GradientColor[];
-  showNumber?: boolean;
+  labels?: string[];
+  segmentColors?: GradientColor[];
+  showCenterValue?: boolean;
 }
 
 function CustomizeDoughnutChart({
   data = [],
-  label = [],
-  colorInfo = [],
-  showNumber = false,
+  labels = [],
+  segmentColors = [],
+  showCenterValue = false,
 }: CustomizeDoughnutChartProps) {
-  const [chartColor, setChartColor] = useState<CanvasGradient[]>([]);
+  const [gradients, setGradients] = useState<CanvasGradient[]>([]);
 
   useEffect(() => {
-    const canvas = document.getElementById("doughnut_chart") as HTMLCanvasElement | null;
+    const canvas = document.getElementById(CHART_CANVAS_ID) as HTMLCanvasElement | null;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const colorArray: CanvasGradient[] = [];
-    colorInfo.forEach((item) => {
-      const gradientColor = ctx.createLinearGradient(0, 0, 0, 300);
-      gradientColor.addColorStop(0, item.first);
-      gradientColor.addColorStop(1, item.last);
-      colorArray.push(gradientColor);
+    const nextGradients: CanvasGradient[] = [];
+    segmentColors.forEach((segment) => {
+      const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+      gradient.addColorStop(0, segment.first);
+      gradient.addColorStop(1, segment.last);
+      nextGradients.push(gradient);
     });
-    setChartColor(colorArray);
-  }, [colorInfo]);
+    setGradients(nextGradients);
+  }, [segmentColors]);
 
-  const DoughnutChartOption = useMemo(
+  const chartOptions = useMemo(
     () => ({
       type: "doughnut" as const,
       cutout: "85.8%",
@@ -65,10 +68,10 @@ function CustomizeDoughnutChart({
               caretY: number;
             };
           }) => {
-            let tooltipEl = document.getElementById("doughnut-chartjs-tooltip");
+            let tooltipEl = document.getElementById(CHART_TOOLTIP_ID);
             if (!tooltipEl) {
               tooltipEl = document.createElement("div");
-              tooltipEl.id = "doughnut-chartjs-tooltip";
+              tooltipEl.id = CHART_TOOLTIP_ID;
               tooltipEl.innerHTML = "<table></table>";
               document.body.appendChild(tooltipEl);
             }
@@ -79,13 +82,13 @@ function CustomizeDoughnutChart({
             }
             tooltipEl.classList.remove("below", "no-transform");
             const tooltipData = context.tooltip.dataPoints[0];
-            if (tooltipModel.body && tooltipData && colorInfo[tooltipData.dataIndex]) {
+            if (tooltipData && segmentColors[tooltipData.dataIndex]) {
               const table = tooltipEl.querySelector("table");
-              const c = colorInfo[tooltipData.dataIndex];
+              const segmentColor = segmentColors[tooltipData.dataIndex];
               if (table) {
                 table.innerHTML = `<div style="padding: 6px 10px 6px 8px; display: flex; align-items: center; justify-content: space-between; background: #ffffff; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 60px;">
                   <div style="display: flex; align-items: center; margin-right: 14px">
-                    <div style="min-width: 20px; width: 20px; height: 20px; background: linear-gradient(238.95deg, ${c.first} 31.21%, ${c.last} 62.45%); margin-right: 11px; border-radius: 50%;"></div>
+                    <div style="min-width: 20px; width: 20px; height: 20px; background: linear-gradient(238.95deg, ${segmentColor.first} 31.21%, ${segmentColor.last} 62.45%); margin-right: 11px; border-radius: 50%;"></div>
                     <span style="font-family: Helvetica; font-style: normal; font-weight: 400; font-size: 20px; line-height: 24px; color: #404040; white-space: nowrap;">${tooltipData.label}</span>
                   </div>
                   <span style="font-family: Helvetica; font-style: normal; font-weight: 400; font-size: 20px; line-height: 24px; color: #404040;">${tooltipData.formattedValue}%</span>
@@ -101,48 +104,52 @@ function CustomizeDoughnutChart({
         },
       },
     }),
-    [colorInfo]
+    [segmentColors]
   );
 
-  const DoughnutChartAction = useMemo(
+  const chartData = useMemo(
     () => ({
-      labels: label,
+      labels,
       datasets: [
         {
-          label: "My First Dataset",
+          label: "Dataset",
           data,
-          backgroundColor: chartColor,
+          backgroundColor: gradients,
           borderWidth: 0,
           hoverOffset: 4,
         },
       ],
     }),
-    [data, label, chartColor]
+    [data, labels, gradients]
   );
 
   const plugins = useMemo(
-    () => [
-      {
-        beforeEvent: function (
-          _chart: unknown,
-          ctx: { event: { x: number; y: number } }
-        ) {
-          const event = ctx.event;
-          const zoom =
-            (document.getElementsByClassName("websiteContainer")[0] as HTMLElement)?.style?.zoom || "1";
-          const z = Number(zoom);
-          if (z !== 1) {
-            event.x = event.x / z;
-            event.y = event.y / z;
-          }
+    () =>
+      [
+        {
+          id: "doughnutZoomCompensate",
+          beforeEvent(
+            _chart: unknown,
+            args: { event: { x: number | null; y: number | null } }
+          ) {
+            const event = args.event;
+            if (event.x == null || event.y == null) return;
+            const zoom =
+              (document.getElementsByClassName("websiteContainer")[0] as HTMLElement)?.style?.zoom || "1";
+            const z = Number(zoom);
+            if (z !== 1) {
+              (event as { x: number; y: number }).x = event.x / z;
+              (event as { x: number; y: number }).y = event.y / z;
+            }
+          },
         },
-      },
-    ],
+      ] as Plugin<"doughnut", unknown>[],
     []
   );
 
   return (
     <div
+      className="doughnut-chart"
       style={{
         maxWidth: "266px",
         maxHeight: "266px",
@@ -153,17 +160,18 @@ function CustomizeDoughnutChart({
       }}
     >
       <Doughnut
-        id="doughnut_chart"
-        type="doughnut"
+        id={CHART_CANVAS_ID}
         width={266}
         height={266}
-        options={DoughnutChartOption}
-        data={DoughnutChartAction}
+        options={chartOptions}
+        data={chartData}
         plugins={plugins}
       />
-      {showNumber ? <div className="topPercent">86%</div> : null}
-      <div style={{ position: "relative" }}>
-        <div id="doughnut-chartjs-tooltip">
+      {showCenterValue ? (
+        <div className="doughnut-chart__center-value">86%</div>
+      ) : null}
+      <div className="doughnut-chart__tooltip-wrap">
+        <div id={CHART_TOOLTIP_ID} className="doughnut-chart__tooltip">
           <table />
         </div>
       </div>

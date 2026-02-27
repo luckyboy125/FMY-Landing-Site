@@ -216,25 +216,25 @@ function Comparison() {
 
   return (
     <>
-      <div className="comparisonRoot">
-        <div className="comparisonHeader">Government - Services - Army</div>
-        <div className="comparisonRoot1">
+      <div className="comparison">
+        <div className="comparison__banner">Government - Services - Army</div>
+        <div className="comparison__row comparison__row--charts">
           <CardLayout
-            className="tagOverTimeRoot"
-            contentStyle="tagOverTime"
-            headerStyle="tagOverTimeHeader"
+            className="comparison__tag-over-time-card"
+            contentStyle="comparison__tag-over-time-content"
+            headerStyle="comparison__tag-over-time-header"
             header={
               <>
-                <div className="title">Case tagging over time</div>
+                <div className="comparison__section-title">Case tagging over time</div>
                 <ActionButton
                   name="Show"
                   content="Last Week"
-                  className="timeTool"
-                  dropRootStyle="timeToolDropdownRoot"
-                  dropRoot={
+                  className="comparison__time-tool"
+                  panelClassName="comparison__time-dropdown"
+                  panelContent={
                     <>
                       {tagOverTimeDropdown?.map((item, index) => (
-                        <div key={index} className="item">
+                        <div key={index} className="comparison__dropdown-item">
                           {item}
                         </div>
                       ))}
@@ -244,22 +244,22 @@ function Comparison() {
               </>
             }
           >
-            <div className="tagOverTimeLineRoot">
+            <div className="comparison__line-chart-wrap">
               <CustomizeLineChart
-                label={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
+                labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
                 data={[
                   {
-                    line_color: ['#FEBD42', '#EFD7AB'],
+                    lineColor: ['#FEBD42', '#EFD7AB'],
                     value: mockLineData1,
                     fill: false
                   },
                   {
-                    line_color: ['#A9FFBB', '#6FFF8D'],
+                    lineColor: ['#A9FFBB', '#6FFF8D'],
                     value: mockLineData2,
                     fill: false
                   },
                   {
-                    line_color: ['#5D43FF', '#A5A4FF'],
+                    lineColor: ['#5D43FF', '#A5A4FF'],
                     value: mockLineData3,
                     fill: false
                   }
@@ -270,85 +270,85 @@ function Comparison() {
             </div>
           </CardLayout>
           <CardLayout
-            className="taggingRoot"
-            contentStyle="tagging"
-            headerStyle="taggingHeader"
-            header={<div className="title">Cases tagging</div>}
+            className="comparison__tagging-card"
+            contentStyle="comparison__tagging-content"
+            headerStyle="comparison__tagging-header"
+            header={<div className="comparison__section-title">Cases tagging</div>}
           >
-            <div className="doughnutChartRoot">
+            <div className="comparison__doughnut-wrap">
               <CustomizeDoughnutChart
                 data={mockDoughnutData}
-                label={['Government', 'Services', 'Army']}
-                colorInfo={comparisonDoughnutChartColorData}
+                labels={['Government', 'Services', 'Army']}
+                segmentColors={comparisonDoughnutChartColorData}
               />
-              <div className="doughnutChartDes">
+              <div className="comparison__doughnut-legend">
                 {['Government', 'Services', 'Army'].map((item, index) => (
-                  <div className="doughnutChartDesItem" key={index}>
+                  <div className="comparison__doughnut-legend-item" key={index}>
                     <div
-                      className="doughnutChartIcon"
+                      className="comparison__doughnut-legend-swatch"
                       style={{
                         background: `linear-gradient(238.95deg, ${comparisonDoughnutChartColorData[index]?.first} 31.21%, ${comparisonDoughnutChartColorData[index]?.last} 62.45%)`
                       }}
                     />
-                    <div className="doughnutChartItemName">{item}</div>
+                    <div className="comparison__doughnut-legend-label">{item}</div>
                   </div>
                 ))}
               </div>
             </div>
           </CardLayout>
         </div>
-        <div className="comparisonRoot2">
+        <div className="comparison__row comparison__row--word-clouds">
           <CardLayout
-            className="governmentWordCloud"
-            headerStyle="wordCloudHeader"
-            header={<div className="headerTitle">Word Cloud - Government</div>}
-            contentStyle="wordCloud"
+            className="comparison__word-cloud-card comparison__word-cloud-card--government"
+            headerStyle="comparison__word-cloud-header"
+            header={<div className="comparison__word-cloud-title">Word Cloud - Government</div>}
+            contentStyle="comparison__word-cloud-content"
           >
             <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
           </CardLayout>
           <CardLayout
-            className="servicesWordCloud"
-            headerStyle="wordCloudHeader"
-            header={<div className="headerTitle">Word Cloud - Services</div>}
-            contentStyle="wordCloud"
+            className="comparison__word-cloud-card comparison__word-cloud-card--services"
+            headerStyle="comparison__word-cloud-header"
+            header={<div className="comparison__word-cloud-title">Word Cloud - Services</div>}
+            contentStyle="comparison__word-cloud-content"
           >
             <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
           </CardLayout>
         </div>
-        <div className="comparisonRoot3">
+        <div className="comparison__row comparison__row--army">
           <CardLayout
-            className="armyWordCloud"
-            headerStyle="wordCloudHeader"
-            header={<div className="headerTitle">Word Cloud - Army</div>}
-            contentStyle="wordCloud"
+            className="comparison__word-cloud-card comparison__word-cloud-card--army"
+            headerStyle="comparison__word-cloud-header"
+            header={<div className="comparison__word-cloud-title">Word Cloud - Army</div>}
+            contentStyle="comparison__word-cloud-content"
           >
             <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
           </CardLayout>
         </div>
         <CustomizeTable
-          className="comparisonRoot4"
+          className="comparison__table-section"
           header={
-            <div className="comparisonTableHeader">
-              <div className="comparisonTableTitle">Shared Items</div>
+            <div className="comparison__table-header">
+              <div className="comparison__table-title">Shared Items</div>
               <SearchInput
                 action={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setSearchValue(e.target.value)
                 }
                 inputValue={searchValue}
-                className="comparisonTableSearchTool"
+                className="comparison__table-search"
                 inputWith
               />
-              <div className="toolEndRoot">
-                <FilterDropdown className="tool" type="filter" />
-                <FilterDropdown className="tool" />
-                <img src={refresh} alt="tool" className="tool" />
-                <img src={csv} alt="tool" className="tool" />
-                <img src={more_tool} alt="tool" className="tool" />
-                <img src={more_detail} alt="tool" className="tool" />
+              <div className="comparison__toolbar">
+                <FilterDropdown className="comparison__toolbar-btn" type="filter" />
+                <FilterDropdown className="comparison__toolbar-btn" />
+                <img src={refresh} alt="tool" className="comparison__toolbar-btn" />
+                <img src={csv} alt="tool" className="comparison__toolbar-btn" />
+                <img src={more_tool} alt="tool" className="comparison__toolbar-btn" />
+                <img src={more_detail} alt="tool" className="comparison__toolbar-btn" />
               </div>
             </div>
           }
-          tableHeader={[
+          columnHeaders={[
             '',
             'Item',
             'User',
@@ -360,7 +360,7 @@ function Comparison() {
             'Link',
             ''
           ]}
-          body={mockTableData.map((item, index) => (
+          children={mockTableData.map((item, index) => (
             <tr key={index}>
               <td>
                 <img src={youtube} alt="social_icon" />
@@ -374,12 +374,12 @@ function Comparison() {
               </td>
               <td>{item.case}</td>
               <td>
-                <ColorBtn name="Medium" width={130} arrowShow color="#37CE4A" />
+                <ColorBtn label="Medium" width={130} showArrow color="#37CE4A" />
               </td>
               <td onClick={() => handleViewModal(index)}>View</td>
               <td>Link</td>
               <td>
-                <ThreeDotBtn className="dotBtn" action={() => {}} />
+                <ThreeDotBtn className="comparison__actions-btn" action={() => {}} />
               </td>
             </tr>
           ))}
@@ -387,40 +387,40 @@ function Comparison() {
         <ModalLayout
           show={!!query.get('tableviewmodal_show')}
           onClose={handleViewModalClose}
-          className="tabelViewModalRoot"
+          className="comparison__view-modal"
         >
-          <ThreeDotBtn className="dotBtn" action={() => {}} />
+          <ThreeDotBtn className="comparison__actions-btn" action={() => {}} />
           <img src={closeIcon} alt="closIcon" onClick={handleViewModalClose} />
-          <div className="mainRoot">
-            <div className="leftPart">+</div>
-            <div className="divLinePart"></div>
-            <div className="rightPart">
-              <div className="title">General info:</div>
-              <div className="rightPart1">
-                <div className="item">Upload date:</div>
-                <div className="item">Username:</div>
+          <div className="comparison__view-modal-body">
+            <div className="comparison__view-modal-media">+</div>
+            <div className="comparison__view-modal-divider"></div>
+            <div className="comparison__view-modal-content">
+              <div className="comparison__section-title">General info:</div>
+              <div className="comparison__view-modal-meta">
+                <div className="comparison__view-modal-meta-item">Upload date:</div>
+                <div className="comparison__view-modal-meta-item">Username:</div>
               </div>
-              <div className="casesPart">
-                <div className="title">Cases</div>
-                <div className="desRoot">
+              <div className="comparison__view-modal-section">
+                <div className="comparison__section-title">Cases</div>
+                <div className="comparison__view-modal-card">
                   <img src={person3} alt="avatart" />
-                  <div className="desRoot1">
-                    <div className="desContent">
-                      <div className="des">
+                  <div className="comparison__view-modal-card-body">
+                    <div className="comparison__view-modal-card-inner">
+                      <div className="comparison__view-modal-card-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Pellentesque cras felis interdum tempor, lobortis
                         egestas volutpat consectetur.....
                       </div>
-                      <div className="desDate">Feb 6, 11:49 AM</div>
+                      <div className="comparison__view-modal-card-date">Feb 6, 11:49 AM</div>
                     </div>
                   </div>
-                  <ThreeDotBtn className="dotBtn" action={() => {}} />
+                  <ThreeDotBtn className="comparison__actions-btn" action={() => {}} />
                 </div>
               </div>
-              <div className="commentPart">
-                <div className="title">Comments:</div>
-                <div className="desRoot">
-                  <ThreeDotBtn className="dotBtn" action={() => {}} />
+              <div className="comparison__view-modal-section comparison__view-modal-section--comments">
+                <div className="comparison__section-title">Comments:</div>
+                <div className="comparison__view-modal-card">
+                  <ThreeDotBtn className="comparison__actions-btn" action={() => {}} />
                   <textarea
                     placeholder="Comment here"
                     value={commentArea}
@@ -428,7 +428,7 @@ function Comparison() {
                       setCommentArea(e.target.value)
                     }
                   />
-                  <div className="postBtn">Post</div>
+                  <div className="comparison__view-modal-submit">Post</div>
                 </div>
               </div>
             </div>

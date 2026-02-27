@@ -1,11 +1,21 @@
-.topPercent {
+/* Block: doughnut-chart (BEM) */
+
+.doughnut-chart {
+  /* layout via inline styles */
+}
+
+.doughnut-chart__center-value {
   position: absolute;
   top: 46%;
   left: 37.2%;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.doughnut-chart__tooltip-wrap {
+  position: relative;
 }

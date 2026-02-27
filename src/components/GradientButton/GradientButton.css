@@ -1,13 +1,14 @@
-.gradientBtnRoot {
-  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
-  border-radius: 30px;
+/* Block: gradient-button (BEM) */
+
+.gradient-button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 138px;
   height: 46px;
-
-  font-family: "Helvetica";
+  background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
+  border-radius: 30px;
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;

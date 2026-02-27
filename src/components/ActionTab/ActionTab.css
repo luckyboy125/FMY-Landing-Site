@@ -1,13 +1,12 @@
-.actionTabRoot {
+/* Block: action-tab (BEM) */
+
+.action-tab {
   display: flex;
   border-bottom: 2px solid #69b3ff4d;
 }
-.actionTabRoot .actionTabItem:last-child {
-  margin-right: 0 !important;
-}
 
-.actionTabItem {
-  font-family: "Helvetica";
+.action-tab__item {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -19,8 +18,12 @@
   cursor: pointer;
 }
 
-.actionTabRoot .active {
-  font-family: "Helvetica";
+.action-tab__item:last-child {
+  margin-right: 0 !important;
+}
+
+.action-tab__item--active {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;

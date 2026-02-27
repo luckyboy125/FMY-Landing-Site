@@ -6,33 +6,37 @@ export interface DeleteModalProps {
   className?: string;
   show: boolean;
   onClose: () => void;
-  description?: string;
+  message?: string;
 }
 
 function DeleteModal({
   className = '',
   show,
   onClose,
-  description
+  message,
 }: DeleteModalProps) {
   return (
     <ModalLayout
       show={show}
       onClose={onClose}
-      className={`deleteModalRoot ${className}`}
+      className={`delete-modal ${className}`.trim()}
     >
-      <img
-        src={closeIcon}
-        className="closeIcon"
-        alt="close"
+      <button
+        type="button"
+        className="delete-modal__close"
         onClick={onClose}
-        role="button"
-        tabIndex={0}
-      />
-      <div className="des">{description}</div>
-      <div className="btnRoot">
-        <div className="modalBtn">Yes</div>
-        <div className="modalBtn">No</div>
+        aria-label="Close"
+      >
+        <img src={closeIcon} alt="" aria-hidden />
+      </button>
+      <p className="delete-modal__message">{message}</p>
+      <div className="delete-modal__actions">
+        <button type="button" className="delete-modal__btn">
+          Yes
+        </button>
+        <button type="button" className="delete-modal__btn" onClick={onClose}>
+          No
+        </button>
       </div>
     </ModalLayout>
   );

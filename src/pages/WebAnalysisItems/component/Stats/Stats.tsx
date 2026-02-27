@@ -5,8 +5,8 @@ import './Stats.css';
 function Stats() {
   return (
     <ChartLayout
-      name="Stats"
-      button={<ActionButton name="Show" content="All" className="statsBtn" />}
+      title="Stats"
+      headerAction={<ActionButton name="Show" content="All" className="statsBtn" />}
       className="stats"
     >
       <div

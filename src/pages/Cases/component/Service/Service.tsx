@@ -174,94 +174,94 @@ function Service() {
 
   return (
     <>
-      <div className="serviceRoot1">
+      <div className="service service__row--main">
         <CardLayout
-          className="relativeServiceRoot"
-          contentStyle="relativeService"
-          headerStyle="relativeServiceHeader"
+          className="service__main-card"
+          contentStyle="service__main-card-body"
+          headerStyle="service__main-card-header"
           header={
             <>
-              <GradientButton content="Service" />
-              <div className="headerContent">Related cases</div>
+              <GradientButton>Service</GradientButton>
+              <div className="service__section-title">Related cases</div>
             </>
           }
         >
-          <div className="descriptionRoot">
+          <div className="service__stats">
             <div
-              className="descriptionItem"
+              className="service__stats-item"
               style={{ marginTop: '4px', paddingBottom: '24px' }}
             >
-              <div className="descriptionItemTitle">Total items</div>
+              <div className="service__stats-label">Total items</div>
               <div
-                className="descriptionItemCount"
+                className="service__stats-value"
                 style={{ color: '#0FDF63' }}
               >
                 630
               </div>
             </div>
-            <div className="descriptionItem" style={{ padding: '28px 0 28px' }}>
-              <div className="descriptionItemTitle">
+            <div className="service__stats-item" style={{ padding: '28px 0 28px' }}>
+              <div className="service__stats-label">
                 New items (past 7 days)
               </div>
               <div
-                className="descriptionItemCount"
+                className="service__stats-value"
                 style={{ color: '#75B3FF' }}
               >
                 100
               </div>
             </div>
-            <div className="descriptionItem" style={{ paddingTop: '31px' }}>
-              <div className="descriptionItemTitle">Added date</div>
-              <div className="descriptionItemCount" style={{ color: '#fff' }}>
+            <div className="service__stats-item" style={{ paddingTop: '31px' }}>
+              <div className="service__stats-label">Added date</div>
+              <div className="service__stats-value" style={{ color: '#fff' }}>
                 17 Nov 2022
               </div>
             </div>
           </div>
-          <div className="doughnutChartRoot">
+          <div className="service__doughnut-wrap">
             <CustomizeDoughnutChart
               data={mockDoughnutData}
-              label={['first', 'second', 'third', 'fourth', 'fifth', 'sixth']}
-              colorInfo={doughnutChartColorData}
+              labels={['first', 'second', 'third', 'fourth', 'fifth', 'sixth']}
+              segmentColors={doughnutChartColorData}
             />
-            <div className="doughnutChartDes">
+            <div className="service__doughnut-legend">
               {['first', 'second', 'third', 'fourth', 'fifth', 'sixth'].map(
                 (item, index) => (
-                  <div className="doughnutChartDesItem" key={index}>
+                  <div className="service__doughnut-legend-item" key={index}>
                     <div
-                      className="doughnutChartIcon"
+                      className="service__doughnut-legend-swatch"
                       style={{
                         background: `linear-gradient(238.95deg, ${doughnutChartColorData[index]?.first} 31.21%, ${doughnutChartColorData[index]?.last} 62.45%)`
                       }}
                     />
-                    <div className="doughnutChartItemName">{item}</div>
+                    <div className="service__doughnut-legend-label">{item}</div>
                   </div>
                 )
               )}
             </div>
           </div>
-          <RoundButton className="toolRoot" action={() => {}} />
+          <RoundButton className="service__actions-btn" action={() => {}} />
         </CardLayout>
         <CardLayout
-          className="tagOverTimeRoot"
-          contentStyle="tagOverTime"
-          headerStyle="tagOverTimeHeader"
+          className="service__tag-over-time-card"
+          contentStyle="service__tag-over-time-content"
+          headerStyle="service__tag-over-time-header"
           header={
             <>
-              <div className="title">Case tagging over time</div>
+              <div className="service__section-title">Case tagging over time</div>
               <ActionButton
                 name="Show"
                 content="Last Week"
-                className="timeTool"
+                className="service__time-tool"
               />
             </>
           }
         >
-          <div className="tagOverTimeLineRoot">
+          <div className="service__line-chart-wrap">
             <CustomizeLineChart
-              label={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
+              labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
               data={[
                 {
-                  line_color: ['#6AB4FF', '#C2A6FF'],
+                  lineColor: ['#6AB4FF', '#C2A6FF'],
                   value: mockLineData,
                   fill: true
                 }
@@ -273,37 +273,37 @@ function Service() {
         </CardLayout>
       </div>
       <CardLayout
-        className="serviceRoot2"
-        headerStyle="wordCloudHeader"
-        header={<div className="headerTitle">Word Cloud</div>}
-        contentStyle="wordCloud"
+        className="service__word-cloud-section"
+        headerStyle="service__word-cloud-header"
+        header={<div className="service__word-cloud-title">Word Cloud</div>}
+        contentStyle="service__word-cloud-content"
       >
         <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
       </CardLayout>
       <CustomizeTable
-        className="serviceRoot3"
+        className="service__table-section"
         header={
-          <div className="serviceTableHeader">
-            <div className="serviceTableTitle">Goverment</div>
+          <div className="service__table-header">
+            <div className="service__table-title">Goverment</div>
             <SearchInput
               action={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setSearchValue(e.target.value)
               }
               inputValue={searchValue}
-              className="serviceTableSearchTool"
+              className="service__table-search"
               inputWith
             />
-            <div className="toolEndRoot">
-              <FilterDropdown className="tool" type="filter" />
-              <FilterDropdown className="tool" />
-              <img src={refresh} alt="tool" className="tool" />
-              <img src={csv} alt="tool" className="tool" />
-              <img src={more_tool} alt="tool" className="tool" />
-              <img src={more_detail} alt="tool" className="tool" />
+            <div className="service__toolbar">
+              <FilterDropdown className="service__toolbar-btn" type="filter" />
+              <FilterDropdown className="service__toolbar-btn" />
+              <img src={refresh} alt="tool" className="service__toolbar-btn" />
+              <img src={csv} alt="tool" className="service__toolbar-btn" />
+              <img src={more_tool} alt="tool" className="service__toolbar-btn" />
+              <img src={more_detail} alt="tool" className="service__toolbar-btn" />
             </div>
           </div>
         }
-        tableHeader={[
+        columnHeaders={[
           '',
           'Item',
           'User',
@@ -315,7 +315,7 @@ function Service() {
           'Link',
           ''
         ]}
-        body={mockTableData.map((item, index) => (
+        children={mockTableData.map((item, index) => (
           <tr key={index}>
             <td>
               <img src={youtube} alt="social_icon" />
@@ -329,12 +329,12 @@ function Service() {
             </td>
             <td>{item.case}</td>
             <td>
-              <ColorBtn name="Medium" width={130} arrowShow color="#37CE4A" />
+              <ColorBtn label="Medium" width={130} showArrow color="#37CE4A" />
             </td>
             <td>View</td>
             <td>Link</td>
             <td>
-              <ThreeDotBtn className="dotBtn" action={() => {}} />
+              <ThreeDotBtn className="service__actions-btn" action={() => {}} />
             </td>
           </tr>
         ))}

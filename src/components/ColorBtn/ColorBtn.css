@@ -1,19 +1,23 @@
-.colorBtn {
+/* Block: color-btn (BEM) */
+
+.color-btn {
   padding: 8px 20px;
   display: flex;
   align-items: center;
   border-radius: 25px;
 }
-.colorBtn .btnName {
+
+.color-btn__label {
   flex-grow: 1;
   text-align: center;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
 }
-.colorBtn i {
+
+.color-btn__arrow {
   width: 11px;
   font-size: 11px;
   line-height: 8px;

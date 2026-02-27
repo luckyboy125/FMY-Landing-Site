@@ -5,44 +5,47 @@ import './DatabaseSearchDropdown.css';
 
 export interface DatabaseSearchDropdownProps {
   className?: string;
-  content?: string;
-  select?: React.ReactNode;
+  label?: string;
+  selectedValue?: React.ReactNode;
   type?: 'calendar' | 'keyword';
   children?: React.ReactNode;
-  childrenStyle?: string;
+  panelClassName?: string;
 }
 
 function DatabaseSearchDropdown({
   className = '',
-  content,
-  select,
+  label,
+  selectedValue,
   type,
   children,
-  childrenStyle = ''
+  panelClassName = ''
 }: DatabaseSearchDropdownProps) {
-  const [dropwDownShow, setDropdownShow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = useCallback(() => {
-    setDropdownShow((prev) => !prev);
+    setIsOpen((prev) => !prev);
   }, []);
 
   return (
     <div
-      className={`databaseSearchDropdownRoot ${className}`}
+      className={`database-search-dropdown ${className}`.trim()}
       onClick={handleToggle}
       role="button"
       tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && handleToggle()}
     >
       {type === 'calendar' ? (
-        <img src={calendar} alt="calendar" />
+        <img src={calendar} alt="" className="database-search-dropdown__icon" />
       ) : type === 'keyword' ? (
-        <img src={keyword} alt="keyword" />
+        <img src={keyword} alt="" className="database-search-dropdown__icon" />
       ) : null}
-      <div className="dropdownContent">{content}:</div>
-      <div className="dropdownSelect">{select}</div>
-      <i className="fas fa-caret-down" aria-hidden />
-      {dropwDownShow ? (
-        <div className={`childrenRoot ${childrenStyle}`}>{children}</div>
+      <span className="database-search-dropdown__label">{label}:</span>
+      <span className="database-search-dropdown__value">{selectedValue}</span>
+      <i className="database-search-dropdown__caret fas fa-caret-down" aria-hidden />
+      {isOpen ? (
+        <div className={`database-search-dropdown__panel ${panelClassName}`.trim()}>
+          {children}
+        </div>
       ) : null}
     </div>
   );
