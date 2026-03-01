@@ -63,3 +63,8 @@
   dominant-baseline: central;
   pointer-events: none;
 }
+
+/* Hidden until ellipsized so overflow is never painted */
+.bubble-chart__label--hidden {
+  visibility: hidden;
+}

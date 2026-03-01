@@ -107,16 +107,37 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
         if (d.link) navigate(`/${d.link}`);
       });
 
+    const textMaxWidth = (d: SimNode) => (scale(d.amount) * 5) / 3;
+
+    g.each(function (this: SVGGElement, d, i) {
+      const group = d3.select<SVGGElement, SimNode>(this);
+      const r = scale(d.amount);
+      group
+        .append('clipPath')
+        .attr('id', `bubble-clip-${i}`)
+        .append('circle')
+        .attr('r', r);
+      group.attr('clip-path', `url(#bubble-clip-${i})`);
+    });
+
     g.append('circle')
       .attr('class', 'bubble-chart__circle')
       .attr('r', (d) => scale(d.amount));
 
-    const textMaxWidth = (d: SimNode) => (scale(d.amount) * 5) / 3;
-
     g.append('text')
-      .attr('class', 'bubble-chart__label')
+      .attr('class', 'bubble-chart__label bubble-chart__label--hidden')
       .attr('dy', 6)
       .text((d) => d.category);
+
+    g.selectAll<SVGTextElement, SimNode>('text').call(
+      ellipsizeText,
+      textMaxWidth
+    );
+
+    g.selectAll<SVGTextElement, SimNode>('text').classed(
+      'bubble-chart__label--hidden',
+      false
+    );
 
     const padding = 2;
     let rafScheduled = false;
@@ -143,7 +164,7 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
     });
 
     simulation.on('end', () => {
-      g.select<SVGTextElement>('text').call(
+      g.selectAll<SVGTextElement, SimNode>('text').call(
         ellipsizeText,
         textMaxWidth
       );
