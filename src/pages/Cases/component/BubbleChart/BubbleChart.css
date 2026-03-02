@@ -68,3 +68,21 @@
 .bubble-chart__label--hidden {
   visibility: hidden;
 }
+
+.bubble-chart__bubble-inner {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: bubble-chart-link-pulse 2s ease-in-out infinite;
+}
+
+@keyframes bubble-chart-link-pulse {
+  0% {
+    transform: scale(1.08);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
