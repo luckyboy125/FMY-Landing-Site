@@ -93,6 +93,9 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
     const cx = width / 2;
     const cy = height / 2;
 
+    const cx = width / 2;
+    const cy = height / 2;
+
     const simulation = d3
       .forceSimulation<SimNode>(nodeData)
       .alpha(0.08)
@@ -201,6 +204,7 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
       });
     };
 
+    const padding = 2;
     let rafScheduled = false;
     simulation.on('tick', () => {
       if (rafScheduled) return;
