@@ -99,10 +99,7 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
       .velocityDecay(0.4)
       .force('x', d3.forceX(0).strength(0.03))
       .force('y', d3.forceY(0).strength(0.03))
-      .force(
-        'charge',
-        d3.forceManyBody<SimNode>().strength(-80)
-      )
+      .force('charge', d3.forceManyBody<SimNode>().strength(-80))
       .force(
         'collide',
         d3.forceCollide<SimNode>((d) => scale(d.amount) + 28)
@@ -131,7 +128,6 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
         ? group
             .append('g')
             .attr('class', 'bubble-chart__bubble-inner')
-            .attr('transform', `scale(${LINK_BUBBLE_SCALE})`)
         : group;
       content
         .append('clipPath')
@@ -231,11 +227,6 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
     const svg = containerRef.current.ownerSVGElement;
     if (svg) {
       const onMouseMove = (e: MouseEvent) => {
-        const target = e.target as SVGElement | null;
-        if (target && target.closest('.bubble-chart__bubble')) {
-          return;
-        }
-
         const rect = svg.getBoundingClientRect();
         const scaleX = width / rect.width;
         const scaleY = height / rect.height;
@@ -245,6 +236,12 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
         const maxRadius = Math.sqrt(width * width + height * height) / 2;
 
         nodeData.forEach((node) => {
+          if (node.link) {
+            node.targetOffsetX = 0;
+            node.targetOffsetY = 0;
+            return;
+          }
+
           const baseX = cx + (node.x ?? 0);
           const baseY = cy + (node.y ?? 0);
           const dx = baseX - mouseX;
