@@ -11,7 +11,7 @@ import './WebAnalysisItem.css';
 
 function WebAnalysisItems() {
   const [mockLineData, setMockLineData] = useState<number[]>([
-    100, 120, 124, 300, 145, 50
+    100, 120, 124, 300, 145, 50, 100
   ]);
   const [mockDoughnutData, setMockDoughnutData] = useState<number[]>([
     100, 120, 124, 300, 145, 50
