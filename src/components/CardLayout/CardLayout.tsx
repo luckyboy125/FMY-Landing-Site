@@ -17,8 +17,8 @@ function CardLayout({
   contentStyle = "",
 }: CardLayoutProps) {
   return (
-    <div className={`${className} cardLayoutRoot`}>
-      <div className={`${headerStyle} headerRoot`}>{header}</div>
+    <div className={`card-layout ${className}`}>
+      <div className={`card-layout__header ${headerStyle}`}>{header}</div>
       <div className={contentStyle}>{children}</div>
     </div>
   );

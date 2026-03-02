@@ -12,9 +12,15 @@ function BackBtn({ className = "", action }: BackBtnProps) {
   }, [action]);
 
   return (
-    <div className={`backBtnRoot ${className}`} onClick={handleClick} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && action()}>
-      <i className="fas fa-chevron-left" aria-hidden />
-      <div className="backBtnContent">Back</div>
+    <div
+      className={`back-btn ${className}`.trim()}
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === "Enter" && action()}
+    >
+      <i className="back-btn__icon fas fa-chevron-left" aria-hidden />
+      <span className="back-btn__label">Back</span>
     </div>
   );
 }

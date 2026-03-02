@@ -51,7 +51,7 @@ function CheckListsShortItem({
           <div className="itemsFirst">
             <ColorBtn
               className="itemBtn"
-              name="10 Mar"
+              label="10 Mar"
               color="#FF0000"
               width={128}
             />

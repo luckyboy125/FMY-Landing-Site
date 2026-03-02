@@ -249,8 +249,8 @@ function CommentModal({
       <DeleteModal
         show={deleteModalShow}
         onClose={() => setDeleteModalShow(false)}
-        className="deleteModalRoot"
-        description="Are you sure you want to delete the item?"
+        className="commentModal__delete-modal"
+        message="Are you sure you want to delete the item?"
       />
     </ModalLayout>
   );

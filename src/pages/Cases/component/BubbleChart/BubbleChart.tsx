@@ -51,7 +51,16 @@ function ellipsizeText(
   });
 }
 
-interface SimNode extends BubbleDatum, d3.SimulationNodeDatum {}
+interface SimNode extends BubbleDatum, d3.SimulationNodeDatum {
+  offsetX?: number;
+  offsetY?: number;
+  targetOffsetX?: number;
+  targetOffsetY?: number;
+}
+
+const MAX_CLICK_OFFSET = 18;
+const OFFSET_EASING = 0.16;
+const LINK_BUBBLE_SCALE = 1.08;
 
 function BubbleChart({ data, width, height }: BubbleChartProps) {
   const navigate = useNavigate();
@@ -73,7 +82,16 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
     const container = d3.select(containerRef.current);
     container.selectAll('*').remove();
 
-    const nodeData: SimNode[] = data.map((d) => ({ ...d }));
+    const nodeData: SimNode[] = data.map((d) => ({
+      ...d,
+      offsetX: 0,
+      offsetY: 0,
+      targetOffsetX: 0,
+      targetOffsetY: 0
+    }));
+
+    const cx = width / 2;
+    const cy = height / 2;
 
     const cx = width / 2;
     const cy = height / 2;
@@ -107,16 +125,84 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
         if (d.link) navigate(`/${d.link}`);
       });
 
-    g.append('circle')
-      .attr('class', 'bubble-chart__circle')
-      .attr('r', (d) => scale(d.amount));
-
     const textMaxWidth = (d: SimNode) => (scale(d.amount) * 5) / 3;
 
-    g.append('text')
-      .attr('class', 'bubble-chart__label')
-      .attr('dy', 6)
-      .text((d) => d.category);
+    g.each(function (this: SVGGElement, d, i) {
+      const group = d3.select<SVGGElement, SimNode>(this);
+      const r = scale(d.amount);
+      const content = d.link
+        ? group
+            .append('g')
+            .attr('class', 'bubble-chart__bubble-inner')
+            .attr('transform', `scale(${LINK_BUBBLE_SCALE})`)
+        : group;
+      content
+        .append('clipPath')
+        .attr('id', `bubble-clip-${i}`)
+        .append('circle')
+        .attr('r', r);
+      content.attr('clip-path', `url(#bubble-clip-${i})`);
+      content
+        .append('circle')
+        .attr('class', 'bubble-chart__circle')
+        .attr('r', r);
+      content
+        .append('text')
+        .attr('class', 'bubble-chart__label bubble-chart__label--hidden')
+        .attr('dy', 6)
+        .text(d.category);
+    });
+
+    g.selectAll<SVGTextElement, SimNode>('.bubble-chart__label').call(
+      ellipsizeText,
+      textMaxWidth
+    );
+
+    g.selectAll<SVGTextElement, SimNode>('.bubble-chart__label').classed(
+      'bubble-chart__label--hidden',
+      false
+    );
+
+    const padding = 2;
+
+    const updateTransforms = (updateNodeData: boolean) => {
+      g.attr('transform', (d) => {
+        const r = scale(d.amount) + padding;
+        const minX = r;
+        const maxX = width - r;
+        const minY = r;
+        const maxY = height - r;
+        let px = cx + (d.x ?? 0);
+        let py = cy + (d.y ?? 0);
+        px = Math.max(minX, Math.min(maxX, px));
+        py = Math.max(minY, Math.min(maxY, py));
+
+        if (updateNodeData) {
+          d.x = px - cx;
+          d.y = py - cy;
+        }
+
+        const currentOffsetX = d.offsetX ?? 0;
+        const currentOffsetY = d.offsetY ?? 0;
+        const targetOffsetX = d.targetOffsetX ?? 0;
+        const targetOffsetY = d.targetOffsetY ?? 0;
+
+        const easedOffsetX =
+          currentOffsetX + (targetOffsetX - currentOffsetX) * OFFSET_EASING;
+        const easedOffsetY =
+          currentOffsetY + (targetOffsetY - currentOffsetY) * OFFSET_EASING;
+
+        d.offsetX = easedOffsetX;
+        d.offsetY = easedOffsetY;
+
+        let finalX = px + easedOffsetX;
+        let finalY = py + easedOffsetY;
+        finalX = Math.max(minX, Math.min(maxX, finalX));
+        finalY = Math.max(minY, Math.min(maxY, finalY));
+
+        return `translate(${finalX},${finalY})`;
+      });
+    };
 
     const padding = 2;
     let rafScheduled = false;
@@ -124,26 +210,13 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
       if (rafScheduled) return;
       rafScheduled = true;
       requestAnimationFrame(() => {
-        g.attr('transform', (d) => {
-          const r = scale(d.amount) + padding;
-          const minX = r;
-          const maxX = width - r;
-          const minY = r;
-          const maxY = height - r;
-          let px = cx + (d.x ?? 0);
-          let py = cy + (d.y ?? 0);
-          px = Math.max(minX, Math.min(maxX, px));
-          py = Math.max(minY, Math.min(maxY, py));
-          d.x = px - cx;
-          d.y = py - cy;
-          return `translate(${px},${py})`;
-        });
+        updateTransforms(true);
         rafScheduled = false;
       });
     });
 
     simulation.on('end', () => {
-      g.select<SVGTextElement>('text').call(
+      g.selectAll<SVGTextElement, SimNode>('text').call(
         ellipsizeText,
         textMaxWidth
       );
@@ -151,9 +224,71 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
 
     simulationRef.current = simulation;
 
+    let animationFrameId: number;
+
+    const animateOffsets = () => {
+      updateTransforms(false);
+      animationFrameId = requestAnimationFrame(animateOffsets);
+    };
+
+    animationFrameId = requestAnimationFrame(animateOffsets);
+
+    const svg = containerRef.current.ownerSVGElement;
+    if (svg) {
+      const onMouseMove = (e: MouseEvent) => {
+        const target = e.target as SVGElement | null;
+        if (target && target.closest('.bubble-chart__bubble')) {
+          return;
+        }
+
+        const rect = svg.getBoundingClientRect();
+        const scaleX = width / rect.width;
+        const scaleY = height / rect.height;
+        const mouseX = (e.clientX - rect.left) * scaleX;
+        const mouseY = (e.clientY - rect.top) * scaleY;
+
+        const maxRadius = Math.sqrt(width * width + height * height) / 2;
+
+        nodeData.forEach((node) => {
+          const baseX = cx + (node.x ?? 0);
+          const baseY = cy + (node.y ?? 0);
+          const dx = baseX - mouseX;
+          const dy = baseY - mouseY;
+          const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+
+          const clampedDist = Math.min(dist, maxRadius);
+          const t = 1 - clampedDist / maxRadius;
+          const strength = t * t;
+          const nx = dx / dist;
+          const ny = dy / dist;
+
+          node.targetOffsetX = nx * MAX_CLICK_OFFSET * strength;
+          node.targetOffsetY = ny * MAX_CLICK_OFFSET * strength;
+        });
+      };
+
+      const onMouseLeave = () => {
+        nodeData.forEach((node) => {
+          node.targetOffsetX = 0;
+          node.targetOffsetY = 0;
+        });
+      };
+
+      svg.addEventListener('mousemove', onMouseMove);
+      svg.addEventListener('mouseleave', onMouseLeave);
+      return () => {
+        simulation.stop();
+        simulationRef.current = null;
+        cancelAnimationFrame(animationFrameId);
+        svg.removeEventListener('mousemove', onMouseMove);
+        svg.removeEventListener('mouseleave', onMouseLeave);
+      };
+    }
+
     return () => {
       simulation.stop();
       simulationRef.current = null;
+      cancelAnimationFrame(animationFrameId);
     };
   }, [data, width, height, navigate]);
 

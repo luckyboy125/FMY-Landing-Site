@@ -214,11 +214,11 @@ function Database() {
                         />
                       </div>
                       <DatabaseSearchDropdown
-                        content="Cases"
-                        select="All"
+                        label="Cases"
+                        selectedValue="All"
                         className="cases"
                         type="keyword"
-                        childrenStyle="dropChildrenRoot"
+                        panelClassName="dropChildrenRoot"
                       >
                         <div className="dropRoot">
                           <div className="dropItem">Lorem ipsum</div>
@@ -229,11 +229,11 @@ function Database() {
                         </div>
                       </DatabaseSearchDropdown>
                       <DatabaseSearchDropdown
-                        content="Social platform"
-                        select="All"
+                        label="Social platform"
+                        selectedValue="All"
                         className="social"
                         type="keyword"
-                        childrenStyle="dropChildrenRoot"
+                        panelClassName="dropChildrenRoot"
                       >
                         <div className="plateformDropdown">
                           <div className="item">
@@ -284,11 +284,11 @@ function Database() {
                         />
                       </div>
                       <DatabaseSearchDropdown
-                        content="Added date"
-                        select="All"
+                        label="Added date"
+                        selectedValue="All"
                         className="cases"
                         type="calendar"
-                        childrenStyle="dropChildrenRoot"
+                        panelClassName="dropChildrenRoot"
                       >
                         <div className="dropRoot">
                           <div className="dropItem">Lorem ipsum</div>
@@ -299,10 +299,10 @@ function Database() {
                         </div>
                       </DatabaseSearchDropdown>
                       <DatabaseSearchDropdown
-                        content="Added by"
-                        select="All"
+                        label="Added by"
+                        selectedValue="All"
                         className="social"
-                        childrenStyle="dropChildrenRoot"
+                        panelClassName="dropChildrenRoot"
                       >
                         <div className="dropRoot">
                           <div className="dropItem">Lorem ipsum</div>
@@ -330,7 +330,7 @@ function Database() {
                 )}
               </div>
             }
-            tableHeader={[
+            columnHeaders={[
               '',
               'Item',
               'User',
@@ -342,7 +342,7 @@ function Database() {
               'Link',
               ''
             ]}
-            body={mockTableData.map((item, index) => (
+            children={mockTableData.map((item, index) => (
               <tr key={index}>
                 <td>
                   <img src={youtube} alt="social_icon"></img>
@@ -357,9 +357,9 @@ function Database() {
                 <td>{item.case}</td>
                 <td>
                   <ColorBtn
-                    name="Medium"
+                    label="Medium"
                     width={130}
-                    arrowShow
+                    showArrow
                     color="#37CE4A"
                   />
                 </td>

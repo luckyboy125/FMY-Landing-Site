@@ -135,8 +135,8 @@ function Investigation() {
         <div className="investigationContent">
           <div className="investigationContent1">
             <DatabaseSearchDropdown
-              content="Cases"
-              select="All"
+              label="Cases"
+              selectedValue="All"
               className="dropdown"
               type="keyword"
             />
@@ -152,7 +152,7 @@ function Investigation() {
               <div className="divline"></div>
               <DropdownLayout
                 className="searchDropdown"
-                dropRoot={
+                panelContent={
                   <>
                     <div className="item">
                       <div className="greenDot"></div>Last 7 Days
@@ -168,7 +168,7 @@ function Investigation() {
                     </div>
                   </>
                 }
-                dropRootStyle="dropdownRoot"
+                panelClassName="dropdownRoot"
               >
                 <div className="dayBtn">
                   Last 15 Days <i className="fas fa-caret-down"></i>

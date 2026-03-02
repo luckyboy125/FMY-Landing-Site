@@ -16,14 +16,14 @@ A modern React single-page application built with a focus on **pixel-perfect** i
 
 ## Tech Stack
 
-| Category        | Technologies                          |
-|----------------|----------------------------------------|
-| Framework      | React 18                               |
-| UI             | Bootstrap 5, React Bootstrap           |
-| Routing        | React Router DOM v6                    |
-| Charts         | Chart.js, ECharts, D3, Vega, Vega-Lite |
-| Build          | Create React App (react-scripts 5)     |
-| Testing        | Jest, React Testing Library            |
+| Category  | Technologies                           |
+| --------- | -------------------------------------- |
+| Framework | React 18                               |
+| UI        | Bootstrap 5, React Bootstrap           |
+| Routing   | React Router DOM v6                    |
+| Charts    | Chart.js, ECharts, D3, Vega, Vega-Lite |
+| Build     | Create FMY (react-scripts 5)           |
+| Testing   | Jest, React Testing Library            |
 
 ---
 

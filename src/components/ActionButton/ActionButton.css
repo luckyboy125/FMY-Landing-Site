@@ -1,4 +1,5 @@
-.actionButtonRoot {
+/* Block: action-button (BEM) */
+.action-button {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -15,8 +16,8 @@
   position: relative;
 }
 
-.actionButtonRoot .buttonName {
-  font-family: "Helvetica";
+.action-button__label {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -27,8 +28,8 @@
   margin-right: 8px;
 }
 
-.actionButtonRoot .buttonContent {
-  font-family: "Helvetica";
+.action-button__content {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -40,7 +41,7 @@
   align-items: center;
 }
 
-.actionButtonRoot .buttonContent i {
+.action-button__content i {
   font-size: 12px;
   line-height: 6px;
   color: #fff;

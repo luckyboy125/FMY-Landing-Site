@@ -1,4 +1,6 @@
-.databaseSearchDropdownRoot {
+/* Block: database-search-dropdown (BEM) */
+
+.database-search-dropdown {
   display: flex;
   padding: 0 20px;
   height: 74px;
@@ -10,12 +12,12 @@
   position: relative;
 }
 
-.databaseSearchDropdownRoot > img {
+.database-search-dropdown__icon {
   margin-right: 15px;
 }
 
-.databaseSearchDropdownRoot .dropdownContent {
-  font-family: "Helvetica";
+.database-search-dropdown__label {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -23,21 +25,22 @@
   color: #fff;
 }
 
-.databaseSearchDropdownRoot .dropdownSelect {
-  font-family: "Helvetica";
+.database-search-dropdown__value {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   color: #fff;
   margin-left: 5px;
 }
-.databaseSearchDropdownRoot i {
+
+.database-search-dropdown__caret {
   font-size: 20px;
   margin-left: 7px;
   color: #fff;
 }
 
-.databaseSearchDropdownRoot .childrenRoot {
+.database-search-dropdown__panel {
   position: absolute;
   top: 84px;
   z-index: 2;

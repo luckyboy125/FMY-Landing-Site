@@ -27,7 +27,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const { height, width } = useWindowDimensions();
 
   useEffect(() => {
@@ -60,10 +60,10 @@ function App() {
                   </Col>
                   <Col sm={9} className="content">
                     <Routes>
-                      <Route path="/" element={<Home />} />
+                      <Route path="/dashboard" element={<Home />} />
                       <Route path="/nrds" element={<NRDS />} />
                       <Route path="/government" element={<Government />} />
-                      <Route path="/dashboard" element={<WebAnalysisItems />} />
+                      <Route path="/" element={<WebAnalysisItems />} />
                       <Route path="/tasks" element={<Tasks />} />
                       <Route path="/CheckLists" element={<CheckLists />} />
                       <Route path="/cases" element={<Cases />} />

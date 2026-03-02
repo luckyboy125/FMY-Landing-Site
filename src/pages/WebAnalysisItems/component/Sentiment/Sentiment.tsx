@@ -73,14 +73,14 @@ function Sentiment({ value }: SentimentProps) {
 
   return (
     <ChartLayout
-      name="Sentiment"
-      button={
+      title="Sentiment"
+      headerAction={
         <ActionButton
           name="Show"
           content="This week"
           className="sentimentBtn"
-          dropRootStyle="childRoot"
-          dropRoot={
+          panelClassName="childRoot"
+          panelContent={
             <>
               {compare?.map((item, index) => (
                 <div key={index} className="item">

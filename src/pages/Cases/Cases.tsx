@@ -97,31 +97,31 @@ function Cases() {
     query.get('cases_tab') === null ? TAB_DATA[0] : query.get('cases_tab');
 
   return (
-    <div className="casesRoot">
-      <div className="casesTitle">Cases</div>
-      <div className="casesHeaderRoot">
+    <div className="cases">
+      <div className="cases__title">Cases</div>
+      <div className="cases__header">
         <ActionTab
-          className="casesTab"
+          className="cases__tabs"
           data={[...TAB_DATA]}
           onSelect={handleTab}
           select={currentTab ?? undefined}
         />
-        <div className="lastItemRoot">
+        <div className="cases__header-actions">
           <SearchInput
             action={(e) => setSearchValue(e.target.value)}
             inputValue={searchValue}
-            className="caseSearchInput"
+            className="cases__search"
           />
           <PlusButton
             content="+ New case"
-            className="casesHeaderBtn"
+            className="cases__primary-btn"
             action={() => {}}
           />
         </div>
       </div>
-      <div className="casesContainer">
+      <div className="cases__content">
         {currentTab === TAB_DATA[0] ? (
-          <div ref={chartContainerRef} className="casesChartWrapper">
+          <div ref={chartContainerRef} className="cases__chart-wrap">
             <BubbleChart
               data={RAW_DATA}
               width={chartSize.width}

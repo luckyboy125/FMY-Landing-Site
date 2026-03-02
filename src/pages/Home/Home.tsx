@@ -16,31 +16,31 @@ function Home() {
   const closeModal = useCallback(() => setModalShow(false), []);
 
   return (
-    <div className="homeRoot">
-      <div className="homeHeader">
+    <div className="home">
+      <div className="home__header">
         <div>
-          <p className="homeHello">
+          <p className="home__greeting">
             Hello, Nimrod <img src={handImage} alt="hand" />
           </p>
-          <p className="homeHeaderDes">Here are today's updates.</p>
+          <p className="home__subtitle">Here are today's updates.</p>
         </div>
         <PlusButton
           content="+ New update"
           action={openModal}
-          className="homeBtn"
+          className="home__primary-btn"
         />
         <NewUpdateModal show={modalShow} onClose={closeModal} />
       </div>
-      <div className="lineRoot">
+      <div className="home__toolbar">
         <ActionButton
           name="Show"
           content="This Week"
-          className="lineBtn"
-          dropRootStyle="childRoot"
-          dropRoot={
+          className="home__filter-btn"
+          panelClassName="home__dropdown"
+          panelContent={
             <>
               {COMPARE_OPTIONS.map((item, index) => (
-                <div key={`${item}-${index}`} className="item">
+                <div key={`${item}-${index}`} className="home__dropdown-item">
                   {item}
                 </div>
               ))}
@@ -49,10 +49,10 @@ function Home() {
         />
         <CustomizeInlineChart />
       </div>
-      <div className="mainContentRoot">
-        <div className="inline">
+      <div className="home__content">
+        <div className="home__row">
           <HomeCard
-            className="homeCard"
+            className="home__card"
             cardType="boycott"
             commentType="boycott"
             cardContent="Hezbollah called out for boycotting the elections in Bahrain"
@@ -60,7 +60,7 @@ function Home() {
             cardDate="31 October 2022"
           />
           <HomeCard
-            className="homeCard"
+            className="home__card"
             cardType="newupdate"
             commentType="newupdate"
             cardContent="Hezbollah called out for boycotting the elections in Bahrain"
@@ -68,30 +68,30 @@ function Home() {
             cardDate="31 October 2022"
           />
           <HomeCard
-            className="homeCard"
+            className="home__card"
             cardType="newupdate"
             cardContent="Hezbollah called out for boycotting the elections in Bahrain"
             author="Nimrod Ben Efraim"
             cardDate="31 October 2022"
           />
         </div>
-        <div className="inline">
+        <div className="home__row">
           <HomeCard
-            className="homeCard"
+            className="home__card"
             cardType="newupdate"
             cardContent="Hezbollah called out for boycotting the elections in Bahrain"
             author="Nimrod Ben Efraim"
             cardDate="31 October 2022"
           />
           <HomeCard
-            className="homeCard"
+            className="home__card"
             cardType="newupdate"
             cardContent="Hezbollah called out for boycotting the elections in Bahrain"
             author="Nimrod Ben Efraim"
             cardDate="31 October 2022"
           />
           <HomeCard
-            className="homeCard"
+            className="home__card"
             cardType="event"
             cardContent="Hezbollah called out for boycotting the elections in Bahrain"
             author="Nimrod Ben Efraim"

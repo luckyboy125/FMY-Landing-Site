@@ -1,11 +1,12 @@
-.comparisonRoot {
+/* Block: comparison (BEM) */
+.comparison {
   margin-top: 29px;
 }
 
-.comparisonRoot .comparisonHeader {
+.comparison__banner {
   background: linear-gradient(270deg, #6ab4ff 0%, #c2a6ff 100%);
   border-radius: 30px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -18,23 +19,32 @@
   width: 433px;
 }
 
-.comparisonRoot .comparisonRoot1 {
+.comparison__row {
   display: flex;
   margin-top: 15px;
 }
 
-.comparisonRoot .comparisonRoot1 .tagOverTimeRoot {
+.comparison__row--word-clouds,
+.comparison__row--army {
+  margin-top: 28px;
+}
+
+.comparison__row--army {
+  justify-content: center;
+}
+
+.comparison__tag-over-time-card {
   width: 932px;
   margin-right: 30px;
 }
 
-.comparisonRoot .comparisonRoot1 .tagOverTimeRoot .tagOverTimeHeader {
+.comparison__tag-over-time-header {
   justify-content: space-between;
   padding: 0 10px 0 28px;
 }
 
-.comparisonRoot .comparisonRoot1 .tagOverTimeRoot .tagOverTimeHeader .title {
-  font-family: "Helvetica";
+.comparison__tag-over-time-header .comparison__section-title {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -42,17 +52,12 @@
   color: #ffffff;
 }
 
-.comparisonRoot .comparisonRoot1 .tagOverTimeRoot .tagOverTimeHeader .timeTool {
+.comparison__time-tool {
   width: 220px;
   position: relative;
 }
 
-.comparisonRoot
-  .comparisonRoot1
-  .tagOverTimeRoot
-  .tagOverTimeHeader
-  .timeTool
-  .timeToolDropdownRoot {
+.comparison__time-dropdown {
   position: absolute;
   top: 63px;
   right: 20px;
@@ -62,12 +67,7 @@
   padding: 5px 10px;
 }
 
-.comparisonRoot
-  .comparisonRoot1
-  .tagOverTimeRoot
-  .tagOverTimeHeader
-  .timeTool
-  .timeToolDropdownRoot::after {
+.comparison__time-dropdown::after {
   content: "";
   position: absolute;
   top: 0;
@@ -82,28 +82,16 @@
   margin-top: -10px;
 }
 
-.comparisonRoot
-  .comparisonRoot1
-  .tagOverTimeRoot
-  .tagOverTimeHeader
-  .timeTool
-  .timeToolDropdownRoot
-  .item:last-child {
+.comparison__time-dropdown .comparison__dropdown-item:last-child {
   border-bottom: none;
   padding-bottom: 10px;
 }
 
-.comparisonRoot
-  .comparisonRoot1
-  .tagOverTimeRoot
-  .tagOverTimeHeader
-  .timeTool
-  .timeToolDropdownRoot
-  .item {
+.comparison__time-dropdown .comparison__dropdown-item {
   width: 172px;
   display: flex;
   justify-content: flex-start;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -113,32 +101,28 @@
   border-bottom: 1px solid #ffffff1a;
 }
 
-.comparisonRoot .comparisonRoot1 .tagOverTimeRoot .tagOverTime {
+.comparison__tag-over-time-content {
   display: flex;
   justify-content: center;
 }
 
-.comparisonRoot
-  .comparisonRoot1
-  .tagOverTimeRoot
-  .tagOverTime
-  .tagOverTimeLineRoot {
+.comparison__line-chart-wrap {
   display: flex;
   flex-direction: column;
   margin: 73px 0 42.58px;
 }
 
-.comparisonRoot .comparisonRoot1 .taggingRoot {
+.comparison__tagging-card {
   flex-grow: 1;
 }
 
-.comparisonRoot .comparisonRoot1 .taggingRoot .taggingHeader {
+.comparison__tagging-header {
   justify-content: space-between;
   padding: 0 10px 0 28px;
 }
 
-.comparisonRoot .comparisonRoot1 .taggingRoot .taggingHeader .title {
-  font-family: "Helvetica";
+.comparison__tagging-header .comparison__section-title {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -146,29 +130,25 @@
   color: #ffffff;
 }
 
-.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartRoot {
+.comparison__doughnut-wrap {
   display: flex;
   justify-content: center;
   margin-top: 60px;
 }
 
-.comparisonRoot
-  .comparisonRoot1
-  .taggingRoot
-  .doughnutChartRoot
-  .doughnutChartDes {
+.comparison__doughnut-wrap .comparison__doughnut-legend {
   margin-left: 29px;
 }
 
-.comparisonRoot .comparisonRoot1 .taggingRoot .chartRoot {
+.comparison__tagging-card .chartRoot {
   position: relative;
 }
 
-.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartPercent {
+.comparison__tagging-card .comparison__doughnut-center-text {
   position: absolute;
   top: 46%;
   right: 46%;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
@@ -176,19 +156,20 @@
   text-align: center;
   color: #ffffff;
 }
-.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartDes {
+
+.comparison__doughnut-legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartDesItem {
+.comparison__doughnut-legend-item {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
 
-.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartIcon {
+.comparison__doughnut-legend-swatch {
   width: 13px;
   min-height: 13px;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -196,8 +177,8 @@
   border-radius: 50px;
 }
 
-.comparisonRoot .comparisonRoot1 .taggingRoot .doughnutChartItemName {
-  font-family: Helvetica;
+.comparison__doughnut-legend-label {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -205,17 +186,12 @@
   color: #ffffff;
 }
 
-.comparisonRoot .comparisonRoot2 {
-  display: flex;
-  margin-top: 28px;
-}
-
-.comparisonRoot .wordCloudHeader {
+.comparison__word-cloud-header {
   padding: 0 30px;
 }
 
-.comparisonRoot .wordCloudHeader .headerTitle {
-  font-family: "Helvetica";
+.comparison__word-cloud-title {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -223,46 +199,37 @@
   color: #ffffff;
 }
 
-.comparisonRoot .wordCloud {
+.comparison__word-cloud-content {
   padding: 18px 30px 19px;
 }
 
-.comparisonRoot .comparisonRoot2 .governmentWordCloud {
+.comparison__word-cloud-card--government {
   width: 932px;
   margin-right: 30px;
 }
 
-.comparisonRoot .comparisonRoot2 .servicesWordCloud {
+.comparison__word-cloud-card--services {
   flex-grow: 1;
 }
 
-.comparisonRoot .comparisonRoot3 {
-  display: flex;
-  justify-content: center;
-  margin-top: 28px;
-}
-
-.comparisonRoot .comparisonRoot2 .armyWordCloud {
+.comparison__word-cloud-card--army {
   width: 932px;
 }
 
-.comparisonRoot .comparisonRoot4 {
+.comparison__table-section {
   margin-top: 28px;
-}
-
-.comparisonRoot .comparisonRoot4 {
   margin-bottom: 0 !important;
 }
 
-.comparisonRoot .comparisonRoot4 .comparisonTableHeader {
+.comparison__table-header {
   display: flex;
   height: 90px;
   align-items: center;
   padding: 0 31.69px 0 30px;
 }
 
-.comparisonRoot .comparisonRoot4 .comparisonTableHeader .comparisonTableTitle {
-  font-family: "Helvetica";
+.comparison__table-title {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
@@ -270,37 +237,35 @@
   color: #ffffff;
   margin-right: 31px;
 }
-.comparisonRoot
-  .comparisonRoot4
-  .comparisonTableHeader
-  .comparisonTableSearchTool {
+
+.comparison__table-search {
   flex-grow: 1;
 }
 
-.comparisonRoot .comparisonRoot4 .comparisonTableHeader .toolEndRoot {
+.comparison__toolbar {
   display: flex;
 }
 
-.comparisonRoot .comparisonRoot4 .comparisonTableHeader .toolEndRoot .tool {
+.comparison__toolbar-btn {
   margin-left: 20px;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(1) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(1) {
   width: 110px;
   padding-left: 13px !important;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(1) {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(1) {
   text-align: center !important;
   padding-left: 13px !important;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(2) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(2) {
   padding-left: 4px;
   text-align: left !important;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(2) {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(2) {
   text-align: left !important;
   font-family: "Helvetica";
   font-style: normal;
@@ -310,11 +275,11 @@
   color: #ffffff;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(3) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(3) {
   text-align: left !important;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(3) {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(3) {
   text-align: left !important;
   font-family: "Helvetica";
   font-style: normal;
@@ -324,11 +289,11 @@
   color: #ffffff;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(4) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(4) {
   text-align: left !important;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(4) {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(4) {
   text-align: left !important;
   font-family: "Helvetica";
   font-style: normal;
@@ -338,11 +303,11 @@
   color: #ffffff;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(5) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(5) {
   text-align: left !important;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(5) {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(5) {
   display: flex;
   align-items: center;
   text-align: left !important;
@@ -354,18 +319,18 @@
   color: #ffffff;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(5) img {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(5) img {
   min-width: 50px;
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(6) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(6) {
   text-align: center;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(6) {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(6) {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -375,22 +340,22 @@
   opacity: 0.5;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(7) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(7) {
   text-align: center;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(7) div {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(7) div {
   background: #2d452f !important;
   min-width: none !important;
   max-width: 124px;
   margin: auto;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(8) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(8) {
   text-align: center;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(8) {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(8) {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -400,11 +365,11 @@
   cursor: pointer;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(9) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(9) {
   text-align: center;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable tbody tr td:nth-child(9) {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(9) {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -414,24 +379,18 @@
   text-decoration: underline;
 }
 
-.comparisonRoot .comparisonRoot4 .customizeTable thead tr th:nth-child(10) {
+.comparison__table-section .customize-table__table thead tr th:nth-child(10) {
   width: 97px;
 }
 
-.comparisonRoot
-  .comparisonRoot4
-  .customizeTable
-  tbody
-  tr
-  td:nth-child(10)
-  .dotBtn {
+.comparison__table-section .customize-table__table tbody tr td:nth-child(10) .comparison__actions-btn {
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.comparisonRoot .tabelViewModalRoot {
+.comparison__view-modal {
   width: 1500px;
   background: linear-gradient(180deg, #343d49 0%, #336497 100%);
   backdrop-filter: blur(2px);
@@ -439,7 +398,7 @@
   padding: 30px 30px 20px;
 }
 
-.comparisonRoot .tabelViewModalRoot > img {
+.comparison__view-modal > img {
   cursor: pointer;
   position: absolute;
   top: 30px;
@@ -447,14 +406,14 @@
   z-index: 2;
 }
 
-.comparisonRoot .tabelViewModalRoot .dotBtn {
+.comparison__view-modal .comparison__actions-btn {
   position: absolute;
   top: 30px;
   right: 70px;
   z-index: 2;
 }
 
-.comparisonRoot .tabelViewModalRoot .dotBtn .dot {
+.comparison__view-modal .comparison__actions-btn .dot {
   background: #fff !important;
   min-width: 5px;
   width: 5px;
@@ -462,12 +421,12 @@
   min-height: 5px;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot {
+.comparison__view-modal .comparison__view-modal-body {
   display: flex;
   align-items: flex-end;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .leftPart {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-media {
   width: 650px;
   min-width: 650px;
   height: 650px;
@@ -481,20 +440,20 @@
   color: #ffffff;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .divLinePart {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-divider {
   width: 2px;
   height: 688px;
   background: #ffffff33;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-content {
   padding-left: 30px;
   flex-grow: 1;
   text-align: left;
   position: relative;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart .title {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-content .comparison__section-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -503,13 +462,13 @@
   color: #ffffff;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart .rightPart1 {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-content .comparison__view-modal-meta {
   display: flex;
   align-items: center;
   margin-top: 34px;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart .rightPart1 .item {
+.comparison__view-modal-meta-item {
   width: 323px;
   display: flex;
   align-items: center;
@@ -521,11 +480,11 @@
   color: #ffffff;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart .casesPart {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-content .comparison__view-modal-section {
   margin-top: 76px;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart .casesPart .title {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-content .comparison__view-modal-section .comparison__section-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -534,7 +493,7 @@
   color: #ffffff;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart .casesPart .desRoot {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-content .comparison__view-modal-section .comparison__view-modal-card {
   position: relative;
   margin-top: 30px;
   display: flex;
@@ -548,36 +507,17 @@
   padding: 20px 20px 10px;
 }
 
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .casesPart
-  .desRoot
-  > img {
+.comparison__view-modal-card > img {
   width: 50px;
   height: 50px;
   margin-right: 20px;
 }
 
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .casesPart
-  .desRoot
-  .desRoot1 {
+.comparison__view-modal-card-body {
   width: 506px;
 }
 
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .casesPart
-  .desRoot
-  .desRoot1
-  .des {
+.comparison__view-modal-card-body .comparison__view-modal-card-text {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -586,14 +526,7 @@
   color: #ffffff;
 }
 
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .casesPart
-  .desRoot
-  .desRoot1
-  .desDate {
+.comparison__view-modal-card-body .comparison__view-modal-card-date {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -603,23 +536,17 @@
   margin-top: 19px;
 }
 
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .casesPart
-  .desRoot
-  .dotBtn {
+.comparison__view-modal-card .comparison__actions-btn {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart .commentPart {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-content .comparison__view-modal-section.comparison__view-modal-section--comments {
   margin-top: 78px;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart .commentPart .title {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-content .comparison__view-modal-section.comparison__view-modal-section--comments .comparison__section-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -628,7 +555,7 @@
   color: #ffffff;
 }
 
-.comparisonRoot .tabelViewModalRoot .mainRoot .rightPart .commentPart .desRoot {
+.comparison__view-modal .comparison__view-modal-body .comparison__view-modal-content .comparison__view-modal-section.comparison__view-modal-section--comments .comparison__view-modal-card {
   margin-top: 28px;
   height: 297px;
   background: linear-gradient(
@@ -642,26 +569,13 @@
   position: relative;
 }
 
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
-  .dotBtn {
+.comparison__view-modal-section--comments .comparison__view-modal-card .comparison__actions-btn {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
-  .dotBtn
-  .dot {
+.comparison__view-modal-section--comments .comparison__view-modal-card .comparison__actions-btn .dot {
   width: 5px;
   min-width: 5px;
   height: 5px;
@@ -669,16 +583,10 @@
   background: #fff !important;
 }
 
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
-  textarea {
+.comparison__view-modal-section--comments .comparison__view-modal-card textarea {
   width: 550px;
   height: 110px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -689,46 +597,22 @@
   padding: 0 !important;
   resize: none;
 }
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
-  textarea::placeholder {
-  font-family: "Helvetica";
+
+.comparison__view-modal-section--comments .comparison__view-modal-card textarea::placeholder {
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.5);
 }
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
-  textarea:focus-visible {
-  outline: none;
-}
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
-  textarea:focus {
+
+.comparison__view-modal-section--comments .comparison__view-modal-card textarea:focus-visible,
+.comparison__view-modal-section--comments .comparison__view-modal-card textarea:focus {
   outline: none;
 }
 
-.comparisonRoot
-  .tabelViewModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
-  .postBtn {
+.comparison__view-modal-submit {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -740,7 +624,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;

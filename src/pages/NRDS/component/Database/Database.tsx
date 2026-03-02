@@ -56,14 +56,14 @@ function Database() {
                 <DatabaseSearchInput />
                 <div className="plusLetter">+</div>
                 <DatabaseSearchDropdown
-                  content="Keywords"
-                  select="All"
+                  label="Keywords"
+                  selectedValue="All"
                   className="dropdown"
                   type="keyword"
                 />
                 <DatabaseSearchDropdown
-                  content="Upload dates"
-                  select="All"
+                  label="Upload dates"
+                  selectedValue="All"
                   type="calendar"
                   className="dropdown"
                 />
@@ -71,8 +71,8 @@ function Database() {
             </div>
           </>
         }
-        tableHeader={["Domain", "Added by", "Added Date", "IP Address", "Keyword", ""]}
-        body={mockTableData?.map((item, index) => (
+        columnHeaders={["Domain", "Added by", "Added Date", "IP Address", "Keyword", ""]}
+        children={mockTableData?.map((item, index) => (
           <tr key={index}>
             <td className="firstTd">{item.domain}</td>
             <td className="avatarTd">

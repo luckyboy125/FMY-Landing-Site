@@ -182,10 +182,10 @@ function Government() {
               </div>
               <div className="lineChartRoot">
                 <CustomizeLineChart
-                  label={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
+                  labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
                   data={[
                     {
-                      line_color: ['#6AB4FF', '#C2A6FF'],
+                      lineColor: ['#6AB4FF', '#C2A6FF'],
                       value: [1000, 1232, 1322, 900, 1488, 800, 1100],
                       fill: true
                     }

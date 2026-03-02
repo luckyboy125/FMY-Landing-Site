@@ -1,4 +1,6 @@
-.chartLayout {
+/* Block: chart-layout (BEM) */
+
+.chart-layout {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -15,23 +17,23 @@
   padding: 16px 20px 22px 20px;
 }
 
-.chartLayoutHeaderPart {
+.chart-layout__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.chartLayoutHeaderPartName {
-  font-family: "Helvetica";
+.chart-layout__title {
+  margin: 0 0 0 11.5px;
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 24px;
   color: #ffffff;
-  margin-left: 11.5px;
 }
 
-.chartLayoutContent {
+.chart-layout__content {
   text-align: center;
 }

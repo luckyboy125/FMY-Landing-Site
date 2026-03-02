@@ -105,8 +105,8 @@ function Basic() {
                 name="Show"
                 content="Last Week"
                 className="chartPeriod"
-                dropRootStyle="chartPeriodDropdownRoot"
-                dropRoot={
+                panelClassName="chartPeriodDropdownRoot"
+                panelContent={
                   <>
                     {chartPeriodDropdown?.map((item, index) => (
                       <div key={index} className="item">
@@ -149,10 +149,10 @@ function Basic() {
             </div>
             <div className="lineChartRoot">
               <CustomizeLineChart
-                label={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
+                labels={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
                 data={[
                   {
-                    line_color: ["#6AB4FF", "#C2A6FF"],
+                    lineColor: ["#6AB4FF", "#C2A6FF"],
                     value: [1000, 1232, 1322, 900, 1488, 800, 1100],
                     fill: true,
                   },
@@ -186,9 +186,9 @@ function Basic() {
             <div className="doughnutChartRoot">
               <CustomizeDoughnutChart
                 data={doughnutChartData.data}
-                label={doughnutChartData.label}
-                colorInfo={doughnutChartColorData}
-                showNumber
+                labels={doughnutChartData.label}
+                segmentColors={doughnutChartColorData}
+                showCenterValue
               />
               <div className="doughnutChartDes">
                 {doughnutChartData.label?.map((item, index) => (
@@ -221,8 +221,8 @@ function Basic() {
               <FilterDropdown
                 className="nrdsTableSearchTool"
                 type="filter"
-                dropRootStyle="nrdsTableSearchToolDropdown"
-                dropRoot={
+                panelClassName="nrdsTableSearchToolDropdown"
+                panelContent={
                   <>
                     {nrdsTableSearchToolDropdown?.map((item, index) => (
                       <div key={index} className="item">
@@ -234,8 +234,8 @@ function Basic() {
               />
               <FilterDropdown
                 className="nrdsTableSearchTool"
-                dropRootStyle="nrdsTableSearchToolDropdown"
-                dropRoot={
+                panelClassName="nrdsTableSearchToolDropdown"
+                panelContent={
                   <>
                     {nrdsTableSearchToolDropdown?.map((item, index) => (
                       <div key={index} className="item">
@@ -248,8 +248,8 @@ function Basic() {
             </div>
           </div>
         }
-        tableHeader={["Domain", "Added Date", "IP Address", "Keyword", ""]}
-        body={mockTableData?.map((item, index) => (
+        columnHeaders={["Domain", "Added Date", "IP Address", "Keyword", ""]}
+        children={mockTableData?.map((item, index) => (
           <tr key={index}>
             <td className="firstTd" onClick={() => handleViewModal(index)}>
               {item.domain}
@@ -321,7 +321,7 @@ function Basic() {
         className="tableDeleteModal"
         show={!!query.get("tabledeletemodal_show")}
         onClose={handleTableDeleteModalClose}
-        description="Are you sure you want to add this domain to the database?"
+        message="Are you sure you want to add this domain to the database?"
       />
     </>
   );

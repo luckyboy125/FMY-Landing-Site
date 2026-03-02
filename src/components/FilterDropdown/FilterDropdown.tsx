@@ -8,47 +8,51 @@ import './FilterDropdown.css';
 export interface FilterDropdownProps {
   className?: string;
   type?: 'filter' | 'sort';
-  dropRoot?: React.ReactNode;
-  dropRootStyle?: string;
+  panelContent?: React.ReactNode;
+  panelClassName?: string;
 }
 
 function FilterDropdown({
   className = '',
   type = 'filter',
-  dropRoot,
-  dropRootStyle = ''
+  panelContent,
+  panelClassName = '',
 }: FilterDropdownProps) {
-  const [dropShow, setDropShow] = useState(false);
-  const dropDownRootRef = useOutsideClick<HTMLDivElement>(() =>
-    setDropShow(false)
-  );
+  const [isOpen, setIsOpen] = useState(false);
+  const panelRef = useOutsideClick<HTMLDivElement>(() => setIsOpen(false));
 
   const handleClick = useCallback((event: React.MouseEvent) => {
-    setDropShow((prev) => !prev);
+    setIsOpen((prev) => !prev);
     event.stopPropagation();
   }, []);
 
+  const label = type === 'filter' ? 'Filter' : 'Sort';
+
   return (
     <div
-      className={`filterDropdownRoot ${className}`}
+      className={`filter-dropdown ${className}`.trim()}
       onClick={handleClick}
       role="button"
       tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && (setIsOpen((p) => !p), e.stopPropagation())}
     >
-      <div className="inputIcon">
+      <div className="filter-dropdown__icon" aria-hidden>
         {type === 'filter' ? (
-          <img src={filterIcon} alt="filter" />
+          <img src={filterIcon} alt="" />
         ) : (
-          <img src={sortIcon} alt="sort" />
+          <img src={sortIcon} alt="" />
         )}
       </div>
-      <div className="filterDropdownIconRoot">
-        {type === 'filter' ? 'Filter' : 'Sort'}
-        <img src={chevronIcon} alt="chevron" />
+      <div className="filter-dropdown__label">
+        <span>{label}</span>
+        <img src={chevronIcon} alt="" className="filter-dropdown__caret" aria-hidden />
       </div>
-      {dropShow ? (
-        <div className={`dropRoot ${dropRootStyle}`} ref={dropDownRootRef}>
-          {dropRoot}
+      {isOpen ? (
+        <div
+          className={`filter-dropdown__panel ${panelClassName}`.trim()}
+          ref={panelRef}
+        >
+          {panelContent}
         </div>
       ) : null}
     </div>

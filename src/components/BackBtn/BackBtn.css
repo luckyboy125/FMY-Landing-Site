@@ -1,19 +1,21 @@
-.backBtnRoot {
+/* Block: back-btn (BEM) */
+
+.back-btn {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.backBtnRoot i {
+.back-btn__icon {
   color: #69b3ff;
   font-size: 15px;
   line-height: 9px;
   margin-bottom: 3px;
 }
 
-.backBtnRoot .backBtnContent {
+.back-btn__label {
   margin-left: 5px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;

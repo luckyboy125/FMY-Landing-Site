@@ -1,4 +1,5 @@
-.cardLayoutRoot {
+/* Block: card-layout (BEM) */
+.card-layout {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -8,7 +9,7 @@
   border-radius: 16px;
 }
 
-.cardLayoutRoot .headerRoot {
+.card-layout__header {
   height: 66px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;

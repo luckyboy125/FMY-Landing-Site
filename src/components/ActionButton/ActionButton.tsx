@@ -8,8 +8,8 @@ export interface ActionButtonProps {
   className?: string;
   type?: string;
   children?: React.ReactNode;
-  dropRoot?: React.ReactNode;
-  dropRootStyle?: string;
+  panelContent?: React.ReactNode;
+  panelClassName?: string;
 }
 
 function ActionButton({
@@ -18,8 +18,8 @@ function ActionButton({
   className = '',
   type,
   children,
-  dropRoot,
-  dropRootStyle = ''
+  panelContent,
+  panelClassName = ''
 }: ActionButtonProps) {
   const [dropShow, setDropShow] = useState(false);
   const dropDownRootRef = useOutsideClick<HTMLDivElement>(() =>
@@ -33,20 +33,25 @@ function ActionButton({
 
   return (
     <div
-      className={`actionButtonRoot ${className}`}
+      className={`action-button ${className}`}
       onClick={handleClick}
       role="button"
       tabIndex={0}
     >
-      {type !== 'common' ? <div className="buttonName">{name}:</div> : null}
-      <div className="buttonContent">
+      {type !== 'common' ? (
+        <div className="action-button__label">{name}:</div>
+      ) : null}
+      <div className="action-button__content">
         {content}
         <i className="fas fa-caret-down" aria-hidden />
       </div>
       {children}
       {dropShow ? (
-        <div className={`dropRoot ${dropRootStyle}`} ref={dropDownRootRef}>
-          {dropRoot}
+        <div
+          className={`action-button__dropdown ${panelClassName}`}
+          ref={dropDownRootRef}
+        >
+          {panelContent}
         </div>
       ) : null}
     </div>

@@ -17,11 +17,16 @@ function ActionTab({ className = "", data, onSelect, select }: ActionTabProps) {
   );
 
   return (
-    <div className={`actionTabRoot ${className}`}>
+    <div className={`action-tab ${className}`.trim()}>
       {data?.map((item, index) => (
         <div
           key={`${item}-${index}`}
-          className={`actionTabItem ${select === item ? "active" : ""}`}
+          className={[
+            "action-tab__item",
+            select === item && "action-tab__item--active",
+          ]
+            .filter(Boolean)
+            .join(" ")}
           onClick={() => handleClick(item)}
           role="button"
           tabIndex={0}
