@@ -51,34 +51,21 @@ function ellipsizeText(
   });
 }
 
-interface SimNode extends BubbleDatum, d3.SimulationNodeDatum {}
-
-const CURSOR_INFLUENCE_RADIUS = 140;
-const REPEL_STRENGTH = 28;
-const LINK_BUBBLE_SCALE = 1.08;
-
-function getRepelOffset(
-  nodeX: number,
-  nodeY: number,
-  mouseX: number,
-  mouseY: number
-): { x: number; y: number } {
-  const dx = nodeX - mouseX;
-  const dy = nodeY - mouseY;
-  const dist = Math.sqrt(dx * dx + dy * dy);
-  if (dist >= CURSOR_INFLUENCE_RADIUS || dist < 1) return { x: 0, y: 0 };
-  const t = 1 - dist / CURSOR_INFLUENCE_RADIUS;
-  const magnitude = REPEL_STRENGTH * t * t;
-  const nx = dx / dist;
-  const ny = dy / dist;
-  return { x: nx * magnitude, y: ny * magnitude };
+interface SimNode extends BubbleDatum, d3.SimulationNodeDatum {
+  offsetX?: number;
+  offsetY?: number;
+  targetOffsetX?: number;
+  targetOffsetY?: number;
 }
+
+const MAX_CLICK_OFFSET = 18;
+const OFFSET_EASING = 0.16;
+const LINK_BUBBLE_SCALE = 1.08;
 
 function BubbleChart({ data, width, height }: BubbleChartProps) {
   const navigate = useNavigate();
   const containerRef = useRef<SVGGElement>(null);
   const simulationRef = useRef<d3.Simulation<SimNode, undefined> | null>(null);
-  const mousePosRef = useRef<{ x: number; y: number } | null>(null);
 
   useEffect(() => {
     if (!data?.length || !containerRef.current) return;
@@ -95,7 +82,13 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
     const container = d3.select(containerRef.current);
     container.selectAll('*').remove();
 
-    const nodeData: SimNode[] = data.map((d) => ({ ...d }));
+    const nodeData: SimNode[] = data.map((d) => ({
+      ...d,
+      offsetX: 0,
+      offsetY: 0,
+      targetOffsetX: 0,
+      targetOffsetY: 0
+    }));
 
     const cx = width / 2;
     const cy = height / 2;
@@ -170,7 +163,6 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
     const padding = 2;
 
     const updateTransforms = (updateNodeData: boolean) => {
-      const mouse = mousePosRef.current;
       g.attr('transform', (d) => {
         const r = scale(d.amount) + padding;
         const minX = r;
@@ -181,18 +173,31 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
         let py = cy + (d.y ?? 0);
         px = Math.max(minX, Math.min(maxX, px));
         py = Math.max(minY, Math.min(maxY, py));
+
         if (updateNodeData) {
           d.x = px - cx;
           d.y = py - cy;
         }
-        let offsetX = 0;
-        let offsetY = 0;
-        if (mouse) {
-          const repel = getRepelOffset(px, py, mouse.x, mouse.y);
-          offsetX = repel.x;
-          offsetY = repel.y;
-        }
-        return `translate(${px + offsetX},${py + offsetY})`;
+
+        const currentOffsetX = d.offsetX ?? 0;
+        const currentOffsetY = d.offsetY ?? 0;
+        const targetOffsetX = d.targetOffsetX ?? 0;
+        const targetOffsetY = d.targetOffsetY ?? 0;
+
+        const easedOffsetX =
+          currentOffsetX + (targetOffsetX - currentOffsetX) * OFFSET_EASING;
+        const easedOffsetY =
+          currentOffsetY + (targetOffsetY - currentOffsetY) * OFFSET_EASING;
+
+        d.offsetX = easedOffsetX;
+        d.offsetY = easedOffsetY;
+
+        let finalX = px + easedOffsetX;
+        let finalY = py + easedOffsetY;
+        finalX = Math.max(minX, Math.min(maxX, finalX));
+        finalY = Math.max(minY, Math.min(maxY, finalY));
+
+        return `translate(${finalX},${finalY})`;
       });
     };
 
@@ -215,26 +220,62 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
 
     simulationRef.current = simulation;
 
+    let animationFrameId: number;
+
+    const animateOffsets = () => {
+      updateTransforms(false);
+      animationFrameId = requestAnimationFrame(animateOffsets);
+    };
+
+    animationFrameId = requestAnimationFrame(animateOffsets);
+
     const svg = containerRef.current.ownerSVGElement;
     if (svg) {
       const onMouseMove = (e: MouseEvent) => {
+        const target = e.target as SVGElement | null;
+        if (target && target.closest('.bubble-chart__bubble')) {
+          return;
+        }
+
         const rect = svg.getBoundingClientRect();
         const scaleX = width / rect.width;
         const scaleY = height / rect.height;
-        const x = (e.clientX - rect.left) * scaleX;
-        const y = (e.clientY - rect.top) * scaleY;
-        mousePosRef.current = { x, y };
-        updateTransforms(false);
+        const mouseX = (e.clientX - rect.left) * scaleX;
+        const mouseY = (e.clientY - rect.top) * scaleY;
+
+        const maxRadius = Math.sqrt(width * width + height * height) / 2;
+
+        nodeData.forEach((node) => {
+          const baseX = cx + (node.x ?? 0);
+          const baseY = cy + (node.y ?? 0);
+          const dx = baseX - mouseX;
+          const dy = baseY - mouseY;
+          const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+
+          const clampedDist = Math.min(dist, maxRadius);
+          const t = 1 - clampedDist / maxRadius;
+          const strength = t * t;
+          const nx = dx / dist;
+          const ny = dy / dist;
+
+          node.targetOffsetX = nx * MAX_CLICK_OFFSET * strength;
+          node.targetOffsetY = ny * MAX_CLICK_OFFSET * strength;
+        });
       };
+
       const onMouseLeave = () => {
-        mousePosRef.current = null;
-        updateTransforms(false);
+        nodeData.forEach((node) => {
+          node.targetOffsetX = 0;
+          node.targetOffsetY = 0;
+        });
       };
+
       svg.addEventListener('mousemove', onMouseMove);
       svg.addEventListener('mouseleave', onMouseLeave);
       return () => {
         simulation.stop();
         simulationRef.current = null;
+        cancelAnimationFrame(animationFrameId);
         svg.removeEventListener('mousemove', onMouseMove);
         svg.removeEventListener('mouseleave', onMouseLeave);
       };
@@ -243,6 +284,7 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
     return () => {
       simulation.stop();
       simulationRef.current = null;
+      cancelAnimationFrame(animationFrameId);
     };
   }, [data, width, height, navigate]);
 
