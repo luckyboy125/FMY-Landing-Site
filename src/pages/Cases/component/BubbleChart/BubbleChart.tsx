@@ -60,7 +60,6 @@ interface SimNode extends BubbleDatum, d3.SimulationNodeDatum {
 
 const MAX_CLICK_OFFSET = 18;
 const OFFSET_EASING = 0.16;
-const LINK_BUBBLE_SCALE = 1.08;
 
 function BubbleChart({ data, width, height }: BubbleChartProps) {
   const navigate = useNavigate();
@@ -125,9 +124,7 @@ function BubbleChart({ data, width, height }: BubbleChartProps) {
       const group = d3.select<SVGGElement, SimNode>(this);
       const r = scale(d.amount);
       const content = d.link
-        ? group
-            .append('g')
-            .attr('class', 'bubble-chart__bubble-inner')
+        ? group.append('g').attr('class', 'bubble-chart__bubble-inner')
         : group;
       content
         .append('clipPath')
