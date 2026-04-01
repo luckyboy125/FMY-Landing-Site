@@ -35,10 +35,10 @@ function SideTaskBar() {
   const isActive = (path: string): boolean => location.pathname === path;
 
   return (
-    <div className="sideTaskBar">
+    <div className="side-task-bar">
       <img
         src={FmyLogo}
-        className="fmyLogo"
+        className="side-task-bar__logo"
         alt="fmyLogo"
         onClick={reload}
         role="button"
@@ -46,102 +46,102 @@ function SideTaskBar() {
         onKeyDown={(e) => e.key === 'Enter' && reload()}
       />
 
-      <div className="taskBarPagesButtons">
+      <div className="side-task-bar__nav">
         <Button
-          className={`taskBarButton ${isActive('/') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/')}
         >
           <img src={HomeLogo} alt="" />
           Home
         </Button>
         <Button
-          className={`taskBarButton ${isActive('/dashboard') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/dashboard') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/dashboard')}
         >
           <img src={DashboardLogo} alt="" />
           Dashboard
         </Button>
 
-        <div className="dividerLine" />
+        <div className="side-task-bar__divider" />
 
         <Button
-          className={`taskBarButton ${isActive('/database') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/database') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/database')}
         >
           <img src={DatabaseLogo} alt="" />
           Database
         </Button>
         <Button
-          className={`taskBarButton ${isActive('/investigation') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/investigation') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/investigation')}
         >
           <img src={InvestigationLogo} alt="" />
           Investigation
         </Button>
         <Button
-          className={`taskBarButton ${isActive('/cases') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/cases') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/cases')}
         >
           <img src={CasesLogo} alt="" />
           Cases
         </Button>
         <Button
-          className={`taskBarButton ${isActive('/networks') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/networks') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/networks')}
         >
           <img src={NetworksLogo} alt="" />
           Networks
         </Button>
         <Button
-          className={`taskBarButton ${isActive('/nrds') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/nrds') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/nrds')}
         >
           <img src={NrdsLogo} alt="" />
           NRDS
         </Button>
         <Button
-          className={`taskBarButton ${isActive('/tasks') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/tasks') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/tasks')}
         >
           <img src={TasksLogo} alt="" />
           Tasks
         </Button>
         <Button
-          className={`taskBarButton ${isActive('/CheckLists') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/CheckLists') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/CheckLists')}
         >
           <img src={ChecklistsLogo} alt="" />
           Checklists
         </Button>
 
-        <div className="dividerLine" />
+        <div className="side-task-bar__divider" />
 
         <Button
-          className={`taskBarButton ${isActive('/reports') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/reports') ? 'side-task-bar__button--active' : ''}`}
           onClick={go('/reports')}
         >
           <img src={ReportsLogo} alt="" />
           Reports
         </Button>
         <Button
-          className={`taskBarButton ${isActive('/insights') ? 'active' : ''}`}
+          className={`side-task-bar__button ${isActive('/insights') ? 'side-task-bar__button--active' : ''}`}
         >
           <img src={InsightsLogo} alt="" />
           Insights
         </Button>
 
-        <div className="dividerLine" />
+        <div className="side-task-bar__divider" />
 
-        <div className="bottomSideBar">
-          <div className="dividerLine" />
+        <div className="side-task-bar__bottom">
+          <div className="side-task-bar__divider" />
 
           <Button
-            className={`taskBarButton ${isActive('/settings') ? 'active' : ''}`}
+            className={`side-task-bar__button ${isActive('/settings') ? 'side-task-bar__button--active' : ''}`}
           >
             <img src={SettingsLogo} alt="" />
             Settings
           </Button>
-          <Button className="taskBarButton">
+          <Button className="side-task-bar__button">
             <img src={ExitLogo} alt="" />
             Logout
           </Button>

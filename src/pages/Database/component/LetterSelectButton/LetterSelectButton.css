@@ -1,4 +1,4 @@
-.letterSelectButtonRoot {
+.letter-select-button {
   padding: 0 25px;
   height: 70px;
   background: rgba(163, 113, 113, 0.1);
@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.letterSelectButtonRoot .item {
+.letter-select-button .letter-select-button__item {
   display: flex;
   align-items: center;
   font-family: "Helvetica";
@@ -20,7 +20,7 @@
   color: #ffffff;
 }
 
-.letterSelectButtonRoot .item span {
+.letter-select-button .letter-select-button__item span {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -30,6 +30,6 @@
   cursor: pointer;
 }
 
-.letterSelectButtonRoot .selected {
+.letter-select-button .letter-select-button__item--selected {
   font-weight: 700 !important;
 }

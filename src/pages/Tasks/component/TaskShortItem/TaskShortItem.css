@@ -1,4 +1,4 @@
-.taskShortItem {
+.task-short-item {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -12,7 +12,7 @@
   position: relative;
   width: 100%;
 }
-.taskShortItem .circleIcon {
+.task-short-item .task-short-item__circle-icon {
   position: relative;
   width: 34px;
   min-width: 34px;
@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: center;
 }
-.taskShortItem .circleIcon::before {
+.task-short-item .task-short-item__circle-icon::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -36,10 +36,10 @@
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
-.taskShortItem .taskShortItemContent {
+.task-short-item .task-short-item__content {
   flex-grow: 1;
 }
-.taskShortItem .taskShortItemContent .title {
+.task-short-item .task-short-item__content .task-short-item__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -49,7 +49,7 @@
   margin-bottom: 10px;
 }
 
-.taskShortItem .taskShortItemContent .des {
+.task-short-item .task-short-item__content .task-short-item__description {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -59,20 +59,20 @@
   margin-bottom: 18px;
 }
 
-.taskShortItem .taskShortItemContent .items {
+.task-short-item .task-short-item__content .task-short-item__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.taskShortItem .taskShortItemContent .items .itemBtn {
+.task-short-item .task-short-item__content .task-short-item__items .task-short-item__item-btn {
   margin-right: 20px;
 }
-.taskShortItem .taskShortItemContent .items .itemsFirst {
+.task-short-item .task-short-item__content .task-short-item__items .task-short-item__items-left {
   display: flex;
   align-items: center;
 }
-.taskShortItem .taskShortItemContent .items .itemsFirst .avatarRoot {
+.task-short-item .task-short-item__content .task-short-item__items .task-short-item__items-left .task-short-item__avatar-group {
   display: flex;
   align-items: center;
   font-family: "Helvetica";
@@ -83,17 +83,17 @@
   letter-spacing: 0.01em;
   color: #ffffff;
 }
-.taskShortItem .taskShortItemContent .items .itemsFirst .avatarRoot .avatar {
+.task-short-item .task-short-item__content .task-short-item__items .task-short-item__items-left .task-short-item__avatar-group .task-short-item__avatar {
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
-.taskShortItem .taskShortItemContent .items .deleteIcon i {
+.task-short-item .task-short-item__content .task-short-item__items .task-short-item__delete-icon i {
   color: #adb1b3;
   font-size: 24px;
   line-height: 28px;
 }
-.taskShortItem .dotBtn {
+.task-short-item .task-short-item__dot-btn {
   position: absolute;
   top: 20px;
   right: 20px;

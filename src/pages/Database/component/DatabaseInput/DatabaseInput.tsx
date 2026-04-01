@@ -16,7 +16,7 @@ function DatabaseInput({
   tool
 }: DatabaseInputProps) {
   return (
-    <div className={`${className ?? ''} databaseInputRoot`}>
+    <div className={`${className ?? ''} database-input`}>
       <input
         placeholder={placeholder}
         value={inputValue}

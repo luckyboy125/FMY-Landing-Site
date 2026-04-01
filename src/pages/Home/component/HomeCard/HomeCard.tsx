@@ -41,19 +41,19 @@ function HomeCard({
 
   return (
     <>
-      <div className={`homeCardRoot ${className}`}>
-        <ThreeDotBtn className="dotBtn" action={() => {}} />
-        <div className="cardTitle" style={{ backgroundColor: typeInfo.color }}>
+      <div className={`home-card ${className}`}>
+        <ThreeDotBtn className="home-card__dot-btn" action={() => {}} />
+        <div className="home-card__card-title" style={{ backgroundColor: typeInfo.color }}>
           {typeInfo.title}
         </div>
-        <div className="cardName">{cardContent}</div>
-        <div className="cardAuthor">
-          <img src={Person3} className="authorAvatar" alt="avatar" />
+        <div className="home-card__name">{cardContent}</div>
+        <div className="home-card__author">
+          <img src={Person3} className="home-card__author-avatar" alt="avatar" />
           {author}
         </div>
-        <div className="cardDate">{cardDate}</div>
-        <div className="cardIconSocial">
-          <div className="front">
+        <div className="home-card__date">{cardDate}</div>
+        <div className="home-card__social">
+          <div className="home-card__social-front">
             <img src={instagram} alt="instagram" />
             <img src={facebook} alt="facebook" />
             <img src={twitter} alt="twitter" />
@@ -67,7 +67,7 @@ function HomeCard({
           </div>
           {commentType ? (
             <div
-              className="commentBtn"
+              className="home-card__comment-btn"
               onClick={openComment}
               role="button"
               tabIndex={0}

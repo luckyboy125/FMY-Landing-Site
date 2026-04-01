@@ -1,8 +1,8 @@
-.sentimentBtn {
+.sentiment__btn {
   padding: 10.5px 27px !important;
 }
 
-.gaugeMoreDetail {
+.sentiment__gauge-detail {
   position: absolute;
   left: 37%;
   bottom: 5%;
@@ -15,7 +15,7 @@
   color: #ffffff;
 }
 
-.gaugeDirection {
+.sentiment__gauge-direction {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -25,19 +25,19 @@
   color: #ffffff;
 }
 
-.negative {
+.sentiment__gauge-direction--negative {
   position: absolute;
   bottom: -2%;
   left: 21.5%;
 }
 
-.positive {
+.sentiment__gauge-direction--positive {
   position: absolute;
   bottom: -2%;
   right: 22.5%;
 }
 
-.sentimentBtn .childRoot {
+.sentiment__btn .sentiment__dropdown {
   position: absolute;
   top: 63px;
   right: 20px;
@@ -48,7 +48,7 @@
   z-index: 2;
 }
 
-.sentimentBtn .childRoot::after {
+.sentiment__btn .sentiment__dropdown::after {
   content: "";
   position: absolute;
   top: 0;
@@ -63,12 +63,12 @@
   margin-top: -10px;
 }
 
-.sentimentBtn .childRoot .item:last-child {
+.sentiment__btn .sentiment__dropdown .sentiment__dropdown-item:last-child {
   border-bottom: none;
   padding-bottom: 10px;
 }
 
-.sentimentBtn .childRoot .item {
+.sentiment__btn .sentiment__dropdown .sentiment__dropdown-item {
   width: 172px;
   display: flex;
   justify-content: flex-start;
@@ -83,7 +83,7 @@
   border-bottom: 1px solid #ffffff1a;
 }
 
-.sentimentBtn .childRoot .item .statusDot {
+.sentiment__btn .sentiment__dropdown .sentiment__dropdown-item .sentiment__status-dot {
   width: 9px;
   height: 9px;
   border-radius: 50px;

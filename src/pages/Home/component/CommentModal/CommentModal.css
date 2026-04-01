@@ -1,4 +1,4 @@
-.commentModalRoot {
+.comment-modal {
   width: 1500px;
   padding: 30px 30px 20px;
   background: linear-gradient(180deg, #343d49 0%, #336497 100%);
@@ -6,13 +6,13 @@
   border-radius: 20px;
 }
 
-.commentModalRoot .setting {
+.comment-modal .comment-modal__setting {
   position: absolute;
   top: 30px;
   right: 69.4px;
 }
 
-.commentModalRoot .setting .dot {
+.comment-modal .comment-modal__setting .three-dot-btn__dot {
   background: #fff !important;
   width: 5px !important;
   min-width: 5px !important;
@@ -21,14 +21,14 @@
   margin-bottom: 1px !important;
 }
 
-.commentModalRoot .closeIcon {
+.comment-modal .comment-modal__close-icon {
   position: absolute;
   top: 30px;
   right: 30px;
   cursor: pointer;
 }
 
-.commentModalRoot .settingDropdownRoot {
+.comment-modal .comment-modal__setting-dropdown {
   position: absolute;
   top: 37px;
   right: 99px;
@@ -40,7 +40,7 @@
   z-index: 5;
 }
 
-.commentModalRoot .settingDropdownRoot::after {
+.comment-modal .comment-modal__setting-dropdown::after {
   content: "";
   position: absolute;
   top: 0;
@@ -54,11 +54,11 @@
   margin-right: -19px;
 }
 
-.commentModalRoot .settingDropdownRoot .item:last-child {
+.comment-modal .comment-modal__setting-dropdown .comment-modal__dropdown-item:last-child {
   border-bottom: none;
 }
 
-.commentModalRoot .settingDropdownRoot .item {
+.comment-modal .comment-modal__setting-dropdown .comment-modal__dropdown-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,7 @@
   cursor: pointer;
 }
 
-.commentModalRoot .settingDropdownRoot .item .itemContainer {
+.comment-modal .comment-modal__setting-dropdown .comment-modal__dropdown-item .comment-modal__dropdown-item-content {
   width: 111px;
   padding: 0 10px;
   display: flex;
@@ -81,23 +81,23 @@
   color: #ffffff;
 }
 
-.commentModalRoot .settingDropdownRoot .item i {
+.comment-modal .comment-modal__setting-dropdown .comment-modal__dropdown-item i {
   font-size: 16px;
   color: #fff;
 }
 
-.commentModalRoot .delete-modal {
+.comment-modal .comment-modal__delete-modal {
   width: 489px;
 }
 
-.commentModalRoot .headerRoot {
+.comment-modal .comment-modal__header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
 }
 
-.commentModalRoot .headerRoot .title {
+.comment-modal .comment-modal__header .comment-modal__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -106,23 +106,23 @@
   color: #ffffff;
 }
 
-.commentModalRoot .contentRoot {
+.comment-modal .comment-modal__content {
   display: flex;
   width: 100%;
 }
 
-.commentModalRoot .contentRoot .leftPart {
+.comment-modal .comment-modal__content .comment-modal__left {
   width: 720px;
   border-right: solid 1px rgba(255, 255, 255, 0.2);
   padding: 32.5px 30px 22px 0;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart1 {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-1 {
   display: flex;
   align-items: center;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart1 .item1 {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-1 .comment-modal__left-item-1 {
   display: flex;
   align-items: center;
   width: 323px;
@@ -134,7 +134,7 @@
   color: #ffffff99;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart1 .item1 .title {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-1 .comment-modal__left-item-1 .comment-modal__item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -144,7 +144,7 @@
   margin-right: 10px;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart1 .item2 {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-1 .comment-modal__left-item-2 {
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -156,13 +156,13 @@
   color: #ffffff;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart1 .item2 img {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-1 .comment-modal__left-item-2 img {
   margin-right: 10px;
   width: 30px;
   height: 30px;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart1 .item2 .title {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-1 .comment-modal__left-item-2 .comment-modal__item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -171,13 +171,13 @@
   margin-right: 20px;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart2 {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-2 {
   margin-top: 30px;
   display: flex;
   align-items: center;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart2 .title {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-2 .comment-modal__item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -187,7 +187,7 @@
   margin-right: 20px;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart2 .btn {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-2 .comment-modal__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,17 +205,17 @@
   color: #ffffff;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart2 .plus {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-2 .comment-modal__plus {
   color: #01a1fd;
   font-size: 30px;
   cursor: pointer;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart3 {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-3 {
   margin-top: 30px;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart3 .title {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-3 .comment-modal__item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -224,27 +224,27 @@
   color: #ffffff;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart3 .socialRoot {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-3 .comment-modal__social-root {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart3 .socialRoot img:last-child {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-3 .comment-modal__social-root img:last-child {
   margin-right: 0;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart3 .socialRoot img {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-3 .comment-modal__social-root img {
   width: 40px;
   height: 40px;
   margin-right: 5px;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart4 {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-4 {
   margin-top: 30px;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart4 .title {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-4 .comment-modal__item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -253,7 +253,7 @@
   color: #ffffff;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsRoot {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-4 .comment-modal__comments-root {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.2) 0%,
@@ -268,13 +268,13 @@
   position: relative;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsRoot img {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-4 .comment-modal__comments-root img {
   width: 50px;
   height: 50px;
   margin-right: 20px;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsRoot .commentDes {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-4 .comment-modal__comments-root .comment-modal__comment-description {
   width: 506px;
   font-family: "Helvetica";
   font-style: normal;
@@ -284,7 +284,7 @@
   color: #ffffff;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsRoot .commentDate {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-4 .comment-modal__comments-root .comment-modal__comment-date {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -294,28 +294,28 @@
   margin-top: 19px;
 }
 
-.commentModalRoot
-  .contentRoot
-  .leftPart
-  .leftPart4
-  .commentsRoot
-  .dotGroupRoot {
+.comment-modal
+  .comment-modal__content
+  .comment-modal__left
+  .comment-modal__left-4
+  .comment-modal__comments-root
+  .three-dot-btn {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-.commentModalRoot
-  .contentRoot
-  .leftPart
-  .leftPart4
-  .commentsRoot
-  .dotGroupRoot
-  .dot {
+.comment-modal
+  .comment-modal__content
+  .comment-modal__left
+  .comment-modal__left-4
+  .comment-modal__comments-root
+  .three-dot-btn
+  .three-dot-btn__dot {
   background: #ffffff !important;
 }
 
-.commentModalRoot .contentRoot .leftPart .leftPart4 .commentsInputRoot {
+.comment-modal .comment-modal__content .comment-modal__left .comment-modal__left-4 .comment-modal__comments-input {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.2) 0%,
@@ -329,11 +329,11 @@
   position: relative;
 }
 
-.commentModalRoot
-  .contentRoot
-  .leftPart
-  .leftPart4
-  .commentsInputRoot
+.comment-modal
+  .comment-modal__content
+  .comment-modal__left
+  .comment-modal__left-4
+  .comment-modal__comments-input
   textarea {
   width: 550px;
   height: 110px;
@@ -348,11 +348,11 @@
   padding: 0 !important;
   resize: none;
 }
-.commentModalRoot
-  .contentRoot
-  .leftPart
-  .leftPart4
-  .commentsInputRoot
+.comment-modal
+  .comment-modal__content
+  .comment-modal__left
+  .comment-modal__left-4
+  .comment-modal__comments-input
   textarea::placeholder {
   font-family: "Helvetica";
   font-style: normal;
@@ -361,29 +361,29 @@
   line-height: 24px;
   color: rgba(255, 255, 255, 0.5);
 }
-.commentModalRoot
-  .contentRoot
-  .leftPart
-  .leftPart4
-  .commentsInputRoot
+.comment-modal
+  .comment-modal__content
+  .comment-modal__left
+  .comment-modal__left-4
+  .comment-modal__comments-input
   textarea:focus-visible {
   outline: none;
 }
-.commentModalRoot
-  .contentRoot
-  .leftPart
-  .leftPart4
-  .commentsInputRoot
+.comment-modal
+  .comment-modal__content
+  .comment-modal__left
+  .comment-modal__left-4
+  .comment-modal__comments-input
   textarea:focus {
   outline: none;
 }
 
-.commentModalRoot
-  .contentRoot
-  .leftPart
-  .leftPart4
-  .commentsInputRoot
-  .postBtn {
+.comment-modal
+  .comment-modal__content
+  .comment-modal__left
+  .comment-modal__left-4
+  .comment-modal__comments-input
+  .comment-modal__post-button {
   position: absolute;
   right: 40px;
   bottom: 25px;
@@ -403,33 +403,33 @@
   color: #ffffff;
 }
 
-.commentModalRoot
-  .contentRoot
-  .leftPart
-  .leftPart4
-  .commentsInputRoot
-  .moreSetting {
+.comment-modal
+  .comment-modal__content
+  .comment-modal__left
+  .comment-modal__left-4
+  .comment-modal__comments-input
+  .comment-modal__more-setting {
   position: absolute;
   right: 20px;
   top: 20px;
 }
 
-.commentModalRoot
-  .contentRoot
-  .leftPart
-  .leftPart4
-  .commentsInputRoot
-  .moreSetting
-  .dot {
+.comment-modal
+  .comment-modal__content
+  .comment-modal__left
+  .comment-modal__left-4
+  .comment-modal__comments-input
+  .comment-modal__more-setting
+  .three-dot-btn__dot {
   background: #fff !important;
 }
 
-.commentModalRoot .contentRoot .rightPart {
+.comment-modal .comment-modal__content .comment-modal__right {
   flex-grow: 1;
   padding: 47px 20px 23px 50px;
 }
 
-.commentModalRoot .contentRoot .rightPart .inputFileRoot {
+.comment-modal .comment-modal__content .comment-modal__right .comment-modal__upload-file {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -441,12 +441,12 @@
   color: #fff;
 }
 
-.commentModalRoot .modalContainer {
+.comment-modal .comment-modal__modal-container {
   width: 100%;
   display: flex;
 }
 
-.commentModalRoot .modalContainer .leftPart {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-left {
   border-radius: 16px;
   width: 690px;
   padding: 10px 0 0;
@@ -454,7 +454,7 @@
   flex-direction: column;
 }
 
-.commentModalRoot .modalContainer .leftPart .titleBtn {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-left .comment-modal__title-button {
   width: 155px;
   height: 40px;
   background: rgba(255, 122, 0, 0.7);
@@ -471,7 +471,7 @@
   margin: 0 auto;
 }
 
-.commentModalRoot .modalContainer .leftPart .titleDes {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-left .comment-modal__title-description {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -488,7 +488,7 @@
   border-radius: 16px;
 }
 
-.commentModalRoot .modalContainer .leftPart .inputFileRoot {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-left .comment-modal__upload-file {
   flex-grow: 1;
   border: 3px dashed #ffffff;
   display: flex;
@@ -505,19 +505,19 @@
   border-radius: 16px;
 }
 
-.commentModalRoot .modalContainer .divLine {
+.comment-modal .comment-modal__modal-container .comment-modal__divider {
   width: 2px;
   height: 720px;
   background: #ffffff33;
   margin: 70px 20px 0;
 }
 
-.commentModalRoot .modalContainer .rightPart {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right {
   flex-grow: 1;
   padding: 64px 0 0;
 }
 
-.commentModalRoot .modalContainer .rightPart .title {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__section-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -526,11 +526,11 @@
   color: #ffffff;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart1 {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-1 {
   display: flex;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart1 .item1 {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-1 .comment-modal__right-item-1 {
   width: 323px;
   font-family: "Helvetica";
   font-style: normal;
@@ -542,7 +542,7 @@
   align-items: center;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart1 .item1 .date {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-1 .comment-modal__right-item-1 .comment-modal__date {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -552,7 +552,7 @@
   margin-left: 10px;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart1 .item2 {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-1 .comment-modal__right-item-2 {
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -564,13 +564,13 @@
   color: #ffffff;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart1 .item2 img {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-1 .comment-modal__right-item-2 img {
   width: 30px;
   height: 30px;
   margin-left: 17.96px;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart1 .item2 .name {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-1 .comment-modal__right-item-2 .comment-modal__name {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -580,13 +580,13 @@
   margin-left: 10px;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart2 {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-2 {
   margin-top: 30px;
   display: flex;
   align-items: center;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart2 .title {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-2 .comment-modal__section-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -596,7 +596,7 @@
   margin-right: 20px;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart2 .btn {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-2 .comment-modal__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -614,17 +614,17 @@
   color: #ffffff;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart2 .plus {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-2 .comment-modal__plus {
   color: #01a1fd;
   font-size: 30px;
   cursor: pointer;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart3 {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-3 {
   margin-top: 30px;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart3 .title {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-3 .comment-modal__section-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -633,44 +633,44 @@
   color: #fff;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-3 .comment-modal__social-root {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot img {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-3 .comment-modal__social-root img {
   width: 40px;
   height: 40px;
   margin-right: 5px;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot1 {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-3 .comment-modal__social-root-2 {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart3 .socialRoot1 img {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-3 .comment-modal__social-root-2 img {
   width: 40px;
   height: 40px;
   margin-right: 5px;
 }
 
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart3
-  .socialRoot
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-3
+  .comment-modal__social-root
   img:last-child {
   margin-right: 0;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart4 {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-4 {
   margin-top: 30px;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart4 .title {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-4 .comment-modal__section-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -679,7 +679,7 @@
   color: #ffffff;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart4 .commentsRoot {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-4 .comment-modal__comments-root {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.2) 0%,
@@ -694,18 +694,18 @@
   position: relative;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart4 .commentsRoot img {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-4 .comment-modal__comments-root img {
   width: 50px;
   height: 50px;
   margin-right: 20px;
 }
 
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsRoot
-  .commentDes {
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-root
+  .comment-modal__comment-description {
   width: 506px;
   font-family: "Helvetica";
   font-style: normal;
@@ -715,12 +715,12 @@
   color: #ffffff;
 }
 
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsRoot
-  .commentDate {
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-root
+  .comment-modal__comment-date {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -730,28 +730,28 @@
   margin-top: 19px;
 }
 
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsRoot
-  .dotGroupRoot {
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-root
+  .three-dot-btn {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsRoot
-  .dotGroupRoot
-  .dot {
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-root
+  .three-dot-btn
+  .three-dot-btn__dot {
   background: #ffffff !important;
 }
 
-.commentModalRoot .modalContainer .rightPart .rightPart4 .commentsInputRoot {
+.comment-modal .comment-modal__modal-container .comment-modal__modal-right .comment-modal__right-4 .comment-modal__comments-input {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.2) 0%,
@@ -765,11 +765,11 @@
   position: relative;
 }
 
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsInputRoot
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-input
   textarea {
   width: 550px;
   height: 110px;
@@ -784,11 +784,11 @@
   padding: 0 !important;
   resize: none;
 }
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsInputRoot
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-input
   textarea::placeholder {
   font-family: "Helvetica";
   font-style: normal;
@@ -797,29 +797,29 @@
   line-height: 24px;
   color: rgba(255, 255, 255, 0.5);
 }
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsInputRoot
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-input
   textarea:focus-visible {
   outline: none;
 }
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsInputRoot
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-input
   textarea:focus {
   outline: none;
 }
 
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsInputRoot
-  .postBtn {
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-input
+  .comment-modal__post-button {
   position: absolute;
   right: 40px;
   bottom: 25px;
@@ -839,23 +839,23 @@
   color: #ffffff;
 }
 
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsInputRoot
-  .moreSetting {
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-input
+  .comment-modal__more-setting {
   position: absolute;
   right: 20px;
   top: 20px;
 }
 
-.commentModalRoot
-  .modalContainer
-  .rightPart
-  .rightPart4
-  .commentsInputRoot
-  .moreSetting
-  .dot {
+.comment-modal
+  .comment-modal__modal-container
+  .comment-modal__modal-right
+  .comment-modal__right-4
+  .comment-modal__comments-input
+  .comment-modal__more-setting
+  .three-dot-btn__dot {
   background: #fff !important;
 }

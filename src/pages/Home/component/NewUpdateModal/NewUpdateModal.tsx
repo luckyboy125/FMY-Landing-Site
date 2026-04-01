@@ -71,43 +71,43 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps) {
   const [attachLinkValue, setAttachLinkValue] = useState('');
 
   return (
-    <ModalLayout show={show} onClose={onClose} className="newUpdataModalRoot">
+    <ModalLayout show={show} onClose={onClose} className="new-update-modal">
       <img
         src={CloseIcon}
-        className="closeIcon"
+        className="new-update-modal__close-icon"
         alt="close"
         onClick={onClose}
         role="button"
         tabIndex={0}
       />
-      <div className="modalTitle">New update</div>
-      <div className="modalInputContent">
-        <div className="modalItem">
-          <div className="title">Category</div>
-          <div className="inputRoot">
+      <div className="new-update-modal__title">New update</div>
+      <div className="new-update-modal__input-content">
+        <div className="new-update-modal__item">
+          <div className="new-update-modal__item-title">Category</div>
+          <div className="new-update-modal__input">
             <input
               value={categoryValue}
               placeholder="Write update here"
               onChange={(e) => setCategoryValue(e.target.value)}
               aria-label="Category"
             />
-            <div className="plus">+</div>
+            <div className="new-update-modal__plus">+</div>
             <div
-              className="roundBtn"
+              className="new-update-modal__round-btn"
               onClick={() => setCategorySelectShow(!categorySelectShow)}
               role="button"
               tabIndex={0}
             >
               <i className="fas fa-chevron-down" aria-hidden />
               {categorySelectShow ? (
-                <div className="selectDropdownRoot" ref={categorySelectRef}>
+                <div className="new-update-modal__select-dropdown" ref={categorySelectRef}>
                   {CATEGORY_SELECT.map((item, index) => (
                     <div
                       key={`${item}-${index}`}
                       className={
                         query.get('newupdate_category') === item
-                          ? 'activeItem'
-                          : 'item'
+                          ? 'new-update-modal__select-item--active'
+                          : 'new-update-modal__select-item'
                       }
                       onClick={() => handleCategory(item)}
                       role="option"
@@ -121,32 +121,32 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps) {
             </div>
           </div>
         </div>
-        <div className="modalItem">
-          <div className="title">Cases</div>
-          <div className="inputRoot">
+        <div className="new-update-modal__item">
+          <div className="new-update-modal__item-title">Cases</div>
+          <div className="new-update-modal__input">
             <input
               value={caseValue}
               placeholder="Choose case"
               onChange={(e) => setCaseValue(e.target.value)}
               aria-label="Case"
             />
-            <div className="plus">+</div>
+            <div className="new-update-modal__plus">+</div>
             <div
-              className="roundBtn"
+              className="new-update-modal__round-btn"
               onClick={() => setCaseSelectShow(!caseSelectShow)}
               role="button"
               tabIndex={0}
             >
               <i className="fas fa-chevron-down" aria-hidden />
               {caseSelectShow ? (
-                <div className="selectDropdownRoot" ref={caseSelectRef}>
+                <div className="new-update-modal__select-dropdown" ref={caseSelectRef}>
                   {CASE_SELECT.map((item, index) => (
                     <div
                       key={`${item}-${index}`}
                       className={
                         query.get('newupdate_case') === item
-                          ? 'activeItem'
-                          : 'item'
+                          ? 'new-update-modal__select-item--active'
+                          : 'new-update-modal__select-item'
                       }
                       onClick={() => handleCase(item)}
                       role="option"
@@ -160,9 +160,9 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps) {
             </div>
           </div>
         </div>
-        <div className="modalItem">
-          <div className="title">Update</div>
-          <div className="inputRoot">
+        <div className="new-update-modal__item">
+          <div className="new-update-modal__item-title">Update</div>
+          <div className="new-update-modal__input">
             <input
               value={updateValue}
               placeholder="Write update here"
@@ -171,9 +171,9 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps) {
             />
           </div>
         </div>
-        <div className="modalItem">
-          <div className="title">Attach link</div>
-          <div className="inputRoot">
+        <div className="new-update-modal__item">
+          <div className="new-update-modal__item-title">Attach link</div>
+          <div className="new-update-modal__input">
             <input
               value={attachLinkValue}
               placeholder="Paste link here..."
@@ -183,8 +183,8 @@ function NewUpdateModal({ show, onClose }: NewUpdateModalProps) {
           </div>
         </div>
       </div>
-      <div className="addLink">+ Add another link</div>
-      <div className="updateBtn">Update</div>
+      <div className="new-update-modal__add-link">+ Add another link</div>
+      <div className="new-update-modal__update-btn">Update</div>
     </ModalLayout>
   );
 }

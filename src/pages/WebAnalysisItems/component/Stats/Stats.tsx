@@ -6,40 +6,40 @@ function Stats() {
   return (
     <ChartLayout
       title="Stats"
-      headerAction={<ActionButton name="Show" content="All" className="statsBtn" />}
+      headerAction={<ActionButton name="Show" content="All" className="stats__btn" />}
       className="stats"
     >
       <div
-        className="statsItems"
+        className="stats__items"
         style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.5)' }}
       >
         <div
-          className="statsItem"
+          className="stats__item"
           style={{ borderRight: '1px solid rgba(255, 255, 255, 0.5)' }}
         >
-          <div className="statsItemCount">1.7k</div>
-          <div className="statsItemDes">Flagged posts</div>
-          <div className="statsItemPercent">+12%</div>
+          <div className="stats__item-count">1.7k</div>
+          <div className="stats__item-description">Flagged posts</div>
+          <div className="stats__item-percent">+12%</div>
         </div>
-        <div className="statsItemRight">
-          <div className="statsItemCount">1.7k</div>
-          <div className="statsItemDes">Flagged posts</div>
-          <div className="statsItemPercent">+12%</div>
+        <div className="stats__item--right">
+          <div className="stats__item-count">1.7k</div>
+          <div className="stats__item-description">Flagged posts</div>
+          <div className="stats__item-percent">+12%</div>
         </div>
       </div>
-      <div className="statsItems">
+      <div className="stats__items">
         <div
-          className="statsItem"
+          className="stats__item"
           style={{ borderRight: '1px solid rgba(255, 255, 255, 0.5)' }}
         >
-          <div className="statsItemCount">1.7k</div>
-          <div className="statsItemDes">Flagged posts</div>
-          <div className="statsItemPercent">+12%</div>
+          <div className="stats__item-count">1.7k</div>
+          <div className="stats__item-description">Flagged posts</div>
+          <div className="stats__item-percent">+12%</div>
         </div>
-        <div className="statsItemRight">
-          <div className="statsItemCount">1.7k</div>
-          <div className="statsItemDes">Flagged posts</div>
-          <div className="statsItemPercent">+12%</div>
+        <div className="stats__item--right">
+          <div className="stats__item-count">1.7k</div>
+          <div className="stats__item-description">Flagged posts</div>
+          <div className="stats__item-percent">+12%</div>
         </div>
       </div>
     </ChartLayout>

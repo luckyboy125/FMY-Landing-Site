@@ -29,43 +29,43 @@ function CheckListsShortItem({
 
   return (
     <div
-      className={`checkListsShortItem ${className ?? ''}`}
+      className={`check-lists-short-item ${className ?? ''}`}
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
-      <div className="circleIcon" onClick={handleCheck}>
+      <div className="check-lists-short-item__circle-icon" onClick={handleCheck}>
         {checkStatus ? (
-          <img src={checkIcon} className="checkIcon" alt="checkIcon" />
+          <img src={checkIcon} className="check-lists-short-item__check-icon" alt="checkIcon" />
         ) : (
           <></>
         )}
       </div>
-      <div className="checkListsShortItemContent">
+      <div className="check-lists-short-item__content">
         <div
-          className="title"
+          className="check-lists-short-item__title"
           style={{ textDecoration: checkStatus ? 'line-through' : 'initial' }}
         >
           {title}
         </div>
-        <div className="des"></div>
-        <div className="items">
-          <div className="itemsFirst">
+        <div className="check-lists-short-item__description"></div>
+        <div className="check-lists-short-item__items">
+          <div className="check-lists-short-item__items-first">
             <ColorBtn
-              className="itemBtn"
+              className="check-lists-short-item__item-button"
               label="10 Mar"
               color="#FF0000"
               width={128}
             />
-            <div className="avatarRoot">
-              <img src={avatar} className="avatar" alt="avatar" />
+            <div className="check-lists-short-item__avatar-root">
+              <img src={avatar} className="check-lists-short-item__avatar" alt="avatar" />
               {user}
             </div>
           </div>
-          <div className="deleteIcon">
+          <div className="check-lists-short-item__delete-icon">
             <i className="fas fa-trash-alt"></i>
           </div>
         </div>
       </div>
-      <ThreeDotBtn className="dotBtn" action={() => click?.()} />
+      <ThreeDotBtn className="check-lists-short-item__dot-button" action={() => click?.()} />
     </div>
   );
 }

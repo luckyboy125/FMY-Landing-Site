@@ -46,78 +46,78 @@ function NewCheckListsModal({
 
   return (
     <ModalLayout
-      className={`${className ?? ''} newCheckListsModalRoot`}
+      className={`${className ?? ''} new-check-lists-modal`}
       show={show}
       onClose={handleModalClose}
     >
       <img
         src={CloseIcon}
-        className="modalCloseIcon"
+        className="new-check-lists-modal__close-icon"
         alt="close icon"
         onClick={handleCloseModal}
       />
       <input
         placeholder="New Task"
         value={title}
-        className="checkListsTitle"
+        className="new-check-lists-modal__title-input"
         onChange={handleTitleChange}
       />
-      <div className="newCheckListsToolRoot">
+      <div className="new-check-lists-modal__tool-row">
         Due date:
         <ColorBtn
-          className="todayBtn"
+          className="new-check-lists-modal__today-button"
           label="Today"
           width={86}
           color="#75B3FF"
         />
         <ColorBtn
-          className="tomorrowBtn"
+          className="new-check-lists-modal__tomorrow-button"
           label="Tomorrow"
           width={120}
           color="#75B3FF"
         />
         <ColorBtn
-          className="otherBtn"
-          icon={<img src={Calendar} className="calendarIcon" alt="calendar" />}
+          className="new-check-lists-modal__other-button"
+          icon={<img src={Calendar} className="new-check-lists-modal__calendar-icon" alt="calendar" />}
           showArrow
           label="Other"
           width={139}
           color="#fff"
         />
       </div>
-      <div className="newCheckListsToolRoot">
+      <div className="new-check-lists-modal__tool-row">
         Add participants:
         <ColorBtn
-          className="participantsBtn"
+          className="new-check-lists-modal__participants-button"
           showArrow
           label="None"
           width={97}
           color="#fff"
         />
       </div>
-      <div className="additionDetail" onClick={handleAdditionDetail}>
+      <div className="new-check-lists-modal__addition-detail" onClick={handleAdditionDetail}>
         Additional details
         <i className="fas fa-angle-down"></i>
       </div>
       <div
-        className="additionDetailContent"
+        className="new-check-lists-modal__addition-detail-content"
         style={{ visibility: addContentShow ? 'visible' : 'hidden' }}
         onClick={() => {}}
       >
-        <div className="additionDetailItem">
+        <div className="new-check-lists-modal__addition-detail-item">
           Priority:
           <ColorBtn
-            className="itemBtn"
+            className="new-check-lists-modal__item-button"
             showArrow
             label="None"
             width={97}
             color="#fff"
           />
         </div>
-        <div className="additionDetailItem" style={{ marginLeft: '50px' }}>
+        <div className="new-check-lists-modal__addition-detail-item" style={{ marginLeft: '50px' }}>
           Repeat:
           <ColorBtn
-            className="itemBtn"
+            className="new-check-lists-modal__item-button"
             showArrow
             label="None"
             width={97}

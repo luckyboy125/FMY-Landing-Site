@@ -29,39 +29,39 @@ function TaskShortItem({
 
   return (
     <div
-      className={`taskShortItem ${className ?? ''}`}
+      className={`task-short-item ${className ?? ''}`}
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
-      <div className="circleIcon" onClick={handleCheck}>
+      <div className="task-short-item__circle-icon" onClick={handleCheck}>
         {checkStatus ? <img src={checkIcon} alt="checkIcon" /> : <></>}
       </div>
-      <div className="taskShortItemContent">
+      <div className="task-short-item__content">
         <div
-          className="title"
+          className="task-short-item__title"
           style={{ textDecoration: checkStatus ? 'line-through' : 'initial' }}
         >
           {title}
         </div>
-        <div className="des">#{type}</div>
-        <div className="items">
-          <div className="itemsFirst">
+        <div className="task-short-item__description">#{type}</div>
+        <div className="task-short-item__items">
+          <div className="task-short-item__items-left">
             <ColorBtn
-              className="itemBtn"
+              className="task-short-item__item-btn"
               label="10 Mar"
               color="#FF0000"
               width={128}
             />
-            <div className="avatarRoot">
-              <img src={avatar} className="avatar" alt="avatar" />
+            <div className="task-short-item__avatar-group">
+              <img src={avatar} className="task-short-item__avatar" alt="avatar" />
               {user}
             </div>
           </div>
-          <div className="deleteIcon">
+          <div className="task-short-item__delete-icon">
             <i className="fas fa-trash-alt"></i>
           </div>
         </div>
       </div>
-      <ThreeDotBtn className="dotBtn" action={() => click?.()} />
+      <ThreeDotBtn className="task-short-item__dot-btn" action={() => click?.()} />
     </div>
   );
 }

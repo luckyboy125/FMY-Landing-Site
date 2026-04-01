@@ -21,11 +21,11 @@ function NRDS() {
 
   return (
     <>
-      <div className="nrdsRoot">
-        <div className="nrdsTitle">NRD's</div>
-        <div className="nrdsHeaderRoot">
+      <div className="nrds">
+        <div className="nrds__title">NRD's</div>
+        <div className="nrds__header">
           <ActionTab
-            className="nrdsHeaderTab"
+            className="nrds__header-tab"
             data={tabData}
             onSelect={handleTab}
             select={

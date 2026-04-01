@@ -3,25 +3,25 @@
   width: 507px;
 }
 
-.statsBtn {
+.stats__btn {
   padding: 9.5px 25px !important;
 }
 
-.statsItems {
+.stats__items {
   display: flex;
   align-items: center;
 }
 
-.statsItems .statsItemRight {
+.stats__items .stats__item--right {
   width: unset !important;
   flex-grow: 1;
   padding: 38px 0 36px 0;
 }
-.statsItem {
+.stats__item {
   width: 233px;
   padding: 38px 0 36px 0;
 }
-.statsItemCount {
+.stats__item-count {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -30,7 +30,7 @@
   text-align: center;
   color: #ffffff;
 }
-.statsItemDes {
+.stats__item-description {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -41,7 +41,7 @@
   opacity: 0.7;
   padding: 17px 0 12px 0;
 }
-.statsItemPercent {
+.stats__item-percent {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 300;

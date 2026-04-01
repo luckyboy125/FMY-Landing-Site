@@ -85,12 +85,12 @@ function Networks() {
   }, []);
 
   return (
-    <div className="networksRoot">
-      <div className="networksHeaderRoot">
+    <div className="networks">
+      <div className="networks__header">
         <div>
-          <div className="networksHeaderTitle">Networks</div>
+          <div className="networks__header-title">Networks</div>
           <ActionTab
-            className="networksHeaderTab"
+            className="networks__header-tab"
             data={tabData}
             onSelect={handleTab}
             select={
@@ -100,54 +100,54 @@ function Networks() {
             }
           />
         </div>
-        <div className="networksHeaderEnd">
-          <div className="headerBtn" onClick={() => setNewNetworkModal(true)}>
+        <div className="networks__header-end">
+          <div className="networks__header-btn" onClick={() => setNewNetworkModal(true)}>
             + New Network
           </div>
         </div>
       </div>
-      <div className="networksContent">
-        <div className="networksContent1">
+      <div className="networks__content">
+        <div className="networks__content-top">
           <CardLayout
-            className="networksChart1Root"
-            contentStyle="networksChart1"
-            headerStyle="networksChart1Header"
+            className="networks__chart1"
+            contentStyle="networks__chart1-body"
+            headerStyle="networks__chart1-header"
             header={
               <>
-                <div className="headerTitle">Networks</div>
-                <div className="headerContent">Biggest networks</div>
+                <div className="networks__chart1-header-title">Networks</div>
+                <div className="networks__chart1-header-content">Biggest networks</div>
               </>
             }
           >
-            <div className="descriptionRoot">
+            <div className="networks__description">
               <div
-                className="descriptionItem"
+                className="networks__description-item"
                 style={{ marginTop: '4px', paddingBottom: '24px' }}
               >
-                <div className="descriptionItemTitle">Total networks</div>
+                <div className="networks__description-item-title">Total networks</div>
                 <div
-                  className="descriptionItemCount"
+                  className="networks__description-item-count"
                   style={{ color: '#0FDF63' }}
                 >
                   630
                 </div>
               </div>
               <div
-                className="descriptionItem"
+                className="networks__description-item"
                 style={{ padding: '28px 0 28px' }}
               >
-                <div className="descriptionItemTitle">
+                <div className="networks__description-item-title">
                   New networks (past 7 days)
                 </div>
                 <div
-                  className="descriptionItemCount"
+                  className="networks__description-item-count"
                   style={{ color: '#75B3FF' }}
                 >
                   100
                 </div>
               </div>
             </div>
-            <div className="doughnutChartRoot">
+            <div className="networks__doughnut-chart">
               <CustomizeDoughnutChart
                 data={mockDoughnutData}
                 labels={[
@@ -160,30 +160,30 @@ function Networks() {
                 ]}
                 segmentColors={doughnutChartColorData}
               />
-              <div className="doughnutChartDes">
+              <div className="networks__doughnut-description">
                 {['first', 'second', 'third', 'fourth', 'fifth', 'sixth'].map(
                   (item, index) => (
-                    <div className="doughnutChartDesItem" key={index}>
+                    <div className="networks__doughnut-description-item" key={index}>
                       <div
-                        className="doughnutChartIcon"
+                        className="networks__doughnut-icon"
                         style={{
                           background: `linear-gradient(238.95deg, ${doughnutChartColorData[index]?.first} 31.21%, ${doughnutChartColorData[index]?.last} 62.45%)`
                         }}
                       />
-                      <div className="doughnutChartItemName">{item}</div>
+                      <div className="networks__doughnut-item-name">{item}</div>
                     </div>
                   )
                 )}
               </div>
             </div>
             <RoundButton
-              className="toolRoot"
+              className="networks__tool"
               action={() => setDropdownShow(!dropdownShow)}
             />
             {dropdownShow ? (
-              <div className="toolRootDropdown" ref={toolDropdownRef}>
-                <div className="searchRoot">
-                  <div className="round">
+              <div className="networks__tool-dropdown" ref={toolDropdownRef}>
+                <div className="networks__search">
+                  <div className="networks__search-round">
                     <i className="fas fa-search"></i>
                   </div>
                   <input
@@ -197,7 +197,7 @@ function Networks() {
                 {toolDropdown.map((item, index) => (
                   <div
                     key={index}
-                    className="item"
+                    className="networks__dropdown-item"
                     onClick={() => setDropdownShow(false)}
                   >
                     {item}
@@ -209,23 +209,23 @@ function Networks() {
             )}
           </CardLayout>
           <CardLayout
-            className="networksChart2Root"
-            contentStyle="networksChart2"
-            headerStyle="networksChart2Header"
-            header={<div className="title">Lorem ipsum</div>}
+            className="networks__chart2"
+            contentStyle="networks__chart2-body"
+            headerStyle="networks__chart2-header"
+            header={<div className="networks__chart2-header-title">Lorem ipsum</div>}
           />
         </div>
         <CustomizeTable
-          className="networksContent2"
+          className="networks__content-bottom"
           header={
-            <div className="networksTableHeader">
-              <div className="networksTableTitle">Lorem ipsum dolor</div>
+            <div className="networks__table-header">
+              <div className="networks__table-title">Lorem ipsum dolor</div>
               <SearchInput
                 action={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setSearchValue(e.target.value)
                 }
                 inputValue={searchValue}
-                className="networksTableSearchTool"
+                className="networks__table-search"
                 inputWith
               />
             </div>
@@ -244,27 +244,27 @@ function Networks() {
               <td>
                 {index % 3 === 0 ? (
                   <div>
-                    <div className="imageRoot">
-                      <img className="small" src={instagram} alt="social" />
+                    <div className="networks__image-group">
+                      <img className="networks__image--small" src={instagram} alt="social" />
                     </div>
-                    <div className="imageRoot" style={{ marginTop: '5px' }}>
+                    <div className="networks__image-group" style={{ marginTop: '5px' }}>
                       <img
-                        className="small"
+                        className="networks__image--small"
                         src={facebook}
                         alt="social"
                         style={{ marginRight: '10px' }}
                       />
-                      <img className="small" src={youtube} alt="social" />
+                      <img className="networks__image--small" src={youtube} alt="social" />
                     </div>
                   </div>
                 ) : (
-                  <div className="imageRoot">
-                    <img className="big" src={instagram} alt="social" />
+                  <div className="networks__image-group">
+                    <img className="networks__image--big" src={instagram} alt="social" />
                   </div>
                 )}
               </td>
               <td>
-                <div className={item.active ? 'active' : 'inactive'}>
+                <div className={item.active ? 'networks__status--active' : 'networks__status--inactive'}>
                   {item.active ? 'Active' : 'Inactive'}
                 </div>
               </td>
@@ -274,18 +274,18 @@ function Networks() {
         />
       </div>
       <ModalLayout
-        className="newNetworkModal"
+        className="networks__new-modal"
         show={newNetworkModal}
         onClose={() => setNewNetworkModal(false)}
       >
         <img
           src={closeIcon}
-          className="closeIcon"
+          className="networks__close-icon"
           alt="closeIcon"
           onClick={() => setNewNetworkModal(false)}
         />
-        <div className="title">New Networks:</div>
-        <div className="uploadBtn">+ Upload CSV</div>
+        <div className="networks__modal-title">New Networks:</div>
+        <div className="networks__upload-btn">+ Upload CSV</div>
       </ModalLayout>
     </div>
   );

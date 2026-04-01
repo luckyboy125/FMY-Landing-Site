@@ -27,49 +27,49 @@ function Reports() {
     query.get('reports_tab') === null ? TAB_DATA[0] : query.get('reports_tab');
 
   return (
-    <div className="reportsRoot">
-      <div className="reportsHeaderRoot">
+    <div className="reports">
+      <div className="reports__header">
         <div>
-          <div className="reportsHeaderTitle">Reports</div>
+          <div className="reports__header-title">Reports</div>
           <ActionTab
-            className="reportsHeaderTab"
+            className="reports__header-tab"
             data={TAB_DATA}
             onSelect={handleTab}
             select={currentTab ?? undefined}
           />
         </div>
-        <div className="reportsHeaderEnd">
-          <div className="headerBtn">Lorem</div>
-          <div className="headerBtn">Lorem</div>
+        <div className="reports__header-end">
+          <div className="reports__header-btn">Lorem</div>
+          <div className="reports__header-btn">Lorem</div>
         </div>
       </div>
-      <div className="reportsContent">
-        <div className="item">
-          <div className="reportsItemTitle">Lorem ipsum</div>
-          <div className="reportsItemRoot">
+      <div className="reports__content">
+        <div className="reports__item">
+          <div className="reports__item-title">Lorem ipsum</div>
+          <div className="reports__item-root">
             <img src={reportCard} alt="report" />
             <img src={reportCard} alt="report" />
             <img src={reportCard} alt="report" />
             <img src={reportCard} alt="report" />
-            <div className="toolArrow left">
+            <div className="reports__tool-arrow reports__tool-arrow--left">
               <i className="fas fa-chevron-left" aria-hidden />
             </div>
-            <div className="toolArrow right">
+            <div className="reports__tool-arrow reports__tool-arrow--right">
               <i className="fas fa-chevron-right" aria-hidden />
             </div>
           </div>
         </div>
-        <div className="item">
-          <div className="reportsItemTitle">Lorem ipsum</div>
-          <div className="reportsItemRoot">
+        <div className="reports__item">
+          <div className="reports__item-title">Lorem ipsum</div>
+          <div className="reports__item-root">
             <img src={reportCard} alt="report" />
             <img src={reportCard} alt="report" />
             <img src={reportCard} alt="report" />
             <img src={reportCard} alt="report" />
-            <div className="toolArrow left">
+            <div className="reports__tool-arrow reports__tool-arrow--left">
               <i className="fas fa-chevron-left" aria-hidden />
             </div>
-            <div className="toolArrow right">
+            <div className="reports__tool-arrow reports__tool-arrow--right">
               <i className="fas fa-chevron-right" aria-hidden />
             </div>
           </div>

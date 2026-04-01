@@ -36,36 +36,36 @@ function Database() {
   return (
     <>
       <CustomizeTable
-        className="nrdsDatabaseTableRoot"
+        className="nrds-database"
         header={
           <>
-            <div className="databaseHeader">
-              <div className="nrdsDatabaseTableHeader">
-                <div className="nrdsDatabaseTableTitle">Domains under monitoring</div>
-                <div className="nrdsDatabaseTableToolRoot">
+            <div className="nrds-database__header">
+              <div className="nrds-database__table-header">
+                <div className="nrds-database__title">Domains under monitoring</div>
+                <div className="nrds-database__tool">
                   <SearchInput
                     action={(e: React.ChangeEvent<HTMLInputElement>) => setSearchValue(e.target.value)}
                     inputValue={searchValue}
-                    className="nrdsDatabaseTableSearchTool"
+                    className="nrds-database__search-tool"
                   />
-                  <FilterDropdown className="nrdsDatabaseTableSearchTool" type="filter" />
+                  <FilterDropdown className="nrds-database__search-tool" type="filter" />
                   <FilterDropdown />
                 </div>
               </div>
-              <div className="nrdsDatabaseSeacrhRoot">
+              <div className="nrds-database__search-root">
                 <DatabaseSearchInput />
-                <div className="plusLetter">+</div>
+                <div className="nrds-database__plus-letter">+</div>
                 <DatabaseSearchDropdown
                   label="Keywords"
                   selectedValue="All"
-                  className="dropdown"
+                  className="nrds-database__dropdown"
                   type="keyword"
                 />
                 <DatabaseSearchDropdown
                   label="Upload dates"
                   selectedValue="All"
                   type="calendar"
-                  className="dropdown"
+                  className="nrds-database__dropdown"
                 />
               </div>
             </div>
@@ -74,16 +74,16 @@ function Database() {
         columnHeaders={["Domain", "Added by", "Added Date", "IP Address", "Keyword", ""]}
         children={mockTableData?.map((item, index) => (
           <tr key={index}>
-            <td className="firstTd">{item.domain}</td>
-            <td className="avatarTd">
+            <td className="nrds-database__td--first">{item.domain}</td>
+            <td className="nrds-database__td--avatar">
               <img src={person1} alt="avatar" />
               Noy
             </td>
-            <td className="secondTd">{item.addedDate}</td>
-            <td className="thirdTd">{item.ipaddress}</td>
-            <td className="fourthTd">{item.keyword}</td>
-            <td className="fifthTd">
-              <div className="des">View</div>
+            <td className="nrds-database__td--second">{item.addedDate}</td>
+            <td className="nrds-database__td--third">{item.ipaddress}</td>
+            <td className="nrds-database__td--fourth">{item.keyword}</td>
+            <td className="nrds-database__td--fifth">
+              <div className="nrds-database__description">View</div>
               <ThreeDotBtn action={() => {}} />
             </td>
           </tr>

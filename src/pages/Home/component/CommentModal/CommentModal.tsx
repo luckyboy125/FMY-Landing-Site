@@ -55,28 +55,31 @@ function CommentModal({
   return (
     <ModalLayout
       show={show}
-      className={`commentModalRoot ${className}`}
+      className={`comment-modal ${className}`}
       onClose={onClose}
     >
-      <ThreeDotBtn className="setting" action={toggleSetting} />
+      <ThreeDotBtn className="comment-modal__setting" action={toggleSetting} />
       <img
         src={CloseIcon}
-        className="closeIcon"
+        className="comment-modal__close-icon"
         alt="close"
         onClick={onClose}
         role="button"
         tabIndex={0}
       />
       {settingDropdownShow ? (
-        <div className="settingDropdownRoot" ref={settingDropdownRef}>
-          <div className="item">
-            <div className="itemContainer">
+        <div
+          className="comment-modal__setting-dropdown"
+          ref={settingDropdownRef}
+        >
+          <div className="comment-modal__dropdown-item">
+            <div className="comment-modal__dropdown-item-content">
               Edit <i className="fas fa-pen" aria-hidden />
             </div>
           </div>
-          <div className="item">
+          <div className="comment-modal__dropdown-item">
             <div
-              className="itemContainer"
+              className="comment-modal__dropdown-item-content"
               onClick={() => setDeleteModalShow(true)}
               role="button"
               tabIndex={0}
@@ -88,33 +91,33 @@ function CommentModal({
       ) : null}
       {type === card_type.boycott.title ? (
         <>
-          <div className="headerRoot">
-            <div className="title">
+          <div className="comment-modal__header">
+            <div className="comment-modal__title">
               Hezbollah called out for boycotting the <br /> elections in
               Bahrain.
             </div>
           </div>
-          <div className="contentRoot">
-            <div className="leftPart">
-              <div className="leftPart1">
-                <div className="item1">
-                  <div className="title">Update date:</div>
+          <div className="comment-modal__content">
+            <div className="comment-modal__left">
+              <div className="comment-modal__left-1">
+                <div className="comment-modal__left-item-1">
+                  <div className="comment-modal__item-title">Update date:</div>
                   31 October 2022
                 </div>
-                <div className="item2">
-                  <div className="title">Username:</div>
+                <div className="comment-modal__left-item-2">
+                  <div className="comment-modal__item-title ">Username:</div>
                   <img src={person3} alt="avatar" />
                   Nimrod Ben Efraim
                 </div>
               </div>
-              <div className="leftPart2">
-                <div className="title">Cases:</div>
-                <div className="btn">Lorem ipsum</div>
-                <div className="plus">+</div>
+              <div className="comment-modal__left-2">
+                <div className="comment-modal__item-title">Cases:</div>
+                <div className="comment-modal__button">Lorem ipsum</div>
+                <div className="comment-modal__plus">+</div>
               </div>
-              <div className="leftPart3">
-                <div className="title">Links:</div>
-                <div className="socialRoot">
+              <div className="comment-modal__left-3">
+                <div className="comment-modal__item-title">Links:</div>
+                <div className="comment-modal__social-root">
                   <img src={instagram} alt="social" />
                   <img src={facebook} alt="social" />
                   <img src={twitter} alt="social" />
@@ -125,42 +128,47 @@ function CommentModal({
                   <img src={w3} alt="social" />
                 </div>
               </div>
-              <div className="leftPart4">
-                <div className="title">Comments</div>
-                <div className="commentsRoot">
+              <div className="comment-modal__left-4">
+                <div className="comment-modal__item-title">Comments</div>
+                <div className="comment-modal__comments-root">
                   <img src={person3} alt="avatar" />
                   <div>
-                    <div className="commentDes">
+                    <div className="comment-modal__comment-description">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Pellentesque cras felis interdum tempor, lobortis egestas
                       volutpat consectetur.....
                     </div>
-                    <div className="commentDate">Feb 6, 11:49 AM</div>
+                    <div className="comment-modal__comment-date">
+                      Feb 6, 11:49 AM
+                    </div>
                   </div>
                   <ThreeDotBtn action={() => {}} />
                 </div>
-                <div className="commentsInputRoot">
+                <div className="comment-modal__comments-input">
                   <textarea
                     placeholder="Comment here"
                     value={commentArea}
                     onChange={(e) => setCommentArea(e.target.value)}
                     aria-label="Comment"
                   />
-                  <div className="postBtn">Post</div>
-                  <ThreeDotBtn className="moreSetting" action={() => {}} />
+                  <div className="comment-modal__post-button">Post</div>
+                  <ThreeDotBtn
+                    className="comment-modal__more-setting"
+                    action={() => {}}
+                  />
                 </div>
               </div>
             </div>
-            <div className="rightPart">
-              <div className="inputFileRoot">+</div>
+            <div className="comment-modal__right">
+              <div className="comment-modal__upload-file">+</div>
             </div>
           </div>
         </>
       ) : type === card_type.newupdate.title ? (
-        <div className="modalContainer">
-          <div className="leftPart">
-            <div className="titleBtn">New update</div>
-            <div className="titleDes">
+        <div className="comment-modal__modal-container">
+          <div className="comment-modal__modal-left">
+            <div className="comment-modal__title-button">New update</div>
+            <div className="comment-modal__title-description">
               The death of a young woman at King Herzog hospital has finally
               promoted the country's lawmakers to promise an investigation into
               claims of medical negligence at the state-run facility. The
@@ -169,31 +177,31 @@ function CommentModal({
               A campaign regarding this is issue is being evident on all major
               social media platforms
             </div>
-            <div className="inputFileRoot">+</div>
+            <div className="comment-modal__upload-file">+</div>
           </div>
-          <div className="divLine" />
-          <div className="rightPart">
-            <div className="rightPart1">
-              <div className="item1">
+          <div className="comment-modal__divider" />
+          <div className="comment-modal__modal-right">
+            <div className="comment-modal__right-1">
+              <div className="comment-modal__right-item-1">
                 Upload date:
-                <div className="date">31 October 2022</div>
+                <div className="comment-modal__date">31 October 2022</div>
               </div>
-              <div className="item2">
+              <div className="comment-modal__right-item-2">
                 Username:
                 <img src={person3} alt="avatar" />
-                <div className="name">Nimrod Ben Efraim</div>
+                <div className="comment-modal__name">Nimrod Ben Efraim</div>
               </div>
             </div>
-            <div className="rightPart2">
-              <div className="title">Cases:</div>
-              <div className="btn">Lorem ipsum</div>
-              <div className="btn">Lorem ipsum</div>
-              <div className="btn">Lorem ipsum</div>
-              <div className="plus">+</div>
+            <div className="comment-modal__right-2">
+              <div className="comment-modal__section-title">Cases:</div>
+              <div className="comment-modal__button ">Lorem ipsum</div>
+              <div className="comment-modal__button ">Lorem ipsum</div>
+              <div className="comment-modal__button ">Lorem ipsum</div>
+              <div className="comment-modal__plus">+</div>
             </div>
-            <div className="rightPart3">
-              <div className="title">Links:</div>
-              <div className="socialRoot">
+            <div className="comment-modal__right-3">
+              <div className="comment-comment-modal__section-title">Links:</div>
+              <div className="comment-modal__social-root">
                 <img src={instagram} alt="social" />
                 <img src={facebook} alt="social" />
                 <img src={twitter} alt="social" />
@@ -210,7 +218,7 @@ function CommentModal({
                 <img src={spotify} alt="social" />
                 <img src={w3} alt="social" />
               </div>
-              <div className="socialRoot1">
+              <div className="comment-modal__social-root-2">
                 <img src={viber} alt="social" />
                 <img src={vimeo} alt="social" />
                 <img src={gmail} alt="social" />
@@ -218,29 +226,34 @@ function CommentModal({
                 <img src={wechat} alt="social" />
               </div>
             </div>
-            <div className="rightPart4">
-              <div className="title">Comments</div>
-              <div className="commentsRoot">
+            <div className="comment-modal__right-4">
+              <div className="comment-modal__section-title">Comments</div>
+              <div className="comment-modal__comments-root">
                 <img src={person3} alt="avatar" />
                 <div>
-                  <div className="commentDes">
+                  <div className="comment-modal__comment-description">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Pellentesque cras felis interdum tempor, lobortis egestas
                     volutpat consectetur.....
                   </div>
-                  <div className="commentDate">Feb 6, 11:49 AM</div>
+                  <div className="comment-modal__comment-date">
+                    Feb 6, 11:49 AM
+                  </div>
                 </div>
                 <ThreeDotBtn action={() => {}} />
               </div>
-              <div className="commentsInputRoot">
+              <div className="comment-modal__comments-input">
                 <textarea
                   placeholder="Comment here"
                   value={commentArea}
                   onChange={(e) => setCommentArea(e.target.value)}
                   aria-label="Comment"
                 />
-                <div className="postBtn">Post</div>
-                <ThreeDotBtn className="moreSetting" action={() => {}} />
+                <div className="comment-modal__post-button">Post</div>
+                <ThreeDotBtn
+                  className="comment-modal__more-setting"
+                  action={() => {}}
+                />
               </div>
             </div>
           </div>

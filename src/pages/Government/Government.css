@@ -1,9 +1,9 @@
-.governmentRoot {
+.government {
   margin-top: 8px;
   padding-left: 33px;
   padding-right: 33px;
 }
-.governmentRoot .governmentTitle {
+.government .government__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -13,7 +13,7 @@
   margin-bottom: 12px;
   padding: 0 6px;
 }
-.governmentRoot .governmentHeaderRoot {
+.government .government__header {
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -21,16 +21,16 @@
   margin-bottom: 30px;
 }
 
-.governmentRoot .governmentHeaderRoot .governmentHeaderLink {
+.government .government__header .government__header-link {
   margin-left: 0px;
 }
 
-.governmentRoot .governmentHeaderRoot .governmentHeaderBtn {
+.government .government__header .government__header-button {
   margin-right: 0px;
   padding: 8px 18px !important;
 }
 
-.governmentRoot .chartContainer {
+.government .government__chart-container {
   width: 100%;
   background: linear-gradient(
     180deg,
@@ -47,14 +47,14 @@
   );
 }
 
-.governmentRoot .chartContainer .chartHeader {
+.government .government__chart-container .government__chart-header {
   display: flex;
   align-items: center;
   height: 66px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.governmentRoot .chartContainer .chartHeader .databasePart {
+.government .government__chart-container .government__chart-header .government__database-part {
   padding: 0 10px 0 30px;
   width: 52.8%;
   display: flex;
@@ -62,55 +62,55 @@
   justify-content: space-between;
 }
 
-.governmentRoot .chartContainer .chartHeader .databasePart .chartTools {
+.government .government__chart-container .government__chart-header .government__database-part .government__chart-tools {
   display: flex;
 }
 
-.governmentRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod {
+.government
+  .government__chart-container
+  .government__chart-header
+  .government__database-part
+  .government__chart-tools
+  .government__chart-period {
   margin-right: 30px;
   padding: 7px 20px 7px 20px;
 }
 
-.governmentRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
+.government
+  .government__chart-container
+  .government__chart-header
+  .government__database-part
+  .government__chart-tools
+  .government__chart-period
   i {
   margin-left: 12px !important;
 }
 
-.governmentRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartCompare {
+.government
+  .government__chart-container
+  .government__chart-header
+  .government__database-part
+  .government__chart-tools
+  .government__chart-compare {
   padding: 10.5px 23px 10.5px 20px !important;
 }
 
-.governmentRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartCompare
+.government
+  .government__chart-container
+  .government__chart-header
+  .government__database-part
+  .government__chart-tools
+  .government__chart-compare
   i {
   margin-left: 12px !important;
 }
 
-.governmentRoot .chartContainer .chartHeader .casesPart {
+.government .government__chart-container .government__chart-header .government__cases-part {
   padding: 0 11px 0 30px;
   flex-grow: 1;
 }
 
-.governmentRoot .chartContainer .chartHeader .databasePart .headerItemTitle {
+.government .government__chart-container .government__chart-header .government__database-part .government__header-item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -120,7 +120,7 @@
   margin-top: 11px;
 }
 
-.governmentRoot .chartContainer .chartHeader .casesPart .headerItemTitle {
+.government .government__chart-container .government__chart-header .government__cases-part .government__header-item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -130,18 +130,18 @@
   margin-top: 11px;
 }
 
-.governmentRoot .chartContent {
+.government .government__chart-content {
   display: flex;
 }
 
-.governmentRoot .chartContent .databasePart {
+.government .government__chart-content .government__database-part {
   padding: 31.5px 0 36px 40.5px;
   width: 52.9%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
 }
 
-.governmentRoot .chartContent .casesPart {
+.government .government__chart-content .government__cases-part {
   padding: 0;
   flex-grow: 1;
   display: flex;
@@ -149,39 +149,39 @@
   align-items: center;
 }
 
-.governmentRoot .descriptionRoot {
+.government .government__description {
   width: 229.88px;
   margin-right: 16px;
 }
 
-.governmentRoot .descriptionRoot .descriptionItem:first-child {
+.government .government__description .government__description-item:first-child {
   border: none !important;
   padding-top: 0 !important;
 }
 
-.governmentRoot .descriptionRoot .descriptionItem:last-child {
+.government .government__description .government__description-item:last-child {
   padding-bottom: 0 !important;
 }
 
-.governmentRoot .lineChartRoot {
+.government .government__line-chart {
   flex-grow: 1;
   padding-top: 45px;
   height: 323.39px;
 }
 
-.governmentRoot .casesPart .descriptionRoot {
+.government .government__cases-part .government__description {
   margin-right: 80px;
 }
 
-.governmentRoot .descriptionItem {
+.government .government__description-item {
   border-top: 1px solid rgba(149, 166, 184, 0.1);
 }
 
-.governmentRoot .casesPart .descriptionItem {
+.government .government__cases-part .government__description-item {
   padding: 17px 0 22px 0;
 }
 
-.governmentRoot .descriptionItemTitle {
+.government .government__description-item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -191,7 +191,7 @@
   white-space: nowrap;
   opacity: 0.7;
 }
-.governmentRoot .descriptionItemCount {
+.government .government__description-item-count {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 300;
@@ -200,7 +200,7 @@
   margin-top: 20px;
 }
 
-.governmentRoot .governmentContentRoot {
+.government .government__content-root {
   margin-top: 30px;
   background: linear-gradient(
     180deg,
@@ -211,13 +211,13 @@
   padding: 20px 32px 30px 30px;
 }
 
-.governmentRoot .governmentHeader {
+.government .government__content-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.governmentRoot .governmentContentRoot .governmentContentTitle {
+.government .government__content-root .government__content-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -225,40 +225,40 @@
   line-height: 24px;
   color: #ffffff;
 }
-.governmentRoot .governmentToolRoot {
+.government .government__tool-root {
   display: flex;
   align-items: center;
 }
 
-.governmentRoot .governmentToolRoot > img {
+.government .government__tool-root > img {
   margin-right: 18px;
   cursor: pointer;
 }
 
-.governmentRoot .governmentToolRoot img:last-child {
+.government .government__tool-root img:last-child {
   margin-right: 0;
 }
 
-.governmentRoot .governmentSearchTool {
+.government .government__search-tool {
   margin-right: 20px;
 }
 
-.governmentRoot .governmentContent {
+.government .government__content {
   margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.governmentRoot
-  .governmentContent
-  .governmentContentItemRoot
-  .governmentContentItem:last-child {
+.government
+  .government__content
+  .government__content-item-root
+  .government__content-item:last-child {
   margin-bottom: 0;
 }
-.governmentRoot
-  .governmentContent
-  .governmentContentItemRoot
-  .governmentContentItem {
+.government
+  .government__content
+  .government__content-item-root
+  .government__content-item {
   margin: 0 auto 30px;
   width: 595px;
   display: flex;

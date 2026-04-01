@@ -78,13 +78,13 @@ function Sentiment({ value }: SentimentProps) {
         <ActionButton
           name="Show"
           content="This week"
-          className="sentimentBtn"
-          panelClassName="childRoot"
+          className="sentiment__btn"
+          panelClassName="sentiment__dropdown"
           panelContent={
             <>
               {compare?.map((item, index) => (
-                <div key={index} className="item">
-                  <div className="statusDot"></div>
+                <div key={index} className="sentiment__dropdown-item">
+                  <div className="sentiment__status-dot"></div>
                   {item}
                 </div>
               ))}
@@ -92,13 +92,13 @@ function Sentiment({ value }: SentimentProps) {
           }
         />
       }
-      className="topPlatforms"
+      className="top-platforms"
     >
-      <div className="chartRoot">
+      <div className="web-analysis__chart-root">
         <ReactEcharts option={option} />
-        <span className="gaugeMoreDetail">Positive sentiment</span>
-        <span className="gaugeDirection negative">Negative</span>
-        <span className="gaugeDirection positive">Positive</span>
+        <span className="sentiment__gauge-detail">Positive sentiment</span>
+        <span className="sentiment__gauge-direction sentiment__gauge-direction--negative">Negative</span>
+        <span className="sentiment__gauge-direction sentiment__gauge-direction--positive">Positive</span>
       </div>
     </ChartLayout>
   );

@@ -1,7 +1,7 @@
-.tasksRoot {
+.tasks {
   padding: 0 35px 50px 35px;
 }
-.tasksTitle {
+.tasks__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -12,21 +12,21 @@
   padding: 0 6px;
   margin-top: 5px;
 }
-.tasksHeaderRoot {
+.tasks__header {
   padding: 0 12px 0 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.tasksContainer {
+.tasks__container {
   margin-top: 42.5px;
 }
-.tasksContainerHeader {
+.tasks__container-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.tasksContainerHeader .firstItem {
+.tasks__container-header .tasks__container-header-item--first {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,7 @@
   width: 250px;
 }
 
-.tasksContainerHeader .firstItem .headerTitle {
+.tasks__container-header .tasks__container-header-item--first .tasks__header-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -44,12 +44,12 @@
   color: #ffffff;
 }
 
-.tasksContainerHeader .firstItem .headerDesRoot {
+.tasks__container-header .tasks__container-header-item--first .tasks__header-desc {
   display: flex;
   align-items: center;
 }
 
-.tasksContainerHeader .firstItem .headerDesRoot span {
+.tasks__container-header .tasks__container-header-item--first .tasks__header-desc span {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -59,21 +59,21 @@
   opacity: 0.9;
 }
 
-.tasksContainerHeader .firstItem .headerDesRoot i {
+.tasks__container-header .tasks__container-header-item--first .tasks__header-desc i {
   color: #75b3ff;
   font-size: 16px;
   font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }
-.tasksContainerHeader .secondItem {
+.tasks__container-header .tasks__container-header-item--second {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
 }
 
-.tasksContainerHeader .secondItem .headerTitle {
+.tasks__container-header .tasks__container-header-item--second .tasks__header-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -83,13 +83,13 @@
   color: #ffffff;
 }
 
-.tasksContainerHeader .secondItem .headerDesRoot {
+.tasks__container-header .tasks__container-header-item--second .tasks__header-desc {
   display: flex;
   align-items: center;
   margin-left: 158px;
 }
 
-.tasksContainerHeader .secondItem .headerDesRoot span {
+.tasks__container-header .tasks__container-header-item--second .tasks__header-desc span {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -99,35 +99,35 @@
   opacity: 0.9;
 }
 
-.tasksContainerHeader .secondItem .headerDesRoot i {
+.tasks__container-header .tasks__container-header-item--second .tasks__header-desc i {
   color: #75b3ff;
   font-size: 16px;
   font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }
-.tasksContainer .tasksContent {
+.tasks__container .tasks__content {
   margin-top: 32px;
   display: flex;
 }
-.tasksContainer .tasksContent .firstContent {
+.tasks__container .tasks__content .tasks__content-left {
   flex-grow: 1;
   padding-right: 42px;
   border-right: 1px solid #75b3ffb2;
 }
-.tasksContainer .tasksContent .firstContent :last-child {
+.tasks__container .tasks__content .tasks__content-left :last-child {
   margin-bottom: 0 !important;
 }
-.tasksContainer .tasksContent .firstContent .tasksContentItem {
+.tasks__container .tasks__content .tasks__content-left .tasks__content-item {
   margin-bottom: 50px;
 }
-.tasksContainer .tasksContent .firstContent .tasksContentItem .tasksItem {
+.tasks__container .tasks__content .tasks__content-left .tasks__content-item .tasks__item {
   margin-bottom: 10px;
 }
-.tasksContainer .tasksContent .firstContent .tasksContentItem .lastTasksItem {
+.tasks__container .tasks__content .tasks__content-left .tasks__content-item .tasks__item--last {
   margin-bottom: 22px;
 }
-.tasksContainer .tasksContent .firstContent .tasksContentItem .headerRoot {
+.tasks__container .tasks__content .tasks__content-left .tasks__content-item .tasks__item-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,12 +135,12 @@
   width: 250px;
 }
 
-.tasksContainer
-  .tasksContent
-  .firstContent
-  .tasksContentItem
-  .headerRoot
-  .headerTitle {
+.tasks__container
+  .tasks__content
+  .tasks__content-left
+  .tasks__content-item
+  .tasks__item-header
+  .tasks__header-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -150,22 +150,22 @@
   color: #ffffff;
 }
 
-.tasksContainer
-  .tasksContent
-  .firstContent
-  .tasksContentItem
-  .headerRoot
-  .headerDesRoot {
+.tasks__container
+  .tasks__content
+  .tasks__content-left
+  .tasks__content-item
+  .tasks__item-header
+  .tasks__header-desc {
   display: flex;
   align-items: center;
 }
 
-.tasksContainer
-  .tasksContent
-  .firstContent
-  .tasksContentItem
-  .headerRoot
-  .headerDesRoot
+.tasks__container
+  .tasks__content
+  .tasks__content-left
+  .tasks__content-item
+  .tasks__item-header
+  .tasks__header-desc
   span {
   font-family: "Helvetica";
   font-style: normal;
@@ -176,12 +176,12 @@
   opacity: 0.9;
 }
 
-.tasksContainer
-  .tasksContent
-  .firstContent
-  .tasksContentItem
-  .headerRoot
-  .headerDesRoot
+.tasks__container
+  .tasks__content
+  .tasks__content-left
+  .tasks__content-item
+  .tasks__item-header
+  .tasks__header-desc
   i {
   color: #75b3ff;
   font-size: 16px;
@@ -189,14 +189,14 @@
   line-height: 8px;
   margin-right: 5px;
 }
-.tasksContainer .tasksContent .overdueContent {
+.tasks__container .tasks__content .tasks__overdue {
   width: 446px;
   padding-left: 43px;
 }
-.tasksContainer .tasksContent .overdueContent .taskShortItem {
+.tasks__container .tasks__content .tasks__overdue .tasks__overdue-item {
   margin-bottom: 20px;
 }
-.addTaskBtn {
+.tasks__add-btn {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;

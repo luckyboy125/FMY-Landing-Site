@@ -1,4 +1,4 @@
-.modalLayoutRootWrapper {
+.modal-layout {
   position: fixed;
   z-index: 9;
   top: 0;
@@ -11,6 +11,6 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.modalLayoutRoot {
+.modal-layout__inner {
   z-index: 10;
 }

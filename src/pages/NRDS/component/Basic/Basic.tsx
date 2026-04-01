@@ -96,20 +96,20 @@ function Basic() {
 
   return (
     <>
-      <div className="NRDSChart">
-        <div className="chartHeader">
-          <div className="databasePart">
-            <div className="headerItemTitle">Flagged NRD's</div>
-            <div className="chartTools">
+      <div className="nrds-basic__chart">
+        <div className="nrds-basic__chart-header">
+          <div className="nrds-basic__database-section">
+            <div className="nrds-basic__header-item-title">Flagged NRD's</div>
+            <div className="nrds-basic__chart-tools">
               <ActionButton
                 name="Show"
                 content="Last Week"
-                className="chartPeriod"
-                panelClassName="chartPeriodDropdownRoot"
+                className="nrds-basic__period-btn"
+                panelClassName="nrds-basic__period-dropdown"
                 panelContent={
                   <>
                     {chartPeriodDropdown?.map((item, index) => (
-                      <div key={index} className="item">
+                      <div key={index} className="nrds-basic__period-dropdown-item">
                         {item}
                       </div>
                     ))}
@@ -118,36 +118,36 @@ function Basic() {
               />
             </div>
           </div>
-          <div className="casesPart">
-            <div className="headerItemTitle">Keywords</div>
+          <div className="nrds-basic__cases-section">
+            <div className="nrds-basic__header-item-title">Keywords</div>
           </div>
         </div>
-        <div className="chartContent">
-          <div className="databasePart">
-            <div className="descriptionRoot">
-              <div className="descriptionItem" style={{ paddingBottom: "27px" }}>
-                <div className="descriptionItemTitle">Total NRD's flagged today</div>
+        <div className="nrds-basic__chart-content">
+          <div className="nrds-basic__database-section">
+            <div className="nrds-basic__description">
+              <div className="nrds-basic__description-item" style={{ paddingBottom: "27px" }}>
+                <div className="nrds-basic__description-item-title">Total NRD's flagged today</div>
                 <div
-                  className="descriptionItemCount"
+                  className="nrds-basic__description-item-count"
                   style={{ fontSize: "40px", color: "#75b3ff", fontWeight: 400 }}
                 >
                   108
                 </div>
               </div>
-              <div className="descriptionItem" style={{ paddingTop: "26px", paddingBottom: "30px" }}>
-                <div className="descriptionItemTitle">Changes from yesterday</div>
-                <div className="descriptionItemCount" style={{ color: "#0fdf63" }}>
+              <div className="nrds-basic__description-item" style={{ paddingTop: "26px", paddingBottom: "30px" }}>
+                <div className="nrds-basic__description-item-title">Changes from yesterday</div>
+                <div className="nrds-basic__description-item-count" style={{ color: "#0fdf63" }}>
                   +12%
                 </div>
               </div>
-              <div className="descriptionItem" style={{ paddingTop: "26px" }}>
-                <div className="descriptionItemTitle">Domains under monitoring</div>
-                <div className="descriptionItemCount" style={{ color: "#fff" }}>
+              <div className="nrds-basic__description-item" style={{ paddingTop: "26px" }}>
+                <div className="nrds-basic__description-item-title">Domains under monitoring</div>
+                <div className="nrds-basic__description-item-count" style={{ color: "#fff" }}>
                   5,403
                 </div>
               </div>
             </div>
-            <div className="lineChartRoot">
+            <div className="nrds-basic__line-chart">
               <CustomizeLineChart
                 labels={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
                 data={[
@@ -162,44 +162,44 @@ function Basic() {
               />
             </div>
           </div>
-          <div className="casesPart">
-            <div className="descriptionRoot">
-              <div className="descriptionItem">
-                <div className="descriptionItemTitle">Keywords in use</div>
-                <div className="descriptionItemCount" style={{ color: "#fff" }}>
+          <div className="nrds-basic__cases-section">
+            <div className="nrds-basic__description">
+              <div className="nrds-basic__description-item">
+                <div className="nrds-basic__description-item-title">Keywords in use</div>
+                <div className="nrds-basic__description-item-count" style={{ color: "#fff" }}>
                   53
                 </div>
               </div>
-              <div className="descriptionItem">
-                <div className="descriptionItemTitle">{`New keywords (past 7 days)`}</div>
-                <div className="descriptionItemCount" style={{ color: "#fff" }}>
+              <div className="nrds-basic__description-item">
+                <div className="nrds-basic__description-item-title">{`New keywords (past 7 days)`}</div>
+                <div className="nrds-basic__description-item-count" style={{ color: "#fff" }}>
                   +2
                 </div>
               </div>
-              <div className="descriptionItem" style={{ paddingBottom: "0px !important" }}>
-                <div className="descriptionItemTitle">{`Most flagged keyword (past 7 days)`}</div>
-                <div className="descriptionItemCount" style={{ color: "#fff" }}>
+              <div className="nrds-basic__description-item" style={{ paddingBottom: "0px !important" }}>
+                <div className="nrds-basic__description-item-title">{`Most flagged keyword (past 7 days)`}</div>
+                <div className="nrds-basic__description-item-count" style={{ color: "#fff" }}>
                   Lorem ipsum
                 </div>
               </div>
             </div>
-            <div className="doughnutChartRoot">
+            <div className="nrds-basic__doughnut">
               <CustomizeDoughnutChart
                 data={doughnutChartData.data}
                 labels={doughnutChartData.label}
                 segmentColors={doughnutChartColorData}
                 showCenterValue
               />
-              <div className="doughnutChartDes">
+              <div className="nrds-basic__doughnut-desc">
                 {doughnutChartData.label?.map((item, index) => (
-                  <div className="doughnutChartDesItem" key={index}>
+                  <div className="nrds-basic__doughnut-desc-item" key={index}>
                     <div
-                      className="doughnutChartIcon"
+                      className="nrds-basic__doughnut-icon"
                       style={{
                         background: `linear-gradient(238.95deg, ${doughnutChartColorData[index]?.first} 31.21%, ${doughnutChartColorData[index]?.last} 62.45%)`,
                       }}
                     />
-                    <div className="doughnutChartItemName">{item}</div>
+                    <div className="nrds-basic__doughnut-item-name">{item}</div>
                   </div>
                 ))}
               </div>
@@ -208,24 +208,24 @@ function Basic() {
         </div>
       </div>
       <CustomizeTable
-        className="nrdsTableRoot"
+        className="nrds-basic__table"
         header={
-          <div className="nrdsTableHeader">
-            <div className="nrdsTableTitle">NRD's</div>
-            <div className="nrdsTableToolRoot">
+          <div className="nrds-basic__table-header">
+            <div className="nrds-basic__table-title">NRD's</div>
+            <div className="nrds-basic__table-tools">
               <SearchInput
                 action={(e: React.ChangeEvent<HTMLInputElement>) => setSearchValue(e.target.value)}
                 inputValue={searchValue}
-                className="nrdsTableSearchTool"
+                className="nrds-basic__table-search"
               />
               <FilterDropdown
-                className="nrdsTableSearchTool"
+                className="nrds-basic__table-search"
                 type="filter"
-                panelClassName="nrdsTableSearchToolDropdown"
+                panelClassName="nrds-basic__search-dropdown"
                 panelContent={
                   <>
                     {nrdsTableSearchToolDropdown?.map((item, index) => (
-                      <div key={index} className="item">
+                      <div key={index} className="nrds-basic__search-dropdown-item">
                         {item}
                       </div>
                     ))}
@@ -233,12 +233,12 @@ function Basic() {
                 }
               />
               <FilterDropdown
-                className="nrdsTableSearchTool"
-                panelClassName="nrdsTableSearchToolDropdown"
+                className="nrds-basic__table-search"
+                panelClassName="nrds-basic__search-dropdown"
                 panelContent={
                   <>
                     {nrdsTableSearchToolDropdown?.map((item, index) => (
-                      <div key={index} className="item">
+                      <div key={index} className="nrds-basic__search-dropdown-item">
                         {item}
                       </div>
                     ))}
@@ -251,19 +251,19 @@ function Basic() {
         columnHeaders={["Domain", "Added Date", "IP Address", "Keyword", ""]}
         children={mockTableData?.map((item, index) => (
           <tr key={index}>
-            <td className="firstTd" onClick={() => handleViewModal(index)}>
+            <td className="nrds-basic__td--first" onClick={() => handleViewModal(index)}>
               {item.domain}
             </td>
-            <td className="secondTd">{item.addedDate}</td>
-            <td className="thirdTd">{item.ipaddress}</td>
-            <td className="fourthTd">{item.keyword}</td>
-            <td className="fifthTd">
+            <td className="nrds-basic__td--second">{item.addedDate}</td>
+            <td className="nrds-basic__td--third">{item.ipaddress}</td>
+            <td className="nrds-basic__td--fourth">{item.keyword}</td>
+            <td className="nrds-basic__td--fifth">
               <PlusButton
                 content="+ Add to monitoring"
                 action={() => handleTableDeleteModal(String(index))}
-                className="addBtn"
+                className="nrds-basic__add-btn"
               />
-              <div className="des">Active</div>
+              <div className="nrds-basic__des">Active</div>
             </td>
           </tr>
         ))}
@@ -271,39 +271,39 @@ function Basic() {
       <ModalLayout
         show={!!query.get("tableviewmodal_show")}
         onClose={handleViewModalClose}
-        className="tabelDomainModalRoot"
+        className="nrds-basic__domain-modal"
       >
-        <ThreeDotBtn className="dotBtn" action={() => {}} />
+        <ThreeDotBtn className="nrds-basic__dot-btn" action={() => {}} />
         <img src={closeIcon} alt="closIcon" onClick={handleViewModalClose} />
-        <div className="mainRoot">
-          <div className="leftPart">+</div>
-          <div className="divLinePart"></div>
-          <div className="rightPart">
-            <div className="title">General info:</div>
-            <div className="rightPart1">
-              <div className="item">Upload date:</div>
-              <div className="item">Username:</div>
+        <div className="nrds-basic__main">
+          <div className="nrds-basic__left">+</div>
+          <div className="nrds-basic__divider"></div>
+          <div className="nrds-basic__right">
+            <div className="nrds-basic__modal-title">General info:</div>
+            <div className="nrds-basic__right-row">
+              <div className="nrds-basic__right-row-item">Upload date:</div>
+              <div className="nrds-basic__right-row-item">Username:</div>
             </div>
-            <div className="casesPart">
-              <div className="title">Cases</div>
-              <div className="desRoot">
+            <div className="nrds-basic__cases-section">
+              <div className="nrds-basic__modal-title">Cases</div>
+              <div className="nrds-basic__case-card">
                 <img src={person3} alt="avatart" />
-                <div className="desRoot1">
+                <div className="nrds-basic__case-card-inner">
                   <div className="desContent">
-                    <div className="des">
+                    <div className="nrds-basic__des">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cras
                       felis interdum tempor, lobortis egestas volutpat consectetur.....
                     </div>
-                    <div className="desDate">Feb 6, 11:49 AM</div>
+                    <div className="nrds-basic__des-date">Feb 6, 11:49 AM</div>
                   </div>
                 </div>
-                <ThreeDotBtn className="dotBtn" action={() => {}} />
+                <ThreeDotBtn className="nrds-basic__dot-btn" action={() => {}} />
               </div>
             </div>
-            <div className="commentPart">
-              <div className="title">Comments:</div>
-              <div className="desRoot">
-                <ThreeDotBtn className="dotBtn" action={() => {}} />
+            <div className="nrds-basic__comment-section">
+              <div className="nrds-basic__modal-title">Comments:</div>
+              <div className="nrds-basic__comment-card">
+                <ThreeDotBtn className="nrds-basic__dot-btn" action={() => {}} />
                 <textarea
                   placeholder="Comment here"
                   value={commentArea}
@@ -311,7 +311,7 @@ function Basic() {
                     setCommentArea(e.target.value)
                   }
                 />
-                <div className="postBtn">Post</div>
+                <div className="nrds-basic__post-btn">Post</div>
               </div>
             </div>
           </div>

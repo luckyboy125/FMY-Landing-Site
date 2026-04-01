@@ -110,43 +110,43 @@ function Government() {
 
   return (
     <>
-      <div className="governmentRoot">
-        <div className="governmentTitle">Government</div>
-        <div className="governmentHeaderRoot">
-          <BackBtn className="governmentHeaderLink" action={handleBack} />
-          <ActionDropdown className="governmentHeaderBtn" />
+      <div className="government">
+        <div className="government__title">Government</div>
+        <div className="government__header">
+          <BackBtn className="government__header-link" action={handleBack} />
+          <ActionDropdown className="government__header-button" />
         </div>
-        <div className="chartContainer">
-          <div className="chartHeader">
-            <div className="databasePart">
-              <div className="headerItemTitle">General info</div>
-              <div className="chartTools">
+        <div className="government__chart-container">
+          <div className="government__chart-header">
+            <div className="government__database-part">
+              <div className="government__header-item-title">General info</div>
+              <div className="government__chart-tools">
                 <ActionButton
                   name="Show"
                   content="This Week"
-                  className="chartPeriod"
+                  className="government__chart-period"
                 />
                 <ActionButton
                   content="Compare"
                   type="common"
-                  className="chartCompare"
+                  className="government__chart-compare"
                 />
               </div>
             </div>
-            <div className="casesPart">
-              <div className="headerItemTitle">Word Cloud</div>
+            <div className="government__cases-part">
+              <div className="government__header-item-title">Word Cloud</div>
             </div>
           </div>
-          <div className="chartContent">
-            <div className="databasePart">
-              <div className="descriptionRoot">
+          <div className="government__chart-content">
+            <div className="government__database-part">
+              <div className="government__description">
                 <div
-                  className="descriptionItem"
+                  className="government__description-item"
                   style={{ paddingBottom: '27px' }}
                 >
-                  <div className="descriptionItemTitle">Total items</div>
+                  <div className="government__description-item-title">Total items</div>
                   <div
-                    className="descriptionItemCount"
+                    className="government__description-item-count"
                     style={{
                       fontSize: '40px',
                       color: '#75b3ff',
@@ -157,30 +157,30 @@ function Government() {
                   </div>
                 </div>
                 <div
-                  className="descriptionItem"
+                  className="government__description-item"
                   style={{ paddingTop: '26px', paddingBottom: '30px' }}
                 >
-                  <div className="descriptionItemTitle">
+                  <div className="government__description-item-title">
                     New items (past 7 days)
                   </div>
                   <div
-                    className="descriptionItemCount"
+                    className="government__description-item-count"
                     style={{ color: '#0fdf63' }}
                   >
                     +12%
                   </div>
                 </div>
-                <div className="descriptionItem" style={{ paddingTop: '26px' }}>
-                  <div className="descriptionItemTitle">Case open date</div>
+                <div className="government__description-item" style={{ paddingTop: '26px' }}>
+                  <div className="government__description-item-title">Case open date</div>
                   <div
-                    className="descriptionItemCount"
+                    className="government__description-item-count"
                     style={{ color: '#fff' }}
                   >
                     5,403
                   </div>
                 </div>
               </div>
-              <div className="lineChartRoot">
+              <div className="government__line-chart">
                 <CustomizeLineChart
                   labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
                   data={[
@@ -195,75 +195,75 @@ function Government() {
                 />
               </div>
             </div>
-            <div className="casesPart">
+            <div className="government__cases-part">
               <Vega spec={WordCloudOption as VisualizationSpec} actions={false} />
             </div>
           </div>
         </div>
-        <div className="governmentContentRoot">
-          <div className="governmentHeader">
-            <div className="governmentContentTitle">Items</div>
-            <div className="governmentToolRoot">
+        <div className="government__content-root">
+          <div className="government__content-header">
+            <div className="government__content-title">Items</div>
+            <div className="government__tool-root">
               <SearchInput
                 action={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setSearchValue(e.target.value)
                 }
                 inputValue={searchValue}
-                className="governmentSearchTool"
+                className="government__search-tool"
               />
-              <FilterDropdown className="governmentSearchTool" type="filter" />
-              <FilterDropdown className="governmentSearchTool" />
+              <FilterDropdown className="government__search-tool" type="filter" />
+              <FilterDropdown className="government__search-tool" />
               <img src={refresh} alt="tool" />
               <img src={csv} alt="tool" />
               <img src={more_tool} alt="tool" />
               <img src={more_detail} alt="tool" />
             </div>
           </div>
-          <div className="governmentContent">
-            <div className="governmentContentItemRoot">
+          <div className="government__content">
+            <div className="government__content-item-root">
               <GovernmentCard
                 imgRoot={<img src={neymar1} alt="neymar" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
               <GovernmentCard
                 imgRoot={<img src={neymar3} alt="neymar" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
               <GovernmentCard
                 imgRoot={<img src={messi3} alt="messi" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
               <GovernmentCard
                 imgRoot={<img src={mbappe} alt="mbappe" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
             </div>
-            <div className="governmentContentItemRoot">
+            <div className="government__content-item-root">
               <GovernmentCard
                 imgRoot={<img src={neymar2} alt="neymar" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
               <GovernmentCard
                 imgRoot={<img src={messi2} alt="messi" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
               <GovernmentCard
                 imgRoot={<img src={messi4} alt="messi" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
             </div>
-            <div className="governmentContentItemRoot">
+            <div className="government__content-item-root">
               <GovernmentCard
                 imgRoot={<img src={messi1} alt="messi" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
               <GovernmentCard
                 imgRoot={<img src={ronaldo1} alt="ronaldo" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
               <GovernmentCard
                 imgRoot={<img src={ronaldo2} alt="ronaldo" />}
-                className="governmentContentItem"
+                className="government__content-item"
               />
             </div>
           </div>

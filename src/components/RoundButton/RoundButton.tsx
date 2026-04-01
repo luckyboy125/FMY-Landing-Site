@@ -13,7 +13,7 @@ function RoundButton({ className = '', action }: RoundButtonProps) {
 
   return (
     <div
-      className={`roundButtonRoot ${className}`}
+      className={`round-button ${className}`}
       onClick={handleClick}
       role="button"
       tabIndex={0}

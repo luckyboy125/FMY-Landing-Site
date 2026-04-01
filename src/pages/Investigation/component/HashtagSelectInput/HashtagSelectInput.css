@@ -1,4 +1,4 @@
-.hashtagSelectInputRoot {
+.hashtag-select-input {
   display: flex;
   align-items: center;
   width: 100%;
@@ -8,18 +8,18 @@
   padding-right: 8px;
 }
 
-.hashtagSelectInputRoot .selectContent {
+.hashtag-select-input .hashtag-select-input__tags {
   flex-grow: 1;
   display: flex;
   align-items: center;
   padding: 0 14px;
 }
 
-.hashtagSelectInputRoot .selectContent .select:last-child {
+.hashtag-select-input .hashtag-select-input__tags .hashtag-select-input__tag:last-child {
   margin-right: 0;
 }
 
-.hashtagSelectInputRoot .selectContent .select {
+.hashtag-select-input .hashtag-select-input__tags .hashtag-select-input__tag {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 0 10px;
@@ -35,14 +35,14 @@
   color: #ffffff;
 }
 
-.hashtagSelectInputRoot .selectContent .select img {
+.hashtag-select-input .hashtag-select-input__tags .hashtag-select-input__tag img {
   cursor: pointer;
   width: 10px;
   height: 10px;
   margin-left: 9px;
 }
 
-.hashtagSelectInputRoot .selectRoot {
+.hashtag-select-input .hashtag-select-input__period {
   width: 167px;
   height: 60px;
   display: flex;
@@ -58,13 +58,13 @@
   cursor: pointer;
 }
 
-.hashtagSelectInputRoot .selectRoot i {
+.hashtag-select-input .hashtag-select-input__period i {
   font-size: 20px;
   color: #ffffff99;
   margin-left: 10px;
 }
 
-.hashtagSelectInputRoot .searchBtn {
+.hashtag-select-input .hashtag-select-input__search-btn {
   width: 44px;
   height: 44px;
   display: flex;
@@ -75,7 +75,7 @@
   border-radius: 50px;
 }
 
-.hashtagSelectInputRoot .searchBtn > img {
+.hashtag-select-input .hashtag-select-input__search-btn > img {
   width: 17.25px;
   height: 17.25px;
 }

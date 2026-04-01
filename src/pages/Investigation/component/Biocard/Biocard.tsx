@@ -17,10 +17,10 @@ function Biocard({
 }: BiocardProps) {
   return (
     <>
-      <div className={`${className ?? ''} biocardRoot`}>
-        <div className="title">{title}</div>
-        <div className="count">{count}</div>
-        <div className="des">{des}</div>
+      <div className={`${className ?? ''} biocard`}>
+        <div className="biocard__title">{title}</div>
+        <div className="biocard__count">{count}</div>
+        <div className="biocard__description">{des}</div>
         {countDes}
       </div>
     </>

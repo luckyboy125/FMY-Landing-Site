@@ -24,153 +24,153 @@ function CheckLists() {
 
   return (
     <>
-      <div className="checkListsRoot">
-        <div className="checkListsTitle">Checklists</div>
-        <div className="checkListsHeaderRoot">
+      <div className="check-lists">
+        <div className="check-lists__title">Checklists</div>
+        <div className="check-lists__header">
           <ActionTab data={tabData} onSelect={handleTab} select={tab} />
           <PlusButton content="+ New task" action={handleNewCheckListsModal} />
         </div>
-        <div className="checkListsContainer">
-          <div className="checkListsContainerHeader">
-            <div className="firstItem">
-              <div className="titleRoot">
-                <div className="headerTitle">Review all platforms</div>
-                <div className="headerDesRoot">
+        <div className="check-lists__container">
+          <div className="check-lists__container-header">
+            <div className="check-lists__part--first">
+              <div className="check-lists__title-root">
+                <div className="check-lists__header-title">Review all platforms</div>
+                <div className="check-lists__header-description">
                   <i className="far fa-angle-right"></i>
                   <span>17 Tasks</span>
                 </div>
               </div>
-              <div className="completeCount">5/17 completed</div>
+              <div className="check-lists__complete-count">5/17 completed</div>
             </div>
-            <div className="secondItem">
-              <div className="headerTitle">Overdue</div>
-              <div className="headerDesRoot">
+            <div className="check-lists__part--second">
+              <div className="check-lists__header-title">Overdue</div>
+              <div className="check-lists__header-description">
                 <i className="fas fa-angle-down"></i>
                 <span>3 Tasks</span>
               </div>
             </div>
           </div>
-          <div className="checkListsContent">
-            <div className="firstContent">
-              <div className="checkListsContentItem">
+          <div className="check-lists__content">
+            <div className="check-lists__left">
+              <div className="check-lists__content-item">
                 <CheckListsLongItem
                   user="If it has long name item, I will add 3dots in this field"
                   title="There are a lot of cases in future. So we have to add this function in this field. If there is a this function, we can keep pixel perfect in this page."
-                  className="checkListsItem"
+                  className="check-lists__item"
                   avatar={Person1}
                   type="blue"
                 />
                 <CheckListsLongItem
                   user="Yaniv"
                   title="Twitter"
-                  className="checkListsItem"
+                  className="check-lists__item"
                   avatar={Person2}
                   type="green"
                 />
                 <CheckListsLongItem
                   user="Nimrod"
                   title="Reddit"
-                  className="lastCheckListsItem"
+                  className="check-lists__item--last"
                   avatar={Person3}
                   type="orange"
                 />
                 <div
-                  className="addCheckListsBtn"
+                  className="check-lists__add-button"
                   onClick={handleNewCheckListsModal}
                 >
                   + New Task
                 </div>
               </div>
-              <div className="checkListsContentItem">
-                <div className="headerRoot">
-                  <div className="titleRoot">
-                    <div className="headerTitle">Review all languages</div>
-                    <div className="headerDesRoot">
+              <div className="check-lists__content-item">
+                <div className="check-lists__item-header">
+                  <div className="check-lists__title-root">
+                    <div className="check-lists__header-title">Review all languages</div>
+                    <div className="check-lists__header-description">
                       <i className="far fa-angle-right"></i>
                       <span>17 Tasks</span>
                     </div>
                   </div>
-                  <div className="completeCount">5/17 completed</div>
+                  <div className="check-lists__complete-count">5/17 completed</div>
                 </div>
                 <CheckListsLongItem
                   user="Noy"
                   title="English"
-                  className="checkListsItem"
+                  className="check-lists__item"
                   avatar={Person1}
                   type="blue"
                 />
                 <CheckListsLongItem
                   user="Yaniv"
                   title="Arabic"
-                  className="checkListsItem"
+                  className="check-lists__item"
                   avatar={Person2}
                   type="green"
                 />
                 <CheckListsLongItem
                   user="Nimrod"
                   title="Pharsi"
-                  className="lastCheckListsItem"
+                  className="check-lists__item--last"
                   avatar={Person3}
                   type="orange"
                 />
                 <div
-                  className="addCheckListsBtn"
+                  className="check-lists__add-button"
                   onClick={handleNewCheckListsModal}
                 >
                   + New Task
                 </div>
               </div>
-              <div className="checkListsContentItem">
-                <div className="headerRoot">
-                  <div className="titleRoot">
-                    <div className="headerTitle">Review open cases</div>
-                    <div className="headerDesRoot">
+              <div className="check-lists__content-item">
+                <div className="check-lists__item-header">
+                  <div className="check-lists__title-root">
+                    <div className="check-lists__header-title">Review open cases</div>
+                    <div className="check-lists__header-description">
                       <i className="far fa-angle-right"></i>
                       <span>17 Tasks</span>
                     </div>
                   </div>
-                  <div className="completeCount">5/17 completed</div>
+                  <div className="check-lists__complete-count">5/17 completed</div>
                 </div>
                 <CheckListsLongItem
                   user="Noy"
                   title="Germany-France relations"
-                  className="checkListsItem"
+                  className="check-lists__item"
                   avatar={Person1}
                   type="blue"
                 />
                 <CheckListsLongItem
                   user="Yaniv"
                   title="Anti COVID operation"
-                  className="checkListsItem"
+                  className="check-lists__item"
                   avatar={Person2}
                   type="green"
                 />
                 <CheckListsLongItem
                   user="Nimrod"
                   title="Pro Putin operation"
-                  className="lastCheckListsItem"
+                  className="check-lists__item--last"
                   avatar={Person3}
                   type="orange"
                 />
               </div>
             </div>
-            <div className="overdueContent">
+            <div className="check-lists__overdue">
               <CheckListsShortItem
-                className="checkListShortItem"
+                className="check-lists__short-item"
                 avatar={Person1}
                 title="Lorem ipsum dolor sit"
                 type="personal"
                 user="Noy"
               />
               <CheckListsShortItem
-                className="checkListShortItem"
+                className="check-lists__short-item"
                 avatar={Person3}
                 title="Lorem ipsum dolor sit"
                 type="work"
                 user="Nimrod"
               />
               <CheckListsShortItem
-                className="checkListShortItem"
+                className="check-lists__short-item"
                 avatar={Person2}
                 title="Lorem ipsum dolor sit"
                 type="personal"
@@ -179,7 +179,7 @@ function CheckLists() {
             </div>
           </div>
           <div
-            className="addCheckListsBtn"
+            className="check-lists__add-button"
             style={{ marginTop: '18px' }}
             onClick={handleNewCheckListsModal}
           >
