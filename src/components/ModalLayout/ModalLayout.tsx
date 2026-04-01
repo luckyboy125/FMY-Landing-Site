@@ -19,8 +19,8 @@ function ModalLayout({
   if (!show) return <></>;
 
   return (
-    <div className="modalLayoutRootWrapper">
-      <div className={`modalLayoutRoot ${className}`} ref={modalRef}>
+    <div className="modal-layout">
+      <div className={`modal-layout__inner ${className}`} ref={modalRef}>
         {children}
       </div>
     </div>

@@ -9,17 +9,17 @@ function TopTaskBar() {
   }, []);
 
   return (
-    <div className="topTaskBar">
-      <div className="topTaskBarContent">
+    <div className="top-task-bar">
+      <div className="top-task-bar__content">
         <Row>
           <Col>
             <form onSubmit={handleSubmit} style={{ display: 'flex' }}>
               <input
                 placeholder="Search Here..."
-                className="searchInput"
+                className="top-task-bar__search-input"
                 aria-label="Search"
               />
-              <img src={SearchLogo} alt="" className="searchLogo" />
+              <img src={SearchLogo} alt="" className="top-task-bar__search-logo" />
             </form>
           </Col>
         </Row>

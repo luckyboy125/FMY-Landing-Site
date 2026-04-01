@@ -19,14 +19,14 @@ function ThreeDotBtn({
 
   return (
     <div
-      className={`${className} dotGroupRoot`}
+      className={`${className} three-dot-btn`}
       onClick={handleClick}
       role="button"
       tabIndex={0}
     >
-      <div className="dot" aria-hidden />
-      <div className="dot" aria-hidden />
-      <div className="dot" aria-hidden />
+      <div className="three-dot-btn__dot" aria-hidden />
+      <div className="three-dot-btn__dot" aria-hidden />
+      <div className="three-dot-btn__dot" aria-hidden />
     </div>
   );
 }

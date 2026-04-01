@@ -14,12 +14,12 @@ function LetterSelectButton({
   action
 }: LetterSelectButtonProps) {
   return (
-    <div className={`${className ?? ''} letterSelectButtonRoot`}>
+    <div className={`${className ?? ''} letter-select-button`}>
       {data?.map((item, index) => (
-        <div key={index} className="item">
+        <div key={index} className="letter-select-button__item">
           {index === 0 ? <></> : <>/</>}
           <span
-            className={selected === item ? 'selected' : ''}
+            className={selected === item ? 'letter-select-button__item--selected' : ''}
             onClick={() => action(item)}
           >
             {item}

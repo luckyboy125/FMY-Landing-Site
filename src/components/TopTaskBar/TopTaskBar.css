@@ -1,4 +1,4 @@
-.topTaskBar {
+.top-task-bar {
   width: 1977px;
   margin-left: 273px;
   background: #232832;
@@ -9,12 +9,12 @@
   z-index: 2;
 }
 
-.topTaskBarContent {
+.top-task-bar__content {
   padding-block: 17px;
   margin-left: 30px;
 }
 
-.searchInput {
+.top-task-bar__search-input {
   padding: 20px;
   width: 503px;
   border: none;
@@ -27,11 +27,11 @@
   background: #0f121a;
   border-radius: 56px;
 }
-.searchInput::placeholder {
+.top-task-bar__search-input::placeholder {
   color: white;
 }
 
-.searchLogo {
+.top-task-bar__search-logo {
   margin-left: -60px;
   width: 50px;
   border: 0;

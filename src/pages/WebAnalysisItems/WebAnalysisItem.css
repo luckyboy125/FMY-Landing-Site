@@ -1,9 +1,9 @@
-.webAnalysisRoot {
+.web-analysis {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-.webAnalysisRoot .webAnalysisHeader {
+.web-analysis .web-analysis__header {
   padding: 0 21px 0 8.8px;
   margin-bottom: 29px;
   display: flex;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.webAnalysisRoot .webAnalysisHeader .analysisHello {
+.web-analysis .web-analysis__header .web-analysis__hello {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -23,11 +23,11 @@
   margin: 0;
 }
 
-.webAnalysisRoot .webAnalysisHeader .analysisHello img {
+.web-analysis .web-analysis__header .web-analysis__hello img {
   margin-left: 20px;
 }
 
-.webAnalysisRoot .webAnalysisHeader .analysisHeaderDes {
+.web-analysis .web-analysis__header .web-analysis__header-desc {
   margin-top: 20px;
   font-family: "Helvetica";
   font-style: normal;
@@ -38,7 +38,7 @@
   margin-bottom: 0;
 }
 
-.webAnalysisRoot .webAnalysisHeader .webAnalysisHeaderBtn {
+.web-analysis .web-analysis__header .web-analysis__header-btn {
   background: rgba(117, 179, 255, 0.3);
   border-radius: 30px;
   padding: 14px 16.5px 13px 16.5px;
@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-.webAnalysisRoot .chartContainer {
+.web-analysis .web-analysis__chart-container {
   width: 100%;
   background: linear-gradient(
     180deg,
@@ -68,14 +68,14 @@
   );
 }
 
-.webAnalysisRoot .chartContainer .chartHeader {
+.web-analysis .web-analysis__chart-container .web-analysis__chart-header {
   display: flex;
   align-items: center;
   height: 66px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.webAnalysisRoot .chartContainer .chartHeader .databasePart {
+.web-analysis .web-analysis__chart-container .web-analysis__chart-header .web-analysis__database-section {
   padding: 0 10px 0 30px;
   width: 52.8%;
   display: flex;
@@ -83,27 +83,27 @@
   justify-content: space-between;
 }
 
-.webAnalysisRoot .chartContainer .chartHeader .databasePart .chartTools {
+.web-analysis .web-analysis__chart-container .web-analysis__chart-header .web-analysis__database-section .web-analysis__chart-tools {
   display: flex;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__period-btn {
   margin-right: 30px;
   padding: 10.5px 20px 10.5px 20px;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
-  .periodChildRoot {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__period-btn
+  .web-analysis__period-dropdown {
   position: absolute;
   top: 63px;
   right: 20px;
@@ -113,13 +113,13 @@
   padding: 5px 10px;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
-  .periodChildRoot::after {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__period-btn
+  .web-analysis__period-dropdown::after {
   content: "";
   position: absolute;
   top: 0;
@@ -134,26 +134,26 @@
   margin-top: -10px;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
-  .periodChildRoot
-  .item:last-child {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__period-btn
+  .web-analysis__period-dropdown
+  .web-analysis__period-dropdown-item:last-child {
   border-bottom: none;
   padding-bottom: 10px;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
-  .periodChildRoot
-  .item {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__period-btn
+  .web-analysis__period-dropdown
+  .web-analysis__period-dropdown-item {
   width: 172px;
   display: flex;
   justify-content: flex-start;
@@ -167,42 +167,42 @@
   border-bottom: 1px solid #ffffff1a;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__period-btn
   i {
   margin-left: 12px !important;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartCompare {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__compare-btn {
   padding: 10.5px 23px 10.5px 20px !important;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartCompare
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__compare-btn
   i {
   margin-left: 12px !important;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartCompare
-  .compareChildRoot {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__compare-btn
+  .web-analysis__compare-dropdown {
   position: absolute;
   top: 63px;
   right: 20px;
@@ -212,13 +212,13 @@
   padding: 5px 10px;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartCompare
-  .compareChildRoot::after {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__compare-btn
+  .web-analysis__compare-dropdown::after {
   content: "";
   position: absolute;
   top: 0;
@@ -233,26 +233,26 @@
   margin-top: -10px;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartCompare
-  .compareChildRoot
-  .item:last-child {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__compare-btn
+  .web-analysis__compare-dropdown
+  .web-analysis__compare-dropdown-item:last-child {
   border-bottom: none;
   padding-bottom: 10px;
 }
 
-.webAnalysisRoot
-  .chartContainer
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartCompare
-  .compareChildRoot
-  .item {
+.web-analysis
+  .web-analysis__chart-container
+  .web-analysis__chart-header
+  .web-analysis__database-section
+  .web-analysis__chart-tools
+  .web-analysis__compare-btn
+  .web-analysis__compare-dropdown
+  .web-analysis__compare-dropdown-item {
   width: 172px;
   display: flex;
   justify-content: flex-start;
@@ -266,12 +266,12 @@
   border-bottom: 1px solid #ffffff1a;
 }
 
-.webAnalysisRoot .chartContainer .chartHeader .casesPart {
+.web-analysis .web-analysis__chart-container .web-analysis__chart-header .web-analysis__cases-section {
   padding: 0 11px 0 30px;
   flex-grow: 1;
 }
 
-.webAnalysisRoot .chartContainer .chartHeader .databasePart .headerItemTitle {
+.web-analysis .web-analysis__chart-container .web-analysis__chart-header .web-analysis__database-section .web-analysis__header-item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -281,7 +281,7 @@
   margin-top: 11px;
 }
 
-.webAnalysisRoot .chartContainer .chartHeader .casesPart .headerItemTitle {
+.web-analysis .web-analysis__chart-container .web-analysis__chart-header .web-analysis__cases-section .web-analysis__header-item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -291,57 +291,57 @@
   margin-top: 11px;
 }
 
-.webAnalysisRoot .chartContent {
+.web-analysis .web-analysis__chart-content {
   display: flex;
 }
 
-.webAnalysisRoot .chartContent .databasePart {
+.web-analysis .web-analysis__chart-content .web-analysis__database-section {
   padding: 34px 0 36px 40.5px;
   width: 52.8%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
 }
 
-.webAnalysisRoot .chartContent .casesPart {
+.web-analysis .web-analysis__chart-content .web-analysis__cases-section {
   padding: 30px 26.5px 30px 50px;
   display: flex;
   align-items: center;
   flex-grow: 1;
 }
 
-.webAnalysisRoot .descriptionRoot {
+.web-analysis .web-analysis__description {
   width: 229.88px;
   margin-right: 16px;
 }
 
-.webAnalysisRoot .descriptionRoot .descriptionItem:first-child {
+.web-analysis .web-analysis__description .web-analysis__description-item:first-child {
   border: none !important;
   padding-top: 0 !important;
 }
 
-.webAnalysisRoot .descriptionRoot .descriptionItem:last-child {
+.web-analysis .web-analysis__description .web-analysis__description-item:last-child {
   padding-bottom: 0 !important;
 }
 
-.webAnalysisRoot .lineChartRoot {
+.web-analysis .web-analysis__line-chart {
   flex-grow: 1;
   padding-top: 49.35px;
   height: 323.39px;
 }
 
-.webAnalysisRoot .casesPart .descriptionRoot {
+.web-analysis .web-analysis__cases-section .web-analysis__description {
   margin-right: 42px;
 }
 
-.webAnalysisRoot .descriptionItem {
+.web-analysis .web-analysis__description-item {
   border-top: 1px solid rgba(149, 166, 184, 0.1);
 }
 
-.webAnalysisRoot .casesPart .descriptionItem {
+.web-analysis .web-analysis__cases-section .web-analysis__description-item {
   padding: 17px 0 22px 0;
 }
 
-.webAnalysisRoot .descriptionItemTitle {
+.web-analysis .web-analysis__description-item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -350,7 +350,7 @@
   color: #ffffff;
   opacity: 0.7;
 }
-.webAnalysisRoot .descriptionItemCount {
+.web-analysis .web-analysis__description-item-count {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 300;
@@ -359,14 +359,14 @@
   margin-top: 20px;
 }
 
-.webAnalysisRoot .doughnutChartRoot {
+.web-analysis .web-analysis__doughnut {
   display: flex;
 }
-.webAnalysisRoot .chartRoot {
+.web-analysis .web-analysis__chart-root {
   position: relative;
 }
 
-.webAnalysisRoot .doughnutChartPercent {
+.web-analysis .web-analysis__doughnut-percent {
   position: absolute;
   top: 46%;
   right: 46%;
@@ -378,19 +378,19 @@
   text-align: center;
   color: #ffffff;
 }
-.webAnalysisRoot .doughnutChartDes {
+.web-analysis .web-analysis__doughnut-desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.webAnalysisRoot .doughnutChartDesItem {
+.web-analysis .web-analysis__doughnut-desc-item {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
 
-.webAnalysisRoot .doughnutChartIcon {
+.web-analysis .web-analysis__doughnut-icon {
   width: 12px;
   min-height: 12px;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -398,7 +398,7 @@
   border-radius: 50px;
 }
 
-.webAnalysisRoot .doughnutChartItemName {
+.web-analysis .web-analysis__doughnut-item-name {
   font-family: Helvetica;
   font-style: normal;
   font-weight: 400;
@@ -407,7 +407,7 @@
   color: #ffffff;
 }
 
-.webAnalysisRoot .secondPart {
+.web-analysis .web-analysis__second-part {
   display: flex;
   margin-top: 30px;
   margin-bottom: 27px;

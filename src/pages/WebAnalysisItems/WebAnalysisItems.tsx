@@ -47,32 +47,32 @@ function WebAnalysisItems() {
   const compare = ['Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum'];
 
   return (
-    <div className="webAnalysisRoot">
-      <div className="webAnalysisHeader">
+    <div className="web-analysis">
+      <div className="web-analysis__header">
         <div>
-          <p className="analysisHello">
+          <p className="web-analysis__hello">
             Hello, Nimrod <img src={handImage} alt="hand" />
           </p>
-          <p className="analysisHeaderDes">
+          <p className="web-analysis__header-desc">
             Here is an overview of the project.
           </p>
         </div>
-        <div className="webAnalysisHeaderBtn">Lorem ipsum</div>
+        <div className="web-analysis__header-btn">Lorem ipsum</div>
       </div>
-      <div className="chartContainer">
-        <div className="chartHeader">
-          <div className="databasePart">
-            <div className="headerItemTitle">Database Items</div>
-            <div className="chartTools">
+      <div className="web-analysis__chart-container">
+        <div className="web-analysis__chart-header">
+          <div className="web-analysis__database-section">
+            <div className="web-analysis__header-item-title">Database Items</div>
+            <div className="web-analysis__chart-tools">
               <ActionButton
                 name="Show"
                 content="This Week"
-                className="chartPeriod"
-                panelClassName="periodChildRoot"
+                className="web-analysis__period-btn"
+                panelClassName="web-analysis__period-dropdown"
                 panelContent={
                   <>
                     {datePeriod?.map((item, index) => (
-                      <div key={index} className="item">
+                      <div key={index} className="web-analysis__period-dropdown-item">
                         {item}
                       </div>
                     ))}
@@ -82,12 +82,12 @@ function WebAnalysisItems() {
               <ActionButton
                 content="Compare"
                 type="common"
-                className="chartCompare"
-                panelClassName="compareChildRoot"
+                className="web-analysis__compare-btn"
+                panelClassName="web-analysis__compare-dropdown"
                 panelContent={
                   <>
                     {compare?.map((item, index) => (
-                      <div key={index} className="item">
+                      <div key={index} className="web-analysis__compare-dropdown-item">
                         {item}
                       </div>
                     ))}
@@ -96,22 +96,22 @@ function WebAnalysisItems() {
               />
             </div>
           </div>
-          <div className="casesPart">
-            <div className="headerItemTitle">Cases</div>
+          <div className="web-analysis__cases-section">
+            <div className="web-analysis__header-item-title">Cases</div>
           </div>
         </div>
-        <div className="chartContent">
-          <div className="databasePart">
-            <div className="descriptionRoot">
+        <div className="web-analysis__chart-content">
+          <div className="web-analysis__database-section">
+            <div className="web-analysis__description">
               <div
-                className="descriptionItem"
+                className="web-analysis__description-item"
                 style={{ paddingBottom: '27px' }}
               >
-                <div className="descriptionItemTitle">
+                <div className="web-analysis__description-item-title">
                   Total items this week
                 </div>
                 <div
-                  className="descriptionItemCount"
+                  className="web-analysis__description-item-count"
                   style={{
                     fontSize: '40px',
                     color: '#75b3ff',
@@ -122,30 +122,30 @@ function WebAnalysisItems() {
                 </div>
               </div>
               <div
-                className="descriptionItem"
+                className="web-analysis__description-item"
                 style={{ paddingTop: '26px', paddingBottom: '30px' }}
               >
-                <div className="descriptionItemTitle">
+                <div className="web-analysis__description-item-title">
                   Changes from last week
                 </div>
                 <div
-                  className="descriptionItemCount"
+                  className="web-analysis__description-item-count"
                   style={{ color: '#0fdf63' }}
                 >
                   +12%
                 </div>
               </div>
               <div
-                className="descriptionItem"
+                className="web-analysis__description-item"
                 style={{ paddingTop: '26px', paddingBottom: '0px !important' }}
               >
-                <div className="descriptionItemTitle">Total items in DB</div>
-                <div className="descriptionItemCount" style={{ color: '#fff' }}>
+                <div className="web-analysis__description-item-title">Total items in DB</div>
+                <div className="web-analysis__description-item-count" style={{ color: '#fff' }}>
                   5,403
                 </div>
               </div>
             </div>
-            <div className="lineChartRoot">
+            <div className="web-analysis__line-chart">
               <CustomizeLineChart
                 labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
                 data={[
@@ -160,44 +160,44 @@ function WebAnalysisItems() {
               />
             </div>
           </div>
-          <div className="casesPart">
-            <div className="descriptionRoot">
-              <div className="descriptionItem">
-                <div className="descriptionItemTitle">Lorem ipsum</div>
-                <div className="descriptionItemCount" style={{ color: '#fff' }}>
+          <div className="web-analysis__cases-section">
+            <div className="web-analysis__description">
+              <div className="web-analysis__description-item">
+                <div className="web-analysis__description-item-title">Lorem ipsum</div>
+                <div className="web-analysis__description-item-count" style={{ color: '#fff' }}>
                   53
                 </div>
               </div>
-              <div className="descriptionItem">
-                <div className="descriptionItemTitle">Lorem ipsum</div>
-                <div className="descriptionItemCount" style={{ color: '#fff' }}>
+              <div className="web-analysis__description-item">
+                <div className="web-analysis__description-item-title">Lorem ipsum</div>
+                <div className="web-analysis__description-item-count" style={{ color: '#fff' }}>
                   +2
                 </div>
               </div>
-              <div className="descriptionItem">
-                <div className="descriptionItemTitle">Lorem ipsum</div>
-                <div className="descriptionItemCount" style={{ color: '#fff' }}>
+              <div className="web-analysis__description-item">
+                <div className="web-analysis__description-item-title">Lorem ipsum</div>
+                <div className="web-analysis__description-item-count" style={{ color: '#fff' }}>
                   Lorem ipsum
                 </div>
               </div>
             </div>
-            <div className="doughnutChartRoot">
+            <div className="web-analysis__doughnut">
               <CustomizeDoughnutChart
                 data={mockDoughnutData}
                 labels={doughnutChartData.label}
                 segmentColors={doughnutChartColorData}
                 showCenterValue
               />
-              <div className="doughnutChartDes">
+              <div className="web-analysis__doughnut-desc">
                 {doughnutChartData.label.map((item, index) => (
-                  <div className="doughnutChartDesItem" key={index}>
+                  <div className="web-analysis__doughnut-desc-item" key={index}>
                     <div
-                      className="doughnutChartIcon"
+                      className="web-analysis__doughnut-icon"
                       style={{
                         background: `linear-gradient(238.95deg, ${doughnutChartColorData[index]?.first} 31.21%, ${doughnutChartColorData[index]?.last} 62.45%)`
                       }}
                     />
-                    <div className="doughnutChartItemName">{item}</div>
+                    <div className="web-analysis__doughnut-item-name">{item}</div>
                   </div>
                 ))}
               </div>
@@ -205,7 +205,7 @@ function WebAnalysisItems() {
           </div>
         </div>
       </div>
-      <div className="secondPart">
+      <div className="web-analysis__second-part">
         <Stats />
         <TopPlatforms />
         <Sentiment value={78} />

@@ -34,7 +34,7 @@ function App() {
     adjustContainer(
       height,
       width,
-      isLoggedIn ? 'websiteContainer' : 'loginContainer'
+      isLoggedIn ? 'app__website-container' : 'app__login-container'
     );
   }, [height, width, isLoggedIn]);
 
@@ -42,10 +42,10 @@ function App() {
 
   return (
     <Router>
-      <div className="outer">
-        <div className="middle">
+      <div className="app__outer">
+        <div className="app__middle">
           <div
-            className={`${isLoggedIn ? 'websiteContainer' : 'loginContainer'}`}
+            className={`${isLoggedIn ? 'app__website-container' : 'app__login-container'}`}
           >
             {isLoggedIn ? (
               <>
@@ -53,12 +53,11 @@ function App() {
                 <Row>
                   <Col
                     sm={3}
-                    className="position-fixed flex-fill"
-                    id="sidebarCol"
+                    className="position-fixed flex-fill app__sidebar-col"
                   >
                     <SideTaskBar />
                   </Col>
-                  <Col sm={9} className="content">
+                  <Col sm={9} className="app__content">
                     <Routes>
                       <Route path="/dashboard" element={<Home />} />
                       <Route path="/nrds" element={<NRDS />} />

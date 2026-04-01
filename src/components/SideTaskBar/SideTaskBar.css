@@ -1,5 +1,5 @@
 
-.sideTaskBar {
+.side-task-bar {
     background: linear-gradient(180deg, #3D334E 0%, #2163A8 62.89%);
     border-radius: 32px 0px 0px 32px;
     width: 273px;
@@ -10,7 +10,7 @@
     /* user-select: none; */
 }
 
-.sideTaskBar .fmyLogo {
+.side-task-bar .side-task-bar__logo {
     width: 105px;
     margin: 0 auto;
     margin-left: 87px;
@@ -18,11 +18,11 @@
     /*margin: 5%;*/
 }
 
-.sideTaskBar .taskBarPagesButtons {
+.side-task-bar .side-task-bar__nav {
     margin-top: 50px;
     margin-inline: 6.5%;
 }
-.sideTaskBar .taskBarPagesButtons .taskBarButton {
+.side-task-bar .side-task-bar__nav .side-task-bar__button {
     background: transparent;
     color: white;
     border: 0px;
@@ -35,7 +35,7 @@
     font-weight: 500;
     line-height: 25px;
     border-radius: 30px;
-    
+
     padding-inline: 15%;
     order: 0;
     flex-grow: 0;
@@ -47,23 +47,23 @@
 }
 
 
-.sideTaskBar .dividerLine {
+.side-task-bar .side-task-bar__divider {
     height: 1px;
     margin-inline: 10%;
     background: #7193B9;
     margin-bottom: 5%;
 }
-.sideTaskBar .taskBarPagesButtons .active {
+.side-task-bar .side-task-bar__nav .side-task-bar__button--active {
     background: linear-gradient(270deg, #6AB4FF 0%, #C2A6FF 100%);
     border-radius: 30px;
 }
 
-.sideTaskBar .taskBarPagesButtons .taskBarButton:hover {
+.side-task-bar .side-task-bar__nav .side-task-bar__button:hover {
     background: linear-gradient(270deg, #6AB4FF 0%, #C2A6FF 100%);
     border-radius: 30px;
 }
 
-.sideTaskBar .taskBarPagesButtons hr {
+.side-task-bar .side-task-bar__nav hr {
     color: #7193b9;
     display: block;
     margin-left: auto;
@@ -74,6 +74,6 @@
     box-shadow: black 1px 1px 20px 2px;
 }
 
-.sideTaskBar .bottomSideBar {
+.side-task-bar .side-task-bar__bottom {
     margin-top: 270px;
 }

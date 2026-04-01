@@ -1,9 +1,9 @@
-.nrdsRoot {
+.nrds {
   margin-top: 8px;
   padding-left: 30px;
   padding-right: 30px;
 }
-.nrdsTitle {
+.nrds__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -13,17 +13,17 @@
   margin-bottom: 23px;
   padding: 0 6px;
 }
-.nrdsHeaderRoot {
+.nrds__header {
   padding: 0 12px 0 6px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 29px;
 }
-.nrdsRoot .nrdsHeaderTab .actionTabItem {
+.nrds .nrds__header-tab .action-tab__item {
   padding: 0px 5px !important;
 }
 
-.nrdsRoot .nrdsHeaderTab .active {
+.nrds .nrds__header-tab .action-tab__item--active {
   margin-bottom: -1px;
 }

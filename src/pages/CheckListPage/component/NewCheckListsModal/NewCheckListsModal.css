@@ -1,16 +1,16 @@
-.newCheckListsModalRoot {
+.new-check-lists-modal {
   width: 569px;
   background: #41505f;
   border-radius: 20px;
   padding: 30px 40px;
 }
-.newCheckListsModalRoot .modalCloseIcon {
+.new-check-lists-modal .new-check-lists-modal__close-icon {
   position: absolute;
   top: 30px;
   right: 30px;
   cursor: pointer;
 }
-.newCheckListsModalRoot .checkListsTitle {
+.new-check-lists-modal .new-check-lists-modal__title-input {
   width: 100%;
   font-family: "Helvetica";
   font-style: normal;
@@ -22,7 +22,7 @@
   background-color: transparent;
   margin-bottom: 55px;
 }
-.newCheckListsModalRoot .checkListsTitle::placeholder {
+.new-check-lists-modal .new-check-lists-modal__title-input::placeholder {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
@@ -30,13 +30,13 @@
   line-height: 30px;
   color: rgba(255, 255, 255, 0.4);
 }
-.newCheckListsModalRoot .checkListsTitle:focus-visible {
+.new-check-lists-modal .new-check-lists-modal__title-input:focus-visible {
   outline: none;
 }
-.newCheckListsModalRoot .checkListsTitle:focus {
+.new-check-lists-modal .new-check-lists-modal__title-input:focus {
   outline: none;
 }
-.newCheckListsModalRoot .newCheckListsToolRoot {
+.new-check-lists-modal .new-check-lists-modal__tool-row {
   display: flex;
   width: 100%;
   align-items: center;
@@ -48,40 +48,40 @@
   color: #ffffff;
   margin-bottom: 30px;
 }
-.newCheckListsModalRoot .newCheckListsToolRoot .todayBtn {
+.new-check-lists-modal .new-check-lists-modal__tool-row .new-check-lists-modal__today-button {
   margin-left: 21px;
   padding: 9px 16px 8px 16px !important;
   border-radius: 20px !important;
 }
 
-.newCheckListsModalRoot .newCheckListsToolRoot .tomorrowBtn {
+.new-check-lists-modal .new-check-lists-modal__tool-row .new-check-lists-modal__tomorrow-button {
   margin-left: 15px;
   padding: 9px 16px 8px 16px !important;
   border-radius: 20px !important;
 }
-.newCheckListsModalRoot .newCheckListsToolRoot .otherBtn {
+.new-check-lists-modal .new-check-lists-modal__tool-row .new-check-lists-modal__other-button {
   margin-left: 15px;
   padding: 10px 17px 9px 20px !important;
   background: rgba(255, 255, 255, 0.2) !important;
   border-radius: 20px !important;
 }
-.newCheckListsModalRoot .newCheckListsToolRoot .otherBtn i {
+.new-check-lists-modal .new-check-lists-modal__tool-row .new-check-lists-modal__other-button i {
   color: #ffffff66 !important;
 }
-.newCheckListsModalRoot .newCheckListsToolRoot .calendarIcon {
+.new-check-lists-modal .new-check-lists-modal__tool-row .new-check-lists-modal__calendar-icon {
   margin-right: 10px;
 }
-.newCheckListsModalRoot .newCheckListsToolRoot .participantsBtn {
+.new-check-lists-modal .new-check-lists-modal__tool-row .new-check-lists-modal__participants-button {
   margin-left: 13px;
   padding: 8px 18px 9px 15px !important;
   background: rgba(255, 255, 255, 0.2) !important;
   border-radius: 20px !important;
 }
-.newCheckListsModalRoot .newCheckListsToolRoot .participantsBtn i {
+.new-check-lists-modal .new-check-lists-modal__tool-row .new-check-lists-modal__participants-button i {
   margin-left: 10px !important;
   color: #fff;
 }
-.newCheckListsModalRoot .additionDetail {
+.new-check-lists-modal .new-check-lists-modal__addition-detail {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -92,20 +92,20 @@
   margin-bottom: 20px;
   cursor: pointer;
 }
-.newCheckListsModalRoot .additionDetail i {
+.new-check-lists-modal .new-check-lists-modal__addition-detail i {
   font-size: 9px;
   font-weight: 5px;
   color: #75b3ff;
   margin-left: 10px;
 }
-.newCheckListsModalRoot .additionDetailContent {
+.new-check-lists-modal .new-check-lists-modal__addition-detail-content {
   display: flex;
   align-items: center;
   width: 100%;
   margin-bottom: 70px;
 }
 
-.newCheckListsModalRoot .additionDetailContent .additionDetailItem {
+.new-check-lists-modal .new-check-lists-modal__addition-detail-content .new-check-lists-modal__addition-detail-item {
   display: flex;
   align-items: center;
   font-family: "Helvetica";
@@ -115,14 +115,14 @@
   line-height: 30px;
   color: #ffffff;
 }
-.newCheckListsModalRoot .additionDetailContent .additionDetailItem .itemBtn {
+.new-check-lists-modal .new-check-lists-modal__addition-detail-content .new-check-lists-modal__addition-detail-item .new-check-lists-modal__item-button {
   margin-left: 13px;
   padding: 8px 18px 9px 15px !important;
   background: rgba(255, 255, 255, 0.2) !important;
   border-radius: 20px !important;
 }
 
-.newCheckListsModalRoot .additionDetailContent .additionDetailItem .itemBtn i {
+.new-check-lists-modal .new-check-lists-modal__addition-detail-content .new-check-lists-modal__addition-detail-item .new-check-lists-modal__item-button i {
   margin-left: 10px !important;
   color: #fff;
 }

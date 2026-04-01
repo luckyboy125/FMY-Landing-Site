@@ -36,29 +36,29 @@ function CheckListsLongItem({
 
   return (
     <div
-      className={`checkListsLongItem ${className ?? ''}`}
+      className={`check-lists-long-item ${className ?? ''}`}
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
-      <div className="firstPart">
-        <div className="circleIcon" onClick={handleCheck}>
+      <div className="check-lists-long-item__left">
+        <div className="check-lists-long-item__circle-icon" onClick={handleCheck}>
           {checkStatus ? (
-            <img src={checkIcon} className="checkIcon" alt="checkIcon" />
+            <img src={checkIcon} className="check-lists-long-item__check-icon" alt="checkIcon" />
           ) : (
             <></>
           )}
         </div>
         <span
-          className="checkListsTitle"
+          className="check-lists-long-item__title"
           style={{ textDecoration: checkStatus ? 'line-through' : 'initial' }}
         >
           {title}
         </span>
       </div>
-      <div className="secondPart">
-        <div className="secondFirstPart">
-          <div className="avatarRoot">
-            <img src={avatar} className="avatar" alt="avatar" />
-            <span className="userName">{user}</span>
+      <div className="check-lists-long-item__right">
+        <div className="check-lists-long-item__right-inner">
+          <div className="check-lists-long-item__avatar-root">
+            <img src={avatar} className="check-lists-long-item__avatar" alt="avatar" />
+            <span className="check-lists-long-item__user-name">{user}</span>
           </div>
           <ColorBtn label="10 Mar" width={128} color={colorTypeMap[type]} />
         </div>

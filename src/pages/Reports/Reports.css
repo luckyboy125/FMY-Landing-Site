@@ -1,18 +1,18 @@
-.reportsRoot {
+.reports {
   padding-top: 8px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
 }
 
-.reportsRoot .reportsHeaderRoot {
+.reports .reports__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px 0 10px;
 }
 
-.reportsRoot .reportsHeaderRoot .reportsHeaderTitle {
+.reports .reports__header .reports__header-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -21,16 +21,16 @@
   color: #ffffff;
 }
 
-.reportsRoot .reportsHeaderRoot .reportsHeaderTab {
+.reports .reports__header .reports__header-tab {
   margin-top: 23px;
 }
 
-.reportsRoot .reportsHeaderRoot .reportsHeaderEnd {
+.reports .reports__header .reports__header-end {
   display: flex;
   margin-top: 5px;
 }
 
-.reportsRoot .reportsHeaderRoot .reportsHeaderEnd .headerBtn {
+.reports .reports__header .reports__header-end .reports__header-btn {
   background: rgba(117, 179, 255, 0.3);
   border-radius: 30px;
   width: 117px;
@@ -49,19 +49,19 @@
   align-items: center;
 }
 
-.reportsRoot .reportsContent {
+.reports .reports__content {
   margin-top: 65px;
 }
 
-.reportsRoot .reportsContent .item:last-child {
+.reports .reports__content .reports__item:last-child {
   margin-bottom: 0 !important;
 }
 
-.reportsRoot .reportsContent .item {
+.reports .reports__content .reports__item {
   margin-bottom: 102px;
 }
 
-.reportsRoot .reportsContent .reportsItemTitle {
+.reports .reports__content .reports__item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -71,7 +71,7 @@
   margin-left: 10px;
 }
 
-.reportsRoot .reportsContent .reportsItemRoot {
+.reports .reports__content .reports__item-root {
   margin: 50px auto 0;
   padding-right: 3px;
   display: flex;
@@ -80,11 +80,11 @@
   position: relative;
 }
 
-.reportsRoot .reportsContent .reportsItemRoot img {
+.reports .reports__content .reports__item-root img {
   height: 537px;
 }
 
-.reportsRoot .reportsContent .reportsItemRoot .toolArrow {
+.reports .reports__content .reports__item-root .reports__tool-arrow {
   width: 104px;
   min-width: 104px;
   height: 104px;
@@ -97,18 +97,18 @@
   cursor: pointer;
 }
 
-.reportsRoot .reportsContent .reportsItemRoot .toolArrow i {
+.reports .reports__content .reports__item-root .reports__tool-arrow i {
   color: #fff;
   font-size: 30px;
 }
 
-.reportsRoot .reportsContent .reportsItemRoot .left {
+.reports .reports__content .reports__item-root .reports__tool-arrow--left {
   position: absolute;
   left: -86px;
   top: 40%;
 }
 
-.reportsRoot .reportsContent .reportsItemRoot .right {
+.reports .reports__content .reports__item-root .reports__tool-arrow--right {
   position: absolute;
   right: -87px;
   top: 40%;

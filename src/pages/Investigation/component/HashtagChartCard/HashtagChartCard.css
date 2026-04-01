@@ -1,4 +1,4 @@
-.hashtagChartCardRoot {
+.hashtag-chart-card {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.2) 0%,
@@ -9,7 +9,7 @@
   padding: 31px 29px 29px 30px;
 }
 
-.hashtagChartCardRoot .title {
+.hashtag-chart-card .hashtag-chart-card__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -18,17 +18,17 @@
   color: #ffffff;
 }
 
-.hashtagChartCardRoot .hashtagChartCardRoot1 {
+.hashtag-chart-card .hashtag-chart-card__body {
   margin-top: 31px;
   display: flex;
 }
 
-.hashtagChartCardRoot .hashtagChartCardRoot1 .desRoot {
+.hashtag-chart-card .hashtag-chart-card__body .hashtag-chart-card__desc {
   flex-grow: 1;
   text-align: left;
 }
 
-.hashtagChartCardRoot .hashtagChartCardRoot1 .desRoot .size {
+.hashtag-chart-card .hashtag-chart-card__body .hashtag-chart-card__desc .hashtag-chart-card__size {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
@@ -37,29 +37,29 @@
   color: #ffffff;
 }
 
-.hashtagChartCardRoot .hashtagChartCardRoot1 .desRoot .desSize {
+.hashtag-chart-card .hashtag-chart-card__body .hashtag-chart-card__desc .hashtag-chart-card__desc-size {
   display: flex;
   align-items: center;
   color: #37ce4a;
   margin-top: 33px;
 }
 
-.hashtagChartCardRoot .hashtagChartCardRoot1 .desRoot .desSize i {
+.hashtag-chart-card .hashtag-chart-card__body .hashtag-chart-card__desc .hashtag-chart-card__desc-size i {
   margin-right: 3px;
   font-size: 20px;
 }
 
-.hashtagChartCardRoot .hashtagChartCardRoot1 .chartRoot {
+.hashtag-chart-card .hashtag-chart-card__body .hashtag-chart-card__chart {
   display: flex;
   align-items: flex-end;
   height: 98.67px;
 }
 
-.hashtagChartCardRoot .hashtagChartCardRoot1 .chartRoot .item:last-child {
+.hashtag-chart-card .hashtag-chart-card__body .hashtag-chart-card__chart .hashtag-chart-card__chart-item:last-child {
   margin-right: 0;
 }
 
-.hashtagChartCardRoot .hashtagChartCardRoot1 .chartRoot .item {
+.hashtag-chart-card .hashtag-chart-card__body .hashtag-chart-card__chart .hashtag-chart-card__chart-item {
   width: 36.61px;
   margin-right: 6.97px;
   border-radius: 4px;

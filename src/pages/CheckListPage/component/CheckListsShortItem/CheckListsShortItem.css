@@ -1,4 +1,4 @@
-.checkListsShortItem {
+.check-lists-short-item {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%,
@@ -12,7 +12,7 @@
   position: relative;
   width: 100%;
 }
-.checkListsShortItem .circleIcon {
+.check-lists-short-item .check-lists-short-item__circle-icon {
   position: relative;
   width: 34px;
   min-width: 34px;
@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: center;
 }
-.checkListsShortItem .circleIcon::before {
+.check-lists-short-item .check-lists-short-item__circle-icon::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -36,10 +36,10 @@
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
-.checkListsShortItem .checkListsShortItemContent {
+.check-lists-short-item .check-lists-short-item__content {
   flex-grow: 1;
 }
-.checkListsShortItem .checkListsShortItemContent .title {
+.check-lists-short-item .check-lists-short-item__content .check-lists-short-item__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -49,24 +49,24 @@
   margin-bottom: 58px;
 }
 
-.checkListsShortItem .checkListsShortItemContent .items {
+.check-lists-short-item .check-lists-short-item__content .check-lists-short-item__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.checkListsShortItem .checkListsShortItemContent .items .itemBtn {
+.check-lists-short-item .check-lists-short-item__content .check-lists-short-item__items .check-lists-short-item__item-button {
   margin-right: 20px;
 }
-.checkListsShortItem .checkListsShortItemContent .items .itemsFirst {
+.check-lists-short-item .check-lists-short-item__content .check-lists-short-item__items .check-lists-short-item__items-first {
   display: flex;
   align-items: center;
 }
-.checkListsShortItem
-  .checkListsShortItemContent
-  .items
-  .itemsFirst
-  .avatarRoot {
+.check-lists-short-item
+  .check-lists-short-item__content
+  .check-lists-short-item__items
+  .check-lists-short-item__items-first
+  .check-lists-short-item__avatar-root {
   display: flex;
   align-items: center;
   font-family: "Helvetica";
@@ -77,22 +77,22 @@
   letter-spacing: 0.01em;
   color: #ffffff;
 }
-.checkListsShortItem
-  .checkListsShortItemContent
-  .items
-  .itemsFirst
-  .avatarRoot
-  .avatar {
+.check-lists-short-item
+  .check-lists-short-item__content
+  .check-lists-short-item__items
+  .check-lists-short-item__items-first
+  .check-lists-short-item__avatar-root
+  .check-lists-short-item__avatar {
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
-.checkListsShortItem .checkListsShortItemContent .items .deleteIcon i {
+.check-lists-short-item .check-lists-short-item__content .check-lists-short-item__items .check-lists-short-item__delete-icon i {
   color: #adb1b3;
   font-size: 24px;
   line-height: 28px;
 }
-.checkListsShortItem .dotBtn {
+.check-lists-short-item .check-lists-short-item__dot-button {
   position: absolute;
   top: 20px;
   right: 20px;

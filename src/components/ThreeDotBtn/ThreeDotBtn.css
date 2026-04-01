@@ -1,14 +1,14 @@
-.dotGroupRoot {
+.three-dot-btn {
   cursor: pointer;
   display: flex;
   flex-direction: column;
 }
 
-.dotGroup .dot:last-child {
+.three-dot-btn .three-dot-btn__dot:last-child {
   margin-bottom: 0 !important;
 }
 
-.dot {
+.three-dot-btn__dot {
   width: 7px;
   min-width: 7px;
   height: 7px;

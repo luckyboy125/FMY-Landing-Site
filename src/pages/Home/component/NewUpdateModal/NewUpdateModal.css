@@ -1,4 +1,4 @@
-.newUpdataModalRoot {
+.new-update-modal {
   width: 569px;
   background: #41505f;
   border-radius: 20px;
@@ -6,14 +6,14 @@
   position: relative;
 }
 
-.newUpdataModalRoot .closeIcon {
+.new-update-modal .new-update-modal__close-icon {
   position: absolute;
   top: 30px;
   right: 30px;
   cursor: pointer;
 }
 
-.newUpdataModalRoot .modalTitle {
+.new-update-modal .new-update-modal__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -22,20 +22,20 @@
   color: #ffffff;
 }
 
-.newUpdataModalRoot .modalInputContent {
+.new-update-modal .new-update-modal__input-content {
   margin-top: 30px;
 }
 
-.newUpdataModalRoot .modalInputContent .modalItem:last-child {
+.new-update-modal .new-update-modal__input-content .new-update-modal__item:last-child {
   margin-bottom: 0;
 }
 
-.newUpdataModalRoot .modalInputContent .modalItem {
+.new-update-modal .new-update-modal__input-content .new-update-modal__item {
   width: 100%;
   margin-bottom: 30px;
 }
 
-.newUpdataModalRoot .modalInputContent .modalItem .title {
+.new-update-modal .new-update-modal__input-content .new-update-modal__item .new-update-modal__item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -44,7 +44,7 @@
   color: #ffffff;
 }
 
-.newUpdataModalRoot .modalInputContent .modalItem .inputRoot {
+.new-update-modal .new-update-modal__input-content .new-update-modal__item .new-update-modal__input {
   margin-top: 10px;
   position: relative;
   width: 100%;
@@ -57,7 +57,7 @@
     linear-gradient(90deg, #c7a5ff 0%, #68b3ff 100%) border-box;
 }
 
-.newUpdataModalRoot .modalInputContent .modalItem .inputRoot input {
+.new-update-modal .new-update-modal__input-content .new-update-modal__item .new-update-modal__input input {
   border: 1px solid transparent;
   background-color: transparent;
   padding: 0 !important;
@@ -71,10 +71,10 @@
   margin-left: 20px;
 }
 
-.newUpdataModalRoot
-  .modalInputContent
-  .modalItem
-  .inputRoot
+.new-update-modal
+  .new-update-modal__input-content
+  .new-update-modal__item
+  .new-update-modal__input
   input::placeholder {
   font-family: "Helvetica";
   font-style: normal;
@@ -84,25 +84,25 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
-.newUpdataModalRoot
-  .modalInputContent
-  .modalItem
-  .inputRoot
+.new-update-modal
+  .new-update-modal__input-content
+  .new-update-modal__item
+  .new-update-modal__input
   input:focus-visible {
   outline: none;
 }
 
-.newUpdataModalRoot .modalInputContent .modalItem .inputRoot input:focus {
+.new-update-modal .new-update-modal__input-content .new-update-modal__item .new-update-modal__input input:focus {
   outline: none;
 }
 
-.newUpdataModalRoot .modalInputContent .modalItem .inputRoot .plus {
+.new-update-modal .new-update-modal__input-content .new-update-modal__item .new-update-modal__input .new-update-modal__plus {
   font-size: 30px;
   color: #75b3ff;
   margin-right: 16px;
 }
 
-.newUpdataModalRoot .modalInputContent .modalItem .inputRoot .roundBtn {
+.new-update-modal .new-update-modal__input-content .new-update-modal__item .new-update-modal__input .new-update-modal__round-btn {
   width: 43px;
   height: 43px;
   border-radius: 50%;
@@ -116,17 +116,17 @@
   position: relative;
 }
 
-.newUpdataModalRoot .modalInputContent .modalItem .inputRoot .roundBtn i {
+.new-update-modal .new-update-modal__input-content .new-update-modal__item .new-update-modal__input .new-update-modal__round-btn i {
   font-size: 20px;
   color: #75b3ff;
 }
 
-.newUpdataModalRoot
-  .modalInputContent
-  .modalItem
-  .inputRoot
-  .roundBtn
-  .selectDropdownRoot {
+.new-update-modal
+  .new-update-modal__input-content
+  .new-update-modal__item
+  .new-update-modal__input
+  .new-update-modal__round-btn
+  .new-update-modal__select-dropdown {
   position: absolute;
   right: 23px;
   top: 43px;
@@ -139,12 +139,12 @@
   z-index: 5;
 }
 
-.newUpdataModalRoot
-  .modalInputContent
-  .modalItem
-  .inputRoot
-  .roundBtn
-  .selectDropdownRoot::after {
+.new-update-modal
+  .new-update-modal__input-content
+  .new-update-modal__item
+  .new-update-modal__input
+  .new-update-modal__round-btn
+  .new-update-modal__select-dropdown::after {
   content: "";
   position: absolute;
   top: 0;
@@ -159,24 +159,24 @@
   margin-top: -16px;
 }
 
-.newUpdataModalRoot
-  .modalInputContent
-  .modalItem
-  .inputRoot
-  .roundBtn
-  .selectDropdownRoot
-  .item:last-child {
+.new-update-modal
+  .new-update-modal__input-content
+  .new-update-modal__item
+  .new-update-modal__input
+  .new-update-modal__round-btn
+  .new-update-modal__select-dropdown
+  .new-update-modal__select-item:last-child {
   border-bottom: none;
   padding-bottom: 10px;
 }
 
-.newUpdataModalRoot
-  .modalInputContent
-  .modalItem
-  .inputRoot
-  .roundBtn
-  .selectDropdownRoot
-  .item {
+.new-update-modal
+  .new-update-modal__input-content
+  .new-update-modal__item
+  .new-update-modal__input
+  .new-update-modal__round-btn
+  .new-update-modal__select-dropdown
+  .new-update-modal__select-item {
   width: 100%;
   padding: 11px 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -188,13 +188,13 @@
   color: #ffffff;
 }
 
-.newUpdataModalRoot
-  .modalInputContent
-  .modalItem
-  .inputRoot
-  .roundBtn
-  .selectDropdownRoot
-  .activeItem {
+.new-update-modal
+  .new-update-modal__input-content
+  .new-update-modal__item
+  .new-update-modal__input
+  .new-update-modal__round-btn
+  .new-update-modal__select-dropdown
+  .new-update-modal__select-item--active {
   width: 100%;
   padding: 11px 10px;
   border-bottom: 1px solid #ffffff;
@@ -206,7 +206,7 @@
   color: #ffffff;
 }
 
-.newUpdataModalRoot .addLink {
+.new-update-modal .new-update-modal__add-link {
   margin-top: 20px;
   margin-left: 10px;
   font-family: "Helvetica";
@@ -217,7 +217,7 @@
   color: #75b3ff;
 }
 
-.newUpdataModalRoot .updateBtn {
+.new-update-modal .new-update-modal__update-btn {
   width: 115px;
   height: 40px;
   display: flex;

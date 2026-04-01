@@ -35,7 +35,7 @@ function SearchInput({
 
   return (
     <div
-      className={`searchInputRoot ${className}`}
+      className={`search-input ${className}`}
       style={{ cursor: onlyClick ? 'pointer' : undefined }}
       onClick={handleClick}
       onKeyDown={(e) => {
@@ -48,7 +48,7 @@ function SearchInput({
       role="button"
       tabIndex={0}
     >
-      <div className="inputIcon">
+      <div className="search-input__icon">
         <img src={searchIcon} alt="search" />
       </div>
       {onlyClick ? (
@@ -57,7 +57,7 @@ function SearchInput({
         <>
           Search
           <input
-            className="inputContent"
+            className="search-input__content"
             value={inputValue}
             onChange={(e) => action?.(e)}
             aria-label="Search input"
@@ -67,7 +67,7 @@ function SearchInput({
         'Search'
       ) : (
         <input
-          className="inputContent"
+          className="search-input__content"
           value={inputValue}
           onChange={(e) => action?.(e)}
           aria-label="Search input"

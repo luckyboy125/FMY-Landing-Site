@@ -108,12 +108,12 @@ function Database() {
 
   return (
     <>
-      <div className="databaseRoot">
-        <div className="databaseHeaderRoot">
+      <div className="database">
+        <div className="database__header">
           <div>
-            <div className="databaseHeaderTitle">Database</div>
+            <div className="database__header-title">Database</div>
             <ActionTab
-              className="databaseHeaderTab"
+              className="database__header-tab"
               data={tabData}
               onSelect={handleTab}
               select={
@@ -124,28 +124,28 @@ function Database() {
             />
           </div>
         </div>
-        <div className="databaseContent">
-          <div className="databaseContent1">
+        <div className="database__content">
+          <div className="database__content-1">
             <DatabaseInput
-              className="urlInput"
+              className="database__url-input"
               inputValue={url}
               action={setUrl}
-              tool={<div className="addDBBtn">+ Add to DB</div>}
+              tool={<div className="database__add-button">+ Add to DB</div>}
             />
-            <div className="secondRoot">
+            <div className="database__second-row">
               <DatabaseInput
-                className="commentInput"
+                className="database__comment-input"
                 inputValue={comment}
                 action={setComment}
               />
               <DatabaseInput
-                className="casesInput"
+                className="database__cases-input"
                 inputValue={cases}
                 action={setCases}
                 tool={
-                  <div className="toolRoot">
-                    <div className="plus">+</div>
-                    <div className="circleBtn">
+                  <div className="database__tool-row">
+                    <div className="database__plus">+</div>
+                    <div className="database__circle-button">
                       <i className="fas fa-chevron-down"></i>
                     </div>
                   </div>
@@ -154,60 +154,60 @@ function Database() {
             </div>
           </div>
           <CustomizeTable
-            className="databaseContent2"
+            className="database__content-2"
             header={
-              <div className="databaseTableHeader">
-                <div className="firstItem">
-                  <div className="databaseTableTitle">Database items</div>
-                  <div className="toolEndRoot">
+              <div className="database__table-header">
+                <div className="database__table-header-first">
+                  <div className="database__table-title">Database items</div>
+                  <div className="database__tool-end">
                     {advancedToolBtn ? (
                       <>
-                        <div className="searchTool">Save Search</div>
-                        <div className="searchTool">Cancel Search</div>
+                        <div className="database__search-tool">Save Search</div>
+                        <div className="database__search-tool">Cancel Search</div>
                       </>
                     ) : (
                       <></>
                     )}
-                    <img src={refresh} alt="tool" className="tool" />
+                    <img src={refresh} alt="tool" className="database__tool" />
                     <img
                       src={searchIcon}
                       alt="tool"
-                      className="tool"
+                      className="database__tool"
                       onClick={handleSearchShow}
                     />
                   </div>
                 </div>
                 {query.get('search_panel') === '1' ? (
-                  <div className="secondItem">
+                  <div className="database__table-header-second">
                     <DatabaseInput
-                      className="tableSearchInput"
+                      className="database__table-search-input"
                       inputValue={tableSearch}
                       placeholder="Insert text here..."
                       action={setTableSearch}
                     />
-                    <div className="searchBtn">
+                    <div className="database__search-button">
                       <img src={searchIcon} alt="tool" />
                     </div>
-                    <div className="advancedBtn" onClick={handleAdvancedShow}>
+                    <div className="database__advanced-button" onClick={handleAdvancedShow}>
                       Advanced Search
                     </div>
                   </div>
                 ) : query.get('search_panel') === '2' ? (
-                  <div className="thirdItem">
-                    <div className="itemRoot">
-                      <div className="inputRoot">
-                        <div className="inputDes">Any of these words:</div>
+                  <div className="database__table-header-third">
+                    <div className="database__filter-row">
+                      <div className="database__input-root">
+                        <div className="database__input-description">Any of these words:</div>
                         <DatabaseInput
-                          className="input"
+                          className="database__input"
                           inputValue={tableSearch}
                           placeholder="Insert text here..."
                           action={setTableSearch}
                         />
                       </div>
-                      <div className="inputRoot">
-                        <div className="inputDes">All of these words:</div>
+                      <div className="database__input-root">
+                        <div className="database__input-description">All of these words:</div>
                         <DatabaseInput
-                          className="input"
+                          className="database__input"
                           inputValue={tableSearch}
                           placeholder="Insert text here..."
                           action={setTableSearch}
@@ -216,7 +216,7 @@ function Database() {
                       <DatabaseSearchDropdown
                         label="Cases"
                         selectedValue="All"
-                        className="cases"
+                        className="database__cases"
                         type="keyword"
                         panelClassName="dropChildrenRoot"
                       >
@@ -231,29 +231,29 @@ function Database() {
                       <DatabaseSearchDropdown
                         label="Social platform"
                         selectedValue="All"
-                        className="social"
+                        className="database__social"
                         type="keyword"
                         panelClassName="dropChildrenRoot"
                       >
-                        <div className="plateformDropdown">
-                          <div className="item">
-                            <div className="checkRoot"></div>
+                        <div className="database__platform-dropdown">
+                          <div className="database__platform-item">
+                            <div className="database__check-root"></div>
                             <img src={youtube} alt="social_icon" />
                           </div>
-                          <div className="item">
-                            <div className="checkRoot"></div>
+                          <div className="database__platform-item">
+                            <div className="database__check-root"></div>
                             <img src={instagram} alt="social_icon" />
                           </div>
-                          <div className="item">
-                            <div className="checkRoot"></div>
+                          <div className="database__platform-item">
+                            <div className="database__check-root"></div>
                             <img src={facebook} alt="social_icon" />
                           </div>
-                          <div className="item">
-                            <div className="checkRoot"></div>
+                          <div className="database__platform-item">
+                            <div className="database__check-root"></div>
                             <img src={twitter} alt="social_icon" />
                           </div>
-                          <div className="item">
-                            <div className="checkRoot"></div>
+                          <div className="database__platform-item">
+                            <div className="database__check-root"></div>
                             <img src={tiktok} alt="social_icon" />
                           </div>
                         </div>
@@ -264,20 +264,20 @@ function Database() {
                         action={setFirstLetter}
                       />
                     </div>
-                    <div className="itemRoot">
-                      <div className="inputRoot">
-                        <div className="inputDes">This exact phrase:</div>
+                    <div className="database__filter-row">
+                      <div className="database__input-root">
+                        <div className="database__input-description">This exact phrase:</div>
                         <DatabaseInput
-                          className="input"
+                          className="database__input"
                           inputValue={tableSearch}
                           placeholder="Insert text here..."
                           action={setTableSearch}
                         />
                       </div>
-                      <div className="inputRoot">
-                        <div className="inputDes">None of these words:</div>
+                      <div className="database__input-root">
+                        <div className="database__input-description">None of these words:</div>
                         <DatabaseInput
-                          className="input"
+                          className="database__input"
                           inputValue={tableSearch}
                           placeholder="Insert text here..."
                           action={setTableSearch}
@@ -286,7 +286,7 @@ function Database() {
                       <DatabaseSearchDropdown
                         label="Added date"
                         selectedValue="All"
-                        className="cases"
+                        className="database__cases"
                         type="calendar"
                         panelClassName="dropChildrenRoot"
                       >
@@ -301,7 +301,7 @@ function Database() {
                       <DatabaseSearchDropdown
                         label="Added by"
                         selectedValue="All"
-                        className="social"
+                        className="database__social"
                         panelClassName="dropChildrenRoot"
                       >
                         <div className="dropRoot">
@@ -319,7 +319,7 @@ function Database() {
                       />
                     </div>
                     <div
-                      className="searchBtn"
+                      className="database__search-button"
                       onClick={() => setAdvancedToolBtn(!advancedToolBtn)}
                     >
                       <img src={searchIcon} alt="tool" />
@@ -367,7 +367,7 @@ function Database() {
                   {item.view.alert ? (
                     <img
                       src={tableAlertIcon}
-                      className="alertIcon"
+                      className="database__alert-icon"
                       alt="alert"
                     />
                   ) : (
@@ -377,7 +377,7 @@ function Database() {
                 </td>
                 <td>Link</td>
                 <td>
-                  <ThreeDotBtn className="dotBtn" action={() => {}} />
+                  <ThreeDotBtn className="database__dot-button" action={() => {}} />
                 </td>
               </tr>
             ))}

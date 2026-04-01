@@ -40,31 +40,31 @@ function TaskLongItem({
 
   return (
     <div
-      className={`taskLongItem ${className ?? ''}`}
+      className={`task-long-item ${className ?? ''}`}
       style={{ opacity: checkStatus ? 0.4 : 1 }}
     >
-      <div className="firstPart">
-        <div className="circleIcon" onClick={handleCheck}>
+      <div className="task-long-item__left">
+        <div className="task-long-item__circle-icon" onClick={handleCheck}>
           {checkStatus ? <img src={checkIcon} alt="checkIcon" /> : <></>}
         </div>
-        <div className="titleRoot">
+        <div className="task-long-item__title-group">
           <div
-            className="taskTitle"
+            className="task-long-item__title"
             style={{ textDecoration: checkStatus ? 'line-through' : 'initial' }}
           >
             {title}
           </div>
         </div>
       </div>
-      <div className="secondPart">
+      <div className="task-long-item__right">
         {dropdown}
-        <div className="avatarRoot">
-          <img src={avatar} className="avatar" alt="avatar" />
-          <span className="avatarDes"></span>
+        <div className="task-long-item__avatar-group">
+          <img src={avatar} className="task-long-item__avatar" alt="avatar" />
+          <span className="task-long-item__avatar-desc"></span>
         </div>
-        <div className="itemDate">
-          <div className="itemDateDay">{time.split(',')[0]}</div>
-          <div className="itemDateTime">
+        <div className="task-long-item__date">
+          <div className="task-long-item__date-day">{time.split(',')[0]}</div>
+          <div className="task-long-item__date-time">
             {time.split(',')[1]}
             {time.split(',')[2]}
           </div>

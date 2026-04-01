@@ -1,7 +1,7 @@
-.checkListsRoot {
+.check-lists {
   padding: 0 34px 50px 34px;
 }
-.checkListsTitle {
+.check-lists__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -12,21 +12,21 @@
   margin-top: 5px;
   margin-bottom: 28px;
 }
-.checkListsHeaderRoot {
+.check-lists__header {
   padding: 0 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.checkListsContainer {
+.check-lists__container {
   margin-top: 45px;
 }
-.checkListsContainerHeader {
+.check-lists__container-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.checkListsContainerHeader .firstItem {
+.check-lists__container-header .check-lists__part--first {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,13 +34,13 @@
   flex-grow: 1;
 }
 
-.checkListsContainerHeader .firstItem .titleRoot {
+.check-lists__container-header .check-lists__part--first .check-lists__title-root {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.checkListsContainerHeader .firstItem .titleRoot .headerTitle {
+.check-lists__container-header .check-lists__part--first .check-lists__title-root .check-lists__header-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -50,13 +50,13 @@
   color: #ffffff;
 }
 
-.checkListsContainerHeader .firstItem .titleRoot .headerDesRoot {
+.check-lists__container-header .check-lists__part--first .check-lists__title-root .check-lists__header-description {
   display: flex;
   align-items: center;
   margin-left: 30px;
 }
 
-.checkListsContainerHeader .firstItem .titleRoot .headerDesRoot span {
+.check-lists__container-header .check-lists__part--first .check-lists__title-root .check-lists__header-description span {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -66,14 +66,14 @@
   opacity: 0.9;
 }
 
-.checkListsContainerHeader .firstItem .titleRoot .headerDesRoot i {
+.check-lists__container-header .check-lists__part--first .check-lists__title-root .check-lists__header-description i {
   color: #75b3ff;
   font-size: 16px;
   font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }
-.checkListsContainerHeader .firstItem .completeCount {
+.check-lists__container-header .check-lists__part--first .check-lists__complete-count {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -84,14 +84,14 @@
   opacity: 0.9;
 }
 
-.checkListsContainerHeader .secondItem {
+.check-lists__container-header .check-lists__part--second {
   display: flex;
   align-items: center;
   padding: 0 0 0 63px;
   width: 446px;
 }
 
-.checkListsContainerHeader .secondItem .headerTitle {
+.check-lists__container-header .check-lists__part--second .check-lists__header-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -101,13 +101,13 @@
   color: #ffffff;
 }
 
-.checkListsContainerHeader .secondItem .headerDesRoot {
+.check-lists__container-header .check-lists__part--second .check-lists__header-description {
   display: flex;
   align-items: center;
   margin-left: 30px;
 }
 
-.checkListsContainerHeader .secondItem .headerDesRoot span {
+.check-lists__container-header .check-lists__part--second .check-lists__header-description span {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -117,47 +117,47 @@
   opacity: 0.9;
 }
 
-.checkListsContainerHeader .secondItem .headerDesRoot i {
+.check-lists__container-header .check-lists__part--second .check-lists__header-description i {
   color: #75b3ff;
   font-size: 16px;
   font-weight: 900;
   line-height: 8px;
   margin-right: 5px;
 }
-.checkListsContainer .checkListsContent {
+.check-lists__container .check-lists__content {
   margin-top: 30px;
   display: flex;
 }
-.checkListsContainer .checkListsContent .firstContent {
+.check-lists__container .check-lists__content .check-lists__left {
   flex-grow: 1;
   padding-right: 42px;
   border-right: 1px solid #75b3ffb2;
 }
-.checkListsContainer .checkListsContent .firstContent :last-child {
+.check-lists__container .check-lists__content .check-lists__left :last-child {
   margin-bottom: 0 !important;
 }
-.checkListsContainer .checkListsContent .firstContent .checkListsContentItem {
+.check-lists__container .check-lists__content .check-lists__left .check-lists__content-item {
   margin-bottom: 50px;
 }
-.checkListsContainer
-  .checkListsContent
-  .firstContent
-  .checkListsContentItem
-  .checkListsItem {
+.check-lists__container
+  .check-lists__content
+  .check-lists__left
+  .check-lists__content-item
+  .check-lists__item {
   margin-bottom: 10px;
 }
-.checkListsContainer
-  .checkListsContent
-  .firstContent
-  .checkListsContentItem
-  .lastCheckListsItem {
+.check-lists__container
+  .check-lists__content
+  .check-lists__left
+  .check-lists__content-item
+  .check-lists__item--last {
   margin-bottom: 20px;
 }
-.checkListsContainer
-  .checkListsContent
-  .firstContent
-  .checkListsContentItem
-  .headerRoot {
+.check-lists__container
+  .check-lists__content
+  .check-lists__left
+  .check-lists__content-item
+  .check-lists__item-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -165,23 +165,23 @@
   padding: 0 30px 0 16px;
   width: 100%;
 }
-.checkListsContainer
-  .checkListsContent
-  .firstContent
-  .checkListsContentItem
-  .headerRoot
-  .titleRoot {
+.check-lists__container
+  .check-lists__content
+  .check-lists__left
+  .check-lists__content-item
+  .check-lists__item-header
+  .check-lists__title-root {
   display: flex;
   align-items: center;
 }
 
-.checkListsContainer
-  .checkListsContent
-  .firstContent
-  .checkListsContentItem
-  .headerRoot
-  .titleRoot
-  .headerTitle {
+.check-lists__container
+  .check-lists__content
+  .check-lists__left
+  .check-lists__content-item
+  .check-lists__item-header
+  .check-lists__title-root
+  .check-lists__header-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -191,25 +191,25 @@
   color: #ffffff;
 }
 
-.checkListsContainer
-  .checkListsContent
-  .firstContent
-  .checkListsContentItem
-  .headerRoot
-  .titleRoot
-  .headerDesRoot {
+.check-lists__container
+  .check-lists__content
+  .check-lists__left
+  .check-lists__content-item
+  .check-lists__item-header
+  .check-lists__title-root
+  .check-lists__header-description {
   display: flex;
   align-items: center;
   margin-left: 30px;
 }
 
-.checkListsContainer
-  .checkListsContent
-  .firstContent
-  .checkListsContentItem
-  .headerRoot
-  .titleRoot
-  .headerDesRoot
+.check-lists__container
+  .check-lists__content
+  .check-lists__left
+  .check-lists__content-item
+  .check-lists__item-header
+  .check-lists__title-root
+  .check-lists__header-description
   span {
   font-family: "Helvetica";
   font-style: normal;
@@ -220,13 +220,13 @@
   opacity: 0.9;
 }
 
-.checkListsContainer
-  .checkListsContent
-  .firstContent
-  .checkListsContentItem
-  .headerRoot
-  .titleRoot
-  .headerDesRoot
+.check-lists__container
+  .check-lists__content
+  .check-lists__left
+  .check-lists__content-item
+  .check-lists__item-header
+  .check-lists__title-root
+  .check-lists__header-description
   i {
   color: #75b3ff;
   font-size: 16px;
@@ -234,12 +234,12 @@
   line-height: 8px;
   margin-right: 5px;
 }
-.checkListsContainer
-  .checkListsContent
-  .firstContent
-  .checkListsContentItem
-  .headerRoot
-  .completeCount {
+.check-lists__container
+  .check-lists__content
+  .check-lists__left
+  .check-lists__content-item
+  .check-lists__item-header
+  .check-lists__complete-count {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -249,14 +249,14 @@
   color: #ffffff;
   opacity: 0.9;
 }
-.checkListsContainer .checkListsContent .overdueContent {
+.check-lists__container .check-lists__content .check-lists__overdue {
   width: 446px;
   padding-left: 43px;
 }
-.checkListsContainer .checkListsContent .overdueContent .checkListShortItem {
+.check-lists__container .check-lists__content .check-lists__overdue .check-lists__short-item {
   margin-bottom: 20px;
 }
-.addCheckListsBtn {
+.check-lists__add-button {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;

@@ -11,23 +11,23 @@ export interface GovernmentCardProps {
 
 function GovernmentCard({ className, imgRoot }: GovernmentCardProps) {
   return (
-    <div className={`governmentCardRoot ${className ?? ""}`}>
+    <div className={`government-card ${className ?? ""}`}>
       {imgRoot}
-      <div className="governmentCardFooter">
-        <img src={copyIcon} className="copy" alt="copy" />
-        <div className="divline"></div>
-        <img src={twitterIcon} className="twitter" alt="copy" />
-        <div className="divline"></div>
-        <div className="date">
+      <div className="government-card__footer">
+        <img src={copyIcon} className="government-card__copy" alt="copy" />
+        <div className="government-card__divider"></div>
+        <img src={twitterIcon} className="government-card__twitter" alt="copy" />
+        <div className="government-card__divider"></div>
+        <div className="government-card__date">
           13 Dec, <span className="special">2022</span>
         </div>
-        <div className="divline"></div>
-        <div className="avatarRoot">
-          <img src={person4} className="avatar" alt="avatar" />
+        <div className="government-card__divider"></div>
+        <div className="government-card__avatar-root">
+          <img src={person4} className="government-card__avatar" alt="avatar" />
           Daniel
         </div>
-        <div className="divline"></div>
-        <div className="view">View</div>
+        <div className="government-card__divider"></div>
+        <div className="government-card__view">View</div>
         <ThreeDotBtn action={() => {}} />
       </div>
     </div>

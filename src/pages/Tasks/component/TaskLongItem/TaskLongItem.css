@@ -1,4 +1,4 @@
-.taskLongItem {
+.task-long-item {
   padding: 0px 31px 0px 30px;
   background: linear-gradient(
     180deg,
@@ -13,12 +13,12 @@
   height: 80px;
 }
 
-.taskLongItem .firstPart {
+.task-long-item .task-long-item__left {
   display: flex;
   align-items: center;
 }
 
-.taskLongItem .firstPart .circleIcon {
+.task-long-item .task-long-item__left .task-long-item__circle-icon {
   position: relative;
   width: 34px;
   min-width: 34px;
@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
 }
-.taskLongItem .firstPart .circleIcon::before {
+.task-long-item .task-long-item__left .task-long-item__circle-icon::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -40,10 +40,10 @@
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
-.taskLongItem .firstPart .titleRoot {
+.task-long-item .task-long-item__left .task-long-item__title-group {
   margin-left: 20px;
 }
-.taskLongItem .firstPart .titleRoot .taskTitle {
+.task-long-item .task-long-item__left .task-long-item__title-group .task-long-item__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -52,7 +52,7 @@
   color: #ffffff;
 }
 
-.taskLongItem .firstPart .titleRoot .taskType {
+.task-long-item .task-long-item__left .task-long-item__title-group .task-long-item__type {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -60,22 +60,22 @@
   line-height: 30px;
   color: #d8e1ea;
 }
-.taskLongItem .secondPart {
+.task-long-item .task-long-item__right {
   display: flex;
   align-items: center;
 }
 
-.taskLongItem .secondPart .avatarRoot {
+.task-long-item .task-long-item__right .task-long-item__avatar-group {
   display: flex;
   align-items: center;
   margin-left: 100px;
 }
 
-.taskLongItem .secondPart .avatarRoot .avatar {
+.task-long-item .task-long-item__right .task-long-item__avatar-group .task-long-item__avatar {
   width: 50px;
   height: 50px;
 }
-.taskLongItem .secondPart .avatarRoot .avatarDes {
+.task-long-item .task-long-item__right .task-long-item__avatar-group .task-long-item__avatar-desc {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -84,14 +84,14 @@
   color: #ffffff;
   margin-left: 10px;
 }
-.taskLongItem .secondPart .itemDate {
+.task-long-item .task-long-item__right .task-long-item__date {
   width: fit-content;
   margin-right: 43px;
   margin-left: 100px;
   display: flex;
   align-items: center;
 }
-.taskLongItem .secondPart .itemDate .itemDateDay {
+.task-long-item .task-long-item__right .task-long-item__date .task-long-item__date-day {
   font-family: "Helvetica";
   font-size: 20px;
   font-weight: 500;
@@ -101,7 +101,7 @@
   color: #ffffff;
   width: 90px;
 }
-.taskLongItem .secondPart .itemDate .itemDateTime {
+.task-long-item .task-long-item__right .task-long-item__date .task-long-item__date-time {
   font-family: Helvetica;
   font-size: 20px;
   font-weight: 400;

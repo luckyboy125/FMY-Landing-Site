@@ -1,16 +1,16 @@
-.newTaskModalRoot {
+.new-task-modal {
   width: 569px;
   background: #41505f;
   border-radius: 20px;
   padding: 30px 40px;
 }
-.newTaskModalRoot .modalCloseIcon {
+.new-task-modal .new-task-modal__close-icon {
   position: absolute;
   top: 30px;
   right: 30px;
   cursor: pointer;
 }
-.newTaskModalRoot .taskTitle {
+.new-task-modal .new-task-modal__title-input {
   width: 100%;
   font-family: "Helvetica";
   font-style: normal;
@@ -22,7 +22,7 @@
   background-color: transparent;
   margin-bottom: 55px;
 }
-.newTaskModalRoot .taskTitle::placeholder {
+.new-task-modal .new-task-modal__title-input::placeholder {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
@@ -30,13 +30,13 @@
   line-height: 30px;
   color: rgba(255, 255, 255, 0.4);
 }
-.newTaskModalRoot .taskTitle:focus-visible {
+.new-task-modal .new-task-modal__title-input:focus-visible {
   outline: none;
 }
-.newTaskModalRoot .taskTitle:focus {
+.new-task-modal .new-task-modal__title-input:focus {
   outline: none;
 }
-.newTaskModalRoot .newTaskToolRoot {
+.new-task-modal .new-task-modal__tool-row {
   display: flex;
   width: 100%;
   align-items: center;
@@ -48,40 +48,40 @@
   color: #ffffff;
   margin-bottom: 30px;
 }
-.newTaskModalRoot .newTaskToolRoot .todayBtn {
+.new-task-modal .new-task-modal__tool-row .new-task-modal__today-btn {
   margin-left: 21px;
   padding: 9px 16px 8px 16px !important;
   border-radius: 20px !important;
 }
 
-.newTaskModalRoot .newTaskToolRoot .tomorrowBtn {
+.new-task-modal .new-task-modal__tool-row .new-task-modal__tomorrow-btn {
   margin-left: 15px;
   padding: 9px 16px 8px 16px !important;
   border-radius: 20px !important;
 }
-.newTaskModalRoot .newTaskToolRoot .otherBtn {
+.new-task-modal .new-task-modal__tool-row .new-task-modal__other-btn {
   margin-left: 15px;
   padding: 10px 17px 9px 20px !important;
   background: rgba(255, 255, 255, 0.2) !important;
   border-radius: 20px !important;
 }
-.newTaskModalRoot .newTaskToolRoot .otherBtn i {
+.new-task-modal .new-task-modal__tool-row .new-task-modal__other-btn i {
   color: #ffffff66 !important;
 }
-.newTaskModalRoot .newTaskToolRoot .calendarIcon {
+.new-task-modal .new-task-modal__tool-row .new-task-modal__calendar-icon {
   margin-right: 10px;
 }
-.newTaskModalRoot .newTaskToolRoot .participantsBtn {
+.new-task-modal .new-task-modal__tool-row .new-task-modal__participants-btn {
   margin-left: 13px;
   padding: 8px 18px 9px 15px !important;
   background: rgba(255, 255, 255, 0.2) !important;
   border-radius: 20px !important;
 }
-.newTaskModalRoot .newTaskToolRoot .participantsBtn i {
+.new-task-modal .new-task-modal__tool-row .new-task-modal__participants-btn i {
   margin-left: 10px !important;
   color: #fff;
 }
-.newTaskModalRoot .additionDetail {
+.new-task-modal .new-task-modal__addition-detail {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -92,20 +92,20 @@
   margin-bottom: 20px;
   cursor: pointer;
 }
-.newTaskModalRoot .additionDetail i {
+.new-task-modal .new-task-modal__addition-detail i {
   font-size: 9px;
   font-weight: 5px;
   color: #75b3ff;
   margin-left: 10px;
 }
-.newTaskModalRoot .additionDetailContent {
+.new-task-modal .new-task-modal__addition-content {
   display: flex;
   align-items: center;
   width: 100%;
   margin-bottom: 70px;
 }
 
-.newTaskModalRoot .additionDetailContent .additionDetailItem {
+.new-task-modal .new-task-modal__addition-content .new-task-modal__addition-item {
   display: flex;
   align-items: center;
   font-family: "Helvetica";
@@ -115,14 +115,14 @@
   line-height: 30px;
   color: #ffffff;
 }
-.newTaskModalRoot .additionDetailContent .additionDetailItem .itemBtn {
+.new-task-modal .new-task-modal__addition-content .new-task-modal__addition-item .new-task-modal__item-btn {
   margin-left: 13px;
   padding: 8px 18px 9px 15px !important;
   background: rgba(255, 255, 255, 0.2) !important;
   border-radius: 20px !important;
 }
 
-.newTaskModalRoot .additionDetailContent .additionDetailItem .itemBtn i {
+.new-task-modal .new-task-modal__addition-content .new-task-modal__addition-item .new-task-modal__item-btn i {
   margin-left: 10px !important;
   color: #fff;
 }

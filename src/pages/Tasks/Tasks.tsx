@@ -25,35 +25,35 @@ function Tasks() {
 
   return (
     <>
-      <div className="tasksRoot">
-        <div className="tasksTitle">Tasks</div>
-        <div className="tasksHeaderRoot">
+      <div className="tasks">
+        <div className="tasks__title">Tasks</div>
+        <div className="tasks__header">
           <ActionTab data={tabData} onSelect={handleTab} select={tab} />
           <PlusButton content="+ New task" action={handleNewTaskModal} />
         </div>
-        <div className="tasksContainer">
-          <div className="tasksContainerHeader">
-            <div className="firstItem">
-              <div className="headerTitle">Today</div>
-              <div className="headerDesRoot">
+        <div className="tasks__container">
+          <div className="tasks__container-header">
+            <div className="tasks__container-header-item--first">
+              <div className="tasks__header-title">Today</div>
+              <div className="tasks__header-desc">
                 <i className="far fa-angle-right"></i>
                 <span>17 Tasks</span>
               </div>
             </div>
-            <div className="secondItem">
-              <div className="headerTitle">Overdue</div>
-              <div className="headerDesRoot">
+            <div className="tasks__container-header-item--second">
+              <div className="tasks__header-title">Overdue</div>
+              <div className="tasks__header-desc">
                 <i className="fas fa-angle-down"></i>
                 <span>17 Tasks</span>
               </div>
             </div>
           </div>
-          <div className="tasksContent">
-            <div className="firstContent">
-              <div className="tasksContentItem">
+          <div className="tasks__content">
+            <div className="tasks__content-left">
+              <div className="tasks__content-item">
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
-                  className="tasksItem"
+                  className="tasks__item"
                   avatar={Person1}
                   dropdown={
                     <ColorBtn
@@ -67,7 +67,7 @@ function Tasks() {
                 />
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
-                  className="tasksItem"
+                  className="tasks__item"
                   avatar={Person2}
                   dropdown={
                     <ColorBtn
@@ -81,7 +81,7 @@ function Tasks() {
                 />
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
-                  className="lastTasksItem"
+                  className="tasks__item--last"
                   avatar={Person3}
                   dropdown={
                     <ColorBtn
@@ -93,21 +93,21 @@ function Tasks() {
                   }
                   date={1672405286}
                 />
-                <div className="addTaskBtn" onClick={handleNewTaskModal}>
+                <div className="tasks__add-btn" onClick={handleNewTaskModal}>
                   + New Task
                 </div>
               </div>
-              <div className="tasksContentItem">
-                <div className="headerRoot">
-                  <div className="headerTitle">Tomorrow</div>
-                  <div className="headerDesRoot">
+              <div className="tasks__content-item">
+                <div className="tasks__item-header">
+                  <div className="tasks__header-title">Tomorrow</div>
+                  <div className="tasks__header-desc">
                     <i className="far fa-angle-right"></i>
                     <span>17 Tasks</span>
                   </div>
                 </div>
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
-                  className="tasksItem"
+                  className="tasks__item"
                   avatar={Person1}
                   dropdown={
                     <ColorBtn
@@ -121,7 +121,7 @@ function Tasks() {
                 />
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
-                  className="tasksItem"
+                  className="tasks__item"
                   avatar={Person2}
                   dropdown={
                     <ColorBtn
@@ -135,7 +135,7 @@ function Tasks() {
                 />
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
-                  className="lastTasksItem"
+                  className="tasks__item--last"
                   avatar={Person3}
                   dropdown={
                     <ColorBtn
@@ -147,21 +147,21 @@ function Tasks() {
                   }
                   date={1672405286}
                 />
-                <div className="addTaskBtn" onClick={handleNewTaskModal}>
+                <div className="tasks__add-btn" onClick={handleNewTaskModal}>
                   + New Task
                 </div>
               </div>
-              <div className="tasksContentItem">
-                <div className="headerRoot">
-                  <div className="headerTitle">Upcoming</div>
-                  <div className="headerDesRoot">
+              <div className="tasks__content-item">
+                <div className="tasks__item-header">
+                  <div className="tasks__header-title">Upcoming</div>
+                  <div className="tasks__header-desc">
                     <i className="far fa-angle-right"></i>
                     <span>17 Tasks</span>
                   </div>
                 </div>
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
-                  className="tasksItem"
+                  className="tasks__item"
                   avatar={Person1}
                   dropdown={
                     <ColorBtn
@@ -175,7 +175,7 @@ function Tasks() {
                 />
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
-                  className="tasksItem"
+                  className="tasks__item"
                   avatar={Person2}
                   dropdown={
                     <ColorBtn
@@ -189,7 +189,7 @@ function Tasks() {
                 />
                 <TaskLongItem
                   title="Lorem ipsum dolor sit"
-                  className="lastTasksItem"
+                  className="tasks__item--last"
                   avatar={Person3}
                   dropdown={
                     <ColorBtn
@@ -203,23 +203,23 @@ function Tasks() {
                 />
               </div>
             </div>
-            <div className="overdueContent">
+            <div className="tasks__overdue">
               <TaskShortItem
-                className="taskShortItem"
+                className="tasks__overdue-item"
                 avatar={Person1}
                 title="Lorem ipsum dolor sit"
                 type="personal"
                 user="Noy"
               />
               <TaskShortItem
-                className="taskShortItem"
+                className="tasks__overdue-item"
                 avatar={Person3}
                 title="Lorem ipsum dolor sit"
                 type="work"
                 user="Nimrod"
               />
               <TaskShortItem
-                className="taskShortItem"
+                className="tasks__overdue-item"
                 avatar={Person2}
                 title="Lorem ipsum dolor sit"
                 type="personal"
@@ -228,7 +228,7 @@ function Tasks() {
             </div>
           </div>
           <div
-            className="addTaskBtn"
+            className="tasks__add-btn"
             style={{ marginTop: '18px' }}
             onClick={handleNewTaskModal}
           >

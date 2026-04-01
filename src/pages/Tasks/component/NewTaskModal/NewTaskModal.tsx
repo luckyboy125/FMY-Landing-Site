@@ -47,77 +47,77 @@ function NewTaskModal({
   return (
     <ModalLayout
       show={show}
-      className={`newTaskModalRoot ${className ?? ''}`}
+      className={`new-task-modal ${className ?? ''}`}
       onClose={handleModalClose}
     >
       <img
         src={CloseIcon}
-        className="modalCloseIcon"
+        className="new-task-modal__close-icon"
         alt="close icon"
         onClick={handleCloseModal}
       />
       <input
         placeholder="New Task"
         value={title}
-        className="taskTitle"
+        className="new-task-modal__title-input"
         onChange={handleTitleChange}
       />
-      <div className="newTaskToolRoot">
+      <div className="new-task-modal__tool-row">
         Due date:
         <ColorBtn
-          className="todayBtn"
+          className="new-task-modal__today-btn"
           label="Today"
           width={86}
           color="#75B3FF"
         />
         <ColorBtn
-          className="tomorrowBtn"
+          className="new-task-modal__tomorrow-btn"
           label="Tomorrow"
           width={120}
           color="#75B3FF"
         />
         <ColorBtn
-          className="otherBtn"
-          icon={<img src={Calendar} className="calendarIcon" alt="calendar" />}
+          className="new-task-modal__other-btn"
+          icon={<img src={Calendar} className="new-task-modal__calendar-icon" alt="calendar" />}
           showArrow
           label="Other"
           width={139}
           color="#fff"
         />
       </div>
-      <div className="newTaskToolRoot">
+      <div className="new-task-modal__tool-row">
         Add participants:
         <ColorBtn
-          className="participantsBtn"
+          className="new-task-modal__participants-btn"
           showArrow
           label="None"
           width={97}
           color="#fff"
         />
       </div>
-      <div className="additionDetail" onClick={handleAdditionDetail}>
+      <div className="new-task-modal__addition-detail" onClick={handleAdditionDetail}>
         Additional details
         <i className="fas fa-angle-down"></i>
       </div>
       <div
-        className="additionDetailContent"
+        className="new-task-modal__addition-content"
         style={{ visibility: addContentShow ? 'visible' : 'hidden' }}
         onClick={() => {}}
       >
-        <div className="additionDetailItem">
+        <div className="new-task-modal__addition-item">
           Priority:
           <ColorBtn
-            className="itemBtn"
+            className="new-task-modal__item-btn"
             showArrow
             label="None"
             width={97}
             color="#fff"
           />
         </div>
-        <div className="additionDetailItem" style={{ marginLeft: '50px' }}>
+        <div className="new-task-modal__addition-item" style={{ marginLeft: '50px' }}>
           Repeat:
           <ColorBtn
-            className="itemBtn"
+            className="new-task-modal__item-btn"
             showArrow
             label="None"
             width={97}

@@ -1,4 +1,4 @@
-.NRDSChart {
+.nrds-basic__chart {
   width: 100%;
   background: linear-gradient(
     180deg,
@@ -15,14 +15,14 @@
   );
 }
 
-.NRDSChart .chartHeader {
+.nrds-basic__chart .nrds-basic__chart-header {
   display: flex;
   align-items: center;
   height: 66px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.NRDSChart .chartHeader .databasePart {
+.nrds-basic__chart .nrds-basic__chart-header .nrds-basic__database-section {
   padding: 0 10px 0 30px;
   width: 52.8%;
   display: flex;
@@ -30,26 +30,26 @@
   justify-content: space-between;
 }
 
-.NRDSChart .chartHeader .databasePart .chartTools {
+.nrds-basic__chart .nrds-basic__chart-header .nrds-basic__database-section .nrds-basic__chart-tools {
   display: flex;
 }
 
-.NRDSChart .chartHeader .databasePart .chartTools .chartPeriod {
+.nrds-basic__chart .nrds-basic__chart-header .nrds-basic__database-section .nrds-basic__chart-tools .nrds-basic__period-btn {
   margin-right: 30px;
   padding: 7px 20px 7px 20px;
   position: relative;
 }
 
-.NRDSChart .chartHeader .databasePart .chartTools .chartPeriod i {
+.nrds-basic__chart .nrds-basic__chart-header .nrds-basic__database-section .nrds-basic__chart-tools .nrds-basic__period-btn i {
   margin-left: 12px !important;
 }
 
-.NRDSChart
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
-  .chartPeriodDropdownRoot {
+.nrds-basic__chart
+  .nrds-basic__chart-header
+  .nrds-basic__database-section
+  .nrds-basic__chart-tools
+  .nrds-basic__period-btn
+  .nrds-basic__period-dropdown {
   position: absolute;
   top: 63px;
   right: 20px;
@@ -59,12 +59,12 @@
   padding: 5px 10px;
 }
 
-.NRDSChart
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
-  .chartPeriodDropdownRoot::after {
+.nrds-basic__chart
+  .nrds-basic__chart-header
+  .nrds-basic__database-section
+  .nrds-basic__chart-tools
+  .nrds-basic__period-btn
+  .nrds-basic__period-dropdown::after {
   content: "";
   position: absolute;
   top: 0;
@@ -79,24 +79,24 @@
   margin-top: -10px;
 }
 
-.NRDSChart
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
-  .chartPeriodDropdownRoot
-  .item:last-child {
+.nrds-basic__chart
+  .nrds-basic__chart-header
+  .nrds-basic__database-section
+  .nrds-basic__chart-tools
+  .nrds-basic__period-btn
+  .nrds-basic__period-dropdown
+  .nrds-basic__period-dropdown-item:last-child {
   border-bottom: none;
   padding-bottom: 10px;
 }
 
-.NRDSChart
-  .chartHeader
-  .databasePart
-  .chartTools
-  .chartPeriod
-  .chartPeriodDropdownRoot
-  .item {
+.nrds-basic__chart
+  .nrds-basic__chart-header
+  .nrds-basic__database-section
+  .nrds-basic__chart-tools
+  .nrds-basic__period-btn
+  .nrds-basic__period-dropdown
+  .nrds-basic__period-dropdown-item {
   width: 172px;
   display: flex;
   justify-content: flex-start;
@@ -110,20 +110,20 @@
   border-bottom: 1px solid #ffffff1a;
 }
 
-.NRDSChart .chartHeader .databasePart .chartTools .chartCompare {
+.nrds-basic__chart .nrds-basic__chart-header .nrds-basic__database-section .nrds-basic__chart-tools .nrds-basic__compare-btn {
   padding: 10.5px 23px 10.5px 20px !important;
 }
 
-.NRDSChart .chartHeader .databasePart .chartTools .chartCompare i {
+.nrds-basic__chart .nrds-basic__chart-header .nrds-basic__database-section .nrds-basic__chart-tools .nrds-basic__compare-btn i {
   margin-left: 12px !important;
 }
 
-.NRDSChart .chartHeader .casesPart {
+.nrds-basic__chart .nrds-basic__chart-header .nrds-basic__cases-section {
   padding: 0 11px 0 30px;
   flex-grow: 1;
 }
 
-.NRDSChart .chartHeader .databasePart .headerItemTitle {
+.nrds-basic__chart .nrds-basic__chart-header .nrds-basic__database-section .nrds-basic__header-item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -133,7 +133,7 @@
   margin-top: 11px;
 }
 
-.NRDSChart .chartHeader .casesPart .headerItemTitle {
+.nrds-basic__chart .nrds-basic__chart-header .nrds-basic__cases-section .nrds-basic__header-item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -143,57 +143,57 @@
   margin-top: 11px;
 }
 
-.NRDSChart .chartContent {
+.nrds-basic__chart .nrds-basic__chart-content {
   display: flex;
 }
 
-.NRDSChart .chartContent .databasePart {
+.nrds-basic__chart .nrds-basic__chart-content .nrds-basic__database-section {
   padding: 31.5px 0 36px 40.5px;
   width: 52.8%;
   display: flex;
   border-right: 2px solid rgba(149, 166, 184, 0.4);
 }
 
-.NRDSChart .chartContent .casesPart {
+.nrds-basic__chart .nrds-basic__chart-content .nrds-basic__cases-section {
   padding: 30px 26.5px 30px 50px;
   display: flex;
   align-items: center;
   flex-grow: 1;
 }
 
-.NRDSChart .descriptionRoot {
+.nrds-basic__chart .nrds-basic__description {
   width: 229.88px;
   margin-right: 16px;
 }
 
-.NRDSChart .descriptionRoot .descriptionItem:first-child {
+.nrds-basic__chart .nrds-basic__description .nrds-basic__description-item:first-child {
   border: none !important;
   padding-top: 0 !important;
 }
 
-.NRDSChart .descriptionRoot .descriptionItem:last-child {
+.nrds-basic__chart .nrds-basic__description .nrds-basic__description-item:last-child {
   padding-bottom: 0 !important;
 }
 
-.NRDSChart .lineChartRoot {
+.nrds-basic__chart .nrds-basic__line-chart {
   flex-grow: 1;
   padding-top: 45px;
   height: 323.39px;
 }
 
-.NRDSChart .casesPart .descriptionRoot {
+.nrds-basic__chart .nrds-basic__cases-section .nrds-basic__description {
   margin-right: 80px;
 }
 
-.NRDSChart .descriptionItem {
+.nrds-basic__chart .nrds-basic__description-item {
   border-top: 1px solid rgba(149, 166, 184, 0.1);
 }
 
-.NRDSChart .casesPart .descriptionItem {
+.nrds-basic__chart .nrds-basic__cases-section .nrds-basic__description-item {
   padding: 17px 0 22px 0;
 }
 
-.NRDSChart .descriptionItemTitle {
+.nrds-basic__chart .nrds-basic__description-item-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -203,7 +203,7 @@
   white-space: nowrap;
   opacity: 0.7;
 }
-.NRDSChart .descriptionItemCount {
+.nrds-basic__chart .nrds-basic__description-item-count {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 300;
@@ -212,14 +212,14 @@
   margin-top: 20px;
 }
 
-.NRDSChart .doughnutChartRoot {
+.nrds-basic__chart .nrds-basic__doughnut {
   display: flex;
 }
-.NRDSChart .chartRoot {
+.nrds-basic__chart .nrds-basic__chart-root {
   position: relative;
 }
 
-.NRDSChart .doughnutChartPercent {
+.nrds-basic__chart .nrds-basic__doughnut-percent {
   position: absolute;
   top: 46%;
   right: 46%;
@@ -231,19 +231,19 @@
   text-align: center;
   color: #ffffff;
 }
-.NRDSChart .doughnutChartDes {
+.nrds-basic__chart .nrds-basic__doughnut-desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.NRDSChart .doughnutChartDesItem {
+.nrds-basic__chart .nrds-basic__doughnut-desc-item {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
 
-.NRDSChart .doughnutChartIcon {
+.nrds-basic__chart .nrds-basic__doughnut-icon {
   width: 12px;
   min-height: 12px;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -251,7 +251,7 @@
   border-radius: 50px;
 }
 
-.NRDSChart .doughnutChartItemName {
+.nrds-basic__chart .nrds-basic__doughnut-item-name {
   font-family: Helvetica;
   font-style: normal;
   font-weight: 400;
@@ -260,19 +260,19 @@
   color: #ffffff;
 }
 
-.NRDSChart .secondPart {
+.nrds-basic__chart .nrds-basic__second-part {
   display: flex;
   margin-top: 30px;
   margin-bottom: 27px;
 }
-.nrdsTableRoot .nrdsTableHeader {
+.nrds-basic__table .nrds-basic__table-header {
   padding: 20px 20px 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nrdsTableRoot .nrdsTableTitle {
+.nrds-basic__table .nrds-basic__table-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -280,16 +280,16 @@
   line-height: 24px;
   color: #ffffff;
 }
-.nrdsTableRoot .nrdsTableToolRoot {
+.nrds-basic__table .nrds-basic__table-tools {
   display: flex;
   align-items: center;
 }
 
-.nrdsTableRoot .nrdsTableSearchTool {
+.nrds-basic__table .nrds-basic__table-search {
   margin-right: 18px;
 }
 
-.nrdsTableRoot .nrdsTableSearchTool .nrdsTableSearchToolDropdown {
+.nrds-basic__table .nrds-basic__table-search .nrds-basic__search-dropdown {
   position: absolute;
   top: 63px;
   right: -20px;
@@ -298,7 +298,7 @@
   padding: 5px 10px;
 }
 
-.nrdsTableRoot .nrdsTableSearchTool .nrdsTableSearchToolDropdown ::after {
+.nrds-basic__table .nrds-basic__table-search .nrds-basic__search-dropdown ::after {
   content: "";
   position: absolute;
   top: 0;
@@ -312,15 +312,15 @@
   margin-top: -18px;
 }
 
-.nrdsTableRoot
-  .nrdsTableSearchTool
-  .nrdsTableSearchToolDropdown
-  .item:last-child {
+.nrds-basic__table
+  .nrds-basic__table-search
+  .nrds-basic__search-dropdown
+  .nrds-basic__search-dropdown-item:last-child {
   border-bottom: none;
   padding-bottom: 10px;
 }
 
-.nrdsTableRoot .nrdsTableSearchTool .nrdsTableSearchToolDropdown .item {
+.nrds-basic__table .nrds-basic__table-search .nrds-basic__search-dropdown .nrds-basic__search-dropdown-item {
   width: 172px;
   display: flex;
   justify-content: flex-start;
@@ -334,7 +334,7 @@
   border-bottom: 1px solid #ffffff1a;
 }
 
-.nrdsTableRoot .firstTd {
+.nrds-basic__table .nrds-basic__td--first {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -344,7 +344,7 @@
   color: #75b3ff;
 }
 
-.nrdsTableRoot .secondTd {
+.nrds-basic__table .nrds-basic__td--second {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
@@ -352,7 +352,7 @@
   line-height: 24px;
   color: #ffffff;
 }
-.nrdsTableRoot .thirdTd {
+.nrds-basic__table .nrds-basic__td--third {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -361,7 +361,7 @@
   text-align: center;
   color: #75b3ff;
 }
-.nrdsTableRoot .fourthTd {
+.nrds-basic__table .nrds-basic__td--fourth {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -370,18 +370,18 @@
   color: #ffffff;
   opacity: 0.5;
 }
-.nrdsTableRoot .fifthTd {
+.nrds-basic__table .nrds-basic__td--fifth {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nrdsTableRoot .fifthTd .addBtn {
+.nrds-basic__table .nrds-basic__td--fifth .nrds-basic__add-btn {
   margin-right: 30px;
   padding: 14px 20px 13px 20px !important;
 }
 
-.nrdsTableRoot .fifthTd .des {
+.nrds-basic__table .nrds-basic__td--fifth .nrds-basic__des {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -392,7 +392,7 @@
   color: #75b3ff;
 }
 
-.tabelDomainModalRoot {
+.nrds-basic__domain-modal {
   width: 1500px;
   background: linear-gradient(180deg, #343d49 0%, #336497 100%);
   backdrop-filter: blur(2px);
@@ -400,7 +400,7 @@
   padding: 30px 30px 20px;
 }
 
-.tabelDomainModalRoot > img {
+.nrds-basic__domain-modal > img {
   cursor: pointer;
   position: absolute;
   top: 30px;
@@ -408,14 +408,14 @@
   z-index: 2;
 }
 
-.tabelDomainModalRoot .dotBtn {
+.nrds-basic__domain-modal .nrds-basic__dot-btn {
   position: absolute;
   top: 30px;
   right: 70px;
   z-index: 2;
 }
 
-.tabelDomainModalRoot .dotBtn .dot {
+.nrds-basic__domain-modal .nrds-basic__dot-btn .three-dot-btn__dot {
   background: #fff !important;
   min-width: 5px;
   width: 5px;
@@ -423,12 +423,12 @@
   min-height: 5px;
 }
 
-.tabelDomainModalRoot .mainRoot {
+.nrds-basic__domain-modal .nrds-basic__main {
   display: flex;
   align-items: flex-end;
 }
 
-.tabelDomainModalRoot .mainRoot .leftPart {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__left {
   width: 650px;
   min-width: 650px;
   height: 650px;
@@ -442,20 +442,20 @@
   color: #ffffff;
 }
 
-.tabelDomainModalRoot .mainRoot .divLinePart {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__divider {
   width: 2px;
   height: 688px;
   background: #ffffff33;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right {
   padding-left: 30px;
   flex-grow: 1;
   text-align: left;
   position: relative;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .title {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__modal-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -464,13 +464,13 @@
   color: #ffffff;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .rightPart1 {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__right-row {
   display: flex;
   align-items: center;
   margin-top: 34px;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .rightPart1 .item {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__right-row .nrds-basic__right-row-item {
   width: 323px;
   display: flex;
   align-items: center;
@@ -482,11 +482,11 @@
   color: #ffffff;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .casesPart {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__cases-section {
   margin-top: 76px;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .casesPart .title {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__cases-section .nrds-basic__modal-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -495,7 +495,7 @@
   color: #ffffff;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__cases-section .nrds-basic__case-card {
   position: relative;
   margin-top: 30px;
   display: flex;
@@ -509,17 +509,17 @@
   padding: 20px 20px 10px;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot > img {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__cases-section .nrds-basic__case-card > img {
   width: 50px;
   height: 50px;
   margin-right: 20px;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot .desRoot1 {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__cases-section .nrds-basic__case-card .nrds-basic__case-card-inner {
   width: 506px;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot .desRoot1 .des {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__cases-section .nrds-basic__case-card .nrds-basic__case-card-inner .nrds-basic__des {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -528,13 +528,13 @@
   color: #ffffff;
 }
 
-.tabelDomainModalRoot
-  .mainRoot
-  .rightPart
-  .casesPart
-  .desRoot
-  .desRoot1
-  .desDate {
+.nrds-basic__domain-modal
+  .nrds-basic__main
+  .nrds-basic__right
+  .nrds-basic__cases-section
+  .nrds-basic__case-card
+  .nrds-basic__case-card-inner
+  .nrds-basic__des-date {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -544,17 +544,17 @@
   margin-top: 19px;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .casesPart .desRoot .dotBtn {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__cases-section .nrds-basic__case-card .nrds-basic__dot-btn {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .commentPart {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__comment-section {
   margin-top: 78px;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .commentPart .title {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__comment-section .nrds-basic__modal-title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -563,7 +563,7 @@
   color: #ffffff;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__comment-section .nrds-basic__comment-card {
   margin-top: 28px;
   height: 297px;
   background: linear-gradient(
@@ -577,13 +577,13 @@
   position: relative;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot .dotBtn {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__comment-section .nrds-basic__comment-card .nrds-basic__dot-btn {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot .dotBtn .dot {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__comment-section .nrds-basic__comment-card .nrds-basic__dot-btn .three-dot-btn__dot {
   width: 5px;
   min-width: 5px;
   height: 5px;
@@ -591,7 +591,7 @@
   background: #fff !important;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot textarea {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__comment-section .nrds-basic__comment-card textarea {
   width: 550px;
   height: 110px;
   font-family: "Helvetica";
@@ -605,11 +605,11 @@
   padding: 0 !important;
   resize: none;
 }
-.tabelDomainModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
+.nrds-basic__domain-modal
+  .nrds-basic__main
+  .nrds-basic__right
+  .nrds-basic__comment-section
+  .nrds-basic__comment-card
   textarea::placeholder {
   font-family: "Helvetica";
   font-style: normal;
@@ -618,24 +618,24 @@
   line-height: 24px;
   color: rgba(255, 255, 255, 0.5);
 }
-.tabelDomainModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
+.nrds-basic__domain-modal
+  .nrds-basic__main
+  .nrds-basic__right
+  .nrds-basic__comment-section
+  .nrds-basic__comment-card
   textarea:focus-visible {
   outline: none;
 }
-.tabelDomainModalRoot
-  .mainRoot
-  .rightPart
-  .commentPart
-  .desRoot
+.nrds-basic__domain-modal
+  .nrds-basic__main
+  .nrds-basic__right
+  .nrds-basic__comment-section
+  .nrds-basic__comment-card
   textarea:focus {
   outline: none;
 }
 
-.tabelDomainModalRoot .mainRoot .rightPart .commentPart .desRoot .postBtn {
+.nrds-basic__domain-modal .nrds-basic__main .nrds-basic__right .nrds-basic__comment-section .nrds-basic__comment-card .nrds-basic__post-btn {
   position: absolute;
   bottom: 20px;
   right: 20px;

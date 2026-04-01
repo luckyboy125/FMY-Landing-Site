@@ -18,7 +18,7 @@ function PlusButton({
 
   return (
     <div
-      className={`plusBtnRoot ${className}`}
+      className={`plus-button ${className}`}
       onClick={handleClick}
       role="button"
       tabIndex={0}

@@ -11,22 +11,22 @@ function HashtagSelectInput({
 }: HashtagSelectInputProps) {
   return (
     <>
-      <div className={`hashtagSelectInputRoot ${className ?? ''}`}>
-        <div className="selectContent">
-          <div className="select">
+      <div className={`hashtag-select-input ${className ?? ''}`}>
+        <div className="hashtag-select-input__tags">
+          <div className="hashtag-select-input__tag">
             Messi <img src={closeIcon} alt="closeIcon" />
           </div>
-          <div className="select">
+          <div className="hashtag-select-input__tag">
             Ramos <img src={closeIcon} alt="closeIcon" />
           </div>
-          <div className="select">
+          <div className="hashtag-select-input__tag">
             Mumbapee <img src={closeIcon} alt="closeIcon" />
           </div>
         </div>
-        <div className="selectRoot">
+        <div className="hashtag-select-input__period">
           Last 7 Days <i className="fas fa-caret-down"></i>
         </div>
-        <div className="searchBtn">
+        <div className="hashtag-select-input__search-btn">
           <img src={searchIcon} alt="search_icon" />
         </div>
       </div>

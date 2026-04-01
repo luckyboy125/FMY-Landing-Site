@@ -1,4 +1,4 @@
-.checkListsLongItem {
+.check-lists-long-item {
   height: 80px;
   padding: 0 30px;
   background: linear-gradient(
@@ -13,13 +13,13 @@
   align-items: center;
 }
 
-.checkListsLongItem .firstPart {
+.check-lists-long-item .check-lists-long-item__left {
   display: flex;
   align-items: center;
   width: 900px;
   overflow: hidden;
 }
-.checkListsLongItem .firstPart .circleIcon {
+.check-lists-long-item .check-lists-long-item__left .check-lists-long-item__circle-icon {
   position: relative;
   width: 34px;
   min-width: 34px;
@@ -29,7 +29,7 @@
   justify-content: center;
   align-items: center;
 }
-.checkListsLongItem .firstPart .circleIcon::before {
+.check-lists-long-item .check-lists-long-item__left .check-lists-long-item__circle-icon::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -41,7 +41,7 @@
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
-.checkListsLongItem .firstPart .checkListsTitle {
+.check-lists-long-item .check-lists-long-item__left .check-lists-long-item__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
@@ -53,12 +53,12 @@
   text-overflow: ellipsis;
   margin-left: 20px;
 }
-.checkListsLongItem .secondPart {
+.check-lists-long-item .check-lists-long-item__right {
   display: flex;
   align-items: center;
 }
 
-.checkListsLongItem .secondPart .secondFirstPart {
+.check-lists-long-item .check-lists-long-item__right .check-lists-long-item__right-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,20 +66,20 @@
   margin-right: 20px;
 }
 
-.checkListsLongItem .secondPart .secondFirstPart .avatarRoot {
+.check-lists-long-item .check-lists-long-item__right .check-lists-long-item__right-inner .check-lists-long-item__avatar-root {
   display: flex;
   align-items: center;
   overflow: hidden;
   margin-right: 10px;
 }
 
-.checkListsLongItem .secondPart .secondFirstPart .avatarRoot .avatar {
+.check-lists-long-item .check-lists-long-item__right .check-lists-long-item__right-inner .check-lists-long-item__avatar-root .check-lists-long-item__avatar {
   margin-right: 10px;
   width: 50px;
   height: 50px;
 }
 
-.checkListsLongItem .secondPart .secondFirstPart .avatarRoot .userName {
+.check-lists-long-item .check-lists-long-item__right .check-lists-long-item__right-inner .check-lists-long-item__avatar-root .check-lists-long-item__user-name {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;

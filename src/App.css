@@ -4,7 +4,7 @@ body {
   font-style: normal;
 }
 
-.loginContainer {
+.app__login-container {
   border-radius: 32px;
   margin: 0 auto;
   overflow-x: hidden;
@@ -16,7 +16,7 @@ body {
   );
 }
 
-.websiteContainer {
+.app__website-container {
   background: linear-gradient(180deg, #000, #004083);
   border-radius: 32px;
   height: 1250px;
@@ -26,7 +26,7 @@ body {
   width: 2250px;
 }
 
-.outer {
+.app__outer {
   display: table;
   position: absolute;
   top: 0;
@@ -35,12 +35,12 @@ body {
   width: 100%;
 }
 
-.middle {
+.app__middle {
   display: table-cell;
   vertical-align: middle;
 }
 
-.content {
+.app__content {
   margin-left: 22%;
   position: absolute;
   margin-left: 273px;
@@ -49,7 +49,7 @@ body {
   position: inherit;
 }
 
-#sidebarCol {
+.app__sidebar-col {
   height: 100%;
   z-index: 5;
   width: 300px;
